@@ -16,7 +16,7 @@ starterProjects:
       remotes:
         origin: "https://github.com/odo-devfiles/springboot-ex.git"
 components:
-    - name: buildguidance
+  - name: buildguidance
     attributes:
       tool: console-import
     container:
