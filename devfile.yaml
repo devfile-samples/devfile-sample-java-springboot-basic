@@ -23,8 +23,8 @@ components:
       image: buildguidanceimage-placeholder
       memoryLimit: 1024Mi
       endpoints:
-        - name: http-8080
-          targetPort: 8080
+        - name: http-8081
+          targetPort: 8081
   - name: tools
     container:
       image: quay.io/eclipse/che-java11-maven:nightly

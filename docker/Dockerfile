@@ -11,9 +11,10 @@
 ####
 FROM quay.io/eclipse/che-java11-maven:nightly
 
-WORKDIR /build
-RUN chgrp -R 0 /build && \
-    chmod -R g=u /build
+USER 1001
+RUN mkdir /build \
+    && chown 1001:0 /build \
+    && chmod "g+rw" /build
 
 # Build dependency offline to streamline build
 COPY pom.xml .
@@ -23,8 +24,7 @@ COPY src src
 RUN mvn package -Dmaven.test.skip=true
 
 FROM openjdk:11-jdk
-WORKDIR /build
 COPY --from=0 /build/target/demo-0.0.1-SNAPSHOT.jar /app/target/demo-0.0.1-SNAPSHOT.jar
 
-EXPOSE 8080
+EXPOSE 8081
 ENTRYPOINT [ "java", "-jar", "/app/target/demo-0.0.1-SNAPSHOT.jar" ]
