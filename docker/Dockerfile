@@ -12,6 +12,9 @@
 FROM quay.io/eclipse/che-java11-maven:nightly
 
 WORKDIR /build
+RUN chgrp -R 0 /build && \
+    chmod -R g=u /build
+
 # Build dependency offline to streamline build
 COPY pom.xml .
 RUN mvn dependency:go-offline
@@ -20,6 +23,7 @@ COPY src src
 RUN mvn package -Dmaven.test.skip=true
 
 FROM openjdk:11-jdk
+WORKDIR /build
 COPY --from=0 /build/target/demo-0.0.1-SNAPSHOT.jar /app/target/demo-0.0.1-SNAPSHOT.jar
 
 EXPOSE 8080
