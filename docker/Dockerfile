@@ -7,7 +7,7 @@
 #
 # Then run the container using:
 #
-# docker run -i --rm -p 8080:8080 springboot/sample-demo
+# docker run -i --rm -p 8081:8081 springboot/sample-demo
 ####
 FROM quay.io/eclipse/che-java11-maven:nightly
 
@@ -24,4 +24,4 @@ FROM openjdk:11-jdk
 COPY --from=0 /tmp/target/demo-0.0.1-SNAPSHOT.jar /app/target/demo-0.0.1-SNAPSHOT.jar
 
 EXPOSE 8081
-ENTRYPOINT [ "java", "-jar", "/app/target/demo-0.0.1-SNAPSHOT.jar" ]
+ENTRYPOINT [ "java", "-jar", "/app/target/demo-0.0.1-SNAPSHOT.jar", "--server.port=8081" ]
