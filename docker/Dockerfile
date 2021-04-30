@@ -3,11 +3,11 @@
 #
 # Build the image with:
 #
-# docker build -f docker/Dockerfile -t springboot/springboot-basic .
+# docker build -f docker/Dockerfile -t springboot/sample-demo .
 #
 # Then run the container using:
 #
-# docker run -i --rm -p 8080:8080 springboot/springboot-basic
+# docker run -i --rm -p 8080:8080 springboot/sample-demo
 ####
 FROM quay.io/eclipse/che-java11-maven:nightly
 
