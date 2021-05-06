@@ -9,9 +9,8 @@
 #
 # docker run -i --rm -p 8081:8081 springboot/sample-demo
 ####
-FROM quay.io/eclipse/che-java11-maven:nightly
+FROM maven:3.8.1-openjdk-17-slim
 
-USER root
 WORKDIR /build
 
 # Build dependency offline to streamline build
