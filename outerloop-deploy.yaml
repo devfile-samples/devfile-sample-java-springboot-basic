@@ -1,0 +1,25 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: my-java-springboot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: java-springboot-app
+  template:
+    metadata:
+      labels:
+        app: java-springboot-app
+    spec:
+      containers:
+        - name: my-java-springboot
+          image: java-springboot-image:latest
+          ports:
+            - name: http
+              containerPort: 8081
+              protocol: TCP
+          resources:
+            limits:
+              memory: "1024Mi"
+              cpu: "500m"
