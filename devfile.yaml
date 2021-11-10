@@ -1,33 +1,35 @@
-schemaVersion: 2.0.0
+schemaVersion: 2.2.0
 metadata:
   name: java-springboot
   version: 1.1.0
   attributes:
-    alpha.build-context: .
-    alpha.build-dockerfile: docker/Dockerfile
+    alpha.dockerimage-port: 8081
   displayName: Java Spring Boot
   description: Java Spring Boot using Maven
   tags: ["Java", "Spring"]
   projectType: "springboot"
   language: "java"
+  provider: Red Hat
+  supportUrl: https://github.com/devfile-samples/devfile-support#support-information
 starterProjects:
   - name: springbootproject
     git:
       remotes:
         origin: "https://github.com/odo-devfiles/springboot-ex.git"
 components:
-  - name: buildguidance
-    attributes:
-      tool: console-import
-    container:
-      image: buildguidanceimage-placeholder
-      memoryLimit: 1024Mi
-      endpoints:
-        - name: http-8081
-          targetPort: 8081
+  - name: outerloop-build
+    image:
+      imageName: java-springboot-image:latest
+      dockerfile:
+        uri: docker/Dockerfile
+        buildContext: .
+        rootRequired: false
+  - name: outerloop-deploy
+    kubernetes:
+      uri: outerloop-deploy.yaml
   - name: tools
     container:
-      image: quay.io/eclipse/che-java11-maven:nightly
+      image: quay.io/eclipse/che-java11-maven:7.36.0
       memoryLimit: 768Mi
       mountSources: true
       endpoints:
@@ -60,4 +62,18 @@ commands:
       commandLine: "java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=${DEBUG_PORT},suspend=n -jar target/*.jar"
       group:
         kind: debug
+        isDefault: true
+  - id: build-image
+    apply:
+      component: outerloop-build
+  - id: deployk8s
+    apply:
+      component: outerloop-deploy
+  - id: deploy
+    composite:
+      commands:
+        - build-image
+        - deployk8s
+      group:
+        kind: deploy
         isDefault: true
