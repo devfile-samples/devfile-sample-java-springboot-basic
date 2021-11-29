@@ -11,11 +11,6 @@ metadata:
   language: "java"
   provider: Red Hat
   supportUrl: https://github.com/devfile-samples/devfile-support#support-information
-starterProjects:
-  - name: springbootproject
-    git:
-      remotes:
-        origin: "https://github.com/odo-devfiles/springboot-ex.git"
 components:
   - name: outerloop-build
     image:
@@ -30,11 +25,20 @@ components:
   - name: tools
     container:
       image: quay.io/eclipse/che-java11-maven:7.36.0
-      memoryLimit: 768Mi
-      mountSources: true
+      memoryLimit: 1Gi
+      cpuLimit: 500m
+      env:
+      - name: DEBUG_PORT
+        value: '5005'
       endpoints:
-      - name: '8080-tcp'
+      - name: 8080-tcp
+        exposure: public
+        protocol: http
         targetPort: 8080
+      - name: debug
+        exposure: none
+        protocol: tcp
+        targetPort: 5005
       volumeMounts:
         - name: m2
           path: /home/user/.m2
