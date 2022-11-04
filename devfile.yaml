@@ -1,19 +1,22 @@
 schemaVersion: 2.2.0
 metadata:
   name: java-springboot
-  version: 1.2.0
+  version: 1.2.1
   attributes:
     alpha.dockerimage-port: 8081
-  displayName: Java Spring Boot
-  description: Java Spring Boot using Maven
-  tags: ["Java", "Spring"]
-  projectType: "springboot"
-  language: "java"
+  displayName: Spring Boot®
+  description: Spring Boot® using Maven
+  icon: https://spring.io/images/projects/spring-edf462fec682b9d48cf628eaf9e19521.svg
+  tags:
+    - Java
+    - Spring Boot
+  projectType: springboot
+  language: Java
   provider: Red Hat
   supportUrl: https://github.com/devfile-samples/devfile-support#support-information
 parent:
   id: java-springboot
-  registryUrl: "https://registry.devfile.io"
+  registryUrl: 'https://registry.devfile.io'
 components:
   - name: image-build
     image:
@@ -25,7 +28,7 @@ components:
   - name: kubernetes-deploy
     attributes:
       deployment/replicas: 1
-      deployment/cpuLimit: "100m"
+      deployment/cpuLimit: '100m'
       deployment/cpuRequest: 10m
       deployment/memoryLimit: 300Mi
       deployment/memoryRequest: 180Mi
@@ -33,9 +36,9 @@ components:
     kubernetes:
       uri: deploy.yaml
       endpoints:
-      - name: http-8081
-        targetPort: 8081
-        path: /
+        - name: http-8081
+          targetPort: 8081
+          path: /
 commands:
   - id: build-image
     apply:
