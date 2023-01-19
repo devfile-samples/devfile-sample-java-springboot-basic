@@ -9,7 +9,7 @@ metadata:
   icon: https://spring.io/images/projects/spring-edf462fec682b9d48cf628eaf9e19521.svg
   tags:
     - Java
-    - Spring Boot
+    - Spring
   projectType: springboot
   language: Java
   provider: Red Hat
