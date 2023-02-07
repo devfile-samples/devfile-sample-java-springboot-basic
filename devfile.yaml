@@ -6,7 +6,7 @@ metadata:
     alpha.dockerimage-port: 8081
   displayName: Spring Boot®
   description: Spring Boot® using Maven
-  icon: https://spring.io/images/projects/spring-edf462fec682b9d48cf628eaf9e19521.svg
+  icon: https://raw.githubusercontent.com/devfile-samples/devfile-stack-icons/main/spring.svg
   tags:
     - Java
     - Spring
