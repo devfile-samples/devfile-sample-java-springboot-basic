@@ -1,20 +1,20 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: my-java-springboot
+  name: medis-etl-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: java-springboot-app
+      app: medis-etl-app
   template:
     metadata:
       labels:
-        app: java-springboot-app
+        app: medis-etl-service
     spec:
       containers:
-        - name: my-java-springboot
-          image: java-springboot-image:latest
+        - name: etl-camel
+          image: medis-etl-image:latest
           ports:
             - name: http
               containerPort: 8081
@@ -27,7 +27,7 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: my-java-springboot-svc
+  name: medis-etl-svc
 spec:
   ports:
     - name: http-8081
@@ -35,4 +35,4 @@ spec:
       protocol: TCP
       targetPort: 8081
   selector:
-    app: java-springboot-app
+    app: medis-etl-app

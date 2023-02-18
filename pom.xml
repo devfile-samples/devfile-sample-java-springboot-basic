@@ -8,11 +8,11 @@
 		<version>2.3.5.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>demo</artifactId>
+	<groupId>ca.bc.gov.hlth</groupId>
+	<artifactId>medis-etl</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>demo</name>
-	<description>Demo project for Spring Boot</description>
+	<name>medis-etl-svc</name>
+	<description>MEDIS ETL app</description>
 
 	<properties>
 		<java.version>11</java.version>
