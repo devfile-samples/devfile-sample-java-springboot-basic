@@ -1,0 +1,14 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  labels:
+    app: medis-etl-app
+    app.kubernetes.io/component: medis-etl-app
+    app.kubernetes.io/instance: medis-etl-app
+    app.kubernetes.io/name: medis-etl-app
+    app.kubernetes.io/part-of: medis-etl
+    app.openshift.io/runtime: java-springboot-camel
+  name: medis-etl-image
+spec:
+  lookupPolicy:
+    local: false

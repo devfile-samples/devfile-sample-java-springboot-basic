@@ -1,0 +1,40 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  labels:
+    app: medis-etl-app
+    app.kubernetes.io/component: medis-etl-app
+    app.kubernetes.io/instance: medis-etl-app
+    app.kubernetes.io/name: medis-etl-app
+    app.kubernetes.io/part-of: medis-etl
+    app.openshift.io/runtime: java-springboot-camel
+  name: medis-etl-app
+spec:
+  failedBuildsHistoryLimit: 5
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: medis-etl-image:latest
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    git:
+      uri: https://github.com/bcgov/medis-etl-service.git
+    type: Git
+  strategy:
+    dockerStrategy:
+      dockerfilePath: docker/Dockerfile
+    type: Docker
+  successfulBuildsHistoryLimit: 5
+  triggers:
+  - generic:
+      secretReference:
+        name: medis-etl-webhook-secret
+    type: Generic
+  - github:
+      secretReference:
+        name: medis-etl-github-webhook-secret
+    type: GitHub
+  - type: ConfigChange
