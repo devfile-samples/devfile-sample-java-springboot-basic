@@ -46,8 +46,10 @@ spec:
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
         volumeMounts:
+        - mountPath: /data
+          name: medis-etl-files
         - mountPath: /ssh
-          name: medis-etl
+          name: medis-etl-ssh
           readOnly: true
       dnsPolicy: ClusterFirst
       restartPolicy: Always
@@ -55,7 +57,10 @@ spec:
       securityContext: {}
       terminationGracePeriodSeconds: 30
       volumes:
-      - name: medis-etl
+      - name: medis-etl-files
+        persistentVolumeClaim:
+          claimName: medis-etl-pvc
+      - name: medis-etl-ssh
         secret:
           defaultMode: 400
           secretName: medis-etl
