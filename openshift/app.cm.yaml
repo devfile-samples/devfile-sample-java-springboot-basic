@@ -17,7 +17,7 @@ objects:
     metadata:
       name: medis-etl-config
     data:
-      application.properties: >+
+      application.properties: |
         # properties used in route
         hostname = localhost
         port = 8080
@@ -41,8 +41,7 @@ objects:
 
         ltc.ytd.username=256760e7-6e8b-44c4-8b63-51fb72c8c2cf
         ltc.ytd.password=tbd
-
-      log4j2.properties: >+
+      log4j2.properties: |
         appender.out.type = Console
         appender.out.name = out
         appender.out.layout.type = PatternLayout
