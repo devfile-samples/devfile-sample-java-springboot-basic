@@ -29,4 +29,4 @@ FROM openjdk:11-jdk
 COPY --from=0 /build/target/export-run-artifact.jar  /app/target/export-run-artifact.jar
 
 EXPOSE 8081
-ENTRYPOINT [ "java", "-jar", "/app/target/export-run-artifact.jar", "--server.port=8081" ]
+ENTRYPOINT [ "java", "-cp", "/app/config/" "-jar", "/app/target/export-run-artifact.jar", "--server.port=8081" ]
