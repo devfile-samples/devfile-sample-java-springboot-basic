@@ -48,6 +48,8 @@ spec:
         volumeMounts:
         - mountPath: /data
           name: medis-etl-files
+        - mountPath: /app/config
+          name: medis-etl-config
         - mountPath: /ssh
           name: medis-etl-ssh
           readOnly: true
@@ -60,6 +62,9 @@ spec:
       - name: medis-etl-files
         persistentVolumeClaim:
           claimName: medis-etl-pvc
+      - name: medis-etl-config
+        configMap:
+          name: medis-etl-config
       - name: medis-etl-ssh
         secret:
           defaultMode: 400
