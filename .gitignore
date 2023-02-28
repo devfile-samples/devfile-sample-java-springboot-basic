@@ -11,3 +11,5 @@ logs/*
 .settings/*
 .factorypath
 keys/*
+.mvnw
+.mvnw.cmd

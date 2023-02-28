@@ -1,0 +1,64 @@
+---
+apiVersion: template.openshift.io/v1
+kind: Template
+labels:
+  app.kubernetes.io/component: medis-etl-app
+  app.kubernetes.io/instance: medis-etl-app
+  app.kubernetes.io/name: medis-etl-app
+  app.kubernetes.io/part-of: medis-etl
+  app.openshift.io/runtime: java-springboot-camel
+  app: "${APP_NAME}-${JOB_NAME}"
+  template: "${REPO_NAME}-app-cm-template"
+metadata:
+  name: "${REPO_NAME}-app-cm"
+objects:
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata:
+      name: medis-etl-config
+    data:
+      application.properties: |
+        # properties used in route
+        hostname = localhost
+        port = 8080
+        server-socket=5555
+        socket-read-sleep-time=100
+        max-socket-read-tries=100
+        thread-pool-size=5
+        accept-remote-connections=true
+        valid-ip-list-file=fwlist.txt
+
+        chefs.http.uri=https://submit.digital.gov.bc.ca/app/api/v1/forms/%s/export?format=json&type=submissions&minDate=%s&maxDate=%s
+
+        aims.username=2f173b2b-2f3a-407a-aecf-6b4bdc9431ae
+        aims.password=tbd
+
+        ltc.facility.username=e1f4761f-efdd-4529-805e-677d3ae21601
+        ltc.facility.password=tbd
+
+        ltc.staffing.username=16ce36ca-9b4b-4ec6-bb75-96c2e1f258bb
+        ltc.staffing.password=tbd
+
+        ltc.ytd.username=256760e7-6e8b-44c4-8b63-51fb72c8c2cf
+        ltc.ytd.password=tbd
+      log4j2.properties: |
+        appender.out.type = Console
+        appender.out.name = out
+        appender.out.layout.type = PatternLayout
+        appender.out.layout.pattern = [%30.30t] %-30.30c{1} %-5p %m%n
+        rootLogger.level = INFO
+        rootLogger.appenderRef.out.ref = out
+    immutable: false
+parameters:
+  - name: APP_NAME
+    description: Application name
+    displayName: Application name
+    required: true
+  - name: JOB_NAME
+    description: Job identifier (i.e. 'pr-5' OR 'master')
+    displayName: Job Branch Name
+    required: true
+  - name: REPO_NAME
+    description: Application repository name
+    displayName: Repository Name
+    required: true

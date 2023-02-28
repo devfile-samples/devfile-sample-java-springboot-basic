@@ -2,7 +2,7 @@ package ca.bc.gov.chefs.etl;
 
 import org.apache.camel.main.Main;
 
-
+import ca.bc.gov.chefs.etl.core.routes.HelloRoute;
 import ca.bc.gov.chefs.etl.core.routes.TestFormRoute;
 import ca.bc.gov.chefs.etl.forms.ltc.facility.route.FacilityFormRoute;
 import ca.bc.gov.chefs.etl.forms.ltc.quaterly.route.LtcQuaterlyYtdRoute;
@@ -15,6 +15,7 @@ public class ChefsETLMainMethod {
 	public static void main(String... args) throws Exception {
 		Main main = new Main();
 		main.configure().addRoutesBuilder(TestFormRoute.class);
+		main.configure().addRoutesBuilder(HelloRoute.class);
 		main.configure().addRoutesBuilder(AIMSFormRoute.class);
 		main.configure().addRoutesBuilder(FacilityFormRoute.class);
 		main.configure().addRoutesBuilder(LtcQuaterlyYtdRoute.class);

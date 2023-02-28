@@ -1,0 +1,72 @@
+---
+apiVersion: template.openshift.io/v1
+kind: Template
+labels:
+  app.kubernetes.io/component: medis-etl-app
+  app.kubernetes.io/instance: medis-etl-app
+  app.kubernetes.io/name: medis-etl-app
+  app.kubernetes.io/part-of: medis-etl
+  app.openshift.io/runtime: java-springboot-camel
+  app: "${APP_NAME}-${JOB_NAME}"
+  template: "${REPO_NAME}-app-bc-template"
+metadata:
+  name: "${REPO_NAME}-app-bc"
+objects:
+  - apiVersion: image.openshift.io/v1
+    kind: ImageStream
+    metadata:
+      name: medis-etl-image
+    spec:
+      lookupPolicy:
+        local: false
+
+  - apiVersion: build.openshift.io/v1
+    kind: BuildConfig
+    metadata:
+      name: medis-etl-app
+    spec:
+      failedBuildsHistoryLimit: 5
+      nodeSelector: null
+      output:
+        to:
+          kind: ImageStreamTag
+          name: medis-etl-image:latest
+      postCommit: {}
+      resources: {}
+      runPolicy: Serial
+      source:
+        git:
+          uri: ${SOURCE_REPO_URL}
+        type: Git
+      strategy:
+        dockerStrategy:
+          dockerfilePath: docker/Dockerfile
+        type: Docker
+      successfulBuildsHistoryLimit: 5
+      triggers:
+      - generic:
+          secretReference:
+            name: medis-etl-webhook-secret
+        type: Generic
+      - github:
+          secretReference:
+            name: medis-etl-github-webhook-secret
+        type: GitHub
+      - type: ConfigChange
+parameters:
+  - name: REPO_NAME
+    description: Application repository name
+    displayName: Repository Name
+    required: true
+  - name: JOB_NAME
+    description: Job identifier (i.e. 'pr-5' OR 'master')
+    displayName: Job Branch Name
+    required: true
+  - name: SOURCE_REPO_REF
+    description: Git Pull Request Reference (i.e. 'pull/CHANGE_ID/head')
+    displayName: Source Repository Reference
+    required: true
+  - name: SOURCE_REPO_URL
+    description: Git Repository URL
+    displayName: Source Repository URL
+    required: true
