@@ -31,6 +31,9 @@ public class Constants {
 	public final static String PRIVATE_BED = "privateBed";
 
 	// form names
+	public static final String LTC_FACILITY_APPROVER = "LTC_FACILITY_APPROVER";
+	public static final String LTC_FACILITY_PREPARER = "LTC_FACILITY_PREPARER";
+
 	public final static String LTC_BED_YTD_OCCUPIED_DAYS = "LTC_BED_YTD_OCCUPIED_DAYS";
 	public final static String LTC_BED_YTD_OCCUPANCY_RATE = "LTC_BED_YTD_OCCUPANCY_RATE";
 	public final static String LTC_BED_YTD_MAX_OCCUPANCY = "LTC_BED_YTD_MAX_OCCUPANCY";
@@ -48,6 +51,8 @@ public class Constants {
 	public final static String LTC_FACILITY = "LTC_FACILITY";
 	public static final String LTC_YTD_COMP_SAL_SUBTOTALS = "LTC_YTD_COMP_SAL_SUBTOTALS";
 	public static final String LTC_BED_YTD_MAX_OCCUPANCY_TOTALS = "LTC_BED_YTD_MAX_OCCUPANCY_TOTALS";
+	public static final String LTC_YTD_COMP_HRS_SUBTOTALS = "LTC_YTD_COMP_HRS_SUBTOTALS";
+	public static final String LTC_YTD_COMP_HRS_TOTALS = "LTC_YTD_COMP_HRS_TOTALS";
 
 
 	public static final String LTC_YTD_COMP_SAL_TOTALS = "LTC_YTD_COMP_SAL_TOTALS";
@@ -96,11 +101,25 @@ public class Constants {
 						"Accreditation_Expiry_Date", "Health_Authority", "Owner_Name", "Owner_Address", "Owner_City",
 						"Owner_postal_code", "Owner_contact_name","Owner_contact_phone","Owner_contact_position", "Owner_contact_email", "Operator_Name",
 						"Operator_Address", "Operator_City", "Operator_postal_code", "Operator_contact_Name",
-						"Operator_contact_phone", "Operator_contact_position", "Operator_contact_email",
-						"Preparer_contact_Name", "Preparer_contact_phone", "Preparer_contact_position",
-						"Preparer_contact_email", "Approver_Contact_Name", "Approver_Contact_phone",
-						"Approver_Contact_position", "Approver_contact_email", });
+						"Operator_contact_phone", "Operator_contact_position", "Operator_contact_email", });
 
+		HEADERS.put(LTC_FACILITY_APPROVER, new String[] {
+				"CONFIRMATION_ID",
+				"APPROVER_NUM",
+				"APPROVER_CONTACT_NAME",
+				"APPROVER_CONTACT_POSITION",
+				"APPROVER_CONTACT_PHONE",
+				"APPROVER_CONTACT_EMAIL",	
+		});
+		HEADERS.put(LTC_FACILITY_PREPARER, new String[] {
+				"CONFIRMATION_ID",
+				"PREPARER_NUM",
+				"PREPARER_CONTACT_NAME",
+				"PREPARER_CONTACT_POSITION",
+				"PREPARER_CONTACT_PHONE",
+				"PREPARER_CONTACT_EMAIL",
+		});
+		
 		// LTC Quaterly YTD
 		HEADERS.put(LTC_BED_YTD_MAX_OCCUPANCY,
 				new String[] { "CONFIRMATION_ID", "QUARTER_INVENTORY", "BED_FUNDING_TYPE", "BED_SUBTYPE", "START_DATE",
@@ -111,7 +130,7 @@ public class Constants {
 						"PERIOD", "SUBMISSION_FY", "NB_TOTAL_BEDS", "NB_FUNDED_BEDS", "OCC_RATE_THRESHOLD" });
 
 		HEADERS.put(LTC_BED_YTD_OCCUPIED_DAYS, new String[] { "CONFIRMATION_ID", "OCC_QUARTER", "OCC_MONTH",
-				"OCC_DAYS_YTD_IN_SCOPE_PUBLIC", "OCC_DAYS_YTD_OUT_SCOPE_PUBLIC", "OCC_DAYS_YTD_TOTAL_DAYS", "OCC_DAYS_YTD_PRIVATE", });
+				"OCC_DAYS_YTD_IN_SCOPE_PUBLIC", "OCC_DAYS_YTD_OUT_SCOPE_PUBLIC", "OCC_DAYS_YTD_PRIVATE","OCC_DAYS_YTD_TOTAL_DAYS"  });
 
 		HEADERS.put(LTC_BED_YTD_OCCUPANCY_RATE,
 				new String[] { "CONFIRMATION_ID", "OCC_RATE_QUARTER", "OCC_RATE_BED_TYPES", "PLAN_MAX_OCC_DAYS",
@@ -126,8 +145,8 @@ public class Constants {
 		});
 		HEADERS.put(LTC_YTD_DIRECT_CARE_HRS_SUB_TOTALS,
 				new String[] { "CONFIRMATION_ID", "DIR_CARE_TYPE", "SUB_TOTAL_DIR_CARE_PROD_HRS_REGULAR_YTD",
-						"SUB_TOTAL_DIR_CARE_PROD_HRS_OT_YTD", "SUB_TOTAL_DIR_CARE_PROD_HRS_SUBTOTAL_YTD",
-						"SUB_TOTAL_DIR_CARE_PROD_HRS_CONT_SERV_YTD", "SUB_TOTAL_DIR_CARE_PROD_HRS_TOTAL_YTD",
+						"SUB_TOTAL_DIR_CARE_PROD_HRS_OT_YTD", "SUB_TOTAL_DIR_CARE_PROD_HRS_SUBTOTAL_YTD","SUB_TOTAL_DIR_CARE_PROD_HRS_CONT_SERV_YTD"
+						 ,"SUB_TOTAL_DIR_CARE_PROD_HRS_TOTAL_YTD",
 						"SUB_TOTAL_DIR_CARE_NON_PROD_HRS_VAC_YTD", "SUB_TOTAL_DIR_CARE_NON_PROD_HRS_SICK_YTD",
 						"SUB_TOTAL_DIR_CARE_NON_PROD_HRS_OTHER_SERV_YTD", "SUB_TOTAL_DIR_CARE_NON_PROD_HRS_TOTAL_YTD",
 						"SUB_TOTAL_DIR_CARE_TOTAL_HRS_PAID_YTD",
@@ -136,14 +155,26 @@ public class Constants {
 //		HEADERS.put(LTC_YTD_DIRECT_CARE_HRS, new String[] { "CONFIRMATION_ID", "QUARTER_INVENTORY", "BED_FUNDING_TYPE",
 //				"BED_SUBTYPE", "START_DATE", "END_DATE", "NUMBER_OF_BEDS", "MAXIMUM_BED_DAYS", "NOTES" });
 		HEADERS.put(LTC_YTD_COMP_HRS,
-				new String[] { "CONFIRMATION_ID", "COMP_HRS_TYPE", "COMP_HRS_NAME", "COMP_HRS_PER_PAYROLL_YTD",
+				new String[] { "CONFIRMATION_ID", "COMP_HRS_TYPE", "COMP_HRS_NAME",
 						"COMP_HRS_STAFF_YTD", "COMP_HRS_CONTRACT_SERVICES_YTD", "COMP_HRS_OFFICE_ALLOC_YTD",
 						"COMP_TOTAL_WORKED_HRS_YTD" });
 
+		HEADERS.put(LTC_YTD_COMP_HRS_SUBTOTALS,
+				new String[] { "Confirmation_ID", "Comp_Hrs_Type", "Sub_Total_Comp_Hrs_Staff_YTD",
+						"Sub_Total_Comp_Hrs_Contract_Services_YTD", "Sub_Total_Comp_Hrs_Office_Alloc_YTD",
+						"Sub_Total_Comp_Hrs_Total_Cost_YTD", });
+
+		HEADERS.put(LTC_YTD_COMP_HRS_TOTALS,
+				new String[] { "Confirmation_ID", "Comp_Hrs_Total_Type", "Total_Comp_Hrs_Staff_YTD",
+						"Total_Comp_Hrs_Contract_Services_YTD", "Total_Comp_Hrs_Office_Alloc_YTD",
+						"Total_Comp_Hrs_Total_Cost_YTD", });
+
+		
 		HEADERS.put(LTC_YTD_COMP_SAL,
 				new String[] { "CONFIRMATION_ID", "COMP_SAL_TYPE", "COMP_SAL_NAME", "COMP_SAL_STAFF_YTD",
 						"COMP_SAL_CONTRACT_SERVICES_YTD", "COMP_SAL_OFFICE_ALLOC_YTD", "Comp_Sal_Total_Cost_YTD" });
 
+		
 		HEADERS.put(LTC_YTD_COMP_SAL_SUBTOTALS,
 				new String[] { "Confirmation_ID", "Comp_Sal_Type", "Sub_Total_Comp_Sal_Staff_YTD",
 						"Sub_Total_Comp_Sal_Contract_Services_YTD", "Sub_Total_Comp_Sal_Office_Alloc_YTD",
@@ -185,12 +216,12 @@ public class Constants {
 		
 		HEADERS.put(LTC_BED_YTD_MAX_OCCUPANCY_TOTALS, new String[] {
 				"CONFIRMATION_ID",
-				"BED_FUNDING_TYPE",
+				"BED_OCCUPANCY_TYPE",
 				"TOTAL_BED_QUARTER_1",
 				"TOTAL_BED_QUARTER_2",
 				"TOTAL_BED_QUARTER_3",
 				"TOTAL_BED_QUARTER_4",
-				"TOTAL_PLANNED_BED_DAYS",
+				"TOTAL_PLANNED_BED_DAYS"
 		});
 		
 		HEADERS.put(LTC_BED_YTD_OCCUPANCY_RATE_TOTALS, new String[] {
@@ -207,14 +238,17 @@ public class Constants {
 				"OCC_QUARTER",
 				"OCC_DAYS_YTD_IN_SCOPE_PUBLIC",
 				"OCC_DAYS_YTD_OUT_SCOPE_PUBLIC",
-				"OCC_DAYS_YTD_TOTAL_DAYS",
 				"OCC_DAYS_YTD_PRIVATE",
+				"OCC_DAYS_YTD_TOTAL_DAYS",
 		});
 		
 		HEADERS.put(LTC_YTD_REV, new String[] { "CONFIRMATION_ID", "REV_TYPE", "REV_NAME", "REV_YTD", "REV_NOTES", });
-
-		HEADERS.put(LTC_YTD_EXP, new String[] { "CONFIRMATION_ID", "EXP_TYPE", "EXP_NAME", "REV_YTD", "REV_NOTES", });
-		HEADERS.put(LTC_YTD_COMP_BENEFITS, new String[] { "CONFIRMATION_ID", "BENEFITS_TYPE", "BENEFITS_AMOUNT_YTD" });
+		HEADERS.put(LTC_YTD_REV_SUB_TOTALS, new String[] { "CONFIRMATION_ID", "REV_TYPE", "SUB_TOTAL_REV_YTD" });
+		
+		HEADERS.put(LTC_YTD_EXP, new String[] { "CONFIRMATION_ID", "EXP_TYPE", "EXP_NAME", "EXP_YTD", "EXP_NOTES", });
+		HEADERS.put(LTC_YTD_EXP_SUB_TOTALS, new String[] { "CONFIRMATION_ID", "EXP_TYPE", "SUB_TOTAL_EXP_YTD", });
+		HEADERS.put(LTC_YTD_COMP_BENEFITS, new String[] { "CONFIRMATION_ID", "BENEFITS_TYPE", "BENEFITS_AMOUNT_YTD","BENEFITS_PERCENTAGE_ALLOCATION" });
+		
 
 	}
 

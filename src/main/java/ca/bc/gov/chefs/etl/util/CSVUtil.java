@@ -96,7 +96,6 @@ public class CSVUtil {
         OffsetDateTime dateTime = OffsetDateTime.parse(dateTimeString);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
         String formattedDateTime = dateTime.format(formatter);
-        System.out.println(formattedDateTime);
 		return formattedDateTime;
 		}
 		catch(Exception e) {

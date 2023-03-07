@@ -11,7 +11,7 @@ public class LtcYtdCompHrs implements IModel {
 	private String confirmationId;
 	private String compHrsType;
 	private String compHrsName;
-	private String compHrsPerPayrollYtd;
+	//private String compHrsPerPayrollYtd;
 	private String compHrsStaffYtd;
 	private String compHrsContractServicesYtd;
 	private String compHrsOfficeAllocYtd;
@@ -35,12 +35,7 @@ public class LtcYtdCompHrs implements IModel {
 	public void setCompHrsName(String compHrsName) {
 		this.compHrsName = compHrsName;
 	}
-	public String getCompHrsPerPayrollYtd() {
-		return compHrsPerPayrollYtd;
-	}
-	public void setCompHrsPerPayrollYtd(String compHrsPerPayrollYtd) {
-		this.compHrsPerPayrollYtd = compHrsPerPayrollYtd;
-	}
+	
 	public String getCompHrsStaffYtd() {
 		return compHrsStaffYtd;
 	}
@@ -81,7 +76,6 @@ public class LtcYtdCompHrs implements IModel {
 		elements.add(this.getConfirmationId());
 		elements.add(this.getCompHrsType());
 		elements.add(this.getCompHrsName());
-		elements.add(this.getCompHrsPerPayrollYtd());
 		elements.add(this.getCompHrsStaffYtd());
 		elements.add(this.getCompHrsContractServicesYtd());
 		elements.add(this.getCompHrsOfficeAllocYtd());

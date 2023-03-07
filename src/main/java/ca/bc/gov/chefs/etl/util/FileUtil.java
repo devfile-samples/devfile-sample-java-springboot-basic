@@ -166,6 +166,6 @@ public class FileUtil {
 
 	public static String generateFileName(String fileType) {
 		DateTimeFormatter formatter = DateTimeFormatter.BASIC_ISO_DATE;
-		return fileType.concat(LocalDate.now().format(formatter)).concat(".txt");
+		return fileType+"_".concat(LocalDate.now().format(formatter)).concat(".txt");
 	}
 }

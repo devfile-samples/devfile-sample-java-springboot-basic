@@ -34,6 +34,18 @@ public class LtcYtdSubmission implements IModel {
 	private List<LtcYtdDirectCareHrs> ltcYtdDirectCareHrs;
 	private List<LtcYtdExp> ltcYtdExp;
 	private List<LtcYtdRev> ltcYtdRev;
+	private List<LtcYtdExpSubTotals> ltcYtdExpSubttls;
+	private List<LtcYtdRevSubTotals> ltcYtdRevSubttls;
+	private List<LtcYtdCompSalSubtotals> ltcYtdCompSalSubttls;
+	private List<LtcYtdCompSalTotals> ltcYtdCompSalTtls;
+	private List<LtcYtdCompHrsSubtotals> ltcYtdCompHrsSubttls;
+	private List<LtcYtdCompHrsTotals> ltcYtdCompHrsTtls;
+	private List<LtcYtdDirectCareHrsSubTotals> ltcYtdDirectCareHrsSubttls;
+	private List<LtcYtdDirectCareCostSubtotals> ltcYtdDirectCareCostSubttls;
+	private List<LtcBedYtdMaxOccupancyTotals> ltcBedYtdMaxOccTtls;
+	private List<LtcBedYtdOccupiedDaysTotals> ltcBedYtdOccDaysTtls;
+	private List<LtcBedYtdOccupancyRateTotals> ltcBedYtdOccRateTtls;
+	
 
 	@Override
 	public String getFileName() {
@@ -45,6 +57,8 @@ public class LtcYtdSubmission implements IModel {
 	public String getFormType() {
 		return Constants.LTC_YTD_SUBMISSION;
 	}
+	
+	
 
 	@Override
 	public List<String> getCsvElements() {
@@ -76,6 +90,17 @@ public class LtcYtdSubmission implements IModel {
 		ltcQtdInstances.addAll(this.getLtcYtdDirectCareHrs());
 		ltcQtdInstances.addAll(this.getLtcYtdExp());
 		ltcQtdInstances.addAll(this.getLtcYtdRev());
+		ltcQtdInstances.addAll(this.getLtcYtdExpSubttls());
+		ltcQtdInstances.addAll(this.getLtcYtdRevSubttls());
+		ltcQtdInstances.addAll(this.getLtcYtdCompSalSubttls());
+		ltcQtdInstances.addAll(this.getLtcYtdCompSalTtls());
+		ltcQtdInstances.addAll(this.getLtcYtdCompHrsSubttls());
+		ltcQtdInstances.addAll(this.getLtcYtdCompHrsTtls());
+		ltcQtdInstances.addAll(this.getLtcYtdDirectCareHrsSubttls());
+		ltcQtdInstances.addAll(this.getLtcYtdDirectCareCostSubttls());
+		ltcQtdInstances.addAll(this.getLtcBedYtdMaxOccTtls());
+		ltcQtdInstances.addAll(this.getLtcBedYtdOccDaysTtls());
+		ltcQtdInstances.addAll(this.getLtcBedYtdOccRateTtls());
 
 		return ltcQtdInstances;
 	}
@@ -248,4 +273,93 @@ public class LtcYtdSubmission implements IModel {
 		this.ltcYtdRev = ltcYtdRev;
 	}
 
+	public List<LtcYtdExpSubTotals> getLtcYtdExpSubttls() {
+		return ltcYtdExpSubttls;
+	}
+
+	public void setLtcYtdExpSubttls(List<LtcYtdExpSubTotals> ltcYtdExpSubttls) {
+		this.ltcYtdExpSubttls = ltcYtdExpSubttls;
+	}
+
+	public List<LtcYtdRevSubTotals> getLtcYtdRevSubttls() {
+		return ltcYtdRevSubttls;
+	}
+
+	public void setLtcYtdRevSubttls(List<LtcYtdRevSubTotals> ltcYtdRevSubttls) {
+		this.ltcYtdRevSubttls = ltcYtdRevSubttls;
+	}
+
+	public List<LtcYtdCompSalSubtotals> getLtcYtdCompSalSubttls() {
+		return ltcYtdCompSalSubttls;
+	}
+
+	public void setLtcYtdCompSalSubttls(List<LtcYtdCompSalSubtotals> ltcYtdCompSalSubttls) {
+		this.ltcYtdCompSalSubttls = ltcYtdCompSalSubttls;
+	}
+
+	public List<LtcYtdCompSalTotals> getLtcYtdCompSalTtls() {
+		return ltcYtdCompSalTtls;
+	}
+
+	public void setLtcYtdCompSalTtls(List<LtcYtdCompSalTotals> ltcYtdCompSalTtls) {
+		this.ltcYtdCompSalTtls = ltcYtdCompSalTtls;
+	}
+
+	public List<LtcYtdCompHrsSubtotals> getLtcYtdCompHrsSubttls() {
+		return ltcYtdCompHrsSubttls;
+	}
+
+	public void setLtcYtdCompHrsSubttls(List<LtcYtdCompHrsSubtotals> ltcYtdCompHrsSubttls) {
+		this.ltcYtdCompHrsSubttls = ltcYtdCompHrsSubttls;
+	}
+
+	public List<LtcYtdCompHrsTotals> getLtcYtdCompHrsTtls() {
+		return ltcYtdCompHrsTtls;
+	}
+
+	public void setLtcYtdCompHrsTtls(List<LtcYtdCompHrsTotals> ltcYtdCompHrsTtls) {
+		this.ltcYtdCompHrsTtls = ltcYtdCompHrsTtls;
+	}
+
+	public List<LtcYtdDirectCareHrsSubTotals> getLtcYtdDirectCareHrsSubttls() {
+		return ltcYtdDirectCareHrsSubttls;
+	}
+
+	public void setLtcYtdDirectCareHrsSubttls(List<LtcYtdDirectCareHrsSubTotals> ltcYtdDirectCareHrsSubttls) {
+		this.ltcYtdDirectCareHrsSubttls = ltcYtdDirectCareHrsSubttls;
+	}
+
+	public List<LtcYtdDirectCareCostSubtotals> getLtcYtdDirectCareCostSubttls() {
+		return ltcYtdDirectCareCostSubttls;
+	}
+
+	public void setLtcYtdDirectCareCostSubttls(List<LtcYtdDirectCareCostSubtotals> ltcYtdDirectCareCostSubttls) {
+		this.ltcYtdDirectCareCostSubttls = ltcYtdDirectCareCostSubttls;
+	}
+
+	public List<LtcBedYtdMaxOccupancyTotals> getLtcBedYtdMaxOccTtls() {
+		return ltcBedYtdMaxOccTtls;
+	}
+
+	public void setLtcBedYtdMaxOccTtls(List<LtcBedYtdMaxOccupancyTotals> ltcBedYtdMaxOccTtls) {
+		this.ltcBedYtdMaxOccTtls = ltcBedYtdMaxOccTtls;
+	}
+
+	public List<LtcBedYtdOccupiedDaysTotals> getLtcBedYtdOccDaysTtls() {
+		return ltcBedYtdOccDaysTtls;
+	}
+
+	public void setLtcBedYtdOccDaysTtls(List<LtcBedYtdOccupiedDaysTotals> ltcBedYtdOccDaysTtls) {
+		this.ltcBedYtdOccDaysTtls = ltcBedYtdOccDaysTtls;
+	}
+
+	public List<LtcBedYtdOccupancyRateTotals> getLtcBedYtdOccRateTtls() {
+		return ltcBedYtdOccRateTtls;
+	}
+
+	public void setLtcBedYtdOccRateTtls(List<LtcBedYtdOccupancyRateTotals> ltcBedYtdOccRateTtls) {
+		this.ltcBedYtdOccRateTtls = ltcBedYtdOccRateTtls;
+	}
+
+	
 }

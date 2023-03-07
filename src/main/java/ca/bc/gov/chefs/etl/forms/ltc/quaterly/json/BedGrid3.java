@@ -1,5 +1,8 @@
 package ca.bc.gov.chefs.etl.forms.ltc.quaterly.json;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class BedGrid3{
     public String bedType;
     public String bedType3;

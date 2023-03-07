@@ -29,11 +29,13 @@ public class FacilityFormRoute extends BaseRoute {
 
 		from("direct:ltc-facility-information").process(new FacilityInfoFormApiProcessor())
 				// to the http uri
-				.to("https://submit.digital.gov.bc.ca/app/api/v1/forms/e1f4761f-efdd-4529-805e-677d3ae21601/export?bridgeEndpoint=true&format=json&version=2&type=submissions")
+				.to("https://submit.digital.gov.bc.ca/app/api/v1/forms/e1f4761f-efdd-4529-805e-677d3ae21601/export?bridgeEndpoint=true&format=json&type=submissions&version=2")
 				.log("This is the status code from the response: ${header.CamelHttpResponseCode}")
 				.log("Trying to convert the received body OK").convertBodyTo(String.class)
 				.process(new FacilityInfoFormApiResponseProcessor()).end();
 		// database phase
+		
+		
 
 		// file conversion
 

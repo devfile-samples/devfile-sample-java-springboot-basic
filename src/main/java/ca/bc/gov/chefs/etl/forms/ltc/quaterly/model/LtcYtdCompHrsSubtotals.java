@@ -3,6 +3,7 @@ package ca.bc.gov.chefs.etl.forms.ltc.quaterly.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.parser.IModel;
 
 public class LtcYtdCompHrsSubtotals implements IModel {
@@ -58,7 +59,7 @@ public class LtcYtdCompHrsSubtotals implements IModel {
 	}
 	@Override
 	public String getFormType() {
-		return "LTC_YTD_COMP_HRS_SUB_TOTALS";
+		return Constants.LTC_YTD_COMP_HRS_SUBTOTALS;
 	}
 	@Override
 	public List<String> getCsvElements() {

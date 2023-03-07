@@ -11,8 +11,8 @@ public class LtcYtdExp implements IModel {
 	private String confirmationId;
 	private String expType;
 	private String expName;
-	private String revYtd;
-	private String revNotes;
+	private String expYtd;
+	private String expNotes;
 	
 	public String getConfirmationId() {
 		return confirmationId;
@@ -32,17 +32,17 @@ public class LtcYtdExp implements IModel {
 	public void setExpName(String expName) {
 		this.expName = expName;
 	}
-	public String getRevYtd() {
-		return revYtd;
+	public String getExpYtd() {
+		return expYtd;
 	}
-	public void setRevYtd(String revYtd) {
-		this.revYtd = revYtd;
+	public void setExpYtd(String expYtd) {
+		this.expYtd = expYtd;
 	}
-	public String getRevNotes() {
-		return revNotes;
+	public String getExpNotes() {
+		return expNotes;
 	}
-	public void setRevNotes(String revNotes) {
-		this.revNotes = revNotes;
+	public void setExpNotes(String expNotes) {
+		this.expNotes = expNotes;
 	}
 	@Override
 	public String getFileName() {
@@ -59,9 +59,8 @@ public class LtcYtdExp implements IModel {
 		elements.add(this.getConfirmationId());
 		elements.add(this.getExpType());
 		elements.add(this.getExpName());
-		elements.add(this.getRevYtd());
-		elements.add(this.getRevNotes());
-		
+		elements.add(this.getExpYtd());
+		elements.add(this.getExpNotes());
 		return elements;
 	}
 	@Override

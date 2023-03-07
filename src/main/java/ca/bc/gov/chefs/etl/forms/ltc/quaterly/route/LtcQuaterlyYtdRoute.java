@@ -28,7 +28,7 @@ public class LtcQuaterlyYtdRoute extends BaseRoute {
 
 		from("direct:ltc-quaterly-ytd").process(new LtcQuaterlyYtdApiProcessor())
 				// to the http uri
-				.to("https://submit.digital.gov.bc.ca/app/api/v1/forms/256760e7-6e8b-44c4-8b63-51fb72c8c2cf/export?bridgeEndpoint=true&format=json&type=submissions")
+				.to("https://submit.digital.gov.bc.ca/app/api/v1/forms/7eb3c107-5adb-435a-adbf-b8683a56ecc0/export?bridgeEndpoint=true&format=json&type=submissions&version=3")
 				.log("This is the status code from the response: ${header.CamelHttpResponseCode}")
 				.log("Trying to convert the received body OK").convertBodyTo(String.class)
 				.process(new LtcQuaterlyYtdApiResponseProcessor()).end();

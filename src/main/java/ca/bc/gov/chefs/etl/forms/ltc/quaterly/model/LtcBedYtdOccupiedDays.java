@@ -76,8 +76,8 @@ public class LtcBedYtdOccupiedDays implements IModel{
 		elements.add(this.getOccMonth());
 		elements.add(this.getOccDaysYTDInScopePublic());
 		elements.add(this.getOccDaysYTOutScopePublic());
-		elements.add(this.getOccDaysYtdTotalDays());
 		elements.add(this.getOccDaysYTDPrivate());
+		elements.add(this.getOccDaysYtdTotalDays());
 		return elements; 
 	}
 	@Override
