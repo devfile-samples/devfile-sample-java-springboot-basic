@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.parser.IModel;
+import ca.bc.gov.chefs.etl.util.CSVUtil;
 
 public class LtcYtdSubmission implements IModel {
 
@@ -17,7 +18,7 @@ public class LtcYtdSubmission implements IModel {
 	private String submittedBy;
 	private String facilitySubId;
 	private String period;
-	private String submissionFy;
+	//private String submissionFy;
 	private String nbTotalBeds;
 	private String nbFundedBeds;
 	private String occRateThreshold;
@@ -64,12 +65,12 @@ public class LtcYtdSubmission implements IModel {
 	public List<String> getCsvElements() {
 		List<String> elements = new ArrayList<String>();
 		elements.add(this.getConfirmationId());
-		elements.add(this.getIsDeleted());
+		elements.add("false"); // FIXME Replace with elements.add(this.getIsDeleted()) when isDeleted is available in the CHEFS API.
 		elements.add(this.getSubmissionDate());
 		elements.add(this.getSubmittedBy());
 		elements.add(this.getFacilitySubId());
 		elements.add(this.getPeriod());
-		elements.add(this.getSubmissionFy());
+		//elements.add(this.getSubmissionFy());
 		elements.add(this.getNbTotalBeds());
 		elements.add(this.getNbFundedBeds());
 		elements.add(this.getOccRateThreshold());
@@ -114,7 +115,7 @@ public class LtcYtdSubmission implements IModel {
 	}
 
 	public String getSubmissionDate() {
-		return submissionDate;
+		return CSVUtil.getFormattedDate(submissionDate);
 	}
 
 	public void setSubmissionDate(String submissionDate) {
@@ -143,14 +144,6 @@ public class LtcYtdSubmission implements IModel {
 
 	public void setPeriod(String period) {
 		this.period = period;
-	}
-
-	public String getSubmissionFy() {
-		return submissionFy;
-	}
-
-	public void setSubmissionFy(String submissionFy) {
-		this.submissionFy = submissionFy;
 	}
 
 	public String getNbTotalBeds() {

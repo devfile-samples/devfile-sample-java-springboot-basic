@@ -33,7 +33,7 @@ public class LtcYtdExp implements IModel {
 		this.expName = expName;
 	}
 	public String getExpYtd() {
-		return expYtd;
+		return expYtd.isBlank() ? "0" : expYtd;
 	}
 	public void setExpYtd(String expYtd) {
 		this.expYtd = expYtd;

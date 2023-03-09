@@ -42,7 +42,7 @@ public class LtcYtdDirectCareHrs implements IModel{
 		this.dirCareName = dirCareName;
 	}
 	public String getDirCareProdHrsRegYtd() {
-		return dirCareProdHrsRegYtd;
+		return dirCareProdHrsRegYtd.isBlank() ? "0" : dirCareProdHrsRegYtd;
 	}
 	public void setDirCareProdHrsRegYtd(String dirCareProdHrsRegYtd) {
 		this.dirCareProdHrsRegYtd = dirCareProdHrsRegYtd;

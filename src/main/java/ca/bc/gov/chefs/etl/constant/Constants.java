@@ -10,6 +10,9 @@ public class Constants {
 	 * Constants representing keys in application.properties.
 	 * 
 	 */
+	/* CHEFS API  */
+	public final static String CHEFS_API_URL = "chefs.http.uri";
+	
 	/* AIMS */
 	public final static String AIMS_USERNAME = "aims.username";
 	public final static String AIMS_PASSWORD = "aims.password";
@@ -38,7 +41,7 @@ public class Constants {
 	public final static String LTC_BED_YTD_OCCUPANCY_RATE = "LTC_BED_YTD_OCCUPANCY_RATE";
 	public final static String LTC_BED_YTD_MAX_OCCUPANCY = "LTC_BED_YTD_MAX_OCCUPANCY";
 	public final static String LTC_YTD_DIRECT_CARE_HRS = "LTC_YTD_DIRECT_CARE_HRS";
-	public final static String LTC_YTD_COMP_HRS = "TC_YTD_COMP_HRS";
+	public final static String LTC_YTD_COMP_HRS = "LTC_YTD_COMP_HRS";
 	public final static String LTC_YTD_COMP_SAL = "LTC_YTD_COMP_SAL";
 	public final static String LTC_YTD_COMP_ADD_POS = "LTC_YTD_COMP_ADD_POS";
 	public final static String LTC_YTD_DIRECT_CARE_COST = "LTC_YTD_DIRECT_CARE_COST";
@@ -127,7 +130,7 @@ public class Constants {
 
 		HEADERS.put(LTC_YTD_SUBMISSION,
 				new String[] { "CONFIRMATION_ID", "IS_DELETED", "SUBMISSION_DATE", "SUBMITTED_BY", "FACILITY_SUB_ID",
-						"PERIOD", "SUBMISSION_FY", "NB_TOTAL_BEDS", "NB_FUNDED_BEDS", "OCC_RATE_THRESHOLD" });
+						"PERIOD", "NB_TOTAL_BEDS", "NB_FUNDED_BEDS", "OCC_RATE_THRESHOLD" });
 
 		HEADERS.put(LTC_BED_YTD_OCCUPIED_DAYS, new String[] { "CONFIRMATION_ID", "OCC_QUARTER", "OCC_MONTH",
 				"OCC_DAYS_YTD_IN_SCOPE_PUBLIC", "OCC_DAYS_YTD_OUT_SCOPE_PUBLIC", "OCC_DAYS_YTD_PRIVATE","OCC_DAYS_YTD_TOTAL_DAYS"  });
@@ -186,7 +189,7 @@ public class Constants {
 						"Total_Comp_Sal_Total_Cost_YTD", });
 
 		HEADERS.put(LTC_YTD_COMP_ADD_POS, new String[] { "CONFIRMATION_ID", "ADD_POS_TYPE", "ADD_POS_NAME",
-				"ADD_POS_CONTRACTED_OUT_YTD", "ADD_POS_LGL_NM_CON_SRV_YTD", "ADD_POS_PCT_SRV_CON_OUT_YTD", });
+				 "ADD_POS_LGL_NM_CON_SRV_YTD", "ADD_POS_PCT_SRV_CON_OUT_YTD", });
 		HEADERS.put(LTC_YTD_DIRECT_CARE_COST,
 				new String[] { "CONFIRMATION_ID", "DIR_CARE_COST_TYPE", "DIR_CARE_COST_NAME",
 						"DIR_CARE_COST_PROD_HRS_REG_YTD", "DIR_CARE_COST_PROD_HRS_OT_YTD",

@@ -29,7 +29,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.security.SecureRandom;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Map;
@@ -165,7 +165,7 @@ public class FileUtil {
 	}
 
 	public static String generateFileName(String fileType) {
-		DateTimeFormatter formatter = DateTimeFormatter.BASIC_ISO_DATE;
-		return fileType+"_".concat(LocalDate.now().format(formatter)).concat(".txt");
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyMMddHHmmss");
+		return fileType.toLowerCase()+"_".concat(LocalDateTime.now().format(formatter)).concat(".txt");
 	}
 }

@@ -44,19 +44,19 @@ public class LtcYtdDirectCareCost implements IModel{
 		this.dirCareCostName = dirCareCostName;
 	}
 	public String getDirCareCostProdHrsRegYtd() {
-		return dirCareCostProdHrsRegYtd;
+		return dirCareCostProdHrsRegYtd.isBlank() ? "0" : dirCareCostProdHrsRegYtd;
 	}
 	public void setDirCareCostProdHrsRegYtd(String dirCareCostProdHrsRegYtd) {
 		this.dirCareCostProdHrsRegYtd = dirCareCostProdHrsRegYtd;
 	}
 	public String getDirCareCostProdHrsOtYtd() {
-		return dirCareCostProdHrsOtYtd;
+		return dirCareCostProdHrsOtYtd.isBlank() ? "0" : dirCareCostProdHrsOtYtd;
 	}
 	public void setDirCareCostProdHrsOtYtd(String dirCareCostProdHrsOtYtd) {
 		this.dirCareCostProdHrsOtYtd = dirCareCostProdHrsOtYtd;
 	}
 	public String getDirCareCostProdHrsContractedYtd() {
-		return dirCareCostProdHrsContractedYtd;
+		return dirCareCostProdHrsContractedYtd.isBlank() ? "0" : dirCareCostProdHrsContractedYtd;
 	}
 	public void setDirCareCostProdHrsContractedYtd(String dirCareCostProdHrsContractedYtd) {
 		this.dirCareCostProdHrsContractedYtd = dirCareCostProdHrsContractedYtd;

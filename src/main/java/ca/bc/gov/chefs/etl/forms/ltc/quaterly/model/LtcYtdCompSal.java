@@ -40,19 +40,19 @@ public class LtcYtdCompSal implements IModel{
 		this.compSalName = compSalName;
 	}
 	public String getCompSalStaffYtd() {
-		return compSalStaffYtd;
+		return compSalStaffYtd.isBlank() ? "0" : compSalStaffYtd;
 	}
 	public void setCompSalStaffYtd(String compSalStaffYtd) {
 		this.compSalStaffYtd = compSalStaffYtd;
 	}
 	public String getCompSalContractServicesYtd() {
-		return compSalContractServicesYtd;
+		return compSalContractServicesYtd.isBlank() ? "0" : compSalContractServicesYtd;
 	}
 	public void setCompSalContractServicesYtd(String compSalContractServicesYtd) {
 		this.compSalContractServicesYtd = compSalContractServicesYtd;
 	}
 	public String getCompSalOfficeAllocYtd() {
-		return compSalOfficeAllocYtd;
+		return compSalOfficeAllocYtd.isBlank() ? "0" : compSalOfficeAllocYtd;
 	}
 	public void setCompSalOfficeAllocYtd(String compSalOfficeAllocYtd) {
 		this.compSalOfficeAllocYtd = compSalOfficeAllocYtd;

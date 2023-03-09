@@ -32,7 +32,7 @@ public class LtcYtdCompSalTotals implements IModel {
 	}
 
 	public String getTotalCompSalStaffYTD() {
-		return totalCompSalStaffYTD;
+		return totalCompSalStaffYTD.isBlank() ? "0" : totalCompSalStaffYTD;
 	}
 
 	public void setTotalCompSalStaffYTD(String totalCompSalStaffYTD) {
@@ -40,7 +40,7 @@ public class LtcYtdCompSalTotals implements IModel {
 	}
 
 	public String getTotalCompSalContractServicesYTD() {
-		return totalCompSalContractServicesYTD;
+		return totalCompSalContractServicesYTD.isBlank() ? "0" : totalCompSalContractServicesYTD;
 	}
 
 	public void setTotalCompSalContractServicesYTD(String totalCompSalContractServicesYTD) {
@@ -48,7 +48,7 @@ public class LtcYtdCompSalTotals implements IModel {
 	}
 
 	public String getTotalCompSalOfficeAllocYTD() {
-		return totalCompSalOfficeAllocYTD;
+		return totalCompSalOfficeAllocYTD.isBlank() ? "0" : totalCompSalOfficeAllocYTD;
 	}
 
 	public void setTotalCompSalOfficeAllocYTD(String totalCompSalOfficeAllocYTD) {
@@ -56,7 +56,7 @@ public class LtcYtdCompSalTotals implements IModel {
 	}
 
 	public String getTotalCompSalTotalCostYTD() {
-		return totalCompSalTotalCostYTD;
+		 return totalCompSalTotalCostYTD.isBlank() ? "0" : totalCompSalTotalCostYTD;
 	}
 
 	public void setTotalCompSalTotalCostYTD(String totalCompSalTotalCostYTD) {

@@ -33,7 +33,7 @@ public class LtcYtdRev implements IModel {
 		this.revName = revName;
 	}
 	public String getRevYTD() {
-		return revYTD;
+		return revYTD.isBlank() ? "0" : revYTD;
 	}
 	public void setRevYTD(String revYTD) {
 		this.revYTD = revYTD;

@@ -26,7 +26,7 @@ public class LtcYtdCompBenefits implements IModel {
 		this.benefitsType = benefitsType;
 	}
 	public String getBenefitsAmountYtd() {
-		return benefitsAmountYtd;
+		return benefitsAmountYtd.isBlank() ? "0" : benefitsAmountYtd;
 	}
 	public void setBenefitsAmountYtd(String benefitsAmountYtd) {
 		this.benefitsAmountYtd = benefitsAmountYtd;
@@ -35,7 +35,7 @@ public class LtcYtdCompBenefits implements IModel {
 	
 	
 	public String getBenefitsPercentageAlloc() {
-		return benefitsPercentageAlloc;
+		return benefitsPercentageAlloc.isBlank() ? "0" : benefitsPercentageAlloc;
 	}
 	public void setBenefitsPercentageAlloc(String benefitsPercentageAlloc) {
 		this.benefitsPercentageAlloc = benefitsPercentageAlloc;

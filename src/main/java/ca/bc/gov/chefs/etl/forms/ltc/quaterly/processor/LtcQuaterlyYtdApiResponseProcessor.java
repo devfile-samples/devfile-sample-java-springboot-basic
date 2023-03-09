@@ -101,7 +101,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			ltcYtdSubmission.setOccRateThreshold(root.getThreshold());
 			ltcYtdSubmission.setPeriod(root.getQuarter());
 			ltcYtdSubmission.setSubmissionDate(root.getForm().getCreatedAt());
-			ltcYtdSubmission.setSubmissionFy(""); // not sure
+			//ltcYtdSubmission.setSubmissionFy(""); // not sure
 			ltcYtdSubmission.setSubmittedBy(root.getForm().getFullName());
 			
 
@@ -385,6 +385,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 
 			LtcYtdDirectCareHrsSubTotals alliedDirCareHrsSubTotal = new LtcYtdDirectCareHrsSubTotals();
 			alliedDirCareHrsSubTotal.setDirCareType("Allied Professional");
+			
 			alliedDirCareHrsSubTotal.setSubTotalDirCareProdHrsRegularYTD(root.getAlliedProfProdH_sum11());
 			alliedDirCareHrsSubTotal.setSubTotalDirCareProdHrsOTYTD(root.getAlliedProfProdH_sum21());
 			alliedDirCareHrsSubTotal.setSubTotalDirCareProdHrsSubtotalYTD(root.getAlliedProfProdH_calcsum1());
@@ -2118,6 +2119,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			for (BedGrid0 maxOcp : root.getBedGrid0()) {
 				LtcBedYtdMaxOccupancy numOfBeds = new LtcBedYtdMaxOccupancy();
 				numOfBeds.setBedFundingType(maxOcp.getBedType());
+				numOfBeds.setQuarterInventory(maxOcp.getQuarter());
 				numOfBeds.setConfirmationId(root.getForm().getConfirmationId());
 				numOfBeds.setStartDate(maxOcp.getStartDate0());
 				numOfBeds.setEndDate(maxOcp.getEndDate0());
@@ -2232,6 +2234,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 					numOfBeds.setEndDate(maxOcp.getEndDate1());
 					numOfBeds.setNumberOfBeds(maxOcp.getNumberOfBeds());
 					numOfBeds.setMaximumBedDays(maxOcp.getMaximumBedDays());
+					numOfBeds.setQuarterInventory(maxOcp.getQuarter());
 					// notes missing
 					if (maxOcp.getBedType1()!=null && maxOcp.getBedType1().equals(Constants.IN_SCOPE)) {
 						numOfBeds.setBedSubype(maxOcp.getSubTypeIn());
@@ -2249,6 +2252,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 				aprilYtdOccDays.setOccDaysYTDInScopePublic(root.getInScopeMonth4());
 				aprilYtdOccDays.setOccDaysYTOutScopePublic(root.getOutScopeMonth4());
 				aprilYtdOccDays.setOccDaysYTDPrivate(root.getPrivateMonth4());
+				aprilYtdOccDays.setOccDaysYtdTotalDays(root.getTotalMonth4());
 				aprilYtdOccDays.setOccMonth("April");
 				aprilYtdOccDays.setOccQuarter("Q1");
 
@@ -2259,6 +2263,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 				mayYtdOccDays.setOccDaysYTDPrivate(root.getPrivateMonth5());
 				mayYtdOccDays.setOccMonth("May");
 				mayYtdOccDays.setOccQuarter("Q1");
+				mayYtdOccDays.setOccDaysYtdTotalDays(root.getTotalMonth5());
 
 				LtcBedYtdOccupiedDays juneYtdOccDays = new LtcBedYtdOccupiedDays();
 				juneYtdOccDays.setConfirmationId(root.getForm().getConfirmationId());
@@ -2267,6 +2272,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 				juneYtdOccDays.setOccDaysYTDPrivate(root.getPrivateMonth6());
 				juneYtdOccDays.setOccMonth("June");
 				juneYtdOccDays.setOccQuarter("Q1");
+				juneYtdOccDays.setOccDaysYtdTotalDays(root.getTotalMonth6());
 				
 				Collections.addAll(ltcBedYtdOccupiedDays, aprilYtdOccDays,mayYtdOccDays,juneYtdOccDays);
 
@@ -2287,6 +2293,8 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 				occInRateQ1.setYtdMaxOccDays(root.getyTDMaxInScopeQ1());
 				occInRateQ1.setYtdOccDays(root.getyTDOccupiedInScopeQ1());
 				occInRateQ1.setPercentOcc(root.getNoteInScopeQ1());
+				occInRateQ1.setOccRateNotes(root.getNoteInScopeQ1());
+				occInRateQ1.setOccRateQuarter("Q1");
 
 				LtcBedYtdOccupancyRate occOutRateQ1 = new LtcBedYtdOccupancyRate();
 				occOutRateQ1.setConfirmationID(root.getForm().getConfirmationId());
@@ -2295,6 +2303,8 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 				occOutRateQ1.setYtdMaxOccDays(root.getyTDMaxInScopeQ1());
 				occOutRateQ1.setYtdOccDays(root.getyTDOccupiedInScopeQ1());
 				occOutRateQ1.setPercentOcc(root.getNoteInScopeQ1());
+				occOutRateQ1.setOccRateQuarter("Q1");
+				occInRateQ1.setOccRateNotes(root.getOpEx_note13());
 
 				LtcBedYtdOccupancyRate occRateQ1 = new LtcBedYtdOccupancyRate();
 				occRateQ1.setConfirmationID(root.getForm().getConfirmationId());
@@ -2303,6 +2313,8 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 				occRateQ1.setYtdMaxOccDays(root.getyTDMaxInScopeQ1());
 				occRateQ1.setYtdOccDays(root.getyTDOccupiedInScopeQ1());
 				occRateQ1.setPercentOcc(root.getNoteInScopeQ1());
+				occRateQ1.setOccRateQuarter("Q1");
+				occInRateQ1.setOccRateNotes(root.getNoteInScopeQ1());
 
 				LtcBedYtdOccupancyRateTotals q1RateTotals = new LtcBedYtdOccupancyRateTotals();
 				q1RateTotals.setConfirmationID(root.getForm().getConfirmationId());
@@ -2325,6 +2337,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 					numOfBeds.setEndDate(maxOcp.getEndDate2());
 					numOfBeds.setNumberOfBeds(maxOcp.getNumberOfBeds());
 					numOfBeds.setMaximumBedDays(maxOcp.getMaximumBedDays());
+					numOfBeds.setQuarterInventory("Q2");
 					// notes missing
 					if (maxOcp.getBedType2()!=null && maxOcp.getBedType2().equals(Constants.IN_SCOPE)) {
 						numOfBeds.setBedSubype(maxOcp.getSubTypeIn());
@@ -2343,6 +2356,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 				julyYtdOccDays.setOccDaysYTDPrivate(root.getPrivateMonth7());
 				julyYtdOccDays.setOccMonth("July");
 				julyYtdOccDays.setOccQuarter("Q2");
+				julyYtdOccDays.setOccDaysYtdTotalDays(root.getTotalMonth7());
 
 				LtcBedYtdOccupiedDays augYtdOccDays = new LtcBedYtdOccupiedDays();
 				augYtdOccDays.setConfirmationId(root.getForm().getConfirmationId());
@@ -2351,6 +2365,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 				augYtdOccDays.setOccDaysYTDPrivate(root.getPrivateMonth8());
 				augYtdOccDays.setOccMonth("May");
 				augYtdOccDays.setOccQuarter("Q2");
+				augYtdOccDays.setOccDaysYtdTotalDays(root.getTotalMonth8());
 
 				LtcBedYtdOccupiedDays sepYtdOccDays = new LtcBedYtdOccupiedDays();
 				sepYtdOccDays.setConfirmationId(root.getForm().getConfirmationId());
@@ -2359,6 +2374,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 				sepYtdOccDays.setOccDaysYTDPrivate(root.getPrivateMonth9());
 				sepYtdOccDays.setOccMonth("September");
 				sepYtdOccDays.setOccQuarter("Q2");
+				sepYtdOccDays.setOccDaysYtdTotalDays(root.getTotalMonth9());
 				
 				Collections.addAll(ltcBedYtdOccupiedDays, julyYtdOccDays,augYtdOccDays,sepYtdOccDays);
 
@@ -2380,6 +2396,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 				occInRateQ2.setYtdMaxOccDays(root.getyTDMaxInScopeQ1());
 				occInRateQ2.setYtdOccDays(root.getyTDOccupiedInScopeQ1());
 				occInRateQ2.setPercentOcc(root.getNoteInScopeQ1());
+				occInRateQ2.setOccRateQuarter("Q2");
 
 				LtcBedYtdOccupancyRate occOutRateQ2 = new LtcBedYtdOccupancyRate();
 				occOutRateQ2.setConfirmationID(root.getForm().getConfirmationId());
@@ -2388,6 +2405,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 				occOutRateQ2.setYtdMaxOccDays(root.getyTDMaxInScopeQ2());
 				occOutRateQ2.setYtdOccDays(root.getyTDOccupiedInScopeQ2());
 				occOutRateQ2.setPercentOcc(root.getNoteInScopeQ2());
+				occOutRateQ2.setOccRateQuarter("Q2");
 
 				LtcBedYtdOccupancyRate occRateQ2 = new LtcBedYtdOccupancyRate();
 				occRateQ2.setConfirmationID(root.getForm().getConfirmationId());
@@ -2396,6 +2414,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 				occRateQ2.setYtdMaxOccDays(root.getyTDMaxInScopeQ2());
 				occRateQ2.setYtdOccDays(root.getyTDOccupiedInScopeQ2());
 				occRateQ2.setPercentOcc(root.getNoteInScopeQ2());
+				occRateQ2.setOccRateQuarter("Q2");
 				
 				LtcBedYtdOccupancyRateTotals q2RateTotals = new LtcBedYtdOccupancyRateTotals();
 				q2RateTotals.setConfirmationID(root.getForm().getConfirmationId());
@@ -2404,6 +2423,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 				q2RateTotals.setTotalYTDMaxOccDays(root.getyTDMaxTotalQ2());
 				q2RateTotals.setTotalYTDOccDays(root.getyTDOccupiedTotalQ2());
 				q2RateTotals.setTotalPercentOcc(root.getOccupiedPercentageTotalQ2());
+				
 
 				Collections.addAll(ltcBedYtdOccRateTtls,q2RateTotals);
 				Collections.addAll(ltcBedYtdOccupancyRates, occInRateQ2,occOutRateQ2,occRateQ2);
@@ -2418,6 +2438,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 					numOfBeds.setEndDate(maxOcp.getEndDate3());
 					numOfBeds.setNumberOfBeds(maxOcp.getNumberOfBeds());
 					numOfBeds.setMaximumBedDays(maxOcp.getMaximumBedDays());
+					numOfBeds.setQuarterInventory(maxOcp.getQuarter());
 					// notes missing
 					if (maxOcp.getBedType3()!=null && maxOcp.getBedType3().equals(Constants.IN_SCOPE)) {
 						numOfBeds.setBedSubype(maxOcp.getSubTypeIn());
@@ -2472,6 +2493,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 				occInRateQ3.setYtdMaxOccDays(root.getyTDMaxInScopeQ1());
 				occInRateQ3.setYtdOccDays(root.getyTDOccupiedInScopeQ1());
 				occInRateQ3.setPercentOcc(root.getNoteInScopeQ1());
+				
 
 				LtcBedYtdOccupancyRate occOutRateQ3 = new LtcBedYtdOccupancyRate();
 				occOutRateQ3.setConfirmationID(root.getForm().getConfirmationId());
@@ -2509,6 +2531,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 					numOfBeds.setEndDate(maxOcp.getEndDate4());
 					numOfBeds.setNumberOfBeds(maxOcp.getNumberOfBeds());
 					numOfBeds.setMaximumBedDays(maxOcp.getMaximumBedDays());
+					numOfBeds.setQuarterInventory(maxOcp.getQuarter());
 					// notes missing
 					if (maxOcp.getBedType4()!=null && maxOcp.getBedType4().equals(Constants.IN_SCOPE)) {
 						numOfBeds.setBedSubype(maxOcp.getSubTypeIn());
@@ -2537,6 +2560,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 				janYtdOccDays.setOccMonth("January");
 				janYtdOccDays.setOccQuarter("Q4");
 				janYtdOccDays.setOccDaysYtdTotalDays(root.getTotalMonth1());
+				
 
 				LtcBedYtdOccupiedDays febYtdOccDays = new LtcBedYtdOccupiedDays();
 				febYtdOccDays.setConfirmationId(root.getForm().getConfirmationId());

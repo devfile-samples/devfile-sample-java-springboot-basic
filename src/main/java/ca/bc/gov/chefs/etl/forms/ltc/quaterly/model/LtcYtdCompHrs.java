@@ -37,26 +37,26 @@ public class LtcYtdCompHrs implements IModel {
 	}
 	
 	public String getCompHrsStaffYtd() {
-		return compHrsStaffYtd;
+		return compHrsStaffYtd.isBlank() ? "0" : compHrsStaffYtd;
 	}
 	public void setCompHrsStaffYtd(String compHrsStaffYtd) {
 		this.compHrsStaffYtd = compHrsStaffYtd;
 	}
 	public String getCompHrsContractServicesYtd() {
-		return compHrsContractServicesYtd;
+		return compHrsContractServicesYtd.isBlank() ? "0" : compHrsContractServicesYtd;
 	}
 	public void setCompHrsContractServicesYtd(String compHrsContractServicesYtd) {
 		this.compHrsContractServicesYtd = compHrsContractServicesYtd;
 	}
 	public String getCompHrsOfficeAllocYtd() {
-		return compHrsOfficeAllocYtd;
+		return compHrsOfficeAllocYtd.isBlank() ? "0" : compHrsOfficeAllocYtd;
 	}
 	public void setCompHrsOfficeAllocYtd(String compHrsOfficeAllocYtd) {
 		this.compHrsOfficeAllocYtd = compHrsOfficeAllocYtd;
 	}
 	
 	public String getCompTotalWorkedHrsYtd() {
-		return compTotalWorkedHrsYtd;
+		return compTotalWorkedHrsYtd.isBlank() ? "0" : compTotalWorkedHrsYtd;
 	}
 	public void setCompTotalWorkedHrsYtd(String compTotalWorkedHrsYtd) {
 		this.compTotalWorkedHrsYtd = compTotalWorkedHrsYtd;

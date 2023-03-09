@@ -24,11 +24,13 @@ public class LtcQuaterlyYtdRoute extends BaseRoute {
 		// trigger
 		from("jetty:http://{{hostname}}:{{port}}/ltc-quaterly-ytd").routeId("ltc-quaterly-ytd-form")
 				.log("CHEFS-ETL received a request for LTCQ Form extraction")//.bean(AIMSFormPayloadExtractor.class)
+				.process(exchange -> sharedData.put("body", exchange.getIn().getBody(String.class)))
 				.process(new LtcQuaterlyYtdProcessor()).to("direct:ltc-quaterly-ytd").end();
 
-		from("direct:ltc-quaterly-ytd").process(new LtcQuaterlyYtdApiProcessor())
+		from("direct:ltc-quaterly-ytd")
 				// to the http uri
-				.to("https://submit.digital.gov.bc.ca/app/api/v1/forms/7eb3c107-5adb-435a-adbf-b8683a56ecc0/export?bridgeEndpoint=true&format=json&type=submissions&version=3")
+				.process(new LtcQuaterlyYtdApiProcessor(sharedData))
+				.toD("${header.RequestUri}")
 				.log("This is the status code from the response: ${header.CamelHttpResponseCode}")
 				.log("Trying to convert the received body OK").convertBodyTo(String.class)
 				.process(new LtcQuaterlyYtdApiResponseProcessor()).end();

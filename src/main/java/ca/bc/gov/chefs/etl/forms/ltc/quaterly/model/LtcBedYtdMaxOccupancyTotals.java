@@ -96,6 +96,7 @@ public class LtcBedYtdMaxOccupancyTotals implements IModel {
 	public List<String> getCsvElements() {
 		List<String> elements = new ArrayList<String>();
 		elements.add(this.getConfirmationID());
+		elements.add(this.getOccupancyType());
 		elements.add(this.getBedFundingType());
 		elements.add(this.getTotalBedQuarter1());
 		elements.add(this.getTotalBedQuarter2());

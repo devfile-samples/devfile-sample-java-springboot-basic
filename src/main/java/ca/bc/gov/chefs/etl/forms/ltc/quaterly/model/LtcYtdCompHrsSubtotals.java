@@ -28,25 +28,25 @@ public class LtcYtdCompHrsSubtotals implements IModel {
 		this.compHrsType = compHrsType;
 	}
 	public String getSubTotalCompHrsStaffYTD() {
-		return subTotalCompHrsStaffYTD;
+		return subTotalCompHrsStaffYTD.isBlank() ? "0" : subTotalCompHrsStaffYTD;
 	}
 	public void setSubTotalCompHrsStaffYTD(String subTotalCompHrsStaffYTD) {
 		this.subTotalCompHrsStaffYTD = subTotalCompHrsStaffYTD;
 	}
 	public String getSubTotalCompHrsContractServicesYTD() {
-		return subTotalCompHrsContractServicesYTD;
+		return subTotalCompHrsContractServicesYTD.isBlank() ? "0" : subTotalCompHrsContractServicesYTD;
 	}
 	public void setSubTotalCompHrsContractServicesYTD(String subTotalCompHrsContractServicesYTD) {
 		this.subTotalCompHrsContractServicesYTD = subTotalCompHrsContractServicesYTD;
 	}
 	public String getSubTotalCompHrsOfficeAllocYTD() {
-		return subTotalCompHrsOfficeAllocYTD;
+		return subTotalCompHrsOfficeAllocYTD.isBlank() ? "0" : subTotalCompHrsOfficeAllocYTD;
 	}
 	public void setSubTotalCompHrsOfficeAllocYTD(String subTotalCompHrsOfficeAllocYTD) {
 		this.subTotalCompHrsOfficeAllocYTD = subTotalCompHrsOfficeAllocYTD;
 	}
 	public String getSubTotalCompTotalWorkedHrsYTD() {
-		return subTotalCompTotalWorkedHrsYTD;
+		return subTotalCompTotalWorkedHrsYTD.isBlank() ? "0" : subTotalCompTotalWorkedHrsYTD;
 	}
 	public void setSubTotalCompTotalWorkedHrsYTD(String subTotalCompTotalWorkedHrsYTD) {
 		this.subTotalCompTotalWorkedHrsYTD = subTotalCompTotalWorkedHrsYTD;

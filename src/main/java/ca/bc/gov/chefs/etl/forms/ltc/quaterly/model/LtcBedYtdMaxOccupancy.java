@@ -5,6 +5,7 @@ import java.util.List;
 
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.parser.IModel;
+import ca.bc.gov.chefs.etl.util.CSVUtil;
 
 public class LtcBedYtdMaxOccupancy implements IModel {
 
@@ -43,13 +44,13 @@ public class LtcBedYtdMaxOccupancy implements IModel {
 		this.bedSubype = bedSubype;
 	}
 	public String getStartDate() {
-		return startDate;
+		return CSVUtil.getFormattedDate(startDate);
 	}
 	public void setStartDate(String startDate) {
 		this.startDate = startDate;
 	}
 	public String getEndDate() {
-		return endDate;
+		return CSVUtil.getFormattedDate(endDate);
 	}
 	public void setEndDate(String endDate) {
 		this.endDate = endDate;
