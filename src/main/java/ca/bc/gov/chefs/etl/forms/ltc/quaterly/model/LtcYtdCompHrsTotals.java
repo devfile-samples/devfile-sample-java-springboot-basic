@@ -3,6 +3,8 @@ package ca.bc.gov.chefs.etl.forms.ltc.quaterly.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.parser.IModel;
 
@@ -34,7 +36,7 @@ public class LtcYtdCompHrsTotals implements IModel{
 	}
 
 	public String getTotalCompHrsStaffYTD() {
-		return totalCompHrsStaffYTD.isBlank() ? "0" : totalCompHrsStaffYTD;
+		return StringUtils.isBlank(totalCompHrsStaffYTD) ? "0" : totalCompHrsStaffYTD;
 	}
 
 	public void setTotalCompHrsStaffYTD(String totalCompHrsStaffYTD) {
@@ -42,7 +44,7 @@ public class LtcYtdCompHrsTotals implements IModel{
 	}
 
 	public String getTotalCompHrsContractServicesYTD() {
-		return totalCompHrsContractServicesYTD.isBlank() ? "0" : totalCompHrsContractServicesYTD;
+		return StringUtils.isBlank(totalCompHrsContractServicesYTD) ? "0" : totalCompHrsContractServicesYTD;
 	}
 
 	public void setTotalCompHrsContractServicesYTD(String totalCompHrsContractServicesYTD) {
@@ -50,7 +52,7 @@ public class LtcYtdCompHrsTotals implements IModel{
 	}
 
 	public String getTotalCompHrsOfficeAllocYTD() {
-		return totalCompHrsOfficeAllocYTD.isBlank() ? "0" : totalCompHrsOfficeAllocYTD;
+		return StringUtils.isBlank(totalCompHrsOfficeAllocYTD) ? "0" : totalCompHrsOfficeAllocYTD;
 	}
 
 	public void setTotalCompHrsOfficeAllocYTD(String totalCompHrsOfficeAllocYTD) {
@@ -58,7 +60,7 @@ public class LtcYtdCompHrsTotals implements IModel{
 	}
 
 	public String getTotalCompTotalWorkedHrsYTD() {
-		return totalCompTotalWorkedHrsYTD.isBlank() ? "0" : totalCompTotalWorkedHrsYTD;
+		return StringUtils.isBlank(totalCompTotalWorkedHrsYTD) ? "0" : totalCompTotalWorkedHrsYTD;
 	}
 
 	public void setTotalCompTotalWorkedHrsYTD(String totalCompTotalWorkedHrsYTD) {

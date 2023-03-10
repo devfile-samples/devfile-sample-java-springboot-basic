@@ -3,6 +3,8 @@ package ca.bc.gov.chefs.etl.forms.ltc.quaterly.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.parser.IModel;
 
@@ -26,7 +28,7 @@ public class LtcYtdCompBenefits implements IModel {
 		this.benefitsType = benefitsType;
 	}
 	public String getBenefitsAmountYtd() {
-		return benefitsAmountYtd.isBlank() ? "0" : benefitsAmountYtd;
+		return StringUtils.isEmpty(benefitsAmountYtd) ? "0" : benefitsAmountYtd;
 	}
 	public void setBenefitsAmountYtd(String benefitsAmountYtd) {
 		this.benefitsAmountYtd = benefitsAmountYtd;
@@ -35,7 +37,7 @@ public class LtcYtdCompBenefits implements IModel {
 	
 	
 	public String getBenefitsPercentageAlloc() {
-		return benefitsPercentageAlloc.isBlank() ? "0" : benefitsPercentageAlloc;
+		return StringUtils.isEmpty(benefitsPercentageAlloc) ? "0" : benefitsPercentageAlloc;
 	}
 	public void setBenefitsPercentageAlloc(String benefitsPercentageAlloc) {
 		this.benefitsPercentageAlloc = benefitsPercentageAlloc;

@@ -3,6 +3,8 @@ package ca.bc.gov.chefs.etl.forms.ltc.quaterly.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.parser.IModel;
 
@@ -33,7 +35,7 @@ public class LtcYtdExp implements IModel {
 		this.expName = expName;
 	}
 	public String getExpYtd() {
-		return expYtd.isBlank() ? "0" : expYtd;
+		return StringUtils.isBlank(expYtd) ? "0" : expYtd;
 	}
 	public void setExpYtd(String expYtd) {
 		this.expYtd = expYtd;

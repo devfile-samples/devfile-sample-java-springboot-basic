@@ -3,6 +3,8 @@ package ca.bc.gov.chefs.etl.forms.ltc.quaterly.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.parser.IModel;
 
@@ -37,7 +39,7 @@ public class LtcYtdCompHrs implements IModel {
 	}
 	
 	public String getCompHrsStaffYtd() {
-		return compHrsStaffYtd.isBlank() ? "0" : compHrsStaffYtd;
+		return StringUtils.isEmpty(compHrsStaffYtd) ? "0" : compHrsStaffYtd;
 	}
 	public void setCompHrsStaffYtd(String compHrsStaffYtd) {
 		this.compHrsStaffYtd = compHrsStaffYtd;
@@ -49,7 +51,7 @@ public class LtcYtdCompHrs implements IModel {
 		this.compHrsContractServicesYtd = compHrsContractServicesYtd;
 	}
 	public String getCompHrsOfficeAllocYtd() {
-		return compHrsOfficeAllocYtd.isBlank() ? "0" : compHrsOfficeAllocYtd;
+		return StringUtils.isEmpty(compHrsOfficeAllocYtd) ? "0" : compHrsOfficeAllocYtd;
 	}
 	public void setCompHrsOfficeAllocYtd(String compHrsOfficeAllocYtd) {
 		this.compHrsOfficeAllocYtd = compHrsOfficeAllocYtd;

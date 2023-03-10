@@ -1,5 +1,6 @@
 package ca.bc.gov.chefs.etl.constant;
 
+import java.io.File;
 import java.util.HashMap;
 
 import java.util.Map;
@@ -18,6 +19,9 @@ public class Constants {
 	public final static String AIMS_PASSWORD = "aims.password";
 
 	public final static Map<String, String[]> HEADERS = new HashMap<String, String[]>();
+	public final static Map<String,String> UNENC_FILE_PATH = new HashMap<String,String>();
+	public final static Map<String,String> ENC_FILE_PATH = new HashMap<String,String>();
+	
 	public final static String AIMS_FORM = "AIMS_FORM";
 	public final static String AIMS_MISUSE = "AIMS_MISUSE";
 	public final static String AIMS_REFERRAL = "AIMS_REFERRAL";
@@ -65,14 +69,29 @@ public class Constants {
 	public static final String LTC_BED_YTD_OCCUPIED_DAYS_TOTALS = "LTC_BED_YTD_OCCUPIED_DAYS_TOTALS";
 
 	/* File Constants */
-	public final static String ETL_DIRECTORY = "etl";
-	public final static String UNENCRYPTED_DIRECTORY = "unencrypted";
-	public final static String ENCRYPTED_DIRECTORY = "encrypted";
+	public static final String LTC_FACILITY_UNENCRYPTED_FP = "."+File.separator+"unencrypted"+File.separator+"ltc_facility";
+	public static final String LTC_FACILITY_ENCRYPTED_FP = "."+File.separator+"encrypted"+File.separator+"ltc_facility";
+	
+	public static final String AIMS_UNENCRYPTED_FP = "."+File.separator+"unencrypted"+File.separator+"aims";
+	public static final String AIMS_ENCRYPTED_FP = "."+File.separator+"encrypted"+File.separator+"aims";
+	
+	public static final String LTC_QUARTERLY_YTD_UNENCRYPTED_FP = "."+File.separator+"unencrypted"+File.separator+"ltc_quarterly";
+	public static final String LTC_QUARTERLY_YTD_ENCRYPTED_FP = "."+File.separator+"encrypted"+File.separator+"ltc_quarterly";
+
 	
 		
 	
 
 	static {
+		
+		UNENC_FILE_PATH.put(LTC_FACILITY, LTC_FACILITY_UNENCRYPTED_FP);
+		UNENC_FILE_PATH.put(LTC_YTD_SUBMISSION, LTC_QUARTERLY_YTD_UNENCRYPTED_FP);
+		UNENC_FILE_PATH.put(AIMS_FORM,AIMS_UNENCRYPTED_FP);
+		
+		ENC_FILE_PATH.put(AIMS_FORM, AIMS_ENCRYPTED_FP);
+		ENC_FILE_PATH.put(LTC_FACILITY, LTC_FACILITY_ENCRYPTED_FP);
+		ENC_FILE_PATH.put(LTC_YTD_SUBMISSION, LTC_QUARTERLY_YTD_ENCRYPTED_FP);
+		
 		HEADERS.put("TestModel#Main", new String[] { "confirmationId", "formName", "version", "createdAt", "fullName",
 				"username", "email", "status", "assignee", "assigneeEmail", });
 
@@ -155,8 +174,6 @@ public class Constants {
 						"SUB_TOTAL_DIR_CARE_TOTAL_HRS_PAID_YTD",
 
 				});
-//		HEADERS.put(LTC_YTD_DIRECT_CARE_HRS, new String[] { "CONFIRMATION_ID", "QUARTER_INVENTORY", "BED_FUNDING_TYPE",
-//				"BED_SUBTYPE", "START_DATE", "END_DATE", "NUMBER_OF_BEDS", "MAXIMUM_BED_DAYS", "NOTES" });
 		HEADERS.put(LTC_YTD_COMP_HRS,
 				new String[] { "CONFIRMATION_ID", "COMP_HRS_TYPE", "COMP_HRS_NAME",
 						"COMP_HRS_STAFF_YTD", "COMP_HRS_CONTRACT_SERVICES_YTD", "COMP_HRS_OFFICE_ALLOC_YTD",

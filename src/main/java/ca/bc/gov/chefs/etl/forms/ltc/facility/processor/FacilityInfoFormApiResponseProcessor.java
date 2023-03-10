@@ -11,10 +11,12 @@ import org.apache.camel.Processor;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.forms.ltc.facility.json.Root;
 import ca.bc.gov.chefs.etl.forms.ltc.facility.model.Approver;
 import ca.bc.gov.chefs.etl.forms.ltc.facility.model.FacilityInformation;
 import ca.bc.gov.chefs.etl.forms.ltc.facility.model.Preparer;
+import ca.bc.gov.chefs.etl.parser.FileProperties;
 import ca.bc.gov.chefs.etl.parser.IModel;
 import ca.bc.gov.chefs.etl.util.CSVUtil;
 import ca.bc.gov.chefs.etl.util.FileUtil;
@@ -34,7 +36,11 @@ public class FacilityInfoFormApiResponseProcessor implements Processor {
 		List<FacilityInformation> parsedFacilityInfo = parseFacilityInfo(facilityInformationModels);
 		List<IModel> iModels = (List<IModel>) (List<?>) parsedFacilityInfo;
 		Map<String, List<List<String>>> map = CSVUtil.provider(iModels);
-		FileUtil.writeToCSVFile(map);
+		FileProperties fileProperties = new FileProperties();
+		fileProperties.setUnEncDirForThisExchange(Constants.UNENC_FILE_PATH.get(Constants.LTC_FACILITY));
+		fileProperties.setEncDirForThisExchange(Constants.ENC_FILE_PATH.get(Constants.LTC_FACILITY));
+			
+		FileUtil.writeToCSVFile(map,fileProperties);
 	}
 	
 	private List<FacilityInformation> parseFacilityInfo(List<Root> facilities) {

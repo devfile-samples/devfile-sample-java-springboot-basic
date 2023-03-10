@@ -3,6 +3,8 @@ package ca.bc.gov.chefs.etl.forms.ltc.quaterly.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.parser.IModel;
 
@@ -32,7 +34,7 @@ public class LtcYtdCompSalTotals implements IModel {
 	}
 
 	public String getTotalCompSalStaffYTD() {
-		return totalCompSalStaffYTD.isBlank() ? "0" : totalCompSalStaffYTD;
+		return StringUtils.isBlank(totalCompSalStaffYTD) ? "0" : totalCompSalStaffYTD;
 	}
 
 	public void setTotalCompSalStaffYTD(String totalCompSalStaffYTD) {
@@ -40,7 +42,7 @@ public class LtcYtdCompSalTotals implements IModel {
 	}
 
 	public String getTotalCompSalContractServicesYTD() {
-		return totalCompSalContractServicesYTD.isBlank() ? "0" : totalCompSalContractServicesYTD;
+		return StringUtils.isBlank(totalCompSalContractServicesYTD) ? "0" : totalCompSalContractServicesYTD;
 	}
 
 	public void setTotalCompSalContractServicesYTD(String totalCompSalContractServicesYTD) {
@@ -48,7 +50,7 @@ public class LtcYtdCompSalTotals implements IModel {
 	}
 
 	public String getTotalCompSalOfficeAllocYTD() {
-		return totalCompSalOfficeAllocYTD.isBlank() ? "0" : totalCompSalOfficeAllocYTD;
+		return StringUtils.isBlank(totalCompSalOfficeAllocYTD) ? "0" : totalCompSalOfficeAllocYTD;
 	}
 
 	public void setTotalCompSalOfficeAllocYTD(String totalCompSalOfficeAllocYTD) {
@@ -56,7 +58,7 @@ public class LtcYtdCompSalTotals implements IModel {
 	}
 
 	public String getTotalCompSalTotalCostYTD() {
-		 return totalCompSalTotalCostYTD.isBlank() ? "0" : totalCompSalTotalCostYTD;
+		 return StringUtils.isBlank(totalCompSalTotalCostYTD) ? "0" : totalCompSalTotalCostYTD;
 	}
 
 	public void setTotalCompSalTotalCostYTD(String totalCompSalTotalCostYTD) {

@@ -2,6 +2,7 @@ package ca.bc.gov.chefs.etl.util;
 
 //import org.apache.commons.io.IOUtils;
 import org.bouncycastle.bcpg.ArmoredOutputStream;
+
 import org.bouncycastle.bcpg.CompressionAlgorithmTags;
 import org.bouncycastle.bcpg.SymmetricKeyAlgorithmTags;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
@@ -17,6 +18,8 @@ import org.supercsv.io.ICsvListWriter;
 import org.supercsv.prefs.CsvPreference;
 import org.supercsv.quote.AlwaysQuoteMode;
 
+import ca.bc.gov.chefs.etl.parser.FileProperties;
+
 import static ca.bc.gov.chefs.etl.constant.Constants.HEADERS;
 
 import java.io.BufferedInputStream;
@@ -28,6 +31,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.security.SecureRandom;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -133,10 +138,10 @@ public class FileUtil {
 		}
 	}
 
-	public static <T> void writeToCSVFile(Map<String, List<List<String>>> map) {
+	public static <T> void writeToCSVFile(Map<String, List<List<String>>> map,  FileProperties fileProperties) {
 		ICsvListWriter listWriter = null;
 		for (Map.Entry<String, List<List<String>>> entry : map.entrySet()) {
-			String fileName = generateFileName(entry.getKey());
+			String fileName = generateFileName(entry.getKey(),fileProperties);
 			String[] headers = HEADERS.get(entry.getKey());
 			logger.info("--------Generating CSV File---------------{}---------------", fileName);
 			try {
@@ -164,8 +169,17 @@ public class FileUtil {
 
 	}
 
-	public static String generateFileName(String fileType) {
+	public static String generateFileName(String fileType,FileProperties fileProperties) {
+		String directoryForThisExchange = fileProperties.getUnEncDirForThisExchange();
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyMMddHHmmss");
-		return fileType.toLowerCase()+"_".concat(LocalDateTime.now().format(formatter)).concat(".txt");
+		String dateTime = LocalDateTime.now().format(formatter);
+		String directoryPath = directoryForThisExchange.concat(File.separator).concat(dateTime).concat(File.separator);
+		try {
+			Files.createDirectories(Paths.get(directoryPath));
+		} catch (IOException e) {
+			logger.error("File Write Exception: "+e.getMessage());
+			e.printStackTrace();
+		}
+		return directoryPath+fileType.toLowerCase()+"_".concat(LocalDateTime.now().format(formatter)).concat(".txt");
 	}
 }
