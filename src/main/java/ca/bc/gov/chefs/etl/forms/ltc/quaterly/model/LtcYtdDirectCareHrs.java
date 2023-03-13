@@ -3,6 +3,8 @@ package ca.bc.gov.chefs.etl.forms.ltc.quaterly.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.parser.IModel;
 
@@ -42,19 +44,19 @@ public class LtcYtdDirectCareHrs implements IModel{
 		this.dirCareName = dirCareName;
 	}
 	public String getDirCareProdHrsRegYtd() {
-		return dirCareProdHrsRegYtd;
+		return StringUtils.isBlank(dirCareProdHrsRegYtd) ? "0" : dirCareProdHrsRegYtd;
 	}
 	public void setDirCareProdHrsRegYtd(String dirCareProdHrsRegYtd) {
 		this.dirCareProdHrsRegYtd = dirCareProdHrsRegYtd;
 	}
 	public String getDirCareProdHrsOtYtd() {
-		return dirCareProdHrsOtYtd;
+		return StringUtils.isBlank(dirCareProdHrsOtYtd) ? "0" : dirCareProdHrsOtYtd;
 	}
 	public void setDirCareProdHrsOtYtd(String dirCareProdHrsOtYtd) {
 		this.dirCareProdHrsOtYtd = dirCareProdHrsOtYtd;
 	}
 	public String getDirCareProdHrsContractedYtd() {
-		return dirCareProdHrsContractedYtd;
+		return StringUtils.isBlank(dirCareProdHrsContractedYtd) ? "0" : dirCareProdHrsContractedYtd;
 	}
 	public void setDirCareProdHrsContractedYtd(String dirCareProdHrsContractedYtd) {
 		this.dirCareProdHrsContractedYtd = dirCareProdHrsContractedYtd;
@@ -140,8 +142,5 @@ public class LtcYtdDirectCareHrs implements IModel{
 	public List<IModel> getObjects() {
 		return new ArrayList<>();
 	}
-	
-	
-	
 	
 }

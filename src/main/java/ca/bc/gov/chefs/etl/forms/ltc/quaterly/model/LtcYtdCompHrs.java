@@ -3,6 +3,8 @@ package ca.bc.gov.chefs.etl.forms.ltc.quaterly.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.parser.IModel;
 
@@ -11,7 +13,7 @@ public class LtcYtdCompHrs implements IModel {
 	private String confirmationId;
 	private String compHrsType;
 	private String compHrsName;
-	private String compHrsPerPayrollYtd;
+	//private String compHrsPerPayrollYtd;
 	private String compHrsStaffYtd;
 	private String compHrsContractServicesYtd;
 	private String compHrsOfficeAllocYtd;
@@ -35,33 +37,28 @@ public class LtcYtdCompHrs implements IModel {
 	public void setCompHrsName(String compHrsName) {
 		this.compHrsName = compHrsName;
 	}
-	public String getCompHrsPerPayrollYtd() {
-		return compHrsPerPayrollYtd;
-	}
-	public void setCompHrsPerPayrollYtd(String compHrsPerPayrollYtd) {
-		this.compHrsPerPayrollYtd = compHrsPerPayrollYtd;
-	}
+	
 	public String getCompHrsStaffYtd() {
-		return compHrsStaffYtd;
+		return StringUtils.isEmpty(compHrsStaffYtd) ? "0" : compHrsStaffYtd;
 	}
 	public void setCompHrsStaffYtd(String compHrsStaffYtd) {
 		this.compHrsStaffYtd = compHrsStaffYtd;
 	}
 	public String getCompHrsContractServicesYtd() {
-		return compHrsContractServicesYtd;
+		return compHrsContractServicesYtd.isBlank() ? "0" : compHrsContractServicesYtd;
 	}
 	public void setCompHrsContractServicesYtd(String compHrsContractServicesYtd) {
 		this.compHrsContractServicesYtd = compHrsContractServicesYtd;
 	}
 	public String getCompHrsOfficeAllocYtd() {
-		return compHrsOfficeAllocYtd;
+		return StringUtils.isEmpty(compHrsOfficeAllocYtd) ? "0" : compHrsOfficeAllocYtd;
 	}
 	public void setCompHrsOfficeAllocYtd(String compHrsOfficeAllocYtd) {
 		this.compHrsOfficeAllocYtd = compHrsOfficeAllocYtd;
 	}
 	
 	public String getCompTotalWorkedHrsYtd() {
-		return compTotalWorkedHrsYtd;
+		return compTotalWorkedHrsYtd.isBlank() ? "0" : compTotalWorkedHrsYtd;
 	}
 	public void setCompTotalWorkedHrsYtd(String compTotalWorkedHrsYtd) {
 		this.compTotalWorkedHrsYtd = compTotalWorkedHrsYtd;
@@ -81,7 +78,6 @@ public class LtcYtdCompHrs implements IModel {
 		elements.add(this.getConfirmationId());
 		elements.add(this.getCompHrsType());
 		elements.add(this.getCompHrsName());
-		elements.add(this.getCompHrsPerPayrollYtd());
 		elements.add(this.getCompHrsStaffYtd());
 		elements.add(this.getCompHrsContractServicesYtd());
 		elements.add(this.getCompHrsOfficeAllocYtd());

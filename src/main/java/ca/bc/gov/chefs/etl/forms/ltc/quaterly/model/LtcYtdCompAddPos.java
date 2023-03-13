@@ -11,7 +11,7 @@ public class LtcYtdCompAddPos implements IModel{
 	private String confirmationId;
 	private String addPosType;
 	private String addPosName;
-	private String addPosContractedOutYtd;
+	//private String addPosContractedOutYtd;
 	private String addPosLegalNameContractServiceYtd;
 	private String addPosPercentServiceContractOutYtd;
 	
@@ -33,12 +33,7 @@ public class LtcYtdCompAddPos implements IModel{
 	public void setAddPosName(String addPosName) {
 		this.addPosName = addPosName;
 	}
-	public String getAddPosContractedOutYtd() {
-		return addPosContractedOutYtd;
-	}
-	public void setAddPosContractedOutYtd(String addPosContractedOutYtd) {
-		this.addPosContractedOutYtd = addPosContractedOutYtd;
-	}
+	
 	public String getAddPosLegalNameContractServiceYtd() {
 		return addPosLegalNameContractServiceYtd;
 	}
@@ -67,7 +62,7 @@ public class LtcYtdCompAddPos implements IModel{
 		elements.add(this.getConfirmationId());
 		elements.add(this.getAddPosType());
 		elements.add(this.getAddPosName());
-		elements.add(this.getAddPosContractedOutYtd());
+		//elements.add(this.getAddPosContractedOutYtd());
 		elements.add(this.getAddPosLegalNameContractServiceYtd());
 		elements.add(this.getAddPosPercentServiceContractOutYtd());
 		

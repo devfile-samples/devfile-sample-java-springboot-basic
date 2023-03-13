@@ -2,12 +2,12 @@ package ca.bc.gov.chefs.etl.forms.ltc.facility.route;
 
 import org.slf4j.Logger;
 
+
 import org.slf4j.LoggerFactory;
 
 import ca.bc.gov.chefs.etl.core.routes.BaseRoute;
 import ca.bc.gov.chefs.etl.forms.ltc.facility.processor.FacilityInfoFormApiProcessor;
 import ca.bc.gov.chefs.etl.forms.ltc.facility.processor.FacilityInfoFormApiResponseProcessor;
-import ca.bc.gov.chefs.etl.forms.ltc.facility.processor.FacilityInfoFormProcessor;
 
 public class FacilityFormRoute extends BaseRoute {
 
@@ -25,15 +25,19 @@ public class FacilityFormRoute extends BaseRoute {
 		// trigger
 		from("jetty:http://{{hostname}}:{{port}}/ltc/facility-information").routeId("ltc-facility-information-form")
 				.log("CHEFS-ETL received a request for LTC Facility Information Form extraction")// .bean(AIMSFormPayloadExtractor.class)
-				.process(new FacilityInfoFormProcessor()).to("direct:ltc-facility-information").end();
+				.process(exchange -> sharedData.put("body", exchange.getIn().getBody(String.class)))
+				.to("direct:ltc-facility-information").end();
 
-		from("direct:ltc-facility-information").process(new FacilityInfoFormApiProcessor())
+		from("direct:ltc-facility-information")
 				// to the http uri
-				.to("https://submit.digital.gov.bc.ca/app/api/v1/forms/e1f4761f-efdd-4529-805e-677d3ae21601/export?bridgeEndpoint=true&format=json&version=2&type=submissions")
+				.process(new FacilityInfoFormApiProcessor(sharedData))
+				.toD("${header.RequestUri}")
 				.log("This is the status code from the response: ${header.CamelHttpResponseCode}")
 				.log("Trying to convert the received body OK").convertBodyTo(String.class)
 				.process(new FacilityInfoFormApiResponseProcessor()).end();
 		// database phase
+		
+		
 
 		// file conversion
 

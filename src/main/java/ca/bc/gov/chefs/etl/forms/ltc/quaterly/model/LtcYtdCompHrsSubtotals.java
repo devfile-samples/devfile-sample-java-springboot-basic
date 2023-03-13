@@ -3,6 +3,9 @@ package ca.bc.gov.chefs.etl.forms.ltc.quaterly.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
+import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.parser.IModel;
 
 public class LtcYtdCompHrsSubtotals implements IModel {
@@ -27,25 +30,25 @@ public class LtcYtdCompHrsSubtotals implements IModel {
 		this.compHrsType = compHrsType;
 	}
 	public String getSubTotalCompHrsStaffYTD() {
-		return subTotalCompHrsStaffYTD;
+		return StringUtils.isBlank(subTotalCompHrsStaffYTD) ? "0" : subTotalCompHrsStaffYTD;
 	}
 	public void setSubTotalCompHrsStaffYTD(String subTotalCompHrsStaffYTD) {
 		this.subTotalCompHrsStaffYTD = subTotalCompHrsStaffYTD;
 	}
 	public String getSubTotalCompHrsContractServicesYTD() {
-		return subTotalCompHrsContractServicesYTD;
+		return StringUtils.isEmpty(subTotalCompHrsContractServicesYTD) ? "0" : subTotalCompHrsContractServicesYTD;
 	}
 	public void setSubTotalCompHrsContractServicesYTD(String subTotalCompHrsContractServicesYTD) {
 		this.subTotalCompHrsContractServicesYTD = subTotalCompHrsContractServicesYTD;
 	}
 	public String getSubTotalCompHrsOfficeAllocYTD() {
-		return subTotalCompHrsOfficeAllocYTD;
+		return StringUtils.isBlank(subTotalCompHrsOfficeAllocYTD) ? "0" : subTotalCompHrsOfficeAllocYTD;
 	}
 	public void setSubTotalCompHrsOfficeAllocYTD(String subTotalCompHrsOfficeAllocYTD) {
 		this.subTotalCompHrsOfficeAllocYTD = subTotalCompHrsOfficeAllocYTD;
 	}
 	public String getSubTotalCompTotalWorkedHrsYTD() {
-		return subTotalCompTotalWorkedHrsYTD;
+		return StringUtils.isBlank(subTotalCompTotalWorkedHrsYTD) ? "0" : subTotalCompTotalWorkedHrsYTD;
 	}
 	public void setSubTotalCompTotalWorkedHrsYTD(String subTotalCompTotalWorkedHrsYTD) {
 		this.subTotalCompTotalWorkedHrsYTD = subTotalCompTotalWorkedHrsYTD;
@@ -58,7 +61,7 @@ public class LtcYtdCompHrsSubtotals implements IModel {
 	}
 	@Override
 	public String getFormType() {
-		return "LTC_YTD_COMP_HRS_SUB_TOTALS";
+		return Constants.LTC_YTD_COMP_HRS_SUBTOTALS;
 	}
 	@Override
 	public List<String> getCsvElements() {

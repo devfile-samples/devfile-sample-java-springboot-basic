@@ -3,13 +3,15 @@ package ca.bc.gov.chefs.etl.forms.ltc.quaterly.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
+import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.parser.IModel;
 
 public class LtcYtdCompHrsTotals implements IModel{
 
 	private String confirmationID;
 	private String compHrsTotalType;
-	private String totalCompHrsPerPayrollYTD;
 	private String totalCompHrsStaffYTD;
 	private String totalCompHrsContractServicesYTD;
 	private String totalCompHrsOfficeAllocYTD;
@@ -33,16 +35,8 @@ public class LtcYtdCompHrsTotals implements IModel{
 		this.compHrsTotalType = compHrsTotalType;
 	}
 
-	public String getTotalCompHrsPerPayrollYTD() {
-		return totalCompHrsPerPayrollYTD;
-	}
-
-	public void setTotalCompHrsPerPayrollYTD(String totalCompHrsPerPayrollYTD) {
-		this.totalCompHrsPerPayrollYTD = totalCompHrsPerPayrollYTD;
-	}
-
 	public String getTotalCompHrsStaffYTD() {
-		return totalCompHrsStaffYTD;
+		return StringUtils.isBlank(totalCompHrsStaffYTD) ? "0" : totalCompHrsStaffYTD;
 	}
 
 	public void setTotalCompHrsStaffYTD(String totalCompHrsStaffYTD) {
@@ -50,7 +44,7 @@ public class LtcYtdCompHrsTotals implements IModel{
 	}
 
 	public String getTotalCompHrsContractServicesYTD() {
-		return totalCompHrsContractServicesYTD;
+		return StringUtils.isBlank(totalCompHrsContractServicesYTD) ? "0" : totalCompHrsContractServicesYTD;
 	}
 
 	public void setTotalCompHrsContractServicesYTD(String totalCompHrsContractServicesYTD) {
@@ -58,7 +52,7 @@ public class LtcYtdCompHrsTotals implements IModel{
 	}
 
 	public String getTotalCompHrsOfficeAllocYTD() {
-		return totalCompHrsOfficeAllocYTD;
+		return StringUtils.isBlank(totalCompHrsOfficeAllocYTD) ? "0" : totalCompHrsOfficeAllocYTD;
 	}
 
 	public void setTotalCompHrsOfficeAllocYTD(String totalCompHrsOfficeAllocYTD) {
@@ -66,7 +60,7 @@ public class LtcYtdCompHrsTotals implements IModel{
 	}
 
 	public String getTotalCompTotalWorkedHrsYTD() {
-		return totalCompTotalWorkedHrsYTD;
+		return StringUtils.isBlank(totalCompTotalWorkedHrsYTD) ? "0" : totalCompTotalWorkedHrsYTD;
 	}
 
 	public void setTotalCompTotalWorkedHrsYTD(String totalCompTotalWorkedHrsYTD) {
@@ -81,8 +75,7 @@ public class LtcYtdCompHrsTotals implements IModel{
 
 	@Override
 	public String getFormType() {
-		// TODO Auto-generated method stub
-		return null;
+		return Constants.LTC_YTD_COMP_HRS_TOTALS;
 	}
 
 	@Override
@@ -90,7 +83,7 @@ public class LtcYtdCompHrsTotals implements IModel{
 		List<String> elements = new ArrayList<>();
 		elements.add(this.getConfirmationID());
 		elements.add(this.getCompHrsTotalType());
-		elements.add(this.getTotalCompHrsPerPayrollYTD());
+	//	elements.add(this.getTotalCompHrsPerPayrollYTD());
 		elements.add(this.getTotalCompHrsStaffYTD());
 		elements.add(this.getTotalCompHrsContractServicesYTD());
 		elements.add(this.getTotalCompHrsOfficeAllocYTD());

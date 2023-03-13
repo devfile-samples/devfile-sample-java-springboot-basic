@@ -11,6 +11,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.forms.aims.model.MainEntity;
+import ca.bc.gov.chefs.etl.parser.FileProperties;
 import ca.bc.gov.chefs.etl.parser.IModel;
 import ca.bc.gov.chefs.etl.util.CSVUtil;
 import ca.bc.gov.chefs.etl.util.Counter;
@@ -32,7 +33,11 @@ public class AIMSFormApiResponseProcessor implements Processor {
 		List<IModel> iModels =  (List<IModel>)(List<?>) aimsModels;
 		
 		Map<String,List<List<String>>> map = CSVUtil.provider(iModels);
-		FileUtil.writeToCSVFile(map);
+		
+		FileProperties fileProperties = new FileProperties();
+		fileProperties.setUnEncDirForThisExchange(Constants.UNENC_FILE_PATH.get(Constants.AIMS_FORM));
+		fileProperties.setEncDirForThisExchange(Constants.ENC_FILE_PATH.get(Constants.AIMS_FORM));
+		FileUtil.writeToCSVFile(map,fileProperties);
 	}
 
 }
