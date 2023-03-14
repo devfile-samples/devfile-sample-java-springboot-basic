@@ -5,7 +5,7 @@ public class FileProperties {
 
 	private String unEncDirForThisExchange;
 	private String encDirForThisExchange;
-
+	private String extension = ".txt";
 
 	public String getUnEncDirForThisExchange() {
 		return unEncDirForThisExchange;
@@ -21,6 +21,14 @@ public class FileProperties {
 
 	public void setEncDirForThisExchange(String encDirForThisExchange) {
 		this.encDirForThisExchange = encDirForThisExchange;
+	}
+
+	public String getExtension() {
+		return extension;
+	}
+
+	public void setExtension(String extension) {
+		this.extension = extension;
 	}
 	
 	

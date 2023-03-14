@@ -13,3 +13,5 @@ logs/*
 keys/*
 mvnw
 mvnw.cmd
+unencrypted/**
+encrypted/**
