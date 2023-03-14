@@ -14,6 +14,7 @@ public class LtcQuaterlyYtdRoute extends BaseRoute {
 	private static final Logger logger = LoggerFactory.getLogger(AIMSFormRoute.class);
 	@Override
 	public void configure() throws Exception {
+		super.configure();
 		logger.info("Loaded LTC QYTD Form Route");
 
 		/**

@@ -16,6 +16,7 @@ public class FacilityFormRoute extends BaseRoute {
 	@Override
 	public void configure() throws Exception {
 		logger.info("Loaded Facility Info Form Route");
+		super.configure();
 
 		/**
 		 * receive JSON payload, parse and set to make an API call
@@ -34,7 +35,9 @@ public class FacilityFormRoute extends BaseRoute {
 				.toD("${header.RequestUri}")
 				.log("This is the status code from the response: ${header.CamelHttpResponseCode}")
 				.log("Trying to convert the received body OK").convertBodyTo(String.class)
-				.process(new FacilityInfoFormApiResponseProcessor()).end();
+				.process(new FacilityInfoFormApiResponseProcessor())
+				.setHeader("Content-Type",constant("application/json"))
+				.end();
 		// database phase
 		
 		

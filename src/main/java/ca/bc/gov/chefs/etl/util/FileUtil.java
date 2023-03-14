@@ -36,6 +36,7 @@ import java.nio.file.Paths;
 import java.security.SecureRandom;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.zip.GZIPOutputStream;
@@ -138,21 +139,25 @@ public class FileUtil {
 		}
 	}
 
-	public static <T> void writeToCSVFile(Map<String, List<List<String>>> map,  FileProperties fileProperties) {
+	public static List<String> writeToCSVFile(Map<String, List<List<String>>> map,  FileProperties fileProperties) throws IOException {
 		ICsvListWriter listWriter = null;
+		List<String> filesGenerated = new ArrayList<String>();
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyMMddHHmmss");
+		String dateTime = LocalDateTime.now().format(formatter);
+	
 		for (Map.Entry<String, List<List<String>>> entry : map.entrySet()) {
-			String fileName = generateFileName(entry.getKey(),fileProperties);
+			String fileName = generateFileName(entry.getKey(),dateTime,fileProperties);
 			String[] headers = HEADERS.get(entry.getKey());
 			logger.info("--------Generating CSV File---------------{}---------------", fileName);
 			try {
 
 				listWriter = new CsvListWriter(new FileWriter(fileName), ALWAYS_USE_QUOTE);
 				listWriter.writeHeader(headers);
-
+				
 				for (List<String> items : entry.getValue()) {
 					listWriter.write(items);
 				}
-
+				filesGenerated.add(fileName.substring(fileName.lastIndexOf(File.separator)+1));
 			} catch (IOException ex) {
 				ex.printStackTrace();
 			} finally {
@@ -166,13 +171,22 @@ public class FileUtil {
 			}
 
 		}
-
+		fileProperties.setExtension(".flag");
+		String flagFileName = generateFileName("medis-etl", dateTime, fileProperties);
+		File file = new File(flagFileName);
+		FileWriter fileWriter = new FileWriter(file);
+		logger.info("--------Generating Flag File---------------{}---------------", flagFileName);
+		for(String fileName : filesGenerated) {
+			fileWriter.append(fileName);
+			fileWriter.append("\n");
+		}
+		filesGenerated.add(flagFileName.substring(flagFileName.lastIndexOf(File.separator)+1));
+		fileWriter.close();
+		return filesGenerated;
 	}
 
-	public static String generateFileName(String fileType,FileProperties fileProperties) {
+	public static String generateFileName(String fileType,String dateTime,FileProperties fileProperties) {
 		String directoryForThisExchange = fileProperties.getUnEncDirForThisExchange();
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyMMddHHmmss");
-		String dateTime = LocalDateTime.now().format(formatter);
 		String directoryPath = directoryForThisExchange.concat(File.separator).concat(dateTime).concat(File.separator);
 		try {
 			Files.createDirectories(Paths.get(directoryPath));
@@ -180,6 +194,9 @@ public class FileUtil {
 			logger.error("File Write Exception: "+e.getMessage());
 			e.printStackTrace();
 		}
-		return directoryPath+fileType.toLowerCase()+"_".concat(LocalDateTime.now().format(formatter)).concat(".txt");
+		if(fileProperties.getExtension().equals(".flag")) {
+			return directoryPath+fileType.toLowerCase().concat(fileProperties.getExtension());
+		}
+		return directoryPath+fileType.toLowerCase()+"_".concat(dateTime).concat(fileProperties.getExtension());
 	}
 }

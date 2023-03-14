@@ -18,6 +18,7 @@ import ca.bc.gov.chefs.etl.forms.ltc.facility.model.FacilityInformation;
 import ca.bc.gov.chefs.etl.forms.ltc.facility.model.Preparer;
 import ca.bc.gov.chefs.etl.parser.FileProperties;
 import ca.bc.gov.chefs.etl.parser.IModel;
+import ca.bc.gov.chefs.etl.parser.SuccessResponse;
 import ca.bc.gov.chefs.etl.util.CSVUtil;
 import ca.bc.gov.chefs.etl.util.FileUtil;
 
@@ -40,7 +41,10 @@ public class FacilityInfoFormApiResponseProcessor implements Processor {
 		fileProperties.setUnEncDirForThisExchange(Constants.UNENC_FILE_PATH.get(Constants.LTC_FACILITY));
 		fileProperties.setEncDirForThisExchange(Constants.ENC_FILE_PATH.get(Constants.LTC_FACILITY));
 			
-		FileUtil.writeToCSVFile(map,fileProperties);
+		List<String> filesGenerated = FileUtil.writeToCSVFile(map,fileProperties);
+		SuccessResponse successResponse = new SuccessResponse();
+		successResponse.setFiles(filesGenerated);
+		exchange.getIn().setBody(mapper.writeValueAsString(successResponse));
 	}
 	
 	private List<FacilityInformation> parseFacilityInfo(List<Root> facilities) {
