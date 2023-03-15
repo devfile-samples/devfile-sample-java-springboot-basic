@@ -1,6 +1,7 @@
 package ca.bc.gov.chefs.etl.util;
 
 import org.bouncycastle.openpgp.PGPException;
+
 import org.bouncycastle.openpgp.PGPLiteralData;
 import org.bouncycastle.openpgp.PGPLiteralDataGenerator;
 import org.bouncycastle.openpgp.PGPPublicKey;

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import java.util.List;
 import ca.bc.gov.chefs.etl.constant.Constants;
-import ca.bc.gov.chefs.etl.parser.IModel;
+import ca.bc.gov.chefs.etl.core.model.IModel;
 import ca.bc.gov.chefs.etl.util.CSVUtil;
 
 public class LtcYtdSubmission implements IModel {
@@ -18,7 +18,7 @@ public class LtcYtdSubmission implements IModel {
 	private String submittedBy;
 	private String facilitySubId;
 	private String period;
-	//private String submissionFy;
+	private String submissionFy;
 	private String nbTotalBeds;
 	private String nbFundedBeds;
 	private String occRateThreshold;
@@ -70,7 +70,7 @@ public class LtcYtdSubmission implements IModel {
 		elements.add(this.getSubmittedBy());
 		elements.add(this.getFacilitySubId());
 		elements.add(this.getPeriod());
-		//elements.add(this.getSubmissionFy());
+		elements.add(this.getSubmissionFy());
 		elements.add(this.getNbTotalBeds());
 		elements.add(this.getNbFundedBeds());
 		elements.add(this.getOccRateThreshold());
@@ -353,6 +353,16 @@ public class LtcYtdSubmission implements IModel {
 	public void setLtcBedYtdOccRateTtls(List<LtcBedYtdOccupancyRateTotals> ltcBedYtdOccRateTtls) {
 		this.ltcBedYtdOccRateTtls = ltcBedYtdOccRateTtls;
 	}
+
+	public String getSubmissionFy() {
+		return submissionFy;
+	}
+
+	public void setSubmissionFy(String submissionFy) {
+		this.submissionFy = submissionFy;
+	}
+	
+	
 
 	
 }

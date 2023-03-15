@@ -1,4 +1,4 @@
-package ca.bc.gov.chefs.etl.parser;
+package ca.bc.gov.chefs.etl.core.model;
 
 import java.util.List;
 

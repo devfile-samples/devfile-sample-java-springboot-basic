@@ -13,6 +13,9 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import ca.bc.gov.chefs.etl.constant.Constants;
+import ca.bc.gov.chefs.etl.core.model.FileProperties;
+import ca.bc.gov.chefs.etl.core.model.IModel;
+import ca.bc.gov.chefs.etl.core.model.SuccessResponse;
 import ca.bc.gov.chefs.etl.forms.ltc.quaterly.json.BedGrid0;
 import ca.bc.gov.chefs.etl.forms.ltc.quaterly.json.BedGrid1;
 import ca.bc.gov.chefs.etl.forms.ltc.quaterly.json.BedGrid2;
@@ -42,8 +45,6 @@ import ca.bc.gov.chefs.etl.forms.ltc.quaterly.model.LtcYtdExpSubTotals;
 import ca.bc.gov.chefs.etl.forms.ltc.quaterly.model.LtcYtdRev;
 import ca.bc.gov.chefs.etl.forms.ltc.quaterly.model.LtcYtdRevSubTotals;
 import ca.bc.gov.chefs.etl.forms.ltc.quaterly.model.LtcYtdSubmission;
-import ca.bc.gov.chefs.etl.parser.FileProperties;
-import ca.bc.gov.chefs.etl.parser.IModel;
 import ca.bc.gov.chefs.etl.util.CSVUtil;
 import ca.bc.gov.chefs.etl.util.FileUtil;
 
@@ -64,7 +65,11 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 		FileProperties fileProperties = new FileProperties();
 		fileProperties.setUnEncDirForThisExchange(Constants.UNENC_FILE_PATH.get(Constants.LTC_YTD_SUBMISSION));
 		fileProperties.setEncDirForThisExchange(Constants.ENC_FILE_PATH.get(Constants.LTC_YTD_SUBMISSION));
-		FileUtil.writeToCSVFile(map,fileProperties);
+		List<String> filesGenerated = FileUtil.writeToCSVFile(map,fileProperties);
+		SuccessResponse successResponse = new SuccessResponse();
+		successResponse.setFiles(filesGenerated);
+		exchange.getIn().setBody(mapper.writeValueAsString(successResponse));
+
 		
 	}
 
@@ -105,10 +110,9 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			ltcYtdSubmission.setOccRateThreshold(root.getThreshold());
 			ltcYtdSubmission.setPeriod(root.getQuarter());
 			ltcYtdSubmission.setSubmissionDate(root.getForm().getCreatedAt());
-			//ltcYtdSubmission.setSubmissionFy(""); // not sure
+			// FIXME ltcYtdSubmission.setSubmissionFy("");
 			ltcYtdSubmission.setSubmittedBy(root.getForm().getFullName());
 			
-
 			/* START : Direct Care Hours */
 			/* Productive and NP Nursing */ // why no subtotal and total?
 			LtcYtdDirectCareHrs nursingRNProdH = new LtcYtdDirectCareHrs();
@@ -930,7 +934,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			alliedProfOTSal.setCompSalContractServicesYtd(root.getCompB_item217());
 			alliedProfOTSal.setCompSalOfficeAllocYtd(root.getCompB_item317());
 			alliedProfOTSal.setCompSalName("Occupational Therapist");
-			alliedProfOTSal.setCompSalType("Allied Non-professional");
+			alliedProfOTSal.setCompSalType("Allied professional");
 			alliedProfOTSal.setConfirmationId(root.getForm().getConfirmationId());
 			alliedProfOTSal.setCompSalTotalCostYtd(root.getCompB_calc17());
 
@@ -939,7 +943,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			alliedProfPTSal.setCompSalContractServicesYtd(root.getCompB_item218());
 			alliedProfPTSal.setCompSalOfficeAllocYtd(root.getCompB_item318());
 			alliedProfPTSal.setCompSalName("Physiotherapist");
-			alliedProfPTSal.setCompSalType("Allied Non-professional");
+			alliedProfPTSal.setCompSalType("Allied professional");
 			alliedProfPTSal.setConfirmationId(root.getForm().getConfirmationId());
 			alliedProfPTSal.setCompSalTotalCostYtd(root.getCompB_calc18());
 
@@ -948,7 +952,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			alliedProfDTSal.setCompSalContractServicesYtd(root.getCompB_item219());
 			alliedProfDTSal.setCompSalOfficeAllocYtd(root.getCompB_item319());
 			alliedProfDTSal.setCompSalName("Dietitian");
-			alliedProfDTSal.setCompSalType("Allied Non-professional");
+			alliedProfDTSal.setCompSalType("Allied professional");
 			alliedProfDTSal.setConfirmationId(root.getForm().getConfirmationId());
 			alliedProfDTSal.setCompSalTotalCostYtd(root.getCompB_calc19());
 
@@ -957,7 +961,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			alliedProfSWSal.setCompSalContractServicesYtd(root.getCompB_item220());
 			alliedProfSWSal.setCompSalOfficeAllocYtd(root.getCompB_item320());
 			alliedProfSWSal.setCompSalName("Dietitian");
-			alliedProfSWSal.setCompSalType("Allied Non-professional");
+			alliedProfSWSal.setCompSalType("Allied professional");
 			alliedProfSWSal.setConfirmationId(root.getForm().getConfirmationId());
 			alliedProfSWSal.setCompSalTotalCostYtd(root.getCompB_calc20());
 
@@ -966,7 +970,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			alliedProfOTHSal.setCompSalContractServicesYtd(root.getCompB_item221());
 			alliedProfOTHSal.setCompSalOfficeAllocYtd(root.getCompB_item321());
 			alliedProfOTHSal.setCompSalName("Other (specify)");
-			alliedProfOTHSal.setCompSalType("Allied Non-professional");
+			alliedProfOTHSal.setCompSalType("Allied professional");
 			alliedProfOTHSal.setConfirmationId(root.getForm().getConfirmationId());
 			alliedProfOTHSal.setCompSalTotalCostYtd(root.getCompB_calc21());
 

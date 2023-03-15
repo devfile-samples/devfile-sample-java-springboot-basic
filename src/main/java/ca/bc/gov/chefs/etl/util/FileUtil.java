@@ -18,7 +18,7 @@ import org.supercsv.io.ICsvListWriter;
 import org.supercsv.prefs.CsvPreference;
 import org.supercsv.quote.AlwaysQuoteMode;
 
-import ca.bc.gov.chefs.etl.parser.FileProperties;
+import ca.bc.gov.chefs.etl.core.model.FileProperties;
 
 import static ca.bc.gov.chefs.etl.constant.Constants.HEADERS;
 
