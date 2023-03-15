@@ -7,7 +7,7 @@ import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 
 import ca.bc.gov.chefs.etl.constant.Constants;
-import ca.bc.gov.chefs.etl.parser.ChefsRequestPayload;
+import ca.bc.gov.chefs.etl.core.model.ChefsRequestPayload;
 import ca.bc.gov.chefs.etl.util.AuthUtil;
 import ca.bc.gov.chefs.etl.util.JsonUtil;
 import ca.bc.gov.chefs.etl.util.PropertiesUtil;

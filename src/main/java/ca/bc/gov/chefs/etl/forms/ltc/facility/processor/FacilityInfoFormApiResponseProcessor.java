@@ -12,13 +12,13 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import ca.bc.gov.chefs.etl.constant.Constants;
+import ca.bc.gov.chefs.etl.core.model.FileProperties;
+import ca.bc.gov.chefs.etl.core.model.IModel;
+import ca.bc.gov.chefs.etl.core.model.SuccessResponse;
 import ca.bc.gov.chefs.etl.forms.ltc.facility.json.Root;
 import ca.bc.gov.chefs.etl.forms.ltc.facility.model.Approver;
 import ca.bc.gov.chefs.etl.forms.ltc.facility.model.FacilityInformation;
 import ca.bc.gov.chefs.etl.forms.ltc.facility.model.Preparer;
-import ca.bc.gov.chefs.etl.parser.FileProperties;
-import ca.bc.gov.chefs.etl.parser.IModel;
-import ca.bc.gov.chefs.etl.parser.SuccessResponse;
 import ca.bc.gov.chefs.etl.util.CSVUtil;
 import ca.bc.gov.chefs.etl.util.FileUtil;
 

@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonUnwrapped;
 
 import ca.bc.gov.chefs.etl.constant.Constants;
-import ca.bc.gov.chefs.etl.parser.IModel;
+import ca.bc.gov.chefs.etl.core.model.IModel;
 
 //@JsonIgnoreProperties(ignoreUnknown = true)
 public class MainEntity implements IModel {

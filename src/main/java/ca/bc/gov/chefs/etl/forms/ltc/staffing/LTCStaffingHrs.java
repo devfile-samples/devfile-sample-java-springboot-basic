@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import ca.bc.gov.chefs.etl.parser.IModel;
+import ca.bc.gov.chefs.etl.core.model.IModel;
 
 public class LTCStaffingHrs implements IModel{
 	

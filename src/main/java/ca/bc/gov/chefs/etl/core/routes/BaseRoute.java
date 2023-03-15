@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import ca.bc.gov.chefs.etl.parser.ErrorResponse;
+import ca.bc.gov.chefs.etl.core.model.ErrorResponse;
 import ca.bc.gov.chefs.etl.util.PropertiesUtil;
 
 public abstract class BaseRoute extends RouteBuilder {

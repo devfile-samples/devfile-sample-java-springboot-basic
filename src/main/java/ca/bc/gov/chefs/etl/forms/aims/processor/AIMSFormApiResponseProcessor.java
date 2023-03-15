@@ -10,9 +10,9 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import ca.bc.gov.chefs.etl.constant.Constants;
+import ca.bc.gov.chefs.etl.core.model.FileProperties;
+import ca.bc.gov.chefs.etl.core.model.IModel;
 import ca.bc.gov.chefs.etl.forms.aims.model.MainEntity;
-import ca.bc.gov.chefs.etl.parser.FileProperties;
-import ca.bc.gov.chefs.etl.parser.IModel;
 import ca.bc.gov.chefs.etl.util.CSVUtil;
 import ca.bc.gov.chefs.etl.util.Counter;
 import ca.bc.gov.chefs.etl.util.FileUtil;

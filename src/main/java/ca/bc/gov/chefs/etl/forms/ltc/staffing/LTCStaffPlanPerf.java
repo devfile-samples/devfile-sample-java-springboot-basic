@@ -2,7 +2,7 @@ package ca.bc.gov.chefs.etl.forms.ltc.staffing;
 
 import java.util.List;
 
-import ca.bc.gov.chefs.etl.parser.IModel;
+import ca.bc.gov.chefs.etl.core.model.IModel;
 
 public class LTCStaffPlanPerf implements IModel{
 

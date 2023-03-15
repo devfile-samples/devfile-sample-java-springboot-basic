@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 
-import ca.bc.gov.chefs.etl.parser.IModel;
+import ca.bc.gov.chefs.etl.core.model.IModel;
 
 public class CSVUtil {
 

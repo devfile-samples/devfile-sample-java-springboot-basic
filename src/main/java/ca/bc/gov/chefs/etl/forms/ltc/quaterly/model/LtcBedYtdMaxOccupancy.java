@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ca.bc.gov.chefs.etl.constant.Constants;
-import ca.bc.gov.chefs.etl.parser.IModel;
+import ca.bc.gov.chefs.etl.core.model.IModel;
 import ca.bc.gov.chefs.etl.util.CSVUtil;
 
 public class LtcBedYtdMaxOccupancy implements IModel {
