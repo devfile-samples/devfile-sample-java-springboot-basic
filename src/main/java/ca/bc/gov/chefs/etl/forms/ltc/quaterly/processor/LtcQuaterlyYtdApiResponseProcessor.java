@@ -62,10 +62,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 		List<LtcYtdSubmission> parsedLtycYtdSubmissions = parseYtdQuaterlyRequest(ltcYtdForms);
 		List<IModel> iModels =  (List<IModel>)(List<?>) parsedLtycYtdSubmissions;
 		Map<String,List<List<String>>> map = CSVUtil.provider(iModels);
-		FileProperties fileProperties = new FileProperties();
-		fileProperties.setUnEncDirForThisExchange(Constants.UNENC_FILE_PATH.get(Constants.LTC_YTD_SUBMISSION));
-		fileProperties.setEncDirForThisExchange(Constants.ENC_FILE_PATH.get(Constants.LTC_YTD_SUBMISSION));
-		List<String> filesGenerated = FileUtil.writeToCSVFile(map,fileProperties);
+		List<String> filesGenerated = FileUtil.writeToCSVFile(map,Constants.LTC_YTD_SUBMISSION);
 		SuccessResponse successResponse = new SuccessResponse();
 		successResponse.setFiles(filesGenerated);
 		exchange.getIn().setBody(mapper.writeValueAsString(successResponse));

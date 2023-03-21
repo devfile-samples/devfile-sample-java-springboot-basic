@@ -18,6 +18,7 @@ import org.supercsv.io.ICsvListWriter;
 import org.supercsv.prefs.CsvPreference;
 import org.supercsv.quote.AlwaysQuoteMode;
 
+import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.FileProperties;
 
 import static ca.bc.gov.chefs.etl.constant.Constants.HEADERS;
@@ -139,7 +140,10 @@ public class FileUtil {
 		}
 	}
 
-	public static List<String> writeToCSVFile(Map<String, List<List<String>>> map,  FileProperties fileProperties) throws IOException {
+	public static List<String> writeToCSVFile(Map<String, List<List<String>>> map,  String directoryKey) throws IOException {
+		FileProperties fileProperties = new FileProperties();
+		fileProperties.setUnEncDirForThisExchange(Constants.UNENC_FILE_PATH.get(directoryKey));
+		fileProperties.setEncDirForThisExchange(Constants.ENC_FILE_PATH.get(directoryKey));
 		ICsvListWriter listWriter = null;
 		List<String> filesGenerated = new ArrayList<String>();
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyMMddHHmmss");
@@ -198,5 +202,16 @@ public class FileUtil {
 			return directoryPath+fileType.toLowerCase().concat(fileProperties.getExtension());
 		}
 		return directoryPath+fileType.toLowerCase()+"_".concat(dateTime).concat(fileProperties.getExtension());
+	}
+
+	public static String buildDestinationPath(String propertyName, boolean isDataEncrypted){
+		if (isDataEncrypted){
+			return "."+File.separator+PropertiesUtil.getValue(Constants.PROPERTIES_ENC_DATA_DIR)+File.separator+PropertiesUtil.getValue(propertyName);
+		}
+		return "."+File.separator+PropertiesUtil.getValue(Constants.PROPERTIES_DATA_DIR)+File.separator+PropertiesUtil.getValue(propertyName);
+	}
+
+	public static String buildDirectoryPath(String propertyName){
+		return "."+File.separator+PropertiesUtil.getValue(propertyName);
 	}
 }

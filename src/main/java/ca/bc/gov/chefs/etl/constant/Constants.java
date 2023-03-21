@@ -1,9 +1,10 @@
 package ca.bc.gov.chefs.etl.constant;
 
-import java.io.File;
 import java.util.HashMap;
 
 import java.util.Map;
+
+import ca.bc.gov.chefs.etl.util.FileUtil;
 
 public class Constants {
 
@@ -69,18 +70,23 @@ public class Constants {
 	public static final String LTC_BED_YTD_OCCUPIED_DAYS_TOTALS = "LTC_BED_YTD_OCCUPIED_DAYS_TOTALS";
 
 	/* File Constants */
-	public static final String LTC_FACILITY_UNENCRYPTED_FP = "."+File.separator+"unencrypted"+File.separator+"ltc_facility";
-	public static final String LTC_FACILITY_ENCRYPTED_FP = "."+File.separator+"encrypted"+File.separator+"ltc_facility";
-	
-	public static final String AIMS_UNENCRYPTED_FP = "."+File.separator+"unencrypted"+File.separator+"aims";
-	public static final String AIMS_ENCRYPTED_FP = "."+File.separator+"encrypted"+File.separator+"aims";
-	
-	public static final String LTC_QUARTERLY_YTD_UNENCRYPTED_FP = "."+File.separator+"unencrypted"+File.separator+"ltc_quarterly";
-	public static final String LTC_QUARTERLY_YTD_ENCRYPTED_FP = "."+File.separator+"encrypted"+File.separator+"ltc_quarterly";
+	public final static String PROPERTIES_DATA_DIR = "data-dir";
+	public final static String PROPERTIES_ENC_DATA_DIR = "enc-data-dir";
+	public static final String DATA_DIRECTORY = FileUtil.buildDirectoryPath(PROPERTIES_DATA_DIR);
+	public static final String ENCRYPTED_DATA_DIRECTORY = FileUtil.buildDirectoryPath(PROPERTIES_ENC_DATA_DIR);
 
+	public final static String PROPERTIES_LTC_FACILITY_DIR = "ltc-facility-dir";
+	public static final String LTC_FACILITY_UNENCRYPTED_FP = FileUtil.buildDestinationPath(PROPERTIES_LTC_FACILITY_DIR, false);
+	public static final String LTC_FACILITY_ENCRYPTED_FP = FileUtil.buildDestinationPath(PROPERTIES_LTC_FACILITY_DIR, true);
 	
-		
+	public final static String PROPERTIES_AIMS_DIR = "aims-dir";
+	public static final String AIMS_UNENCRYPTED_FP = FileUtil.buildDestinationPath(PROPERTIES_AIMS_DIR, false);
+	public static final String AIMS_ENCRYPTED_FP = FileUtil.buildDestinationPath(PROPERTIES_AIMS_DIR, true);
 	
+	public final static String PROPERTIES_LTC_QUATERLY_DIR = "ltc-quaterly-dir";
+	public static final String LTC_QUARTERLY_YTD_UNENCRYPTED_FP = FileUtil.buildDestinationPath(PROPERTIES_LTC_QUATERLY_DIR, false);
+	public static final String LTC_QUARTERLY_YTD_ENCRYPTED_FP = FileUtil.buildDestinationPath(PROPERTIES_LTC_QUATERLY_DIR, true);
+
 
 	static {
 		
