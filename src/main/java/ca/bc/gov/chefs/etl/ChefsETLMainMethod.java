@@ -1,7 +1,5 @@
 package ca.bc.gov.chefs.etl;
 
-import java.io.File;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
