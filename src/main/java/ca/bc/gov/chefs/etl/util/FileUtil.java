@@ -206,12 +206,12 @@ public class FileUtil {
 
 	public static String buildDestinationPath(String propertyName, boolean isDataEncrypted){
 		if (isDataEncrypted){
-			return "."+File.separator+PropertiesUtil.getValue(Constants.PROPERTIES_ENC_DATA_DIR)+File.separator+PropertiesUtil.getValue(propertyName);
+			return PropertiesUtil.getValue(Constants.PROPERTIES_ENC_DATA_DIR)+File.separator+PropertiesUtil.getValue(propertyName);
 		}
-		return "."+File.separator+PropertiesUtil.getValue(Constants.PROPERTIES_DATA_DIR)+File.separator+PropertiesUtil.getValue(propertyName);
+		return PropertiesUtil.getValue(Constants.PROPERTIES_DATA_DIR)+File.separator+PropertiesUtil.getValue(propertyName);
 	}
 
 	public static String buildDirectoryPath(String propertyName){
-		return "."+File.separator+PropertiesUtil.getValue(propertyName);
+		return PropertiesUtil.getValue(propertyName);
 	}
 }
