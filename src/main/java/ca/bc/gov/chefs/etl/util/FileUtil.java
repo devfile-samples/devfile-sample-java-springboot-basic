@@ -140,7 +140,10 @@ public class FileUtil {
 		}
 	}
 
-	public static List<String> writeToCSVFile(Map<String, List<List<String>>> map,  FileProperties fileProperties) throws IOException {
+	public static List<String> writeToCSVFile(Map<String, List<List<String>>> map,  String directoryKey) throws IOException {
+		FileProperties fileProperties = new FileProperties();
+		fileProperties.setUnEncDirForThisExchange(Constants.UNENC_FILE_PATH.get(directoryKey));
+		fileProperties.setEncDirForThisExchange(Constants.ENC_FILE_PATH.get(directoryKey));
 		ICsvListWriter listWriter = null;
 		List<String> filesGenerated = new ArrayList<String>();
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyMMddHHmmss");

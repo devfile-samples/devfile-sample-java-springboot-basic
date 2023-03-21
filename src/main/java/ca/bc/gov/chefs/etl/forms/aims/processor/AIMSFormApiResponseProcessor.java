@@ -34,10 +34,7 @@ public class AIMSFormApiResponseProcessor implements Processor {
 		
 		Map<String,List<List<String>>> map = CSVUtil.provider(iModels);
 		
-		FileProperties fileProperties = new FileProperties();
-		fileProperties.setUnEncDirForThisExchange(Constants.UNENC_FILE_PATH.get(Constants.AIMS_FORM));
-		fileProperties.setEncDirForThisExchange(Constants.ENC_FILE_PATH.get(Constants.AIMS_FORM));
-		FileUtil.writeToCSVFile(map,fileProperties);
+		FileUtil.writeToCSVFile(map,Constants.AIMS_FORM);
 	}
 
 }
