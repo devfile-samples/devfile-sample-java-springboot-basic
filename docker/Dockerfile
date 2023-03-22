@@ -29,4 +29,4 @@ FROM openjdk:17-jdk
 COPY --from=build app/target/medis-etl.jar  /app/target/export-run-artifact.jar
 
 EXPOSE 8081
-ENTRYPOINT [ "java", "-cp", "/app/config/", "-jar", "/app/target/export-run-artifact.jar" ]
+ENTRYPOINT [ "java", "-cp", "/app/target/export-run-artifact.jar:/app/config/", "ca.bc.gov.chefs.etl.ChefsETLMainMethod" ]
