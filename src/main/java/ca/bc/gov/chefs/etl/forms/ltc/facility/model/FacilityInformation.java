@@ -277,7 +277,7 @@ public class FacilityInformation implements IModel {
 	public List<String> getCsvElements() {
 		List<String> elements = new ArrayList<String>();
 		elements.add(this.getConfirmationID());
-		elements.add("false"); // FIXME
+		elements.add("false"); // TODO FIXME : the value should be taken from the isDeleted atttribute once available
 		elements.add(this.getSubmissionDate());
 		elements.add(this.getSubmittedby());
 		elements.add(this.getFacilityName());
