@@ -6,13 +6,13 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonUnwrapped;
 
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
 
-//@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class MainEntity implements IModel {
 
 	@JsonIgnore
@@ -98,7 +98,7 @@ public class MainEntity implements IModel {
 	@JsonIgnore
 	protected List<AimsMisuse> aimsMisuses;
 	
-	@JsonUnwrapped
+	@JsonIgnore
 	protected AimsReferral aimsReferral;
 		
 
@@ -107,6 +107,17 @@ public class MainEntity implements IModel {
 		this.confirmationId = form.get("confirmationId");
 		this.submissionDate = form.get("createdAt");
 		this.submittedBy = form.get("email");
+	}
+
+	//TODO make sure that only one referral is permited per form, we are manually accessing the 1st element of the array here
+	@JsonProperty("dataGrid")
+	protected void unPackDataGrid(List<Map<String,String>> dataGrid) {
+		AimsReferral aimsReferral = new AimsReferral();
+		aimsReferral.setConfirmationId(this.confirmationId);
+		aimsReferral.setReferralDate(dataGrid.get(0).get("DataGridReferral_date_1"));
+		aimsReferral.setServiceProviderCode(dataGrid.get(0).get("simpletextfield1"));
+		aimsReferral.setReferralTarget(dataGrid.get(0).get("referralTarget"));
+		this.setAimsReferral(aimsReferral);
 	}
 	
 	@JsonProperty("selectBoxes1")
@@ -190,9 +201,8 @@ public class MainEntity implements IModel {
 	}
 	@Override
 	public List<IModel> getObjects() {
-		this.aimsReferral.setConfirmationId(this.confirmationId);
 		List<IModel> objects = new ArrayList<>();
-		if(this.getAimsMisuses()!=null) {
+		if(this.getAimsMisuses()!=null) { //TODO always seems to be true
 		objects.addAll(this.getAimsMisuses());
 		}
 		if(this.getAimsReferral()!=null) {

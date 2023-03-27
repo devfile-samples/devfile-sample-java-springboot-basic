@@ -13,26 +13,31 @@ import ca.bc.gov.chefs.etl.util.Counter;
 
 public class AimsReferral implements IModel {
 
-	@JsonIgnore
 	private String confirmationId;
-	@JsonProperty("serviceProviderCode1")
+	private String referralDate;
 	private String serviceProviderCode;
-	@JsonProperty("referralTarget")
 	private String referralTarget;
 
-	@JsonProperty("DataGridReferral_date_1")
-	private String referralDate;
 	
 	public String getAimsReferralNumber() {
 		return confirmationId.concat("-"+String.valueOf(Counter.getNext(getFormType())));
 	}
 
-	public String getServiceProviderCode() {
-		return serviceProviderCode;
-	}
 
 	public void setConfirmationId(String confirmationId) {
 		this.confirmationId = confirmationId;
+	}
+
+	public String getReferralDate() {
+		return referralDate;
+	}
+
+	public void setReferralDate(String referralDate) {
+		this.referralDate = referralDate;
+	}
+
+	public String getServiceProviderCode() {
+		return serviceProviderCode;
 	}
 
 	public void setServiceProviderCode(String serviceProviderCode) {
