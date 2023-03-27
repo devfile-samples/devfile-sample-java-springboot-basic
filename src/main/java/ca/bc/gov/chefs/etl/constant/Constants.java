@@ -118,7 +118,7 @@ public class Constants {
 						"Discharge_Service_Provider_Code", "Discharge_Program_Completion" });
 		HEADERS.put(AIMS_MISUSE, new String[] { "Confirmation_ID", "Substance_misuses" });
 
-		HEADERS.put(AIMS_REFERRAL, new String[] { "Confirmation_ID", "AIMS_Referral_ID", "Date",
+		HEADERS.put(AIMS_REFERRAL, new String[] { "Confirmation_ID", "AIMS_REFERRAL_NUM", "Date",
 				"Service_Provider_Code", "Referral_Target", });
 
 		// LTC Facility
