@@ -18,6 +18,8 @@ public class MainEntity implements IModel {
 	@JsonIgnore
 	protected String confirmationId;
 	@JsonIgnore
+	protected String isDeleted = "false"; // TODO FIXME, take isDeleted from the json file when ready, rather than set it manually
+	@JsonIgnore
 	protected String submissionDate;
 	@JsonIgnore
 	protected String submittedBy;
@@ -46,6 +48,8 @@ public class MainEntity implements IModel {
 	protected String firstName;
 	@JsonProperty("middleNameS")
 	protected String middleName;
+	@JsonProperty("gender")
+	protected String gender;
 	@JsonProperty("birthdate")
 	protected String birthDate;
 	@JsonProperty("postalCode")
@@ -72,8 +76,12 @@ public class MainEntity implements IModel {
 	protected String substanceRelation;
 	@JsonProperty("primaryDrugOfChoice1")
 	protected String primaryDrugOfChoice;
-	@JsonProperty("radioGroup")
-	protected String admScreenedRef;
+	@JsonIgnore
+	protected String isScreened;
+	@JsonIgnore
+	protected String isAdministered;
+	@JsonIgnore
+	protected String isReferred;
 	@JsonProperty("date1")
 	protected String activityDate;
 	@JsonProperty("serviceProviderCode2")
@@ -102,7 +110,7 @@ public class MainEntity implements IModel {
 	}
 	
 	@JsonProperty("selectBoxes1")
-	protected void unPackSelectBoxes(Map<String,String> selectBoxes1) {
+	protected void unPackSelectBoxes1(Map<String,String> selectBoxes1) {
 		
 		List<AimsMisuse> aimsMisuses = new ArrayList<AimsMisuse>();
 		for (Map.Entry<String, String> entry : selectBoxes1.entrySet()) {
@@ -115,8 +123,18 @@ public class MainEntity implements IModel {
 			}
 		this.setAimsMisuses(aimsMisuses);
 	}
+
+	@JsonProperty("radioGroup")
+	protected void isScreenedSelected(String radioGroup){
+		this.isScreened = String.valueOf((radioGroup != null && radioGroup != ""));
+	}
 	
-	
+	@JsonProperty("selectBoxes")
+	protected void unPackSelectBoxes(Map<String,String> selectBoxes){
+		this.isAdministered = selectBoxes.get("admitted");
+		this.isReferred = selectBoxes.get("referred");
+	}
+
 	@Override
 	public String getFileName() {
 		return "AIMS_FORM";
@@ -129,6 +147,7 @@ public class MainEntity implements IModel {
 	public List<String> getCsvElements() {
 		List<String> elements = new ArrayList<>();
 		elements.add(this.confirmationId);
+		elements.add(this.isDeleted);
 		elements.add(this.submissionDate);
 		elements.add(this.submittedBy);
 		elements.add(this.submissionType);
@@ -143,6 +162,7 @@ public class MainEntity implements IModel {
 		elements.add(this.lastName);
 		elements.add(this.firstName);
 		elements.add(this.middleName);
+		elements.add(this.gender);
 		elements.add(this.birthDate);
 		elements.add(this.postalCode);
 		elements.add(this.primaryLanguage);
@@ -156,7 +176,9 @@ public class MainEntity implements IModel {
 		elements.add(this.otherClientInfo);
 		elements.add(this.substanceRelation);
 		elements.add(this.primaryDrugOfChoice);
-		elements.add(this.admScreenedRef);
+		elements.add(this.isScreened);
+		elements.add(this.isAdministered);
+		elements.add(this.isReferred);
 		elements.add(this.activityDate);
 		elements.add(this.activityServiceProviderCode);
 		elements.add(this.dischargeType);
@@ -269,6 +291,12 @@ public class MainEntity implements IModel {
 	public void setMiddleName(String middleName) {
 		this.middleName = middleName;
 	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 	public String getBirthDate() {
 		return birthDate;
 	}
@@ -347,11 +375,23 @@ public class MainEntity implements IModel {
 	public void setPrimaryDrugOfChoice(String primaryDrugOfChoice) {
 		this.primaryDrugOfChoice = primaryDrugOfChoice;
 	}
-	public String getAdmScreenedRef() {
-		return admScreenedRef;
+	public String getIsScreened() {
+		return isScreened;
 	}
-	public void setAdmScreenedRef(String admScreenedRef) {
-		this.admScreenedRef = admScreenedRef;
+	public void setIsScreened(String is_Screened) {
+		this.isScreened = is_Screened;
+	}
+	public String getIsAdministered() {
+		return isAdministered;
+	}
+	public void setIsAdministered(String isAdministered) {
+		this.isAdministered = isAdministered;
+	}
+	public String getIsReferred() {
+		return isReferred;
+	}
+	public void setIsReferred(String isReferred) {
+		this.isReferred = isReferred;
 	}
 	public String getActivityDate() {
 		return activityDate;
@@ -401,25 +441,4 @@ public class MainEntity implements IModel {
 	public void setAimsReferral(AimsReferral aimsReferral) {
 		this.aimsReferral = aimsReferral;
 	}
-
-	@Override
-	public String toString() {
-		return "MainEntity [confirmationId=" + confirmationId + ", submissionDate=" + submissionDate + ", submittedBy="
-				+ submittedBy + ", submissionType=" + submissionType + ", agencyCode=" + agencyCode + ", programType="
-				+ programType + ", officeCode=" + officeCode + ", referralSource=" + referralSource + ", officeDate="
-				+ officeDate + ", regionalHA=" + regionalHA + ", contractingHA=" + contractingHA + ", healthNum="
-				+ healthNum + ", lastName=" + lastName + ", firstName=" + firstName + ", middleName=" + middleName
-				+ ", birthDate=" + birthDate + ", postalCode=" + postalCode + ", primaryLanguage=" + primaryLanguage
-				+ ", educationLevel=" + educationLevel + ", maritalStatus=" + maritalStatus + ", employmentStatus="
-				+ employmentStatus + ", numberDependentChildren=" + numberDependentChildren + ", methadoneMaintainance="
-				+ methadoneMaintainance + ", currentInjectionDrugUse=" + currentInjectionDrugUse + ", substance="
-				+ substance + ", otherClientInfo=" + otherClientInfo + ", substanceRelation=" + substanceRelation
-				+ ", primaryDrugOfChoice=" + primaryDrugOfChoice + ", admScreenedRef=" + admScreenedRef
-				+ ", activityDate=" + activityDate + ", activityServiceProviderCode=" + activityServiceProviderCode
-				+ ", dischargeType=" + dischargeType + ", dischargeDate=" + dischargeDate
-				+ ", dischargeServiceProviderCode=" + dischargeServiceProviderCode + ", dischargeProgramCompletion="
-				+ dischargeProgramCompletion + ", aimsMisuses=" + aimsMisuses + ", aimsReferral=" + aimsReferral + "]";
-	}
-	
-	
 }
