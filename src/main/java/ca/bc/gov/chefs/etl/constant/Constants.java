@@ -112,7 +112,7 @@ public class Constants {
 						"Program_Type", "Office_Code", "Referral_Source", "Office_Date", "Regional_HA",
 						"Contracting_HA", "Health_Num", "Last_Name", "First_Name", "Middle_Name", "Gender", "Birthdate",
 						"Postal_Code", "Primary_Language", "Education_Level", "Marital_Status", "Employment_Status",
-						"Number_Dependent_Children", "Methadone_Maintenance", "Current_Injection_Drug_Use", "Substance",
+						"Number_Dependent_Children", "Methadone_Maintenance", "Current_Injection_Drug_Use", "Client_Type",
 						"Other_Client_Info", "Substance_Relation", "Primary_Drug_of_Choice", "Is_Screened", "Is_Administered",
 						"Is_Referred","Activity_Date", "Activity_Service_Provider_Code", "Discharge_Type", "Discharge_Date",
 						"Discharge_Service_Provider_Code", "Discharge_Program_Completion" });
