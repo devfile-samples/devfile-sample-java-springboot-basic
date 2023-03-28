@@ -108,17 +108,17 @@ public class Constants {
 		//
 
 		HEADERS.put(AIMS_FORM,
-				new String[] { "Confirmation_ID", "Submission_Date", "Submitted_by", "Submission_type", "Agency_Code",
+				new String[] { "Confirmation_ID", "Is_Deleted","Submission_Date", "Submitted_by", "Submission_type", "Agency_Code",
 						"Program_Type", "Office_Code", "Referral_Source", "Office_Date", "Regional_HA",
-						"Contracting_HA", "Health_Num", "Last_Name", "First_Name", "Middle_Name", "Birthdate",
+						"Contracting_HA", "Health_Num", "Last_Name", "First_Name", "Middle_Name", "Gender", "Birthdate",
 						"Postal_Code", "Primary_Language", "Education_Level", "Marital_Status", "Employment_Status",
 						"Number_Dependent_Children", "Methadone_Maintenance", "Current_Injection_Drug_Use", "Substance",
-						"Other_Client_Info", "Substance_Relation", "Primary_Drug_of_Choice", "Adm_Screened_Ref",
-						"Activity_Date", "Activity_Service_Provider_Code", "Discharge_Type", "Discharge_Date",
+						"Other_Client_Info", "Substance_Relation", "Primary_Drug_of_Choice", "Is_Screened", "Is_Administered",
+						"Is_Referred","Activity_Date", "Activity_Service_Provider_Code", "Discharge_Type", "Discharge_Date",
 						"Discharge_Service_Provider_Code", "Discharge_Program_Completion" });
 		HEADERS.put(AIMS_MISUSE, new String[] { "Confirmation_ID", "Substance_misuses" });
 
-		HEADERS.put(AIMS_REFERRAL, new String[] { "Confirmation_ID", "AIMS_Referral_ID", "Date",
+		HEADERS.put(AIMS_REFERRAL, new String[] { "Confirmation_ID", "AIMS_REFERRAL_NUM", "Date",
 				"Service_Provider_Code", "Referral_Target", });
 
 		// LTC Facility
