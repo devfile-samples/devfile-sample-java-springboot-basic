@@ -99,8 +99,7 @@ public class MainEntity implements IModel {
 	protected List<AimsMisuse> aimsMisuses;
 	
 	@JsonIgnore
-	protected AimsReferral aimsReferral;
-		
+	protected List<AimsReferral> aimsReferrals;
 
 	@JsonProperty("form")
 	protected void unPackForm(Map<String,String> form) {
@@ -109,15 +108,18 @@ public class MainEntity implements IModel {
 		this.submittedBy = form.get("email");
 	}
 
-	//TODO make sure that only one referral is permited per form, we are manually accessing the 1st element of the array here
 	@JsonProperty("dataGrid")
 	protected void unPackDataGrid(List<Map<String,String>> dataGrid) {
-		AimsReferral aimsReferral = new AimsReferral();
-		aimsReferral.setConfirmationId(this.confirmationId);
-		aimsReferral.setReferralDate(dataGrid.get(0).get("DataGridReferral_date_1"));
-		aimsReferral.setServiceProviderCode(dataGrid.get(0).get("simpletextfield1"));
-		aimsReferral.setReferralTarget(dataGrid.get(0).get("referralTarget"));
-		this.setAimsReferral(aimsReferral);
+		List<AimsReferral> aimsReferrals = new ArrayList<AimsReferral>();
+		for(Map<String, String> referal : dataGrid) {
+			AimsReferral aimsReferral = new AimsReferral();
+			aimsReferral.setConfirmationId(this.confirmationId);
+			aimsReferral.setReferralDate(referal.get("DataGridReferral_date_1"));
+			aimsReferral.setServiceProviderCode(referal.get("simpletextfield1"));
+			aimsReferral.setReferralTarget(referal.get("referralTarget"));
+			aimsReferrals.add(aimsReferral);
+		}
+		this.setAimsReferrals(aimsReferrals);
 	}
 	
 	@JsonProperty("selectBoxes1")
@@ -205,8 +207,8 @@ public class MainEntity implements IModel {
 		if(this.getAimsMisuses()!=null) { //TODO always seems to be true
 		objects.addAll(this.getAimsMisuses());
 		}
-		if(this.getAimsReferral()!=null) {
-		objects.add(this.getAimsReferral());
+		if(this.getAimsReferrals()!=null) {
+		objects.addAll(this.getAimsReferrals());
 		}
 		return objects;
 	}
@@ -445,10 +447,11 @@ public class MainEntity implements IModel {
 	public void setAimsMisuses(List<AimsMisuse> aimsMisuses) {
 		this.aimsMisuses = aimsMisuses;
 	}
-	public AimsReferral getAimsReferral() {
-		return aimsReferral;
+	public List<AimsReferral> getAimsReferrals() {
+		return aimsReferrals;
 	}
-	public void setAimsReferral(AimsReferral aimsReferral) {
-		this.aimsReferral = aimsReferral;
+
+	public void setAimsReferrals(List<AimsReferral> aimsReferrals) {
+		this.aimsReferrals = aimsReferrals;
 	}
 }
