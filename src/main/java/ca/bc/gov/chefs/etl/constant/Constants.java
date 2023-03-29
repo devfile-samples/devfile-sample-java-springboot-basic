@@ -12,6 +12,10 @@ public class Constants {
 	 * Constants representing keys in application.properties.
 	 * 
 	 */
+	public final static Map<String, String[]> HEADERS = new HashMap<String, String[]>();
+	public final static Map<String,String> UNENC_FILE_PATH = new HashMap<String,String>();
+	public final static Map<String,String> ENC_FILE_PATH = new HashMap<String,String>();
+
 	/* CHEFS API  */
 	public final static String CHEFS_API_URL = "chefs.http.uri";
 	
@@ -19,9 +23,6 @@ public class Constants {
 	public final static String AIMS_USERNAME = "aims.username";
 	public final static String AIMS_PASSWORD = "aims.password";
 
-	public final static Map<String, String[]> HEADERS = new HashMap<String, String[]>();
-	public final static Map<String,String> UNENC_FILE_PATH = new HashMap<String,String>();
-	public final static Map<String,String> ENC_FILE_PATH = new HashMap<String,String>();
 	
 	public final static String AIMS_FORM = "AIMS_FORM";
 	public final static String AIMS_MISUSE = "AIMS_MISUSE";
@@ -31,17 +32,16 @@ public class Constants {
 	public final static String LTC_FACILITY_USERNAME = "ltc.facility.username";
 	public final static String LTC_FACILITY_PASSWORD = "ltc.facility.password";
 
+	public static final String LTC_FACILITY_APPROVER = "LTC_FACILITY_APPROVER";
+	public static final String LTC_FACILITY_PREPARER = "LTC_FACILITY_PREPARER";
+
 	/* LTC Quaterly YTD */
 	public final static String LTC_YTD_USERNAME = "ltc.ytd.username";
 	public final static String LTC_YTD_PASSWORD = "ltc.ytd.password";
 	public final static String IN_SCOPE = "inScope";
 	public final static String OUT_OF_SCOPE = "outOfScope";
 	public final static String PRIVATE_BED = "privateBed";
-
 	// form names
-	public static final String LTC_FACILITY_APPROVER = "LTC_FACILITY_APPROVER";
-	public static final String LTC_FACILITY_PREPARER = "LTC_FACILITY_PREPARER";
-
 	public final static String LTC_BED_YTD_OCCUPIED_DAYS = "LTC_BED_YTD_OCCUPIED_DAYS";
 	public final static String LTC_BED_YTD_OCCUPANCY_RATE = "LTC_BED_YTD_OCCUPANCY_RATE";
 	public final static String LTC_BED_YTD_MAX_OCCUPANCY = "LTC_BED_YTD_MAX_OCCUPANCY";
@@ -61,8 +61,6 @@ public class Constants {
 	public static final String LTC_BED_YTD_MAX_OCCUPANCY_TOTALS = "LTC_BED_YTD_MAX_OCCUPANCY_TOTALS";
 	public static final String LTC_YTD_COMP_HRS_SUBTOTALS = "LTC_YTD_COMP_HRS_SUBTOTALS";
 	public static final String LTC_YTD_COMP_HRS_TOTALS = "LTC_YTD_COMP_HRS_TOTALS";
-
-
 	public static final String LTC_YTD_COMP_SAL_TOTALS = "LTC_YTD_COMP_SAL_TOTALS";
 	public static final String LTC_YTD_DIRECT_CARE_HRS_SUB_TOTALS = "LTC_YTD_DIRECT_CARE_HRS_SUB_TOTALS";
 	public static final String LTC_YTD_DIRECT_CARE_COST_SUBTOTALS = "LTC_YTD_DIRECT_CARE_COST_SUBTOTALS";
