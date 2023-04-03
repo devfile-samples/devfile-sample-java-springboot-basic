@@ -874,5 +874,5 @@
 "COMP_HRS_TOTAL_TYPE","Accrued Hours","2"
 "BED_OCCUPANCY_TYPE","Planned","1"
 "BED_OCCUPANCY_TYPE","YTD","2"
-"SUBMISSION_TYPE","Regular submission","1"
-"SUBMISSION_TYPE","Revised / Adjustment","2"
+"SUBMISSION_TYPE","regular","1"
+"SUBMISSION_TYPE","revised","2"
