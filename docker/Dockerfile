@@ -7,7 +7,7 @@
 #
 # Then run the container using:
 #
-# docker run -i --rm -p 8081:8081 springboot/sample-demo
+# docker run -i --rm -p 8080:8080 springboot/sample-demo
 ####
 FROM registry.access.redhat.com/ubi8/openjdk-17:1.14 AS builder
 
@@ -25,6 +25,6 @@ RUN mv /home/jboss/target/$(cat .env-id)-$(cat .env-version).jar /home/jboss/tar
 
 FROM registry.access.redhat.com/ubi8/openjdk-17-runtime:1.15
 COPY --from=builder /home/jboss/target/export-run-artifact.jar  /deployments/export-run-artifact.jar
-EXPOSE 8081
-ENTRYPOINT ["/opt/jboss/container/java/run/run-java.sh", "--server.port=8081"]
+EXPOSE 8080
+ENTRYPOINT ["/opt/jboss/container/java/run/run-java.sh", "--server.port=8080"]
 
