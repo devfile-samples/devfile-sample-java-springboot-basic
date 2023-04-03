@@ -101,7 +101,8 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 
 			/* Form Meta */
 			ltcYtdSubmission.setConfirmationId(root.getForm().getConfirmationId());
-			ltcYtdSubmission.setFacilitySubId(root.getCcmisId());
+			ltcYtdSubmission.setCCIMSID(root.getCcmisId());
+			ltcYtdSubmission.setSubmissionType(root.getSubmission());
 			ltcYtdSubmission.setIsDeleted("");
 			ltcYtdSubmission.setNbFundedBeds(root.getNumberOfTotalFundedBeds());
 			ltcYtdSubmission.setNbTotalBeds(root.getNumberOfTotalBeds());

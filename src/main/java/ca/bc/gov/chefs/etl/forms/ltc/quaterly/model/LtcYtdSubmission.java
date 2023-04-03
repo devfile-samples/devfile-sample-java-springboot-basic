@@ -14,15 +14,16 @@ public class LtcYtdSubmission implements IModel {
 	 */
 
 	private String confirmationId;
+	private String isDeleted;
 	private String submissionDate;
 	private String submittedBy;
-	private String facilitySubId;
+	private String CCIMSID;
+	private String submissionType;
 	private String period;
 	private String submissionFy;
 	private String nbTotalBeds;
 	private String nbFundedBeds;
 	private String occRateThreshold;
-	private String isDeleted;
 
 	private List<LtcBedYtdMaxOccupancy> ltcBedYtdMaxOccupancy;
 	private List<LtcBedYtdOccupancyRate> ltcBedYtdOccupancyRate;
@@ -68,7 +69,8 @@ public class LtcYtdSubmission implements IModel {
 		elements.add("false"); // FIXME Replace with elements.add(this.getIsDeleted()) when isDeleted is available in the CHEFS API.
 		elements.add(this.getSubmissionDate());
 		elements.add(this.getSubmittedBy());
-		elements.add(this.getFacilitySubId());
+		elements.add(this.getCCIMSID());
+		elements.add(this.getSubmissionType());
 		elements.add(this.getPeriod());
 		elements.add(this.getSubmissionFy());
 		elements.add(this.getNbTotalBeds());
@@ -130,14 +132,6 @@ public class LtcYtdSubmission implements IModel {
 		this.submittedBy = submittedBy;
 	}
 
-	public String getFacilitySubId() {
-		return facilitySubId;
-	}
-
-	public void setFacilitySubId(String facilitySubId) {
-		this.facilitySubId = facilitySubId;
-	}
-
 	public String getPeriod() {
 		return period;
 	}
@@ -176,6 +170,22 @@ public class LtcYtdSubmission implements IModel {
 
 	public void setIsDeleted(String isDeleted) {
 		this.isDeleted = isDeleted;
+	}
+
+	public String getCCIMSID() {
+		return CCIMSID;
+	}
+
+	public void setCCIMSID(String cCIMSID) {
+		CCIMSID = cCIMSID;
+	}
+
+	public String getSubmissionType() {
+		return submissionType;
+	}
+
+	public void setSubmissionType(String submissionType) {
+		this.submissionType = submissionType;
 	}
 
 	public List<LtcBedYtdMaxOccupancy> getLtcBedYtdMaxOccupancy() {
