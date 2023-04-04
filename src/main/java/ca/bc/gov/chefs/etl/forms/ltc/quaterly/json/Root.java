@@ -1248,11 +1248,48 @@ public class Root{
     public String nursingProdH_sub3;
     public String nursingProdH_sub4;
     public String nursingProdH_subsum1;
-    @JsonProperty("nursingProdH_sum1-1")
+	public String nursing_label_CSP;
+	public String alliedProf_label_CSP;
+	public String alliedNP_label_CSP;
+	@JsonProperty("nursingProdH_sum1-1")
     public String nursingProdH_sum11;
     @JsonProperty("nursingProdH_sum2-1")
     public String nursingProdH_sum21;
-    public String nursingProdH_THP1;
+	@JsonProperty("nursing_label_CSP-1")
+	public String nursing_label_CSP1;
+	@JsonProperty("nursing_label_CSP-2")
+	public String nursing_label_CSP2;
+	@JsonProperty("nursing_label_CSP-3")
+	public String nursing_label_CSP3;
+	@JsonProperty("nursing_label_CSP-4")
+	public String nursing_label_CSP4;
+	@JsonProperty("alliedProf_label_CSP-1")
+	public String alliedProf_label_CSP1;
+	@JsonProperty("alliedProf_label_CSP-2")
+	public String alliedProf_label_CSP2;
+	@JsonProperty("alliedProf_label_CSP-3")
+	public String alliedProf_label_CSP3;
+	@JsonProperty("alliedProf_label_CSP-4")
+	public String alliedProf_label_CSP4;
+	@JsonProperty("alliedProf_label_CSP-5")
+	public String alliedProf_label_CSP5;
+	@JsonProperty("alliedProf_label_CSP-6")
+	public String alliedProf_label_CSP6;
+	@JsonProperty("alliedProf_label_CSP-7")
+	public String alliedProf_label_CSP7;
+	@JsonProperty("alliedNP_label_CSP-1")
+	public String alliedNP_label_CSP1;
+	@JsonProperty("alliedNP_label_CSP-2")
+	public String alliedNP_label_CSP2;
+	@JsonProperty("alliedNP_label_CSP-3")
+	public String alliedNP_label_CSP3;
+	@JsonProperty("alliedNP_label_CSP-4")
+	public String alliedNP_label_CSP4;
+	@JsonProperty("alliedNP_label_CSP-5")
+	public String alliedNP_label_CSP5;
+	@JsonProperty("alliedNP_label_CSP-6")
+	public String alliedNP_label_CSP6;
+	public String nursingProdH_THP1;
     public String nursingProdH_THP2;
     public String nursingProdH_THP3;
     public String nursingProdH_THP4;
@@ -6884,6 +6921,126 @@ public class Root{
 	}
 	public void setNursingProdH_sum21(String nursingProdH_sum21) {
 		this.nursingProdH_sum21 = nursingProdH_sum21;
+	}
+	public String getNursing_label_CSP() {
+		return nursing_label_CSP;
+	}
+	public void setNursing_label_CSP(String nursing_label_CSP) {
+		this.nursing_label_CSP = nursing_label_CSP;
+	}
+	public String getAlliedProf_label_CSP() {
+		return alliedProf_label_CSP;
+	}
+	public void setAlliedProf_label_CSP(String alliedProf_label_CSP) {
+		this.alliedProf_label_CSP = alliedProf_label_CSP;
+	}
+	public String getAlliedNP_label_CSP() {
+		return alliedNP_label_CSP;
+	}
+	public void setAlliedNP_label_CSP(String alliedNP_label_CSP) {
+		this.alliedNP_label_CSP = alliedNP_label_CSP;
+	}
+	public String getNursing_label_CSP1() {
+		return nursing_label_CSP1;
+	}
+	public void setNursing_label_CSP1(String nursing_label_CSP1) {
+		this.nursing_label_CSP1 = nursing_label_CSP1;
+	}
+	public String getNursing_label_CSP2() {
+		return nursing_label_CSP2;
+	}
+	public void setNursing_label_CSP2(String nursing_label_CSP2) {
+		this.nursing_label_CSP2 = nursing_label_CSP2;
+	}
+	public String getNursing_label_CSP3() {
+		return nursing_label_CSP3;
+	}
+	public void setNursing_label_CSP3(String nursing_label_CSP3) {
+		this.nursing_label_CSP3 = nursing_label_CSP3;
+	}
+	public String getNursing_label_CSP4() {
+		return nursing_label_CSP4;
+	}
+	public void setNursing_label_CSP4(String nursing_label_CSP4) {
+		this.nursing_label_CSP4 = nursing_label_CSP4;
+	}
+	public String getAlliedProf_label_CSP1() {
+		return alliedProf_label_CSP1;
+	}
+	public void setAlliedProf_label_CSP1(String alliedProf_label_CSP1) {
+		this.alliedProf_label_CSP1 = alliedProf_label_CSP1;
+	}
+	public String getAlliedProf_label_CSP2() {
+		return alliedProf_label_CSP2;
+	}
+	public void setAlliedProf_label_CSP2(String alliedProf_label_CSP2) {
+		this.alliedProf_label_CSP2 = alliedProf_label_CSP2;
+	}
+	public String getAlliedProf_label_CSP3() {
+		return alliedProf_label_CSP3;
+	}
+	public void setAlliedProf_label_CSP3(String alliedProf_label_CSP3) {
+		this.alliedProf_label_CSP3 = alliedProf_label_CSP3;
+	}
+	public String getAlliedProf_label_CSP4() {
+		return alliedProf_label_CSP4;
+	}
+	public void setAlliedProf_label_CSP4(String alliedProf_label_CSP4) {
+		this.alliedProf_label_CSP4 = alliedProf_label_CSP4;
+	}
+	public String getAlliedProf_label_CSP5() {
+		return alliedProf_label_CSP5;
+	}
+	public void setAlliedProf_label_CSP5(String alliedProf_label_CSP5) {
+		this.alliedProf_label_CSP5 = alliedProf_label_CSP5;
+	}
+	public String getAlliedProf_label_CSP6() {
+		return alliedProf_label_CSP6;
+	}
+	public void setAlliedProf_label_CSP6(String alliedProf_label_CSP6) {
+		this.alliedProf_label_CSP6 = alliedProf_label_CSP6;
+	}
+	public String getAlliedProf_label_CSP7() {
+		return alliedProf_label_CSP7;
+	}
+	public void setAlliedProf_label_CSP7(String alliedProf_label_CSP7) {
+		this.alliedProf_label_CSP7 = alliedProf_label_CSP7;
+	}
+	public String getAlliedNP_label_CSP1() {
+		return alliedNP_label_CSP1;
+	}
+	public void setAlliedNP_label_CSP1(String alliedNP_label_CSP1) {
+		this.alliedNP_label_CSP1 = alliedNP_label_CSP1;
+	}
+	public String getAlliedNP_label_CSP2() {
+		return alliedNP_label_CSP2;
+	}
+	public void setAlliedNP_label_CSP2(String alliedNP_label_CSP2) {
+		this.alliedNP_label_CSP2 = alliedNP_label_CSP2;
+	}
+	public String getAlliedNP_label_CSP3() {
+		return alliedNP_label_CSP3;
+	}
+	public void setAlliedNP_label_CSP3(String alliedNP_label_CSP3) {
+		this.alliedNP_label_CSP3 = alliedNP_label_CSP3;
+	}
+	public String getAlliedNP_label_CSP4() {
+		return alliedNP_label_CSP4;
+	}
+	public void setAlliedNP_label_CSP4(String alliedNP_label_CSP4) {
+		this.alliedNP_label_CSP4 = alliedNP_label_CSP4;
+	}
+	public String getAlliedNP_label_CSP5() {
+		return alliedNP_label_CSP5;
+	}
+	public void setAlliedNP_label_CSP5(String alliedNP_label_CSP5) {
+		this.alliedNP_label_CSP5 = alliedNP_label_CSP5;
+	}
+	public String getAlliedNP_label_CSP6() {
+		return alliedNP_label_CSP6;
+	}
+	public void setAlliedNP_label_CSP6(String alliedNP_label_CSP6) {
+		this.alliedNP_label_CSP6 = alliedNP_label_CSP6;
 	}
 	public String getNursingProdH_THP1() {
 		return nursingProdH_THP1;
