@@ -1457,124 +1457,143 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 
 			/* Add Pos Hrs */
 			LtcYtdCompAddPos nursingRNAddPos = new LtcYtdCompAddPos();
+			nursingRNAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			nursingRNAddPos.setAddPosName(root.getNursing_label_CSP());
+			nursingRNAddPos.setAddPosType(root.getNursing_label_CSP1());
 			nursingRNAddPos.setAddPosLegalNameContractServiceYtd(root.getNursingProvider1());
 			nursingRNAddPos.setAddPosPercentServiceContractOutYtd(root.getNursingPercentage1());
-			// nursingRNAddPos.setAddPosContractedOutYtd(payload); // NOT SURE
-			nursingRNAddPos.setAddPosName("RN");
-			nursingRNAddPos.setAddPosType("Nursing");
-			nursingRNAddPos.setConfirmationId(root.getForm().getConfirmationId());
-
+			nursingRNAddPos.determineAddPosContractedOutYtd();
+			
 			LtcYtdCompAddPos nursingLPNAddPos = new LtcYtdCompAddPos();
+			nursingLPNAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			nursingLPNAddPos.setAddPosName(root.getNursing_label_CSP());
+			nursingLPNAddPos.setAddPosType(root.getNursing_label_CSP2());
 			nursingLPNAddPos.setAddPosLegalNameContractServiceYtd(root.getNursingProvider2());
 			nursingLPNAddPos.setAddPosPercentServiceContractOutYtd(root.getNursingPercentage2());
-			// nursingLPNAddPos.setAddPosContractedOutYtd(payload); // NOT SURE
-			nursingLPNAddPos.setAddPosName("LPN");
-			nursingLPNAddPos.setAddPosType("Nursing");
-			nursingLPNAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			nursingLPNAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos nursingHCAAddPos = new LtcYtdCompAddPos();
+			nursingHCAAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			nursingHCAAddPos.setAddPosName(root.getNursing_label_CSP());
+			nursingHCAAddPos.setAddPosType(root.getNursing_label_CSP3());
 			nursingHCAAddPos.setAddPosLegalNameContractServiceYtd(root.getNursingProvider3());
 			nursingHCAAddPos.setAddPosPercentServiceContractOutYtd(root.getNursingPercentage3());
-			// nursingHCAAddPos.setAddPosContractedOutYtd(payload); // NOT SURE
-			nursingHCAAddPos.setAddPosName("Care Aides (HCA)");
-			nursingHCAAddPos.setAddPosType("Nursing");
-			nursingHCAAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			nursingHCAAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos nursingOTHAddPos = new LtcYtdCompAddPos();
+			nursingOTHAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			nursingOTHAddPos.setAddPosName(root.getNursing_label_CSP());
+			nursingOTHAddPos.setAddPosType(Constants.POS_TYPE_OTHER);
 			nursingOTHAddPos.setAddPosLegalNameContractServiceYtd(root.getNursingProvider4());
 			nursingOTHAddPos.setAddPosPercentServiceContractOutYtd(root.getNursingPercentage4());
-			// nursingOTHAddPos.setAddPosContractedOutYtd(payload); // NOT SURE
-			nursingOTHAddPos.setAddPosName("Other (specify)");
-			nursingOTHAddPos.setAddPosType("Nursing");
-			nursingOTHAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			nursingOTHAddPos.setAddPosAnotherName(root.getNursing_label_CSP4());
+			nursingOTHAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedProfOTAddPos = new LtcYtdCompAddPos();
+			alliedProfOTAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedProfOTAddPos.setAddPosName(root.getAlliedProf_label_CSP());
+			alliedProfOTAddPos.setAddPosType(root.getAlliedProf_label_CSP1());
 			alliedProfOTAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedProfProvider1());
 			alliedProfOTAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedProfPercentage1());
-			// alliedProfOTAddPos.setAddPosContractedOutYtd(payload); // NOT SURE
-			alliedProfOTAddPos.setAddPosName("Occupational Therapist");
-			alliedProfOTAddPos.setAddPosType("Allied Professional");
-			alliedProfOTAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedProfOTAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedProfPTAddPos = new LtcYtdCompAddPos();
+			alliedProfPTAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedProfPTAddPos.setAddPosName(root.getAlliedProf_label_CSP());
+			alliedProfPTAddPos.setAddPosType(root.getAlliedProf_label_CSP2());
 			alliedProfPTAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedProfProvider2());
 			alliedProfPTAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedProfPercentage2());
-			// alliedProfPTAddPos.setAddPosContractedOutYtd(payload); // NOT SURE
-			alliedProfPTAddPos.setAddPosName("Physiotherapist");
-			alliedProfPTAddPos.setAddPosType("Allied Professional");
-			alliedProfPTAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedProfPTAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedProfDTAddPos = new LtcYtdCompAddPos();
+			alliedProfDTAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedProfDTAddPos.setAddPosName(root.getAlliedProf_label_CSP());
+			alliedProfDTAddPos.setAddPosType(root.getAlliedProf_label_CSP3());
 			alliedProfDTAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedProfProvider3());
 			alliedProfDTAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedProfPercentage3());
-			// alliedProfDTAddPos.setAddPosContractedOutYtd(payload); // NOT SURE
-			alliedProfDTAddPos.setAddPosName("Dietitian");
-			alliedProfDTAddPos.setAddPosType("Allied Professional");
-			alliedProfDTAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedProfDTAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedProfSWAddPos = new LtcYtdCompAddPos();
+			alliedProfSWAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedProfSWAddPos.setAddPosName(root.getAlliedProf_label_CSP());
+			alliedProfSWAddPos.setAddPosType(root.getAlliedProf_label_CSP4());
 			alliedProfSWAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedProfProvider4());
 			alliedProfSWAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedProfPercentage4());
-			// alliedProfSWAddPos.setAddPosContractedOutYtd(payload); // NOT SURE
-			alliedProfSWAddPos.setAddPosName("Social Worker");
-			alliedProfSWAddPos.setAddPosType("Allied Professional");
-			alliedProfSWAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedProfSWAddPos.determineAddPosContractedOutYtd();
+
+			LtcYtdCompAddPos alliedProfSLPAddPos = new LtcYtdCompAddPos();
+			alliedProfSLPAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedProfSLPAddPos.setAddPosName(root.getAlliedProf_label_CSP());
+			alliedProfSLPAddPos.setAddPosType(root.getAlliedProf_label_CSP5());
+			alliedProfSLPAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedProfProvider4());
+			alliedProfSLPAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedProfPercentage4());
+			alliedProfSLPAddPos.determineAddPosContractedOutYtd();
+
+			LtcYtdCompAddPos alliedProfRTAddPos = new LtcYtdCompAddPos();
+			alliedProfRTAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedProfRTAddPos.setAddPosName(root.getAlliedProf_label_CSP());
+			alliedProfRTAddPos.setAddPosType(root.getAlliedProf_label_CSP6());
+			alliedProfRTAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedProfProvider4());
+			alliedProfRTAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedProfPercentage4());
+			alliedProfRTAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedProfOTHAddPos = new LtcYtdCompAddPos();
+			alliedProfOTHAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedProfOTHAddPos.setAddPosName(root.getAlliedProf_label_CSP());
+			alliedProfOTHAddPos.setAddPosType(Constants.POS_TYPE_OTHER);
 			alliedProfOTHAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedProfProvider5());
 			alliedProfOTHAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedProfPercentage5());
-			// alliedProfOTHAddPos.setAddPosContractedOutYtd(payload); // NOT SURE
-			alliedProfOTHAddPos.setAddPosName("Other (specify)");
-			alliedProfOTHAddPos.setAddPosType("Allied Professional");
-			alliedProfOTHAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedProfOTHAddPos.setAddPosAnotherName(root.getAlliedProf_label_CSP7());
+			alliedProfOTHAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedNPRTAddPos = new LtcYtdCompAddPos();
+			alliedNPRTAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedNPRTAddPos.setAddPosName(root.getAlliedNP_label_CSP());
+			alliedNPRTAddPos.setAddPosType(root.getAlliedNP_label_CSP1());
 			alliedNPRTAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedNPProvider1());
 			alliedNPRTAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedNPPercentage1());
-			// alliedNPRTAddPos.setAddPosContractedOutYtd(payload); // NOT SURE
-			alliedNPRTAddPos.setAddPosName("Recreation Therapist");
-			alliedNPRTAddPos.setAddPosType("Allied Non-professional");
-			alliedNPRTAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedNPRTAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedNPRAAddPos = new LtcYtdCompAddPos();
+			alliedNPRAAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedNPRAAddPos.setAddPosName(root.getAlliedNP_label_CSP());
+			alliedNPRAAddPos.setAddPosType(root.getAlliedNP_label_CSP2());
 			alliedNPRAAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedNPProvider2());
 			alliedNPRAAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedNPPercentage2());
-			// alliedNPRAAddPos.setAddPosContractedOutYtd(payload); // NOT SURE
-			alliedNPRAAddPos.setAddPosName("Rehab Assistant");
-			alliedNPRAAddPos.setAddPosType("Allied Non-professional");
-			alliedNPRAAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedNPRAAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedNPAWAddPos = new LtcYtdCompAddPos();
+			alliedNPAWAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedNPAWAddPos.setAddPosName(root.getAlliedNP_label_CSP());
+			alliedNPAWAddPos.setAddPosType(root.getAlliedNP_label_CSP3());
 			alliedNPAWAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedNPProvider3());
 			alliedNPAWAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedNPPercentage3());
-			// alliedNPAWAddPos.setAddPosContractedOutYtd(payload); // NOT SURE
-			alliedNPAWAddPos.setAddPosName("Activity Worker");
-			alliedNPAWAddPos.setAddPosType("Allied Non-professional");
-			alliedNPAWAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedNPAWAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedNPMTAddPos = new LtcYtdCompAddPos();
+			alliedNPMTAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedNPMTAddPos.setAddPosName(root.getAlliedNP_label_CSP());
+			alliedNPMTAddPos.setAddPosType(root.getAlliedNP_label_CSP4());
 			alliedNPMTAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedNPProvider4());
 			alliedNPMTAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedNPPercentage4());
-			// alliedNPMTAddPos.setAddPosContractedOutYtd(payload); // NOT SURE
-			alliedNPMTAddPos.setAddPosName("Music Therapist");
-			alliedNPMTAddPos.setAddPosType("Allied Non-professional");
-			alliedNPMTAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedNPMTAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedNPATAddPos = new LtcYtdCompAddPos();
+			alliedNPATAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedNPATAddPos.setAddPosName(root.getAlliedNP_label_CSP());
+			alliedNPATAddPos.setAddPosType(root.getAlliedNP_label_CSP5());
 			alliedNPATAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedNPProvider5());
 			alliedNPATAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedNPPercentage5());
-			// alliedNPATAddPos.setAddPosContractedOutYtd(payload); // NOT SURE
-			alliedNPATAddPos.setAddPosName("Art Therapist");
-			alliedNPATAddPos.setAddPosType("Allied Non-professional");
-			alliedNPATAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedNPATAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedNPOTHAddPos = new LtcYtdCompAddPos();
+			alliedNPOTHAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedNPOTHAddPos.setAddPosName(root.getAlliedNP_label_CSP());
+			alliedNPOTHAddPos.setAddPosType(Constants.POS_TYPE_OTHER);
 			alliedNPOTHAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedNPProvider6());
 			alliedNPOTHAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedNPPercentage6());
-			// alliedNPOTHAddPos.setAddPosContractedOutYtd(payload); // NOT SURE
-			alliedNPOTHAddPos.setAddPosName("Other (specify)");
-			alliedNPOTHAddPos.setAddPosType("Allied Non-professional");
-			alliedNPOTHAddPos.setConfirmationId(root.getForm().getConfirmationId());
+			alliedNPOTHAddPos.setAddPosAnotherName(root.getAlliedNP_label_CSP6());
+			alliedNPOTHAddPos.determineAddPosContractedOutYtd();
 
 			Collections.addAll(ltcYtdCompAddPos, nursingRNAddPos, nursingLPNAddPos, nursingHCAAddPos, nursingOTHAddPos,
 					alliedProfOTAddPos, alliedProfPTAddPos, alliedProfDTAddPos, alliedProfSWAddPos, alliedProfOTHAddPos,
