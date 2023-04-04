@@ -1458,32 +1458,32 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			/* Add Pos Hrs */
 			LtcYtdCompAddPos nursingRNAddPos = new LtcYtdCompAddPos();
 			nursingRNAddPos.setConfirmationId(root.getForm().getConfirmationId());
-			nursingRNAddPos.setAddPosName(root.getNursing_label_CSP());
-			nursingRNAddPos.setAddPosType(root.getNursing_label_CSP1());
+			nursingRNAddPos.setAddPosType(root.getNursing_label_CSP());
+			nursingRNAddPos.setAddPosName(root.getNursing_label_CSP1());
 			nursingRNAddPos.setAddPosLegalNameContractServiceYtd(root.getNursingProvider1());
 			nursingRNAddPos.setAddPosPercentServiceContractOutYtd(root.getNursingPercentage1());
 			nursingRNAddPos.determineAddPosContractedOutYtd();
 			
 			LtcYtdCompAddPos nursingLPNAddPos = new LtcYtdCompAddPos();
 			nursingLPNAddPos.setConfirmationId(root.getForm().getConfirmationId());
-			nursingLPNAddPos.setAddPosName(root.getNursing_label_CSP());
-			nursingLPNAddPos.setAddPosType(root.getNursing_label_CSP2());
+			nursingLPNAddPos.setAddPosType(root.getNursing_label_CSP());
+			nursingLPNAddPos.setAddPosName(root.getNursing_label_CSP2());
 			nursingLPNAddPos.setAddPosLegalNameContractServiceYtd(root.getNursingProvider2());
 			nursingLPNAddPos.setAddPosPercentServiceContractOutYtd(root.getNursingPercentage2());
 			nursingLPNAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos nursingHCAAddPos = new LtcYtdCompAddPos();
 			nursingHCAAddPos.setConfirmationId(root.getForm().getConfirmationId());
-			nursingHCAAddPos.setAddPosName(root.getNursing_label_CSP());
-			nursingHCAAddPos.setAddPosType(root.getNursing_label_CSP3());
+			nursingHCAAddPos.setAddPosType(root.getNursing_label_CSP());
+			nursingHCAAddPos.setAddPosName(root.getNursing_label_CSP3());
 			nursingHCAAddPos.setAddPosLegalNameContractServiceYtd(root.getNursingProvider3());
 			nursingHCAAddPos.setAddPosPercentServiceContractOutYtd(root.getNursingPercentage3());
 			nursingHCAAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos nursingOTHAddPos = new LtcYtdCompAddPos();
 			nursingOTHAddPos.setConfirmationId(root.getForm().getConfirmationId());
-			nursingOTHAddPos.setAddPosName(root.getNursing_label_CSP());
-			nursingOTHAddPos.setAddPosType(Constants.POS_TYPE_OTHER);
+			nursingOTHAddPos.setAddPosType(root.getNursing_label_CSP());
+			nursingOTHAddPos.setAddPosName(Constants.POS_TYPE_OTHER);
 			nursingOTHAddPos.setAddPosLegalNameContractServiceYtd(root.getNursingProvider4());
 			nursingOTHAddPos.setAddPosPercentServiceContractOutYtd(root.getNursingPercentage4());
 			nursingOTHAddPos.setAddPosAnotherName(root.getNursing_label_CSP4());
@@ -1491,56 +1491,56 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 
 			LtcYtdCompAddPos alliedProfOTAddPos = new LtcYtdCompAddPos();
 			alliedProfOTAddPos.setConfirmationId(root.getForm().getConfirmationId());
-			alliedProfOTAddPos.setAddPosName(root.getAlliedProf_label_CSP());
-			alliedProfOTAddPos.setAddPosType(root.getAlliedProf_label_CSP1());
+			alliedProfOTAddPos.setAddPosType(root.getAlliedProf_label_CSP());
+			alliedProfOTAddPos.setAddPosName(root.getAlliedProf_label_CSP1());
 			alliedProfOTAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedProfProvider1());
 			alliedProfOTAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedProfPercentage1());
 			alliedProfOTAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedProfPTAddPos = new LtcYtdCompAddPos();
 			alliedProfPTAddPos.setConfirmationId(root.getForm().getConfirmationId());
-			alliedProfPTAddPos.setAddPosName(root.getAlliedProf_label_CSP());
-			alliedProfPTAddPos.setAddPosType(root.getAlliedProf_label_CSP2());
+			alliedProfPTAddPos.setAddPosType(root.getAlliedProf_label_CSP());
+			alliedProfPTAddPos.setAddPosName(root.getAlliedProf_label_CSP2());
 			alliedProfPTAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedProfProvider2());
 			alliedProfPTAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedProfPercentage2());
 			alliedProfPTAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedProfDTAddPos = new LtcYtdCompAddPos();
 			alliedProfDTAddPos.setConfirmationId(root.getForm().getConfirmationId());
-			alliedProfDTAddPos.setAddPosName(root.getAlliedProf_label_CSP());
-			alliedProfDTAddPos.setAddPosType(root.getAlliedProf_label_CSP3());
+			alliedProfDTAddPos.setAddPosType(root.getAlliedProf_label_CSP());
+			alliedProfDTAddPos.setAddPosName(root.getAlliedProf_label_CSP3());
 			alliedProfDTAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedProfProvider3());
 			alliedProfDTAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedProfPercentage3());
 			alliedProfDTAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedProfSWAddPos = new LtcYtdCompAddPos();
 			alliedProfSWAddPos.setConfirmationId(root.getForm().getConfirmationId());
-			alliedProfSWAddPos.setAddPosName(root.getAlliedProf_label_CSP());
-			alliedProfSWAddPos.setAddPosType(root.getAlliedProf_label_CSP4());
+			alliedProfSWAddPos.setAddPosType(root.getAlliedProf_label_CSP());
+			alliedProfSWAddPos.setAddPosName(root.getAlliedProf_label_CSP4());
 			alliedProfSWAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedProfProvider4());
 			alliedProfSWAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedProfPercentage4());
 			alliedProfSWAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedProfSLPAddPos = new LtcYtdCompAddPos();
 			alliedProfSLPAddPos.setConfirmationId(root.getForm().getConfirmationId());
-			alliedProfSLPAddPos.setAddPosName(root.getAlliedProf_label_CSP());
-			alliedProfSLPAddPos.setAddPosType(root.getAlliedProf_label_CSP5());
+			alliedProfSLPAddPos.setAddPosType(root.getAlliedProf_label_CSP());
+			alliedProfSLPAddPos.setAddPosName(root.getAlliedProf_label_CSP5());
 			alliedProfSLPAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedProfProvider4());
 			alliedProfSLPAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedProfPercentage4());
 			alliedProfSLPAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedProfRTAddPos = new LtcYtdCompAddPos();
 			alliedProfRTAddPos.setConfirmationId(root.getForm().getConfirmationId());
-			alliedProfRTAddPos.setAddPosName(root.getAlliedProf_label_CSP());
-			alliedProfRTAddPos.setAddPosType(root.getAlliedProf_label_CSP6());
+			alliedProfRTAddPos.setAddPosType(root.getAlliedProf_label_CSP());
+			alliedProfRTAddPos.setAddPosName(root.getAlliedProf_label_CSP6());
 			alliedProfRTAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedProfProvider4());
 			alliedProfRTAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedProfPercentage4());
 			alliedProfRTAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedProfOTHAddPos = new LtcYtdCompAddPos();
 			alliedProfOTHAddPos.setConfirmationId(root.getForm().getConfirmationId());
-			alliedProfOTHAddPos.setAddPosName(root.getAlliedProf_label_CSP());
-			alliedProfOTHAddPos.setAddPosType(Constants.POS_TYPE_OTHER);
+			alliedProfOTHAddPos.setAddPosType(root.getAlliedProf_label_CSP());
+			alliedProfOTHAddPos.setAddPosName(Constants.POS_TYPE_OTHER);
 			alliedProfOTHAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedProfProvider5());
 			alliedProfOTHAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedProfPercentage5());
 			alliedProfOTHAddPos.setAddPosAnotherName(root.getAlliedProf_label_CSP7());
@@ -1548,48 +1548,48 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 
 			LtcYtdCompAddPos alliedNPRTAddPos = new LtcYtdCompAddPos();
 			alliedNPRTAddPos.setConfirmationId(root.getForm().getConfirmationId());
-			alliedNPRTAddPos.setAddPosName(root.getAlliedNP_label_CSP());
-			alliedNPRTAddPos.setAddPosType(root.getAlliedNP_label_CSP1());
+			alliedNPRTAddPos.setAddPosType(root.getAlliedNP_label_CSP());
+			alliedNPRTAddPos.setAddPosName(root.getAlliedNP_label_CSP1());
 			alliedNPRTAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedNPProvider1());
 			alliedNPRTAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedNPPercentage1());
 			alliedNPRTAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedNPRAAddPos = new LtcYtdCompAddPos();
 			alliedNPRAAddPos.setConfirmationId(root.getForm().getConfirmationId());
-			alliedNPRAAddPos.setAddPosName(root.getAlliedNP_label_CSP());
-			alliedNPRAAddPos.setAddPosType(root.getAlliedNP_label_CSP2());
+			alliedNPRAAddPos.setAddPosType(root.getAlliedNP_label_CSP());
+			alliedNPRAAddPos.setAddPosName(root.getAlliedNP_label_CSP2());
 			alliedNPRAAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedNPProvider2());
 			alliedNPRAAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedNPPercentage2());
 			alliedNPRAAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedNPAWAddPos = new LtcYtdCompAddPos();
 			alliedNPAWAddPos.setConfirmationId(root.getForm().getConfirmationId());
-			alliedNPAWAddPos.setAddPosName(root.getAlliedNP_label_CSP());
-			alliedNPAWAddPos.setAddPosType(root.getAlliedNP_label_CSP3());
+			alliedNPAWAddPos.setAddPosType(root.getAlliedNP_label_CSP());
+			alliedNPAWAddPos.setAddPosName(root.getAlliedNP_label_CSP3());
 			alliedNPAWAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedNPProvider3());
 			alliedNPAWAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedNPPercentage3());
 			alliedNPAWAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedNPMTAddPos = new LtcYtdCompAddPos();
 			alliedNPMTAddPos.setConfirmationId(root.getForm().getConfirmationId());
-			alliedNPMTAddPos.setAddPosName(root.getAlliedNP_label_CSP());
-			alliedNPMTAddPos.setAddPosType(root.getAlliedNP_label_CSP4());
+			alliedNPMTAddPos.setAddPosType(root.getAlliedNP_label_CSP());
+			alliedNPMTAddPos.setAddPosName(root.getAlliedNP_label_CSP4());
 			alliedNPMTAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedNPProvider4());
 			alliedNPMTAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedNPPercentage4());
 			alliedNPMTAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedNPATAddPos = new LtcYtdCompAddPos();
 			alliedNPATAddPos.setConfirmationId(root.getForm().getConfirmationId());
-			alliedNPATAddPos.setAddPosName(root.getAlliedNP_label_CSP());
-			alliedNPATAddPos.setAddPosType(root.getAlliedNP_label_CSP5());
+			alliedNPATAddPos.setAddPosType(root.getAlliedNP_label_CSP());
+			alliedNPATAddPos.setAddPosName(root.getAlliedNP_label_CSP5());
 			alliedNPATAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedNPProvider5());
 			alliedNPATAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedNPPercentage5());
 			alliedNPATAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedNPOTHAddPos = new LtcYtdCompAddPos();
 			alliedNPOTHAddPos.setConfirmationId(root.getForm().getConfirmationId());
-			alliedNPOTHAddPos.setAddPosName(root.getAlliedNP_label_CSP());
-			alliedNPOTHAddPos.setAddPosType(Constants.POS_TYPE_OTHER);
+			alliedNPOTHAddPos.setAddPosType(root.getAlliedNP_label_CSP());
+			alliedNPOTHAddPos.setAddPosName(Constants.POS_TYPE_OTHER);
 			alliedNPOTHAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedNPProvider6());
 			alliedNPOTHAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedNPPercentage6());
 			alliedNPOTHAddPos.setAddPosAnotherName(root.getAlliedNP_label_CSP6());
