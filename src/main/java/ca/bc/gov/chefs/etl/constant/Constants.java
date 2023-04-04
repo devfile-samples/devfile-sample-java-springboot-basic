@@ -41,7 +41,11 @@ public class Constants {
 	public final static String IN_SCOPE = "inScope";
 	public final static String OUT_OF_SCOPE = "outOfScope";
 	public final static String PRIVATE_BED = "privateBed";
-	// form names
+
+	// Constants for Sub table: LTC_YTD_COMP_ADD_POS
+	public final static String POS_TYPE_OTHER = "Other";
+
+	/* Form Names */
 	public final static String LTC_BED_YTD_OCCUPIED_DAYS = "LTC_BED_YTD_OCCUPIED_DAYS";
 	public final static String LTC_BED_YTD_OCCUPANCY_RATE = "LTC_BED_YTD_OCCUPANCY_RATE";
 	public final static String LTC_BED_YTD_MAX_OCCUPANCY = "LTC_BED_YTD_MAX_OCCUPANCY";
