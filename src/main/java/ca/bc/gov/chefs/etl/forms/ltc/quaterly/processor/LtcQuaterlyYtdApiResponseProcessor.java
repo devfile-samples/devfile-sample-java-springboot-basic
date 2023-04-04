@@ -101,16 +101,16 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 
 			/* Form Meta */
 			ltcYtdSubmission.setConfirmationId(root.getForm().getConfirmationId());
+			ltcYtdSubmission.setIsDeleted("");
+			ltcYtdSubmission.setSubmissionDate(root.getForm().getCreatedAt());
+			ltcYtdSubmission.setSubmittedBy(root.getForm().getFullName());
 			ltcYtdSubmission.setCCIMSID(root.getCcmisId());
 			ltcYtdSubmission.setSubmissionType(root.getSubmission());
-			ltcYtdSubmission.setIsDeleted("");
-			ltcYtdSubmission.setNbFundedBeds(root.getNumberOfTotalFundedBeds());
-			ltcYtdSubmission.setNbTotalBeds(root.getNumberOfTotalBeds());
-			ltcYtdSubmission.setOccRateThreshold(root.getThreshold());
 			ltcYtdSubmission.setPeriod(root.getQuarter());
-			ltcYtdSubmission.setSubmissionDate(root.getForm().getCreatedAt());
 			// FIXME ltcYtdSubmission.setSubmissionFy("");
-			ltcYtdSubmission.setSubmittedBy(root.getForm().getFullName());
+			ltcYtdSubmission.setNbTotalBeds(root.getNumberOfTotalBeds());
+			ltcYtdSubmission.setNbFundedBeds(root.getNumberOfTotalFundedBeds());
+			ltcYtdSubmission.setOccRateThreshold(root.getThreshold());
 			
 			/* START : Direct Care Hours */
 			/* Productive and NP Nursing */ // why no subtotal and total?
