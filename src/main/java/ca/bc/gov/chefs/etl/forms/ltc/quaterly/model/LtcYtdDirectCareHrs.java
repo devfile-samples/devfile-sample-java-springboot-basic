@@ -13,6 +13,7 @@ public class LtcYtdDirectCareHrs implements IModel{
 	private String confirmationId;
 	private String dirCareType; // nursing, allied, etc
 	private String dirCareName;  // RN, OcP etc
+	private String dirCareOtherValue;  // RN, OcP etc
 	private String dirCareProdHrsRegYtd;
 	private String dirCareProdHrsOtYtd;
 	private String dirCareProdHrsContractedYtd;
@@ -23,7 +24,6 @@ public class LtcYtdDirectCareHrs implements IModel{
 	private String dirCareNonProdHrsOtherYtd;
 	private String dirCareNonProdHrsTotalYtd;
 	private String dirCareTotalHrsPaidYtd;
-	private String dirCareYtdNotes;
 	
 	public String getConfirmationId() {
 		return confirmationId;
@@ -42,6 +42,12 @@ public class LtcYtdDirectCareHrs implements IModel{
 	}
 	public void setDirCareName(String dirCareName) {
 		this.dirCareName = dirCareName;
+	}
+	public String getDirCareOtherValue() {
+		return dirCareOtherValue;
+	}
+	public void setDirCareOtherValue(String dirCareOtherValue) {
+		this.dirCareOtherValue = dirCareOtherValue;
 	}
 	public String getDirCareProdHrsRegYtd() {
 		return StringUtils.isBlank(dirCareProdHrsRegYtd) ? "0" : dirCareProdHrsRegYtd;
@@ -78,14 +84,7 @@ public class LtcYtdDirectCareHrs implements IModel{
 	}
 	public void setDirCareNonProdHrsOtherYtd(String dirCareNonProdHrsOtherYtd) {
 		this.dirCareNonProdHrsOtherYtd = dirCareNonProdHrsOtherYtd;
-	}
-	public String getDirCareYtdNotes() {
-		return dirCareYtdNotes;
-	}
-	public void setDirCareYtdNotes(String dirCareYtdNotes) {
-		this.dirCareYtdNotes = dirCareYtdNotes;
-	}
-	
+	}	
 	public String getDirCareProdHrsSubtotalYtd() {
 		return dirCareProdHrsSubtotalYtd;
 	}
@@ -125,6 +124,7 @@ public class LtcYtdDirectCareHrs implements IModel{
 		elements.add(this.getConfirmationId());
 		elements.add(this.getDirCareType());
 		elements.add(this.getDirCareName());
+		elements.add(this.getDirCareOtherValue());	
 		elements.add(this.getDirCareProdHrsRegYtd());
 		elements.add(this.getDirCareProdHrsOtYtd());
 		elements.add(this.getDirCareProdHrsContractedYtd());
@@ -134,13 +134,11 @@ public class LtcYtdDirectCareHrs implements IModel{
 		elements.add(this.getDirCareNonProdHrsSickYtd());
 		elements.add(this.getDirCareNonProdHrsOtherYtd());
 		elements.add(this.getDirCareNonProdHrsTotalYtd());
-		elements.add(this.getDirCareTotalHrsPaidYtd());
-		elements.add(this.getDirCareYtdNotes());		
+		elements.add(this.getDirCareTotalHrsPaidYtd());	
 		return elements;
 	}
 	@Override
 	public List<IModel> getObjects() {
 		return new ArrayList<>();
 	}
-	
 }
