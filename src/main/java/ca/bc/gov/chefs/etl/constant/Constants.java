@@ -42,6 +42,9 @@ public class Constants {
 	public final static String OUT_OF_SCOPE = "outOfScope";
 	public final static String PRIVATE_BED = "privateBed";
 
+	// Constants for Sub table: LTC_YTD_DIRECT_CARE_HRS
+	public final static String DC_HRS_OTHER = "Other";
+
 	// Constants for Sub table: LTC_YTD_COMP_ADD_POS
 	public final static String POS_TYPE_OTHER = "Other";
 
