@@ -1129,18 +1129,18 @@ public class Root{
     public String nopEx_sub_note;
     @JsonProperty("nopEx_sum1-1")
     public String nopEx_sum11;
-    @JsonProperty("nopEx_YTD1")
+    @JsonProperty("nopEx_YTD-1")
     public String nopEx_YTD1;
-    @JsonProperty("nopEx_YTD2")
+    @JsonProperty("nopEx_YTD-2")
     public String nopEx_YTD2;
     public String nopRev_note1;
     public String nopRev_note2;
     public String nopRev_sub_note;
     @JsonProperty("nopRev_sum1-1")
     public String nopRev_sum11;
-    @JsonProperty("nopRev_YTD1")
+    @JsonProperty("nopRev_YTD-1")
     public String nopRev_YTD1;
-    @JsonProperty("nopRev_YTD2")
+    @JsonProperty("nopRev_YTD-2")
     public String nopRev_YTD2;
     
     public String nopSu_data1;

@@ -1690,7 +1690,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdRev revFrmHA1Adj = new LtcYtdRev();
 			revFrmHA1Adj.setRevYTD(root.getOpRev_YTD1());
 			revFrmHA1Adj.setRevNotes(root.getOpRev_note1());
-			revFrmHA1Adj.setRevName("Adjustments");
+			revFrmHA1Adj.setRevName("HA Operating Funding");	
 			revFrmHA1Adj.setRevType("Revenue from HA (1)");
 			revFrmHA1Adj.setConfirmationId(root.getForm().getConfirmationId());
 
@@ -1759,9 +1759,25 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdRev revFrmHA4Oth = new LtcYtdRev();
 			revFrmHA4Oth.setRevYTD(root.getOpRev_YTD10());
 			revFrmHA4Oth.setRevNotes(root.getOpRev_note10());
-			revFrmHA4Oth.setRevName("Others - specify");
+			revFrmHA4Oth.setRevName("Other");
 			revFrmHA4Oth.setRevType("Revenue from HA (4)");
 			revFrmHA4Oth.setConfirmationId(root.getForm().getConfirmationId());
+
+			/* Non operating revenu */
+			LtcYtdRev nonOperatingRevOth = new LtcYtdRev();
+			nonOperatingRevOth.setRevYTD(root.getNopRev_YTD1());
+			nonOperatingRevOth.setRevNotes(root.getNopRev_note1());
+			nonOperatingRevOth.setRevName("Other");
+			nonOperatingRevOth.setRevType("Non-operating Revenue");
+			nonOperatingRevOth.setConfirmationId(root.getForm().getConfirmationId());
+
+			LtcYtdRev nonOperatingRevOthThirdParty = new LtcYtdRev();
+			nonOperatingRevOthThirdParty.setRevYTD(root.getNopRev_YTD2());
+			nonOperatingRevOthThirdParty.setRevNotes(root.getNopRev_note2());
+			nonOperatingRevOthThirdParty.setRevName("Other - 3rd party funding ");
+			nonOperatingRevOthThirdParty.setRevType("Non-operating Revenue");
+			nonOperatingRevOthThirdParty.setConfirmationId(root.getForm().getConfirmationId());
+			/* END */
 
 			// skipping subtotal for now
 
@@ -1838,8 +1854,8 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			Collections.addAll(ltcYtdRev, revFrmHA1Adj, revFrmHA1DirCare, revFrmHA1Others, revFrmHA2OpFundMinEq,
 					revFrmHA2OpFundOth, revFrmHA3, revFrmHA4OccThld, revFrmHA4CliConReconc, revFrmHA4DirCare,
 					revFrmHA4Oth, clntRvnHAClient, clntRvnFeePaidParties, clntRvnFeePaidNonEligible, othRevInvstOpFund,
-					othRevInvstCmBcFund, othRevFoodServ, othRevLdryServ, othRevCabl, othRevOthRec, othRevOthSpcfy);
-			// skipping total field for now
+					othRevInvstCmBcFund, othRevFoodServ, othRevLdryServ, othRevCabl, othRevOthRec, othRevOthSpcfy, 
+					nonOperatingRevOth, nonOperatingRevOthThirdParty);
 
 			/* Subtotals */
 			LtcYtdRevSubTotals revFromHA1Subttl = new LtcYtdRevSubTotals();
@@ -1872,7 +1888,12 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			opRevSubttl.setRevType("Operating Revenue");
 			opRevSubttl.setSubTotalRevYtd(root.getOpRev_YTD_total());
 
-			Collections.addAll(ltcYtdRevSubTtls, revFromHA1Subttl,revFromHA2Subttl,revFromHA4Subttl,clntRevSubttl,othRevSubttl,opRevSubttl);
+			LtcYtdRevSubTotals nonOpRevSubttl = new LtcYtdRevSubTotals();
+			nonOpRevSubttl.setConfirmationId(root.getForm().getConfirmationId());
+			nonOpRevSubttl.setRevType("Non-operating revenue");
+			nonOpRevSubttl.setSubTotalRevYtd(root.getNopRev_sum11());
+
+			Collections.addAll(ltcYtdRevSubTtls, revFromHA1Subttl,revFromHA2Subttl,revFromHA4Subttl,clntRevSubttl,othRevSubttl,opRevSubttl, nonOpRevSubttl);
 
 			LtcYtdExp dirCareCostExp = new LtcYtdExp();
 			dirCareCostExp.setExpYtd(root.getOpEx_YTD1());
@@ -2109,7 +2130,13 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			operatingCostSubtotal.setExpType("Operating Expenses");
 			operatingCostSubtotal.setSubTotalRevYtd(root.getOpEx_sum16());
 
-			Collections.addAll(ltcYtdExpSubttls,staffCost1ASubtotal,staffCost1BSubtotal,propertyCostSubtotal,suppliesSubtotal,adminCostSubtotal,operatingCostSubtotal);
+			LtcYtdExpSubTotals nonOperationalExpSubtotal = new LtcYtdExpSubTotals();
+			nonOperationalExpSubtotal.setConfirmationId(root.getForm().getConfirmationId());
+			nonOperationalExpSubtotal.setExpType("Non-operating expenses");
+			nonOperationalExpSubtotal.setSubTotalRevYtd(root.getNopEx_sum11());
+
+			Collections.addAll(ltcYtdExpSubttls,staffCost1ASubtotal,staffCost1BSubtotal,propertyCostSubtotal,suppliesSubtotal,adminCostSubtotal,operatingCostSubtotal,
+			 nonOperationalExpSubtotal);
 
 			/* END */
 
@@ -2197,12 +2224,30 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			othAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			
+			/* Non operating expanse */
+			LtcYtdExp dirCareNonOpExpMortgage = new LtcYtdExp();
+			dirCareNonOpExpMortgage.setExpYtd(root.getNopEx_YTD1());
+			dirCareNonOpExpMortgage.setExpNotes(root.getNopEx_note1());
+			dirCareNonOpExpMortgage.setExpName("Mortgage Principle Repayment");
+			dirCareNonOpExpMortgage.setExpType("Non-operating Expense");
+			dirCareNonOpExpMortgage.setConfirmationId(root.getForm().getConfirmationId());
+
+			LtcYtdExp dirCareNonOpExpOther = new LtcYtdExp();
+			dirCareNonOpExpOther.setExpYtd(root.getNopEx_YTD2());
+			dirCareNonOpExpOther.setExpNotes(root.getNopEx_note2());
+			dirCareNonOpExpOther.setExpName("Other");
+			dirCareNonOpExpOther.setExpType("Non-operating Expense");
+			dirCareNonOpExpOther.setConfirmationId(root.getForm().getConfirmationId());
+			/* END */
+
+			
 			Collections.addAll(ltcYtdExp, dirCareCostExp, foodCostExp, ldryServExp, housekeepingCostExp,
 					adminServCostExp, plantMainOpStaffExp, salWagRecvExp, salWagAccExp, othLabCostExp, bnftCostExp,
 					sickSevrnceAccExp, buildingRentExp, intrstMortgageLngTrmExp, propertyTaxesExp, mntnceExp,
 					suppliesExp, utilitiesExp, wasteMgmntExp, resTranServExp, othExp, medSupExp, rawFoodCostExp,
 					drgsPharmaExp, dietSupExp, ldrySupExp, houseSupExp, othSupExp, offExpAdCost, mgmntAdCost,
-					hoAllocpAdCost, accAdCost, apaAdCost, insuranceAdCost, othSupAdCost, othAdCost);
+					hoAllocpAdCost, accAdCost, apaAdCost, insuranceAdCost, othSupAdCost, othAdCost, dirCareNonOpExpMortgage,
+					dirCareNonOpExpOther);
 
 			// subtotal
 			// total operating expenses
