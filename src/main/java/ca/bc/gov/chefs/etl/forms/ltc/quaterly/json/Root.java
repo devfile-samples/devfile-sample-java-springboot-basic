@@ -276,7 +276,9 @@ public class Root{
     public String alliedProfContractRate3;
     public String alliedProfContractRate4;
     public String alliedProfContractRate5;
-    public String alliedProfCost_total;
+    public String alliedProfContractRate6;
+    public String alliedProfContractRate7;
+	public String alliedProfCost_total;
     public String alliedProfCost1;
     public String alliedProfCost2;
     public String alliedProfCost3;
@@ -287,7 +289,9 @@ public class Root{
     public String alliedProfNProdC_calc3;
     public String alliedProfNProdC_calc4;
     public String alliedProfNProdC_calc5;
-    public String alliedProfNProdC_calcsum1;
+    public String alliedProfNProdC_calc6;
+    public String alliedProfNProdC_calc7;
+	public String alliedProfNProdC_calcsum1;
     @JsonProperty("alliedProfNProdC_item1-1")
     public String alliedProfNProdC_item11;
     @JsonProperty("alliedProfNProdC_item1-2")
@@ -298,7 +302,11 @@ public class Root{
     public String alliedProfNProdC_item14;
     @JsonProperty("alliedProfNProdC_item1-5")
     public String alliedProfNProdC_item15;
-    @JsonProperty("alliedProfNProdC_item2-1")
+	@JsonProperty("alliedProfNProdC_item1-6")
+    public String alliedProfNProdC_item16;
+	@JsonProperty("alliedProfNProdC_item1-7")
+    public String alliedProfNProdC_item17;
+	@JsonProperty("alliedProfNProdC_item2-1")
     public String alliedProfNProdC_item21;
     @JsonProperty("alliedProfNProdC_item2-2")
     public String alliedProfNProdC_item22;
@@ -308,7 +316,11 @@ public class Root{
     public String alliedProfNProdC_item24;
     @JsonProperty("alliedProfNProdC_item2-5")
     public String alliedProfNProdC_item25;
-    @JsonProperty("alliedProfNProdC_item3-1")
+	@JsonProperty("alliedProfNProdC_item2-6")
+    public String alliedProfNProdC_item26;
+	@JsonProperty("alliedProfNProdC_item2-7")
+    public String alliedProfNProdC_item27;
+	@JsonProperty("alliedProfNProdC_item3-1")
     public String alliedProfNProdC_item31;
     @JsonProperty("alliedProfNProdC_item3-2")
     public String alliedProfNProdC_item32;
@@ -318,7 +330,11 @@ public class Root{
     public String alliedProfNProdC_item34;
     @JsonProperty("alliedProfNProdC_item3-5")
     public String alliedProfNProdC_item35;
-    @JsonProperty("alliedProfNProdC_sum1-1")
+	@JsonProperty("alliedProfNProdC_item3-6")
+    public String alliedProfNProdC_item36;
+	@JsonProperty("alliedProfNProdC_item3-7")
+    public String alliedProfNProdC_item37;
+	@JsonProperty("alliedProfNProdC_sum1-1")
     public String alliedProfNProdC_sum11;
     @JsonProperty("alliedProfNProdC_sum3-1")
     public String alliedProfNProdC_sum31;
@@ -398,7 +414,9 @@ public class Root{
     public String alliedProfProdC_calc3;
     public String alliedProfProdC_calc4;
     public String alliedProfProdC_calc5;
-    public String alliedProfProdC_calcsum1;
+    public String alliedProfProdC_calc6;
+    public String alliedProfProdC_calc7;
+	public String alliedProfProdC_calcsum1;
     
     @JsonProperty("alliedProfProdC_item1-1")
     public String alliedProfProdC_item11;
@@ -410,7 +428,11 @@ public class Root{
     public String alliedProfProdC_item14;
     @JsonProperty("alliedProfProdC_item1-5")
     public String alliedProfProdC_item15;
-    @JsonProperty("alliedProfProdC_item2-1")
+	@JsonProperty("alliedProfProdC_item1-6")
+    public String alliedProfProdC_item16;
+    @JsonProperty("alliedProfProdC_item1-7")
+    public String alliedProfProdC_item17;
+	@JsonProperty("alliedProfProdC_item2-1")
     public String alliedProfProdC_item21;
     @JsonProperty("alliedProfProdC_item2-2")
     public String alliedProfProdC_item22;
@@ -420,12 +442,18 @@ public class Root{
     public String alliedProfProdC_item24;
     @JsonProperty("alliedProfProdC_item2-5")
     public String alliedProfProdC_item25;
-    public String alliedProfProdC_sub1;
+	@JsonProperty("alliedProfProdC_item2-6")
+    public String alliedProfProdC_item26;
+	@JsonProperty("alliedProfProdC_item2-7")
+    public String alliedProfProdC_item27;
+	public String alliedProfProdC_sub1;
     public String alliedProfProdC_sub2;
     public String alliedProfProdC_sub3;
     public String alliedProfProdC_sub4;
     public String alliedProfProdC_sub5;
-    public String alliedProfProdC_subsum1;
+    public String alliedProfProdC_sub6;
+    public String alliedProfProdC_sub7;
+	public String alliedProfProdC_subsum1;
     @JsonProperty("alliedProfProdC_sum1-1")
     public String alliedProfProdC_sum11;
     @JsonProperty("alliedProfProdC_sum2-1")
@@ -435,14 +463,18 @@ public class Root{
     public String alliedProfProdC_THP3;
     public String alliedProfProdC_THP4;
     public String alliedProfProdC_THP5;
-    public String alliedProfProdC_THPsum1;
+    public String alliedProfProdC_THP6;
+    public String alliedProfProdC_THP7;
+	public String alliedProfProdC_THPsum1;
     public String alliedProfProdCCS_subsum1;
     public String alliedProfProdCCS1;
     public String alliedProfProdCCS2;
     public String alliedProfProdCCS3;
     public String alliedProfProdCCS4;
     public String alliedProfProdCCS5;
-    public String alliedProfProdH_calc1;
+    public String alliedProfProdCCS6;
+    public String alliedProfProdCCS7;
+	public String alliedProfProdH_calc1;
     public String alliedProfProdH_calc2;
     public String alliedProfProdH_calc3;
     public String alliedProfProdH_calc4;
@@ -517,7 +549,9 @@ public class Root{
     public String alliedProfStaffRate3;
     public String alliedProfStaffRate4;
     public String alliedProfStaffRate5;
-    public ArrayList<BedGrid0> bedGrid0;
+    public String alliedProfStaffRate6;
+    public String alliedProfStaffRate7;
+	public ArrayList<BedGrid0> bedGrid0;
     public ArrayList<BedGrid1> bedGrid1;
     public ArrayList<BedGrid2> bedGrid2;
     public ArrayList<BedGrid3> bedGrid3;
@@ -9371,5 +9405,148 @@ public class Root{
 	public void setAlliedProfNProdH_calc7(String alliedProfNProdH_calc7) {
 		this.alliedProfNProdH_calc7 = alliedProfNProdH_calc7;
 	}
-    
+    public String getAlliedProfProdC_item16() {
+		return alliedProfProdC_item16;
+	}
+	public void setAlliedProfProdC_item16(String alliedProfProdC_item16) {
+		this.alliedProfProdC_item16 = alliedProfProdC_item16;
+	}
+	public String getAlliedProfProdC_item17() {
+		return alliedProfProdC_item17;
+	}
+	public void setAlliedProfProdC_item17(String alliedProfProdC_item17) {
+		this.alliedProfProdC_item17 = alliedProfProdC_item17;
+	}
+    public String getAlliedProfProdC_item26() {
+		return alliedProfProdC_item26;
+	}
+	public void setAlliedProfProdC_item26(String alliedProfProdC_item26) {
+		this.alliedProfProdC_item26 = alliedProfProdC_item26;
+	}
+	public String getAlliedProfProdC_item27() {
+		return alliedProfProdC_item27;
+	}
+	public void setAlliedProfProdC_item27(String alliedProfProdC_item27) {
+		this.alliedProfProdC_item27 = alliedProfProdC_item27;
+	}
+    public String getAlliedProfProdCCS6() {
+		return alliedProfProdCCS6;
+	}
+	public void setAlliedProfProdCCS6(String alliedProfProdCCS6) {
+		this.alliedProfProdCCS6 = alliedProfProdCCS6;
+	}
+	public String getAlliedProfProdCCS7() {
+		return alliedProfProdCCS7;
+	}
+	public void setAlliedProfProdCCS7(String alliedProfProdCCS7) {
+		this.alliedProfProdCCS7 = alliedProfProdCCS7;
+	}
+    public String getAlliedProfNProdC_item16() {
+		return alliedProfNProdC_item16;
+	}
+	public void setAlliedProfNProdC_item16(String alliedProfNProdC_item16) {
+		this.alliedProfNProdC_item16 = alliedProfNProdC_item16;
+	}
+	public String getAlliedProfNProdC_item17() {
+		return alliedProfNProdC_item17;
+	}
+	public void setAlliedProfNProdC_item17(String alliedProfNProdC_item17) {
+		this.alliedProfNProdC_item17 = alliedProfNProdC_item17;
+	}
+    public String getAlliedProfNProdC_item26() {
+		return alliedProfNProdC_item26;
+	}
+	public void setAlliedProfNProdC_item26(String alliedProfNProdC_item26) {
+		this.alliedProfNProdC_item26 = alliedProfNProdC_item26;
+	}
+	public String getAlliedProfNProdC_item27() {
+		return alliedProfNProdC_item27;
+	}
+	public void setAlliedProfNProdC_item27(String alliedProfNProdC_item27) {
+		this.alliedProfNProdC_item27 = alliedProfNProdC_item27;
+	}
+    public String getAlliedProfNProdC_item36() {
+		return alliedProfNProdC_item36;
+	}
+	public void setAlliedProfNProdC_item36(String alliedProfNProdC_item36) {
+		this.alliedProfNProdC_item36 = alliedProfNProdC_item36;
+	}
+	public String getAlliedProfNProdC_item37() {
+		return alliedProfNProdC_item37;
+	}
+	public void setAlliedProfNProdC_item37(String alliedProfNProdC_item37) {
+		this.alliedProfNProdC_item37 = alliedProfNProdC_item37;
+	}
+    public String getAlliedProfProdC_calc6() {
+		return alliedProfProdC_calc6;
+	}
+	public void setAlliedProfProdC_calc6(String alliedProfProdC_calc6) {
+		this.alliedProfProdC_calc6 = alliedProfProdC_calc6;
+	}
+	public String getAlliedProfProdC_calc7() {
+		return alliedProfProdC_calc7;
+	}
+	public void setAlliedProfProdC_calc7(String alliedProfProdC_calc7) {
+		this.alliedProfProdC_calc7 = alliedProfProdC_calc7;
+	}
+    public String getAlliedProfProdC_sub6() {
+		return alliedProfProdC_sub6;
+	}
+	public void setAlliedProfProdC_sub6(String alliedProfProdC_sub6) {
+		this.alliedProfProdC_sub6 = alliedProfProdC_sub6;
+	}
+	public String getAlliedProfProdC_sub7() {
+		return alliedProfProdC_sub7;
+	}
+	public void setAlliedProfProdC_sub7(String alliedProfProdC_sub7) {
+		this.alliedProfProdC_sub7 = alliedProfProdC_sub7;
+	}
+    public String getAlliedProfProdC_THP6() {
+		return alliedProfProdC_THP6;
+	}
+	public void setAlliedProfProdC_THP6(String alliedProfProdC_THP6) {
+		this.alliedProfProdC_THP6 = alliedProfProdC_THP6;
+	}
+	public String getAlliedProfProdC_THP7() {
+		return alliedProfProdC_THP7;
+	}
+	public void setAlliedProfProdC_THP7(String alliedProfProdC_THP7) {
+		this.alliedProfProdC_THP7 = alliedProfProdC_THP7;
+	}
+    public String getAlliedProfNProdC_calc6() {
+		return alliedProfNProdC_calc6;
+	}
+	public void setAlliedProfNProdC_calc6(String alliedProfNProdC_calc6) {
+		this.alliedProfNProdC_calc6 = alliedProfNProdC_calc6;
+	}
+	public String getAlliedProfNProdC_calc7() {
+		return alliedProfNProdC_calc7;
+	}
+	public void setAlliedProfNProdC_calc7(String alliedProfNProdC_calc7) {
+		this.alliedProfNProdC_calc7 = alliedProfNProdC_calc7;
+	}
+    public String getAlliedProfStaffRate6() {
+		return alliedProfStaffRate6;
+	}
+	public void setAlliedProfStaffRate6(String alliedProfStaffRate6) {
+		this.alliedProfStaffRate6 = alliedProfStaffRate6;
+	}
+	public String getAlliedProfStaffRate7() {
+		return alliedProfStaffRate7;
+	}
+	public void setAlliedProfStaffRate7(String alliedProfStaffRate7) {
+		this.alliedProfStaffRate7 = alliedProfStaffRate7;
+	}
+    public String getAlliedProfContractRate6() {
+		return alliedProfContractRate6;
+	}
+	public void setAlliedProfContractRate6(String alliedProfContractRate6) {
+		this.alliedProfContractRate6 = alliedProfContractRate6;
+	}
+	public String getAlliedProfContractRate7() {
+		return alliedProfContractRate7;
+	}
+	public void setAlliedProfContractRate7(String alliedProfContractRate7) {
+		this.alliedProfContractRate7 = alliedProfContractRate7;
+	}
 }
