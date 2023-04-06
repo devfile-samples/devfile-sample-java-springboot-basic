@@ -36,6 +36,7 @@ import ca.bc.gov.chefs.etl.forms.ltc.quaterly.model.LtcYtdCompHrsTotals;
 import ca.bc.gov.chefs.etl.forms.ltc.quaterly.model.LtcYtdCompSal;
 import ca.bc.gov.chefs.etl.forms.ltc.quaterly.model.LtcYtdCompSalSubtotals;
 import ca.bc.gov.chefs.etl.forms.ltc.quaterly.model.LtcYtdCompSalTotals;
+import ca.bc.gov.chefs.etl.forms.ltc.quaterly.model.LtcYtdDep;
 import ca.bc.gov.chefs.etl.forms.ltc.quaterly.model.LtcYtdDirectCareCost;
 import ca.bc.gov.chefs.etl.forms.ltc.quaterly.model.LtcYtdDirectCareCostSubtotals;
 import ca.bc.gov.chefs.etl.forms.ltc.quaterly.model.LtcYtdDirectCareHrs;
@@ -45,6 +46,7 @@ import ca.bc.gov.chefs.etl.forms.ltc.quaterly.model.LtcYtdExpSubTotals;
 import ca.bc.gov.chefs.etl.forms.ltc.quaterly.model.LtcYtdRev;
 import ca.bc.gov.chefs.etl.forms.ltc.quaterly.model.LtcYtdRevSubTotals;
 import ca.bc.gov.chefs.etl.forms.ltc.quaterly.model.LtcYtdSubmission;
+import ca.bc.gov.chefs.etl.forms.ltc.quaterly.model.LtcYtdSumTotals;
 import ca.bc.gov.chefs.etl.util.CSVUtil;
 import ca.bc.gov.chefs.etl.util.FileUtil;
 
@@ -91,6 +93,8 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			List<LtcYtdRevSubTotals> ltcYtdRevSubTtls = new ArrayList<LtcYtdRevSubTotals>();
 			List<LtcYtdExpSubTotals> ltcYtdExpSubttls = new ArrayList<LtcYtdExpSubTotals>();
 			List<LtcYtdExp> ltcYtdExp = new ArrayList<>();
+			List<LtcYtdDep> ltcYtdDep = new ArrayList<>();
+			List<LtcYtdSumTotals> ltcYtdSumTotals = new ArrayList<>();
 			List<LtcBedYtdOccupancyRate> ltcBedYtdOccupancyRates = new ArrayList<>();
 			List<LtcBedYtdMaxOccupancy> ltcBedYtdMaxOccupancies = new ArrayList<>();
 			List<LtcBedYtdMaxOccupancyTotals> ltcBedYtdMaxOccTtls = new ArrayList<>();
@@ -2108,6 +2112,33 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			Collections.addAll(ltcYtdExpSubttls,staffCost1ASubtotal,staffCost1BSubtotal,propertyCostSubtotal,suppliesSubtotal,adminCostSubtotal,operatingCostSubtotal);
 
 			/* END */
+
+			/*LtcYtdDep */
+			LtcYtdDep buildingDep = new LtcYtdDep();
+			buildingDep.setConfirmationId(root.getForm().getConfirmationId());
+			buildingDep.setDepName("Building");
+			buildingDep.setDepYtd(root.getOpEx_item138());
+			buildingDep.setDepNotes(root.getOpEx_note38());
+
+			LtcYtdDep furnitureEquipmentDep = new LtcYtdDep();
+			furnitureEquipmentDep.setConfirmationId(root.getForm().getConfirmationId());
+			furnitureEquipmentDep.setDepName("Furniture & equipment");
+			furnitureEquipmentDep.setDepYtd(root.getOpEx_item139());
+			furnitureEquipmentDep.setDepNotes(root.getOpEx_note39());
+
+			Collections.addAll(ltcYtdDep, buildingDep, furnitureEquipmentDep);
+			/* END */
+
+			/* LtcYtdSumTotals */
+			LtcYtdSumTotals YtdTotal = new LtcYtdSumTotals();
+			YtdTotal.setConfirmationId(root.getForm().getConfirmationId());
+			YtdTotal.setTotName(root.getOpSu_data_total_label());
+			YtdTotal.setSumYTD(root.getOpSu_data_total());
+			YtdTotal.setTotNotes(root.getOpSu_data_total_note());
+
+			ltcYtdSumTotals.add(YtdTotal);
+
+			/* END */
 			
 			LtcYtdExp offExpAdCost = new LtcYtdExp();
 			offExpAdCost.setExpYtd(root.getOpEx_YTD28());
@@ -2698,6 +2729,8 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			ltcYtdSubmission.setLtcYtdDirectCareCost(ltcYtdDcCost);
 			ltcYtdSubmission.setLtcYtdDirectCareHrs(ltcYtdDcHrs);
 			ltcYtdSubmission.setLtcYtdExp(ltcYtdExp);
+			ltcYtdSubmission.setLtcYtdDep(ltcYtdDep);
+			ltcYtdSubmission.setLtcYtdSumTotals(ltcYtdSumTotals);
 			ltcYtdSubmission.setLtcYtdRev(ltcYtdRev);
 			ltcYtdSubmission.setLtcYtdExpSubttls(ltcYtdExpSubttls);
 			ltcYtdSubmission.setLtcYtdRevSubttls(ltcYtdRevSubTtls);
