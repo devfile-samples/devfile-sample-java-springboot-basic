@@ -14,15 +14,16 @@ public class LtcYtdSubmission implements IModel {
 	 */
 
 	private String confirmationId;
+	private String isDeleted;
 	private String submissionDate;
 	private String submittedBy;
-	private String facilitySubId;
+	private String CCIMSID;
+	private String submissionType;
 	private String period;
 	private String submissionFy;
 	private String nbTotalBeds;
 	private String nbFundedBeds;
 	private String occRateThreshold;
-	private String isDeleted;
 
 	private List<LtcBedYtdMaxOccupancy> ltcBedYtdMaxOccupancy;
 	private List<LtcBedYtdOccupancyRate> ltcBedYtdOccupancyRate;
@@ -34,9 +35,11 @@ public class LtcYtdSubmission implements IModel {
 	private List<LtcYtdDirectCareCost> ltcYtdDirectCareCost;
 	private List<LtcYtdDirectCareHrs> ltcYtdDirectCareHrs;
 	private List<LtcYtdExp> ltcYtdExp;
+	private List<LtcYtdDep> ltcYtdDep;
 	private List<LtcYtdRev> ltcYtdRev;
 	private List<LtcYtdExpSubTotals> ltcYtdExpSubttls;
 	private List<LtcYtdRevSubTotals> ltcYtdRevSubttls;
+	private List<LtcYtdSumTotals> ltcYtdSumTotals;
 	private List<LtcYtdCompSalSubtotals> ltcYtdCompSalSubttls;
 	private List<LtcYtdCompSalTotals> ltcYtdCompSalTtls;
 	private List<LtcYtdCompHrsSubtotals> ltcYtdCompHrsSubttls;
@@ -68,7 +71,8 @@ public class LtcYtdSubmission implements IModel {
 		elements.add("false"); // FIXME Replace with elements.add(this.getIsDeleted()) when isDeleted is available in the CHEFS API.
 		elements.add(this.getSubmissionDate());
 		elements.add(this.getSubmittedBy());
-		elements.add(this.getFacilitySubId());
+		elements.add(this.getCCIMSID());
+		elements.add(this.getSubmissionType());
 		elements.add(this.getPeriod());
 		elements.add(this.getSubmissionFy());
 		elements.add(this.getNbTotalBeds());
@@ -91,6 +95,8 @@ public class LtcYtdSubmission implements IModel {
 		ltcQtdInstances.addAll(this.getLtcYtdDirectCareHrs());
 		ltcQtdInstances.addAll(this.getLtcYtdExp());
 		ltcQtdInstances.addAll(this.getLtcYtdRev());
+		ltcQtdInstances.addAll(this.getLtcYtdDep());
+		ltcQtdInstances.addAll(this.getLtcYtdSumTotals());
 		ltcQtdInstances.addAll(this.getLtcYtdExpSubttls());
 		ltcQtdInstances.addAll(this.getLtcYtdRevSubttls());
 		ltcQtdInstances.addAll(this.getLtcYtdCompSalSubttls());
@@ -128,14 +134,6 @@ public class LtcYtdSubmission implements IModel {
 
 	public void setSubmittedBy(String submittedBy) {
 		this.submittedBy = submittedBy;
-	}
-
-	public String getFacilitySubId() {
-		return facilitySubId;
-	}
-
-	public void setFacilitySubId(String facilitySubId) {
-		this.facilitySubId = facilitySubId;
 	}
 
 	public String getPeriod() {
@@ -176,6 +174,22 @@ public class LtcYtdSubmission implements IModel {
 
 	public void setIsDeleted(String isDeleted) {
 		this.isDeleted = isDeleted;
+	}
+
+	public String getCCIMSID() {
+		return CCIMSID;
+	}
+
+	public void setCCIMSID(String cCIMSID) {
+		CCIMSID = cCIMSID;
+	}
+
+	public String getSubmissionType() {
+		return submissionType;
+	}
+
+	public void setSubmissionType(String submissionType) {
+		this.submissionType = submissionType;
 	}
 
 	public List<LtcBedYtdMaxOccupancy> getLtcBedYtdMaxOccupancy() {
@@ -361,7 +375,21 @@ public class LtcYtdSubmission implements IModel {
 	public void setSubmissionFy(String submissionFy) {
 		this.submissionFy = submissionFy;
 	}
-	
+	public List<LtcYtdDep> getLtcYtdDep() {
+		return ltcYtdDep;
+	}
+
+	public void setLtcYtdDep(List<LtcYtdDep> ltcYtdDep) {
+		this.ltcYtdDep = ltcYtdDep;
+	}
+
+	public List<LtcYtdSumTotals> getLtcYtdSumTotals() {
+		return ltcYtdSumTotals;
+	}
+
+	public void setLtcYtdSumTotals(List<LtcYtdSumTotals> ltcYtdSumTotals) {
+		this.ltcYtdSumTotals = ltcYtdSumTotals;
+	}
 	
 
 	

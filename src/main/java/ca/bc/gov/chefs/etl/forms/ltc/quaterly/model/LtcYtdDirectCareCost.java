@@ -12,6 +12,7 @@ public class LtcYtdDirectCareCost implements IModel{
 	private String confirmationId;
 	private String dirCareCostType;
 	private String dirCareCostName;
+	private String dirCareOtherValue = "";
 	private String dirCareCostProdHrsRegYtd;
 	private String dirCareCostProdHrsOtYtd;
 	private String dirCareCostProdHrsContractedYtd;
@@ -24,8 +25,6 @@ public class LtcYtdDirectCareCost implements IModel{
 	private String dirCareCostTotalHrsPaidYtd;
 	private String dirCareCostHourlyRateStaffYtd;
 	private String dirCareCostHourlyRateContractedYtd;
-
-	private String dirCareCostYtdNotes;
 	
 	public String getConfirmationId() {
 		return confirmationId;
@@ -44,6 +43,12 @@ public class LtcYtdDirectCareCost implements IModel{
 	}
 	public void setDirCareCostName(String dirCareCostName) {
 		this.dirCareCostName = dirCareCostName;
+	}
+	public String getDirCareOtherValue() {
+		return dirCareOtherValue;
+	}
+	public void setDirCareOtherValue(String dirCareOtherValue) {
+		this.dirCareOtherValue = dirCareOtherValue;
 	}
 	public String getDirCareCostProdHrsRegYtd() {
 		return StringUtils.isBlank(dirCareCostProdHrsRegYtd) ? "0" : dirCareCostProdHrsRegYtd;
@@ -81,13 +86,6 @@ public class LtcYtdDirectCareCost implements IModel{
 	public void setDirCareCostNonProdHrsOtherYtd(String dirCareCostNonProdHrsOtherYtd) {
 		this.dirCareCostNonProdHrsOtherYtd = dirCareCostNonProdHrsOtherYtd;
 	}
-	public String getDirCareCostYtdNotes() {
-		return dirCareCostYtdNotes;
-	}
-	public void setDirCareCostYtdNotes(String dirCareCostYtdNotes) {
-		this.dirCareCostYtdNotes = dirCareCostYtdNotes;
-	}
-	
 	public String getDirCareCostProdHrsSubtotalYtd() {
 		return dirCareCostProdHrsSubtotalYtd;
 	}
@@ -140,6 +138,7 @@ public class LtcYtdDirectCareCost implements IModel{
 		elements.add(this.getConfirmationId());
 		elements.add(this.getDirCareCostType());
 		elements.add(this.getDirCareCostName());
+		elements.add(this.getDirCareOtherValue());
 		elements.add(this.getDirCareCostProdHrsRegYtd());
 		elements.add(this.getDirCareCostProdHrsOtYtd());
 		elements.add(this.getDirCareCostProdHrsContractedYtd());
@@ -152,7 +151,6 @@ public class LtcYtdDirectCareCost implements IModel{
 		elements.add(this.getDirCareCostTotalHrsPaidYtd());
 		elements.add(this.getDirCareCostHourlyRateStaffYtd());
 		elements.add(this.getDirCareCostHourlyRateContractedYtd());
-		elements.add(this.getDirCareCostYtdNotes());
 		return elements;
 	}
 	@Override
