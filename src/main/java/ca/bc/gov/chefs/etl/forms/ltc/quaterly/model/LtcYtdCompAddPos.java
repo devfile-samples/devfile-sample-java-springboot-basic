@@ -11,9 +11,10 @@ public class LtcYtdCompAddPos implements IModel{
 	private String confirmationId;
 	private String addPosType;
 	private String addPosName;
-	//private String addPosContractedOutYtd;
+	private String addPosContractedOutYtd;
 	private String addPosLegalNameContractServiceYtd;
 	private String addPosPercentServiceContractOutYtd;
+	private String addPosAnotherName = "";
 	
 	public String getConfirmationId() {
 		return confirmationId;
@@ -33,7 +34,12 @@ public class LtcYtdCompAddPos implements IModel{
 	public void setAddPosName(String addPosName) {
 		this.addPosName = addPosName;
 	}
-	
+	public String getAddPosContractedOutYtd() {
+		return this.addPosContractedOutYtd;
+	}
+	public void setAddPosContractedOutYtd(String addPosContractedOutYtd) {
+		this.addPosContractedOutYtd = addPosContractedOutYtd;
+	}
 	public String getAddPosLegalNameContractServiceYtd() {
 		return addPosLegalNameContractServiceYtd;
 	}
@@ -45,6 +51,19 @@ public class LtcYtdCompAddPos implements IModel{
 	}
 	public void setAddPosPercentServiceContractOutYtd(String addPosPercentServiceContractOutYtd) {
 		this.addPosPercentServiceContractOutYtd = addPosPercentServiceContractOutYtd;
+	}
+	public String getAddPosAnotherName() {
+		return addPosAnotherName;
+	}
+	public void setAddPosAnotherName(String addPosAnotherName) {
+		this.addPosAnotherName = addPosAnotherName;
+	}
+
+	public void determineAddPosContractedOutYtd() {
+		if(this.getAddPosLegalNameContractServiceYtd() != "" && this.getAddPosLegalNameContractServiceYtd() != null){
+			this.addPosContractedOutYtd = "Y";
+		}
+		this.addPosContractedOutYtd = "N";
 	}
 	
 	@Override
@@ -62,9 +81,10 @@ public class LtcYtdCompAddPos implements IModel{
 		elements.add(this.getConfirmationId());
 		elements.add(this.getAddPosType());
 		elements.add(this.getAddPosName());
-		//elements.add(this.getAddPosContractedOutYtd());
+		elements.add(this.getAddPosContractedOutYtd());
 		elements.add(this.getAddPosLegalNameContractServiceYtd());
 		elements.add(this.getAddPosPercentServiceContractOutYtd());
+		elements.add(this.getAddPosAnotherName());
 		
 		return elements;
 	}

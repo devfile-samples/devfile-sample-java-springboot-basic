@@ -7,7 +7,6 @@ import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
 import ca.bc.gov.chefs.etl.util.CSVUtil;
 
-// TEST
 public class LtcBedYtdMaxOccupancy implements IModel {
 
 	private String confirmationId;
