@@ -108,10 +108,10 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			ltcYtdSubmission.setIsDeleted("");
 			ltcYtdSubmission.setSubmissionDate(root.getForm().getCreatedAt());
 			ltcYtdSubmission.setSubmittedBy(root.getForm().getFullName());
-			ltcYtdSubmission.setCCIMSID(root.getCcmisId());
+			ltcYtdSubmission.setCCIMSID(root.getCcimsid());
 			ltcYtdSubmission.setSubmissionType(root.getSubmission());
 			ltcYtdSubmission.setPeriod(root.getQuarter());
-			// FIXME ltcYtdSubmission.setSubmissionFy("");
+			ltcYtdSubmission.setSubmissionFy(root.getFiscalYear());
 			ltcYtdSubmission.setNbTotalBeds(root.getNumberOfTotalBeds());
 			ltcYtdSubmission.setNbFundedBeds(root.getNumberOfTotalFundedBeds());
 			ltcYtdSubmission.setOccRateThreshold(root.getThreshold());
