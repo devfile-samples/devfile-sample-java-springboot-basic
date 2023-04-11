@@ -108,10 +108,10 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			ltcYtdSubmission.setIsDeleted("");
 			ltcYtdSubmission.setSubmissionDate(root.getForm().getCreatedAt());
 			ltcYtdSubmission.setSubmittedBy(root.getForm().getFullName());
-			ltcYtdSubmission.setCCIMSID(root.getCcmisId());
+			ltcYtdSubmission.setCCIMSID(root.getCcimsid());
 			ltcYtdSubmission.setSubmissionType(root.getSubmission());
 			ltcYtdSubmission.setPeriod(root.getQuarter());
-			// FIXME ltcYtdSubmission.setSubmissionFy("");
+			ltcYtdSubmission.setSubmissionFy(root.getFiscalYear());
 			ltcYtdSubmission.setNbTotalBeds(root.getNumberOfTotalBeds());
 			ltcYtdSubmission.setNbFundedBeds(root.getNumberOfTotalFundedBeds());
 			ltcYtdSubmission.setOccRateThreshold(root.getThreshold());
@@ -1708,8 +1708,6 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			revFrmHA1Others.setRevType("Revenue from HA (1)");
 			revFrmHA1Others.setConfirmationId(root.getForm().getConfirmationId());
 
-			// TODO: add non-operating revenue and expense
-
 			// skipping subtotal for now
 
 			LtcYtdRev revFrmHA2OpFundMinEq = new LtcYtdRev();
@@ -2224,7 +2222,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			othAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			
-			/* Non operating expanse */
+			/* Non operating expense */
 			LtcYtdExp dirCareNonOpExpMortgage = new LtcYtdExp();
 			dirCareNonOpExpMortgage.setExpYtd(root.getNopEx_YTD1());
 			dirCareNonOpExpMortgage.setExpNotes(root.getNopEx_note1());

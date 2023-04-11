@@ -585,7 +585,7 @@ public class Root{
     public String bTotal_salaryWage;
     public String bTotal_value_sum1;
     public String bTotal_YTDSalaryWage;
-    public String ccmisId;
+    public String ccimsid;
     public String compB_accrued;
     public String compB_accrued1;
     public String compB_accrued2;
@@ -1734,7 +1734,8 @@ public class Root{
     public String totalBed2;
     public String totalBed3;
     public String totalBed4;
-    public String totalBedYTD;
+    public String fiscalYear;
+	public String totalBedYTD;
     public String totalMonth1;
     public String totalMonth10;
     public String totalMonth11;
@@ -4134,11 +4135,11 @@ public class Root{
 	public void setbTotal_YTDSalaryWage(String bTotal_YTDSalaryWage) {
 		this.bTotal_YTDSalaryWage = bTotal_YTDSalaryWage;
 	}
-	public String getCcmisId() {
-		return ccmisId;
+	public String getCcimsid() {
+		return ccimsid;
 	}
-	public void setCcmisId(String ccmisId) {
-		this.ccmisId = ccmisId;
+	public void setCcimsid(String ccimsid) {
+		this.ccimsid = ccimsid;
 	}
 	public String getCompB_accrued() {
 		return compB_accrued;
@@ -8891,6 +8892,12 @@ public class Root{
 	}
 	public void setTotalBed4(String totalBed4) {
 		this.totalBed4 = totalBed4;
+	}
+	public String getFiscalYear() {
+		return fiscalYear;
+	}
+	public void setFiscalYear(String fiscalYear) {
+		this.fiscalYear = fiscalYear;
 	}
 	public String getTotalBedYTD() {
 		return totalBedYTD;
