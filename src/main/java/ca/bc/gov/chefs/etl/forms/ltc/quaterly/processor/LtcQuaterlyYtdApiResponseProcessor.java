@@ -1708,8 +1708,6 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			revFrmHA1Others.setRevType("Revenue from HA (1)");
 			revFrmHA1Others.setConfirmationId(root.getForm().getConfirmationId());
 
-			// TODO: add non-operating revenue and expense
-
 			// skipping subtotal for now
 
 			LtcYtdRev revFrmHA2OpFundMinEq = new LtcYtdRev();
@@ -2224,7 +2222,7 @@ public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
 			othAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			
-			/* Non operating expanse */
+			/* Non operating expense */
 			LtcYtdExp dirCareNonOpExpMortgage = new LtcYtdExp();
 			dirCareNonOpExpMortgage.setExpYtd(root.getNopEx_YTD1());
 			dirCareNonOpExpMortgage.setExpNotes(root.getNopEx_note1());
