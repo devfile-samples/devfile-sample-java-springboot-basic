@@ -70,9 +70,11 @@ public class CommonUtils {
 			PGPPublicKeyRing pgpPublicKeyRing = keyRingIterator.next();
 			Optional<PGPPublicKey> pgpPublicKey = extractPGPKeyFromRing(pgpPublicKeyRing);
 			if (pgpPublicKey.isPresent()) {
+				keyInputStream.reset();
 				return pgpPublicKey.get();
 			}
 		}
+		keyInputStream.reset();
 		throw new PGPException("Invalid public key");
 	}
 
