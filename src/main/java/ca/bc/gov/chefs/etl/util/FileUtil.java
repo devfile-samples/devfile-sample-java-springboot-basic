@@ -75,28 +75,29 @@ public class FileUtil {
 	}
 
 	public static void encryptFilesInDirectory(String directoryPath, String publicKeyFilePath,
-			String outputDirectoryPath) throws Exception {
+		String outputDirectoryPath) throws Exception {
 		FileUtil fU = new FileUtil();
 		// Read the public key from the file
-		InputStream publicKeyInputStream = new BufferedInputStream(new FileInputStream(publicKeyFilePath));
-		System.out.println(publicKeyFilePath);
+		InputStream publicKeyInputStream = new BufferedInputStream(new FileInputStream(new File(publicKeyFilePath)));
 
 		// Get a list of all the files in the directory
 		File dir = new File(directoryPath);
 		File[] files = dir.listFiles();
-
+		
 		// Compress and encrypt each file
 		for (File file : files) {
 
 			String inputFilePath = file.getAbsolutePath();
-			String outputFilePath = outputDirectoryPath + "/" + file.getName() + ".gz" + ".gpg";
-			String gzipFilePath = outputDirectoryPath + "/" + file.getName() + ".gz";
-			File outputFile = new File(outputFilePath);
+			String outputFileName = file.getName() + ".gz" + ".gpg";
+			String gzipFileName = file.getName() + ".gz";
+			String outputFilePath = outputDirectoryPath + "/" + outputFileName;
+			String gzipFilePath = outputDirectoryPath + "/" + gzipFileName;
+			File outputFile = new File(outputDirectoryPath, outputFileName);
 			if (!outputFile.exists()) {
 				outputFile.createNewFile();
 			}
-			if (!new File(gzipFilePath).exists()) {
-				new File(gzipFilePath).createNewFile();
+			if (!new File(outputDirectoryPath, gzipFileName).exists()) {
+				new File(outputDirectoryPath, gzipFileName).createNewFile();
 			}
 
 			fU.compressFileG(inputFilePath, gzipFilePath);
@@ -107,7 +108,7 @@ public class FileUtil {
 			encryptedOutputStream.close();
 
 			// Clean up the gzip file
-			new File(gzipFilePath).delete();
+			new File(outputDirectoryPath, gzipFileName).delete();
 		}
 	}
 
@@ -132,8 +133,6 @@ public class FileUtil {
 
 			gzipOuputStream.finish();
 			gzipOuputStream.close();
-
-			System.out.println("The file was compressed successfully!");
 
 		} catch (IOException ex) {
 			ex.printStackTrace();
@@ -186,7 +185,30 @@ public class FileUtil {
 		}
 		filesGenerated.add(flagFileName.substring(flagFileName.lastIndexOf(File.separator)+1));
 		fileWriter.close();
+		try{
+			encryptAllFiles(dateTime, fileProperties);
+		} catch(Exception e){
+			e.printStackTrace();
+		}
 		return filesGenerated;
+	}
+
+
+	public static void encryptAllFiles(String dateTime, FileProperties fileProperties) throws Exception{
+		String directoryPath = generateFolderName(dateTime, fileProperties.getUnEncDirForThisExchange());
+		String publicKeyFilePath = Constants.PUBLIC_KEY_PATH;
+		String outputDirectoryPath = generateFolderName(dateTime, fileProperties.getEncDirForThisExchange());
+		try {
+			Files.createDirectories(Paths.get(directoryPath));
+			Files.createDirectories(Paths.get(outputDirectoryPath));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		encryptFilesInDirectory(directoryPath, publicKeyFilePath, outputDirectoryPath);
+	}
+
+	public static String generateFolderName(String dateTime, String directoryName) {
+		return directoryName.concat(File.separator).concat(dateTime).replace(File.separator, "/");
 	}
 
 	public static String generateFileName(String fileType,String dateTime,FileProperties fileProperties) {
@@ -213,5 +235,9 @@ public class FileUtil {
 
 	public static String buildDirectoryPath(String propertyName){
 		return PropertiesUtil.getValue(propertyName);
+	}
+
+	public static String buildPublicKeyPath(String propertyName){
+		return "src/main/resources/"+PropertiesUtil.getValue(propertyName);
 	}
 }
