@@ -1,15 +1,25 @@
 package ca.bc.gov.chefs.etl.util;
 
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
+import org.bouncycastle.openpgp.PGPCompressedData;
 import org.bouncycastle.openpgp.PGPException;
 
 import org.bouncycastle.openpgp.PGPLiteralData;
 import org.bouncycastle.openpgp.PGPLiteralDataGenerator;
+import org.bouncycastle.openpgp.PGPOnePassSignatureList;
+import org.bouncycastle.openpgp.PGPPrivateKey;
 import org.bouncycastle.openpgp.PGPPublicKey;
+import org.bouncycastle.openpgp.PGPPublicKeyEncryptedData;
 import org.bouncycastle.openpgp.PGPPublicKeyRing;
 import org.bouncycastle.openpgp.PGPPublicKeyRingCollection;
 import org.bouncycastle.openpgp.PGPUtil;
+import org.bouncycastle.openpgp.jcajce.JcaPGPObjectFactory;
+import org.bouncycastle.openpgp.operator.PublicKeyDataDecryptorFactory;
 import org.bouncycastle.openpgp.operator.jcajce.JcaKeyFingerprintCalculator;
+import org.bouncycastle.openpgp.operator.jcajce.JcePublicKeyDataDecryptorFactoryBuilder;
+import org.apache.commons.io.IOUtils;
 
+import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -70,9 +80,11 @@ public class CommonUtils {
 			PGPPublicKeyRing pgpPublicKeyRing = keyRingIterator.next();
 			Optional<PGPPublicKey> pgpPublicKey = extractPGPKeyFromRing(pgpPublicKeyRing);
 			if (pgpPublicKey.isPresent()) {
+				keyInputStream.reset();
 				return pgpPublicKey.get();
 			}
 		}
+		keyInputStream.reset();
 		throw new PGPException("Invalid public key");
 	}
 
@@ -85,4 +97,44 @@ public class CommonUtils {
 		return Optional.empty();
 	}
 
+	    /**
+     * Decrypts the public Key encrypted data using the provided private key and writes it to the output stream
+     *
+     * @param clearOut               the output stream to which data is to be written
+     * @param pgpPrivateKey          the private key instance
+     * @param publicKeyEncryptedData the public key encrypted data instance
+     * @throws IOException  for IO related error
+     * @throws PGPException for pgp related errors
+     */
+	//TODO This part is for testing purposes only, remove when done
+    static void decrypt(OutputStream clearOut, PGPPrivateKey pgpPrivateKey, PGPPublicKeyEncryptedData publicKeyEncryptedData) throws IOException, PGPException {
+        PublicKeyDataDecryptorFactory decryptorFactory = new JcePublicKeyDataDecryptorFactoryBuilder()
+                .setProvider(BouncyCastleProvider.PROVIDER_NAME).build(pgpPrivateKey);
+        InputStream decryptedCompressedIn = publicKeyEncryptedData.getDataStream(decryptorFactory);
+
+        JcaPGPObjectFactory decCompObjFac = new JcaPGPObjectFactory(decryptedCompressedIn);
+        PGPCompressedData pgpCompressedData = (PGPCompressedData) decCompObjFac.nextObject();
+
+        InputStream compressedDataStream = new BufferedInputStream(pgpCompressedData.getDataStream());
+        JcaPGPObjectFactory pgpCompObjFac = new JcaPGPObjectFactory(compressedDataStream);
+
+        Object message = pgpCompObjFac.nextObject();
+
+        if (message instanceof PGPLiteralData) {
+            PGPLiteralData pgpLiteralData = (PGPLiteralData) message;
+            InputStream decDataStream = pgpLiteralData.getInputStream();
+            IOUtils.copy(decDataStream, clearOut);
+            clearOut.close();
+        } else if (message instanceof PGPOnePassSignatureList) {
+            throw new PGPException("Encrypted message contains a signed message not literal data");
+        } else {
+            throw new PGPException("Message is not a simple encrypted file - Type Unknown");
+        }
+        // Performing Integrity check
+        if (publicKeyEncryptedData.isIntegrityProtected()) {
+            if (!publicKeyEncryptedData.verify()) {
+                throw new PGPException("Message failed integrity check");
+            }
+        }
+    }
 }

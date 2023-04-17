@@ -3,8 +3,10 @@ package ca.bc.gov.chefs.etl;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.security.Security;
 
 import org.apache.camel.main.Main;
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.routes.HelloRoute;
@@ -31,6 +33,9 @@ public class ChefsETLMainMethod {
 
 	public static void main(String... args) throws Exception {
 		Main main = new Main();
+		Security.addProvider(new BouncyCastleProvider());
+		// TODO : remove next line, for testing purposes only 
+		//FileUtil.decryptAllFiles("encrypted/ltc-quaterly/230414140122", "encrypted/ltc-quaterly/230414140122/test");
 		main.configure().addRoutesBuilder(HelloRoute.class);
 		main.configure().addRoutesBuilder(AIMSFormRoute.class);
 		main.configure().addRoutesBuilder(FacilityFormRoute.class);

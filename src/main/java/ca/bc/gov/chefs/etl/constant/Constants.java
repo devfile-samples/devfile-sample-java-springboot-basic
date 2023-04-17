@@ -94,6 +94,11 @@ public class Constants {
 	public static final String LTC_QUARTERLY_YTD_UNENCRYPTED_FP = FileUtil.buildDestinationPath(PROPERTIES_LTC_QUATERLY_DIR, false);
 	public static final String LTC_QUARTERLY_YTD_ENCRYPTED_FP = FileUtil.buildDestinationPath(PROPERTIES_LTC_QUATERLY_DIR, true);
 
+	/* public Encryption Key */
+	public final static String PUBLIC_KEY_NAME_PROPERTY = "public-key-file-name";
+	public final static String PUBLIC_KEY_PATH = FileUtil.buildPublicKeyPath(PUBLIC_KEY_NAME_PROPERTY);
+	
+
 
 	static {
 		
