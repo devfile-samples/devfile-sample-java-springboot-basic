@@ -96,7 +96,7 @@ public class Constants {
 
 	/* public Encryption Key */
 	public final static String PUBLIC_KEY_NAME_PROPERTY = "public-key-file-name";
-	public final static String PUBLIC_KEY_PATH = PUBLIC_KEY_NAME_PROPERTY;
+	public final static String PUBLIC_KEY_PATH = FileUtil.buildPublicKeyPath(PUBLIC_KEY_NAME_PROPERTY);
 	
 
 

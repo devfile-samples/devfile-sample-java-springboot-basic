@@ -249,6 +249,10 @@ public class FileUtil {
 		return PropertiesUtil.getValue(propertyName);
 	}
 
+	public static String buildPublicKeyPath(String propertyName){
+		return PropertiesUtil.getValue(propertyName);
+	}
+
 	/** ----------------decryption starts here, testing encryption -------------------
 	* TODO This part is for testing purposes only, remove when done */
 
