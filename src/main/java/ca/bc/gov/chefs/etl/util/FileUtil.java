@@ -57,7 +57,7 @@ import java.util.zip.GZIPOutputStream;
 public class FileUtil {
 
 	private int compressionAlgorithm = CompressionAlgorithmTags.ZIP;
-	private int symmetricKeyAlgorithm = SymmetricKeyAlgorithmTags.AES_128;
+	private int symmetricKeyAlgorithm = SymmetricKeyAlgorithmTags.AES_256;
 	private boolean armor = true;
 	private boolean withIntegrityCheck = true;
 	private int bufferSize = 1 << 16;
@@ -250,7 +250,7 @@ public class FileUtil {
 	}
 
 	public static String buildPublicKeyPath(String propertyName){
-		return "src/main/resources/"+PropertiesUtil.getValue(propertyName);
+		return PropertiesUtil.getValue(propertyName);
 	}
 
 	/** ----------------decryption starts here, testing encryption -------------------
