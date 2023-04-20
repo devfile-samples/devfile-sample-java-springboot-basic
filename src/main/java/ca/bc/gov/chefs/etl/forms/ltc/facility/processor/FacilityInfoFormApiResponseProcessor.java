@@ -37,7 +37,7 @@ public class FacilityInfoFormApiResponseProcessor implements Processor {
 		List<IModel> iModels = (List<IModel>) (List<?>) parsedFacilityInfo;
 		Map<String, List<List<String>>> map = CSVUtil.provider(iModels);
 			
-		List<String> filesGenerated = FileUtil.writeToCSVFile(map,Constants.LTC_FACILITY);
+		List<String> filesGenerated = FileUtil.writeToCSVFile(map,Constants.LTC_FACILITY_DIR);
 		SuccessResponse successResponse = new SuccessResponse();
 		successResponse.setFiles(filesGenerated);
 		exchange.getIn().setBody(mapper.writeValueAsString(successResponse));
