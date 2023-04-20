@@ -209,7 +209,7 @@ public class FileUtil {
 	public static void encryptAllFiles(String dateTime, FileProperties fileProperties) throws Exception{
 		String directoryPath = generateFolderName(dateTime, fileProperties.getUnEncDirForThisExchange());
 		String publicKeyFilePath = Constants.PUBLIC_KEY_PATH;
-		String outputDirectoryPath = generateFolderName(dateTime, fileProperties.getEncDirForThisExchange());
+		String outputDirectoryPath = fileProperties.getEncDirForThisExchange();
 		try {
 			Files.createDirectories(Paths.get(directoryPath));
 			Files.createDirectories(Paths.get(outputDirectoryPath));
