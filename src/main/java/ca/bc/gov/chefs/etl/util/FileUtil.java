@@ -198,8 +198,7 @@ public class FileUtil {
 
 		}
 		fileProperties.setExtension(".flag");
-		final String flagFilePrefix = "medis_etl_";
-		String flagFileName = generateFileName(flagFilePrefix+directoryKey, dateTime, fileProperties);
+		String flagFileName = generateFileName(directoryKey, dateTime, fileProperties);
 		File file = new File(flagFileName);
 		FileWriter fileWriter = new FileWriter(file);
 		logger.info("--------Generating Flag File---------------{}---------------", flagFileName);
@@ -255,6 +254,10 @@ public class FileUtil {
 	}
 
 	public static String buildDirectoryPath(String propertyName){
+		return PropertiesUtil.getValue(propertyName);
+	}
+
+	public static String getDirectoryName(String propertyName){
 		return PropertiesUtil.getValue(propertyName);
 	}
 
