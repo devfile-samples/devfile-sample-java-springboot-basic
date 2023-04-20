@@ -83,14 +83,17 @@ public class Constants {
 	public static final String ENCRYPTED_DATA_DIRECTORY = FileUtil.buildDirectoryPath(PROPERTIES_ENC_DATA_DIR);
 
 	public final static String PROPERTIES_LTC_FACILITY_DIR = "ltc-facility-dir";
+	public final static String LTC_FACILITY_DIR = FileUtil.getDirectoryName(PROPERTIES_LTC_FACILITY_DIR);
 	public static final String LTC_FACILITY_UNENCRYPTED_FP = FileUtil.buildDestinationPath(PROPERTIES_LTC_FACILITY_DIR, false);
 	public static final String LTC_FACILITY_ENCRYPTED_FP = FileUtil.buildDestinationPath(PROPERTIES_LTC_FACILITY_DIR, true);
 	
 	public final static String PROPERTIES_AIMS_DIR = "aims-dir";
+	public final static String AIMS_DIR = FileUtil.getDirectoryName(PROPERTIES_AIMS_DIR);
 	public static final String AIMS_UNENCRYPTED_FP = FileUtil.buildDestinationPath(PROPERTIES_AIMS_DIR, false);
 	public static final String AIMS_ENCRYPTED_FP = FileUtil.buildDestinationPath(PROPERTIES_AIMS_DIR, true);
 	
 	public final static String PROPERTIES_LTC_QUATERLY_DIR = "ltc-quaterly-dir";
+	public final static String LTC_QUATERLY_DIR = FileUtil.getDirectoryName(PROPERTIES_LTC_QUATERLY_DIR);
 	public static final String LTC_QUARTERLY_YTD_UNENCRYPTED_FP = FileUtil.buildDestinationPath(PROPERTIES_LTC_QUATERLY_DIR, false);
 	public static final String LTC_QUARTERLY_YTD_ENCRYPTED_FP = FileUtil.buildDestinationPath(PROPERTIES_LTC_QUATERLY_DIR, true);
 
@@ -102,13 +105,13 @@ public class Constants {
 
 	static {
 		
-		UNENC_FILE_PATH.put(LTC_FACILITY, LTC_FACILITY_UNENCRYPTED_FP);
-		UNENC_FILE_PATH.put(LTC_YTD_SUBMISSION, LTC_QUARTERLY_YTD_UNENCRYPTED_FP);
-		UNENC_FILE_PATH.put(AIMS_FORM,AIMS_UNENCRYPTED_FP);
+		UNENC_FILE_PATH.put(LTC_FACILITY_DIR, LTC_FACILITY_UNENCRYPTED_FP);
+		UNENC_FILE_PATH.put(LTC_QUATERLY_DIR, LTC_QUARTERLY_YTD_UNENCRYPTED_FP);
+		UNENC_FILE_PATH.put(AIMS_DIR,AIMS_UNENCRYPTED_FP);
 		
-		ENC_FILE_PATH.put(AIMS_FORM, AIMS_ENCRYPTED_FP);
-		ENC_FILE_PATH.put(LTC_FACILITY, LTC_FACILITY_ENCRYPTED_FP);
-		ENC_FILE_PATH.put(LTC_YTD_SUBMISSION, LTC_QUARTERLY_YTD_ENCRYPTED_FP);
+		ENC_FILE_PATH.put(AIMS_DIR, AIMS_ENCRYPTED_FP);
+		ENC_FILE_PATH.put(LTC_FACILITY_DIR, LTC_FACILITY_ENCRYPTED_FP);
+		ENC_FILE_PATH.put(LTC_QUATERLY_DIR, LTC_QUARTERLY_YTD_ENCRYPTED_FP);
 		
 		HEADERS.put("TestModel#Main", new String[] { "confirmationId", "formName", "version", "createdAt", "fullName",
 				"username", "email", "status", "assignee", "assigneeEmail", });
