@@ -156,7 +156,7 @@
 			<version>${apache-commons-version}</version>
 		</dependency>
 
-	<!-- needed for decryption -->
+	<!-- needed for decryption and file extension reader -->
 		<dependency>
     		<groupId>commons-io</groupId>
     		<artifactId>commons-io</artifactId>

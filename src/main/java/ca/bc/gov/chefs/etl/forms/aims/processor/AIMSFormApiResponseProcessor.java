@@ -34,7 +34,7 @@ public class AIMSFormApiResponseProcessor implements Processor {
 		
 		Map<String,List<List<String>>> map = CSVUtil.provider(iModels);
 		
-		FileUtil.writeToCSVFile(map,Constants.AIMS_FORM);
+		FileUtil.writeToCSVFile(map,Constants.AIMS_DIR);
 	}
 
 }

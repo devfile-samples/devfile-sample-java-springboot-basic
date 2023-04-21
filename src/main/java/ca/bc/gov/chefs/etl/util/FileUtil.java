@@ -1,5 +1,7 @@
 package ca.bc.gov.chefs.etl.util;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 //import org.apache.commons.io.IOUtils;
 import org.bouncycastle.bcpg.ArmoredOutputStream;
 
@@ -88,6 +90,7 @@ public class FileUtil {
 
 	public static void encryptFilesInDirectory(String directoryPath, String publicKeyFilePath,
 		String outputDirectoryPath) throws Exception {
+		final String txtExtentesion = "txt";
 		FileUtil fU = new FileUtil();
 		// Read the public key from the file
 		InputStream publicKeyInputStream = new BufferedInputStream(new FileInputStream(new File(publicKeyFilePath)));
@@ -98,29 +101,37 @@ public class FileUtil {
 		
 		// Compress and encrypt each file
 		for (File file : files) {
-
 			String inputFilePath = file.getAbsolutePath();
-			String outputFileName = file.getName() + ".gz" + ".gpg";
-			String gzipFileName = file.getName() + ".gz";
-			String outputFilePath = outputDirectoryPath + "/" + outputFileName;
-			String gzipFilePath = outputDirectoryPath + "/" + gzipFileName;
-			File outputFile = new File(outputDirectoryPath, outputFileName);
-			if (!outputFile.exists()) {
-				outputFile.createNewFile();
+			if (FilenameUtils.getExtension(file.getName()).equals(txtExtentesion)) {
+				String outputFileName = file.getName() + ".gz" + ".gpg";
+				String gzipFileName = file.getName() + ".gz";
+				String outputFilePath = outputDirectoryPath + "/" + outputFileName;
+				String gzipFilePath = outputDirectoryPath + "/" + gzipFileName;
+				File outputFile = new File(outputDirectoryPath, outputFileName);
+				if (!outputFile.exists()) {
+					outputFile.createNewFile();
+				}
+				if (!new File(outputDirectoryPath, gzipFileName).exists()) {
+					new File(outputDirectoryPath, gzipFileName).createNewFile();
+				}
+	
+				fU.compressFileG(inputFilePath, gzipFilePath);
+				InputStream gzipInputStream = new BufferedInputStream(new FileInputStream(gzipFilePath));
+	
+				OutputStream encryptedOutputStream = new BufferedOutputStream(new FileOutputStream(outputFilePath));
+				fU.encrypt(encryptedOutputStream, gzipInputStream, file.length(), publicKeyInputStream);
+				encryptedOutputStream.close();
+				// Clean up the gzip file
+				new File(outputDirectoryPath, gzipFileName).delete();
+
+			} else {
+				File outputFile = new File(outputDirectoryPath, file.getName());
+				try {
+					FileUtils.copyFile(file, outputFile);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 			}
-			if (!new File(outputDirectoryPath, gzipFileName).exists()) {
-				new File(outputDirectoryPath, gzipFileName).createNewFile();
-			}
-
-			fU.compressFileG(inputFilePath, gzipFilePath);
-			InputStream gzipInputStream = new BufferedInputStream(new FileInputStream(gzipFilePath));
-
-			OutputStream encryptedOutputStream = new BufferedOutputStream(new FileOutputStream(outputFilePath));
-			fU.encrypt(encryptedOutputStream, gzipInputStream, file.length(), publicKeyInputStream);
-			encryptedOutputStream.close();
-
-			// Clean up the gzip file
-			new File(outputDirectoryPath, gzipFileName).delete();
 		}
 	}
 
@@ -187,7 +198,7 @@ public class FileUtil {
 
 		}
 		fileProperties.setExtension(".flag");
-		String flagFileName = generateFileName("medis-etl", dateTime, fileProperties);
+		String flagFileName = generateFileName(directoryKey, dateTime, fileProperties);
 		File file = new File(flagFileName);
 		FileWriter fileWriter = new FileWriter(file);
 		logger.info("--------Generating Flag File---------------{}---------------", flagFileName);
@@ -209,7 +220,7 @@ public class FileUtil {
 	public static void encryptAllFiles(String dateTime, FileProperties fileProperties) throws Exception{
 		String directoryPath = generateFolderName(dateTime, fileProperties.getUnEncDirForThisExchange());
 		String publicKeyFilePath = Constants.PUBLIC_KEY_PATH;
-		String outputDirectoryPath = generateFolderName(dateTime, fileProperties.getEncDirForThisExchange());
+		String outputDirectoryPath = fileProperties.getEncDirForThisExchange();
 		try {
 			Files.createDirectories(Paths.get(directoryPath));
 			Files.createDirectories(Paths.get(outputDirectoryPath));
@@ -232,20 +243,21 @@ public class FileUtil {
 			logger.error("File Write Exception: "+e.getMessage());
 			e.printStackTrace();
 		}
-		if(fileProperties.getExtension().equals(".flag")) {
-			return directoryPath+fileType.toLowerCase().concat(fileProperties.getExtension());
-		}
 		return directoryPath+fileType.toLowerCase()+"_".concat(dateTime).concat(fileProperties.getExtension());
 	}
 
 	public static String buildDestinationPath(String propertyName, boolean isDataEncrypted){
 		if (isDataEncrypted){
-			return PropertiesUtil.getValue(Constants.PROPERTIES_ENC_DATA_DIR)+File.separator+PropertiesUtil.getValue(propertyName);
+			return PropertiesUtil.getValue(Constants.PROPERTIES_ENC_DATA_DIR);
 		}
 		return PropertiesUtil.getValue(Constants.PROPERTIES_DATA_DIR)+File.separator+PropertiesUtil.getValue(propertyName);
 	}
 
 	public static String buildDirectoryPath(String propertyName){
+		return PropertiesUtil.getValue(propertyName);
+	}
+
+	public static String getDirectoryName(String propertyName){
 		return PropertiesUtil.getValue(propertyName);
 	}
 

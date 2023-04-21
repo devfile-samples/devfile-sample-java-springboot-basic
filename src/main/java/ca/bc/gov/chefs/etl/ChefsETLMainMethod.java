@@ -11,7 +11,7 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.routes.HelloRoute;
 import ca.bc.gov.chefs.etl.forms.ltc.facility.route.FacilityFormRoute;
-import ca.bc.gov.chefs.etl.forms.ltc.quaterly.route.LtcQuaterlyYtdRoute;
+import ca.bc.gov.chefs.etl.forms.ltc.quarterly.route.LtcQuarterlyYtdRoute;
 import ca.bc.gov.chefs.etl.forms.aims.route.AIMSFormRoute;
 /**
  * Camel Class runner.
@@ -35,11 +35,11 @@ public class ChefsETLMainMethod {
 		Main main = new Main();
 		Security.addProvider(new BouncyCastleProvider());
 		// TODO : remove next line, for testing purposes only 
-		//FileUtil.decryptAllFiles("encrypted/ltc-quaterly/230414140122", "encrypted/ltc-quaterly/230414140122/test");
+		//FileUtil.decryptAllFiles("encrypted/ltc-quarterly/230414140122", "encrypted/ltc-quarterly/230414140122/test");
 		main.configure().addRoutesBuilder(HelloRoute.class);
 		main.configure().addRoutesBuilder(AIMSFormRoute.class);
 		main.configure().addRoutesBuilder(FacilityFormRoute.class);
-		main.configure().addRoutesBuilder(LtcQuaterlyYtdRoute.class);
+		main.configure().addRoutesBuilder(LtcQuarterlyYtdRoute.class);
 		main.run(args);
 	}
 }
