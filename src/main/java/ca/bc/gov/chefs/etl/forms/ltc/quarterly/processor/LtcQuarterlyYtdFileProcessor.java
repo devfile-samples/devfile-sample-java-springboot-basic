@@ -6,7 +6,7 @@ import org.apache.camel.Processor;
 
 //import ca.bc.gov.chefs.etl.parser.FileModel;
 
-public class LtcQuaterlyYtdFileProcessor implements Processor{
+public class LtcQuarterlyYtdFileProcessor implements Processor{
 
 	@Override
 	public void process(Exchange exchange) throws Exception {

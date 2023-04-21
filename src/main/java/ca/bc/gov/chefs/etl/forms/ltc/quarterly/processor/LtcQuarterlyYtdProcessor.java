@@ -6,8 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
-public class LtcQuaterlyYtdProcessor implements Processor  {
-	private static final Logger logger = LoggerFactory.getLogger(LtcQuaterlyYtdApiProcessor.class);
+public class LtcQuarterlyYtdProcessor implements Processor  {
+	private static final Logger logger = LoggerFactory.getLogger(LtcQuarterlyYtdApiProcessor.class);
 	@Override
 	public void process(Exchange exchange) throws Exception {
 		logger.info("Hello! Processing Now: current timestamp is: {}",System.currentTimeMillis());

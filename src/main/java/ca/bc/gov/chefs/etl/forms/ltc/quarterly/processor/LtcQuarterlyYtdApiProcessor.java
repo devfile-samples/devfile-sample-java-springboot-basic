@@ -11,10 +11,10 @@ import ca.bc.gov.chefs.etl.util.AuthUtil;
 import ca.bc.gov.chefs.etl.util.JsonUtil;
 import ca.bc.gov.chefs.etl.util.PropertiesUtil;
 
-public class LtcQuaterlyYtdApiProcessor implements Processor{
+public class LtcQuarterlyYtdApiProcessor implements Processor{
 
 	private Map<String,String> sharedData;
-	public LtcQuaterlyYtdApiProcessor(Map<String, String> sharedData) {
+	public LtcQuarterlyYtdApiProcessor(Map<String, String> sharedData) {
 		this.sharedData = sharedData;
 	}
 

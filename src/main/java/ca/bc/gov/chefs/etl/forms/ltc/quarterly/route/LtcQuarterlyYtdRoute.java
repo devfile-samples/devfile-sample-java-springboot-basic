@@ -5,11 +5,11 @@ import org.slf4j.LoggerFactory;
 
 import ca.bc.gov.chefs.etl.core.routes.BaseRoute;
 import ca.bc.gov.chefs.etl.forms.aims.route.AIMSFormRoute;
-import ca.bc.gov.chefs.etl.forms.ltc.quarterly.processor.LtcQuaterlyYtdApiProcessor;
-import ca.bc.gov.chefs.etl.forms.ltc.quarterly.processor.LtcQuaterlyYtdApiResponseProcessor;
-import ca.bc.gov.chefs.etl.forms.ltc.quarterly.processor.LtcQuaterlyYtdProcessor;
+import ca.bc.gov.chefs.etl.forms.ltc.quarterly.processor.LtcQuarterlyYtdApiProcessor;
+import ca.bc.gov.chefs.etl.forms.ltc.quarterly.processor.LtcQuarterlyYtdApiResponseProcessor;
+import ca.bc.gov.chefs.etl.forms.ltc.quarterly.processor.LtcQuarterlyYtdProcessor;
 
-public class LtcQuaterlyYtdRoute extends BaseRoute {
+public class LtcQuarterlyYtdRoute extends BaseRoute {
 
 	private static final Logger logger = LoggerFactory.getLogger(AIMSFormRoute.class);
 	@Override
@@ -26,15 +26,15 @@ public class LtcQuaterlyYtdRoute extends BaseRoute {
 		from("jetty:http://{{hostname}}:{{port}}/ltc-quaterly-ytd").routeId("ltc-quaterly-ytd-form")
 				.log("CHEFS-ETL received a request for LTCQ Form extraction")//.bean(AIMSFormPayloadExtractor.class)
 				.process(exchange -> sharedData.put("body", exchange.getIn().getBody(String.class)))
-				.process(new LtcQuaterlyYtdProcessor()).to("direct:ltc-quaterly-ytd").end();
+				.process(new LtcQuarterlyYtdProcessor()).to("direct:ltc-quaterly-ytd").end();
 
 		from("direct:ltc-quaterly-ytd")
 				// to the http uri
-				.process(new LtcQuaterlyYtdApiProcessor(sharedData))
+				.process(new LtcQuarterlyYtdApiProcessor(sharedData))
 				.toD("${header.RequestUri}")
 				.log("This is the status code from the response: ${header.CamelHttpResponseCode}")
 				.log("Trying to convert the received body OK").convertBodyTo(String.class)
-				.process(new LtcQuaterlyYtdApiResponseProcessor()).end();
+				.process(new LtcQuarterlyYtdApiResponseProcessor()).end();
 
 		// file conversion
 		/*

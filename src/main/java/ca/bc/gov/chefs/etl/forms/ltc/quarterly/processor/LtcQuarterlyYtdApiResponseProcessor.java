@@ -50,7 +50,7 @@ import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdSumTotals;
 import ca.bc.gov.chefs.etl.util.CSVUtil;
 import ca.bc.gov.chefs.etl.util.FileUtil;
 
-public class LtcQuaterlyYtdApiResponseProcessor implements Processor {
+public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 
 	
 	@Override
