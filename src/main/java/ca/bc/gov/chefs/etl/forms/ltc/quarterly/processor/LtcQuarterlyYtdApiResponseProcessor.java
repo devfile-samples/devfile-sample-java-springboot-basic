@@ -61,10 +61,10 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 		ObjectMapper mapper = new ObjectMapper();
 		List<Root> ltcYtdForms = mapper.readValue(payload, new TypeReference<List<Root>>() {
 		});
-		List<LtcYtdSubmission> parsedLtycYtdSubmissions = parseYtdQuaterlyRequest(ltcYtdForms);
+		List<LtcYtdSubmission> parsedLtycYtdSubmissions = parseYtdQuarterlyRequest(ltcYtdForms);
 		List<IModel> iModels =  (List<IModel>)(List<?>) parsedLtycYtdSubmissions;
 		Map<String,List<List<String>>> map = CSVUtil.provider(iModels);
-		List<String> filesGenerated = FileUtil.writeToCSVFile(map,Constants.LTC_QUATERLY_DIR);
+		List<String> filesGenerated = FileUtil.writeToCSVFile(map,Constants.LTC_QUARTERLY_DIR);
 		//TODO uncomment or remove dead code
 		// SuccessResponse successResponse = new SuccessResponse();
 		// successResponse.setFiles(filesGenerated);
@@ -73,7 +73,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 		
 	}
 
-	private List<LtcYtdSubmission> parseYtdQuaterlyRequest(List<Root> ltcQuarterlyYTDSubmissions) {
+	private List<LtcYtdSubmission> parseYtdQuarterlyRequest(List<Root> ltcQuarterlyYTDSubmissions) {
 		List<LtcYtdSubmission> ltcYtdSubmissions = new ArrayList<>();
 		for (Root root : ltcQuarterlyYTDSubmissions) {
 			LtcYtdSubmission ltcYtdSubmission = new LtcYtdSubmission();
