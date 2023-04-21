@@ -23,12 +23,12 @@ public class LtcQuarterlyYtdRoute extends BaseRoute {
 		 * 
 		 */
 		// trigger
-		from("jetty:http://{{hostname}}:{{port}}/ltc-quaterly-ytd").routeId("ltc-quaterly-ytd-form")
+		from("jetty:http://{{hostname}}:{{port}}/ltc-quarterly-ytd").routeId("ltc-quarterly-ytd-form")
 				.log("CHEFS-ETL received a request for LTCQ Form extraction")//.bean(AIMSFormPayloadExtractor.class)
 				.process(exchange -> sharedData.put("body", exchange.getIn().getBody(String.class)))
-				.process(new LtcQuarterlyYtdProcessor()).to("direct:ltc-quaterly-ytd").end();
+				.process(new LtcQuarterlyYtdProcessor()).to("direct:ltc-quarterly-ytd").end();
 
-		from("direct:ltc-quaterly-ytd")
+		from("direct:ltc-quarterly-ytd")
 				// to the http uri
 				.process(new LtcQuarterlyYtdApiProcessor(sharedData))
 				.toD("${header.RequestUri}")
