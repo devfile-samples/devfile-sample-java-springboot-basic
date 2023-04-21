@@ -11,7 +11,7 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.routes.HelloRoute;
 import ca.bc.gov.chefs.etl.forms.ltc.facility.route.FacilityFormRoute;
-import ca.bc.gov.chefs.etl.forms.ltc.quaterly.route.LtcQuaterlyYtdRoute;
+import ca.bc.gov.chefs.etl.forms.ltc.quarterly.route.LtcQuaterlyYtdRoute;
 import ca.bc.gov.chefs.etl.forms.aims.route.AIMSFormRoute;
 /**
  * Camel Class runner.
