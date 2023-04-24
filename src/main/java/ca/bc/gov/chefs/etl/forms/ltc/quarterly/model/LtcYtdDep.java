@@ -2,6 +2,9 @@ package ca.bc.gov.chefs.etl.forms.ltc.quarterly.model;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
 
@@ -16,19 +19,19 @@ public class LtcYtdDep implements IModel {
 		return confirmationId;
 	}
 	public void setConfirmationId(String confirmationId) {
-		this.confirmationId = confirmationId;
+		this.confirmationId = StringUtils.defaultIfEmpty(confirmationId, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getDepName() {
 		return depName;
 	}
 	public void setDepName(String depName) {
-		this.depName = depName;
+		this.depName = StringUtils.defaultIfEmpty(depName, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getDepYtd() {
 		return depYtd;
 	}
 	public void setDepYtd(String depYtd) {
-		this.depYtd = depYtd;
+		this.depYtd = StringUtils.defaultIfEmpty(depYtd, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getDepNotes() {
 		return depNotes;

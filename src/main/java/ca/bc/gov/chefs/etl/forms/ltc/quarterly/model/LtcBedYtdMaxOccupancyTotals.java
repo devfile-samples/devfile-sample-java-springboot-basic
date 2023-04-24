@@ -3,6 +3,8 @@ package ca.bc.gov.chefs.etl.forms.ltc.quarterly.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
 
@@ -22,7 +24,7 @@ public class LtcBedYtdMaxOccupancyTotals implements IModel {
 	}
 
 	public void setConfirmationID(String confirmationID) {
-		this.confirmationID = confirmationID;
+		this.confirmationID = StringUtils.defaultIfEmpty(confirmationID, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getBedFundingType() {
@@ -30,7 +32,7 @@ public class LtcBedYtdMaxOccupancyTotals implements IModel {
 	}
 
 	public void setBedFundingType(String bedFundingType) {
-		this.bedFundingType = bedFundingType;
+		this.bedFundingType = StringUtils.defaultIfEmpty(bedFundingType, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getTotalBedQuarter1() {
@@ -78,7 +80,7 @@ public class LtcBedYtdMaxOccupancyTotals implements IModel {
 	}
 
 	public void setOccupancyType(String occupancyType) {
-		this.occupancyType = occupancyType;
+		this.occupancyType = StringUtils.defaultIfEmpty(occupancyType, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	@Override

@@ -19,19 +19,19 @@ public class LtcYtdCompBenefits implements IModel {
 		return confirmationId;
 	}
 	public void setConfirmationId(String confirmationId) {
-		this.confirmationId = confirmationId;
+		this.confirmationId = StringUtils.defaultIfEmpty(confirmationId, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getBenefitsType() {
 		return benefitsType;
 	}
 	public void setBenefitsType(String benefitsType) {
-		this.benefitsType = benefitsType;
+		this.benefitsType = StringUtils.defaultIfEmpty(benefitsType, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getBenefitsAmountYtd() {
 		return StringUtils.isEmpty(benefitsAmountYtd) ? "0" : benefitsAmountYtd;
 	}
 	public void setBenefitsAmountYtd(String benefitsAmountYtd) {
-		this.benefitsAmountYtd = benefitsAmountYtd;
+		this.benefitsAmountYtd = StringUtils.defaultIfEmpty(benefitsAmountYtd, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	
 	

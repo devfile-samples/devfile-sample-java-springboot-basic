@@ -18,6 +18,10 @@ public class Constants {
 
 	/* CHEFS API  */
 	public final static String CHEFS_API_URL = "chefs.http.uri";
+
+	/* Default values for empty Strings and Numbers */
+	public final static String DEFAULT_STRING_VALUE = "";
+	public final static String DEFAULT_DECIMAL_VALUE = "0";
 	
 	/* AIMS */
 	public final static String AIMS_USERNAME = "aims.username";

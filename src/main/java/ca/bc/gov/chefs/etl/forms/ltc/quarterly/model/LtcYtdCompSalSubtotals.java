@@ -22,7 +22,7 @@ public class LtcYtdCompSalSubtotals implements IModel {
 	}
 
 	public void setConfirmationId(String confirmationId) {
-		this.confirmationId = confirmationId;
+		this.confirmationId = StringUtils.defaultIfEmpty(confirmationId, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getCompSalType() {
@@ -30,7 +30,7 @@ public class LtcYtdCompSalSubtotals implements IModel {
 	}
 
 	public void setCompSalType(String compSalType) {
-		this.compSalType = compSalType;
+		this.compSalType = StringUtils.defaultIfEmpty(compSalType, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getSubTotalCompSalStaffYTD() {

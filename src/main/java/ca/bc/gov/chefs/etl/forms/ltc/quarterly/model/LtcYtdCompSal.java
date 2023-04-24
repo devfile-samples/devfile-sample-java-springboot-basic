@@ -27,37 +27,37 @@ public class LtcYtdCompSal implements IModel{
 		return confirmationId;
 	}
 	public void setConfirmationId(String confirmationId) {
-		this.confirmationId = confirmationId;
+		this.confirmationId = StringUtils.defaultIfEmpty(confirmationId, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getCompSalType() {
 		return compSalType;
 	}
 	public void setCompSalType(String compSalType) {
-		this.compSalType = compSalType;
+		this.compSalType = StringUtils.defaultIfEmpty(compSalType, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getCompSalName() {
 		return compSalName;
 	}
 	public void setCompSalName(String compSalName) {
-		this.compSalName = compSalName;
+		this.compSalName = StringUtils.defaultIfEmpty(compSalName, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getCompSalStaffYtd() {
-		return StringUtils.isBlank(compSalStaffYtd) ? "0" : compSalStaffYtd;
+		return compSalStaffYtd;
 	}
 	public void setCompSalStaffYtd(String compSalStaffYtd) {
-		this.compSalStaffYtd = compSalStaffYtd;
+		this.compSalStaffYtd = StringUtils.defaultIfEmpty(compSalStaffYtd, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getCompSalContractServicesYtd() {
-		return StringUtils.isBlank(compSalContractServicesYtd) ? "0" : compSalContractServicesYtd;
+		return compSalContractServicesYtd;
 	}
 	public void setCompSalContractServicesYtd(String compSalContractServicesYtd) {
-		this.compSalContractServicesYtd = compSalContractServicesYtd;
+		this.compSalContractServicesYtd = StringUtils.defaultIfEmpty(compSalContractServicesYtd, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getCompSalOfficeAllocYtd() {
-		return StringUtils.isBlank(compSalOfficeAllocYtd) ? "0" : compSalOfficeAllocYtd;
+		return compSalOfficeAllocYtd;
 	}
 	public void setCompSalOfficeAllocYtd(String compSalOfficeAllocYtd) {
-		this.compSalOfficeAllocYtd = compSalOfficeAllocYtd;
+		this.compSalOfficeAllocYtd = StringUtils.defaultIfEmpty(compSalOfficeAllocYtd, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	@Override
 	public String getFileName() {
