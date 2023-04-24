@@ -3,6 +3,8 @@ package ca.bc.gov.chefs.etl.forms.ltc.quarterly.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
 
@@ -16,13 +18,13 @@ public class LtcYtdExpSubTotals implements IModel {
 		return confirmationId;
 	}
 	public void setConfirmationId(String confirmationId) {
-		this.confirmationId = confirmationId;
+		this.confirmationId = StringUtils.defaultIfEmpty(confirmationId, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getExpType() {
 		return expType;
 	}
 	public void setExpType(String expType) {
-		this.expType = expType;
+		this.expType = StringUtils.defaultIfEmpty(expType, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getSubTotalRevYtd() {
 		return subTotalRevYtd;

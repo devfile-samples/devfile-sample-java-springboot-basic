@@ -3,6 +3,8 @@ package ca.bc.gov.chefs.etl.forms.ltc.quarterly.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
 
@@ -20,19 +22,19 @@ public class LtcBedYtdOccupiedDays implements IModel{
 		return confirmationId;
 	}
 	public void setConfirmationId(String confirmationId) {
-		this.confirmationId = confirmationId;
+		this.confirmationId = StringUtils.defaultIfEmpty(confirmationId, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getOccQuarter() {
 		return occQuarter;
 	}
 	public void setOccQuarter(String occQuarter) {
-		this.occQuarter = occQuarter;
+		this.occQuarter = StringUtils.defaultIfEmpty(occQuarter, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getOccMonth() {
 		return occMonth;
 	}
 	public void setOccMonth(String occMonth) {
-		this.occMonth = occMonth;
+		this.occMonth = StringUtils.defaultIfEmpty(occMonth, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getOccDaysYTDInScopePublic() {
 		return occDaysYTDInScopePublic;

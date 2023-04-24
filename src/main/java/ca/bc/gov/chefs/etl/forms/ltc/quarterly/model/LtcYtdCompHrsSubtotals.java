@@ -21,13 +21,13 @@ public class LtcYtdCompHrsSubtotals implements IModel {
 		return confirmationID;
 	}
 	public void setConfirmationID(String confirmationID) {
-		this.confirmationID = confirmationID;
+		this.confirmationID = StringUtils.defaultIfEmpty(confirmationID, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getCompHrsType() {
 		return compHrsType;
 	}
 	public void setCompHrsType(String compHrsType) {
-		this.compHrsType = compHrsType;
+		this.compHrsType = StringUtils.defaultIfEmpty(compHrsType, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getSubTotalCompHrsStaffYTD() {
 		return StringUtils.isBlank(subTotalCompHrsStaffYTD) ? "0" : subTotalCompHrsStaffYTD;

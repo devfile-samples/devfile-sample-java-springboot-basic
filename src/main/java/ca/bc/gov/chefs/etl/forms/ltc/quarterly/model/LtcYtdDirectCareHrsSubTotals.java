@@ -3,6 +3,8 @@ package ca.bc.gov.chefs.etl.forms.ltc.quarterly.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
 
@@ -27,7 +29,7 @@ public class LtcYtdDirectCareHrsSubTotals implements IModel{
 	}
 
 	public void setConfirmationID(String confirmationID) {
-		this.confirmationID = confirmationID;
+		this.confirmationID = StringUtils.defaultIfEmpty(confirmationID, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getDirCareType() {
@@ -35,7 +37,7 @@ public class LtcYtdDirectCareHrsSubTotals implements IModel{
 	}
 
 	public void setDirCareType(String dirCareType) {
-		this.dirCareType = dirCareType;
+		this.dirCareType = StringUtils.defaultIfEmpty(dirCareType, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getSubTotalDirCareProdHrsRegularYTD() {

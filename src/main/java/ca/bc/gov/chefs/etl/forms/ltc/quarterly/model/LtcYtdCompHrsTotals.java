@@ -24,7 +24,7 @@ public class LtcYtdCompHrsTotals implements IModel{
 	}
 
 	public void setConfirmationID(String confirmationID) {
-		this.confirmationID = confirmationID;
+		this.confirmationID = StringUtils.defaultIfEmpty(confirmationID, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getCompHrsTotalType() {
@@ -32,7 +32,7 @@ public class LtcYtdCompHrsTotals implements IModel{
 	}
 
 	public void setCompHrsTotalType(String compHrsTotalType) {
-		this.compHrsTotalType = compHrsTotalType;
+		this.compHrsTotalType = StringUtils.defaultIfEmpty(compHrsTotalType, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getTotalCompHrsStaffYTD() {
