@@ -1922,42 +1922,6 @@ public class Root{
 	public String opRev_YTD_label_19;
 	@JsonProperty("opRev_YTD_label-20")
 	public String opRev_YTD_label_20;
-	@JsonProperty("opRev_YTD_label-21")
-	public String opRev_YTD_label_21;
-	@JsonProperty("opRev_YTD_label-22")
-	public String opRev_YTD_label_22;
-	@JsonProperty("opRev_YTD_label-23")
-	public String opRev_YTD_label_23;
-	@JsonProperty("opRev_YTD_label-24")
-	public String opRev_YTD_label_24;
-	@JsonProperty("opRev_YTD_label-25")
-	public String opRev_YTD_label_25;
-	@JsonProperty("opRev_YTD_label-26")
-	public String opRev_YTD_label_26;
-	@JsonProperty("opRev_YTD_label-27")
-	public String opRev_YTD_label_27;
-	@JsonProperty("opRev_YTD_label-28")
-	public String opRev_YTD_label_28;
-	@JsonProperty("opRev_YTD_label-29")
-	public String opRev_YTD_label_29;
-	@JsonProperty("opRev_YTD_label-30")
-	public String opRev_YTD_label_30;
-	@JsonProperty("opRev_YTD_label-31")
-	public String opRev_YTD_label_31;
-	@JsonProperty("opRev_YTD_label-32")
-	public String opRev_YTD_label_32;
-	@JsonProperty("opRev_YTD_label-33")
-	public String opRev_YTD_label_33;
-	@JsonProperty("opRev_YTD_label-34")
-	public String opRev_YTD_label_34;
-	@JsonProperty("opRev_YTD_label-35")
-	public String opRev_YTD_label_35;
-	@JsonProperty("opRev_YTD_label-36")
-	public String opRev_YTD_label_36;
-	@JsonProperty("opRev_YTD_label-38")
-	public String opRev_YTD_label_38;
-	@JsonProperty("opRev_YTD_label-39")
-	public String opRev_YTD_label_39;
 	public String support_label;
 	@JsonProperty("support_label-1")
 	public String support_label1;
@@ -1987,7 +1951,6 @@ public class Root{
 	@JsonProperty("admin_label-8")
 	public String admin_label8;
 	public String admin_label_subtotal;
-	
 	public String nursing_label_comp;
 	@JsonProperty("nursing_label_comp-1")
 	public String nursing_label_comp1;
@@ -1998,7 +1961,6 @@ public class Root{
 	@JsonProperty("nursing_label_comp-4")
 	public String nursing_label_comp4;
 	public String nursing_label_comp_subtotal;
-	
 	public String alliedProf_label_comp;
 	@JsonProperty("alliedProf_label_comp-1")
 	public String alliedProf_label_comp1;
@@ -2015,7 +1977,6 @@ public class Root{
 	@JsonProperty("alliedProf_label_comp-7")
 	public String alliedProf_label_comp7;
 	public String alliedProf_label_comp_subtotal;
-	
 	public String alliedNP_label_comp;
 	@JsonProperty("alliedNP_label_comp-1")
 	public String alliedNP_label_comp1;
@@ -2033,9 +1994,143 @@ public class Root{
 	public String directCare_label_comp_subtotal;
 	public String compB_total_label;
 	public String compH_total_label;
+	public String compH_accrued_label;
 	public String compB_recovered_label;
 	public String compB_accrued_label;
 	public String compB_laborOther_label;
+	@JsonProperty("benefit_value_label-1")
+	public String benefit_value_label1;
+	@JsonProperty("benefit_value_label-2")
+	public String benefit_value_label2;
+	@JsonProperty("benefit_value_label-3")
+	public String benefit_value_label3;
+	@JsonProperty("benefit_value_label-4")
+	public String benefit_value_label4;
+	@JsonProperty("benefit_value_label-5")
+	public String benefit_value_label5;
+	@JsonProperty("benefit_value_label-6")
+	public String benefit_value_label6;
+	@JsonProperty("benefit_value_label-7")
+	public String benefit_value_label7;
+	@JsonProperty("benefit_value_label-8")
+	public String benefit_value_label8;
+
+	public String nopRev_label;
+	public String nopEx_label;
+	@JsonProperty("nopRev_YTD_label-1")
+	public String nopRev_YTD_label1;
+	@JsonProperty("nopRev_YTD_label-2")
+	public String nopRev_YTD_label2;
+	@JsonProperty("nopEx_YTD_label-1")
+	public String nopEx_YTD_label1;
+	@JsonProperty("nopEx_YTD_label-2")
+	public String nopEx_YTD_label2;
+	public String opRev_client_label;
+	
+	public String getOpRev_otherRev_label() {
+		return opRev_otherRev_label;
+	}
+	public void setOpRev_otherRev_label(String opRev_otherRev_label) {
+		this.opRev_otherRev_label = opRev_otherRev_label;
+	}
+	public String opRev_otherRev_label;
+
+	public String getOpRev_client_label() {
+		return opRev_client_label;
+	}
+	public void setOpRev_client_label(String opRev_client_label) {
+		this.opRev_client_label = opRev_client_label;
+	}
+	public String getNopRev_label() {
+		return nopRev_label;
+	}
+	public void setNopRev_label(String nopRev_label) {
+		this.nopRev_label = nopRev_label;
+	}
+	public String getNopEx_label() {
+		return nopEx_label;
+	}
+	public void setNopEx_label(String nopEx_label) {
+		this.nopEx_label = nopEx_label;
+	}
+	public String getNopRev_YTD_label1() {
+		return nopRev_YTD_label1;
+	}
+	public void setNopRev_YTD_label1(String nopRev_YTD_label1) {
+		this.nopRev_YTD_label1 = nopRev_YTD_label1;
+	}
+	public String getNopRev_YTD_label2() {
+		return nopRev_YTD_label2;
+	}
+	public void setNopRev_YTD_label2(String nopRev_YTD_label2) {
+		this.nopRev_YTD_label2 = nopRev_YTD_label2;
+	}
+	public String getNopEx_YTD_label1() {
+		return nopEx_YTD_label1;
+	}
+	public void setNopEx_YTD_label1(String nopEx_YTD_label1) {
+		this.nopEx_YTD_label1 = nopEx_YTD_label1;
+	}
+	public String getNopEx_YTD_label2() {
+		return nopEx_YTD_label2;
+	}
+	public void setNopEx_YTD_label2(String nopEx_YTD_label2) {
+		this.nopEx_YTD_label2 = nopEx_YTD_label2;
+	}
+	public String getBenefit_value_label1() {
+		return benefit_value_label1;
+	}
+	public void setBenefit_value_label1(String benefit_value_label1) {
+		this.benefit_value_label1 = benefit_value_label1;
+	}
+	public String getBenefit_value_label2() {
+		return benefit_value_label2;
+	}
+	public void setBenefit_value_label2(String benefit_value_label2) {
+		this.benefit_value_label2 = benefit_value_label2;
+	}
+	public String getBenefit_value_label3() {
+		return benefit_value_label3;
+	}
+	public void setBenefit_value_label3(String benefit_value_label3) {
+		this.benefit_value_label3 = benefit_value_label3;
+	}
+	public String getBenefit_value_label4() {
+		return benefit_value_label4;
+	}
+	public void setBenefit_value_label4(String benefit_value_label4) {
+		this.benefit_value_label4 = benefit_value_label4;
+	}
+	public String getBenefit_value_label5() {
+		return benefit_value_label5;
+	}
+	public void setBenefit_value_label5(String benefit_value_label5) {
+		this.benefit_value_label5 = benefit_value_label5;
+	}
+	public String getBenefit_value_label6() {
+		return benefit_value_label6;
+	}
+	public void setBenefit_value_label6(String benefit_value_label6) {
+		this.benefit_value_label6 = benefit_value_label6;
+	}
+	public String getBenefit_value_label7() {
+		return benefit_value_label7;
+	}
+	public void setBenefit_value_label7(String benefit_value_label7) {
+		this.benefit_value_label7 = benefit_value_label7;
+	}
+	public String getBenefit_value_label8() {
+		return benefit_value_label8;
+	}
+	public void setBenefit_value_label8(String benefit_value_label8) {
+		this.benefit_value_label8 = benefit_value_label8;
+	}
+	public String getCompH_accrued_label() {
+		return compH_accrued_label;
+	}
+	public void setCompH_accrued_label(String compH_accrued_label) {
+		this.compH_accrued_label = compH_accrued_label;
+	}
 		
 	public String getCompB_total_label() {
 		return compB_total_label;
@@ -2450,114 +2545,6 @@ public class Root{
 	}
 	public void setOpRev_YTD_label_20(String opRev_YTD_label_20) {
 		this.opRev_YTD_label_20 = opRev_YTD_label_20;
-	}
-	public String getOpRev_YTD_label_21() {
-		return opRev_YTD_label_21;
-	}
-	public void setOpRev_YTD_label_21(String opRev_YTD_label_21) {
-		this.opRev_YTD_label_21 = opRev_YTD_label_21;
-	}
-	public String getOpRev_YTD_label_22() {
-		return opRev_YTD_label_22;
-	}
-	public void setOpRev_YTD_label_22(String opRev_YTD_label_22) {
-		this.opRev_YTD_label_22 = opRev_YTD_label_22;
-	}
-	public String getOpRev_YTD_label_23() {
-		return opRev_YTD_label_23;
-	}
-	public void setOpRev_YTD_label_23(String opRev_YTD_label_23) {
-		this.opRev_YTD_label_23 = opRev_YTD_label_23;
-	}
-	public String getOpRev_YTD_label_24() {
-		return opRev_YTD_label_24;
-	}
-	public void setOpRev_YTD_label_24(String opRev_YTD_label_24) {
-		this.opRev_YTD_label_24 = opRev_YTD_label_24;
-	}
-	public String getOpRev_YTD_label_25() {
-		return opRev_YTD_label_25;
-	}
-	public void setOpRev_YTD_label_25(String opRev_YTD_label_25) {
-		this.opRev_YTD_label_25 = opRev_YTD_label_25;
-	}
-	public String getOpRev_YTD_label_26() {
-		return opRev_YTD_label_26;
-	}
-	public void setOpRev_YTD_label_26(String opRev_YTD_label_26) {
-		this.opRev_YTD_label_26 = opRev_YTD_label_26;
-	}
-	public String getOpRev_YTD_label_27() {
-		return opRev_YTD_label_27;
-	}
-	public void setOpRev_YTD_label_27(String opRev_YTD_label_27) {
-		this.opRev_YTD_label_27 = opRev_YTD_label_27;
-	}
-	public String getOpRev_YTD_label_28() {
-		return opRev_YTD_label_28;
-	}
-	public void setOpRev_YTD_label_28(String opRev_YTD_label_28) {
-		this.opRev_YTD_label_28 = opRev_YTD_label_28;
-	}
-	public String getOpRev_YTD_label_29() {
-		return opRev_YTD_label_29;
-	}
-	public void setOpRev_YTD_label_29(String opRev_YTD_label_29) {
-		this.opRev_YTD_label_29 = opRev_YTD_label_29;
-	}
-	public String getOpRev_YTD_label_30() {
-		return opRev_YTD_label_30;
-	}
-	public void setOpRev_YTD_label_30(String opRev_YTD_label_30) {
-		this.opRev_YTD_label_30 = opRev_YTD_label_30;
-	}
-	public String getOpRev_YTD_label_31() {
-		return opRev_YTD_label_31;
-	}
-	public void setOpRev_YTD_label_31(String opRev_YTD_label_31) {
-		this.opRev_YTD_label_31 = opRev_YTD_label_31;
-	}
-	public String getOpRev_YTD_label_32() {
-		return opRev_YTD_label_32;
-	}
-	public void setOpRev_YTD_label_32(String opRev_YTD_label_32) {
-		this.opRev_YTD_label_32 = opRev_YTD_label_32;
-	}
-	public String getOpRev_YTD_label_33() {
-		return opRev_YTD_label_33;
-	}
-	public void setOpRev_YTD_label_33(String opRev_YTD_label_33) {
-		this.opRev_YTD_label_33 = opRev_YTD_label_33;
-	}
-	public String getOpRev_YTD_label_34() {
-		return opRev_YTD_label_34;
-	}
-	public void setOpRev_YTD_label_34(String opRev_YTD_label_34) {
-		this.opRev_YTD_label_34 = opRev_YTD_label_34;
-	}
-	public String getOpRev_YTD_label_35() {
-		return opRev_YTD_label_35;
-	}
-	public void setOpRev_YTD_label_35(String opRev_YTD_label_35) {
-		this.opRev_YTD_label_35 = opRev_YTD_label_35;
-	}
-	public String getOpRev_YTD_label_36() {
-		return opRev_YTD_label_36;
-	}
-	public void setOpRev_YTD_label_36(String opRev_YTD_label_36) {
-		this.opRev_YTD_label_36 = opRev_YTD_label_36;
-	}
-	public String getOpRev_YTD_label_38() {
-		return opRev_YTD_label_38;
-	}
-	public void setOpRev_YTD_label_38(String opRev_YTD_label_38) {
-		this.opRev_YTD_label_38 = opRev_YTD_label_38;
-	}
-	public String getOpRev_YTD_label_39() {
-		return opRev_YTD_label_39;
-	}
-	public void setOpRev_YTD_label_39(String opRev_YTD_label_39) {
-		this.opRev_YTD_label_39 = opRev_YTD_label_39;
 	}
 	public String getAlliedNPContractRate_total() {
 		return alliedNPContractRate_total;
