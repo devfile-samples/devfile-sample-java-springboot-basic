@@ -1586,7 +1586,9 @@ public class Root{
     public String opEx_YTD34;
     @JsonProperty("opEx_YTD-35")
     public String opEx_YTD35;
-    @JsonProperty("opEx_YTD-4")
+	@JsonProperty("opEx_YTD-36")
+    public String opEx_YTD36;
+	@JsonProperty("opEx_YTD-4")
     public String opEx_YTD4;
     @JsonProperty("opEx_YTD-5")
     public String opEx_YTD5;
@@ -2026,7 +2028,348 @@ public class Root{
 	@JsonProperty("nopEx_YTD_label-2")
 	public String nopEx_YTD_label2;
 	public String opRev_client_label;
+
+	public String opEx_1A_label;
+	public String opEx_1B_label;
+	public String opEx_2_label;
+	public String opEx_3_label;
+	public String opEx_4_label;
+	@JsonProperty("opEx_YTD_label-1")
+	public String opEx_YTD_label1;
+	@JsonProperty("opEx_YTD_label-2")
+	public String opEx_YTD_label2;
+	@JsonProperty("opEx_YTD_label-3")
+	public String opEx_YTD_label3;
+	@JsonProperty("opEx_YTD_label-4")
+	public String opEx_YTD_label4;
+	@JsonProperty("opEx_YTD_label-5")
+	public String opEx_YTD_label5;
+	@JsonProperty("opEx_YTD_label-6")
+	public String opEx_YTD_label6;
+	@JsonProperty("opEx_YTD_label-7")
+	public String opEx_YTD_label7;
+	@JsonProperty("opEx_YTD_label-8")
+	public String opEx_YTD_label8;
+	@JsonProperty("opEx_YTD_label-9")
+	public String opEx_YTD_label9;
+	@JsonProperty("opEx_YTD_label-10")
+	public String opEx_YTD_label10;
+	@JsonProperty("opEx_YTD_label-11")
+	public String opEx_YTD_label11;
+	@JsonProperty("opEx_YTD_label-12")
+	public String opEx_YTD_label12;
+	@JsonProperty("opEx_YTD_label-13")
+	public String opEx_YTD_label13;
+	@JsonProperty("opEx_YTD_label-14")
+	public String opEx_YTD_label14;
+	@JsonProperty("opEx_YTD_label-15")
+	public String opEx_YTD_label15;
+	@JsonProperty("opEx_YTD_label-16")
+	public String opEx_YTD_label16;
+	@JsonProperty("opEx_YTD_label-17")
+	public String opEx_YTD_label17;
+	@JsonProperty("opEx_YTD_label-18")
+	public String opEx_YTD_label18;
+	@JsonProperty("opEx_YTD_label-19")
+	public String opEx_YTD_label19;
+	@JsonProperty("opEx_YTD_label-20")
+	public String opEx_YTD_label20;
+	@JsonProperty("opEx_YTD_label-21")
+	public String opEx_YTD_label21;
+	@JsonProperty("opEx_YTD_label-22")
+	public String opEx_YTD_label22;
+	@JsonProperty("opEx_YTD_label-23")
+	public String opEx_YTD_label23;
+	@JsonProperty("opEx_YTD_label-24")
+	public String opEx_YTD_label24;
+	@JsonProperty("opEx_YTD_label-25")
+	public String opEx_YTD_label25;
+	@JsonProperty("opEx_YTD_label-26")
+	public String opEx_YTD_label26;
+	@JsonProperty("opEx_YTD_label-27")
+	public String opEx_YTD_label27;
+	@JsonProperty("opEx_YTD_label-28")
+	public String opEx_YTD_label28;
+	@JsonProperty("opEx_YTD_label-29")
+	public String opEx_YTD_label29;
+	@JsonProperty("opEx_YTD_label-30")
+	public String opEx_YTD_label30;
+	@JsonProperty("opEx_YTD_label-31")
+	public String opEx_YTD_label31;
+	@JsonProperty("opEx_YTD_label-32")
+	public String opEx_YTD_label32;
+	@JsonProperty("opEx_YTD_label-33")
+	public String opEx_YTD_label33;
+	@JsonProperty("opEx_YTD_label-34")
+	public String opEx_YTD_label34;
+	@JsonProperty("opEx_YTD_label-35")
+	public String opEx_YTD_label35;
+	@JsonProperty("opEx_YTD_label-36")
+	public String opEx_YTD_label36;
+	@JsonProperty("opEx_YTD_label-38")
+	public String opEx_YTD_label38;
+	@JsonProperty("opEx_YTD_label-39")
+	public String opEx_YTD_label39;
 	
+
+	public String getOpEx_1A_label() {
+		return opEx_1A_label;
+	}
+	public void setOpEx_1A_label(String opEx_1A_label) {
+		this.opEx_1A_label = opEx_1A_label;
+	}
+	public String getOpEx_1B_label() {
+		return opEx_1B_label;
+	}
+	public void setOpEx_1B_label(String opEx_1B_label) {
+		this.opEx_1B_label = opEx_1B_label;
+	}
+	public String getOpEx_2_label() {
+		return opEx_2_label;
+	}
+	public void setOpEx_2_label(String opEx_2_label) {
+		this.opEx_2_label = opEx_2_label;
+	}
+	public String getOpEx_3_label() {
+		return opEx_3_label;
+	}
+	public void setOpEx_3_label(String opEx_3_label) {
+		this.opEx_3_label = opEx_3_label;
+	}
+	public String getOpEx_4_label() {
+		return opEx_4_label;
+	}
+	public void setOpEx_4_label(String opEx_4_label) {
+		this.opEx_4_label = opEx_4_label;
+	}
+	public String getOpEx_YTD_label1() {
+		return opEx_YTD_label1;
+	}
+	public void setOpEx_YTD_label1(String opEx_YTD_label1) {
+		this.opEx_YTD_label1 = opEx_YTD_label1;
+	}
+	public String getOpEx_YTD_label2() {
+		return opEx_YTD_label2;
+	}
+	public void setOpEx_YTD_label2(String opEx_YTD_label2) {
+		this.opEx_YTD_label2 = opEx_YTD_label2;
+	}
+	public String getOpEx_YTD_label3() {
+		return opEx_YTD_label3;
+	}
+	public void setOpEx_YTD_label3(String opEx_YTD_label3) {
+		this.opEx_YTD_label3 = opEx_YTD_label3;
+	}
+	public String getOpEx_YTD_label4() {
+		return opEx_YTD_label4;
+	}
+	public void setOpEx_YTD_label4(String opEx_YTD_label4) {
+		this.opEx_YTD_label4 = opEx_YTD_label4;
+	}
+	public String getOpEx_YTD_label5() {
+		return opEx_YTD_label5;
+	}
+	public void setOpEx_YTD_label5(String opEx_YTD_label5) {
+		this.opEx_YTD_label5 = opEx_YTD_label5;
+	}
+	public String getOpEx_YTD_label6() {
+		return opEx_YTD_label6;
+	}
+	public void setOpEx_YTD_label6(String opEx_YTD_label6) {
+		this.opEx_YTD_label6 = opEx_YTD_label6;
+	}
+	public String getOpEx_YTD_label7() {
+		return opEx_YTD_label7;
+	}
+	public void setOpEx_YTD_label7(String opEx_YTD_label7) {
+		this.opEx_YTD_label7 = opEx_YTD_label7;
+	}
+	public String getOpEx_YTD_label8() {
+		return opEx_YTD_label8;
+	}
+	public void setOpEx_YTD_label8(String opEx_YTD_label8) {
+		this.opEx_YTD_label8 = opEx_YTD_label8;
+	}
+	public String getOpEx_YTD_label9() {
+		return opEx_YTD_label9;
+	}
+	public void setOpEx_YTD_label9(String opEx_YTD_label9) {
+		this.opEx_YTD_label9 = opEx_YTD_label9;
+	}
+	public String getOpEx_YTD_label10() {
+		return opEx_YTD_label10;
+	}
+	public void setOpEx_YTD_label10(String opEx_YTD_label10) {
+		this.opEx_YTD_label10 = opEx_YTD_label10;
+	}
+	public String getOpEx_YTD_label11() {
+		return opEx_YTD_label11;
+	}
+	public void setOpEx_YTD_label11(String opEx_YTD_label11) {
+		this.opEx_YTD_label11 = opEx_YTD_label11;
+	}
+	public String getOpEx_YTD_label12() {
+		return opEx_YTD_label12;
+	}
+	public void setOpEx_YTD_label12(String opEx_YTD_label12) {
+		this.opEx_YTD_label12 = opEx_YTD_label12;
+	}
+	public String getOpEx_YTD_label13() {
+		return opEx_YTD_label13;
+	}
+	public void setOpEx_YTD_label13(String opEx_YTD_label13) {
+		this.opEx_YTD_label13 = opEx_YTD_label13;
+	}
+	public String getOpEx_YTD_label14() {
+		return opEx_YTD_label14;
+	}
+	public void setOpEx_YTD_label14(String opEx_YTD_label14) {
+		this.opEx_YTD_label14 = opEx_YTD_label14;
+	}
+	public String getOpEx_YTD_label15() {
+		return opEx_YTD_label15;
+	}
+	public void setOpEx_YTD_label15(String opEx_YTD_label15) {
+		this.opEx_YTD_label15 = opEx_YTD_label15;
+	}
+	public String getOpEx_YTD_label16() {
+		return opEx_YTD_label16;
+	}
+	public void setOpEx_YTD_label16(String opEx_YTD_label16) {
+		this.opEx_YTD_label16 = opEx_YTD_label16;
+	}
+	public String getOpEx_YTD_label17() {
+		return opEx_YTD_label17;
+	}
+	public void setOpEx_YTD_label17(String opEx_YTD_label17) {
+		this.opEx_YTD_label17 = opEx_YTD_label17;
+	}
+	public String getOpEx_YTD_label18() {
+		return opEx_YTD_label18;
+	}
+	public void setOpEx_YTD_label18(String opEx_YTD_label18) {
+		this.opEx_YTD_label18 = opEx_YTD_label18;
+	}
+	public String getOpEx_YTD_label19() {
+		return opEx_YTD_label19;
+	}
+	public void setOpEx_YTD_label19(String opEx_YTD_label19) {
+		this.opEx_YTD_label19 = opEx_YTD_label19;
+	}
+	public String getOpEx_YTD_label20() {
+		return opEx_YTD_label20;
+	}
+	public void setOpEx_YTD_label20(String opEx_YTD_label20) {
+		this.opEx_YTD_label20 = opEx_YTD_label20;
+	}
+	public String getOpEx_YTD_label21() {
+		return opEx_YTD_label21;
+	}
+	public void setOpEx_YTD_label21(String opEx_YTD_label21) {
+		this.opEx_YTD_label21 = opEx_YTD_label21;
+	}
+	public String getOpEx_YTD_label22() {
+		return opEx_YTD_label22;
+	}
+	public void setOpEx_YTD_label22(String opEx_YTD_label22) {
+		this.opEx_YTD_label22 = opEx_YTD_label22;
+	}
+	public String getOpEx_YTD_label23() {
+		return opEx_YTD_label23;
+	}
+	public void setOpEx_YTD_label23(String opEx_YTD_label23) {
+		this.opEx_YTD_label23 = opEx_YTD_label23;
+	}
+	public String getOpEx_YTD_label24() {
+		return opEx_YTD_label24;
+	}
+	public void setOpEx_YTD_label24(String opEx_YTD_label24) {
+		this.opEx_YTD_label24 = opEx_YTD_label24;
+	}
+	public String getOpEx_YTD_label25() {
+		return opEx_YTD_label25;
+	}
+	public void setOpEx_YTD_label25(String opEx_YTD_label25) {
+		this.opEx_YTD_label25 = opEx_YTD_label25;
+	}
+	public String getOpEx_YTD_label26() {
+		return opEx_YTD_label26;
+	}
+	public void setOpEx_YTD_label26(String opEx_YTD_label26) {
+		this.opEx_YTD_label26 = opEx_YTD_label26;
+	}
+	public String getOpEx_YTD_label27() {
+		return opEx_YTD_label27;
+	}
+	public void setOpEx_YTD_label27(String opEx_YTD_label27) {
+		this.opEx_YTD_label27 = opEx_YTD_label27;
+	}
+	public String getOpEx_YTD_label28() {
+		return opEx_YTD_label28;
+	}
+	public void setOpEx_YTD_label28(String opEx_YTD_label28) {
+		this.opEx_YTD_label28 = opEx_YTD_label28;
+	}
+	public String getOpEx_YTD_label29() {
+		return opEx_YTD_label29;
+	}
+	public void setOpEx_YTD_label29(String opEx_YTD_label29) {
+		this.opEx_YTD_label29 = opEx_YTD_label29;
+	}
+	public String getOpEx_YTD_label30() {
+		return opEx_YTD_label30;
+	}
+	public void setOpEx_YTD_label30(String opEx_YTD_label30) {
+		this.opEx_YTD_label30 = opEx_YTD_label30;
+	}
+	public String getOpEx_YTD_label31() {
+		return opEx_YTD_label31;
+	}
+	public void setOpEx_YTD_label31(String opEx_YTD_label31) {
+		this.opEx_YTD_label31 = opEx_YTD_label31;
+	}
+	public String getOpEx_YTD_label32() {
+		return opEx_YTD_label32;
+	}
+	public void setOpEx_YTD_label32(String opEx_YTD_label32) {
+		this.opEx_YTD_label32 = opEx_YTD_label32;
+	}
+	public String getOpEx_YTD_label33() {
+		return opEx_YTD_label33;
+	}
+	public void setOpEx_YTD_label33(String opEx_YTD_label33) {
+		this.opEx_YTD_label33 = opEx_YTD_label33;
+	}
+	public String getOpEx_YTD_label34() {
+		return opEx_YTD_label34;
+	}
+	public void setOpEx_YTD_label34(String opEx_YTD_label34) {
+		this.opEx_YTD_label34 = opEx_YTD_label34;
+	}
+	public String getOpEx_YTD_label35() {
+		return opEx_YTD_label35;
+	}
+	public void setOpEx_YTD_label35(String opEx_YTD_label35) {
+		this.opEx_YTD_label35 = opEx_YTD_label35;
+	}
+	public String getOpEx_YTD_label36() {
+		return opEx_YTD_label36;
+	}
+	public void setOpEx_YTD_label36(String opEx_YTD_label36) {
+		this.opEx_YTD_label36 = opEx_YTD_label36;
+	}
+	public String getOpEx_YTD_label38() {
+		return opEx_YTD_label38;
+	}
+	public void setOpEx_YTD_label38(String opEx_YTD_label38) {
+		this.opEx_YTD_label38 = opEx_YTD_label38;
+	}
+	public String getOpEx_YTD_label39() {
+		return opEx_YTD_label39;
+	}
+	public void setOpEx_YTD_label39(String opEx_YTD_label39) {
+		this.opEx_YTD_label39 = opEx_YTD_label39;
+	}
 	public String getOpRev_otherRev_label() {
 		return opRev_otherRev_label;
 	}
@@ -8821,6 +9164,12 @@ public class Root{
 	}
 	public void setOpEx_YTD35(String opEx_YTD35) {
 		this.opEx_YTD35 = opEx_YTD35;
+	}
+    public String getOpEx_YTD36() {
+		return opEx_YTD36;
+	}
+	public void setOpEx_YTD36(String opEx_YTD36) {
+		this.opEx_YTD36 = opEx_YTD36;
 	}
 	public String getOpEx_YTD4() {
 		return opEx_YTD4;

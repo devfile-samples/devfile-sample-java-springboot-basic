@@ -1934,198 +1934,198 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdExp dirCareCostExp = new LtcYtdExp();
 			dirCareCostExp.setExpYtd(root.getOpEx_YTD1());
 			dirCareCostExp.setExpNotes(root.getOpEx_note1());
-			dirCareCostExp.setExpName("Direct Care");
-			dirCareCostExp.setExpType("Staffing Cost (1A)");
+			dirCareCostExp.setExpName(root.getOpEx_YTD_label1());
+			dirCareCostExp.setExpType(root.getOpEx_1A_label());
 			dirCareCostExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp foodCostExp = new LtcYtdExp();
 			foodCostExp.setExpYtd(root.getOpEx_YTD2());
 			foodCostExp.setExpNotes(root.getOpEx_note2());
-			foodCostExp.setExpName("Food Services");
-			foodCostExp.setExpType("Staffing Cost (1A)");
+			foodCostExp.setExpName(root.getOpEx_YTD_label2());
+			foodCostExp.setExpType(root.getOpEx_1A_label());
 			foodCostExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp ldryServExp = new LtcYtdExp();
 			ldryServExp.setExpYtd(root.getOpEx_YTD3());
 			ldryServExp.setExpNotes(root.getOpEx_note3());
-			ldryServExp.setExpName("Laundry Services");
-			ldryServExp.setExpType("Staffing Cost (1A)");
+			ldryServExp.setExpName(root.getOpEx_YTD_label3());
+			ldryServExp.setExpType(root.getOpEx_1A_label());
 			ldryServExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp housekeepingCostExp = new LtcYtdExp();
 			housekeepingCostExp.setExpYtd(root.getOpEx_YTD4());
 			housekeepingCostExp.setExpNotes(root.getOpEx_note4());
-			housekeepingCostExp.setExpName("Housekeeping Services");
-			housekeepingCostExp.setExpType("Staffing Cost (1A)");
+			housekeepingCostExp.setExpName(root.getOpEx_YTD_label4());
+			housekeepingCostExp.setExpType(root.getOpEx_1A_label());
 			housekeepingCostExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp adminServCostExp = new LtcYtdExp();
 			adminServCostExp.setExpYtd(root.getOpEx_YTD5());
 			adminServCostExp.setExpNotes(root.getOpEx_note5());
-			adminServCostExp.setExpName("Administration Services");
-			adminServCostExp.setExpType("Staffing Cost (1A)");
+			adminServCostExp.setExpName(root.getOpEx_YTD_label5());
+			adminServCostExp.setExpType(root.getOpEx_1A_label());
 			adminServCostExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp plantMainOpStaffExp = new LtcYtdExp();
 			plantMainOpStaffExp.setExpYtd(root.getOpEx_YTD6());
 			plantMainOpStaffExp.setExpNotes(root.getOpEx_note6());
-			plantMainOpStaffExp.setExpName("Plant Maintenance & Op. Staffing");
-			plantMainOpStaffExp.setExpType("Staffing Cost (1A)");
+			plantMainOpStaffExp.setExpName(root.getOpEx_YTD_label6());
+			plantMainOpStaffExp.setExpType(root.getOpEx_1A_label());
 			plantMainOpStaffExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			// subtotal before salary and wages - omitted
 			LtcYtdExp salWagRecvExp = new LtcYtdExp();
 			salWagRecvExp.setExpYtd(root.getOpEx_YTD7());
 			salWagRecvExp.setExpNotes(root.getOpEx_note7());
-			salWagRecvExp.setExpName("Salary & wages recovered");
-			salWagRecvExp.setExpType("Staffing Cost (1A)");
+			salWagRecvExp.setExpName(root.getOpEx_YTD_label7());
+			salWagRecvExp.setExpType(root.getOpEx_1A_label());
 			salWagRecvExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp salWagAccExp = new LtcYtdExp();
 			salWagAccExp.setExpYtd(root.getOpEx_YTD8());
 			salWagAccExp.setExpNotes(root.getOpEx_note8());
-			salWagAccExp.setExpName("Salaries and wages accrual");
-			salWagAccExp.setExpType("Staffing Cost (1A)");
+			salWagAccExp.setExpName(root.getOpEx_YTD_label8());
+			salWagAccExp.setExpType(root.getOpEx_1A_label());
 			salWagAccExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp othLabCostExp = new LtcYtdExp();
 			othLabCostExp.setExpYtd(root.getOpEx_YTD9());
 			othLabCostExp.setExpNotes(root.getOpEx_note9());
-			othLabCostExp.setExpName("Salary & wages recovered");
-			othLabCostExp.setExpType("Staffing Cost (1A)");
+			othLabCostExp.setExpName(root.getOpEx_YTD_label9());
+			othLabCostExp.setExpType(root.getOpEx_1A_label());
 			othLabCostExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			// subtotal
 
 			LtcYtdExp bnftCostExp = new LtcYtdExp();
 			bnftCostExp.setExpYtd(root.getOpEx_YTD10());
-			bnftCostExp.setExpNotes(root.getOpEx_YTD10());
-			bnftCostExp.setExpName("Benefits");
-			bnftCostExp.setExpType("Staffing Cost (1B)");
+			bnftCostExp.setExpNotes(root.getOpEx_note10());
+			bnftCostExp.setExpName(root.getOpEx_YTD_label10());
+			bnftCostExp.setExpType(root.getOpEx_1B_label());
 			bnftCostExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp sickSevrnceAccExp = new LtcYtdExp();
 			sickSevrnceAccExp.setExpYtd(root.getOpEx_YTD11());
-			sickSevrnceAccExp.setExpNotes(root.getOpEx_YTD11());
-			sickSevrnceAccExp.setExpName("Sick, severance and other accrual");
-			sickSevrnceAccExp.setExpType("Staffing Cost (1B)");
+			sickSevrnceAccExp.setExpNotes(root.getOpEx_note11());
+			sickSevrnceAccExp.setExpName(root.getOpEx_YTD_label11());
+			sickSevrnceAccExp.setExpType(root.getOpEx_1B_label());
 			sickSevrnceAccExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			// subtotal
 			LtcYtdExp buildingRentExp = new LtcYtdExp();
 			buildingRentExp.setExpYtd(root.getOpEx_YTD12());
-			buildingRentExp.setExpNotes(root.getOpEx_YTD12());
-			buildingRentExp.setExpName("Building rent/lease cost");
-			buildingRentExp.setExpType("Property Cost");
+			buildingRentExp.setExpNotes(root.getOpEx_note12());
+			buildingRentExp.setExpName(root.getOpEx_YTD_label12());
+			buildingRentExp.setExpType(root.getOpEx_2_label());
 			buildingRentExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp intrstMortgageLngTrmExp = new LtcYtdExp();
 			intrstMortgageLngTrmExp.setExpYtd(root.getOpEx_YTD13());
-			intrstMortgageLngTrmExp.setExpNotes(root.getOpEx_YTD13());
-			intrstMortgageLngTrmExp.setExpName("Interest on mortgage or long-term debt");
-			intrstMortgageLngTrmExp.setExpType("Property Cost");
+			intrstMortgageLngTrmExp.setExpNotes(root.getOpEx_note13());
+			intrstMortgageLngTrmExp.setExpName(root.getOpEx_YTD_label13());
+			intrstMortgageLngTrmExp.setExpType(root.getOpEx_2_label());
 			intrstMortgageLngTrmExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp propertyTaxesExp = new LtcYtdExp();
 			propertyTaxesExp.setExpYtd(root.getOpEx_YTD14());
-			propertyTaxesExp.setExpNotes(root.getOpEx_YTD14());
-			propertyTaxesExp.setExpName("Property taxes");
-			propertyTaxesExp.setExpType("Property Cost");
+			propertyTaxesExp.setExpNotes(root.getOpEx_note14());
+			propertyTaxesExp.setExpName(root.getOpEx_YTD_label14());
+			propertyTaxesExp.setExpType(root.getOpEx_2_label());
 			propertyTaxesExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp mntnceExp = new LtcYtdExp();
 			mntnceExp.setExpYtd(root.getOpEx_YTD15());
-			mntnceExp.setExpNotes(root.getOpEx_YTD15());
-			mntnceExp.setExpName("Maintenance & Repairs - building, ground & equip.");
-			mntnceExp.setExpType("Property Cost");
+			mntnceExp.setExpNotes(root.getOpEx_note15());
+			mntnceExp.setExpName(root.getOpEx_YTD_label15());
+			mntnceExp.setExpType(root.getOpEx_2_label());
 			mntnceExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp suppliesExp = new LtcYtdExp();
 			suppliesExp.setExpYtd(root.getOpEx_YTD16());
-			suppliesExp.setExpNotes(root.getOpEx_YTD16());
-			suppliesExp.setExpName("Supplies ~ for building, ground & equipment");
-			suppliesExp.setExpType("Property Cost");
+			suppliesExp.setExpNotes(root.getOpEx_note16());
+			suppliesExp.setExpName(root.getOpEx_YTD_label16());
+			suppliesExp.setExpType(root.getOpEx_2_label());
 			suppliesExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp utilitiesExp = new LtcYtdExp();
 			utilitiesExp.setExpYtd(root.getOpEx_YTD17());
-			utilitiesExp.setExpNotes(root.getOpEx_YTD17());
-			utilitiesExp.setExpName("Utilities");
-			utilitiesExp.setExpType("Property Cost");
+			utilitiesExp.setExpNotes(root.getOpEx_note17());
+			utilitiesExp.setExpName(root.getOpEx_YTD_label17());
+			utilitiesExp.setExpType(root.getOpEx_2_label());
 			utilitiesExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp wasteMgmntExp = new LtcYtdExp();
 			wasteMgmntExp.setExpYtd(root.getOpEx_YTD18());
-			wasteMgmntExp.setExpNotes(root.getOpEx_YTD18());
-			wasteMgmntExp.setExpName("Waste management");
-			wasteMgmntExp.setExpType("Property Cost");
+			wasteMgmntExp.setExpNotes(root.getOpEx_note18());
+			wasteMgmntExp.setExpName(root.getOpEx_YTD_label18());
+			wasteMgmntExp.setExpType(root.getOpEx_2_label());
 			wasteMgmntExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp resTranServExp = new LtcYtdExp();
 			resTranServExp.setExpYtd(root.getOpEx_YTD19());
-			resTranServExp.setExpNotes(root.getOpEx_YTD19());
-			resTranServExp.setExpName("Resident Transportation Services");
-			resTranServExp.setExpType("Property Cost");
+			resTranServExp.setExpNotes(root.getOpEx_note19());
+			resTranServExp.setExpName(root.getOpEx_YTD_label19());
+			resTranServExp.setExpType(root.getOpEx_2_label());
 			resTranServExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp othExp = new LtcYtdExp();
 			othExp.setExpYtd(root.getOpEx_YTD20());
-			othExp.setExpNotes(root.getOpEx_YTD20());
-			othExp.setExpName("Others - Operating");
-			othExp.setExpType("Property Cost");
+			othExp.setExpNotes(root.getOpEx_note20());
+			othExp.setExpName(root.getOpEx_YTD_label20());
+			othExp.setExpType(root.getOpEx_2_label());
 			othExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			// skipping subtotal for now
 
 			LtcYtdExp medSupExp = new LtcYtdExp();
 			medSupExp.setExpYtd(root.getOpEx_YTD21());
-			medSupExp.setExpNotes(root.getOpEx_YTD21());
-			medSupExp.setExpName("Medical Supplies");
-			medSupExp.setExpType("Supplies");
+			medSupExp.setExpNotes(root.getOpEx_note21());
+			medSupExp.setExpName(root.getOpEx_YTD_label21());
+			medSupExp.setExpType(root.getOpEx_3_label());
 			medSupExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp drgsPharmaExp = new LtcYtdExp();
 			drgsPharmaExp.setExpYtd(root.getOpEx_YTD22());
-			drgsPharmaExp.setExpNotes(root.getOpEx_YTD22());
-			drgsPharmaExp.setExpName("Drugs & Pharmaceutical");
-			drgsPharmaExp.setExpType("Supplies");
+			drgsPharmaExp.setExpNotes(root.getOpEx_note22());
+			drgsPharmaExp.setExpName(root.getOpEx_YTD_label22());
+			drgsPharmaExp.setExpType(root.getOpEx_3_label());
 			drgsPharmaExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp rawFoodCostExp = new LtcYtdExp();
 			rawFoodCostExp.setExpYtd(root.getOpEx_YTD23());
-			rawFoodCostExp.setExpNotes(root.getOpEx_YTD23());
-			rawFoodCostExp.setExpName("Raw Food Cost (inc. dietary supplement costs)");
-			rawFoodCostExp.setExpType("Supplies");
+			rawFoodCostExp.setExpNotes(root.getOpEx_note23());
+			rawFoodCostExp.setExpName(root.getOpEx_YTD_label23());
+			rawFoodCostExp.setExpType(root.getOpEx_3_label());
 			rawFoodCostExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			
 
 			LtcYtdExp dietSupExp = new LtcYtdExp();
 			dietSupExp.setExpYtd(root.getOpEx_YTD24());
-			dietSupExp.setExpNotes(root.getOpEx_YTD24());
-			dietSupExp.setExpName("Dietary supplies");
-			dietSupExp.setExpType("Supplies");
+			dietSupExp.setExpNotes(root.getOpEx_note24());
+			dietSupExp.setExpName(root.getOpEx_YTD_label24());
+			dietSupExp.setExpType(root.getOpEx_3_label());
 			dietSupExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp ldrySupExp = new LtcYtdExp();
 			ldrySupExp.setExpYtd(root.getOpEx_YTD25());
-			ldrySupExp.setExpNotes(root.getOpEx_YTD25());
-			ldrySupExp.setExpName("Laundry supplies");
-			ldrySupExp.setExpType("Supplies");
+			ldrySupExp.setExpNotes(root.getOpEx_note25());
+			ldrySupExp.setExpName(root.getOpEx_YTD_label25());
+			ldrySupExp.setExpType(root.getOpEx_3_label());
 			ldrySupExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp houseSupExp = new LtcYtdExp();
 			houseSupExp.setExpYtd(root.getOpEx_YTD26());
-			houseSupExp.setExpNotes(root.getOpEx_YTD26());
-			houseSupExp.setExpName("Housekeeping supplies");
-			houseSupExp.setExpType("Supplies");
+			houseSupExp.setExpNotes(root.getOpEx_note26());
+			houseSupExp.setExpName(root.getOpEx_YTD_label26());
+			houseSupExp.setExpType(root.getOpEx_3_label());
 			houseSupExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp othSupExp = new LtcYtdExp();
 			othSupExp.setExpYtd(root.getOpEx_YTD27());
-			othSupExp.setExpNotes(root.getOpEx_YTD27());
-			othSupExp.setExpName("Others - Specify");
-			othSupExp.setExpType("Supplies");
+			othSupExp.setExpNotes(root.getOpEx_note27());
+			othSupExp.setExpName(root.getOpEx_YTD_label27());
+			othSupExp.setExpType(root.getOpEx_3_label());
 			othSupExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			Collections.addAll(ltcYtdExp, dirCareCostExp, foodCostExp, ldryServExp, housekeepingCostExp,
@@ -2138,37 +2138,37 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			/* Subtotals */
 			LtcYtdExpSubTotals staffCost1ASubtotal = new LtcYtdExpSubTotals();
 			staffCost1ASubtotal.setConfirmationId(root.getForm().getConfirmationId());
-			staffCost1ASubtotal.setExpType("Staffing Type (1A)");
+			staffCost1ASubtotal.setExpType(root.getOpEx_1A_label());
 			staffCost1ASubtotal.setSubTotalRevYtd(root.getOpEx_sum11());
 
 			LtcYtdExpSubTotals staffCost1BSubtotal = new LtcYtdExpSubTotals();
 			staffCost1BSubtotal.setConfirmationId(root.getForm().getConfirmationId());
-			staffCost1BSubtotal.setExpType("Staffing Type (1B)");
+			staffCost1BSubtotal.setExpType(root.getOpEx_1B_label());
 			staffCost1BSubtotal.setSubTotalRevYtd(root.getOpEx_sum12());
 
 			LtcYtdExpSubTotals propertyCostSubtotal = new LtcYtdExpSubTotals();
 			propertyCostSubtotal.setConfirmationId(root.getForm().getConfirmationId());
-			propertyCostSubtotal.setExpType("Property Cost (2)");
+			propertyCostSubtotal.setExpType(root.getOpEx_2_label());
 			propertyCostSubtotal.setSubTotalRevYtd(root.getOpEx_sum13());
 
 			LtcYtdExpSubTotals suppliesSubtotal = new LtcYtdExpSubTotals();
 			suppliesSubtotal.setConfirmationId(root.getForm().getConfirmationId());
-			suppliesSubtotal.setExpType("Supplies");
+			suppliesSubtotal.setExpType(root.getOpEx_3_label());
 			suppliesSubtotal.setSubTotalRevYtd(root.getOpEx_sum14());
 
 			LtcYtdExpSubTotals adminCostSubtotal = new LtcYtdExpSubTotals();
 			adminCostSubtotal.setConfirmationId(root.getForm().getConfirmationId());
-			adminCostSubtotal.setExpType("Administration Cost - non-wages (4)");
+			adminCostSubtotal.setExpType(root.getOpEx_4_label());
 			adminCostSubtotal.setSubTotalRevYtd(root.getOpEx_sum15());
 
 			LtcYtdExpSubTotals operatingCostSubtotal = new LtcYtdExpSubTotals();
 			operatingCostSubtotal.setConfirmationId(root.getForm().getConfirmationId());
-			operatingCostSubtotal.setExpType("Operating Expenses");
-			operatingCostSubtotal.setSubTotalRevYtd(root.getOpEx_sum16());
+			operatingCostSubtotal.setExpType(root.getOpEx_data_total_label());
+			operatingCostSubtotal.setSubTotalRevYtd(root.getOpEx_data_total());
 
 			LtcYtdExpSubTotals nonOperationalExpSubtotal = new LtcYtdExpSubTotals();
 			nonOperationalExpSubtotal.setConfirmationId(root.getForm().getConfirmationId());
-			nonOperationalExpSubtotal.setExpType("Non-operating expenses");
+			nonOperationalExpSubtotal.setExpType(root.getNopEx_label());
 			nonOperationalExpSubtotal.setSubTotalRevYtd(root.getNopEx_sum11());
 
 			Collections.addAll(ltcYtdExpSubttls,staffCost1ASubtotal,staffCost1BSubtotal,propertyCostSubtotal,suppliesSubtotal,adminCostSubtotal,operatingCostSubtotal,
@@ -2179,13 +2179,13 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			/*LtcYtdDep */
 			LtcYtdDep buildingDep = new LtcYtdDep();
 			buildingDep.setConfirmationId(root.getForm().getConfirmationId());
-			buildingDep.setDepName("Building");
+			buildingDep.setDepName(root.getOpEx_YTD_label38());
 			buildingDep.setDepYtd(root.getOpEx_item138());
 			buildingDep.setDepNotes(root.getOpEx_note38());
 
 			LtcYtdDep furnitureEquipmentDep = new LtcYtdDep();
 			furnitureEquipmentDep.setConfirmationId(root.getForm().getConfirmationId());
-			furnitureEquipmentDep.setDepName("Furniture & equipment");
+			furnitureEquipmentDep.setDepName(root.getOpEx_YTD_label39());
 			furnitureEquipmentDep.setDepYtd(root.getOpEx_item139());
 			furnitureEquipmentDep.setDepNotes(root.getOpEx_note39());
 
@@ -2205,59 +2205,66 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			
 			LtcYtdExp offExpAdCost = new LtcYtdExp();
 			offExpAdCost.setExpYtd(root.getOpEx_YTD28());
-			offExpAdCost.setExpNotes(root.getOpEx_YTD28());
-			offExpAdCost.setExpName("Office Expense");
-			offExpAdCost.setExpType("Administration Cost - non-wages");
+			offExpAdCost.setExpNotes(root.getOpEx_note28());
+			offExpAdCost.setExpName(root.getOpEx_YTD_label28());
+			offExpAdCost.setExpType(root.getOpEx_4_label());
 			offExpAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp mgmntAdCost = new LtcYtdExp();
 			mgmntAdCost.setExpYtd(root.getOpEx_YTD29());
-			mgmntAdCost.setExpNotes(root.getOpEx_YTD29());
-			mgmntAdCost.setExpName("Management Fees");
-			mgmntAdCost.setExpType("Administration Cost - non-wages");
+			mgmntAdCost.setExpNotes(root.getOpEx_note29());
+			mgmntAdCost.setExpName(root.getOpEx_YTD_label29());
+			mgmntAdCost.setExpType(root.getOpEx_4_label());
 			mgmntAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp hoAllocpAdCost = new LtcYtdExp();
 			hoAllocpAdCost.setExpYtd(root.getOpEx_YTD30());
-			hoAllocpAdCost.setExpNotes(root.getOpEx_YTD30());
-			hoAllocpAdCost.setExpName("Head Office Allocation (non-compensation)");
-			hoAllocpAdCost.setExpType("Administration Cost - non-wages");
+			hoAllocpAdCost.setExpNotes(root.getOpEx_note30());
+			hoAllocpAdCost.setExpName(root.getOpEx_YTD_label30());
+			hoAllocpAdCost.setExpType(root.getOpEx_4_label());
 			hoAllocpAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp accAdCost = new LtcYtdExp();
 			accAdCost.setExpYtd(root.getOpEx_YTD31());
-			accAdCost.setExpNotes(root.getOpEx_YTD31());
-			accAdCost.setExpName("Accreditation Costs");
-			accAdCost.setExpType("Administration Cost - non-wages");
+			accAdCost.setExpNotes(root.getOpEx_note31());
+			accAdCost.setExpName(root.getOpEx_YTD_label31());
+			accAdCost.setExpType(root.getOpEx_4_label());
 			accAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp apaAdCost = new LtcYtdExp();
 			apaAdCost.setExpYtd(root.getOpEx_YTD32());
-			apaAdCost.setExpNotes(root.getOpEx_YTD32());
-			apaAdCost.setExpName("Association dues, professional fees, audit fees");
-			apaAdCost.setExpType("Administration Cost - non-wages");
+			apaAdCost.setExpNotes(root.getOpEx_note32());
+			apaAdCost.setExpName(root.getOpEx_YTD_label32());
+			apaAdCost.setExpType(root.getOpEx_4_label());
 			apaAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp insuranceAdCost = new LtcYtdExp();
 			insuranceAdCost.setExpYtd(root.getOpEx_YTD33());
-			insuranceAdCost.setExpNotes(root.getOpEx_YTD33());
-			insuranceAdCost.setExpName("Insurances (for property & liability)");
-			insuranceAdCost.setExpType("Administration Cost - non-wages");
+			insuranceAdCost.setExpNotes(root.getOpEx_note33());
+			insuranceAdCost.setExpName(root.getOpEx_YTD_label33());
+			insuranceAdCost.setExpType(root.getOpEx_4_label());
 			insuranceAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp othSupAdCost = new LtcYtdExp();
 			othSupAdCost.setExpYtd(root.getOpEx_YTD34());
-			othSupAdCost.setExpNotes(root.getOpEx_YTD34());
-			othSupAdCost.setExpName("Other - Administration and supplies");
-			othSupAdCost.setExpType("Administration Cost - non-wages");
+			othSupAdCost.setExpNotes(root.getOpEx_note34());
+			othSupAdCost.setExpName(root.getOpEx_YTD_label34());
+			othSupAdCost.setExpType(root.getOpEx_4_label());
 			othSupAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp othAdCost = new LtcYtdExp();
 			othAdCost.setExpYtd(root.getOpEx_YTD35());
-			othAdCost.setExpNotes(root.getOpEx_YTD35());
-			othAdCost.setExpName("Other - Specify");
-			othAdCost.setExpType("Administration Cost - non-wages");
+			othAdCost.setExpNotes(root.getOpEx_note35());
+			othAdCost.setExpName(root.getOpEx_YTD_label35());
+			othAdCost.setExpType(root.getOpEx_4_label());
 			othAdCost.setConfirmationId(root.getForm().getConfirmationId());
+
+			LtcYtdExp othAdCostOther = new LtcYtdExp();
+			othAdCostOther.setExpYtd(root.getOpEx_YTD36());
+			othAdCostOther.setExpNotes(root.getOpEx_note36());
+			othAdCostOther.setExpName(root.getOpEx_YTD_label36());
+			othAdCostOther.setExpType(root.getOpEx_4_label());
+			othAdCostOther.setConfirmationId(root.getForm().getConfirmationId());
 
 			
 			/* Non operating expense */
@@ -2282,8 +2289,8 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 					sickSevrnceAccExp, buildingRentExp, intrstMortgageLngTrmExp, propertyTaxesExp, mntnceExp,
 					suppliesExp, utilitiesExp, wasteMgmntExp, resTranServExp, othExp, medSupExp, rawFoodCostExp,
 					drgsPharmaExp, dietSupExp, ldrySupExp, houseSupExp, othSupExp, offExpAdCost, mgmntAdCost,
-					hoAllocpAdCost, accAdCost, apaAdCost, insuranceAdCost, othSupAdCost, othAdCost, dirCareNonOpExpMortgage,
-					dirCareNonOpExpOther);
+					hoAllocpAdCost, accAdCost, apaAdCost, insuranceAdCost, othSupAdCost, othAdCost, othAdCostOther,
+					dirCareNonOpExpMortgage, dirCareNonOpExpOther);
 
 			// subtotal
 			// total operating expenses
