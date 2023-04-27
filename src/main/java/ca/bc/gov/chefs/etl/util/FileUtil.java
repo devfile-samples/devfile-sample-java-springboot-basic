@@ -168,7 +168,7 @@ public class FileUtil {
 		fileProperties.setEncDirForThisExchange(Constants.ENC_FILE_PATH.get(directoryKey));
 		ICsvListWriter listWriter = null;
 		List<String> filesGenerated = new ArrayList<String>();
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyMMddHHmmss");
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
 		String dateTime = LocalDateTime.now().format(formatter);
 	
 		for (Map.Entry<String, List<List<String>>> entry : map.entrySet()) {
