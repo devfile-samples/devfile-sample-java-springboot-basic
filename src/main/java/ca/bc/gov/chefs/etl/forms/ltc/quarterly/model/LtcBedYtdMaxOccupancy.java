@@ -3,6 +3,8 @@ package ca.bc.gov.chefs.etl.forms.ltc.quarterly.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
 import ca.bc.gov.chefs.etl.util.CSVUtil;
@@ -23,19 +25,19 @@ public class LtcBedYtdMaxOccupancy implements IModel {
 		return confirmationId;
 	}
 	public void setConfirmationId(String confirmationId) {
-		this.confirmationId = confirmationId;
+		this.confirmationId = StringUtils.defaultIfEmpty(confirmationId, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getQuarterInventory() {
 		return quarterInventory;
 	}
 	public void setQuarterInventory(String quarterInventory) {
-		this.quarterInventory = quarterInventory;
+		this.quarterInventory = StringUtils.defaultIfEmpty(quarterInventory, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getBedFundingType() {
 		return bedFundingType;
 	}
 	public void setBedFundingType(String bedFundingType) {
-		this.bedFundingType = bedFundingType;
+		this.bedFundingType = StringUtils.defaultIfEmpty(bedFundingType, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getBedSubype() {
 		return bedSubype;
@@ -47,25 +49,25 @@ public class LtcBedYtdMaxOccupancy implements IModel {
 		return CSVUtil.getFormattedDate(startDate);
 	}
 	public void setStartDate(String startDate) {
-		this.startDate = startDate;
+		this.startDate = StringUtils.defaultIfEmpty(startDate, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getEndDate() {
 		return CSVUtil.getFormattedDate(endDate);
 	}
 	public void setEndDate(String endDate) {
-		this.endDate = endDate;
+		this.endDate = StringUtils.defaultIfEmpty(endDate, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getNumberOfBeds() {
 		return numberOfBeds;
 	}
 	public void setNumberOfBeds(String numberOfBeds) {
-		this.numberOfBeds = numberOfBeds;
+		this.numberOfBeds = StringUtils.defaultIfEmpty(numberOfBeds, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getMaximumBedDays() {
 		return maximumBedDays;
 	}
 	public void setMaximumBedDays(String maximumBedDays) {
-		this.maximumBedDays = maximumBedDays;
+		this.maximumBedDays = StringUtils.defaultIfEmpty(maximumBedDays, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	
 	public String getNotes() {

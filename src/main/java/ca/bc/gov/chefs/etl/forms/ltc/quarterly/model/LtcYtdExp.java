@@ -20,25 +20,25 @@ public class LtcYtdExp implements IModel {
 		return confirmationId;
 	}
 	public void setConfirmationId(String confirmationId) {
-		this.confirmationId = confirmationId;
+		this.confirmationId = StringUtils.defaultIfEmpty(confirmationId, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getExpType() {
 		return expType;
 	}
 	public void setExpType(String expType) {
-		this.expType = expType;
+		this.expType = StringUtils.defaultIfEmpty(expType, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getExpName() {
 		return expName;
 	}
 	public void setExpName(String expName) {
-		this.expName = expName;
+		this.expName = StringUtils.defaultIfEmpty(expName, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getExpYtd() {
-		return StringUtils.isBlank(expYtd) ? "0" : expYtd;
+		return expYtd;
 	}
 	public void setExpYtd(String expYtd) {
-		this.expYtd = expYtd;
+		this.expYtd = StringUtils.defaultIfEmpty(expYtd, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getExpNotes() {
 		return expNotes;

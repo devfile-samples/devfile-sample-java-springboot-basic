@@ -30,19 +30,19 @@ public class LtcYtdDirectCareCost implements IModel{
 		return confirmationId;
 	}
 	public void setConfirmationId(String confirmationId) {
-		this.confirmationId = confirmationId;
+		this.confirmationId = StringUtils.defaultIfEmpty(confirmationId, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getDirCareCostType() {
 		return dirCareCostType;
 	}
 	public void setDirCareCostType(String dirCareCostType) {
-		this.dirCareCostType = dirCareCostType;
+		this.dirCareCostType = StringUtils.defaultIfEmpty(dirCareCostType, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getDirCareCostName() {
 		return dirCareCostName;
 	}
 	public void setDirCareCostName(String dirCareCostName) {
-		this.dirCareCostName = dirCareCostName;
+		this.dirCareCostName = StringUtils.defaultIfEmpty(dirCareCostName, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getDirCareOtherValue() {
 		return dirCareOtherValue;
@@ -54,19 +54,19 @@ public class LtcYtdDirectCareCost implements IModel{
 		return StringUtils.isBlank(dirCareCostProdHrsRegYtd) ? "0" : dirCareCostProdHrsRegYtd;
 	}
 	public void setDirCareCostProdHrsRegYtd(String dirCareCostProdHrsRegYtd) {
-		this.dirCareCostProdHrsRegYtd = dirCareCostProdHrsRegYtd;
+		this.dirCareCostProdHrsRegYtd = StringUtils.defaultIfEmpty(dirCareCostProdHrsRegYtd, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getDirCareCostProdHrsOtYtd() {
 		return StringUtils.isBlank(dirCareCostProdHrsOtYtd) ? "0" : dirCareCostProdHrsOtYtd;
 	}
 	public void setDirCareCostProdHrsOtYtd(String dirCareCostProdHrsOtYtd) {
-		this.dirCareCostProdHrsOtYtd = dirCareCostProdHrsOtYtd;
+		this.dirCareCostProdHrsOtYtd = StringUtils.defaultIfEmpty(dirCareCostProdHrsOtYtd, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getDirCareCostProdHrsContractedYtd() {
 		return StringUtils.isBlank(dirCareCostProdHrsContractedYtd) ? "0" : dirCareCostProdHrsContractedYtd;
 	}
 	public void setDirCareCostProdHrsContractedYtd(String dirCareCostProdHrsContractedYtd) {
-		this.dirCareCostProdHrsContractedYtd = dirCareCostProdHrsContractedYtd;
+		this.dirCareCostProdHrsContractedYtd = StringUtils.defaultIfEmpty(dirCareCostProdHrsContractedYtd, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getDirCareCostNonProdHrsVacYtd() {
 		return dirCareCostNonProdHrsVacYtd;

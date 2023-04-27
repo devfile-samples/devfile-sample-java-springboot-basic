@@ -20,25 +20,25 @@ public class LtcYtdRev implements IModel {
 		return confirmationId;
 	}
 	public void setConfirmationId(String confirmationId) {
-		this.confirmationId = confirmationId;
+		this.confirmationId = StringUtils.defaultIfEmpty(confirmationId, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getRevType() {
 		return revType;
 	}
 	public void setRevType(String revType) {
-		this.revType = revType;
+		this.revType = StringUtils.defaultIfEmpty(revType, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getRevName() {
 		return revName;
 	}
 	public void setRevName(String revName) {
-		this.revName = revName;
+		this.revName = StringUtils.defaultIfEmpty(revName, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getRevYTD() {
 		return StringUtils.isBlank(revYTD) ? "0" : revYTD;
 	}
 	public void setRevYTD(String revYTD) {
-		this.revYTD = revYTD;
+		this.revYTD = StringUtils.defaultIfEmpty(revYTD, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getRevNotes() {
 		return revNotes;

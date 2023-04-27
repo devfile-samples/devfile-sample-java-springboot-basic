@@ -23,45 +23,45 @@ public class LtcYtdCompHrs implements IModel {
 		return confirmationId;
 	}
 	public void setConfirmationId(String confirmationId) {
-		this.confirmationId = confirmationId;
+		this.confirmationId = StringUtils.defaultIfEmpty(confirmationId, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getCompHrsType() {
 		return compHrsType;
 	}
 	public void setCompHrsType(String compHrsType) {
-		this.compHrsType = compHrsType;
+		this.compHrsType = StringUtils.defaultIfEmpty(compHrsType, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getCompHrsName() {
 		return compHrsName;
 	}
 	public void setCompHrsName(String compHrsName) {
-		this.compHrsName = compHrsName;
+		this.compHrsName = StringUtils.defaultIfEmpty(compHrsName, Constants.DEFAULT_STRING_VALUE);
 	}
 	
 	public String getCompHrsStaffYtd() {
 		return StringUtils.isEmpty(compHrsStaffYtd) ? "0" : compHrsStaffYtd;
 	}
 	public void setCompHrsStaffYtd(String compHrsStaffYtd) {
-		this.compHrsStaffYtd = compHrsStaffYtd;
+		this.compHrsStaffYtd = StringUtils.defaultIfEmpty(compHrsStaffYtd, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getCompHrsContractServicesYtd() {
 		return compHrsContractServicesYtd.isBlank() ? "0" : compHrsContractServicesYtd;
 	}
 	public void setCompHrsContractServicesYtd(String compHrsContractServicesYtd) {
-		this.compHrsContractServicesYtd = compHrsContractServicesYtd;
+		this.compHrsContractServicesYtd = StringUtils.defaultIfEmpty(compHrsContractServicesYtd, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getCompHrsOfficeAllocYtd() {
 		return StringUtils.isEmpty(compHrsOfficeAllocYtd) ? "0" : compHrsOfficeAllocYtd;
 	}
 	public void setCompHrsOfficeAllocYtd(String compHrsOfficeAllocYtd) {
-		this.compHrsOfficeAllocYtd = compHrsOfficeAllocYtd;
+		this.compHrsOfficeAllocYtd = StringUtils.defaultIfEmpty(compHrsOfficeAllocYtd, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	
 	public String getCompTotalWorkedHrsYtd() {
 		return compTotalWorkedHrsYtd.isBlank() ? "0" : compTotalWorkedHrsYtd;
 	}
 	public void setCompTotalWorkedHrsYtd(String compTotalWorkedHrsYtd) {
-		this.compTotalWorkedHrsYtd = compTotalWorkedHrsYtd;
+		this.compTotalWorkedHrsYtd = StringUtils.defaultIfEmpty(compTotalWorkedHrsYtd, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	@Override
 	public String getFileName() {

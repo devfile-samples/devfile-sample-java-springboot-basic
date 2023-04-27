@@ -3,6 +3,9 @@ package ca.bc.gov.chefs.etl.forms.ltc.quarterly.model;
 import java.util.ArrayList;
 
 import java.util.List;
+
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
 import ca.bc.gov.chefs.etl.util.CSVUtil;
@@ -117,7 +120,7 @@ public class LtcYtdSubmission implements IModel {
 	}
 
 	public void setConfirmationId(String confirmationId) {
-		this.confirmationId = confirmationId;
+		this.confirmationId = StringUtils.defaultIfEmpty(confirmationId, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getSubmissionDate() {
@@ -125,7 +128,7 @@ public class LtcYtdSubmission implements IModel {
 	}
 
 	public void setSubmissionDate(String submissionDate) {
-		this.submissionDate = submissionDate;
+		this.submissionDate = StringUtils.defaultIfEmpty(submissionDate, Constants.DEFAULT_STRING_VALUE);;
 	}
 
 	public String getSubmittedBy() {
@@ -133,7 +136,7 @@ public class LtcYtdSubmission implements IModel {
 	}
 
 	public void setSubmittedBy(String submittedBy) {
-		this.submittedBy = submittedBy;
+		this.submittedBy = StringUtils.defaultIfEmpty(submittedBy, Constants.DEFAULT_STRING_VALUE);;
 	}
 
 	public String getPeriod() {
@@ -141,7 +144,7 @@ public class LtcYtdSubmission implements IModel {
 	}
 
 	public void setPeriod(String period) {
-		this.period = period;
+		this.period = StringUtils.defaultIfEmpty(period, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getNbTotalBeds() {
@@ -173,7 +176,7 @@ public class LtcYtdSubmission implements IModel {
 	}
 
 	public void setIsDeleted(String isDeleted) {
-		this.isDeleted = isDeleted;
+		this.isDeleted = StringUtils.defaultIfEmpty(isDeleted, Constants.DEFAULT_STRING_VALUE);;
 	}
 
 	public String getCCIMSID() {
@@ -181,7 +184,7 @@ public class LtcYtdSubmission implements IModel {
 	}
 
 	public void setCCIMSID(String cCIMSID) {
-		CCIMSID = cCIMSID;
+		CCIMSID = StringUtils.defaultIfEmpty(cCIMSID, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getSubmissionType() {
@@ -189,7 +192,7 @@ public class LtcYtdSubmission implements IModel {
 	}
 
 	public void setSubmissionType(String submissionType) {
-		this.submissionType = submissionType;
+		this.submissionType = StringUtils.defaultIfEmpty(submissionType, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public List<LtcBedYtdMaxOccupancy> getLtcBedYtdMaxOccupancy() {
@@ -373,7 +376,7 @@ public class LtcYtdSubmission implements IModel {
 	}
 
 	public void setSubmissionFy(String submissionFy) {
-		this.submissionFy = submissionFy;
+		this.submissionFy = StringUtils.defaultIfEmpty(submissionFy, Constants.DEFAULT_STRING_VALUE);;
 	}
 	public List<LtcYtdDep> getLtcYtdDep() {
 		return ltcYtdDep;
