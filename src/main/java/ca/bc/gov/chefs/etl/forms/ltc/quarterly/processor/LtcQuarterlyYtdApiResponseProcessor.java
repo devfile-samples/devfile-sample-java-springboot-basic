@@ -2307,7 +2307,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 				numOfBeds.setEndDate(maxOcp.getEndDate0());
 				numOfBeds.setNumberOfBeds(maxOcp.getNumberOfBeds());
 				numOfBeds.setMaximumBedDays(maxOcp.getMaximumBedDays());
-				// notes missing
+				numOfBeds.setNotes(maxOcp.getInventoryNotes());
 				if (maxOcp.getBedType()!=null && maxOcp.getBedType().equals(Constants.IN_SCOPE)) {
 					 numOfBeds.setBedSubype(maxOcp.getSubTypeIn());
 				} else if (maxOcp.getBedType()!=null && maxOcp.getBedType().equals(Constants.OUT_OF_SCOPE)) {
