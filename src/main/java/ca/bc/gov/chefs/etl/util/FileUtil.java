@@ -269,8 +269,8 @@ public class FileUtil {
 	* TODO This part is for testing purposes only, remove when done */
 
     private static PGPPrivateKey findSecretKey(long keyID) throws Exception, PGPException {
-		String privateKeyInPath = "src/main/resources/secret-Test.txt";
-		String password = "tbd";
+		String privateKeyInPath = PropertiesUtil.getValue(Constants.ENCRYPTION_SECRET_PATH);
+		String password = PropertiesUtil.getValue(Constants.ENCRYPTION_SECRET_PWD);
 		char[] passCode = password.toCharArray();
 		InputStream privateKeyIn = new BufferedInputStream(new FileInputStream(new File(privateKeyInPath)));
 		PGPSecretKeyRingCollection pgpSecretKeyRingCollection = new PGPSecretKeyRingCollection(PGPUtil.getDecoderStream(privateKeyIn)
