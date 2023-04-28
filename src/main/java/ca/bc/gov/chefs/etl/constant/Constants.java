@@ -86,6 +86,9 @@ public class Constants {
 	public static final String DATA_DIRECTORY = FileUtil.buildDirectoryPath(PROPERTIES_DATA_DIR);
 	public static final String ENCRYPTED_DATA_DIRECTORY = FileUtil.buildDirectoryPath(PROPERTIES_ENC_DATA_DIR);
 
+	public static final String ENCRYPTION_SECRET_PATH = "encryption-secret-path";
+	public static final String ENCRYPTION_SECRET_PWD = "encryption-secret-pwd";
+
 	public final static String PROPERTIES_LTC_FACILITY_DIR = "ltc-facility-dir";
 	public final static String LTC_FACILITY_DIR = FileUtil.getDirectoryName(PROPERTIES_LTC_FACILITY_DIR);
 	public static final String LTC_FACILITY_UNENCRYPTED_FP = FileUtil.buildDestinationPath(PROPERTIES_LTC_FACILITY_DIR, false);
