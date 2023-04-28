@@ -2308,13 +2308,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 				numOfBeds.setNumberOfBeds(maxOcp.getNumberOfBeds());
 				numOfBeds.setMaximumBedDays(maxOcp.getMaximumBedDays());
 				numOfBeds.setNotes(maxOcp.getInventoryNotes());
-				if (maxOcp.getBedType()!=null && maxOcp.getBedType().equals(Constants.IN_SCOPE)) {
-					 numOfBeds.setBedSubype(maxOcp.getSubTypeIn());
-				} else if (maxOcp.getBedType()!=null && maxOcp.getBedType().equals(Constants.OUT_OF_SCOPE)) {
-					numOfBeds.setBedSubype(maxOcp.getSubTypeOut());
-				} else {
-					numOfBeds.setBedSubype(maxOcp.getSubTypePrivate());
-				}
+				numOfBeds.setBedSubype(maxOcp.getSubTypeLabel());
 
 				ltcBedYtdMaxOccupancies.add(numOfBeds);
 
@@ -2410,21 +2404,15 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 				// bed grid
 				for (BedGrid1 maxOcp : root.getBedGrid1()) {
 					LtcBedYtdMaxOccupancy numOfBeds = new LtcBedYtdMaxOccupancy();
-					numOfBeds.setBedFundingType(maxOcp.getBedType());
+					numOfBeds.setBedFundingType(maxOcp.getBedType1());
 					numOfBeds.setConfirmationId(root.getForm().getConfirmationId());
 					numOfBeds.setStartDate(maxOcp.getStartDate1());
 					numOfBeds.setEndDate(maxOcp.getEndDate1());
-					numOfBeds.setNumberOfBeds(maxOcp.getNumberOfBeds());
-					numOfBeds.setMaximumBedDays(maxOcp.getMaximumBedDays());
+					numOfBeds.setNumberOfBeds(maxOcp.getNumberOfBeds1());
+					numOfBeds.setMaximumBedDays(maxOcp.getMaximumBedDays1());
 					numOfBeds.setQuarterInventory(root.getQuarter());
-					// notes missing
-					if (maxOcp.getBedType1()!=null && maxOcp.getBedType1().equals(Constants.IN_SCOPE)) {
-						numOfBeds.setBedSubype(maxOcp.getSubTypeIn());
-					} else if (maxOcp.getBedType1()!=null && maxOcp.getBedType1().equals(Constants.OUT_OF_SCOPE)) {
-						numOfBeds.setBedSubype(maxOcp.getSubTypeOut());
-					} else {
-						numOfBeds.setBedSubype(maxOcp.getSubTypePrivate() == null ? "" : maxOcp.getSubTypePrivate());
-					}
+					numOfBeds.setNotes(maxOcp.getQuarterNote1());
+					numOfBeds.setBedSubype(maxOcp.getSubTypeLabel());
 					ltcBedYtdMaxOccupancies.add(numOfBeds);
 				}
 
@@ -2513,21 +2501,15 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			case "q2":
 				for (BedGrid2 maxOcp : root.getBedGrid2()) {
 					LtcBedYtdMaxOccupancy numOfBeds = new LtcBedYtdMaxOccupancy();
-					numOfBeds.setBedFundingType(maxOcp.getBedType());
+					numOfBeds.setBedFundingType(maxOcp.getBedType2());
 					numOfBeds.setConfirmationId(root.getForm().getConfirmationId());
 					numOfBeds.setStartDate(maxOcp.getStartDate2());
 					numOfBeds.setEndDate(maxOcp.getEndDate2());
-					numOfBeds.setNumberOfBeds(maxOcp.getNumberOfBeds());
-					numOfBeds.setMaximumBedDays(maxOcp.getMaximumBedDays());
-					numOfBeds.setQuarterInventory("Q2");
-					// notes missing
-					if (maxOcp.getBedType2()!=null && maxOcp.getBedType2().equals(Constants.IN_SCOPE)) {
-						numOfBeds.setBedSubype(maxOcp.getSubTypeIn());
-					} else if (maxOcp.getBedType2()!=null && maxOcp.getBedType2().equals(Constants.OUT_OF_SCOPE)) {
-						numOfBeds.setBedSubype(maxOcp.getSubTypeOut());
-					} else {
-						numOfBeds.setBedSubype(maxOcp.getSubTypePrivate());
-					}
+					numOfBeds.setNumberOfBeds(maxOcp.getNumberOfBeds2());
+					numOfBeds.setMaximumBedDays(maxOcp.getMaximumBedDays2());
+					numOfBeds.setQuarterInventory(root.getQuarter());
+					numOfBeds.setNotes(maxOcp.getNotes2());
+					numOfBeds.setBedSubype(maxOcp.getSubTypeLabel());
 					ltcBedYtdMaxOccupancies.add(numOfBeds);
 				}
 				// Q2 July, August, September
@@ -2615,21 +2597,15 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			case "q3":
 				for (BedGrid3 maxOcp : root.getBedGrid3()) {
 					LtcBedYtdMaxOccupancy numOfBeds = new LtcBedYtdMaxOccupancy();
-					numOfBeds.setBedFundingType(maxOcp.getBedType());
+					numOfBeds.setBedFundingType(maxOcp.getBedType3());
 					numOfBeds.setConfirmationId(root.getForm().getConfirmationId());
 					numOfBeds.setStartDate(maxOcp.getStartDate3());
 					numOfBeds.setEndDate(maxOcp.getEndDate3());
-					numOfBeds.setNumberOfBeds(maxOcp.getNumberOfBeds());
-					numOfBeds.setMaximumBedDays(maxOcp.getMaximumBedDays());
+					numOfBeds.setNumberOfBeds(maxOcp.getNumberOfBeds3());
+					numOfBeds.setMaximumBedDays(maxOcp.getMaximumBedDays3());
 					numOfBeds.setQuarterInventory(root.getQuarter());
-					// notes missing
-					if (maxOcp.getBedType3()!=null && maxOcp.getBedType3().equals(Constants.IN_SCOPE)) {
-						numOfBeds.setBedSubype(maxOcp.getSubTypeIn());
-					} else if (maxOcp.getBedType3()!=null && maxOcp.getBedType3().equals(Constants.OUT_OF_SCOPE)) {
-						numOfBeds.setBedSubype(maxOcp.getSubTypeOut());
-					} else {
-						numOfBeds.setBedSubype(maxOcp.getSubTypePrivate());
-					}
+					numOfBeds.setNotes(maxOcp.getNotes3());
+					numOfBeds.setBedSubype(maxOcp.getSubTypeLabel());
 					ltcBedYtdMaxOccupancies.add(numOfBeds);
 				}
 
@@ -2708,21 +2684,15 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			case "q4":
 				for (BedGrid4 maxOcp : root.getBedGrid4()) {
 					LtcBedYtdMaxOccupancy numOfBeds = new LtcBedYtdMaxOccupancy();
-					numOfBeds.setBedFundingType(maxOcp.getBedType());
+					numOfBeds.setBedFundingType(maxOcp.getBedType4());
 					numOfBeds.setConfirmationId(root.getForm().getConfirmationId());
 					numOfBeds.setStartDate(maxOcp.getStartDate4());
 					numOfBeds.setEndDate(maxOcp.getEndDate4());
-					numOfBeds.setNumberOfBeds(maxOcp.getNumberOfBeds());
-					numOfBeds.setMaximumBedDays(maxOcp.getMaximumBedDays());
+					numOfBeds.setNumberOfBeds(maxOcp.getNumberOfBeds4());
+					numOfBeds.setMaximumBedDays(maxOcp.getMaximumBedDays4());
 					numOfBeds.setQuarterInventory(root.getQuarter());
-					// notes missing
-					if (maxOcp.getBedType4()!=null && maxOcp.getBedType4().equals(Constants.IN_SCOPE)) {
-						numOfBeds.setBedSubype(maxOcp.getSubTypeIn());
-					} else if (maxOcp.getBedType4()!=null && maxOcp.getBedType4().equals(Constants.OUT_OF_SCOPE)) {
-						numOfBeds.setBedSubype(maxOcp.getSubTypeOut());
-					} else {
-						numOfBeds.setBedSubype(maxOcp.getSubTypePrivate());
-					}
+					numOfBeds.setNotes(maxOcp.getNotes4());
+					numOfBeds.setBedSubype(maxOcp.getSubTypeLabel());
 					ltcBedYtdMaxOccupancies.add(numOfBeds);
 				}
 				LtcBedYtdOccupiedDaysTotals q4OccDaysSubttls = new LtcBedYtdOccupiedDaysTotals();
