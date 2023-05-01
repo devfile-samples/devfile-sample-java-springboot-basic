@@ -63,10 +63,10 @@ public class LtcYtdCompAddPos implements IModel{
 	}
 
 	public void determineAddPosContractedOutYtd() {
-		if(this.getAddPosLegalNameContractServiceYtd() != "" && this.getAddPosLegalNameContractServiceYtd() != null){
-			this.setAddPosContractedOutYtd("N");
+		if(this.addPosLegalNameContractServiceYtd != "" && this.addPosLegalNameContractServiceYtd != null){
+			this.setAddPosContractedOutYtd("Y");
 		}
-		this.setAddPosContractedOutYtd("Y");
+		this.setAddPosContractedOutYtd("N");
 	}
 	
 	@Override
