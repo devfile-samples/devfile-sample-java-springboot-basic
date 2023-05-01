@@ -2110,7 +2110,6 @@ public class Root{
 	public String opEx_YTD_label38;
 	@JsonProperty("opEx_YTD_label-39")
 	public String opEx_YTD_label39;
-	
 
 	public String getOpEx_1A_label() {
 		return opEx_1A_label;
