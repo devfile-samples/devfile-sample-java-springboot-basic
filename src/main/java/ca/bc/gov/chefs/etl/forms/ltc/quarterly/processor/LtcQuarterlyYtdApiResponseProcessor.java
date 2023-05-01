@@ -2207,7 +2207,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			offExpAdCost.setExpYtd(root.getOpEx_YTD28());
 			offExpAdCost.setExpNotes(root.getOpEx_note28());
 			offExpAdCost.setExpName(root.getOpEx_YTD_label28());
-			offExpAdCost.setExpType(root.getOpEx_4_label());
+			offExpAdCost.setExpType(root.getOpEx_3_label());
 			offExpAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdExp mgmntAdCost = new LtcYtdExp();
