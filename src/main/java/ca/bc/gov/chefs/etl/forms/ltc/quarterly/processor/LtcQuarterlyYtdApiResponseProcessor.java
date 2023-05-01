@@ -1528,7 +1528,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			accuredHrsTotals.setCompHrsTotalType(root.getCompH_accrued_label());
 			accuredHrsTotals.setTotalCompHrsStaffYTD(root.getCompH_accrued2());
 			accuredHrsTotals.setTotalCompHrsContractServicesYTD(root.getCompH_accrued3());
-			accuredHrsTotals.setTotalCompHrsOfficeAllocYTD(root.getCompH_accrued3());
+			accuredHrsTotals.setTotalCompHrsOfficeAllocYTD(root.getCompH_accrued4());
 			accuredHrsTotals.setTotalCompTotalWorkedHrsYTD(root.getCompH_accrued());
 			accuredHrsTotals.setConfirmationID(root.getForm().getConfirmationId());
 
