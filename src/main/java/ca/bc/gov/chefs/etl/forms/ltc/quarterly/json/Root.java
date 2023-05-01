@@ -1104,7 +1104,7 @@ public class Root{
     public String compH_sum24;
     @JsonProperty("compH_sum2-5")
     public String compH_sum25;
-    @JsonProperty("compH_sum13-1")
+    @JsonProperty("compH_sum3-1")
     public String compH_sum31;
     @JsonProperty("compH_sum3-2")
     public String compH_sum32;
