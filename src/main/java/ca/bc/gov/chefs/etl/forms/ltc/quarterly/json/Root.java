@@ -1598,7 +1598,7 @@ public class Root{
     public String opEx_YTD7;
     @JsonProperty("opEx_YTD-8")
     public String opEx_YTD8;
-    @JsonProperty("opEx_sum-9")
+    @JsonProperty("opEx_YTD-9")
     public String opEx_YTD9;
     public String opRev_note1;
     public String opRev_note10;
