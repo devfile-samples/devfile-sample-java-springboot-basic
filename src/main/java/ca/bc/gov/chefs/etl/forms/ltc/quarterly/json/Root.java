@@ -806,7 +806,7 @@ public class Root{
     public String compB_recovered1;
     public String compB_recovered2;
     public String compB_recovered3;
-    @JsonProperty("compB_sum11")
+    @JsonProperty("compB_sum1-1")
     public String compB_sum11;
     @JsonProperty("compB_sum1-2")
     public String compB_sum12;
