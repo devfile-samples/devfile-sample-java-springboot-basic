@@ -130,7 +130,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingRNProdH.setDirCareName(root.getNursing_label1());
 			nursingRNProdH.setDirCareProdHrsSubtotalYtd(root.getNursingProdH_calc1());
 			nursingRNProdH.setDirCareProdHrsTotalYtd(root.getNursingProdH_sub1());
-			nursingRNProdH.setDirCareTotalHrsPaidYtd(root.getNursingProdH_THP1());
+			nursingRNProdH.setDirCareTotalHrsPaidYtd(root.getNursingNProdH_THP1());
 			nursingRNProdH.setDirCareNonProdHrsTotalYtd(root.getNursingNProdH_calc1());
 
 			LtcYtdDirectCareHrs nursingLPNProdH = new LtcYtdDirectCareHrs();
@@ -145,7 +145,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingLPNProdH.setDirCareName(root.getNursing_label2());
 			nursingLPNProdH.setDirCareProdHrsSubtotalYtd(root.getNursingProdH_calc2());
 			nursingLPNProdH.setDirCareProdHrsTotalYtd(root.getNursingProdH_sub2());
-			nursingLPNProdH.setDirCareTotalHrsPaidYtd(root.getNursingProdH_THP2());
+			nursingLPNProdH.setDirCareTotalHrsPaidYtd(root.getNursingNProdH_THP2());
 			nursingLPNProdH.setDirCareNonProdHrsTotalYtd(root.getNursingNProdH_calc2());
 
 			
@@ -161,7 +161,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingHCAProdH.setDirCareName(root.getNursing_label3());
 			nursingHCAProdH.setDirCareProdHrsSubtotalYtd(root.getNursingProdH_calc3());
 			nursingHCAProdH.setDirCareProdHrsTotalYtd(root.getNursingProdH_sub3());
-			nursingHCAProdH.setDirCareTotalHrsPaidYtd(root.getNursingProdH_THP3());
+			nursingHCAProdH.setDirCareTotalHrsPaidYtd(root.getNursingNProdH_THP3());
 			nursingHCAProdH.setDirCareNonProdHrsTotalYtd(root.getNursingNProdH_calc3());
 
 			LtcYtdDirectCareHrs nursingOthProdH = new LtcYtdDirectCareHrs();
@@ -176,7 +176,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingOthProdH.setDirCareName(Constants.DC_HRS_OTHER);
 			nursingOthProdH.setDirCareProdHrsSubtotalYtd(root.getNursingProdH_calc4());
 			nursingOthProdH.setDirCareProdHrsTotalYtd(root.getNursingProdH_sub4());
-			nursingOthProdH.setDirCareTotalHrsPaidYtd(root.getNursingProdH_THP4());
+			nursingOthProdH.setDirCareTotalHrsPaidYtd(root.getNursingNProdH_THP4());
 			nursingOthProdH.setDirCareNonProdHrsTotalYtd(root.getNursingNProdH_calc4());
 			nursingOthProdH.setDirCareOtherValue(root.getNursing_label4());
 
@@ -195,7 +195,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedOTProfH.setDirCareName(root.getAlliedProf_label1());
 			alliedOTProfH.setDirCareProdHrsSubtotalYtd(root.getAlliedProfProdH_calc1());
 			alliedOTProfH.setDirCareProdHrsTotalYtd(root.getAlliedProfProdH_sub1());
-			alliedOTProfH.setDirCareTotalHrsPaidYtd(root.getAlliedProfProdH_THP1());
+			alliedOTProfH.setDirCareTotalHrsPaidYtd(root.getAlliedProfNProdH_THP1());
 			alliedOTProfH.setDirCareNonProdHrsTotalYtd(root.getAlliedProfNProdH_calc1());
 
 
@@ -211,7 +211,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedPTProfH.setDirCareName(root.getAlliedProf_label2());
 			alliedPTProfH.setDirCareProdHrsSubtotalYtd(root.getAlliedProfProdH_calc2());
 			alliedPTProfH.setDirCareProdHrsTotalYtd(root.getAlliedProfProdH_sub2());
-			alliedPTProfH.setDirCareTotalHrsPaidYtd(root.getAlliedProfProdH_THP2());
+			alliedPTProfH.setDirCareTotalHrsPaidYtd(root.getAlliedProfNProdH_THP2());
 			alliedPTProfH.setDirCareNonProdHrsTotalYtd(root.getAlliedProfNProdH_calc2());
 
 			LtcYtdDirectCareHrs alliedDTProfH = new LtcYtdDirectCareHrs();
@@ -226,7 +226,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedDTProfH.setDirCareName(root.getAlliedProf_label3());
 			alliedDTProfH.setDirCareProdHrsSubtotalYtd(root.getAlliedProfProdH_calc3());
 			alliedDTProfH.setDirCareProdHrsTotalYtd(root.getAlliedProfProdH_sub3());
-			alliedDTProfH.setDirCareTotalHrsPaidYtd(root.getAlliedProfProdH_THP3());
+			alliedDTProfH.setDirCareTotalHrsPaidYtd(root.getAlliedProfNProdH_THP3());
 			alliedDTProfH.setDirCareNonProdHrsTotalYtd(root.getAlliedProfNProdH_calc3());
 
 
@@ -242,7 +242,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedSWProfH.setDirCareName(root.getAlliedProf_label4());
 			alliedSWProfH.setDirCareProdHrsSubtotalYtd(root.getAlliedProfProdH_calc4());
 			alliedSWProfH.setDirCareProdHrsTotalYtd(root.getAlliedProfProdH_sub4());
-			alliedSWProfH.setDirCareTotalHrsPaidYtd(root.getAlliedProfProdH_THP4());
+			alliedSWProfH.setDirCareTotalHrsPaidYtd(root.getAlliedProfNProdH_THP4());
 			alliedSWProfH.setDirCareNonProdHrsTotalYtd(root.getAlliedProfNProdH_calc4());
 
 			LtcYtdDirectCareHrs alliedSLPProfH = new LtcYtdDirectCareHrs();
@@ -257,7 +257,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedSLPProfH.setDirCareName(root.getAlliedProf_label5());
 			alliedSLPProfH.setDirCareProdHrsSubtotalYtd(root.getAlliedProfProdH_calc5());
 			alliedSLPProfH.setDirCareProdHrsTotalYtd(root.getAlliedProfProdH_sub5());
-			alliedSLPProfH.setDirCareTotalHrsPaidYtd(root.getAlliedProfProdH_THP5());
+			alliedSLPProfH.setDirCareTotalHrsPaidYtd(root.getAlliedProfNProdH_THP5());
 			alliedSLPProfH.setDirCareNonProdHrsTotalYtd(root.getAlliedProfNProdH_calc5());
 
 			LtcYtdDirectCareHrs alliedRTProfH = new LtcYtdDirectCareHrs();
@@ -272,7 +272,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedRTProfH.setDirCareName(root.getAlliedProf_label6());
 			alliedRTProfH.setDirCareProdHrsSubtotalYtd(root.getAlliedProfProdH_calc6());
 			alliedRTProfH.setDirCareProdHrsTotalYtd(root.getAlliedProfProdH_sub6());
-			alliedRTProfH.setDirCareTotalHrsPaidYtd(root.getAlliedProfProdH_THP6());
+			alliedRTProfH.setDirCareTotalHrsPaidYtd(root.getAlliedProfNProdH_THP6());
 			alliedRTProfH.setDirCareNonProdHrsTotalYtd(root.getAlliedProfNProdH_calc6());
 			
 			LtcYtdDirectCareHrs alliedOTHProfH = new LtcYtdDirectCareHrs();
@@ -287,7 +287,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedOTHProfH.setDirCareName(Constants.DC_HRS_OTHER);
 			alliedOTHProfH.setDirCareProdHrsSubtotalYtd(root.getAlliedProfProdH_calc7());
 			alliedOTHProfH.setDirCareProdHrsTotalYtd(root.getAlliedProfProdH_sub7());
-			alliedOTHProfH.setDirCareTotalHrsPaidYtd(root.getAlliedProfProdH_THP7());
+			alliedOTHProfH.setDirCareTotalHrsPaidYtd(root.getAlliedProfNProdH_THP7());
 			alliedOTHProfH.setDirCareNonProdHrsTotalYtd(root.getAlliedProfNProdH_calc7());
 			alliedOTHProfH.setDirCareOtherValue(root.getAlliedProf_label7());
 
@@ -304,7 +304,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedNPRTProfH.setDirCareName(root.getAlliedNP_label1());
 			alliedNPRTProfH.setDirCareProdHrsSubtotalYtd(root.getAlliedNPProdH_calc1());
 			alliedNPRTProfH.setDirCareProdHrsTotalYtd(root.getAlliedNPProdH_sub1());
-			alliedNPRTProfH.setDirCareTotalHrsPaidYtd(root.getAlliedNPProdH_THP1());
+			alliedNPRTProfH.setDirCareTotalHrsPaidYtd(root.getAlliedNPNProdH_THP1());
 			alliedNPRTProfH.setDirCareNonProdHrsTotalYtd(root.getAlliedNPNProdH_calc1());
 
 
@@ -320,7 +320,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedNPRAProfH.setDirCareName(root.getAlliedNP_label2());
 			alliedNPRAProfH.setDirCareProdHrsSubtotalYtd(root.getAlliedNPProdH_calc2());
 			alliedNPRAProfH.setDirCareProdHrsTotalYtd(root.getAlliedNPProdH_sub2());
-			alliedNPRAProfH.setDirCareTotalHrsPaidYtd(root.getAlliedNPProdH_THP2());
+			alliedNPRAProfH.setDirCareTotalHrsPaidYtd(root.getAlliedNPNProdH_THP2());
 			alliedNPRAProfH.setDirCareNonProdHrsTotalYtd(root.getAlliedNPNProdH_calc2());
 
 
@@ -336,7 +336,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedNPAWProfH.setDirCareName(root.getAlliedNP_label3());
 			alliedNPAWProfH.setDirCareProdHrsSubtotalYtd(root.getAlliedNPProdH_calc3());
 			alliedNPAWProfH.setDirCareProdHrsTotalYtd(root.getAlliedNPProdH_sub3());
-			alliedNPAWProfH.setDirCareTotalHrsPaidYtd(root.getAlliedNPProdH_THP3());
+			alliedNPAWProfH.setDirCareTotalHrsPaidYtd(root.getAlliedNPNProdH_THP3());
 			alliedNPAWProfH.setDirCareNonProdHrsTotalYtd(root.getAlliedNPNProdH_calc3());
 
 
@@ -352,7 +352,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedNPMTProfH.setDirCareName(root.getAlliedNP_label4());
 			alliedNPMTProfH.setDirCareProdHrsSubtotalYtd(root.getAlliedNPProdH_calc4());
 			alliedNPMTProfH.setDirCareProdHrsTotalYtd(root.getAlliedNPProdH_sub4());
-			alliedNPMTProfH.setDirCareTotalHrsPaidYtd(root.getAlliedNPProdH_THP4());
+			alliedNPMTProfH.setDirCareTotalHrsPaidYtd(root.getAlliedNPNProdH_THP4());
 			alliedNPMTProfH.setDirCareNonProdHrsTotalYtd(root.getAlliedNPNProdH_calc4());
 
 
@@ -368,7 +368,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedNPATProfH.setDirCareName(root.getAlliedNP_label5());
 			alliedNPATProfH.setDirCareProdHrsSubtotalYtd(root.getAlliedNPProdH_calc5());
 			alliedNPATProfH.setDirCareProdHrsTotalYtd(root.getAlliedNPProdH_sub5());
-			alliedNPATProfH.setDirCareTotalHrsPaidYtd(root.getAlliedNPProdH_THP5());
+			alliedNPATProfH.setDirCareTotalHrsPaidYtd(root.getAlliedNPNProdH_THP5());
 			alliedNPATProfH.setDirCareNonProdHrsTotalYtd(root.getAlliedNPNProdH_calc5());
 
 			LtcYtdDirectCareHrs alliedNPOTHProfH = new LtcYtdDirectCareHrs();
@@ -383,7 +383,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedNPOTHProfH.setDirCareName(Constants.DC_HRS_OTHER);
 			alliedNPOTHProfH.setDirCareProdHrsSubtotalYtd(root.getAlliedNPProdH_calc6());
 			alliedNPOTHProfH.setDirCareProdHrsTotalYtd(root.getAlliedNPProdH_sub6());
-			alliedNPOTHProfH.setDirCareTotalHrsPaidYtd(root.getAlliedNPProdH_THP6());
+			alliedNPOTHProfH.setDirCareTotalHrsPaidYtd(root.getAlliedNPNProdH_THP6());
 			alliedNPOTHProfH.setDirCareNonProdHrsTotalYtd(root.getAlliedNPNProdH_calc6());
 			alliedNPOTHProfH.setDirCareOtherValue(root.getAlliedNP_label6());
 
