@@ -409,7 +409,9 @@ public class Root{
     public String alliedProfPercentage3;
     public String alliedProfPercentage4;
     public String alliedProfPercentage5;
-    public String alliedProfProdC_calc1;
+    public String alliedProfPercentage6;
+    public String alliedProfPercentage7;
+	public String alliedProfProdC_calc1;
     public String alliedProfProdC_calc2;
     public String alliedProfProdC_calc3;
     public String alliedProfProdC_calc4;
@@ -543,7 +545,9 @@ public class Root{
     public String alliedProfProvider3;
     public String alliedProfProvider4;
     public String alliedProfProvider5;
-    public String alliedProfStaffRate_total;
+    public String alliedProfProvider6;
+    public String alliedProfProvider7;
+	public String alliedProfStaffRate_total;
     public String alliedProfStaffRate1;
     public String alliedProfStaffRate2;
     public String alliedProfStaffRate3;
@@ -4472,6 +4476,18 @@ public class Root{
 	public void setAlliedProfPercentage5(String alliedProfPercentage5) {
 		this.alliedProfPercentage5 = alliedProfPercentage5;
 	}
+	public String getAlliedProfPercentage6() {
+		return alliedProfPercentage6;
+	}
+	public void setAlliedProfPercentage6(String alliedProfPercentage6) {
+		this.alliedProfPercentage6 = alliedProfPercentage6;
+	}
+	public String getAlliedProfPercentage7() {
+		return alliedProfPercentage7;
+	}
+	public void setAlliedProfPercentage7(String alliedProfPercentage7) {
+		this.alliedProfPercentage7 = alliedProfPercentage7;
+	}
 	public String getAlliedProfProdC_calc1() {
 		return alliedProfProdC_calc1;
 	}
@@ -4933,6 +4949,18 @@ public class Root{
 	}
 	public void setAlliedProfProvider5(String alliedProfProvider5) {
 		this.alliedProfProvider5 = alliedProfProvider5;
+	}
+	public String getAlliedProfProvider6() {
+		return alliedProfProvider6;
+	}
+	public void setAlliedProfProvider6(String alliedProfProvider6) {
+		this.alliedProfProvider6 = alliedProfProvider6;
+	}
+	public String getAlliedProfProvider7() {
+		return alliedProfProvider7;
+	}
+	public void setAlliedProfProvider7(String alliedProfProvider7) {
+		this.alliedProfProvider7 = alliedProfProvider7;
 	}
 	public String getAlliedProfStaffRate_total() {
 		return alliedProfStaffRate_total;

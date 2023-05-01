@@ -1604,24 +1604,24 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedProfSLPAddPos.setConfirmationId(root.getForm().getConfirmationId());
 			alliedProfSLPAddPos.setAddPosType(root.getAlliedProf_label_CSP());
 			alliedProfSLPAddPos.setAddPosName(root.getAlliedProf_label_CSP5());
-			alliedProfSLPAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedProfProvider4());
-			alliedProfSLPAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedProfPercentage4());
+			alliedProfSLPAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedProfProvider5());
+			alliedProfSLPAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedProfPercentage5());
 			alliedProfSLPAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedProfRTAddPos = new LtcYtdCompAddPos();
 			alliedProfRTAddPos.setConfirmationId(root.getForm().getConfirmationId());
 			alliedProfRTAddPos.setAddPosType(root.getAlliedProf_label_CSP());
 			alliedProfRTAddPos.setAddPosName(root.getAlliedProf_label_CSP6());
-			alliedProfRTAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedProfProvider4());
-			alliedProfRTAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedProfPercentage4());
+			alliedProfRTAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedProfProvider6());
+			alliedProfRTAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedProfPercentage6());
 			alliedProfRTAddPos.determineAddPosContractedOutYtd();
 
 			LtcYtdCompAddPos alliedProfOTHAddPos = new LtcYtdCompAddPos();
 			alliedProfOTHAddPos.setConfirmationId(root.getForm().getConfirmationId());
 			alliedProfOTHAddPos.setAddPosType(root.getAlliedProf_label_CSP());
 			alliedProfOTHAddPos.setAddPosName(Constants.POS_TYPE_OTHER);
-			alliedProfOTHAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedProfProvider5());
-			alliedProfOTHAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedProfPercentage5());
+			alliedProfOTHAddPos.setAddPosLegalNameContractServiceYtd(root.getAlliedProfProvider7());
+			alliedProfOTHAddPos.setAddPosPercentServiceContractOutYtd(root.getAlliedProfPercentage7());
 			alliedProfOTHAddPos.setAddPosAnotherName(root.getAlliedProf_label_CSP7());
 			alliedProfOTHAddPos.determineAddPosContractedOutYtd();
 
