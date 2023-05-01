@@ -1683,41 +1683,49 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompBenefits empInsBenefit = new LtcYtdCompBenefits();
 			empInsBenefit.setBenefitsAmountYtd(root.getBenefit_value1());
 			empInsBenefit.setBenefitsType(root.getBenefit_value_label1());
+			empInsBenefit.setBenefitsPercentageAlloc(root.getBenefit_percentage1());
 			empInsBenefit.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdCompBenefits canPenPlnBenefit = new LtcYtdCompBenefits();
 			canPenPlnBenefit.setBenefitsAmountYtd(root.getBenefit_value2());
 			canPenPlnBenefit.setBenefitsType(root.getBenefit_value_label2());
+			canPenPlnBenefit.setBenefitsPercentageAlloc(root.getBenefit_percentage2());
 			canPenPlnBenefit.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdCompBenefits wrkrCompBoardBenefit = new LtcYtdCompBenefits();
 			wrkrCompBoardBenefit.setBenefitsAmountYtd(root.getBenefit_value3());
 			wrkrCompBoardBenefit.setBenefitsType(root.getBenefit_value_label3());
+			wrkrCompBoardBenefit.setBenefitsPercentageAlloc(root.getBenefit_percentage3());
 			wrkrCompBoardBenefit.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdCompBenefits empHlthTaxBenefit = new LtcYtdCompBenefits();
 			empHlthTaxBenefit.setBenefitsAmountYtd(root.getBenefit_value4());
 			empHlthTaxBenefit.setBenefitsType(root.getBenefit_value_label4());
+			empHlthTaxBenefit.setBenefitsPercentageAlloc(root.getBenefit_percentage4());
 			empHlthTaxBenefit.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdCompBenefits penPlanBenefit = new LtcYtdCompBenefits();
 			penPlanBenefit.setBenefitsAmountYtd(root.getBenefit_value5());
 			penPlanBenefit.setBenefitsType(root.getBenefit_value_label5());
+			penPlanBenefit.setBenefitsPercentageAlloc(root.getBenefit_percentage5());
 			penPlanBenefit.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdCompBenefits exHlthDntlBenefit = new LtcYtdCompBenefits();
 			exHlthDntlBenefit.setBenefitsAmountYtd(root.getBenefit_value6());
 			exHlthDntlBenefit.setBenefitsType(root.getBenefit_value_label6());
+			exHlthDntlBenefit.setBenefitsPercentageAlloc(root.getBenefit_percentage6());
 			exHlthDntlBenefit.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdCompBenefits grpLifeBenefit = new LtcYtdCompBenefits();
 			grpLifeBenefit.setBenefitsAmountYtd(root.getBenefit_value7());
 			grpLifeBenefit.setBenefitsType(root.getBenefit_value_label7());
+			grpLifeBenefit.setBenefitsPercentageAlloc(root.getBenefit_percentage7());
 			grpLifeBenefit.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcYtdCompBenefits otherBenefit = new LtcYtdCompBenefits();
 			otherBenefit.setBenefitsAmountYtd(root.getBenefit_value8());
 			otherBenefit.setBenefitsType(root.getBenefit_value_label8());
+			otherBenefit.setBenefitsPercentageAlloc(root.getBenefit_percentage8());
 			otherBenefit.setConfirmationId(root.getForm().getConfirmationId());
 
 			Collections.addAll(ltcYtdCompBenefits, empInsBenefit, canPenPlnBenefit, wrkrCompBoardBenefit,
