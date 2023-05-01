@@ -906,7 +906,7 @@ public class Root{
     public String compH_item120;
     @JsonProperty("compH_item1-21")
     public String compH_item121;
-    @JsonProperty("compH_item1-1-22")
+    @JsonProperty("compH_item1-22")
     public String compH_item122;
     @JsonProperty("compH_item1-23")
     public String compH_item123;
