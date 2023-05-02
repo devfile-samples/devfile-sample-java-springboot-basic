@@ -143,6 +143,7 @@ public class LtcYtdDirectCareHrsSubTotals implements IModel{
 		elements.add(this.getSubTotalDirCareProdHrsTotalYTD());
 		elements.add(this.getSubTotalDirCareNonProdHrsVacYTD());
 		elements.add(this.getSubTotalDirCareNonProdHrsSickYTD());
+		elements.add(this.getSubTotalDirCareNonProdHrsOtherServYTD());
 		elements.add(this.getSubTotalDirCareNonProdHrsTotalYTD());
 		elements.add(this.getSubTotalDirCareTotalHrsPaidYTD());
 		return elements;
