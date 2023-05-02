@@ -2386,7 +2386,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcBedYtdMaxOccupancyTotals ytdPrivateMaxBedOccupancy = new LtcBedYtdMaxOccupancyTotals();
 			ytdPrivateMaxBedOccupancy.setConfirmationID(root.getForm().getConfirmationId());
 			ytdPrivateMaxBedOccupancy.setOccupancyType("YTD Maximum Bed Occupancy");
-			ytdPrivateMaxBedOccupancy.setBedFundingType("In-Scope Max. Beds Days");
+			ytdPrivateMaxBedOccupancy.setBedFundingType("Private Max Beds Days");
 			ytdPrivateMaxBedOccupancy.setTotalBedQuarter1(root.getyTDMaxPrivateQ1());
 			ytdPrivateMaxBedOccupancy.setTotalBedQuarter2(root.getyTDMaxPrivateQ2());
 			ytdPrivateMaxBedOccupancy.setTotalBedQuarter3(root.getyTDMaxPrivateQ3());
@@ -2396,7 +2396,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcBedYtdMaxOccupancyTotals ytdTotalMaxBedOccupancy = new LtcBedYtdMaxOccupancyTotals();
 			ytdTotalMaxBedOccupancy.setConfirmationID(root.getForm().getConfirmationId());
 			ytdTotalMaxBedOccupancy.setOccupancyType("YTD Maximum Bed Occupancy");
-			ytdTotalMaxBedOccupancy.setBedFundingType("In-Scope Max. Beds Days");
+			ytdTotalMaxBedOccupancy.setBedFundingType("Total Max Bed Days");
 			ytdTotalMaxBedOccupancy.setTotalBedQuarter1(root.getyTDMaxTotalQ1());
 			ytdTotalMaxBedOccupancy.setTotalBedQuarter2(root.getyTDMaxTotalQ2());
 			ytdTotalMaxBedOccupancy.setTotalBedQuarter3(root.getyTDMaxTotalQ3());
