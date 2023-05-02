@@ -771,10 +771,10 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingCareCostSubtotals.setDirCareType(root.getNursing_label());
 			nursingCareCostSubtotals.setSubTotalDirCareCostProdHrsRegularYTD(root.getNursingProdC_sum11());
 			nursingCareCostSubtotals.setSubTotalDirCareCostProdHrsOTYTD(root.getNursingProdC_sum21());
-			nursingCareCostSubtotals.setSubTotalDirCareCostProdHrsSubtotalYTD(root.getNursingProdC_calc1());
+			nursingCareCostSubtotals.setSubTotalDirCareCostProdHrsSubtotalYTD(root.getNursingProdC_calcsum1());
 			nursingCareCostSubtotals.setSubTotalDirCareCostProdHrsContServYTD(root.getNursingProdCCS_subsum1());
 			nursingCareCostSubtotals.setSubTotalDirCareCostProdHrsTotalYTD(root.getNursingProdC_subsum1());
-			nursingCareCostSubtotals.setSubTotalDirCareCostTotalHrsPaidYTD(root.getNursingProdC_sum11());
+			nursingCareCostSubtotals.setSubTotalDirCareCostTotalHrsPaidYTD(root.getNursingCost_total());
 			nursingCareCostSubtotals.setSubTotalDirCareCostNonProdHrsVacYTD(root.getNursingNProdC_sum11());
 			nursingCareCostSubtotals.setSubTotalDirCareCostNonProdHrsSickYTD(root.getNursingNProdC_sum21());
 			nursingCareCostSubtotals.setSubTotalDirCareCostNonProdHrsOtherServYTD(root.getNursingNProdC_sum31());
@@ -787,10 +787,10 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedCareCostSubtotals.setDirCareType(root.getAlliedProf_label());
 			alliedCareCostSubtotals.setSubTotalDirCareCostProdHrsRegularYTD(root.getAlliedProfProdC_sum11());
 			alliedCareCostSubtotals.setSubTotalDirCareCostProdHrsOTYTD(root.getAlliedProfProdC_sum21());
-			alliedCareCostSubtotals.setSubTotalDirCareCostProdHrsSubtotalYTD(root.getAlliedProfProdC_calc1());
+			alliedCareCostSubtotals.setSubTotalDirCareCostProdHrsSubtotalYTD(root.getAlliedProfProdC_calcsum1());
 			alliedCareCostSubtotals.setSubTotalDirCareCostProdHrsContServYTD(root.getAlliedProfProdCCS_subsum1());
 			alliedCareCostSubtotals.setSubTotalDirCareCostProdHrsTotalYTD(root.getAlliedProfProdC_subsum1());
-			alliedCareCostSubtotals.setSubTotalDirCareCostTotalHrsPaidYTD(root.getAlliedProfProdC_sum11());
+			alliedCareCostSubtotals.setSubTotalDirCareCostTotalHrsPaidYTD(root.getAlliedProfCost_total());
 			alliedCareCostSubtotals.setSubTotalDirCareCostNonProdHrsVacYTD(root.getAlliedProfNProdC_sum11());
 			alliedCareCostSubtotals.setSubTotalDirCareCostNonProdHrsSickYTD(root.getAlliedNProdC_sum21());
 			alliedCareCostSubtotals.setSubTotalDirCareCostNonProdHrsOtherServYTD(root.getAlliedProfNProdC_sum31());
@@ -803,10 +803,10 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedNProfCareCostSubtotals.setDirCareType(root.getAlliedNP_label());
 			alliedNProfCareCostSubtotals.setSubTotalDirCareCostProdHrsRegularYTD(root.getAlliedNPProdC_sum11());
 			alliedNProfCareCostSubtotals.setSubTotalDirCareCostProdHrsOTYTD(root.getAlliedNPProdC_sum21());
-			alliedNProfCareCostSubtotals.setSubTotalDirCareCostProdHrsSubtotalYTD(root.getAlliedNPProdC_calc1());
+			alliedNProfCareCostSubtotals.setSubTotalDirCareCostProdHrsSubtotalYTD(root.getAlliedNPProdC_calcsum1());
 			alliedNProfCareCostSubtotals.setSubTotalDirCareCostProdHrsContServYTD(root.getAlliedNPProdCCS_subsum1());
 			alliedNProfCareCostSubtotals.setSubTotalDirCareCostProdHrsTotalYTD(root.getAlliedNPProdC_subsum1());
-			alliedNProfCareCostSubtotals.setSubTotalDirCareCostTotalHrsPaidYTD(root.getAlliedNPProdC_sum11());
+			alliedNProfCareCostSubtotals.setSubTotalDirCareCostTotalHrsPaidYTD(root.getAlliedNPCost_total());
 			alliedNProfCareCostSubtotals.setSubTotalDirCareCostNonProdHrsVacYTD(root.getAlliedNPNProdC_sum11());
 			alliedNProfCareCostSubtotals.setSubTotalDirCareCostNonProdHrsSickYTD(root.getAlliedNPNProdC_sum21());
 			alliedNProfCareCostSubtotals.setSubTotalDirCareCostNonProdHrsOtherServYTD(root.getAlliedNPNProdC_sum31());
