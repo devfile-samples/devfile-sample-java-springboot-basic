@@ -2367,40 +2367,40 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			ytdInScopeMaxBedOccupancy.setConfirmationID(root.getForm().getConfirmationId());
 			ytdInScopeMaxBedOccupancy.setOccupancyType("YTD Maximum Bed Occupancy");
 			ytdInScopeMaxBedOccupancy.setBedFundingType("In-Scope Max. Beds Days");
-			ytdInScopeMaxBedOccupancy.setTotalBedQuarter1(root.getyTDMaxInScopeQ1());
-			ytdInScopeMaxBedOccupancy.setTotalBedQuarter2(root.getyTDMaxInScopeQ2());
-			ytdInScopeMaxBedOccupancy.setTotalBedQuarter3(root.getyTDMaxInScopeQ3());
-			ytdInScopeMaxBedOccupancy.setTotalBedQuarter4(root.getyTDMaxInScopeQ4());
+			ytdInScopeMaxBedOccupancy.setTotalBedQuarter1(root.getInScopeBedTotal1());
+			ytdInScopeMaxBedOccupancy.setTotalBedQuarter2(root.getInScopeBedTotal2());
+			ytdInScopeMaxBedOccupancy.setTotalBedQuarter3(root.getInScopeBedTotal3());
+			ytdInScopeMaxBedOccupancy.setTotalBedQuarter4(root.getInScopeBedTotal4());
 			ytdInScopeMaxBedOccupancy.setTotalBedDays(root.getInScopeBedTotalYTD());
 
 			LtcBedYtdMaxOccupancyTotals ytdOutOfScopeMaxBedOccupancy = new LtcBedYtdMaxOccupancyTotals();
 			ytdOutOfScopeMaxBedOccupancy.setConfirmationID(root.getForm().getConfirmationId());
 			ytdOutOfScopeMaxBedOccupancy.setOccupancyType("YTD Maximum Bed Occupancy");
 			ytdOutOfScopeMaxBedOccupancy.setBedFundingType("Out of Scope Max Beds Days");
-			ytdOutOfScopeMaxBedOccupancy.setTotalBedQuarter1(root.getyTDMaxOutScopeQ1());
-			ytdOutOfScopeMaxBedOccupancy.setTotalBedQuarter2(root.getyTDMaxOutScopeQ2());
-			ytdOutOfScopeMaxBedOccupancy.setTotalBedQuarter3(root.getyTDMaxOutScopeQ3());
-			ytdOutOfScopeMaxBedOccupancy.setTotalBedQuarter4(root.getyTDMaxOutScopeQ4());
+			ytdOutOfScopeMaxBedOccupancy.setTotalBedQuarter1(root.getOutScopeBedTotal1());
+			ytdOutOfScopeMaxBedOccupancy.setTotalBedQuarter2(root.getOutScopeBedTotal2());
+			ytdOutOfScopeMaxBedOccupancy.setTotalBedQuarter3(root.getOutScopeBedTotal3());
+			ytdOutOfScopeMaxBedOccupancy.setTotalBedQuarter4(root.getOutScopeBedTotal4());
 			ytdOutOfScopeMaxBedOccupancy.setTotalBedDays(root.getOutScopeBedTotalYTD());
 
 			LtcBedYtdMaxOccupancyTotals ytdPrivateMaxBedOccupancy = new LtcBedYtdMaxOccupancyTotals();
 			ytdPrivateMaxBedOccupancy.setConfirmationID(root.getForm().getConfirmationId());
 			ytdPrivateMaxBedOccupancy.setOccupancyType("YTD Maximum Bed Occupancy");
 			ytdPrivateMaxBedOccupancy.setBedFundingType("Private Max Beds Days");
-			ytdPrivateMaxBedOccupancy.setTotalBedQuarter1(root.getyTDMaxPrivateQ1());
-			ytdPrivateMaxBedOccupancy.setTotalBedQuarter2(root.getyTDMaxPrivateQ2());
-			ytdPrivateMaxBedOccupancy.setTotalBedQuarter3(root.getyTDMaxPrivateQ3());
-			ytdPrivateMaxBedOccupancy.setTotalBedQuarter4(root.getyTDMaxPrivateQ4());
+			ytdPrivateMaxBedOccupancy.setTotalBedQuarter1(root.getPrivateBedTotal1());
+			ytdPrivateMaxBedOccupancy.setTotalBedQuarter2(root.getPrivateBedTotal2());
+			ytdPrivateMaxBedOccupancy.setTotalBedQuarter3(root.getPrivateBedTotal3());
+			ytdPrivateMaxBedOccupancy.setTotalBedQuarter4(root.getPrivateBedTotal4());
 			ytdPrivateMaxBedOccupancy.setTotalBedDays(root.getPrivateBedTotalYTD());
 
 			LtcBedYtdMaxOccupancyTotals ytdTotalMaxBedOccupancy = new LtcBedYtdMaxOccupancyTotals();
 			ytdTotalMaxBedOccupancy.setConfirmationID(root.getForm().getConfirmationId());
 			ytdTotalMaxBedOccupancy.setOccupancyType("YTD Maximum Bed Occupancy");
 			ytdTotalMaxBedOccupancy.setBedFundingType("Total Max Bed Days");
-			ytdTotalMaxBedOccupancy.setTotalBedQuarter1(root.getyTDMaxTotalQ1());
-			ytdTotalMaxBedOccupancy.setTotalBedQuarter2(root.getyTDMaxTotalQ2());
-			ytdTotalMaxBedOccupancy.setTotalBedQuarter3(root.getyTDMaxTotalQ3());
-			ytdTotalMaxBedOccupancy.setTotalBedQuarter4(root.getyTDMaxTotalQ4());
+			ytdTotalMaxBedOccupancy.setTotalBedQuarter1(root.getTotalBed1());
+			ytdTotalMaxBedOccupancy.setTotalBedQuarter2(root.getTotalBed2());
+			ytdTotalMaxBedOccupancy.setTotalBedQuarter3(root.getTotalBed3());
+			ytdTotalMaxBedOccupancy.setTotalBedQuarter4(root.getTotalBed4());
 			ytdTotalMaxBedOccupancy.setTotalBedDays(root.getTotalBedYTD());
 
 			Collections.addAll(ltcBedYtdMaxOccTtls,plannedInScopeOccupancy,plannedOutOfScopeOccupancy,plannedPrivateOccupancy,plannedTotalMaxBedOccupancy,ytdTotalMaxBedOccupancy,ytdInScopeMaxBedOccupancy,ytdOutOfScopeMaxBedOccupancy,ytdPrivateMaxBedOccupancy);
