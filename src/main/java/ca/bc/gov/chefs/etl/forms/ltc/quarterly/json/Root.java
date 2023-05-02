@@ -516,7 +516,7 @@ public class Root{
     public String alliedProfProdH_sub6;
     public String alliedProfProdH_sub7;
 	public String alliedProfProdH_subsum1;
-    @JsonProperty("alliedProfProdH_sum11")
+    @JsonProperty("alliedProfProdH_sum1-1")
     public String alliedProfProdH_sum11;
     @JsonProperty("alliedProfProdH_sum2-1")
     public String alliedProfProdH_sum21;

@@ -402,7 +402,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingDirCareHrsSubTotal.setSubTotalDirCareProdHrsSubtotalYTD(root.getNursingProdH_calcsum1());
 			nursingDirCareHrsSubTotal.setSubTotalDirCareProdHrsContServYTD(root.getNursingProdHCS_subsum1());
 			nursingDirCareHrsSubTotal.setSubTotalDirCareProdHrsTotalYTD(root.getNursingProdH_subsum1());
-			nursingDirCareHrsSubTotal.setSubTotalDirCareTotalHrsPaidYTD(root.getNursingProdH_THPsum1());
+			nursingDirCareHrsSubTotal.setSubTotalDirCareTotalHrsPaidYTD(root.getNursingNProdH_THPsum1());
 			nursingDirCareHrsSubTotal.setSubTotalDirCareNonProdHrsVacYTD(root.getNursingNProdH_sum11());
 			nursingDirCareHrsSubTotal.setSubTotalDirCareNonProdHrsSickYTD(root.getNursingNProdH_sum21());
 			nursingDirCareHrsSubTotal.setSubTotalDirCareNonProdHrsOtherServYTD(root.getNursingNProdH_sum31());
@@ -418,7 +418,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedDirCareHrsSubTotal.setSubTotalDirCareProdHrsSubtotalYTD(root.getAlliedProfProdH_calcsum1());
 			alliedDirCareHrsSubTotal.setSubTotalDirCareProdHrsContServYTD(root.getAlliedProfProdHCS_subsum1());
 			alliedDirCareHrsSubTotal.setSubTotalDirCareProdHrsTotalYTD(root.getAlliedProfProdH_subsum1());
-			alliedDirCareHrsSubTotal.setSubTotalDirCareTotalHrsPaidYTD(root.getAlliedProfProdH_THPsum1());
+			alliedDirCareHrsSubTotal.setSubTotalDirCareTotalHrsPaidYTD(root.getAlliedProfNProdH_THPsum1());
 			alliedDirCareHrsSubTotal.setSubTotalDirCareNonProdHrsVacYTD(root.getAlliedProfNProdH_sum11());
 			alliedDirCareHrsSubTotal.setSubTotalDirCareNonProdHrsSickYTD(root.getAlliedNProdH_sum21());
 			alliedDirCareHrsSubTotal.setSubTotalDirCareNonProdHrsOtherServYTD(root.getAlliedProfNProdH_sum31());
@@ -432,7 +432,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedNPDirCareHrsSubTotal.setSubTotalDirCareProdHrsSubtotalYTD(root.getAlliedNPProdH_calcsum1());
 			alliedNPDirCareHrsSubTotal.setSubTotalDirCareProdHrsContServYTD(root.getAlliedNPProdHCS_subsum1());
 			alliedNPDirCareHrsSubTotal.setSubTotalDirCareProdHrsTotalYTD(root.getAlliedNPProdH_subsum1());
-			alliedNPDirCareHrsSubTotal.setSubTotalDirCareTotalHrsPaidYTD(root.getAlliedNPProdH_THPsum1());
+			alliedNPDirCareHrsSubTotal.setSubTotalDirCareTotalHrsPaidYTD(root.getAlliedNPNProdH_THPsum1());
 			alliedNPDirCareHrsSubTotal.setSubTotalDirCareNonProdHrsVacYTD(root.getAlliedNPNProdH_sum11());
 			alliedNPDirCareHrsSubTotal.setSubTotalDirCareNonProdHrsSickYTD(root.getAlliedNPNProdH_sum21());
 			alliedNPDirCareHrsSubTotal.setSubTotalDirCareNonProdHrsOtherServYTD(root.getAlliedNPNProdH_sum31());
