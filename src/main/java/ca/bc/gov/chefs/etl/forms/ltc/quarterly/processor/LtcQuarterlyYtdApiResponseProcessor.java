@@ -456,7 +456,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingRNProdC.setDirCareCostName(root.getNursing_label1());
 			nursingRNProdC.setDirCareCostProdHrsSubtotalYtd(root.getNursingProdC_calc1());
 			nursingRNProdC.setDirCareCostProdHrsTotalYtd(root.getNursingProdC_sub1());
-			nursingRNProdC.setDirCareCostTotalHrsPaidYtd(root.getNursingProdC_THP1());
+			nursingRNProdC.setDirCareCostTotalHrsPaidYtd(root.getNursingCost1());
 			nursingRNProdC.setDirCareCostNonProdHrsTotalYtd(root.getNursingNProdC_calc1());
 			nursingRNProdC.setDirCareCostHourlyRateStaffYtd(root.getNursingStaffRate1());
 			nursingRNProdC.setDirCareCostHourlyRateContractedYtd(root.getNursingContractRate1());
@@ -474,7 +474,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingLPNProdC.setDirCareCostName(root.getNursing_label2());
 			nursingLPNProdC.setDirCareCostProdHrsSubtotalYtd(root.getNursingProdC_calc2());
 			nursingLPNProdC.setDirCareCostProdHrsTotalYtd(root.getNursingProdC_sub2());
-			nursingLPNProdC.setDirCareCostTotalHrsPaidYtd(root.getNursingProdC_THP2());
+			nursingLPNProdC.setDirCareCostTotalHrsPaidYtd(root.getNursingCost2());
 			nursingLPNProdC.setDirCareCostNonProdHrsTotalYtd(root.getNursingNProdC_calc2());
 			nursingLPNProdC.setDirCareCostHourlyRateStaffYtd(root.getNursingStaffRate2());
 			nursingLPNProdC.setDirCareCostHourlyRateContractedYtd(root.getNursingContractRate2());
@@ -493,7 +493,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingHCAProdC.setDirCareCostName(root.getNursing_label3());
 			nursingHCAProdC.setDirCareCostProdHrsSubtotalYtd(root.getNursingProdC_calc3());
 			nursingHCAProdC.setDirCareCostProdHrsTotalYtd(root.getNursingProdC_sub3());
-			nursingHCAProdC.setDirCareCostTotalHrsPaidYtd(root.getNursingProdC_THP3());
+			nursingHCAProdC.setDirCareCostTotalHrsPaidYtd(root.getNursingCost3());
 			nursingHCAProdC.setDirCareCostNonProdHrsTotalYtd(root.getNursingNProdC_calc3());
 			nursingHCAProdC.setDirCareCostHourlyRateStaffYtd(root.getNursingStaffRate3());
 			nursingHCAProdC.setDirCareCostHourlyRateContractedYtd(root.getNursingContractRate3());
@@ -511,7 +511,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingOthProdC.setDirCareCostName(Constants.DC_HRS_OTHER);
 			nursingOthProdC.setDirCareCostProdHrsSubtotalYtd(root.getNursingProdC_calc4());
 			nursingOthProdC.setDirCareCostProdHrsTotalYtd(root.getNursingProdC_sub4());
-			nursingOthProdC.setDirCareCostTotalHrsPaidYtd(root.getNursingProdC_THP4());
+			nursingOthProdC.setDirCareCostTotalHrsPaidYtd(root.getNursingCost4());
 			nursingOthProdC.setDirCareCostNonProdHrsTotalYtd(root.getNursingNProdC_calc4());
 			nursingOthProdC.setDirCareCostHourlyRateStaffYtd(root.getNursingStaffRate4());
 			nursingOthProdC.setDirCareCostHourlyRateContractedYtd(root.getNursingContractRate4());
@@ -533,7 +533,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedOTProfC.setDirCareCostName(root.getAlliedProf_label1());
 			alliedOTProfC.setDirCareCostProdHrsSubtotalYtd(root.getAlliedProfProdC_calc1());
 			alliedOTProfC.setDirCareCostProdHrsTotalYtd(root.getAlliedProfProdC_sub1());
-			alliedOTProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedProfProdC_THP1());
+			alliedOTProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedProfCost1());
 			alliedOTProfC.setDirCareCostNonProdHrsTotalYtd(root.getAlliedProfNProdC_calc1());
 			alliedOTProfC.setDirCareCostHourlyRateStaffYtd(root.getAlliedProfStaffRate1());
 			alliedOTProfC.setDirCareCostHourlyRateContractedYtd(root.getAlliedProfContractRate1());
@@ -551,7 +551,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedPTProfC.setDirCareCostName(root.getAlliedProf_label2());
 			alliedPTProfC.setDirCareCostProdHrsSubtotalYtd(root.getAlliedProfProdC_calc2());
 			alliedPTProfC.setDirCareCostProdHrsTotalYtd(root.getAlliedProfProdC_sub2());
-			alliedPTProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedProfProdC_THP2());
+			alliedPTProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedProfCost2());
 			alliedPTProfC.setDirCareCostNonProdHrsTotalYtd(root.getAlliedProfNProdC_calc2());
 			alliedPTProfC.setDirCareCostHourlyRateStaffYtd(root.getAlliedProfStaffRate2());
 			alliedPTProfC.setDirCareCostHourlyRateContractedYtd(root.getAlliedProfContractRate2());
@@ -570,7 +570,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedDTProfC.setDirCareCostName(root.getAlliedProf_label3());
 			alliedDTProfC.setDirCareCostProdHrsSubtotalYtd(root.getAlliedProfProdC_calc3());
 			alliedDTProfC.setDirCareCostProdHrsTotalYtd(root.getAlliedProfProdC_sub3());
-			alliedDTProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedProfProdC_THP3());
+			alliedDTProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedProfCost3());
 			alliedDTProfC.setDirCareCostNonProdHrsTotalYtd(root.getAlliedProfNProdC_calc3());
 			alliedDTProfC.setDirCareCostHourlyRateStaffYtd(root.getAlliedProfStaffRate3());
 			alliedDTProfC.setDirCareCostHourlyRateContractedYtd(root.getAlliedProfContractRate3());
@@ -589,7 +589,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedSWProfC.setDirCareCostName(root.getAlliedProf_label4());
 			alliedSWProfC.setDirCareCostProdHrsSubtotalYtd(root.getAlliedProfProdC_calc4());
 			alliedSWProfC.setDirCareCostProdHrsTotalYtd(root.getAlliedProfProdC_sub4());
-			alliedSWProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedProfProdC_THP4());
+			alliedSWProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedProfCost4());
 			alliedSWProfC.setDirCareCostNonProdHrsTotalYtd(root.getAlliedProfNProdC_calc4());
 			alliedSWProfC.setDirCareCostHourlyRateStaffYtd(root.getAlliedProfStaffRate4());
 			alliedSWProfC.setDirCareCostHourlyRateContractedYtd(root.getAlliedProfContractRate4());
@@ -606,7 +606,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedSLPProfC.setDirCareCostName(root.getAlliedProf_label5());
 			alliedSLPProfC.setDirCareCostProdHrsSubtotalYtd(root.getAlliedProfProdC_calc5());
 			alliedSLPProfC.setDirCareCostProdHrsTotalYtd(root.getAlliedProfProdC_sub5());
-			alliedSLPProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedProfProdC_THP5());
+			alliedSLPProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedProfCost5());
 			alliedSLPProfC.setDirCareCostNonProdHrsTotalYtd(root.getAlliedProfNProdC_calc5());
 			alliedSLPProfC.setDirCareCostHourlyRateStaffYtd(root.getAlliedProfStaffRate5());
 			alliedSLPProfC.setDirCareCostHourlyRateContractedYtd(root.getAlliedProfContractRate5());
@@ -623,7 +623,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedRTProfC.setDirCareCostName(root.getAlliedProf_label6());
 			alliedRTProfC.setDirCareCostProdHrsSubtotalYtd(root.getAlliedProfProdC_calc6());
 			alliedRTProfC.setDirCareCostProdHrsTotalYtd(root.getAlliedProfProdC_sub6());
-			alliedRTProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedProfProdC_THP6());
+			alliedRTProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedProfCost6());
 			alliedRTProfC.setDirCareCostNonProdHrsTotalYtd(root.getAlliedProfNProdC_calc6());
 			alliedRTProfC.setDirCareCostHourlyRateStaffYtd(root.getAlliedProfStaffRate6());
 			alliedRTProfC.setDirCareCostHourlyRateContractedYtd(root.getAlliedProfContractRate6());
@@ -640,7 +640,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedOTHProfC.setDirCareCostName(Constants.DC_HRS_OTHER);
 			alliedOTHProfC.setDirCareCostProdHrsSubtotalYtd(root.getAlliedProfProdC_calc7());
 			alliedOTHProfC.setDirCareCostProdHrsTotalYtd(root.getAlliedProfProdC_sub7());
-			alliedOTHProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedProfProdC_THP7());
+			alliedOTHProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedProfCost7());
 			alliedOTHProfC.setDirCareCostNonProdHrsTotalYtd(root.getAlliedProfNProdC_calc7());
 			alliedOTHProfC.setDirCareCostHourlyRateStaffYtd(root.getAlliedProfStaffRate7());
 			alliedOTHProfC.setDirCareCostHourlyRateContractedYtd(root.getAlliedProfContractRate7());
@@ -660,7 +660,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedNPRTProfC.setDirCareCostName(root.getAlliedNP_label1());
 			alliedNPRTProfC.setDirCareCostProdHrsSubtotalYtd(root.getAlliedNPProdC_calc1());
 			alliedNPRTProfC.setDirCareCostProdHrsTotalYtd(root.getAlliedNPProdC_sub1());
-			alliedNPRTProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedNPProdC_THP1());
+			alliedNPRTProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedNPCost1());
 			alliedNPRTProfC.setDirCareCostNonProdHrsTotalYtd(root.getAlliedNPNProdC_calc1());
 			alliedNPRTProfC.setDirCareCostHourlyRateStaffYtd(root.getAlliedNPStaffRate1());
 			alliedNPRTProfC.setDirCareCostHourlyRateContractedYtd(root.getAlliedNPContractRate1());
@@ -678,7 +678,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedNPRAProfC.setDirCareCostName(root.getAlliedNP_label2());
 			alliedNPRAProfC.setDirCareCostProdHrsSubtotalYtd(root.getAlliedNPProdC_calc2());
 			alliedNPRAProfC.setDirCareCostProdHrsTotalYtd(root.getAlliedNPProdC_sub2());
-			alliedNPRAProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedNPProdC_THP2());
+			alliedNPRAProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedNPCost2());
 			alliedNPRAProfC.setDirCareCostNonProdHrsTotalYtd(root.getAlliedNPNProdC_calc2());
 			alliedNPRAProfC.setDirCareCostHourlyRateStaffYtd(root.getAlliedNPStaffRate2());
 			alliedNPRAProfC.setDirCareCostHourlyRateContractedYtd(root.getAlliedNPContractRate2());
@@ -697,7 +697,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedNPAWProfC.setDirCareCostName(root.getAlliedNP_label3());
 			alliedNPAWProfC.setDirCareCostProdHrsSubtotalYtd(root.getAlliedNPProdC_calc3());
 			alliedNPAWProfC.setDirCareCostProdHrsTotalYtd(root.getAlliedNPProdC_sub3());
-			alliedNPAWProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedNPProdC_THP3());
+			alliedNPAWProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedNPCost3());
 			alliedNPAWProfC.setDirCareCostNonProdHrsTotalYtd(root.getAlliedNPNProdC_calc3());
 			alliedNPAWProfC.setDirCareCostHourlyRateStaffYtd(root.getAlliedNPStaffRate3());
 			alliedNPAWProfC.setDirCareCostHourlyRateContractedYtd(root.getAlliedNPContractRate3());
@@ -716,7 +716,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedNPMTProfC.setDirCareCostName(root.getAlliedNP_label4());
 			alliedNPMTProfC.setDirCareCostProdHrsSubtotalYtd(root.getAlliedNPProdC_calc4());
 			alliedNPMTProfC.setDirCareCostProdHrsTotalYtd(root.getAlliedNPProdC_sub4());
-			alliedNPMTProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedNPProdC_THP4());
+			alliedNPMTProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedNPCost4());
 			alliedNPMTProfC.setDirCareCostNonProdHrsTotalYtd(root.getAlliedNPNProdC_calc4());
 			alliedNPMTProfC.setDirCareCostHourlyRateStaffYtd(root.getAlliedNPStaffRate4());
 			alliedNPMTProfC.setDirCareCostHourlyRateContractedYtd(root.getAlliedNPContractRate4());
@@ -735,7 +735,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedNPATProfC.setDirCareCostName(root.getAlliedNP_label5());
 			alliedNPATProfC.setDirCareCostProdHrsSubtotalYtd(root.getAlliedNPProdC_calc5());
 			alliedNPATProfC.setDirCareCostProdHrsTotalYtd(root.getAlliedNPProdC_sub5());
-			alliedNPATProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedNPProdC_THP5());
+			alliedNPATProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedNPCost5());
 			alliedNPATProfC.setDirCareCostNonProdHrsTotalYtd(root.getAlliedNPNProdC_calc5());
 			alliedNPATProfC.setDirCareCostHourlyRateStaffYtd(root.getAlliedNPStaffRate5());
 			alliedNPATProfC.setDirCareCostHourlyRateContractedYtd(root.getAlliedNPContractRate5());
@@ -754,7 +754,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedNPOTHProfC.setDirCareCostName(Constants.DC_HRS_OTHER);
 			alliedNPOTHProfC.setDirCareCostProdHrsSubtotalYtd(root.getAlliedNPProdC_calc6());
 			alliedNPOTHProfC.setDirCareCostProdHrsTotalYtd(root.getAlliedNPProdC_sub6());
-			alliedNPOTHProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedNPProdC_THP6());
+			alliedNPOTHProfC.setDirCareCostTotalHrsPaidYtd(root.getAlliedNPCost6());
 			alliedNPOTHProfC.setDirCareCostNonProdHrsTotalYtd(root.getAlliedNPNProdC_calc6());
 			alliedNPOTHProfC.setDirCareCostHourlyRateStaffYtd(root.getAlliedNPStaffRate6());
 			alliedNPOTHProfC.setDirCareCostHourlyRateContractedYtd(root.getAlliedNPContractRate6());
