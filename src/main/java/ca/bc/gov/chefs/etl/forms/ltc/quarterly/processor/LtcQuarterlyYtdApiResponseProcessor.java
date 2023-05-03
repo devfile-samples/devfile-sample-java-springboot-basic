@@ -2482,7 +2482,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 				occOutRateQ1.setYtdOccDays(root.getyTDOccupiedOutScopeQ1());
 				occOutRateQ1.setPercentOcc(root.getOccupiedPercentageOutScopeQ1());
 				occOutRateQ1.setOccRateQuarter("Q1");
-				//occInRateQ1.setOccRateNotes(root.getOpEx_note13());
+				//occOutRateQ1.setOccRateNotes(root.getNoteInScopeQ1());
 
 				LtcBedYtdOccupancyRate occRateQ1 = new LtcBedYtdOccupancyRate();
 				occRateQ1.setConfirmationID(root.getForm().getConfirmationId());
@@ -2492,7 +2492,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 				occRateQ1.setYtdOccDays(root.getyTDOccupiedPrivateQ1());
 				occRateQ1.setPercentOcc(root.getOccupiedPercentagePrivateQ1());
 				occRateQ1.setOccRateQuarter("Q1");
-				//occInRateQ1.setOccRateNotes(root.getNoteInScopeQ1());
+				//occRateQ1.setOccRateNotes(root.getNoteInScopeQ1());
 
 				LtcBedYtdOccupancyRateTotals q1RateTotals = new LtcBedYtdOccupancyRateTotals();
 				q1RateTotals.setConfirmationID(root.getForm().getConfirmationId());
@@ -2579,6 +2579,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 				occOutRateQ2.setYtdOccDays(root.getyTDOccupiedOutScopeQ2());
 				occOutRateQ2.setPercentOcc(root.getOccupiedPercentageOutScopeQ2());
 				occOutRateQ2.setOccRateQuarter("Q2");
+				//occOutRateQ2.setOccRateNotes(root.getNoteInScopeQ2());
 
 				LtcBedYtdOccupancyRate occRateQ2 = new LtcBedYtdOccupancyRate();
 				occRateQ2.setConfirmationID(root.getForm().getConfirmationId());
@@ -2588,6 +2589,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 				occRateQ2.setYtdOccDays(root.getyTDOccupiedInScopeQ2());
 				occRateQ2.setPercentOcc(root.getOccupiedPercentagePrivateQ2());
 				occRateQ2.setOccRateQuarter("Q2");
+				//occRateQ2.setOccRateNotes(root.getNoteInScopeQ2());
 				
 				LtcBedYtdOccupancyRateTotals q2RateTotals = new LtcBedYtdOccupancyRateTotals();
 				q2RateTotals.setConfirmationID(root.getForm().getConfirmationId());
@@ -2669,6 +2671,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 				occOutRateQ3.setYtdMaxOccDays(root.getyTDMaxOutScopeQ3());
 				occOutRateQ3.setYtdOccDays(root.getyTDOccupiedOutScopeQ3());
 				occOutRateQ3.setPercentOcc(root.getOccupiedPercentageOutScopeQ3());
+				//occOutRateQ3.setOccRateNotes(root.getNoteInScopeQ3());
 
 				LtcBedYtdOccupancyRate occRateQ3 = new LtcBedYtdOccupancyRate();
 				occRateQ3.setConfirmationID(root.getForm().getConfirmationId());
@@ -2677,6 +2680,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 				occRateQ3.setYtdMaxOccDays(root.getyTDMaxPrivateQ3());
 				occRateQ3.setYtdOccDays(root.getyTDOccupiedPrivateQ3());
 				occRateQ3.setPercentOcc(root.getOccupiedPercentagePrivateQ3());
+				//occRateQ3.setOccRateNotes(root.getNoteInScopeQ3());
 				
 				LtcBedYtdOccupancyRateTotals q3RateTotals = new LtcBedYtdOccupancyRateTotals();
 				q3RateTotals.setConfirmationID(root.getForm().getConfirmationId());
@@ -2760,6 +2764,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 				occOutRateQ4.setYtdMaxOccDays(root.getyTDMaxOutScopeQ4());
 				occOutRateQ4.setYtdOccDays(root.getyTDOccupiedOutScopeQ4());
 				occOutRateQ4.setPercentOcc(root.getOccupiedPercentageOutScopeQ4());
+				// occOutRateQ4.setOccRateNotes(root.getNoteInScopeQ4());
 
 				LtcBedYtdOccupancyRate occRateQ4 = new LtcBedYtdOccupancyRate();
 				occRateQ4.setConfirmationID(root.getForm().getConfirmationId());
@@ -2768,6 +2773,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 				occRateQ4.setYtdMaxOccDays(root.getyTDMaxPrivateQ4());
 				occRateQ4.setYtdOccDays(root.getyTDOccupiedPrivateQ4());
 				occRateQ4.setPercentOcc(root.getOccupiedPercentagePrivateQ4());
+				// occRateQ4.setOccRateNotes(root.getNoteInScopeQ4());
 				
 				LtcBedYtdOccupancyRateTotals q4RateTotals = new LtcBedYtdOccupancyRateTotals();
 				q4RateTotals.setConfirmationID(root.getForm().getConfirmationId());
