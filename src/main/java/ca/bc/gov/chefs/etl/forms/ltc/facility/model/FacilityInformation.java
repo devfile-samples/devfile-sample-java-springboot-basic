@@ -3,6 +3,8 @@ package ca.bc.gov.chefs.etl.forms.ltc.facility.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
 import ca.bc.gov.chefs.etl.util.CSVUtil;
@@ -51,43 +53,43 @@ public class FacilityInformation implements IModel {
 		return ConfirmationID;
 	}
 	public void setConfirmationID(String confirmationID) {
-		ConfirmationID = confirmationID;
+		ConfirmationID = StringUtils.defaultIfEmpty(confirmationID, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getIsDeleted() {
 		return IsDeleted;
 	}
 	public void setIsDeleted(String isDeleted) {
-		IsDeleted = isDeleted;
+		IsDeleted = StringUtils.defaultIfEmpty(isDeleted, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getSubmissionDate() {
 		return CSVUtil.getFormattedDate(SubmissionDate);
 	}
 	public void setSubmissionDate(String submissionDate) {
-		SubmissionDate = submissionDate;
+		SubmissionDate = StringUtils.defaultIfEmpty(submissionDate, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getSubmittedby() {
 		return Submittedby;
 	}
 	public void setSubmittedby(String submittedby) {
-		Submittedby = submittedby;
+		Submittedby = StringUtils.defaultIfEmpty(submittedby, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getFacilityName() {
 		return FacilityName;
 	}
 	public void setFacilityName(String facilityName) {
-		FacilityName = facilityName;
+		FacilityName = StringUtils.defaultIfEmpty(facilityName, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getFacilityAddress() {
 		return FacilityAddress;
 	}
 	public void setFacilityAddress(String facilityAddress) {
-		FacilityAddress = facilityAddress;
+		FacilityAddress = StringUtils.defaultIfEmpty(facilityAddress, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getFacilityCity() {
 		return FacilityCity;
 	}
 	public void setFacilityCity(String facilityCity) {
-		FacilityCity = facilityCity;
+		FacilityCity = StringUtils.defaultIfEmpty(facilityCity, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getFacilityPostalCode() {
 		return FacilityPostalCode;
@@ -111,37 +113,37 @@ public class FacilityInformation implements IModel {
 		return CCIMSID;
 	}
 	public void setCCIMSID(String cCIMSID) {
-		CCIMSID = cCIMSID;
+		CCIMSID = StringUtils.defaultIfEmpty(cCIMSID, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getProgramtype() {
 		return Programtype;
 	}
 	public void setProgramtype(String programtype) {
-		Programtype = programtype;
+		Programtype = StringUtils.defaultIfEmpty(programtype, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getOwnershiptype() {
 		return Ownershiptype;
 	}
 	public void setOwnershiptype(String ownershiptype) {
-		Ownershiptype = ownershiptype;
+		Ownershiptype = StringUtils.defaultIfEmpty(ownershiptype, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getLegislationtype() {
 		return Legislationtype;
 	}
 	public void setLegislationtype(String legislationtype) {
-		Legislationtype = legislationtype;
+		Legislationtype = StringUtils.defaultIfEmpty(legislationtype, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getAccreditationBody() {
 		return AccreditationBody;
 	}
 	public void setAccreditationBody(String accreditationBody) {
-		AccreditationBody = accreditationBody;
+		AccreditationBody = StringUtils.defaultIfEmpty(accreditationBody, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getAccreditationDate() {
 		return CSVUtil.getFormattedDate(AccreditationDate);
 	}
 	public void setAccreditationDate(String accreditationDate) {
-		AccreditationDate = accreditationDate;
+		AccreditationDate = StringUtils.defaultIfEmpty(accreditationDate, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getAccreditationExpiryDate() {
 		return CSVUtil.getFormattedDate(AccreditationExpiryDate);
@@ -153,37 +155,37 @@ public class FacilityInformation implements IModel {
 		return HealthAuthority;
 	}
 	public void setHealthAuthority(String healthAuthority) {
-		HealthAuthority = healthAuthority;
+		HealthAuthority = StringUtils.defaultIfEmpty(healthAuthority, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getOwnerName() {
 		return OwnerName;
 	}
 	public void setOwnerName(String ownerName) {
-		OwnerName = ownerName;
+		OwnerName = StringUtils.defaultIfEmpty(ownerName, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getOwnerAddress() {
 		return OwnerAddress;
 	}
 	public void setOwnerAddress(String ownerAddress) {
-		OwnerAddress = ownerAddress;
+		OwnerAddress = StringUtils.defaultIfEmpty(ownerAddress, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getOwnerCity() {
 		return OwnerCity;
 	}
 	public void setOwnerCity(String ownerCity) {
-		OwnerCity = ownerCity;
+		OwnerCity = StringUtils.defaultIfEmpty(ownerCity, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getOwnerpostalcode() {
 		return Ownerpostalcode;
 	}
 	public void setOwnerpostalcode(String ownerpostalcode) {
-		Ownerpostalcode = ownerpostalcode;
+		Ownerpostalcode = StringUtils.defaultIfEmpty(ownerpostalcode, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getOwnercontactName() {
 		return OwnercontactName;
 	}
 	public void setOwnercontactName(String ownercontactName) {
-		OwnercontactName = ownercontactName;
+		OwnercontactName = StringUtils.defaultIfEmpty(ownercontactName, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getOwnercontactphone() {
 		return Ownercontactphone;
@@ -195,37 +197,37 @@ public class FacilityInformation implements IModel {
 		return Ownercontactposition;
 	}
 	public void setOwnercontactposition(String ownercontactposition) {
-		Ownercontactposition = ownercontactposition;
+		Ownercontactposition = StringUtils.defaultIfEmpty(ownercontactposition, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getOwnercontactemail() {
 		return Ownercontactemail;
 	}
 	public void setOwnercontactemail(String ownercontactemail) {
-		Ownercontactemail = ownercontactemail;
+		Ownercontactemail = StringUtils.defaultIfEmpty(ownercontactemail, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getOperatorName() {
 		return OperatorName;
 	}
 	public void setOperatorName(String operatorName) {
-		OperatorName = operatorName;
+		OperatorName = StringUtils.defaultIfEmpty(operatorName, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getOperatorAddress() {
 		return OperatorAddress;
 	}
 	public void setOperatorAddress(String operatorAddress) {
-		OperatorAddress = operatorAddress;
+		OperatorAddress = StringUtils.defaultIfEmpty(operatorAddress, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getOperatorCity() {
 		return OperatorCity;
 	}
 	public void setOperatorCity(String operatorCity) {
-		OperatorCity = operatorCity;
+		OperatorCity = StringUtils.defaultIfEmpty(operatorCity, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getOperatorpostalcode() {
 		return Operatorpostalcode;
 	}
 	public void setOperatorpostalcode(String operatorpostalcode) {
-		Operatorpostalcode = operatorpostalcode;
+		Operatorpostalcode = StringUtils.defaultIfEmpty(operatorpostalcode, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getOperatorcontactName() {
 		return OperatorcontactName;
@@ -237,13 +239,13 @@ public class FacilityInformation implements IModel {
 		return Operatorcontactphone;
 	}
 	public void setOperatorcontactphone(String operatorcontactphone) {
-		Operatorcontactphone = operatorcontactphone;
+		Operatorcontactphone = StringUtils.defaultIfEmpty(operatorcontactphone, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getOperatorcontactposition() {
 		return Operatorcontactposition;
 	}
 	public void setOperatorcontactposition(String operatorcontactposition) {
-		Operatorcontactposition = operatorcontactposition;
+		Operatorcontactposition = StringUtils.defaultIfEmpty(operatorcontactposition, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getOperatorcontactemail() {
 		return Operatorcontactemail;
@@ -251,7 +253,6 @@ public class FacilityInformation implements IModel {
 	public void setOperatorcontactemail(String operatorcontactemail) {
 		Operatorcontactemail = operatorcontactemail;
 	}
-	
 	public List<Approver> getApprovers() {
 		return approvers;
 	}
