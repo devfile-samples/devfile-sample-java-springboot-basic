@@ -182,12 +182,6 @@ public class Root{
     public String alliedNPProdC_sum11;
     @JsonProperty("alliedNPProdC_sum2-1")
     public String alliedNPProdC_sum21;
-    public String alliedNPProdC_THP1;
-    public String alliedNPProdC_THP2;
-    public String alliedNPProdC_THP3;
-    public String alliedNPProdC_THP4;
-    public String alliedNPProdC_THP5;
-    public String alliedNPProdC_THP6;
     public String alliedNPProdC_THPsum1;
     public String alliedNPProdCCS_subsum1;
     public String alliedNPProdCCS1;
@@ -239,12 +233,6 @@ public class Root{
     public String alliedNPProdH_sum11;
     @JsonProperty("alliedNPProdH_sum2-1")
     public String alliedNPProdH_sum21;
-    public String alliedNPProdH_THP1;
-    public String alliedNPProdH_THP2;
-    public String alliedNPProdH_THP3;
-    public String alliedNPProdH_THP4;
-    public String alliedNPProdH_THP5;
-    public String alliedNPProdH_THP6;
     public String alliedNPProdH_THPsum1;
     public String alliedNPProdHCS_subsum1;
     public String alliedNPProdHCS1;
@@ -284,7 +272,9 @@ public class Root{
     public String alliedProfCost3;
     public String alliedProfCost4;
     public String alliedProfCost5;
-    public String alliedProfNProdC_calc1;
+    public String alliedProfCost6;
+    public String alliedProfCost7;
+	public String alliedProfNProdC_calc1;
     public String alliedProfNProdC_calc2;
     public String alliedProfNProdC_calc3;
     public String alliedProfNProdC_calc4;
@@ -403,13 +393,17 @@ public class Root{
     public String alliedProfNProdH_THP3;
     public String alliedProfNProdH_THP4;
     public String alliedProfNProdH_THP5;
-    public String alliedProfNProdH_THPsum1;
+    public String alliedProfNProdH_THP6;
+    public String alliedProfNProdH_THP7;
+	public String alliedProfNProdH_THPsum1;
     public String alliedProfPercentage1;
     public String alliedProfPercentage2;
     public String alliedProfPercentage3;
     public String alliedProfPercentage4;
     public String alliedProfPercentage5;
-    public String alliedProfProdC_calc1;
+    public String alliedProfPercentage6;
+    public String alliedProfPercentage7;
+	public String alliedProfProdC_calc1;
     public String alliedProfProdC_calc2;
     public String alliedProfProdC_calc3;
     public String alliedProfProdC_calc4;
@@ -458,13 +452,6 @@ public class Root{
     public String alliedProfProdC_sum11;
     @JsonProperty("alliedProfProdC_sum2-1")
     public String alliedProfProdC_sum21;
-    public String alliedProfProdC_THP1;
-    public String alliedProfProdC_THP2;
-    public String alliedProfProdC_THP3;
-    public String alliedProfProdC_THP4;
-    public String alliedProfProdC_THP5;
-    public String alliedProfProdC_THP6;
-    public String alliedProfProdC_THP7;
 	public String alliedProfProdC_THPsum1;
     public String alliedProfProdCCS_subsum1;
     public String alliedProfProdCCS1;
@@ -518,17 +505,10 @@ public class Root{
     public String alliedProfProdH_sub6;
     public String alliedProfProdH_sub7;
 	public String alliedProfProdH_subsum1;
-    @JsonProperty("alliedProfProdH_sum11")
+    @JsonProperty("alliedProfProdH_sum1-1")
     public String alliedProfProdH_sum11;
     @JsonProperty("alliedProfProdH_sum2-1")
     public String alliedProfProdH_sum21;
-    public String alliedProfProdH_THP1;
-    public String alliedProfProdH_THP2;
-    public String alliedProfProdH_THP3;
-    public String alliedProfProdH_THP4;
-    public String alliedProfProdH_THP5;
-    public String alliedProfProdH_THP6;
-    public String alliedProfProdH_THP7;
 	public String alliedProfProdH_THPsum1;
     public String alliedProfProdHCS_subsum1;
     public String alliedProfProdHCS1;
@@ -543,7 +523,9 @@ public class Root{
     public String alliedProfProvider3;
     public String alliedProfProvider4;
     public String alliedProfProvider5;
-    public String alliedProfStaffRate_total;
+    public String alliedProfProvider6;
+    public String alliedProfProvider7;
+	public String alliedProfStaffRate_total;
     public String alliedProfStaffRate1;
     public String alliedProfStaffRate2;
     public String alliedProfStaffRate3;
@@ -806,7 +788,7 @@ public class Root{
     public String compB_recovered1;
     public String compB_recovered2;
     public String compB_recovered3;
-    @JsonProperty("compB_sum11")
+    @JsonProperty("compB_sum1-1")
     public String compB_sum11;
     @JsonProperty("compB_sum1-2")
     public String compB_sum12;
@@ -906,7 +888,7 @@ public class Root{
     public String compH_item120;
     @JsonProperty("compH_item1-21")
     public String compH_item121;
-    @JsonProperty("compH_item1-1-22")
+    @JsonProperty("compH_item1-22")
     public String compH_item122;
     @JsonProperty("compH_item1-23")
     public String compH_item123;
@@ -1104,7 +1086,7 @@ public class Root{
     public String compH_sum24;
     @JsonProperty("compH_sum2-5")
     public String compH_sum25;
-    @JsonProperty("compH_sum13-1")
+    @JsonProperty("compH_sum3-1")
     public String compH_sum31;
     @JsonProperty("compH_sum3-2")
     public String compH_sum32;
@@ -1251,7 +1233,7 @@ public class Root{
     public String nursingNProdH_item23;
     @JsonProperty("nursingNProdH_item2-4")
     public String nursingNProdH_item24;
-    @JsonProperty("nursingNProdH_item4-1")
+    @JsonProperty("nursingNProdH_item3-1")
     public String nursingNProdH_item31;
     @JsonProperty("nursingNProdH_item3-2")
     public String nursingNProdH_item32;
@@ -1304,10 +1286,6 @@ public class Root{
     public String nursingProdC_sum11;
     @JsonProperty("nursingProdC_sum2-1")
     public String nursingProdC_sum21;
-    public String nursingProdC_THP1;
-    public String nursingProdC_THP2;
-    public String nursingProdC_THP3;
-    public String nursingProdC_THP4;
     public String nursingProdC_THPsum1;
     public String nursingProdCCS_subsum1;
     public String nursingProdCCS1;
@@ -1418,10 +1396,6 @@ public class Root{
 	public String alliedNP_label_CSP5;
 	@JsonProperty("alliedNP_label_CSP-6")
 	public String alliedNP_label_CSP6;
-	public String nursingProdH_THP1;
-    public String nursingProdH_THP2;
-    public String nursingProdH_THP3;
-    public String nursingProdH_THP4;
     public String nursingProdH_THPsum1;
     public String nursingProdHCS_subsum1;
     public String nursingProdHCS1;
@@ -1598,7 +1572,7 @@ public class Root{
     public String opEx_YTD7;
     @JsonProperty("opEx_YTD-8")
     public String opEx_YTD8;
-    @JsonProperty("opEx_sum-9")
+    @JsonProperty("opEx_YTD-9")
     public String opEx_YTD9;
     public String opRev_note1;
     public String opRev_note10;
@@ -2110,7 +2084,6 @@ public class Root{
 	public String opEx_YTD_label38;
 	@JsonProperty("opEx_YTD_label-39")
 	public String opEx_YTD_label39;
-	
 
 	public String getOpEx_1A_label() {
 		return opEx_1A_label;
@@ -3597,42 +3570,6 @@ public class Root{
 	public void setAlliedNPProdC_sum21(String alliedNPProdC_sum21) {
 		this.alliedNPProdC_sum21 = alliedNPProdC_sum21;
 	}
-	public String getAlliedNPProdC_THP1() {
-		return alliedNPProdC_THP1;
-	}
-	public void setAlliedNPProdC_THP1(String alliedNPProdC_THP1) {
-		this.alliedNPProdC_THP1 = alliedNPProdC_THP1;
-	}
-	public String getAlliedNPProdC_THP2() {
-		return alliedNPProdC_THP2;
-	}
-	public void setAlliedNPProdC_THP2(String alliedNPProdC_THP2) {
-		this.alliedNPProdC_THP2 = alliedNPProdC_THP2;
-	}
-	public String getAlliedNPProdC_THP3() {
-		return alliedNPProdC_THP3;
-	}
-	public void setAlliedNPProdC_THP3(String alliedNPProdC_THP3) {
-		this.alliedNPProdC_THP3 = alliedNPProdC_THP3;
-	}
-	public String getAlliedNPProdC_THP4() {
-		return alliedNPProdC_THP4;
-	}
-	public void setAlliedNPProdC_THP4(String alliedNPProdC_THP4) {
-		this.alliedNPProdC_THP4 = alliedNPProdC_THP4;
-	}
-	public String getAlliedNPProdC_THP5() {
-		return alliedNPProdC_THP5;
-	}
-	public void setAlliedNPProdC_THP5(String alliedNPProdC_THP5) {
-		this.alliedNPProdC_THP5 = alliedNPProdC_THP5;
-	}
-	public String getAlliedNPProdC_THP6() {
-		return alliedNPProdC_THP6;
-	}
-	public void setAlliedNPProdC_THP6(String alliedNPProdC_THP6) {
-		this.alliedNPProdC_THP6 = alliedNPProdC_THP6;
-	}
 	public String getAlliedNPProdC_THPsum1() {
 		return alliedNPProdC_THPsum1;
 	}
@@ -3849,42 +3786,6 @@ public class Root{
 	public void setAlliedNPProdH_sum21(String alliedNPProdH_sum21) {
 		this.alliedNPProdH_sum21 = alliedNPProdH_sum21;
 	}
-	public String getAlliedNPProdH_THP1() {
-		return alliedNPProdH_THP1;
-	}
-	public void setAlliedNPProdH_THP1(String alliedNPProdH_THP1) {
-		this.alliedNPProdH_THP1 = alliedNPProdH_THP1;
-	}
-	public String getAlliedNPProdH_THP2() {
-		return alliedNPProdH_THP2;
-	}
-	public void setAlliedNPProdH_THP2(String alliedNPProdH_THP2) {
-		this.alliedNPProdH_THP2 = alliedNPProdH_THP2;
-	}
-	public String getAlliedNPProdH_THP3() {
-		return alliedNPProdH_THP3;
-	}
-	public void setAlliedNPProdH_THP3(String alliedNPProdH_THP3) {
-		this.alliedNPProdH_THP3 = alliedNPProdH_THP3;
-	}
-	public String getAlliedNPProdH_THP4() {
-		return alliedNPProdH_THP4;
-	}
-	public void setAlliedNPProdH_THP4(String alliedNPProdH_THP4) {
-		this.alliedNPProdH_THP4 = alliedNPProdH_THP4;
-	}
-	public String getAlliedNPProdH_THP5() {
-		return alliedNPProdH_THP5;
-	}
-	public void setAlliedNPProdH_THP5(String alliedNPProdH_THP5) {
-		this.alliedNPProdH_THP5 = alliedNPProdH_THP5;
-	}
-	public String getAlliedNPProdH_THP6() {
-		return alliedNPProdH_THP6;
-	}
-	public void setAlliedNPProdH_THP6(String alliedNPProdH_THP6) {
-		this.alliedNPProdH_THP6 = alliedNPProdH_THP6;
-	}
 	public String getAlliedNPProdH_THPsum1() {
 		return alliedNPProdH_THPsum1;
 	}
@@ -4094,6 +3995,18 @@ public class Root{
 	}
 	public void setAlliedProfCost5(String alliedProfCost5) {
 		this.alliedProfCost5 = alliedProfCost5;
+	}
+	public String getAlliedProfCost6() {
+		return alliedProfCost6;
+	}
+	public void setAlliedProfCost6(String alliedProfCost6) {
+		this.alliedProfCost6 = alliedProfCost6;
+	}
+	public String getAlliedProfCost7() {
+		return alliedProfCost7;
+	}
+	public void setAlliedProfCost7(String alliedProfCost7) {
+		this.alliedProfCost7 = alliedProfCost7;
 	}
 	public String getAlliedProfNProdC_calc1() {
 		return alliedProfNProdC_calc1;
@@ -4437,6 +4350,18 @@ public class Root{
 	public void setAlliedProfNProdH_THP5(String alliedProfNProdH_THP5) {
 		this.alliedProfNProdH_THP5 = alliedProfNProdH_THP5;
 	}
+	public String getAlliedProfNProdH_THP6() {
+		return alliedProfNProdH_THP6;
+	}
+	public void setAlliedProfNProdH_THP6(String alliedProfNProdH_THP6) {
+		this.alliedProfNProdH_THP6 = alliedProfNProdH_THP6;
+	}
+	public String getAlliedProfNProdH_THP7() {
+		return alliedProfNProdH_THP7;
+	}
+	public void setAlliedProfNProdH_THP7(String alliedProfNProdH_THP7) {
+		this.alliedProfNProdH_THP7 = alliedProfNProdH_THP7;
+	}
 	public String getAlliedProfNProdH_THPsum1() {
 		return alliedProfNProdH_THPsum1;
 	}
@@ -4472,6 +4397,18 @@ public class Root{
 	}
 	public void setAlliedProfPercentage5(String alliedProfPercentage5) {
 		this.alliedProfPercentage5 = alliedProfPercentage5;
+	}
+	public String getAlliedProfPercentage6() {
+		return alliedProfPercentage6;
+	}
+	public void setAlliedProfPercentage6(String alliedProfPercentage6) {
+		this.alliedProfPercentage6 = alliedProfPercentage6;
+	}
+	public String getAlliedProfPercentage7() {
+		return alliedProfPercentage7;
+	}
+	public void setAlliedProfPercentage7(String alliedProfPercentage7) {
+		this.alliedProfPercentage7 = alliedProfPercentage7;
 	}
 	public String getAlliedProfProdC_calc1() {
 		return alliedProfProdC_calc1;
@@ -4616,36 +4553,6 @@ public class Root{
 	}
 	public void setAlliedProfProdC_sum21(String alliedProfProdC_sum21) {
 		this.alliedProfProdC_sum21 = alliedProfProdC_sum21;
-	}
-	public String getAlliedProfProdC_THP1() {
-		return alliedProfProdC_THP1;
-	}
-	public void setAlliedProfProdC_THP1(String alliedProfProdC_THP1) {
-		this.alliedProfProdC_THP1 = alliedProfProdC_THP1;
-	}
-	public String getAlliedProfProdC_THP2() {
-		return alliedProfProdC_THP2;
-	}
-	public void setAlliedProfProdC_THP2(String alliedProfProdC_THP2) {
-		this.alliedProfProdC_THP2 = alliedProfProdC_THP2;
-	}
-	public String getAlliedProfProdC_THP3() {
-		return alliedProfProdC_THP3;
-	}
-	public void setAlliedProfProdC_THP3(String alliedProfProdC_THP3) {
-		this.alliedProfProdC_THP3 = alliedProfProdC_THP3;
-	}
-	public String getAlliedProfProdC_THP4() {
-		return alliedProfProdC_THP4;
-	}
-	public void setAlliedProfProdC_THP4(String alliedProfProdC_THP4) {
-		this.alliedProfProdC_THP4 = alliedProfProdC_THP4;
-	}
-	public String getAlliedProfProdC_THP5() {
-		return alliedProfProdC_THP5;
-	}
-	public void setAlliedProfProdC_THP5(String alliedProfProdC_THP5) {
-		this.alliedProfProdC_THP5 = alliedProfProdC_THP5;
 	}
 	public String getAlliedProfProdC_THPsum1() {
 		return alliedProfProdC_THPsum1;
@@ -4833,36 +4740,6 @@ public class Root{
 	public void setAlliedProfProdH_sum21(String alliedProfProdH_sum21) {
 		this.alliedProfProdH_sum21 = alliedProfProdH_sum21;
 	}
-	public String getAlliedProfProdH_THP1() {
-		return alliedProfProdH_THP1;
-	}
-	public void setAlliedProfProdH_THP1(String alliedProfProdH_THP1) {
-		this.alliedProfProdH_THP1 = alliedProfProdH_THP1;
-	}
-	public String getAlliedProfProdH_THP2() {
-		return alliedProfProdH_THP2;
-	}
-	public void setAlliedProfProdH_THP2(String alliedProfProdH_THP2) {
-		this.alliedProfProdH_THP2 = alliedProfProdH_THP2;
-	}
-	public String getAlliedProfProdH_THP3() {
-		return alliedProfProdH_THP3;
-	}
-	public void setAlliedProfProdH_THP3(String alliedProfProdH_THP3) {
-		this.alliedProfProdH_THP3 = alliedProfProdH_THP3;
-	}
-	public String getAlliedProfProdH_THP4() {
-		return alliedProfProdH_THP4;
-	}
-	public void setAlliedProfProdH_THP4(String alliedProfProdH_THP4) {
-		this.alliedProfProdH_THP4 = alliedProfProdH_THP4;
-	}
-	public String getAlliedProfProdH_THP5() {
-		return alliedProfProdH_THP5;
-	}
-	public void setAlliedProfProdH_THP5(String alliedProfProdH_THP5) {
-		this.alliedProfProdH_THP5 = alliedProfProdH_THP5;
-	}
 	public String getAlliedProfProdH_THPsum1() {
 		return alliedProfProdH_THPsum1;
 	}
@@ -4934,6 +4811,18 @@ public class Root{
 	}
 	public void setAlliedProfProvider5(String alliedProfProvider5) {
 		this.alliedProfProvider5 = alliedProfProvider5;
+	}
+	public String getAlliedProfProvider6() {
+		return alliedProfProvider6;
+	}
+	public void setAlliedProfProvider6(String alliedProfProvider6) {
+		this.alliedProfProvider6 = alliedProfProvider6;
+	}
+	public String getAlliedProfProvider7() {
+		return alliedProfProvider7;
+	}
+	public void setAlliedProfProvider7(String alliedProfProvider7) {
+		this.alliedProfProvider7 = alliedProfProvider7;
 	}
 	public String getAlliedProfStaffRate_total() {
 		return alliedProfStaffRate_total;
@@ -7983,30 +7872,6 @@ public class Root{
 	public void setNursingProdC_sum21(String nursingProdC_sum21) {
 		this.nursingProdC_sum21 = nursingProdC_sum21;
 	}
-	public String getNursingProdC_THP1() {
-		return nursingProdC_THP1;
-	}
-	public void setNursingProdC_THP1(String nursingProdC_THP1) {
-		this.nursingProdC_THP1 = nursingProdC_THP1;
-	}
-	public String getNursingProdC_THP2() {
-		return nursingProdC_THP2;
-	}
-	public void setNursingProdC_THP2(String nursingProdC_THP2) {
-		this.nursingProdC_THP2 = nursingProdC_THP2;
-	}
-	public String getNursingProdC_THP3() {
-		return nursingProdC_THP3;
-	}
-	public void setNursingProdC_THP3(String nursingProdC_THP3) {
-		this.nursingProdC_THP3 = nursingProdC_THP3;
-	}
-	public String getNursingProdC_THP4() {
-		return nursingProdC_THP4;
-	}
-	public void setNursingProdC_THP4(String nursingProdC_THP4) {
-		this.nursingProdC_THP4 = nursingProdC_THP4;
-	}
 	public String getNursingProdC_THPsum1() {
 		return nursingProdC_THPsum1;
 	}
@@ -8402,30 +8267,6 @@ public class Root{
 	}
 	public void setAlliedNP_label_CSP6(String alliedNP_label_CSP6) {
 		this.alliedNP_label_CSP6 = alliedNP_label_CSP6;
-	}
-	public String getNursingProdH_THP1() {
-		return nursingProdH_THP1;
-	}
-	public void setNursingProdH_THP1(String nursingProdH_THP1) {
-		this.nursingProdH_THP1 = nursingProdH_THP1;
-	}
-	public String getNursingProdH_THP2() {
-		return nursingProdH_THP2;
-	}
-	public void setNursingProdH_THP2(String nursingProdH_THP2) {
-		this.nursingProdH_THP2 = nursingProdH_THP2;
-	}
-	public String getNursingProdH_THP3() {
-		return nursingProdH_THP3;
-	}
-	public void setNursingProdH_THP3(String nursingProdH_THP3) {
-		this.nursingProdH_THP3 = nursingProdH_THP3;
-	}
-	public String getNursingProdH_THP4() {
-		return nursingProdH_THP4;
-	}
-	public void setNursingProdH_THP4(String nursingProdH_THP4) {
-		this.nursingProdH_THP4 = nursingProdH_THP4;
 	}
 	public String getNursingProdH_THPsum1() {
 		return nursingProdH_THPsum1;
@@ -10533,18 +10374,6 @@ public class Root{
 	public void setAlliedProfProdH_sub7(String alliedProfProdH_sub7) {
 		this.alliedProfProdH_sub7 = alliedProfProdH_sub7;
 	}
-    public String getAlliedProfProdH_THP6() {
-		return alliedProfProdH_THP6;
-	}
-	public void setAlliedProfProdH_THP6(String alliedProfProdH_THP6) {
-		this.alliedProfProdH_THP6 = alliedProfProdH_THP6;
-	}
-	public String getAlliedProfProdH_THP7() {
-		return alliedProfProdH_THP7;
-	}
-	public void setAlliedProfProdH_THP7(String alliedProfProdH_THP7) {
-		this.alliedProfProdH_THP7 = alliedProfProdH_THP7;
-	}
     public String getAlliedProfNProdH_calc6() {
 		return alliedProfNProdH_calc6;
 	}
@@ -10652,18 +10481,6 @@ public class Root{
 	}
 	public void setAlliedProfProdC_sub7(String alliedProfProdC_sub7) {
 		this.alliedProfProdC_sub7 = alliedProfProdC_sub7;
-	}
-    public String getAlliedProfProdC_THP6() {
-		return alliedProfProdC_THP6;
-	}
-	public void setAlliedProfProdC_THP6(String alliedProfProdC_THP6) {
-		this.alliedProfProdC_THP6 = alliedProfProdC_THP6;
-	}
-	public String getAlliedProfProdC_THP7() {
-		return alliedProfProdC_THP7;
-	}
-	public void setAlliedProfProdC_THP7(String alliedProfProdC_THP7) {
-		this.alliedProfProdC_THP7 = alliedProfProdC_THP7;
 	}
     public String getAlliedProfNProdC_calc6() {
 		return alliedProfNProdC_calc6;

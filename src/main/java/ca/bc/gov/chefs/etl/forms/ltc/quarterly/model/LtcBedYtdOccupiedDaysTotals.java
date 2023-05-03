@@ -67,11 +67,11 @@ public class LtcBedYtdOccupiedDaysTotals implements IModel {
 	public List<String> getCsvElements() {
 		List<String> elements = new ArrayList<String>();
 		elements.add(this.getConfirmationID());
+		elements.add(this.getOccQuarter());
 		elements.add(this.getOccDaysYTDInScopePublic());
 		elements.add(this.getOccDaysYTDOutScopePublic());
 		elements.add(this.getOccDaysYTDPrivate());
 		elements.add(this.getOccDaysYTDTotalDays());
-		elements.add(this.getOccQuarter());
 		return elements;
 	}
 	@Override
