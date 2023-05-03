@@ -30,7 +30,7 @@ public class LtcYtdCompSalTotals implements IModel {
 	}
 
 	public void setCompSalType(String compSalType) {
-		this.compSalType = StringUtils.defaultIfEmpty(confirmationId, Constants.DEFAULT_STRING_VALUE);
+		this.compSalType = StringUtils.defaultIfEmpty(compSalType, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getTotalCompSalStaffYTD() {

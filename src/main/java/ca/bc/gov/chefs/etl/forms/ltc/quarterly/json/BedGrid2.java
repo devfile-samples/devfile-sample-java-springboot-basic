@@ -1,6 +1,9 @@
 package ca.bc.gov.chefs.etl.forms.ltc.quarterly.json;
 
+import java.util.Map;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class BedGrid2{
@@ -32,6 +35,25 @@ public class BedGrid2{
     public String subTypeOut;
     public String subTypePrivate;
     public String totalrow;
+	public String subTypeLabel;
+	public String subTypeValue;
+	@JsonProperty("subType2")
+	protected void unPackSubtype(Map<String,String> subType) {
+		this.subTypeLabel = subType.get("label");
+		this.subTypeValue = subType.get("value");
+	}
+	public String getSubTypeLabel() {
+		return subTypeLabel;
+	}
+	public void setSubTypeLabel(String subTypeLabel) {
+		this.subTypeLabel = subTypeLabel;
+	}
+	public String getSubTypeValue() {
+		return subTypeValue;
+	}
+	public void setSubTypeValue(String subTypeValue) {
+		this.subTypeValue = subTypeValue;
+	}
 	public String getBedType() {
 		return bedType;
 	}
