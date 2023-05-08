@@ -1117,7 +1117,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			supportSalSubtotal.setCompSalType(root.getSupport_label());
 			supportSalSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			supportSalSubtotal.setSubTotalCompSalStaffYTD(root.getSupportC_sum1());
-			supportSalSubtotal.setSubTotalCompSalContractServicesYTD(root.getSupportC_item21());
+			supportSalSubtotal.setSubTotalCompSalContractServicesYTD(root.getSupportC_sum2());
 			supportSalSubtotal.setSubTotalCompSalOfficeAllocYTD(root.getCompB_sum31());
 			supportSalSubtotal.setSubTotalCompSalTotalCostYTD(root.getSupportC_calcsum());
 
@@ -1125,7 +1125,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			administrationSalSubtotal.setCompSalType(root.getAdmin_label());
 			administrationSalSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			administrationSalSubtotal.setSubTotalCompSalStaffYTD(root.getAdminC_sum1());
-			administrationSalSubtotal.setSubTotalCompSalContractServicesYTD(root.getSupportC_item22());
+			administrationSalSubtotal.setSubTotalCompSalContractServicesYTD(root.getAdminC_sum2());
 			administrationSalSubtotal.setSubTotalCompSalOfficeAllocYTD(root.getCompB_sum32());
 			administrationSalSubtotal.setSubTotalCompSalTotalCostYTD(root.getAdminC_calcsum());
 
@@ -1133,7 +1133,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingSalSubtotal.setCompSalType(root.getNursing_label_comp());
 			nursingSalSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			nursingSalSubtotal.setSubTotalCompSalStaffYTD(root.getCompB_sum13());
-			nursingSalSubtotal.setSubTotalCompSalContractServicesYTD(root.getSupportC_item23());
+			nursingSalSubtotal.setSubTotalCompSalContractServicesYTD(root.getCompB_sum23());
 			nursingSalSubtotal.setSubTotalCompSalOfficeAllocYTD(root.getCompB_sum33());
 			nursingSalSubtotal.setSubTotalCompSalTotalCostYTD(root.getCompB_calcsum3());
 
@@ -1141,7 +1141,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedSalSubtotal.setCompSalType(root.getAlliedProf_label_comp());
 			alliedSalSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			alliedSalSubtotal.setSubTotalCompSalStaffYTD(root.getCompB_sum14());
-			alliedSalSubtotal.setSubTotalCompSalContractServicesYTD(root.getSupportC_item24());
+			alliedSalSubtotal.setSubTotalCompSalContractServicesYTD(root.getCompB_sum24());
 			alliedSalSubtotal.setSubTotalCompSalOfficeAllocYTD(root.getCompB_sum34());
 			alliedSalSubtotal.setSubTotalCompSalTotalCostYTD(root.getCompB_calcsum4());
 
