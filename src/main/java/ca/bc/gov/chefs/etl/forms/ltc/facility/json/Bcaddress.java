@@ -25,7 +25,5 @@ public class Bcaddress{
 	public void setProperties(Properties properties) {
 		this.properties = properties;
 	}
-    
-    
 }
 
