@@ -79,7 +79,6 @@ public class Root {
 	public String ownerContactPhoneNumber;
 	public String facilityAccreditationBody;
 	public String facilityAccreditationDate;
-	public String localHealthAuthorityLhaName;
 	public String facilityAccreditationExpiryDate;
 	public boolean isTheOwnerTheSameAsTheOperator1;
 	public Bcaddress ownerAddress;
@@ -504,12 +503,6 @@ public class Root {
 	}
 	public void setFacilityAccreditationDate(String facilityAccreditationDate) {
 		this.facilityAccreditationDate = facilityAccreditationDate;
-	}
-	public String getLocalHealthAuthorityLhaName() {
-		return localHealthAuthorityLhaName;
-	}
-	public void setLocalHealthAuthorityLhaName(String localHealthAuthorityLhaName) {
-		this.localHealthAuthorityLhaName = localHealthAuthorityLhaName;
 	}
 	public String getFacilityAccreditationExpiryDate() {
 		return facilityAccreditationExpiryDate;
