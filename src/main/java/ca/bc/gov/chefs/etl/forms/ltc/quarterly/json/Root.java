@@ -809,8 +809,10 @@ public class Root{
     public String compB_recovered2;
     public String compB_recovered3;
     public String supportC_sum1;
-    public String adminC_sum1;
-    @JsonProperty("compB_sum1-3")
+    public String supportC_sum2;
+	public String adminC_sum1;
+	public String adminC_sum2;
+	@JsonProperty("compB_sum1-3")
     public String compB_sum13;
     @JsonProperty("compB_sum1-4")
     public String compB_sum14;
@@ -824,7 +826,11 @@ public class Root{
     public String supportC_item23;
     @JsonProperty("supportC_item2-4")
     public String supportC_item24;
-    @JsonProperty("compB_sum2-5")
+	@JsonProperty("compB_sum2-3")
+    public String compB_sum23;
+	@JsonProperty("compB_sum2-4")
+    public String compB_sum24;
+	@JsonProperty("compB_sum2-5")
     public String compB_sum25;
     @JsonProperty("compB_sum3-1")
     public String compB_sum31;
@@ -5960,11 +5966,23 @@ public class Root{
 	public void setSupportC_sum1(String compB_sum11) {
 		this.supportC_sum1 = compB_sum11;
 	}
+	public String getSupportC_sum2() {
+		return supportC_sum2;
+	}
+	public void setSupportC_sum2(String supportC_sum2) {
+		this.supportC_sum2 = supportC_sum2;
+	}
 	public String getAdminC_sum1() {
 		return adminC_sum1;
 	}
 	public void setAdminC_sum1(String compB_sum12) {
 		this.adminC_sum1 = compB_sum12;
+	}
+	public String getAdminC_sum2() {
+		return adminC_sum2;
+	}
+	public void setAdminC_sum2(String adminC_sum2) {
+		this.adminC_sum2 = adminC_sum2;
 	}
 	public String getCompB_sum13() {
 		return compB_sum13;
@@ -6007,6 +6025,18 @@ public class Root{
 	}
 	public void setSupportC_item24(String compB_sum24) {
 		this.supportC_item24 = compB_sum24;
+	}
+	public String getCompB_sum23() {
+		return compB_sum23;
+	}
+	public void setCompB_sum23(String compB_sum23) {
+		this.compB_sum23 = compB_sum23;
+	}
+	public String getCompB_sum24() {
+		return compB_sum24;
+	}
+	public void setCompB_sum24(String compB_sum24) {
+		this.compB_sum24 = compB_sum24;
 	}
 	public String getCompB_sum25() {
 		return compB_sum25;
