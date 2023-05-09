@@ -149,7 +149,7 @@ public class Constants {
 						"Facility_Postal_Code", "Facility_Telephone", "Facility_Website", "CCIMS_ID", "Program_type",
 						"Ownership_type", "Legislation_type", "Accreditation_Body", "Accreditation_Date",
 						"Accreditation_Expiry_Date", "Health_Authority", "Owner_Name", "Owner_Address", "Owner_City",
-						"Owner_postal_code", "Owner_contact_name","Owner_contact_phone","Owner_contact_position", "Owner_contact_email", "Operator_Name",
+						"Owner_postal_code", "Owner_contact_Name","Owner_contact_phone","Owner_contact_position", "Owner_contact_email", "Operator_Name",
 						"Operator_Address", "Operator_City", "Operator_postal_code", "Operator_contact_Name",
 						"Operator_contact_phone", "Operator_contact_position", "Operator_contact_email", });
 

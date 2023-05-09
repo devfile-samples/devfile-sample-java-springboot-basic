@@ -38,9 +38,10 @@ public class FacilityInfoFormApiResponseProcessor implements Processor {
 		Map<String, List<List<String>>> map = CSVUtil.provider(iModels);
 			
 		List<String> filesGenerated = FileUtil.writeToCSVFile(map,Constants.LTC_FACILITY_DIR);
-		SuccessResponse successResponse = new SuccessResponse();
-		successResponse.setFiles(filesGenerated);
-		exchange.getIn().setBody(mapper.writeValueAsString(successResponse));
+		// TODO remove successReponse or uncomment
+		// SuccessResponse successResponse = new SuccessResponse();
+		// successResponse.setFiles(filesGenerated);
+		// exchange.getIn().setBody(mapper.writeValueAsString(successResponse));
 	}
 	
 	private List<FacilityInformation> parseFacilityInfo(List<Root> facilities) {
@@ -48,43 +49,43 @@ public class FacilityInfoFormApiResponseProcessor implements Processor {
 		List<FacilityInformation> facilityInfoParsed = new ArrayList<>();
 		for(Root facility : facilities) {
 			FacilityInformation facilityInfo = new FacilityInformation();
-			facilityInfo.setAccreditationBody(facility.getAccreditationBody());
-			facilityInfo.setAccreditationDate(facility.getAccreditationDate1());
-			facilityInfo.setAccreditationExpiryDate(facility.getAccreditationExpiryDate1());
-			facilityInfo.setCCIMSID(facility.getSimpletextfield1());
+			facilityInfo.setAccreditationBody(facility.getFacilityAccreditationBody());
+			facilityInfo.setAccreditationDate(facility.getFacilityAccreditationDate());
+			facilityInfo.setAccreditationExpiryDate(facility.getFacilityAccreditationExpiryDate());
+			facilityInfo.setCCIMSID(facility.getCcimsid());
 			facilityInfo.setConfirmationID(facility.getForm().getConfirmationId());
-			facilityInfo.setFacilityAddress(facility.getBcaddress().getProperties().getFullAddress());
-			facilityInfo.setFacilityCity(facility.getCity1());
-			facilityInfo.setFacilityName(facility.getFacilityName2());
-			facilityInfo.setFacilityPostalCode(facility.getTextField());
+			facilityInfo.setFacilityAddress(facility.getFacilityAddress());
+			facilityInfo.setFacilityCity(facility.getFacilityCity());
+			facilityInfo.setFacilityName(facility.getFacilityName());
+			facilityInfo.setFacilityPostalCode(facility.getFacilityPostalCode());
 			facilityInfo.setFacilityTelephone(facility.getPhoneNumber());
 			facilityInfo.setFacilityWebsite(facility.getFacilityWebsite());
-			facilityInfo.setHealthAuthority(facility.getHealthAuthority1());
+			facilityInfo.setHealthAuthority(facility.getHealthAuthority());
 			facilityInfo.setIsDeleted("false"); // TODO FIXME 
-			facilityInfo.setLegislationtype(facility.getSelectList1());
-			facilityInfo.setOwnerAddress(facility.getBcaddress1().getProperties().getFullAddress());
-			facilityInfo.setOwnerCity(facility.getCity3());
-			facilityInfo.setOwnercontactemail(facility.getContactEmail());
-			facilityInfo.setOwnercontactName(facility.getContactName());
-			facilityInfo.setOwnercontactposition(facility.getContactPosition());
+			facilityInfo.setLegislationtype(facility.getFacilityLegislationType());
+			facilityInfo.setOwnerAddress(facility.getOwnerAddress().getProperties().getFullAddress());
+			facilityInfo.setOwnerCity(facility.getOwnerCity());
+			facilityInfo.setOwnercontactemail(facility.getOwnerContactEmail());
+			facilityInfo.setOwnercontactName(facility.getOwnerContactName());
+			facilityInfo.setOwnercontactposition(facility.getOwnerContactPosition());
 			facilityInfo.setOwnerName(facility.getOwnerName());
-			facilityInfo.setOwnercontactphone(facility.getPhoneNumber3());
-			facilityInfo.setOwnerpostalcode(facility.getPostalCode1());
-			facilityInfo.setOwnershiptype(facility.getOwnershipType1());
-			facilityInfo.setProgramtype(facility.getProgramType1());
+			facilityInfo.setOwnercontactphone(facility.getOwnerContactPhoneNumber());
+			facilityInfo.setOwnerpostalcode(facility.getOwnerPostalCode());
+			facilityInfo.setOwnershiptype(facility.getFacilityOwnershipType());
+			facilityInfo.setProgramtype(facility.getFacilityType());
 			facilityInfo.setSubmissionDate(facility.getForm().getCreatedAt());
 			facilityInfo.setSubmittedby(facility.getForm().getEmail());
 			
 
 			if(!facility.isTheOwnerTheSameAsTheOperator1()) {
 			facilityInfo.setOperatorAddress(facility.getOperatorAddress().getProperties().getFullAddress());
-			facilityInfo.setOperatorCity(facility.getCity5());
-			facilityInfo.setOperatorcontactemail(facility.getContactEmail2());
-			facilityInfo.setOperatorcontactName(facility.getContactName3());
-			facilityInfo.setOperatorcontactphone(facility.getContactPhoneNumber2());
-			facilityInfo.setOperatorcontactposition(facility.getContactPosition2());
-			facilityInfo.setOperatorName(facility.getOpName());
-			facilityInfo.setOperatorpostalcode(facility.getPostalCode3());
+			facilityInfo.setOperatorCity(facility.getOperatorCity());
+			facilityInfo.setOperatorcontactemail(facility.getOperatorContactEmail());
+			facilityInfo.setOperatorcontactName(facility.getOperatorContactName());
+			facilityInfo.setOperatorcontactphone(facility.getOperatorPhoneNumber());
+			facilityInfo.setOperatorcontactposition(facility.getOperatorContactPosition());
+			facilityInfo.setOperatorName(facility.getOperatorName());
+			facilityInfo.setOperatorpostalcode(facility.getOperatorPostalCode());
 			}else {
 				facilityInfo.setOperatorAddress(facilityInfo.getOwnerAddress());
 				facilityInfo.setOperatorCity(facilityInfo.getOwnerCity());
@@ -101,10 +102,10 @@ public class FacilityInfoFormApiResponseProcessor implements Processor {
 			List<Preparer> preparers = new ArrayList<Preparer>();
 			Preparer preparer1 = new Preparer();
 			preparer1.setConfirmationID(facility.getForm().getConfirmationId());
-			preparer1.setPreparerContactEmail(facility.getSimpleemail2());
-			preparer1.setPreparerContactName(facility.getName2());
-			preparer1.setPreparerContactPhone(facility.getPhoneNumber4());
-			preparer1.setPreparerContactPosition(facility.getPosition3());
+			preparer1.setPreparerContactEmail(facility.getSubmitterEmail1());
+			preparer1.setPreparerContactName(facility.getSubmitterName1());
+			preparer1.setPreparerContactPhone(facility.getSubmitterPhoneNumber1());
+			preparer1.setPreparerContactPosition(facility.getSubmitterPosition1());
 			preparer1.setPreparerNum("1");
 
 			if(preparer1.getPreparerContactEmail().isBlank() || preparer1.getPreparerContactName().isBlank() || preparer1.getPreparerContactPhone().isBlank() || preparer1.getPreparerContactPosition().isBlank() || preparer1.getPreparerContactName().isBlank()) {
@@ -115,10 +116,10 @@ public class FacilityInfoFormApiResponseProcessor implements Processor {
 
 			Preparer preparer2 = new Preparer();
 			preparer2.setConfirmationID(facility.getForm().getConfirmationId());
-			preparer2.setPreparerContactEmail(facility.getSimpleemail4());
-			preparer2.setPreparerContactName(facility.getName4());
-			preparer2.setPreparerContactPhone(facility.getPhoneNumber5());
-			preparer2.setPreparerContactPosition(facility.getPosition6());
+			preparer2.setPreparerContactEmail(facility.getSubmitterEmail2());
+			preparer2.setPreparerContactName(facility.getSubmitterName2());
+			preparer2.setPreparerContactPhone(facility.getSubmitterPhoneNumber2());
+			preparer2.setPreparerContactPosition(facility.getSubmitterPosition2());
 			preparer2.setPreparerNum("2");
 
 			if(preparer2.getPreparerContactEmail().isBlank() || preparer2.getPreparerContactName().isBlank() || preparer2.getPreparerContactPhone().isBlank() || preparer2.getPreparerContactPosition().isBlank() || preparer2.getPreparerContactName().isBlank()) {
@@ -130,10 +131,10 @@ public class FacilityInfoFormApiResponseProcessor implements Processor {
 
 			Preparer preparer3 = new Preparer();
 			preparer3.setConfirmationID(facility.getForm().getConfirmationId());
-			preparer3.setPreparerContactEmail(facility.getSimpleemail5());
-			preparer3.setPreparerContactName(facility.getName5());
-			preparer3.setPreparerContactPhone(facility.getPhoneNumber6());
-			preparer3.setPreparerContactPosition(facility.getPosition7());
+			preparer3.setPreparerContactEmail(facility.getSubmitterEmail3());
+			preparer3.setPreparerContactName(facility.getSubmitterName3());
+			preparer3.setPreparerContactPhone(facility.getSubmitterPhoneNumber3());
+			preparer3.setPreparerContactPosition(facility.getSubmitterPosition3());
 			preparer3.setPreparerNum("3");
 
 			if(preparer3.getPreparerContactEmail().isBlank() || preparer3.getPreparerContactName().isBlank() || preparer3.getPreparerContactPhone().isBlank() || preparer3.getPreparerContactPosition().isBlank() || preparer3.getPreparerContactName().isBlank()) {
@@ -145,10 +146,10 @@ public class FacilityInfoFormApiResponseProcessor implements Processor {
 
 			Preparer preparer4 = new Preparer();
 			preparer4.setConfirmationID(facility.getForm().getConfirmationId());
-			preparer4.setPreparerContactEmail(facility.getSimpleemail8());
-			preparer4.setPreparerContactName(facility.getName8());
-			preparer4.setPreparerContactPhone(facility.getPhoneNumber9());
-			preparer4.setPreparerContactPosition(facility.getPosition10());
+			preparer4.setPreparerContactEmail(facility.getSubmitterEmail4());
+			preparer4.setPreparerContactName(facility.getSubmitterName4());
+			preparer4.setPreparerContactPhone(facility.getSubmitterPhoneNumber4());
+			preparer4.setPreparerContactPosition(facility.getSubmitterPosition4());
 			preparer4.setPreparerNum("4");
 
 			if(preparer4.getPreparerContactEmail().isBlank() || preparer4.getPreparerContactName().isBlank() || preparer4.getPreparerContactPhone().isBlank() || preparer4.getPreparerContactPosition().isBlank() || preparer4.getPreparerContactName().isBlank()) {
@@ -160,10 +161,10 @@ public class FacilityInfoFormApiResponseProcessor implements Processor {
 
 			Preparer preparer5 = new Preparer();
 			preparer5.setConfirmationID(facility.getForm().getConfirmationId());
-			preparer5.setPreparerContactEmail(facility.getSimpleemail9());
-			preparer5.setPreparerContactName(facility.getName9());
-			preparer5.setPreparerContactPhone(facility.getPhoneNumber10());
-			preparer5.setPreparerContactPosition(facility.getPosition11());
+			preparer5.setPreparerContactEmail(facility.getSubmitterEmail5());
+			preparer5.setPreparerContactName(facility.getSubmitterName5());
+			preparer5.setPreparerContactPhone(facility.getSubmitterPhoneNumber5());
+			preparer5.setPreparerContactPosition(facility.getSubmitterPosition5());
 			preparer5.setPreparerNum("5");
 
 			if(preparer5.getPreparerContactEmail().isBlank() || preparer5.getPreparerContactName().isBlank() || preparer5.getPreparerContactPhone().isBlank() || preparer5.getPreparerContactPosition().isBlank() || preparer5.getPreparerContactName().isBlank()) {
@@ -174,10 +175,10 @@ public class FacilityInfoFormApiResponseProcessor implements Processor {
 
 			List<Approver> approvers = new ArrayList<Approver>();
 			Approver approver1 = new Approver();
-			approver1.setApproverContactEmail(facility.getEmail2());
-			approver1.setApproverContactName(facility.getName3());
-			approver1.setApproverContactPhone(facility.getSimplephonenumber3());
-			approver1.setApproverContactPosition(facility.getPosition4());
+			approver1.setApproverContactEmail(facility.getApproverEmail1());
+			approver1.setApproverContactName(facility.getApproverName1());
+			approver1.setApproverContactPhone(facility.getApproverPhoneNumber1());
+			approver1.setApproverContactPosition(facility.getApproverPosition1());
 			approver1.setApproverNum("1");
 			approver1.setConfirmationID(facility.getForm().getConfirmationId());
 			
@@ -188,10 +189,10 @@ public class FacilityInfoFormApiResponseProcessor implements Processor {
 			}
 			
 			Approver approver2 = new Approver();
-			approver2.setApproverContactEmail(facility.getEmail2());
-			approver2.setApproverContactName(facility.getName6());
-			approver2.setApproverContactPhone(facility.getPhoneNumber7());
-			approver2.setApproverContactPosition(facility.getPosition8());
+			approver2.setApproverContactEmail(facility.getApproverEmail2());
+			approver2.setApproverContactName(facility.getApproverName2());
+			approver2.setApproverContactPhone(facility.getApproverPhoneNumber2());
+			approver2.setApproverContactPosition(facility.getApproverPosition2());
 			approver2.setApproverNum("2");
 			approver2.setConfirmationID(facility.getForm().getConfirmationId());
 			
@@ -203,10 +204,10 @@ public class FacilityInfoFormApiResponseProcessor implements Processor {
 
 
 			Approver approver3 = new Approver();
-			approver3.setApproverContactEmail(facility.getSimpleemail6());
-			approver3.setApproverContactName(facility.getName3());
-			approver3.setApproverContactPhone(facility.getSimplephonenumber3());
-			approver3.setApproverContactPosition(facility.getPosition4());
+			approver3.setApproverContactEmail(facility.getApproverEmail3());
+			approver3.setApproverContactName(facility.getApproverName3());
+			approver3.setApproverContactPhone(facility.getApproverPhoneNumber3());
+			approver3.setApproverContactPosition(facility.getApproverPosition3());
 			approver3.setApproverNum("3");
 			approver3.setConfirmationID(facility.getForm().getConfirmationId());
 
@@ -218,10 +219,10 @@ public class FacilityInfoFormApiResponseProcessor implements Processor {
 
 
 			Approver approver4 = new Approver();
-			approver4.setApproverContactEmail(facility.getSimpleemail10());
-			approver4.setApproverContactName(facility.getName10());
-			approver4.setApproverContactPhone(facility.getPhoneNumber11());
-			approver4.setApproverContactPosition(facility.getPosition12());
+			approver4.setApproverContactEmail(facility.getApproverEmail4());
+			approver4.setApproverContactName(facility.getApproverName4());
+			approver4.setApproverContactPhone(facility.getApproverPhoneNumber4());
+			approver4.setApproverContactPosition(facility.getApproverPosition4());
 			approver4.setApproverNum("4");
 			approver4.setConfirmationID(facility.getForm().getConfirmationId());
 
@@ -233,10 +234,10 @@ public class FacilityInfoFormApiResponseProcessor implements Processor {
 
 
 			Approver approver5 = new Approver();
-			approver5.setApproverContactEmail(facility.getSimpleemail7());
-			approver5.setApproverContactName(facility.getName7());
-			approver5.setApproverContactPhone(facility.getPhoneNumber8());
-			approver5.setApproverContactPosition(facility.getPosition9());
+			approver5.setApproverContactEmail(facility.getApproverEmail5());
+			approver5.setApproverContactName(facility.getApproverName5());
+			approver5.setApproverContactPhone(facility.getApproverPhoneNumber5());
+			approver5.setApproverContactPosition(facility.getApproverPosition5());
 			approver5.setApproverNum("5");
 			approver5.setConfirmationID(facility.getForm().getConfirmationId());
 

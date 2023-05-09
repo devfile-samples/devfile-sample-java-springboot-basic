@@ -3,6 +3,8 @@ package ca.bc.gov.chefs.etl.forms.ltc.facility.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
 
@@ -18,37 +20,37 @@ public class Preparer implements IModel{
 		return confirmationID;
 	}
 	public void setConfirmationID(String confirmationID) {
-		this.confirmationID = confirmationID;
+		this.confirmationID = StringUtils.defaultIfEmpty(confirmationID, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getPreparerNum() {
 		return preparerNum;
 	}
 	public void setPreparerNum(String preparerNum) {
-		this.preparerNum = preparerNum;
+		this.preparerNum = StringUtils.defaultIfEmpty(preparerNum, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getPreparerContactName() {
 		return preparerContactName;
 	}
 	public void setPreparerContactName(String preparerContactName) {
-		this.preparerContactName = preparerContactName;
+		this.preparerContactName = StringUtils.defaultIfEmpty(preparerContactName, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getPreparerContactPosition() {
 		return preparerContactPosition;
 	}
 	public void setPreparerContactPosition(String preparerContactPosition) {
-		this.preparerContactPosition = preparerContactPosition;
+		this.preparerContactPosition = StringUtils.defaultIfEmpty(preparerContactPosition, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getPreparerContactPhone() {
 		return preparerContactPhone;
 	}
 	public void setPreparerContactPhone(String preparerContactPhone) {
-		this.preparerContactPhone = preparerContactPhone;
+		this.preparerContactPhone = StringUtils.defaultIfEmpty(preparerContactPhone, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getPreparerContactEmail() {
 		return preparerContactEmail;
 	}
 	public void setPreparerContactEmail(String preparerContactEmail) {
-		this.preparerContactEmail = preparerContactEmail;
+		this.preparerContactEmail = StringUtils.defaultIfEmpty(preparerContactEmail, Constants.DEFAULT_STRING_VALUE);
 	}
 	@Override
 	public String getFileName() {
