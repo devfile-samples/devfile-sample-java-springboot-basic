@@ -572,10 +572,17 @@ public class Root{
     public String compB_accrued1;
     public String compB_accrued2;
     public String compB_accrued3;
-    public String compB_calc1;
-    public String compB_calc10;
-    public String compB_calc11;
-    public String compB_calc12;
+    public String supportC_calc1;
+	@JsonProperty("adminC_item3-6")
+    public String adminC_item36;
+	@JsonProperty("adminC_item3-7")
+    public String adminC_item37;
+	@JsonProperty("adminC_item3-8")
+    public String adminC_item38;
+	@JsonProperty("adminC_item3-9")
+    public String adminC_item39;
+	@JsonProperty("adminC_item3-10")
+	public String adminC_item310;
     public String compB_calc13;
     public String compB_calc14;
     public String compB_calc15;
@@ -583,7 +590,7 @@ public class Root{
     public String compB_calc17;
     public String compB_calc18;
     public String compB_calc19;
-    public String compB_calc2;
+    public String supportC_calc2;
     public String compB_calc20;
     public String compB_calc21;
     public String compB_calc22;
@@ -594,26 +601,35 @@ public class Root{
     public String compB_calc27;
 	public String compB_calc28;
 	public String compB_calc29;
-	public String compB_calc3;
-    public String compB_calc4;
-    public String compB_calc5;
-    public String compB_calc6;
-    public String compB_calc7;
-    public String compB_calc8;
-    public String compB_calc9;
-    public String compB_calcsum1;
-    public String compB_calcsum2;
+	public String supportC_calc3;
+    public String supportC_calc4;
+	@JsonProperty("adminC_item3-1")
+    public String adminC_item31;
+	@JsonProperty("adminC_item3-2")
+    public String adminC_item32;
+	@JsonProperty("adminC_item3-3")
+    public String adminC_item33;
+	@JsonProperty("adminC_item3-4")
+    public String adminC_item34;
+	@JsonProperty("adminC_item3-5")
+    public String adminC_item35;
+    public String supportC_calcsum;
+    public String adminC_calcsum;
     public String compB_calcsum3;
     public String compB_calcsum4;
     public String compB_calcsum5;
-    @JsonProperty("compB_item1-1")
-    public String compB_item11;
-    @JsonProperty("compB_item1-10")
-    public String compB_item110;
-    @JsonProperty("compB_item1-11")
-    public String compB_item111;
-    @JsonProperty("compB_item1-12")
-    public String compB_item112;
+    @JsonProperty("supportC_item1-1")
+    public String supportC_item11;
+    @JsonProperty("adminC_item1-6")
+    public String adminC_item16;
+    @JsonProperty("adminC_item1-7")
+    public String adminC_item17;
+	@JsonProperty("adminC_item1-8")
+    public String adminC_item18;
+	@JsonProperty("adminC_item1-9")
+    public String adminC_item19;
+	@JsonProperty("adminC_item1-10")
+    public String adminC_item110;
     @JsonProperty("compB_item1-13")
     public String compB_item113;
     @JsonProperty("compB_item1-14")
@@ -628,8 +644,8 @@ public class Root{
     public String compB_item118;
     @JsonProperty("compB_item1-19")
     public String compB_item119;
-    @JsonProperty("compB_item1-2")
-    public String compB_item12;
+    @JsonProperty("supportC_item1-2")
+    public String supportC_item12;
     @JsonProperty("compB_item1-20")
     public String compB_item120;
     @JsonProperty("compB_item1-21")
@@ -650,28 +666,32 @@ public class Root{
     public String compB_item128;
 	@JsonProperty("compB_item1-29")
     public String compB_item129;
-	@JsonProperty("compB_item1-3")
-    public String compB_item13;
-    @JsonProperty("compB_item1-4")
-    public String compB_item14;
-    @JsonProperty("compB_item1-5")
-    public String compB_item15;
-    @JsonProperty("compB_item1-6")
-    public String compB_item16;
-    @JsonProperty("compB_item1-7")
-    public String compB_item17;
-    @JsonProperty("compB_item1-8")
-    public String compB_item18;
-    @JsonProperty("compB_item1-9")
-    public String compB_item19;
+	@JsonProperty("supportC_item1-3")
+    public String supportC_item13;
+    @JsonProperty("supportC_item1-4")
+    public String supportC_item14;
+    @JsonProperty("adminC_item1-1")
+    public String adminC_item11;
+    @JsonProperty("adminC_item1-2")
+    public String adminC_item12;
+    @JsonProperty("adminC_item1-3")
+    public String adminC_item13;
+    @JsonProperty("adminC_item1-4")
+    public String adminC_item14;
+    @JsonProperty("adminC_item1-5")
+    public String adminC_item15;
     @JsonProperty("compB_item2-1")
     public String compB_item21;
-    @JsonProperty("compB_item2-10")
-    public String compB_item210;
-    @JsonProperty("compB_item2-11")
-    public String compB_item211;
-    @JsonProperty("compB_item2-12")
-    public String compB_item212;
+    @JsonProperty("adminC_item2-6")
+    public String adminC_item26;
+    @JsonProperty("adminC_item2-7")
+    public String adminC_item27;
+	@JsonProperty("adminC_item2-8")
+    public String adminC_item28;
+	@JsonProperty("adminC_item2-9")
+    public String adminC_item29;
+	@JsonProperty("adminC_item2-10")
+    public String adminC_item210;
     @JsonProperty("compB_item2-13")
     public String compB_item213;
     @JsonProperty("compB_item2-14")
@@ -712,16 +732,16 @@ public class Root{
     public String compB_item23;
     @JsonProperty("compB_item2-4")
     public String compB_item24;
-    @JsonProperty("compB_item2-5")
-    public String compB_item25;
-    @JsonProperty("compB_item2-6")
-    public String compB_item26;
-    @JsonProperty("compB_item2-7")
-    public String compB_item27;
-    @JsonProperty("compB_item2-8")
-    public String compB_item28;
-    @JsonProperty("compB_item2-9")
-    public String compB_item29;
+    @JsonProperty("adminC_item2-1")
+    public String adminC_item21;
+    @JsonProperty("adminC_item2-2")
+    public String adminC_item22;
+    @JsonProperty("adminC_item2-3")
+    public String adminC_item23;
+    @JsonProperty("adminC_item2-4")
+    public String adminC_item24;
+    @JsonProperty("adminC_item2-5")
+    public String adminC_item25;
     @JsonProperty("compB_item3-1")
     public String compB_item31;
     @JsonProperty("compB_item3-10")
@@ -788,25 +808,29 @@ public class Root{
     public String compB_recovered1;
     public String compB_recovered2;
     public String compB_recovered3;
-    @JsonProperty("compB_sum1-1")
-    public String compB_sum11;
-    @JsonProperty("compB_sum1-2")
-    public String compB_sum12;
-    @JsonProperty("compB_sum1-3")
+    public String supportC_sum1;
+    public String supportC_sum2;
+	public String adminC_sum1;
+	public String adminC_sum2;
+	@JsonProperty("compB_sum1-3")
     public String compB_sum13;
     @JsonProperty("compB_sum1-4")
     public String compB_sum14;
     @JsonProperty("compB_sum1-5")
     public String compB_sum15;
-    @JsonProperty("compB_sum2-1")
-    public String compB_sum21;
-    @JsonProperty("compB_sum2-2")
-    public String compB_sum22;
-    @JsonProperty("compB_sum2-3")
+    @JsonProperty("supportC_item2-1")
+    public String supportC_item21;
+    @JsonProperty("supportC_item2-2")
+    public String supportC_item22;
+    @JsonProperty("supportC_item2-3")
+    public String supportC_item23;
+    @JsonProperty("supportC_item2-4")
+    public String supportC_item24;
+	@JsonProperty("compB_sum2-3")
     public String compB_sum23;
-    @JsonProperty("compB_sum2-4")
+	@JsonProperty("compB_sum2-4")
     public String compB_sum24;
-    @JsonProperty("compB_sum2-5")
+	@JsonProperty("compB_sum2-5")
     public String compB_sum25;
     @JsonProperty("compB_sum3-1")
     public String compB_sum31;
@@ -826,10 +850,17 @@ public class Root{
     public String compH_accrued2;
     public String compH_accrued3;
     public String compH_accrued4;
-    public String compH_calc1;
-    public String compH_calc10;
-    public String compH_calc11;
-    public String compH_calc12;
+    public String supportH_calc1;
+	@JsonProperty("adminH_item3-6")
+    public String adminH_item36;
+	@JsonProperty("adminH_item3-7")
+    public String adminH_item37;
+	@JsonProperty("adminH_item3-8")
+    public String adminH_item38;
+	@JsonProperty("adminH_item3-9")
+    public String adminH_item39;
+	@JsonProperty("adminH_item3-10")
+	public String adminH_item310;
     public String compH_calc13;
     public String compH_calc14;
     public String compH_calc15;
@@ -837,7 +868,7 @@ public class Root{
     public String compH_calc17;
     public String compH_calc18;
     public String compH_calc19;
-    public String compH_calc2;
+    public String supportH_calc2;
     public String compH_calc20;
     public String compH_calc21;
     public String compH_calc22;
@@ -848,26 +879,35 @@ public class Root{
     public String compH_calc27;
     public String compH_calc28;
     public String compH_calc29;
-	public String compH_calc3;
-    public String compH_calc4;
-    public String compH_calc5;
-    public String compH_calc6;
-    public String compH_calc7;
-    public String compH_calc8;
-    public String compH_calc9;
-    public String compH_calcsum1;
-    public String compH_calcsum2;
+	public String supportH_calc3;
+    public String supportH_calc4;
+	@JsonProperty("adminH_item3-1")
+    public String adminH_item31;
+	@JsonProperty("adminH_item3-2")
+    public String adminH_item32;
+	@JsonProperty("adminH_item3-3")
+    public String adminH_item33;
+	@JsonProperty("adminH_item3-4")
+    public String adminH_item34;
+	@JsonProperty("adminH_item3-5")
+    public String adminH_item35;
+    public String supportH_calcsum;
+    public String adminH_calcsum;
     public String compH_calcsum3;
     public String compH_calcsum4;
     public String compH_calcsum5;
-    @JsonProperty("compH_item1-1")
-    public String compH_item11;
-    @JsonProperty("compH_item1-10")
-    public String compH_item110;
-    @JsonProperty("compH_item1-11")
-    public String compH_item111;
-    @JsonProperty("compH_item1-12")
-    public String compH_item112;
+    @JsonProperty("supportH_item1-1")
+    public String supportH_item11;
+    @JsonProperty("adminH_item1-6")
+    public String adminH_item16;
+    @JsonProperty("adminH_item1-7")
+    public String adminH_item17;
+	@JsonProperty("adminH_item1-8")
+    public String adminH_item18;
+	@JsonProperty("adminH_item1-9")
+    public String adminH_item19;
+	@JsonProperty("adminH_item1-10")
+    public String adminH_item110;
     @JsonProperty("compH_item1-13")
     public String compH_item113;
     @JsonProperty("compH_item1-14")
@@ -882,8 +922,8 @@ public class Root{
     public String compH_item118;
     @JsonProperty("compH_item1-19")
     public String compH_item119;
-    @JsonProperty("compH_item1-2")
-    public String compH_item12;
+    @JsonProperty("supportH_item1-2")
+    public String supportH_item12;
     @JsonProperty("compH_item1-20")
     public String compH_item120;
     @JsonProperty("compH_item1-21")
@@ -904,28 +944,32 @@ public class Root{
     public String compH_item128;
 	@JsonProperty("compH_item1-29")
     public String compH_item129;
-	@JsonProperty("compH_item1-3")
-    public String compH_item13;
-    @JsonProperty("compH_item1-4")
-    public String compH_item14;
-    @JsonProperty("compH_item1-5")
-    public String compH_item15;
-    @JsonProperty("compH_item1-6")
-    public String compH_item16;
-    @JsonProperty("compH_item1-7")
-    public String compH_item17;
-    @JsonProperty("compH_item1-8")
-    public String compH_item18;
-    @JsonProperty("compH_item1-9")
-    public String compH_item19;
-    @JsonProperty("compH_item2-1")
-    public String compH_item21;
-    @JsonProperty("compH_item2-10")
-    public String compH_item210;
-    @JsonProperty("compH_item2-11")
-    public String compH_item211;
-    @JsonProperty("compH_item2-12")
-    public String compH_item212;
+	@JsonProperty("supportH_item1-3")
+    public String supportH_item13;
+    @JsonProperty("supportH_item1-4")
+    public String supportH_item14;
+    @JsonProperty("adminH_item1-1")
+    public String adminH_item11;
+    @JsonProperty("adminH_item1-2")
+    public String adminH_item12;
+    @JsonProperty("adminH_item1-3")
+    public String adminH_item13;
+    @JsonProperty("adminH_item1-4")
+    public String adminH_item14;
+    @JsonProperty("adminH_item1-5")
+    public String adminH_item15;
+    @JsonProperty("supportH_item2-1")
+    public String supportH_item21;
+    @JsonProperty("adminH_item2-6")
+    public String adminH_item26;
+    @JsonProperty("adminH_item2-7")
+    public String adminH_item27;
+	@JsonProperty("adminH_item2-8")
+    public String adminH_item28;
+	@JsonProperty("adminH_item2-9")
+    public String adminH_item29;
+	@JsonProperty("adminH_item2-10")
+    public String adminH_item210;
     @JsonProperty("compH_item2-13")
     public String compH_item213;
     @JsonProperty("compH_item2-14")
@@ -940,8 +984,8 @@ public class Root{
     public String compH_item218;
     @JsonProperty("compH_item2-19")
     public String compH_item219;
-    @JsonProperty("compH_item2-2")
-    public String compH_item22;
+    @JsonProperty("supportH_item2-2")
+    public String supportH_item22;
     @JsonProperty("compH_item2-20")
     public String compH_item220;
     @JsonProperty("compH_item2-21")
@@ -962,20 +1006,20 @@ public class Root{
     public String compH_item228;
 	@JsonProperty("compH_item2-29")
     public String compH_item229;
-	@JsonProperty("compH_item2-3")
-    public String compH_item23;
-    @JsonProperty("compH_item2-4")
-    public String compH_item24;
-    @JsonProperty("compH_item2-5")
-    public String compH_item25;
-    @JsonProperty("compH_item2-6")
-    public String compH_item26;
-    @JsonProperty("compH_item2-7")
-    public String compH_item27;
-    @JsonProperty("compH_item2-8")
-    public String compH_item28;
-    @JsonProperty("compH_item2-9")
-    public String compH_item29;
+	@JsonProperty("supportH_item2-3")
+    public String supportH_item23;
+    @JsonProperty("supportH_item2-4")
+    public String supportH_item24;
+    @JsonProperty("adminH_item2-1")
+    public String adminH_item21;
+    @JsonProperty("adminH_item2-2")
+    public String adminH_item22;
+    @JsonProperty("adminH_item2-3")
+    public String adminH_item23;
+    @JsonProperty("adminH_item2-4")
+    public String adminH_item24;
+    @JsonProperty("adminH_item2-5")
+    public String adminH_item25;
     @JsonProperty("compH_item3-1")
     public String compH_item31;
     @JsonProperty("compH_item3-10")
@@ -1066,20 +1110,16 @@ public class Root{
     public String compH_PHPsum3;
     public String compH_PHPsum4;
     public String compH_PHPsum5;
-    @JsonProperty("compH_sum1-1")
-    public String compH_sum11;
-    @JsonProperty("compH_sum1-2")
-    public String compH_sum12;
+    public String supportH_sum1;
+    public String adminH_sum1;
     @JsonProperty("compH_sum1-3")
     public String compH_sum13;
     @JsonProperty("compH_sum1-4")
     public String compH_sum14;
     @JsonProperty("compH_sum1-5")
     public String compH_sum15;
-    @JsonProperty("compH_sum2-1")
-    public String compH_sum21;
-    @JsonProperty("compH_sum2-2")
-    public String compH_sum22;
+    public String supportH_sum2;
+    public String adminH_sum2;
     @JsonProperty("compH_sum2-3")
     public String compH_sum23;
     @JsonProperty("compH_sum2-4")
@@ -1926,6 +1966,10 @@ public class Root{
 	public String admin_label7;
 	@JsonProperty("admin_label-8")
 	public String admin_label8;
+	@JsonProperty("admin_label-9")
+	public String admin_label9;
+	@JsonProperty("admin_label-10")
+	public String admin_label10;
 	public String admin_label_subtotal;
 	public String nursing_label_comp;
 	@JsonProperty("nursing_label_comp-1")
@@ -2567,6 +2611,18 @@ public class Root{
 	}
 	public void setAdmin_label8(String admin_label8) {
 		this.admin_label8 = admin_label8;
+	}
+	public String getAdmin_label9() {
+		return admin_label9;
+	}
+	public void setAdmin_label9(String admin_label9) {
+		this.admin_label9 = admin_label9;
+	}
+	public String getAdmin_label10() {
+		return admin_label10;
+	}
+	public void setAdmin_label10(String admin_label10) {
+		this.admin_label10 = admin_label10;
 	}
 	public String getAdmin_label_subtotal() {
 		return admin_label_subtotal;
@@ -5094,29 +5150,41 @@ public class Root{
 	public void setCompB_accrued3(String compB_accrued3) {
 		this.compB_accrued3 = compB_accrued3;
 	}
-	public String getCompB_calc1() {
-		return compB_calc1;
+	public String getSupportC_calc1() {
+		return supportC_calc1;
 	}
-	public void setCompB_calc1(String compB_calc1) {
-		this.compB_calc1 = compB_calc1;
+	public void setSupportC_calc1(String compB_calc1) {
+		this.supportC_calc1 = compB_calc1;
 	}
-	public String getCompB_calc10() {
-		return compB_calc10;
+	public String getAdminC_item36() {
+		return adminC_item36;
 	}
-	public void setCompB_calc10(String compB_calc10) {
-		this.compB_calc10 = compB_calc10;
+	public void setAdminC_item36(String compB_calc10) {
+		this.adminC_item36 = compB_calc10;
 	}
-	public String getCompB_calc11() {
-		return compB_calc11;
+	public String getAdminC_item37() {
+		return adminC_item37;
 	}
-	public void setCompB_calc11(String compB_calc11) {
-		this.compB_calc11 = compB_calc11;
+	public void setAdminC_item37(String compB_calc11) {
+		this.adminC_item37 = compB_calc11;
 	}
-	public String getCompB_calc12() {
-		return compB_calc12;
+	public String getAdminC_item38() {
+		return adminC_item38;
 	}
-	public void setCompB_calc12(String compB_calc12) {
-		this.compB_calc12 = compB_calc12;
+	public void setAdminC_item38(String adminC_item38) {
+		this.adminC_item38 = adminC_item38;
+	}
+	public String getAdminC_item39() {
+		return adminC_item39;
+	}
+	public void setAdminC_item39(String adminC_item39) {
+		this.adminC_item39 = adminC_item39;
+	}
+	public String getAdminC_item310() {
+		return adminC_item310;
+	}
+	public void setAdminC_item310(String compB_calc12) {
+		this.adminC_item310 = compB_calc12;
 	}
 	public String getCompB_calc13() {
 		return compB_calc13;
@@ -5160,11 +5228,11 @@ public class Root{
 	public void setCompB_calc19(String compB_calc19) {
 		this.compB_calc19 = compB_calc19;
 	}
-	public String getCompB_calc2() {
-		return compB_calc2;
+	public String getSupportC_calc2() {
+		return supportC_calc2;
 	}
-	public void setCompB_calc2(String compB_calc2) {
-		this.compB_calc2 = compB_calc2;
+	public void setSupportC_calc2(String compB_calc2) {
+		this.supportC_calc2 = compB_calc2;
 	}
 	public String getCompB_calc20() {
 		return compB_calc20;
@@ -5226,59 +5294,59 @@ public class Root{
 	public void setCompB_calc29(String compB_calc29) {
 		this.compB_calc29 = compB_calc29;
 	}
-	public String getCompB_calc3() {
-		return compB_calc3;
+	public String getSupportC_calc3() {
+		return supportC_calc3;
 	}
-	public void setCompB_calc3(String compB_calc3) {
-		this.compB_calc3 = compB_calc3;
+	public void setSupportC_calc3(String compB_calc3) {
+		this.supportC_calc3 = compB_calc3;
 	}
-	public String getCompB_calc4() {
-		return compB_calc4;
+	public String getSupportC_calc4() {
+		return supportC_calc4;
 	}
-	public void setCompB_calc4(String compB_calc4) {
-		this.compB_calc4 = compB_calc4;
+	public void setSupportC_calc4(String compB_calc4) {
+		this.supportC_calc4 = compB_calc4;
 	}
-	public String getCompB_calc5() {
-		return compB_calc5;
+	public String getAdminC_item31() {
+		return adminC_item31;
 	}
-	public void setCompB_calc5(String compB_calc5) {
-		this.compB_calc5 = compB_calc5;
+	public void setAdminC_item31(String compB_calc5) {
+		this.adminC_item31 = compB_calc5;
 	}
-	public String getCompB_calc6() {
-		return compB_calc6;
+	public String getAdminC_item32() {
+		return adminC_item32;
 	}
-	public void setCompB_calc6(String compB_calc6) {
-		this.compB_calc6 = compB_calc6;
+	public void setAdminC_item32(String compB_calc6) {
+		this.adminC_item32 = compB_calc6;
 	}
-	public String getCompB_calc7() {
-		return compB_calc7;
+	public String getAdminC_item33() {
+		return adminC_item33;
 	}
-	public void setCompB_calc7(String compB_calc7) {
-		this.compB_calc7 = compB_calc7;
+	public void setAdminC_item33(String compB_calc7) {
+		this.adminC_item33 = compB_calc7;
 	}
-	public String getCompB_calc8() {
-		return compB_calc8;
+	public String getAdminC_item34() {
+		return adminC_item34;
 	}
-	public void setCompB_calc8(String compB_calc8) {
-		this.compB_calc8 = compB_calc8;
+	public void setAdminC_item34(String compB_calc8) {
+		this.adminC_item34 = compB_calc8;
 	}
-	public String getCompB_calc9() {
-		return compB_calc9;
+	public String getAdminC_item35() {
+		return adminC_item35;
 	}
-	public void setCompB_calc9(String compB_calc9) {
-		this.compB_calc9 = compB_calc9;
+	public void setAdminC_item35(String compB_calc9) {
+		this.adminC_item35 = compB_calc9;
 	}
-	public String getCompB_calcsum1() {
-		return compB_calcsum1;
+	public String getSupportC_calcsum() {
+		return supportC_calcsum;
 	}
-	public void setCompB_calcsum1(String compB_calcsum1) {
-		this.compB_calcsum1 = compB_calcsum1;
+	public void setSupportC_calcsum(String compB_calcsum1) {
+		this.supportC_calcsum = compB_calcsum1;
 	}
-	public String getCompB_calcsum2() {
-		return compB_calcsum2;
+	public String getAdminC_calcsum() {
+		return adminC_calcsum;
 	}
-	public void setCompB_calcsum2(String compB_calcsum2) {
-		this.compB_calcsum2 = compB_calcsum2;
+	public void setAdminC_calcsum(String compB_calcsum2) {
+		this.adminC_calcsum = compB_calcsum2;
 	}
 	public String getCompB_calcsum3() {
 		return compB_calcsum3;
@@ -5298,29 +5366,41 @@ public class Root{
 	public void setCompB_calcsum5(String compB_calcsum5) {
 		this.compB_calcsum5 = compB_calcsum5;
 	}
-	public String getCompB_item11() {
-		return compB_item11;
+	public String getSupportC_item11() {
+		return supportC_item11;
 	}
-	public void setCompB_item11(String compB_item11) {
-		this.compB_item11 = compB_item11;
+	public void setSupportC_item11(String compB_item11) {
+		this.supportC_item11 = compB_item11;
 	}
-	public String getCompB_item110() {
-		return compB_item110;
+	public String getAdminC_item16() {
+		return adminC_item16;
 	}
-	public void setCompB_item110(String compB_item110) {
-		this.compB_item110 = compB_item110;
+	public void setAdminC_item16(String compB_item110) {
+		this.adminC_item16 = compB_item110;
 	}
-	public String getCompB_item111() {
-		return compB_item111;
+	public String getAdminC_item17() {
+		return adminC_item17;
 	}
-	public void setCompB_item111(String compB_item111) {
-		this.compB_item111 = compB_item111;
+	public void setAdminC_item17(String compB_item111) {
+		this.adminC_item17 = compB_item111;
 	}
-	public String getCompB_item112() {
-		return compB_item112;
+	public String getAdminC_item18() {
+		return adminC_item18;
 	}
-	public void setCompB_item112(String compB_item112) {
-		this.compB_item112 = compB_item112;
+	public void setAdminC_item18(String adminC_item18) {
+		this.adminC_item18 = adminC_item18;
+	}
+	public String getAdminC_item19() {
+		return adminC_item19;
+	}
+	public void setAdminC_item19(String adminC_item19) {
+		this.adminC_item19 = adminC_item19;
+	}
+	public String getAdminC_item110() {
+		return adminC_item110;
+	}
+	public void setAdminC_item110(String compB_item112) {
+		this.adminC_item110 = compB_item112;
 	}
 	public String getCompB_item113() {
 		return compB_item113;
@@ -5364,11 +5444,11 @@ public class Root{
 	public void setCompB_item119(String compB_item119) {
 		this.compB_item119 = compB_item119;
 	}
-	public String getCompB_item12() {
-		return compB_item12;
+	public String getSupportC_item12() {
+		return supportC_item12;
 	}
-	public void setCompB_item12(String compB_item12) {
-		this.compB_item12 = compB_item12;
+	public void setSupportC_item12(String compB_item12) {
+		this.supportC_item12 = compB_item12;
 	}
 	public String getCompB_item120() {
 		return compB_item120;
@@ -5442,47 +5522,47 @@ public class Root{
 	public void setCompB_item229(String compB_item229) {
 		this.compB_item229 = compB_item229;
 	}
-	public String getCompB_item13() {
-		return compB_item13;
+	public String getSupportC_item13() {
+		return supportC_item13;
 	}
-	public void setCompB_item13(String compB_item13) {
-		this.compB_item13 = compB_item13;
+	public void setSupportC_item13(String compB_item13) {
+		this.supportC_item13 = compB_item13;
 	}
-	public String getCompB_item14() {
-		return compB_item14;
+	public String getSupportC_item14() {
+		return supportC_item14;
 	}
-	public void setCompB_item14(String compB_item14) {
-		this.compB_item14 = compB_item14;
+	public void setSupportC_item14(String compB_item14) {
+		this.supportC_item14 = compB_item14;
 	}
-	public String getCompB_item15() {
-		return compB_item15;
+	public String getAdminC_item11() {
+		return adminC_item11;
 	}
-	public void setCompB_item15(String compB_item15) {
-		this.compB_item15 = compB_item15;
+	public void setAdminC_item11(String compB_item15) {
+		this.adminC_item11 = compB_item15;
 	}
-	public String getCompB_item16() {
-		return compB_item16;
+	public String getAdminC_item12() {
+		return adminC_item12;
 	}
-	public void setCompB_item16(String compB_item16) {
-		this.compB_item16 = compB_item16;
+	public void setAdminC_item12(String compB_item16) {
+		this.adminC_item12 = compB_item16;
 	}
-	public String getCompB_item17() {
-		return compB_item17;
+	public String getAdminC_item13() {
+		return adminC_item13;
 	}
-	public void setCompB_item17(String compB_item17) {
-		this.compB_item17 = compB_item17;
+	public void setAdminC_item13(String compB_item17) {
+		this.adminC_item13 = compB_item17;
 	}
-	public String getCompB_item18() {
-		return compB_item18;
+	public String getAdminC_item14() {
+		return adminC_item14;
 	}
-	public void setCompB_item18(String compB_item18) {
-		this.compB_item18 = compB_item18;
+	public void setAdminC_item14(String compB_item18) {
+		this.adminC_item14 = compB_item18;
 	}
-	public String getCompB_item19() {
-		return compB_item19;
+	public String getAdminC_item15() {
+		return adminC_item15;
 	}
-	public void setCompB_item19(String compB_item19) {
-		this.compB_item19 = compB_item19;
+	public void setAdminC_item15(String compB_item19) {
+		this.adminC_item15 = compB_item19;
 	}
 	public String getCompB_item21() {
 		return compB_item21;
@@ -5490,23 +5570,35 @@ public class Root{
 	public void setCompB_item21(String compB_item21) {
 		this.compB_item21 = compB_item21;
 	}
-	public String getCompB_item210() {
-		return compB_item210;
+	public String getAdminC_item26() {
+		return adminC_item26;
 	}
-	public void setCompB_item210(String compB_item210) {
-		this.compB_item210 = compB_item210;
+	public void setAdminC_item26(String compB_item210) {
+		this.adminC_item26 = compB_item210;
 	}
-	public String getCompB_item211() {
-		return compB_item211;
+	public String getAdminC_item27() {
+		return adminC_item27;
 	}
-	public void setCompB_item211(String compB_item211) {
-		this.compB_item211 = compB_item211;
+	public void setAdminC_item27(String compB_item211) {
+		this.adminC_item27 = compB_item211;
 	}
-	public String getCompB_item212() {
-		return compB_item212;
+	public String getAdminC_item28() {
+		return adminC_item28;
 	}
-	public void setCompB_item212(String compB_item212) {
-		this.compB_item212 = compB_item212;
+	public void setAdminC_item28(String adminC_item28) {
+		this.adminC_item28 = adminC_item28;
+	}
+	public String getAdminC_item29() {
+		return adminC_item29;
+	}
+	public void setAdminC_item29(String adminC_item29) {
+		this.adminC_item29 = adminC_item29;
+	}
+	public String getAdminC_item210() {
+		return adminC_item210;
+	}
+	public void setAdminC_item210(String compB_item212) {
+		this.adminC_item210 = compB_item212;
 	}
 	public String getCompB_item213() {
 		return compB_item213;
@@ -5616,35 +5708,35 @@ public class Root{
 	public void setCompB_item24(String compB_item24) {
 		this.compB_item24 = compB_item24;
 	}
-	public String getCompB_item25() {
-		return compB_item25;
+	public String getAdminC_item21() {
+		return adminC_item21;
 	}
-	public void setCompB_item25(String compB_item25) {
-		this.compB_item25 = compB_item25;
+	public void setAdminC_item21(String compB_item25) {
+		this.adminC_item21 = compB_item25;
 	}
-	public String getCompB_item26() {
-		return compB_item26;
+	public String getAdminC_item22() {
+		return adminC_item22;
 	}
-	public void setCompB_item26(String compB_item26) {
-		this.compB_item26 = compB_item26;
+	public void setAdminC_item22(String compB_item26) {
+		this.adminC_item22 = compB_item26;
 	}
-	public String getCompB_item27() {
-		return compB_item27;
+	public String getAdminC_item23() {
+		return adminC_item23;
 	}
-	public void setCompB_item27(String compB_item27) {
-		this.compB_item27 = compB_item27;
+	public void setAdminC_item23(String compB_item27) {
+		this.adminC_item23 = compB_item27;
 	}
-	public String getCompB_item28() {
-		return compB_item28;
+	public String getAdminC_item24() {
+		return adminC_item24;
 	}
-	public void setCompB_item28(String compB_item28) {
-		this.compB_item28 = compB_item28;
+	public void setAdminC_item24(String compB_item28) {
+		this.adminC_item24 = compB_item28;
 	}
-	public String getCompB_item29() {
-		return compB_item29;
+	public String getAdminC_item25() {
+		return adminC_item25;
 	}
-	public void setCompB_item29(String compB_item29) {
-		this.compB_item29 = compB_item29;
+	public void setAdminC_item25(String compB_item29) {
+		this.adminC_item25 = compB_item29;
 	}
 	public String getCompB_item31() {
 		return compB_item31;
@@ -5868,17 +5960,29 @@ public class Root{
 	public void setCompB_recovered3(String compB_recovered3) {
 		this.compB_recovered3 = compB_recovered3;
 	}
-	public String getCompB_sum11() {
-		return compB_sum11;
+	public String getSupportC_sum1() {
+		return supportC_sum1;
 	}
-	public void setCompB_sum11(String compB_sum11) {
-		this.compB_sum11 = compB_sum11;
+	public void setSupportC_sum1(String compB_sum11) {
+		this.supportC_sum1 = compB_sum11;
 	}
-	public String getCompB_sum12() {
-		return compB_sum12;
+	public String getSupportC_sum2() {
+		return supportC_sum2;
 	}
-	public void setCompB_sum12(String compB_sum12) {
-		this.compB_sum12 = compB_sum12;
+	public void setSupportC_sum2(String supportC_sum2) {
+		this.supportC_sum2 = supportC_sum2;
+	}
+	public String getAdminC_sum1() {
+		return adminC_sum1;
+	}
+	public void setAdminC_sum1(String compB_sum12) {
+		this.adminC_sum1 = compB_sum12;
+	}
+	public String getAdminC_sum2() {
+		return adminC_sum2;
+	}
+	public void setAdminC_sum2(String adminC_sum2) {
+		this.adminC_sum2 = adminC_sum2;
 	}
 	public String getCompB_sum13() {
 		return compB_sum13;
@@ -5898,17 +6002,29 @@ public class Root{
 	public void setCompB_sum15(String compB_sum15) {
 		this.compB_sum15 = compB_sum15;
 	}
-	public String getCompB_sum21() {
-		return compB_sum21;
+	public String getSupportC_item21() {
+		return supportC_item21;
 	}
-	public void setCompB_sum21(String compB_sum21) {
-		this.compB_sum21 = compB_sum21;
+	public void setSupportC_item21(String compB_sum21) {
+		this.supportC_item21 = compB_sum21;
 	}
-	public String getCompB_sum22() {
-		return compB_sum22;
+	public String getSupportC_item22() {
+		return supportC_item22;
 	}
-	public void setCompB_sum22(String compB_sum22) {
-		this.compB_sum22 = compB_sum22;
+	public void setSupportC_item22(String compB_sum22) {
+		this.supportC_item22 = compB_sum22;
+	}
+	public String getSupportC_item23() {
+		return supportC_item23;
+	}
+	public void setSupportC_item23(String compB_sum23) {
+		this.supportC_item23 = compB_sum23;
+	}
+	public String getSupportC_item24() {
+		return supportC_item24;
+	}
+	public void setSupportC_item24(String compB_sum24) {
+		this.supportC_item24 = compB_sum24;
 	}
 	public String getCompB_sum23() {
 		return compB_sum23;
@@ -6006,29 +6122,41 @@ public class Root{
 	public void setCompH_accrued4(String compH_accrued4) {
 		this.compH_accrued4 = compH_accrued4;
 	}
-	public String getCompH_calc1() {
-		return compH_calc1;
+	public String getSupportH_calc1() {
+		return supportH_calc1;
 	}
-	public void setCompH_calc1(String compH_calc1) {
-		this.compH_calc1 = compH_calc1;
+	public void setSupportH_calc1(String compH_calc1) {
+		this.supportH_calc1 = compH_calc1;
 	}
-	public String getCompH_calc10() {
-		return compH_calc10;
+	public String getAdminH_item36() {
+		return adminH_item36;
 	}
-	public void setCompH_calc10(String compH_calc10) {
-		this.compH_calc10 = compH_calc10;
+	public void setAdminH_item36(String compH_calc10) {
+		this.adminH_item36 = compH_calc10;
 	}
-	public String getCompH_calc11() {
-		return compH_calc11;
+	public String getAdminH_item37() {
+		return adminH_item37;
 	}
-	public void setCompH_calc11(String compH_calc11) {
-		this.compH_calc11 = compH_calc11;
+	public void setAdminH_item37(String compH_calc11) {
+		this.adminH_item37 = compH_calc11;
 	}
-	public String getCompH_calc12() {
-		return compH_calc12;
+	public String getAdminH_item38() {
+		return adminH_item38;
 	}
-	public void setCompH_calc12(String compH_calc12) {
-		this.compH_calc12 = compH_calc12;
+	public void setAdminH_item38(String adminH_item38) {
+		this.adminH_item38 = adminH_item38;
+	}
+	public String getAdminH_item39() {
+		return adminH_item39;
+	}
+	public void setAdminH_item39(String adminH_item39) {
+		this.adminH_item39 = adminH_item39;
+	}
+	public String getAdminH_item310() {
+		return adminH_item310;
+	}
+	public void setAdminH_item310(String compH_calc12) {
+		this.adminH_item310 = compH_calc12;
 	}
 	public String getCompH_calc13() {
 		return compH_calc13;
@@ -6072,11 +6200,11 @@ public class Root{
 	public void setCompH_calc19(String compH_calc19) {
 		this.compH_calc19 = compH_calc19;
 	}
-	public String getCompH_calc2() {
-		return compH_calc2;
+	public String getSupportH_calc2() {
+		return supportH_calc2;
 	}
-	public void setCompH_calc2(String compH_calc2) {
-		this.compH_calc2 = compH_calc2;
+	public void setSupportH_calc2(String compH_calc2) {
+		this.supportH_calc2 = compH_calc2;
 	}
 	public String getCompH_calc20() {
 		return compH_calc20;
@@ -6138,59 +6266,59 @@ public class Root{
 	public void setCompH_calc29(String compH_calc29) {
 		this.compH_calc29 = compH_calc29;
 	}
-	public String getCompH_calc3() {
-		return compH_calc3;
+	public String getSupportH_calc3() {
+		return supportH_calc3;
 	}
-	public void setCompH_calc3(String compH_calc3) {
-		this.compH_calc3 = compH_calc3;
+	public void setSupportH_calc3(String compH_calc3) {
+		this.supportH_calc3 = compH_calc3;
 	}
-	public String getCompH_calc4() {
-		return compH_calc4;
+	public String getSupportH_calc4() {
+		return supportH_calc4;
 	}
-	public void setCompH_calc4(String compH_calc4) {
-		this.compH_calc4 = compH_calc4;
+	public void setSupportH_calc4(String compH_calc4) {
+		this.supportH_calc4 = compH_calc4;
 	}
-	public String getCompH_calc5() {
-		return compH_calc5;
+	public String getAdminH_item31() {
+		return adminH_item31;
 	}
-	public void setCompH_calc5(String compH_calc5) {
-		this.compH_calc5 = compH_calc5;
+	public void setAdminH_item31(String compH_calc5) {
+		this.adminH_item31 = compH_calc5;
 	}
-	public String getCompH_calc6() {
-		return compH_calc6;
+	public String getAdminH_item32() {
+		return adminH_item32;
 	}
-	public void setCompH_calc6(String compH_calc6) {
-		this.compH_calc6 = compH_calc6;
+	public void setAdminH_item32(String compH_calc6) {
+		this.adminH_item32 = compH_calc6;
 	}
-	public String getCompH_calc7() {
-		return compH_calc7;
+	public String getAdminH_item33() {
+		return adminH_item33;
 	}
-	public void setCompH_calc7(String compH_calc7) {
-		this.compH_calc7 = compH_calc7;
+	public void setAdminH_item33(String compH_calc7) {
+		this.adminH_item33 = compH_calc7;
 	}
-	public String getCompH_calc8() {
-		return compH_calc8;
+	public String getAdminH_item34() {
+		return adminH_item34;
 	}
-	public void setCompH_calc8(String compH_calc8) {
-		this.compH_calc8 = compH_calc8;
+	public void setAdminH_item34(String compH_calc8) {
+		this.adminH_item34 = compH_calc8;
 	}
-	public String getCompH_calc9() {
-		return compH_calc9;
+	public String getAdminH_item35() {
+		return adminH_item35;
 	}
-	public void setCompH_calc9(String compH_calc9) {
-		this.compH_calc9 = compH_calc9;
+	public void setAdminH_item35(String compH_calc9) {
+		this.adminH_item35 = compH_calc9;
 	}
-	public String getCompH_calcsum1() {
-		return compH_calcsum1;
+	public String getSupportH_calcsum() {
+		return supportH_calcsum;
 	}
-	public void setCompH_calcsum1(String compH_calcsum1) {
-		this.compH_calcsum1 = compH_calcsum1;
+	public void setSupportH_calcsum(String compH_calcsum1) {
+		this.supportH_calcsum = compH_calcsum1;
 	}
-	public String getCompH_calcsum2() {
-		return compH_calcsum2;
+	public String getAdminH_calcsum() {
+		return adminH_calcsum;
 	}
-	public void setCompH_calcsum2(String compH_calcsum2) {
-		this.compH_calcsum2 = compH_calcsum2;
+	public void setAdminH_calcsum(String compH_calcsum2) {
+		this.adminH_calcsum = compH_calcsum2;
 	}
 	public String getCompH_calcsum3() {
 		return compH_calcsum3;
@@ -6210,29 +6338,41 @@ public class Root{
 	public void setCompH_calcsum5(String compH_calcsum5) {
 		this.compH_calcsum5 = compH_calcsum5;
 	}
-	public String getCompH_item11() {
-		return compH_item11;
+	public String getSupportH_item11() {
+		return supportH_item11;
 	}
-	public void setCompH_item11(String compH_item11) {
-		this.compH_item11 = compH_item11;
+	public void setSupportH_item11(String compH_item11) {
+		this.supportH_item11 = compH_item11;
 	}
-	public String getCompH_item110() {
-		return compH_item110;
+	public String getAdminH_item16() {
+		return adminH_item16;
 	}
-	public void setCompH_item110(String compH_item110) {
-		this.compH_item110 = compH_item110;
+	public void setAdminH_item16(String compH_item110) {
+		this.adminH_item16 = compH_item110;
 	}
-	public String getCompH_item111() {
-		return compH_item111;
+	public String getAdminH_item17() {
+		return adminH_item17;
 	}
-	public void setCompH_item111(String compH_item111) {
-		this.compH_item111 = compH_item111;
+	public void setAdminH_item17(String compH_item111) {
+		this.adminH_item17 = compH_item111;
 	}
-	public String getCompH_item112() {
-		return compH_item112;
+	public String getAdminH_item18() {
+		return adminH_item18;
 	}
-	public void setCompH_item112(String compH_item112) {
-		this.compH_item112 = compH_item112;
+	public void setAdminH_item18(String adminH_item18) {
+		this.adminH_item18 = adminH_item18;
+	}
+	public String getAdminH_item19() {
+		return adminH_item19;
+	}
+	public void setAdminH_item19(String adminH_item19) {
+		this.adminH_item19 = adminH_item19;
+	}
+	public String getAdminH_item110() {
+		return adminH_item110;
+	}
+	public void setAdminH_item110(String compH_item112) {
+		this.adminH_item110 = compH_item112;
 	}
 	public String getCompH_item113() {
 		return compH_item113;
@@ -6276,11 +6416,11 @@ public class Root{
 	public void setCompH_item119(String compH_item119) {
 		this.compH_item119 = compH_item119;
 	}
-	public String getCompH_item12() {
-		return compH_item12;
+	public String getSupportH_item12() {
+		return supportH_item12;
 	}
-	public void setCompH_item12(String compH_item12) {
-		this.compH_item12 = compH_item12;
+	public void setSupportH_item12(String compH_item12) {
+		this.supportH_item12 = compH_item12;
 	}
 	public String getCompH_item120() {
 		return compH_item120;
@@ -6342,71 +6482,83 @@ public class Root{
 	public void setCompH_item129(String compH_item129) {
 		this.compH_item129 = compH_item129;
 	}
-	public String getCompH_item13() {
-		return compH_item13;
+	public String getSupportH_item13() {
+		return supportH_item13;
 	}
-	public void setCompH_item13(String compH_item13) {
-		this.compH_item13 = compH_item13;
+	public void setSupportH_item13(String compH_item13) {
+		this.supportH_item13 = compH_item13;
 	}
-	public String getCompH_item14() {
-		return compH_item14;
+	public String getSupportH_item14() {
+		return supportH_item14;
 	}
-	public void setCompH_item14(String compH_item14) {
-		this.compH_item14 = compH_item14;
+	public void setSupportH_item14(String compH_item14) {
+		this.supportH_item14 = compH_item14;
 	}
-	public String getCompH_item15() {
-		return compH_item15;
+	public String getAdminH_item11() {
+		return adminH_item11;
 	}
-	public void setCompH_item15(String compH_item15) {
-		this.compH_item15 = compH_item15;
+	public void setAdminH_item11(String compH_item15) {
+		this.adminH_item11 = compH_item15;
 	}
-	public String getCompH_item16() {
-		return compH_item16;
+	public String getAdminH_item12() {
+		return adminH_item12;
 	}
-	public void setCompH_item16(String compH_item16) {
-		this.compH_item16 = compH_item16;
+	public void setAdminH_item12(String compH_item16) {
+		this.adminH_item12 = compH_item16;
 	}
-	public String getCompH_item17() {
-		return compH_item17;
+	public String getAdminH_item13() {
+		return adminH_item13;
 	}
-	public void setCompH_item17(String compH_item17) {
-		this.compH_item17 = compH_item17;
+	public void setAdminH_item13(String compH_item17) {
+		this.adminH_item13 = compH_item17;
 	}
-	public String getCompH_item18() {
-		return compH_item18;
+	public String getAdminH_item14() {
+		return adminH_item14;
 	}
-	public void setCompH_item18(String compH_item18) {
-		this.compH_item18 = compH_item18;
+	public void setAdminH_item14(String compH_item18) {
+		this.adminH_item14 = compH_item18;
 	}
-	public String getCompH_item19() {
-		return compH_item19;
+	public String getAdminH_item15() {
+		return adminH_item15;
 	}
-	public void setCompH_item19(String compH_item19) {
-		this.compH_item19 = compH_item19;
+	public void setAdminH_item15(String compH_item19) {
+		this.adminH_item15 = compH_item19;
 	}
-	public String getCompH_item21() {
-		return compH_item21;
+	public String getSupportH_item21() {
+		return supportH_item21;
 	}
-	public void setCompH_item21(String compH_item21) {
-		this.compH_item21 = compH_item21;
+	public void setSupportH_item21(String compH_item21) {
+		this.supportH_item21 = compH_item21;
 	}
-	public String getCompH_item210() {
-		return compH_item210;
+	public String getAdminH_item26() {
+		return adminH_item26;
 	}
-	public void setCompH_item210(String compH_item210) {
-		this.compH_item210 = compH_item210;
+	public void setAdminH_item26(String compH_item210) {
+		this.adminH_item26 = compH_item210;
 	}
-	public String getCompH_item211() {
-		return compH_item211;
+	public String getAdminH_item27() {
+		return adminH_item27;
 	}
-	public void setCompH_item211(String compH_item211) {
-		this.compH_item211 = compH_item211;
+	public void setAdminH_item27(String compH_item211) {
+		this.adminH_item27 = compH_item211;
 	}
-	public String getCompH_item212() {
-		return compH_item212;
+	public String getAdminH_item28() {
+		return adminH_item28;
 	}
-	public void setCompH_item212(String compH_item212) {
-		this.compH_item212 = compH_item212;
+	public void setAdminH_item28(String adminH_item28) {
+		this.adminH_item28 = adminH_item28;
+	}
+	public String getAdminH_item29() {
+		return adminH_item29;
+	}
+	public void setAdminH_item29(String adminH_item29) {
+		this.adminH_item29 = adminH_item29;
+	}
+	public String getAdminH_item210() {
+		return adminH_item210;
+	}
+	public void setAdminH_item210(String compH_item212) {
+		this.adminH_item210 = compH_item212;
 	}
 	public String getCompH_item213() {
 		return compH_item213;
@@ -6450,11 +6602,11 @@ public class Root{
 	public void setCompH_item219(String compH_item219) {
 		this.compH_item219 = compH_item219;
 	}
-	public String getCompH_item22() {
-		return compH_item22;
+	public String getSupportH_item22() {
+		return supportH_item22;
 	}
-	public void setCompH_item22(String compH_item22) {
-		this.compH_item22 = compH_item22;
+	public void setSupportH_item22(String compH_item22) {
+		this.supportH_item22 = compH_item22;
 	}
 	public String getCompH_item220() {
 		return compH_item220;
@@ -6516,47 +6668,47 @@ public class Root{
 	public void setCompH_item229(String compH_item229) {
 		this.compH_item229 = compH_item229;
 	}
-	public String getCompH_item23() {
-		return compH_item23;
+	public String getSupportH_item23() {
+		return supportH_item23;
 	}
-	public void setCompH_item23(String compH_item23) {
-		this.compH_item23 = compH_item23;
+	public void setSupportH_item23(String compH_item23) {
+		this.supportH_item23 = compH_item23;
 	}
-	public String getCompH_item24() {
-		return compH_item24;
+	public String getSupportH_item24() {
+		return supportH_item24;
 	}
-	public void setCompH_item24(String compH_item24) {
-		this.compH_item24 = compH_item24;
+	public void setSupportH_item24(String compH_item24) {
+		this.supportH_item24 = compH_item24;
 	}
-	public String getCompH_item25() {
-		return compH_item25;
+	public String getAdminH_item21() {
+		return adminH_item21;
 	}
-	public void setCompH_item25(String compH_item25) {
-		this.compH_item25 = compH_item25;
+	public void setAdminH_item21(String compH_item25) {
+		this.adminH_item21 = compH_item25;
 	}
-	public String getCompH_item26() {
-		return compH_item26;
+	public String getAdminH_item22() {
+		return adminH_item22;
 	}
-	public void setCompH_item26(String compH_item26) {
-		this.compH_item26 = compH_item26;
+	public void setAdminH_item22(String compH_item26) {
+		this.adminH_item22 = compH_item26;
 	}
-	public String getCompH_item27() {
-		return compH_item27;
+	public String getAdminH_item23() {
+		return adminH_item23;
 	}
-	public void setCompH_item27(String compH_item27) {
-		this.compH_item27 = compH_item27;
+	public void setAdminH_item23(String compH_item27) {
+		this.adminH_item23 = compH_item27;
 	}
-	public String getCompH_item28() {
-		return compH_item28;
+	public String getAdminH_item24() {
+		return adminH_item24;
 	}
-	public void setCompH_item28(String compH_item28) {
-		this.compH_item28 = compH_item28;
+	public void setAdminH_item24(String compH_item28) {
+		this.adminH_item24 = compH_item28;
 	}
-	public String getCompH_item29() {
-		return compH_item29;
+	public String getAdminH_item25() {
+		return adminH_item25;
 	}
-	public void setCompH_item29(String compH_item29) {
-		this.compH_item29 = compH_item29;
+	public void setAdminH_item25(String compH_item29) {
+		this.adminH_item25 = compH_item29;
 	}
 	public String getCompH_item31() {
 		return compH_item31;
@@ -6924,17 +7076,17 @@ public class Root{
 	public void setCompH_PHPsum5(String compH_PHPsum5) {
 		this.compH_PHPsum5 = compH_PHPsum5;
 	}
-	public String getCompH_sum11() {
-		return compH_sum11;
+	public String getSupportH_sum1() {
+		return supportH_sum1;
 	}
-	public void setCompH_sum11(String compH_sum11) {
-		this.compH_sum11 = compH_sum11;
+	public void setSupportH_sum1(String compH_sum11) {
+		this.supportH_sum1 = compH_sum11;
 	}
-	public String getCompH_sum12() {
-		return compH_sum12;
+	public String getAdminH_sum1() {
+		return adminH_sum1;
 	}
-	public void setCompH_sum12(String compH_sum12) {
-		this.compH_sum12 = compH_sum12;
+	public void setAdminH_sum1(String compH_sum12) {
+		this.adminH_sum1 = compH_sum12;
 	}
 	public String getCompH_sum13() {
 		return compH_sum13;
@@ -6954,17 +7106,17 @@ public class Root{
 	public void setCompH_sum15(String compH_sum15) {
 		this.compH_sum15 = compH_sum15;
 	}
-	public String getCompH_sum21() {
-		return compH_sum21;
+	public String getSupportH_sum2() {
+		return supportH_sum2;
 	}
-	public void setCompH_sum21(String compH_sum21) {
-		this.compH_sum21 = compH_sum21;
+	public void setSupportH_sum2(String compH_sum21) {
+		this.supportH_sum2 = compH_sum21;
 	}
-	public String getCompH_sum22() {
-		return compH_sum22;
+	public String getAdminH_sum2() {
+		return adminH_sum2;
 	}
-	public void setCompH_sum22(String compH_sum22) {
-		this.compH_sum22 = compH_sum22;
+	public void setAdminH_sum2(String compH_sum22) {
+		this.adminH_sum2 = compH_sum22;
 	}
 	public String getCompH_sum23() {
 		return compH_sum23;
