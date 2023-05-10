@@ -2136,12 +2136,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			incontinenceSupExp.setExpType(root.getOpEx_3_label());
 			incontinenceSupExp.setConfirmationId(root.getForm().getConfirmationId());
 
-			Collections.addAll(ltcYtdExp, dirCareCostExp, foodCostExp, ldryServExp, housekeepingCostExp,
-					adminServCostExp, plantMainOpStaffExp, salWagRecvExp, salWagAccExp, othLabCostExp, bnftCostExp,
-					sickSevrnceAccExp, buildingRentExp, intrstMortgageLngTrmExp, propertyTaxesExp, mntnceExp,
-					suppliesExp, utilitiesExp, wasteMgmntExp, resTranServExp, othExp, medSupExp, rawFoodCostExp,
-					drgsPharmaExp, dietSupExp, ldrySupExp, houseSupExp, incontinenceSupExp);
-
 			//
 			/* Subtotals */
 			LtcYtdExpSubTotals staffCost1ASubtotal = new LtcYtdExpSubTotals();
