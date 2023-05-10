@@ -822,8 +822,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			 */
 			LtcYtdCompSal supportFoodServices = new LtcYtdCompSal();
 			supportFoodServices.setCompSalStaffYtd(root.getSupportC_item11());
-			supportFoodServices.setCompSalContractServicesYtd(root.getCompB_item21());
-			supportFoodServices.setCompSalOfficeAllocYtd(root.getCompB_item31());
+			supportFoodServices.setCompSalContractServicesYtd(root.getSupportC_item21());
 			supportFoodServices.setCompSalName(root.getSupport_label1());
 			supportFoodServices.setCompSalType(root.getSupport_label());
 			supportFoodServices.setConfirmationId(root.getForm().getConfirmationId());
@@ -831,8 +830,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			
 			LtcYtdCompSal supportLaundryServices = new LtcYtdCompSal();
 			supportLaundryServices.setCompSalStaffYtd(root.getSupportC_item12());
-			supportLaundryServices.setCompSalContractServicesYtd(root.getCompB_item22());
-			supportLaundryServices.setCompSalOfficeAllocYtd(root.getCompB_item32());
+			supportLaundryServices.setCompSalContractServicesYtd(root.getSupportC_item22());
 			supportLaundryServices.setCompSalName(root.getSupport_label2());
 			supportLaundryServices.setCompSalType(root.getSupport_label());
 			supportLaundryServices.setConfirmationId(root.getForm().getConfirmationId());
@@ -840,8 +838,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 
 			LtcYtdCompSal supportHousekeeping = new LtcYtdCompSal();
 			supportHousekeeping.setCompSalStaffYtd(root.getSupportC_item13());
-			supportHousekeeping.setCompSalContractServicesYtd(root.getCompB_item23());
-			supportHousekeeping.setCompSalOfficeAllocYtd(root.getCompB_item33());
+			supportHousekeeping.setCompSalContractServicesYtd(root.getSupportC_item23());
 			supportHousekeeping.setCompSalName(root.getSupport_label3());
 			supportHousekeeping.setCompSalType(root.getSupport_label());
 			supportHousekeeping.setConfirmationId(root.getForm().getConfirmationId());
@@ -849,8 +846,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 
 			LtcYtdCompSal supportPlantMntnce = new LtcYtdCompSal();
 			supportPlantMntnce.setCompSalStaffYtd(root.getSupportC_item14());
-			supportPlantMntnce.setCompSalContractServicesYtd(root.getCompB_item24());
-			supportPlantMntnce.setCompSalOfficeAllocYtd(root.getCompB_item34());
+			supportPlantMntnce.setCompSalContractServicesYtd(root.getSupportC_item24());
 			supportPlantMntnce.setCompSalName(root.getSupport_label4());
 			supportPlantMntnce.setCompSalType(root.getSupport_label());
 			supportPlantMntnce.setConfirmationId(root.getForm().getConfirmationId());
@@ -860,98 +856,87 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal adminAdministrator = new LtcYtdCompSal();
 			adminAdministrator.setCompSalStaffYtd(root.getAdminC_item11());
 			adminAdministrator.setCompSalContractServicesYtd(root.getAdminC_item21());
-			adminAdministrator.setCompSalOfficeAllocYtd("");
 			adminAdministrator.setCompSalName(root.getAdmin_label1());
 			adminAdministrator.setCompSalType(root.getAdmin_label());
 			adminAdministrator.setConfirmationId(root.getForm().getConfirmationId());
-			adminAdministrator.setCompSalTotalCostYtd(root.getAdminC_item31());
+			adminAdministrator.setCompSalTotalCostYtd(root.getAdminC_calc1());
 
 			LtcYtdCompSal adminDirOfCare = new LtcYtdCompSal();
 			adminDirOfCare.setCompSalStaffYtd(root.getAdminC_item12());
 			adminDirOfCare.setCompSalContractServicesYtd(root.getAdminC_item22());
-			adminDirOfCare.setCompSalOfficeAllocYtd("");
 			adminDirOfCare.setCompSalName(root.getAdmin_label2());
 			adminDirOfCare.setCompSalType(root.getAdmin_label());
 			adminDirOfCare.setConfirmationId(root.getForm().getConfirmationId());
-			adminDirOfCare.setCompSalTotalCostYtd(root.getAdminC_item32());
+			adminDirOfCare.setCompSalTotalCostYtd(root.getAdminC_calc2());
 
 			LtcYtdCompSal adminDeptManagers = new LtcYtdCompSal();
 			adminDeptManagers.setCompSalStaffYtd(root.getAdminC_item13());
 			adminDeptManagers.setCompSalContractServicesYtd(root.getAdminC_item23());
-			adminDeptManagers.setCompSalOfficeAllocYtd("");
 			adminDeptManagers.setCompSalName(root.getAdmin_label3());
 			adminDeptManagers.setCompSalType(root.getAdmin_label());
 			adminDeptManagers.setConfirmationId(root.getForm().getConfirmationId());
-			adminDeptManagers.setCompSalTotalCostYtd(root.getAdminC_item33());
+			adminDeptManagers.setCompSalTotalCostYtd(root.getAdminC_calc3());
 
 			LtcYtdCompSal adminSupport = new LtcYtdCompSal();
 			adminSupport.setCompSalStaffYtd(root.getAdminC_item14());
 			adminSupport.setCompSalContractServicesYtd(root.getAdminC_item24());
-			adminSupport.setCompSalOfficeAllocYtd("");
 			adminSupport.setCompSalName(root.getAdmin_label4());
 			adminSupport.setCompSalType(root.getAdmin_label());
 			adminSupport.setConfirmationId(root.getForm().getConfirmationId());
-			adminSupport.setCompSalTotalCostYtd(root.getAdminC_item34());
+			adminSupport.setCompSalTotalCostYtd(root.getAdminC_calc4());
 
 			LtcYtdCompSal adminPastoCareWrkr = new LtcYtdCompSal();
 			adminPastoCareWrkr.setCompSalStaffYtd(root.getAdminC_item15());
 			adminPastoCareWrkr.setCompSalContractServicesYtd(root.getAdminC_item25());
-			adminPastoCareWrkr.setCompSalOfficeAllocYtd("");
 			adminPastoCareWrkr.setCompSalName(root.getAdmin_label5());
 			adminPastoCareWrkr.setCompSalType(root.getAdmin_label());
 			adminPastoCareWrkr.setConfirmationId(root.getForm().getConfirmationId());
-			adminPastoCareWrkr.setCompSalTotalCostYtd(root.getAdminC_item35());
+			adminPastoCareWrkr.setCompSalTotalCostYtd(root.getAdminC_calc5());
 
 			LtcYtdCompSal adminClrks = new LtcYtdCompSal();
 			adminClrks.setCompSalStaffYtd(root.getAdminC_item16());
 			adminClrks.setCompSalContractServicesYtd(root.getAdminC_item26());
-			adminClrks.setCompSalOfficeAllocYtd("");
 			adminClrks.setCompSalName(root.getAdmin_label6());
 			adminClrks.setCompSalType(root.getAdmin_label());
 			adminClrks.setConfirmationId(root.getForm().getConfirmationId());
-			adminClrks.setCompSalTotalCostYtd(root.getAdminC_item36());
+			adminClrks.setCompSalTotalCostYtd(root.getAdminC_calc6());
 
 			LtcYtdCompSal adminClncCrdinator = new LtcYtdCompSal();
 			adminClncCrdinator.setCompSalStaffYtd(root.getAdminC_item17());
 			adminClncCrdinator.setCompSalContractServicesYtd(root.getAdminC_item27());
-			adminClncCrdinator.setCompSalOfficeAllocYtd("");
 			adminClncCrdinator.setCompSalName(root.getAdmin_label7());
 			adminClncCrdinator.setCompSalType(root.getAdmin_label());
 			adminClncCrdinator.setConfirmationId(root.getForm().getConfirmationId());
-			adminClncCrdinator.setCompSalTotalCostYtd(root.getAdminC_item37());
+			adminClncCrdinator.setCompSalTotalCostYtd(root.getAdminC_calc7());
 
 			LtcYtdCompSal adminScreenGreeters = new LtcYtdCompSal();
 			adminScreenGreeters.setCompSalStaffYtd(root.getAdminC_item18());
 			adminScreenGreeters.setCompSalContractServicesYtd(root.getAdminC_item28());
-			adminScreenGreeters.setCompSalOfficeAllocYtd("");
 			adminScreenGreeters.setCompSalName(root.getAdmin_label8());
 			adminScreenGreeters.setCompSalType(root.getAdmin_label());
 			adminScreenGreeters.setConfirmationId(root.getForm().getConfirmationId());
-			adminScreenGreeters.setCompSalTotalCostYtd(root.getAdminC_item38());
+			adminScreenGreeters.setCompSalTotalCostYtd(root.getAdminC_calc8());
 
 			LtcYtdCompSal adminHCSP = new LtcYtdCompSal();
 			adminHCSP.setCompSalStaffYtd(root.getAdminC_item19());
 			adminHCSP.setCompSalContractServicesYtd(root.getAdminC_item29());
-			adminHCSP.setCompSalOfficeAllocYtd("");
 			adminHCSP.setCompSalName(root.getAdmin_label9());
 			adminHCSP.setCompSalType(root.getAdmin_label());
 			adminHCSP.setConfirmationId(root.getForm().getConfirmationId());
-			adminHCSP.setCompSalTotalCostYtd(root.getAdminC_item39());
+			adminHCSP.setCompSalTotalCostYtd(root.getAdminC_calc9());
 
 			LtcYtdCompSal adminOther = new LtcYtdCompSal();
 			adminOther.setCompSalStaffYtd(root.getAdminC_item110());
 			adminOther.setCompSalContractServicesYtd(root.getAdminC_item210());
-			adminOther.setCompSalOfficeAllocYtd("");
 			adminOther.setCompSalName(root.getAdmin_label10());
 			adminOther.setCompSalType(root.getAdmin_label());
 			adminOther.setConfirmationId(root.getForm().getConfirmationId());
-			adminOther.setCompSalTotalCostYtd(root.getAdminC_item310());
+			adminOther.setCompSalTotalCostYtd(root.getAdminC_calc10());
 
 			/* Direct Care Nursing */
 			LtcYtdCompSal nursingRNSal = new LtcYtdCompSal();
 			nursingRNSal.setCompSalStaffYtd(root.getCompB_item113());
 			nursingRNSal.setCompSalContractServicesYtd(root.getCompB_item213());
-			nursingRNSal.setCompSalOfficeAllocYtd(root.getCompB_item313());
 			nursingRNSal.setCompSalName(root.getNursing_label_comp1());
 			nursingRNSal.setCompSalType(root.getNursing_label_comp());
 			nursingRNSal.setConfirmationId(root.getForm().getConfirmationId());
@@ -961,7 +946,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal nursingLPNSal = new LtcYtdCompSal();
 			nursingLPNSal.setCompSalStaffYtd(root.getCompB_item114());
 			nursingLPNSal.setCompSalContractServicesYtd(root.getCompB_item214());
-			nursingLPNSal.setCompSalOfficeAllocYtd(root.getCompB_item314());
 			nursingLPNSal.setCompSalName(root.getNursing_label_comp2());
 			nursingLPNSal.setCompSalType(root.getNursing_label_comp());
 			nursingLPNSal.setConfirmationId(root.getForm().getConfirmationId());
@@ -970,7 +954,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal nursingHCASal = new LtcYtdCompSal();
 			nursingHCASal.setCompSalStaffYtd(root.getCompB_item115());
 			nursingHCASal.setCompSalContractServicesYtd(root.getCompB_item215());
-			nursingHCASal.setCompSalOfficeAllocYtd(root.getCompB_item315());
 			nursingHCASal.setCompSalName(root.getNursing_label_comp3());
 			nursingHCASal.setCompSalType(root.getNursing_label_comp());
 			nursingHCASal.setConfirmationId(root.getForm().getConfirmationId());
@@ -980,7 +963,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal nursingOthSal = new LtcYtdCompSal();
 			nursingOthSal.setCompSalStaffYtd(root.getCompB_item116());
 			nursingOthSal.setCompSalContractServicesYtd(root.getCompB_item216());
-			nursingOthSal.setCompSalOfficeAllocYtd(root.getCompB_item316());
 			nursingOthSal.setCompSalName(root.getNursing_label_comp4());
 			nursingOthSal.setCompSalType(root.getNursing_label_comp());
 			nursingOthSal.setConfirmationId(root.getForm().getConfirmationId());
@@ -990,7 +972,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal alliedProfOTSal = new LtcYtdCompSal();
 			alliedProfOTSal.setCompSalStaffYtd(root.getCompB_item117());
 			alliedProfOTSal.setCompSalContractServicesYtd(root.getCompB_item217());
-			alliedProfOTSal.setCompSalOfficeAllocYtd(root.getCompB_item317());
 			alliedProfOTSal.setCompSalName(root.getAlliedProf_label_comp1());
 			alliedProfOTSal.setCompSalType(root.getAlliedProf_label_comp());
 			alliedProfOTSal.setConfirmationId(root.getForm().getConfirmationId());
@@ -999,7 +980,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal alliedProfPTSal = new LtcYtdCompSal();
 			alliedProfPTSal.setCompSalStaffYtd(root.getCompB_item118());
 			alliedProfPTSal.setCompSalContractServicesYtd(root.getCompB_item218());
-			alliedProfPTSal.setCompSalOfficeAllocYtd(root.getCompB_item318());
 			alliedProfPTSal.setCompSalName(root.getAlliedProf_label_comp2());
 			alliedProfPTSal.setCompSalType(root.getAlliedProf_label_comp());
 			alliedProfPTSal.setConfirmationId(root.getForm().getConfirmationId());
@@ -1008,7 +988,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal alliedProfDTSal = new LtcYtdCompSal();
 			alliedProfDTSal.setCompSalStaffYtd(root.getCompB_item119());
 			alliedProfDTSal.setCompSalContractServicesYtd(root.getCompB_item219());
-			alliedProfDTSal.setCompSalOfficeAllocYtd(root.getCompB_item319());
 			alliedProfDTSal.setCompSalName(root.getAlliedProf_label_comp3());
 			alliedProfDTSal.setCompSalType(root.getAlliedProf_label_comp());
 			alliedProfDTSal.setConfirmationId(root.getForm().getConfirmationId());
@@ -1017,7 +996,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal alliedProfSWSal = new LtcYtdCompSal();
 			alliedProfSWSal.setCompSalStaffYtd(root.getCompB_item120());
 			alliedProfSWSal.setCompSalContractServicesYtd(root.getCompB_item220());
-			alliedProfSWSal.setCompSalOfficeAllocYtd(root.getCompB_item320());
 			alliedProfSWSal.setCompSalName(root.getAlliedProf_label_comp4());
 			alliedProfSWSal.setCompSalType(root.getAlliedProf_label_comp());
 			alliedProfSWSal.setConfirmationId(root.getForm().getConfirmationId());
@@ -1026,7 +1004,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal alliedProfSLPSal = new LtcYtdCompSal();
 			alliedProfSLPSal.setCompSalStaffYtd(root.getCompB_item121());
 			alliedProfSLPSal.setCompSalContractServicesYtd(root.getCompB_item221());
-			alliedProfSLPSal.setCompSalOfficeAllocYtd(root.getCompB_item321());
 			alliedProfSLPSal.setCompSalName(root.getAlliedProf_label_comp5());
 			alliedProfSLPSal.setCompSalType(root.getAlliedProf_label_comp());
 			alliedProfSLPSal.setConfirmationId(root.getForm().getConfirmationId());
@@ -1035,7 +1012,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal alliedProfRPPSal = new LtcYtdCompSal();
 			alliedProfRPPSal.setCompSalStaffYtd(root.getCompB_item128());
 			alliedProfRPPSal.setCompSalContractServicesYtd(root.getCompB_item228());
-			alliedProfRPPSal.setCompSalOfficeAllocYtd(root.getCompB_item328());
 			alliedProfRPPSal.setCompSalName(root.getAlliedProf_label_comp6());
 			alliedProfRPPSal.setCompSalType(root.getAlliedProf_label_comp());
 			alliedProfRPPSal.setConfirmationId(root.getForm().getConfirmationId());
@@ -1044,7 +1020,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal alliedProfOTHSal = new LtcYtdCompSal();
 			alliedProfOTHSal.setCompSalStaffYtd(root.getCompB_item129());
 			alliedProfOTHSal.setCompSalContractServicesYtd(root.getCompB_item229());
-			alliedProfOTHSal.setCompSalOfficeAllocYtd(root.getCompB_item321());
 			alliedProfOTHSal.setCompSalName(root.getAlliedProf_label_comp7());
 			alliedProfOTHSal.setCompSalType(root.getAlliedProf_label_comp());
 			alliedProfOTHSal.setConfirmationId(root.getForm().getConfirmationId());
@@ -1054,7 +1029,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal alliedNPRTSal = new LtcYtdCompSal();
 			alliedNPRTSal.setCompSalStaffYtd(root.getCompB_item122());
 			alliedNPRTSal.setCompSalContractServicesYtd(root.getCompB_item222());
-			alliedNPRTSal.setCompSalOfficeAllocYtd(root.getCompB_item322());
 			alliedNPRTSal.setCompSalName(root.getAlliedNP_label_comp1());
 			alliedNPRTSal.setCompSalType(root.getAlliedNP_label_comp());
 			alliedNPRTSal.setConfirmationId(root.getForm().getConfirmationId());
@@ -1063,7 +1037,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal alliedNPRASal = new LtcYtdCompSal();
 			alliedNPRASal.setCompSalStaffYtd(root.getCompB_item123());
 			alliedNPRASal.setCompSalContractServicesYtd(root.getCompB_item223());
-			alliedNPRASal.setCompSalOfficeAllocYtd(root.getCompB_item323());
 			alliedNPRASal.setCompSalName(root.getAlliedNP_label_comp2());
 			alliedNPRASal.setCompSalType(root.getAlliedNP_label_comp());
 			alliedNPRASal.setConfirmationId(root.getForm().getConfirmationId());
@@ -1072,7 +1045,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal alliedNPAWSal = new LtcYtdCompSal();
 			alliedNPAWSal.setCompSalStaffYtd(root.getCompB_item124());
 			alliedNPAWSal.setCompSalContractServicesYtd(root.getCompB_item224());
-			alliedNPAWSal.setCompSalOfficeAllocYtd(root.getCompB_item324());
 			alliedNPAWSal.setCompSalName(root.getAlliedNP_label_comp3());
 			alliedNPAWSal.setCompSalType(root.getAlliedNP_label_comp());
 			alliedNPAWSal.setConfirmationId(root.getForm().getConfirmationId());
@@ -1081,7 +1053,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal alliedNPMTSal = new LtcYtdCompSal();
 			alliedNPMTSal.setCompSalStaffYtd(root.getCompB_item125());
 			alliedNPMTSal.setCompSalContractServicesYtd(root.getCompB_item225());
-			alliedNPMTSal.setCompSalOfficeAllocYtd(root.getCompB_item325());
 			alliedNPMTSal.setCompSalName(root.getAlliedNP_label_comp4());
 			alliedNPMTSal.setCompSalType(root.getAlliedNP_label_comp());
 			alliedNPMTSal.setConfirmationId(root.getForm().getConfirmationId());
@@ -1090,7 +1061,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal alliedNPATSal = new LtcYtdCompSal();
 			alliedNPATSal.setCompSalStaffYtd(root.getCompB_item126());
 			alliedNPATSal.setCompSalContractServicesYtd(root.getCompB_item226());
-			alliedNPATSal.setCompSalOfficeAllocYtd(root.getCompB_item326());
 			alliedNPATSal.setCompSalName(root.getAlliedNP_label_comp5());
 			alliedNPATSal.setCompSalType(root.getAlliedNP_label_comp());
 			alliedNPATSal.setConfirmationId(root.getForm().getConfirmationId());
@@ -1099,7 +1069,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal alliedNPOTHSal = new LtcYtdCompSal();
 			alliedNPOTHSal.setCompSalStaffYtd(root.getCompB_item127());
 			alliedNPOTHSal.setCompSalContractServicesYtd(root.getCompB_item227());
-			alliedNPOTHSal.setCompSalOfficeAllocYtd(root.getCompB_item327());
 			alliedNPOTHSal.setCompSalName(root.getAlliedNP_label_comp6());
 			alliedNPOTHSal.setCompSalType(root.getAlliedNP_label_comp());
 			alliedNPOTHSal.setConfirmationId(root.getForm().getConfirmationId());
