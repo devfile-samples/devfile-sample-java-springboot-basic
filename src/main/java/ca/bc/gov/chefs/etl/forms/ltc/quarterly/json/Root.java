@@ -573,17 +573,17 @@ public class Root{
     public String compB_accrued2;
     public String compB_accrued3;
     public String supportC_calc1;
-	@JsonProperty("adminC_item3-6")
-    public String adminC_item36;
-	@JsonProperty("adminC_item3-7")
-    public String adminC_item37;
-	@JsonProperty("adminC_item3-8")
-    public String adminC_item38;
-	@JsonProperty("adminC_item3-9")
-    public String adminC_item39;
-	@JsonProperty("adminC_item3-10")
-	public String adminC_item310;
-    public String compB_calc13;
+	public String adminC_calc1;
+	public String adminC_calc2;
+	public String adminC_calc3;
+	public String adminC_calc4;
+	public String adminC_calc5;
+	public String adminC_calc6;
+	public String adminC_calc7;
+	public String adminC_calc8;
+	public String adminC_calc9;
+	public String adminC_calc10;
+	public String compB_calc13;
     public String compB_calc14;
     public String compB_calc15;
     public String compB_calc16;
@@ -603,16 +603,6 @@ public class Root{
 	public String compB_calc29;
 	public String supportC_calc3;
     public String supportC_calc4;
-	@JsonProperty("adminC_item3-1")
-    public String adminC_item31;
-	@JsonProperty("adminC_item3-2")
-    public String adminC_item32;
-	@JsonProperty("adminC_item3-3")
-    public String adminC_item33;
-	@JsonProperty("adminC_item3-4")
-    public String adminC_item34;
-	@JsonProperty("adminC_item3-5")
-    public String adminC_item35;
     public String supportC_calcsum;
     public String adminC_calcsum;
     public String compB_calcsum3;
@@ -5156,35 +5146,65 @@ public class Root{
 	public void setSupportC_calc1(String compB_calc1) {
 		this.supportC_calc1 = compB_calc1;
 	}
-	public String getAdminC_item36() {
-		return adminC_item36;
+	public String getAdminC_calc1() {
+		return adminC_calc1;
 	}
-	public void setAdminC_item36(String compB_calc10) {
-		this.adminC_item36 = compB_calc10;
+	public void setAdminC_calc1(String adminC_calc1) {
+		this.adminC_calc1 = adminC_calc1;
 	}
-	public String getAdminC_item37() {
-		return adminC_item37;
+	public String getAdminC_calc2() {
+		return adminC_calc2;
 	}
-	public void setAdminC_item37(String compB_calc11) {
-		this.adminC_item37 = compB_calc11;
+	public void setAdminC_calc2(String adminC_calc2) {
+		this.adminC_calc2 = adminC_calc2;
 	}
-	public String getAdminC_item38() {
-		return adminC_item38;
+	public String getAdminC_calc3() {
+		return adminC_calc3;
 	}
-	public void setAdminC_item38(String adminC_item38) {
-		this.adminC_item38 = adminC_item38;
+	public void setAdminC_calc3(String adminC_calc3) {
+		this.adminC_calc3 = adminC_calc3;
 	}
-	public String getAdminC_item39() {
-		return adminC_item39;
+	public String getAdminC_calc4() {
+		return adminC_calc4;
 	}
-	public void setAdminC_item39(String adminC_item39) {
-		this.adminC_item39 = adminC_item39;
+	public void setAdminC_calc4(String adminC_calc4) {
+		this.adminC_calc4 = adminC_calc4;
 	}
-	public String getAdminC_item310() {
-		return adminC_item310;
+	public String getAdminC_calc5() {
+		return adminC_calc5;
 	}
-	public void setAdminC_item310(String compB_calc12) {
-		this.adminC_item310 = compB_calc12;
+	public void setAdminC_calc5(String adminC_calc5) {
+		this.adminC_calc5 = adminC_calc5;
+	}
+	public String getAdminC_calc6() {
+		return adminC_calc6;
+	}
+	public void setAdminC_calc6(String adminC_calc6) {
+		this.adminC_calc6 = adminC_calc6;
+	}
+	public String getAdminC_calc7() {
+		return adminC_calc7;
+	}
+	public void setAdminC_calc7(String adminC_calc7) {
+		this.adminC_calc7 = adminC_calc7;
+	}
+	public String getAdminC_calc8() {
+		return adminC_calc8;
+	}
+	public void setAdminC_calc8(String adminC_calc8) {
+		this.adminC_calc8 = adminC_calc8;
+	}
+	public String getAdminC_calc9() {
+		return adminC_calc9;
+	}
+	public void setAdminC_calc9(String adminC_calc9) {
+		this.adminC_calc9 = adminC_calc9;
+	}
+	public String getAdminC_calc10() {
+		return adminC_calc10;
+	}
+	public void setAdminC_calc10(String adminC_calc10) {
+		this.adminC_calc10 = adminC_calc10;
 	}
 	public String getCompB_calc13() {
 		return compB_calc13;
@@ -5305,36 +5325,6 @@ public class Root{
 	}
 	public void setSupportC_calc4(String compB_calc4) {
 		this.supportC_calc4 = compB_calc4;
-	}
-	public String getAdminC_item31() {
-		return adminC_item31;
-	}
-	public void setAdminC_item31(String compB_calc5) {
-		this.adminC_item31 = compB_calc5;
-	}
-	public String getAdminC_item32() {
-		return adminC_item32;
-	}
-	public void setAdminC_item32(String compB_calc6) {
-		this.adminC_item32 = compB_calc6;
-	}
-	public String getAdminC_item33() {
-		return adminC_item33;
-	}
-	public void setAdminC_item33(String compB_calc7) {
-		this.adminC_item33 = compB_calc7;
-	}
-	public String getAdminC_item34() {
-		return adminC_item34;
-	}
-	public void setAdminC_item34(String compB_calc8) {
-		this.adminC_item34 = compB_calc8;
-	}
-	public String getAdminC_item35() {
-		return adminC_item35;
-	}
-	public void setAdminC_item35(String compB_calc9) {
-		this.adminC_item35 = compB_calc9;
 	}
 	public String getSupportC_calcsum() {
 		return supportC_calcsum;
