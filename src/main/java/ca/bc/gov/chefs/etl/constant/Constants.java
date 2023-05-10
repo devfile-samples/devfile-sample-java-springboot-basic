@@ -201,18 +201,15 @@ public class Constants {
 
 		HEADERS.put(LTC_YTD_COMP_HRS,
 				new String[] { "CONFIRMATION_ID", "COMP_HRS_TYPE", "COMP_HRS_NAME",
-						"COMP_HRS_STAFF_YTD", "COMP_HRS_CONTRACT_SERVICES_YTD", "COMP_HRS_OFFICE_ALLOC_YTD",
-						"COMP_TOTAL_WORKED_HRS_YTD" });
+						"COMP_HRS_STAFF_YTD", "COMP_HRS_CONTRACT_SERVICES_YTD", "COMP_TOTAL_WORKED_HRS_YTD" });
 
 		HEADERS.put(LTC_YTD_COMP_HRS_SUBTOTALS,
 				new String[] { "Confirmation_ID", "Comp_Hrs_Type", "Sub_Total_Comp_Hrs_Staff_YTD",
-						"Sub_Total_Comp_Hrs_Contract_Services_YTD", "Sub_Total_Comp_Hrs_Office_Alloc_YTD",
-						"Sub_Total_Comp_Total_Worked_Hrs_YTD", });
+						"Sub_Total_Comp_Hrs_Contract_Services_YTD", "Sub_Total_Comp_Total_Worked_Hrs_YTD", });
 
 		HEADERS.put(LTC_YTD_COMP_HRS_TOTALS,
 				new String[] { "Confirmation_ID", "Comp_Hrs_Total_Type", "Total_Comp_Hrs_Staff_YTD",
-						"Total_Comp_Hrs_Contract_Services_YTD", "Total_Comp_Hrs_Office_Alloc_YTD",
-						"Total_Comp_Hrs_Total_Cost_YTD", });
+						"Total_Comp_Hrs_Contract_Services_YTD", "Total_Comp_Hrs_Total_Cost_YTD", });
 		
 		HEADERS.put(LTC_YTD_COMP_ADD_POS, new String[] { "CONFIRMATION_ID", "ADD_POS_TYPE", "ADD_POS_NAME",
 		"ADD_POS_CONTRACTED_OUT_YTD", "ADD_POS_LEGAL_NAME_CONTRACT_SERVICE_YTD", "ADD_POS_PERCENT_SERVICE_CONTRACT_OUT_YTD",

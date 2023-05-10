@@ -14,7 +14,6 @@ public class LtcYtdCompHrsTotals implements IModel{
 	private String compHrsTotalType;
 	private String totalCompHrsStaffYTD;
 	private String totalCompHrsContractServicesYTD;
-	private String totalCompHrsOfficeAllocYTD;
 	private String totalCompTotalWorkedHrsYTD;
 	
 	
@@ -51,14 +50,6 @@ public class LtcYtdCompHrsTotals implements IModel{
 		this.totalCompHrsContractServicesYTD = totalCompHrsContractServicesYTD;
 	}
 
-	public String getTotalCompHrsOfficeAllocYTD() {
-		return StringUtils.isBlank(totalCompHrsOfficeAllocYTD) ? "0" : totalCompHrsOfficeAllocYTD;
-	}
-
-	public void setTotalCompHrsOfficeAllocYTD(String totalCompHrsOfficeAllocYTD) {
-		this.totalCompHrsOfficeAllocYTD = totalCompHrsOfficeAllocYTD;
-	}
-
 	public String getTotalCompTotalWorkedHrsYTD() {
 		return StringUtils.isBlank(totalCompTotalWorkedHrsYTD) ? "0" : totalCompTotalWorkedHrsYTD;
 	}
@@ -86,7 +77,6 @@ public class LtcYtdCompHrsTotals implements IModel{
 	//	elements.add(this.getTotalCompHrsPerPayrollYTD());
 		elements.add(this.getTotalCompHrsStaffYTD());
 		elements.add(this.getTotalCompHrsContractServicesYTD());
-		elements.add(this.getTotalCompHrsOfficeAllocYTD());
 		elements.add(this.getTotalCompTotalWorkedHrsYTD());
 		return elements;
 	}
