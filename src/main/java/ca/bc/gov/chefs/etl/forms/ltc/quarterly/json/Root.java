@@ -837,9 +837,8 @@ public class Root{
     public String compB_total2;
     public String compB_total3;
     public String compH_accrued;
+    public String compH_accrued1;
     public String compH_accrued2;
-    public String compH_accrued3;
-    public String compH_accrued4;
     public String supportH_calc1;
     public String compH_calc13;
     public String compH_calc14;
@@ -6090,17 +6089,11 @@ public class Root{
 	public void setCompH_accrued2(String compH_accrued2) {
 		this.compH_accrued2 = compH_accrued2;
 	}
-	public String getCompH_accrued3() {
-		return compH_accrued3;
+	public String getCompH_accrued1() {
+		return compH_accrued1;
 	}
-	public void setCompH_accrued3(String compH_accrued3) {
-		this.compH_accrued3 = compH_accrued3;
-	}
-	public String getCompH_accrued4() {
-		return compH_accrued4;
-	}
-	public void setCompH_accrued4(String compH_accrued4) {
-		this.compH_accrued4 = compH_accrued4;
+	public void setCompH_accrued1(String compH_accrued1) {
+		this.compH_accrued1 = compH_accrued1;
 	}
 	public String getSupportH_calc1() {
 		return supportH_calc1;
