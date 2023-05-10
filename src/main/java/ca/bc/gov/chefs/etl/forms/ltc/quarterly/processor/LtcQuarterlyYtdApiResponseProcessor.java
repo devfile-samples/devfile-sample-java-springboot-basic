@@ -2538,7 +2538,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 				occRateQ2.setOccRateBedTypes("Private Beds");
 				occRateQ2.setPlanMaxOccDays(root.getyTDPlannedPrivateQ2());
 				occRateQ2.setYtdMaxOccDays(root.getyTDMaxPrivateQ2());
-				occRateQ2.setYtdOccDays(root.getyTDOccupiedInScopeQ2());
+				occRateQ2.setYtdOccDays(root.getyTDOccupiedPrivateQ2());
 				occRateQ2.setPercentOcc(root.getOccupiedPercentagePrivateQ2());
 				occRateQ2.setOccRateQuarter("Q2");
 				//occRateQ2.setOccRateNotes(root.getNoteInScopeQ2());
