@@ -14,7 +14,6 @@ public class LtcYtdCompSalSubtotals implements IModel {
 	private String compSalType;
 	private String subTotalCompSalStaffYTD;
 	private String subTotalCompSalContractServicesYTD;
-	private String subTotalCompSalOfficeAllocYTD;
 	private String subTotalCompSalTotalCostYTD;
 
 	public String getConfirmationId() {
@@ -49,14 +48,6 @@ public class LtcYtdCompSalSubtotals implements IModel {
 		this.subTotalCompSalContractServicesYTD = subTotalCompSalContractServicesYTD;
 	}
 
-	public String getSubTotalCompSalOfficeAllocYTD() {
-		return StringUtils.isBlank(subTotalCompSalOfficeAllocYTD) ? "0" : subTotalCompSalOfficeAllocYTD;
-	}
-
-	public void setSubTotalCompSalOfficeAllocYTD(String subTotalCompSalOfficeAllocYTD) {
-		this.subTotalCompSalOfficeAllocYTD = subTotalCompSalOfficeAllocYTD;
-	}
-
 	public String getSubTotalCompSalTotalCostYTD() {
 		return StringUtils.isBlank(subTotalCompSalTotalCostYTD) ? "0" : subTotalCompSalTotalCostYTD;
 	}
@@ -83,7 +74,6 @@ public class LtcYtdCompSalSubtotals implements IModel {
 		elements.add(this.getCompSalType());
 		elements.add(this.getSubTotalCompSalStaffYTD());
 		elements.add(this.getSubTotalCompSalContractServicesYTD());
-		elements.add(this.getSubTotalCompSalOfficeAllocYTD());
 		elements.add(this.getSubTotalCompSalTotalCostYTD());
 		
 		return elements;

@@ -16,7 +16,6 @@ public class LtcYtdCompHrs implements IModel {
 	//private String compHrsPerPayrollYtd;
 	private String compHrsStaffYtd;
 	private String compHrsContractServicesYtd;
-	private String compHrsOfficeAllocYtd;
 	private String compTotalWorkedHrsYtd;
 	
 	public String getConfirmationId() {
@@ -50,13 +49,6 @@ public class LtcYtdCompHrs implements IModel {
 	public void setCompHrsContractServicesYtd(String compHrsContractServicesYtd) {
 		this.compHrsContractServicesYtd = StringUtils.defaultIfEmpty(compHrsContractServicesYtd, Constants.DEFAULT_DECIMAL_VALUE);
 	}
-	public String getCompHrsOfficeAllocYtd() {
-		return StringUtils.isEmpty(compHrsOfficeAllocYtd) ? "0" : compHrsOfficeAllocYtd;
-	}
-	public void setCompHrsOfficeAllocYtd(String compHrsOfficeAllocYtd) {
-		this.compHrsOfficeAllocYtd = StringUtils.defaultIfEmpty(compHrsOfficeAllocYtd, Constants.DEFAULT_DECIMAL_VALUE);
-	}
-	
 	public String getCompTotalWorkedHrsYtd() {
 		return compTotalWorkedHrsYtd.isBlank() ? "0" : compTotalWorkedHrsYtd;
 	}
@@ -80,7 +72,6 @@ public class LtcYtdCompHrs implements IModel {
 		elements.add(this.getCompHrsName());
 		elements.add(this.getCompHrsStaffYtd());
 		elements.add(this.getCompHrsContractServicesYtd());
-		elements.add(this.getCompHrsOfficeAllocYtd());
 		elements.add(this.getCompTotalWorkedHrsYtd());
 		return elements;
 	}
