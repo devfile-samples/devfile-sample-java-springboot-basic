@@ -1087,7 +1087,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			supportSalSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			supportSalSubtotal.setSubTotalCompSalStaffYTD(root.getSupportC_sum1());
 			supportSalSubtotal.setSubTotalCompSalContractServicesYTD(root.getSupportC_sum2());
-			supportSalSubtotal.setSubTotalCompSalOfficeAllocYTD(root.getCompB_sum31());
 			supportSalSubtotal.setSubTotalCompSalTotalCostYTD(root.getSupportC_calcsum());
 
 			LtcYtdCompSalSubtotals administrationSalSubtotal = new LtcYtdCompSalSubtotals();
@@ -1095,7 +1094,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			administrationSalSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			administrationSalSubtotal.setSubTotalCompSalStaffYTD(root.getAdminC_sum1());
 			administrationSalSubtotal.setSubTotalCompSalContractServicesYTD(root.getAdminC_sum2());
-			administrationSalSubtotal.setSubTotalCompSalOfficeAllocYTD(root.getCompB_sum32());
 			administrationSalSubtotal.setSubTotalCompSalTotalCostYTD(root.getAdminC_calcsum());
 
 			LtcYtdCompSalSubtotals nursingSalSubtotal = new LtcYtdCompSalSubtotals();
@@ -1103,7 +1101,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingSalSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			nursingSalSubtotal.setSubTotalCompSalStaffYTD(root.getCompB_sum13());
 			nursingSalSubtotal.setSubTotalCompSalContractServicesYTD(root.getCompB_sum23());
-			nursingSalSubtotal.setSubTotalCompSalOfficeAllocYTD(root.getCompB_sum33());
 			nursingSalSubtotal.setSubTotalCompSalTotalCostYTD(root.getCompB_calcsum3());
 
 			LtcYtdCompSalSubtotals alliedSalSubtotal = new LtcYtdCompSalSubtotals();
@@ -1111,7 +1108,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedSalSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			alliedSalSubtotal.setSubTotalCompSalStaffYTD(root.getCompB_sum14());
 			alliedSalSubtotal.setSubTotalCompSalContractServicesYTD(root.getCompB_sum24());
-			alliedSalSubtotal.setSubTotalCompSalOfficeAllocYTD(root.getCompB_sum34());
 			alliedSalSubtotal.setSubTotalCompSalTotalCostYTD(root.getCompB_calcsum4());
 
 			LtcYtdCompSalSubtotals alliedNPSalSubtotal = new LtcYtdCompSalSubtotals();
@@ -1119,7 +1115,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			alliedNPSalSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			alliedNPSalSubtotal.setSubTotalCompSalStaffYTD(root.getCompB_sum15());
 			alliedNPSalSubtotal.setSubTotalCompSalContractServicesYTD(root.getCompB_sum25());
-			alliedNPSalSubtotal.setSubTotalCompSalOfficeAllocYTD(root.getCompB_sum35());
 			alliedNPSalSubtotal.setSubTotalCompSalTotalCostYTD(root.getCompB_calcsum5());
 
 			Collections.addAll(ltcYtdCompSalSubttls,administrationSalSubtotal,nursingSalSubtotal,supportSalSubtotal,alliedSalSubtotal,alliedNPSalSubtotal);
