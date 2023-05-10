@@ -124,7 +124,7 @@ public class LtcYtdSubmission implements IModel {
 	}
 
 	public String getSubmissionDate() {
-		return CSVUtil.getFormattedDate(submissionDate);
+		return submissionDate.isBlank() || submissionDate.isEmpty() ? Constants.DEFAULT_STRING_VALUE : CSVUtil.getFormattedDate(submissionDate);
 	}
 
 	public void setSubmissionDate(String submissionDate) {

@@ -62,7 +62,7 @@ public class FacilityInformation implements IModel {
 		IsDeleted = StringUtils.defaultIfEmpty(isDeleted, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getSubmissionDate() {
-		return CSVUtil.getFormattedDate(SubmissionDate);
+		return SubmissionDate.isBlank() || SubmissionDate.isEmpty() ?  Constants.DEFAULT_STRING_VALUE : CSVUtil.getFormattedDate(SubmissionDate);
 	}
 	public void setSubmissionDate(String submissionDate) {
 		SubmissionDate = StringUtils.defaultIfEmpty(submissionDate, Constants.DEFAULT_STRING_VALUE);
@@ -140,16 +140,17 @@ public class FacilityInformation implements IModel {
 		AccreditationBody = StringUtils.defaultIfEmpty(accreditationBody, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getAccreditationDate() {
-		return CSVUtil.getFormattedDate(AccreditationDate);
+		return AccreditationDate.isBlank() || AccreditationDate.isEmpty() ? Constants.DEFAULT_STRING_VALUE : CSVUtil.getFormattedDate(AccreditationDate);
 	}
 	public void setAccreditationDate(String accreditationDate) {
 		AccreditationDate = StringUtils.defaultIfEmpty(accreditationDate, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getAccreditationExpiryDate() {
-		return CSVUtil.getFormattedDate(AccreditationExpiryDate);
+		return AccreditationExpiryDate.isBlank() || AccreditationExpiryDate.isEmpty() ? 
+		Constants.DEFAULT_STRING_VALUE : CSVUtil.getFormattedDate(AccreditationExpiryDate);
 	}
 	public void setAccreditationExpiryDate(String accreditationExpiryDate) {
-		AccreditationExpiryDate = accreditationExpiryDate;
+		AccreditationExpiryDate = StringUtils.defaultIfEmpty(accreditationExpiryDate, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getHealthAuthority() {
 		return HealthAuthority;
