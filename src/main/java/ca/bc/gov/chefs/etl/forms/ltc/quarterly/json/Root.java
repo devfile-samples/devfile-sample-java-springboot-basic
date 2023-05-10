@@ -841,16 +841,6 @@ public class Root{
     public String compH_accrued3;
     public String compH_accrued4;
     public String supportH_calc1;
-	@JsonProperty("adminH_item3-6")
-    public String adminH_item36;
-	@JsonProperty("adminH_item3-7")
-    public String adminH_item37;
-	@JsonProperty("adminH_item3-8")
-    public String adminH_item38;
-	@JsonProperty("adminH_item3-9")
-    public String adminH_item39;
-	@JsonProperty("adminH_item3-10")
-	public String adminH_item310;
     public String compH_calc13;
     public String compH_calc14;
     public String compH_calc15;
@@ -871,16 +861,6 @@ public class Root{
     public String compH_calc29;
 	public String supportH_calc3;
     public String supportH_calc4;
-	@JsonProperty("adminH_item3-1")
-    public String adminH_item31;
-	@JsonProperty("adminH_item3-2")
-    public String adminH_item32;
-	@JsonProperty("adminH_item3-3")
-    public String adminH_item33;
-	@JsonProperty("adminH_item3-4")
-    public String adminH_item34;
-	@JsonProperty("adminH_item3-5")
-    public String adminH_item35;
     public String supportH_calcsum;
     public String adminH_calcsum;
     public String compH_calcsum3;
@@ -938,7 +918,17 @@ public class Root{
     public String supportH_item13;
     @JsonProperty("supportH_item1-4")
     public String supportH_item14;
-    @JsonProperty("adminH_item1-1")
+	public String adminH_calc1;
+	public String adminH_calc2;
+	public String adminH_calc3;
+	public String adminH_calc4;
+	public String adminH_calc5;
+	public String adminH_calc6;
+	public String adminH_calc7;
+	public String adminH_calc8;
+	public String adminH_calc9;
+	public String adminH_calc10;
+	@JsonProperty("adminH_item1-1")
     public String adminH_item11;
     @JsonProperty("adminH_item1-2")
     public String adminH_item12;
@@ -6118,36 +6108,6 @@ public class Root{
 	public void setSupportH_calc1(String compH_calc1) {
 		this.supportH_calc1 = compH_calc1;
 	}
-	public String getAdminH_item36() {
-		return adminH_item36;
-	}
-	public void setAdminH_item36(String compH_calc10) {
-		this.adminH_item36 = compH_calc10;
-	}
-	public String getAdminH_item37() {
-		return adminH_item37;
-	}
-	public void setAdminH_item37(String compH_calc11) {
-		this.adminH_item37 = compH_calc11;
-	}
-	public String getAdminH_item38() {
-		return adminH_item38;
-	}
-	public void setAdminH_item38(String adminH_item38) {
-		this.adminH_item38 = adminH_item38;
-	}
-	public String getAdminH_item39() {
-		return adminH_item39;
-	}
-	public void setAdminH_item39(String adminH_item39) {
-		this.adminH_item39 = adminH_item39;
-	}
-	public String getAdminH_item310() {
-		return adminH_item310;
-	}
-	public void setAdminH_item310(String compH_calc12) {
-		this.adminH_item310 = compH_calc12;
-	}
 	public String getCompH_calc13() {
 		return compH_calc13;
 	}
@@ -6267,36 +6227,6 @@ public class Root{
 	}
 	public void setSupportH_calc4(String compH_calc4) {
 		this.supportH_calc4 = compH_calc4;
-	}
-	public String getAdminH_item31() {
-		return adminH_item31;
-	}
-	public void setAdminH_item31(String compH_calc5) {
-		this.adminH_item31 = compH_calc5;
-	}
-	public String getAdminH_item32() {
-		return adminH_item32;
-	}
-	public void setAdminH_item32(String compH_calc6) {
-		this.adminH_item32 = compH_calc6;
-	}
-	public String getAdminH_item33() {
-		return adminH_item33;
-	}
-	public void setAdminH_item33(String compH_calc7) {
-		this.adminH_item33 = compH_calc7;
-	}
-	public String getAdminH_item34() {
-		return adminH_item34;
-	}
-	public void setAdminH_item34(String compH_calc8) {
-		this.adminH_item34 = compH_calc8;
-	}
-	public String getAdminH_item35() {
-		return adminH_item35;
-	}
-	public void setAdminH_item35(String compH_calc9) {
-		this.adminH_item35 = compH_calc9;
 	}
 	public String getSupportH_calcsum() {
 		return supportH_calcsum;
@@ -6483,6 +6413,66 @@ public class Root{
 	}
 	public void setSupportH_item14(String compH_item14) {
 		this.supportH_item14 = compH_item14;
+	}
+    public String getAdminH_calc1() {
+		return adminH_calc1;
+	}
+	public void setAdminH_calc1(String adminH_calc1) {
+		this.adminH_calc1 = adminH_calc1;
+	}
+	public String getAdminH_calc2() {
+		return adminH_calc2;
+	}
+	public void setAdminH_calc2(String adminH_calc2) {
+		this.adminH_calc2 = adminH_calc2;
+	}
+	public String getAdminH_calc3() {
+		return adminH_calc3;
+	}
+	public void setAdminH_calc3(String adminH_calc3) {
+		this.adminH_calc3 = adminH_calc3;
+	}
+	public String getAdminH_calc4() {
+		return adminH_calc4;
+	}
+	public void setAdminH_calc4(String adminH_calc4) {
+		this.adminH_calc4 = adminH_calc4;
+	}
+	public String getAdminH_calc5() {
+		return adminH_calc5;
+	}
+	public void setAdminH_calc5(String adminH_calc5) {
+		this.adminH_calc5 = adminH_calc5;
+	}
+	public String getAdminH_calc6() {
+		return adminH_calc6;
+	}
+	public void setAdminH_calc6(String adminH_calc6) {
+		this.adminH_calc6 = adminH_calc6;
+	}
+	public String getAdminH_calc7() {
+		return adminH_calc7;
+	}
+	public void setAdminH_calc7(String adminH_calc7) {
+		this.adminH_calc7 = adminH_calc7;
+	}
+	public String getAdminH_calc8() {
+		return adminH_calc8;
+	}
+	public void setAdminH_calc8(String adminH_calc8) {
+		this.adminH_calc8 = adminH_calc8;
+	}
+	public String getAdminH_calc9() {
+		return adminH_calc9;
+	}
+	public void setAdminH_calc9(String adminH_calc9) {
+		this.adminH_calc9 = adminH_calc9;
+	}
+	public String getAdminH_calc10() {
+		return adminH_calc10;
+	}
+	public void setAdminH_calc10(String adminH_calc10) {
+		this.adminH_calc10 = adminH_calc10;
 	}
 	public String getAdminH_item11() {
 		return adminH_item11;

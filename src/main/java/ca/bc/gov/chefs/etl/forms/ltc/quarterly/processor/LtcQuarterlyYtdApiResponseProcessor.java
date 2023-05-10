@@ -1194,7 +1194,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			adminAdministratorHrs.setCompHrsName(root.getAdmin_label1());
 			adminAdministratorHrs.setCompHrsType(root.getAdmin_label());
 			adminAdministratorHrs.setConfirmationId(root.getForm().getConfirmationId());
-			adminAdministratorHrs.setCompTotalWorkedHrsYtd(root.getAdminH_item31());
+			adminAdministratorHrs.setCompTotalWorkedHrsYtd(root.getAdminH_calc1());
 
 
 			LtcYtdCompHrs adminDirOfCareHrs = new LtcYtdCompHrs();
@@ -1204,7 +1204,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			adminDirOfCareHrs.setCompHrsName(root.getAdmin_label2());
 			adminDirOfCareHrs.setCompHrsType(root.getAdmin_label());
 			adminDirOfCareHrs.setConfirmationId(root.getForm().getConfirmationId());
-			adminDirOfCareHrs.setCompTotalWorkedHrsYtd(root.getAdminH_item32());
+			adminDirOfCareHrs.setCompTotalWorkedHrsYtd(root.getAdminH_calc2());
 
 			LtcYtdCompHrs adminDeptManagersHrs = new LtcYtdCompHrs();
 		//	adminDeptManagersHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP7());
@@ -1213,7 +1213,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			adminDeptManagersHrs.setCompHrsName(root.getAdmin_label3());
 			adminDeptManagersHrs.setCompHrsType(root.getAdmin_label());
 			adminDeptManagersHrs.setConfirmationId(root.getForm().getConfirmationId());
-			adminDeptManagersHrs.setCompTotalWorkedHrsYtd(root.getAdminH_item33());
+			adminDeptManagersHrs.setCompTotalWorkedHrsYtd(root.getAdminH_calc3());
 
 			LtcYtdCompHrs adminSupportHrs = new LtcYtdCompHrs();
 			//adminSupportHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP8());
@@ -1222,7 +1222,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			adminSupportHrs.setCompHrsName(root.getAdmin_label4());
 			adminSupportHrs.setCompHrsType(root.getAdmin_label());
 			adminSupportHrs.setConfirmationId(root.getForm().getConfirmationId());
-			adminSupportHrs.setCompTotalWorkedHrsYtd(root.getAdminH_item34());
+			adminSupportHrs.setCompTotalWorkedHrsYtd(root.getAdminH_calc4());
 
 			LtcYtdCompHrs adminPastoCareWrkrHrs = new LtcYtdCompHrs();
 		//	adminPastoCareWrkrHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP9());
@@ -1231,7 +1231,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			adminPastoCareWrkrHrs.setCompHrsName(root.getAdmin_label5());
 			adminPastoCareWrkrHrs.setCompHrsType(root.getAdmin_label());
 			adminPastoCareWrkrHrs.setConfirmationId(root.getForm().getConfirmationId());
-			adminPastoCareWrkrHrs.setCompTotalWorkedHrsYtd(root.getAdminH_item35());
+			adminPastoCareWrkrHrs.setCompTotalWorkedHrsYtd(root.getAdminH_calc5());
 
 			LtcYtdCompHrs adminClrksHrs = new LtcYtdCompHrs();
 			//adminClrksHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP10());
@@ -1240,7 +1240,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			adminClrksHrs.setCompHrsName(root.getAdmin_label6());
 			adminClrksHrs.setCompHrsType(root.getAdmin_label());
 			adminClrksHrs.setConfirmationId(root.getForm().getConfirmationId());
-			adminClrksHrs.setCompTotalWorkedHrsYtd(root.getAdminH_item36());
+			adminClrksHrs.setCompTotalWorkedHrsYtd(root.getAdminH_calc6());
 
 			LtcYtdCompHrs adminClncCrdinatorHrs = new LtcYtdCompHrs();
 		//	adminClncCrdinatorHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP11());
@@ -1249,7 +1249,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			adminClncCrdinatorHrs.setCompHrsName(root.getAdmin_label7());
 			adminClncCrdinatorHrs.setCompHrsType(root.getAdmin_label());
 			adminClncCrdinatorHrs.setConfirmationId(root.getForm().getConfirmationId());
-			adminClncCrdinatorHrs.setCompTotalWorkedHrsYtd(root.getAdminH_item37());
+			adminClncCrdinatorHrs.setCompTotalWorkedHrsYtd(root.getAdminH_calc7());
 
 			LtcYtdCompHrs adminScreenersGreeters = new LtcYtdCompHrs();
 			adminScreenersGreeters.setCompHrsStaffYtd(root.getAdminH_item18());
@@ -1257,7 +1257,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			adminScreenersGreeters.setCompHrsName(root.getAdmin_label8());
 			adminScreenersGreeters.setCompHrsType(root.getAdmin_label());
 			adminScreenersGreeters.setConfirmationId(root.getForm().getConfirmationId());
-			adminScreenersGreeters.setCompTotalWorkedHrsYtd(root.getAdminH_item38());
+			adminScreenersGreeters.setCompTotalWorkedHrsYtd(root.getAdminH_calc8());
 
 			LtcYtdCompHrs adminHCSW = new LtcYtdCompHrs();
 			adminHCSW.setCompHrsStaffYtd(root.getAdminH_item19());
@@ -1265,7 +1265,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			adminHCSW.setCompHrsName(root.getAdmin_label9());
 			adminHCSW.setCompHrsType(root.getAdmin_label());
 			adminHCSW.setConfirmationId(root.getForm().getConfirmationId());
-			adminHCSW.setCompTotalWorkedHrsYtd(root.getAdminH_item39());
+			adminHCSW.setCompTotalWorkedHrsYtd(root.getAdminH_calc9());
 
 			LtcYtdCompHrs adminOtherHrs = new LtcYtdCompHrs();
 		//	adminOtherHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP12());
@@ -1274,7 +1274,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			adminOtherHrs.setCompHrsName(root.getAdmin_label10());
 			adminOtherHrs.setCompHrsType(root.getAdmin_label());
 			adminOtherHrs.setConfirmationId(root.getForm().getConfirmationId());
-			adminOtherHrs.setCompTotalWorkedHrsYtd(root.getAdminH_item310());
+			adminOtherHrs.setCompTotalWorkedHrsYtd(root.getAdminH_calc10());
 
 			/* Nursing, Allied, Non Allied Hours */
 			LtcYtdCompHrs nursingRNHrs = new LtcYtdCompHrs();
