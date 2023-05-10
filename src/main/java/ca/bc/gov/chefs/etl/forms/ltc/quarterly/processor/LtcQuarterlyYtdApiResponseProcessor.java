@@ -1124,7 +1124,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			totalPerPayrollSal.setConfirmationId(root.getForm().getConfirmationId());
 			totalPerPayrollSal.setTotalCompSalStaffYTD(root.getCompB_total1());
 			totalPerPayrollSal.setTotalCompSalContractServicesYTD(root.getCompB_total2());
-			totalPerPayrollSal.setTotalCompSalOfficeAllocYTD(root.getCompB_total3());
 			totalPerPayrollSal.setTotalCompSalTotalCostYTD(root.getCompB_total());
 
 			LtcYtdCompSalTotals recoveredPerPayrollSal = new LtcYtdCompSalTotals();
@@ -1132,7 +1131,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			recoveredPerPayrollSal.setConfirmationId(root.getForm().getConfirmationId());
 			recoveredPerPayrollSal.setTotalCompSalStaffYTD(root.getCompB_recovered1());
 			recoveredPerPayrollSal.setTotalCompSalContractServicesYTD(root.getCompB_recovered2());
-			recoveredPerPayrollSal.setTotalCompSalOfficeAllocYTD(root.getCompB_recovered3());
 			recoveredPerPayrollSal.setTotalCompSalTotalCostYTD(root.getCompB_recovered());
 
 			LtcYtdCompSalTotals accruedPerPayrollSal = new LtcYtdCompSalTotals();
@@ -1140,7 +1138,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			accruedPerPayrollSal.setConfirmationId(root.getForm().getConfirmationId());
 			accruedPerPayrollSal.setTotalCompSalStaffYTD(root.getCompB_accrued1());
 			accruedPerPayrollSal.setTotalCompSalContractServicesYTD(root.getCompB_accrued2());
-			accruedPerPayrollSal.setTotalCompSalOfficeAllocYTD(root.getCompB_accrued3());
 			accruedPerPayrollSal.setTotalCompSalTotalCostYTD(root.getCompB_accrued());
 
 			LtcYtdCompSalTotals otherPerPayrollSal = new LtcYtdCompSalTotals();
@@ -1148,7 +1145,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			otherPerPayrollSal.setConfirmationId(root.getForm().getConfirmationId());
 			otherPerPayrollSal.setTotalCompSalStaffYTD(root.getCompB_laborOther1());
 			otherPerPayrollSal.setTotalCompSalContractServicesYTD(root.getCompB_laborOther2());
-			otherPerPayrollSal.setTotalCompSalOfficeAllocYTD(root.getCompB_laborOther3());
 			otherPerPayrollSal.setTotalCompSalTotalCostYTD(root.getCompB_laborOther());
 
 			Collections.addAll(ltcYtdCompsalTtls,totalPerPayrollSal,recoveredPerPayrollSal,accruedPerPayrollSal,otherPerPayrollSal);
