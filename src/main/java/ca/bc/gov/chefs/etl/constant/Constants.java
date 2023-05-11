@@ -40,8 +40,8 @@ public class Constants {
 	public static final String LTC_FACILITY_PREPARER = "LTC_FACILITY_PREPARER";
 
 	/* LTC Quarterly YTD */
-	public final static String LTC_YTD_USERNAME = "ltc.ytd.test.username";
-	public final static String LTC_YTD_PASSWORD = "ltc.ytd.test.password";
+	public final static String LTC_YTD_USERNAME = "ltc.ytd.username";
+	public final static String LTC_YTD_PASSWORD = "ltc.ytd.password";
 	public final static String IN_SCOPE = "inScope";
 	public final static String OUT_OF_SCOPE = "outOfScope";
 	public final static String PRIVATE_BED = "privateBed";
