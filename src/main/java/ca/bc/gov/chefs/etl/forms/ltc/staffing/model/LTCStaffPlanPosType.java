@@ -1,4 +1,4 @@
-package ca.bc.gov.chefs.etl.forms.ltc.staffing;
+package ca.bc.gov.chefs.etl.forms.ltc.staffing.model;
 
 import java.util.List;
 

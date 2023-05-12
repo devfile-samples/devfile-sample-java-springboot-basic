@@ -1,3 +1,4 @@
+package ca.bc.gov.chefs.etl.forms.ltc.staffing.model;
 //package ca.bc.gov.chefs.etl.forms.ltc.staffing;
 //
 //import java.util.ArrayList;
