@@ -46,6 +46,10 @@ public class Constants {
 	public final static String OUT_OF_SCOPE = "outOfScope";
 	public final static String PRIVATE_BED = "privateBed";
 
+	/* LTC Staffing Plan */
+	public final static String LTC_STAFFING_PLAN_USERNAME = "ltc.staffing.plan.test.username";
+	public final static String LTC_STAFFING_PLAN_PASSWORD = "ltc.staffing.plan.test.password";
+
 	// Constants for Sub table: LTC_YTD_DIRECT_CARE_HRS
 	public final static String DC_HRS_OTHER = "Other";
 
