@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
 
 public class LTCStaffingHrs implements IModel{
@@ -21,16 +22,6 @@ public class LTCStaffingHrs implements IModel{
 	private String staffHrsSun;
 	private String staffHrsWkTotal;
 	private String staffHrsAnnual;
-	
-	public static List<String> alliedProfessionals = new ArrayList<>(Arrays.asList(
-			"occupationalTherapist",
-			"physiotherapist",
-			"dietitian",
-			"Social Worker",
-			"Speech Path",
-			"Resp. Therapist",
-			"Medical Lab. Tech."
-	));
 	
 	/* repeated field 4.1*/
 	private String rn247;
@@ -157,20 +148,32 @@ public class LTCStaffingHrs implements IModel{
 
 	@Override
 	public String getFormType() {
-		// TODO Auto-generated method stub
-		return null;
+		return Constants.LTC_STAFFING_HRS;
 	}
 
 	@Override
 	public List<String> getCsvElements() {
-		// TODO Auto-generated method stub
-		return null;
+		List<String> elements = new ArrayList<String>();
+		elements.add(this.confirmationId);
+		elements.add(this.staffingPlanNum);
+		elements.add(this.staffHrsPosType);
+		elements.add(this.staffHrsPosShiftType);
+		elements.add(this.staffHrsMon);
+		elements.add(this.staffHrsTue);
+		elements.add(this.staffHrsWed);
+		elements.add(this.staffHrsThurs);
+		elements.add(this.staffHrsFri);
+		elements.add(this.staffHrsSat);
+		elements.add(this.staffHrsSun);
+		elements.add(this.staffHrsWkTotal);
+		elements.add(this.staffHrsAnnual);
+		elements.add(this.rn247);
+		return elements;
 	}
 
 	@Override
 	public List<IModel> getObjects() {
-		// TODO Auto-generated method stub
-		return null;
+		return new ArrayList<>();
 	}
 
 }

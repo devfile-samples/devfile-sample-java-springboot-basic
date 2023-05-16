@@ -1,7 +1,9 @@
 package ca.bc.gov.chefs.etl.forms.ltc.staffing.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
 
 public class LTCStaffPlanPosType implements IModel {
@@ -32,7 +34,6 @@ public class LTCStaffPlanPosType implements IModel {
 	private String sumAlliedProfInhouse;
 	private String sumAlliedProfContracted;
 	private String sumAlliedProfTotal;
-	
 	
 
 	public String getConfirmationId() {
@@ -235,20 +236,42 @@ public class LTCStaffPlanPosType implements IModel {
 
 	@Override
 	public String getFormType() {
-		// TODO Auto-generated method stub
-		return null;
+		return Constants.LTC_STAFF_PLAN_POS_TYPE;
 	}
 
 	@Override
 	public List<String> getCsvElements() {
-		// TODO Auto-generated method stub
-		return null;
+		List<String> elements = new ArrayList<String>();
+		elements.add(this.confirmationId);
+		elements.add(this.staffingPlanNum);
+		elements.add(this.staffHrsPosType);
+		elements.add(this.sumStaffHrsMon);
+		elements.add(this.sumStaffHrsTue);
+		elements.add(this.sumStaffHrsWed);
+		elements.add(this.sumStaffHrsThurs);
+		elements.add(this.sumStaffHrsFri);
+		elements.add(this.sumStaffHrsSat);
+		elements.add(this.sumStaffHrsSun);
+		elements.add(this.sumStaffHrsWkTotal);
+		elements.add(this.sumStaffHrsAnnual);
+		elements.add(this.sumNursAnnual);
+		elements.add(this.sumNursInhouse);
+		elements.add(this.sumNursContracted);
+		elements.add(this.sumNursTotal);
+		elements.add(this.sumAlliedNpAnnual);
+		elements.add(this.sumAlliedNpInhouse);
+		elements.add(this.sumAlliedNpContracted);
+		elements.add(this.sumAlliedNpTotal);
+		elements.add(this.sumAlliedProfAnnual);
+		elements.add(this.sumAlliedProfInhouse);
+		elements.add(this.sumAlliedProfContracted);
+		elements.add(this.sumAlliedProfTotal);
+		return elements;
 	}
 
 	@Override
 	public List<IModel> getObjects() {
-		// TODO Auto-generated method stub
-		return null;
+		return new ArrayList<>();
 	}
 
 }

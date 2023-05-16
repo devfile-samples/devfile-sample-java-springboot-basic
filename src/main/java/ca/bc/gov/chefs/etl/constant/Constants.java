@@ -320,5 +320,29 @@ public class Constants {
 			"HPRD_Total_Allied_Wed","HPRD_Total_Allied_Thurs", "HPRD_Total_Allied_Fri", "HPRD_Total_Allied_Sat",
 			"HPRD_Total_Allied_Sun", "HPRD_Total_Allied_Wk_Total"
 		});
+
+		HEADERS.put(LTC_STAFF_PLAN_PERF_4_2, new String[] {
+			"Confirmation_ID", "Staffing_plan_Num", "Perf_4_2"
+		});
+
+		HEADERS.put(LTC_STAFF_PLAN_POS_TYPE, new String[]{
+			"Confirmation_ID", "Staffing_plan_Num", "Staff_hrs_Pos_Type", "Sum_Staff_hrs_Mon", "Sum_Staff_hrs_Tue",
+			"Sum_Staff_hrs_Wed", "Sum_Staff_hrs_Thu", "Sum_Staff_hrs_Fri", "Sum_Staff_hrs_Sat", "Sum_Staff_hrs_Sun",
+			"Sum_Staff_hrs_wk_total", "Sum_Staff_hrs_annual", "Sum_nurs_annual","Sum_nurs_inhouse", "Sum_nurs_contracted",
+			"Sum_nurs_total", "Sum_allied_np_annual", "Sum _allied_np_inhouse", "Sum_allied_np_contracted",
+			"Sum _allied_np_total", "Sum_allied_prof_annual", "Sum_allied_prof_inhouse", "Sum_allied_prof_contracted",
+			"Sum_allied_prof_total"
+		});
+
+		HEADERS.put(LTC_STAFFING_HRS, new String[]{
+			"Confirmation_ID","Staffing_plan_Num", "Staff_hrs_Pos_Type", "Staff_hrs_pos_shift_type", "Staff_hrs_Mon",
+			"Staff_hrs_Tue","Staff_hrs_Wed","Staff_hrs_Thu","Staff_hrs_Fri", "Staff_hrs_Sat", "Staff_hrs_Sun",
+			"Staff_hrs_Wk_Total", "Staff_hrs_Annual", "RN_24_7"
+		});
+
+		HEADERS.put(LTC_STAFFING_ADD_POS, new String[]{
+			"Confirmation_ID", "Staffing_plan_Num", "Staff_hrs_Pos_Type", "Staff_hrs_Service_Contract_Out", 
+			"Staff_hrs_Legal_Name_Contract_Service", "Staff_hrs_Percent_Service_Contract_Out"
+		});
 	}
 }
