@@ -1,7 +1,6 @@
 package ca.bc.gov.chefs.etl.constant;
 
 import java.util.HashMap;
-
 import java.util.Map;
 
 import ca.bc.gov.chefs.etl.util.FileUtil;
@@ -35,9 +34,6 @@ public class Constants {
 	/* LTC Facility */
 	public final static String LTC_FACILITY_USERNAME = "ltc.facility.username";
 	public final static String LTC_FACILITY_PASSWORD = "ltc.facility.password";
-
-	public static final String LTC_FACILITY_APPROVER = "LTC_FACILITY_APPROVER";
-	public static final String LTC_FACILITY_PREPARER = "LTC_FACILITY_PREPARER";
 
 	/* LTC Quarterly YTD */
 	public final static String LTC_YTD_USERNAME = "ltc.ytd.username";
@@ -73,7 +69,6 @@ public class Constants {
 	public static final String LTC_YTD_EXP_SUB_TOTALS = "LTC_YTD_EXP_SUB_TOTALS";
 	public static final String LTC_YTD_DEP = "LTC_YTD_DEP";
 	public static final String LTC_YTD_SUM_TOTALS = "LTC_YTD_SUM_TOTALS";
-	public final static String LTC_FACILITY = "LTC_FACILITY";
 	public static final String LTC_YTD_COMP_SAL_SUBTOTALS = "LTC_YTD_COMP_SAL_SUBTOTALS";
 	public static final String LTC_BED_YTD_MAX_OCCUPANCY_TOTALS = "LTC_BED_YTD_MAX_OCCUPANCY_TOTALS";
 	public static final String LTC_YTD_COMP_HRS_SUBTOTALS = "LTC_YTD_COMP_HRS_SUBTOTALS";
@@ -83,6 +78,16 @@ public class Constants {
 	public static final String LTC_YTD_DIRECT_CARE_COST_SUBTOTALS = "LTC_YTD_DIRECT_CARE_COST_SUBTOTALS";
 	public static final String LTC_BED_YTD_OCCUPANCY_RATE_TOTALS = "LTC_BED_YTD_OCCUPANCY_RATE_TOTALS";
 	public static final String LTC_BED_YTD_OCCUPIED_DAYS_TOTALS = "LTC_BED_YTD_OCCUPIED_DAYS_TOTALS";
+
+	public final static String LTC_FACILITY = "LTC_FACILITY";
+	public static final String LTC_FACILITY_APPROVER = "LTC_FACILITY_APPROVER";
+	public static final String LTC_FACILITY_PREPARER = "LTC_FACILITY_PREPARER";
+
+	public final static String LTC_STAFFING_PLAN = "LTC_STAFFING_PLAN";
+	public final static String LTC_STAFF_PLAN_PERF_4_2 = "LTC_STAFF_PLAN_PERF_4_2";
+	public final static String LTC_STAFF_PLAN_POS_TYPE = "LTC_STAFF_PLAN_POS_TYPE";
+	public final static String LTC_STAFFING_HRS = "LTC_STAFFING_HRS";
+	public final static String LTC_STAFFING_ADD_POS = "LTC_STAFFING_ADD_POS";
 
 	/* File Constants */
 	public final static String PROPERTIES_DATA_DIR = "data-dir";
@@ -302,6 +307,18 @@ public class Constants {
 				"TOTAL_YTD_MAX_OCC_DAYS",
 				"TOTAL_YTD_OCC_DAYS",
 				"TOTAL_PERCENT_OCC"
+		});
+
+		HEADERS.put(LTC_STAFFING_PLAN, new String[] {
+			"Confirmation_ID", "Staffing_plan_num", "Staff_Plan_For", "Period_start", "Period_end",
+			"Revision_date", "Reason_for_rev", "Nb_Total_Beds", "Perf_4.1", "Perf_Other_specify",
+			"Staff_Plan_For_Other", "Total_Hrs_Nurs_Mon", "Total_Hrs_Nurs_Tues", "Total_Hrs_Nurs_Wed",
+			"Total_Hrs_Nurs_Thurs", "Total_Hrs_Nurs_Fri", "Total_Hrs_Nurs_Sat", "Total_Hrs_Nurs_Sun",
+			"Total_Hrs_Nurs_Wk_Total", "Total_Hrs_Nurs_Annual", "HPRD_Total_Nurs_Mon", "HPRD_Total_Nurs_Tues",
+			"HPRD_Total_Nurs_Wed", "HPRD_Total_Nurs_Thurs", "HPRD_Total_Nurs_Fri","HPRD_Total_Nurs_Sat",
+			"HPRD_Total_Nurs_Sun","HPRD_Total_Nurs_Wk_Total", "HPRD_Total_Allied_Mon", "HPRD_Total_Allied_Tues",
+			"HPRD_Total_Allied_Wed","HPRD_Total_Allied_Thurs", "HPRD_Total_Allied_Fri", "HPRD_Total_Allied_Sat",
+			"HPRD_Total_Allied_Sun", "HPRD_Total_Allied_Wk_Total"
 		});
 	}
 }
