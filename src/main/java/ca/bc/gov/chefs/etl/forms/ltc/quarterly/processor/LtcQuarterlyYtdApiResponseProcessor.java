@@ -2290,7 +2290,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			for (BedGrid0 maxOcp : root.getBedGrid0()) {
 				LtcBedYtdMaxOccupancy numOfBeds = new LtcBedYtdMaxOccupancy();
 				numOfBeds.setBedFundingType(maxOcp.getBedType());
-				numOfBeds.setQuarterInventory(maxOcp.getQuarter());
+				numOfBeds.setQuarterInventory("Inventory");
 				numOfBeds.setConfirmationId(root.getForm().getConfirmationId());
 				numOfBeds.setStartDate(maxOcp.getStartDate0());
 				numOfBeds.setEndDate(maxOcp.getEndDate0());
@@ -2399,7 +2399,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 					numOfBeds.setEndDate(maxOcp.getEndDate1());
 					numOfBeds.setNumberOfBeds(maxOcp.getNumberOfBeds1());
 					numOfBeds.setMaximumBedDays(maxOcp.getMaximumBedDays1());
-					numOfBeds.setQuarterInventory(root.getQuarter());
+					numOfBeds.setQuarterInventory("Q1");
 					numOfBeds.setNotes(maxOcp.getQuarterNote1());
 					numOfBeds.setBedSubype(maxOcp.getSubTypeLabel());
 					ltcBedYtdMaxOccupancies.add(numOfBeds);
@@ -2496,7 +2496,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 					numOfBeds.setEndDate(maxOcp.getEndDate2());
 					numOfBeds.setNumberOfBeds(maxOcp.getNumberOfBeds2());
 					numOfBeds.setMaximumBedDays(maxOcp.getMaximumBedDays2());
-					numOfBeds.setQuarterInventory(root.getQuarter());
+					numOfBeds.setQuarterInventory("Q2");
 					numOfBeds.setNotes(maxOcp.getNotes2());
 					numOfBeds.setBedSubype(maxOcp.getSubTypeLabel());
 					ltcBedYtdMaxOccupancies.add(numOfBeds);
@@ -2594,7 +2594,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 					numOfBeds.setEndDate(maxOcp.getEndDate3());
 					numOfBeds.setNumberOfBeds(maxOcp.getNumberOfBeds3());
 					numOfBeds.setMaximumBedDays(maxOcp.getMaximumBedDays3());
-					numOfBeds.setQuarterInventory(root.getQuarter());
+					numOfBeds.setQuarterInventory("Q3");
 					numOfBeds.setNotes(maxOcp.getNotes3());
 					numOfBeds.setBedSubype(maxOcp.getSubTypeLabel());
 					ltcBedYtdMaxOccupancies.add(numOfBeds);
@@ -2683,7 +2683,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 					numOfBeds.setEndDate(maxOcp.getEndDate4());
 					numOfBeds.setNumberOfBeds(maxOcp.getNumberOfBeds4());
 					numOfBeds.setMaximumBedDays(maxOcp.getMaximumBedDays4());
-					numOfBeds.setQuarterInventory(root.getQuarter());
+					numOfBeds.setQuarterInventory("Q4");
 					numOfBeds.setNotes(maxOcp.getNotes4());
 					numOfBeds.setBedSubype(maxOcp.getSubTypeLabel());
 					ltcBedYtdMaxOccupancies.add(numOfBeds);
