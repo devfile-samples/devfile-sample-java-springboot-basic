@@ -469,6 +469,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingRNProdC.setDirCareCostNonProdHrsTotalYtd(root.getNursingNProdC_calc1());
 			nursingRNProdC.setDirCareCostHourlyRateStaffYtd(root.getNursingStaffRate1());
 			nursingRNProdC.setDirCareCostHourlyRateContractedYtd(root.getNursingContractRate1());
+			nursingRNProdC.setDirCareCostProdHrsAgencyStaffUtil(root.getNursingProdCASU1());
 			/* END : Direct Care Cost */
 
 			LtcYtdDirectCareCost nursingLPNProdC = new LtcYtdDirectCareCost();
@@ -487,6 +488,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingLPNProdC.setDirCareCostNonProdHrsTotalYtd(root.getNursingNProdC_calc2());
 			nursingLPNProdC.setDirCareCostHourlyRateStaffYtd(root.getNursingStaffRate2());
 			nursingLPNProdC.setDirCareCostHourlyRateContractedYtd(root.getNursingContractRate2());
+			nursingLPNProdC.setDirCareCostProdHrsAgencyStaffUtil(root.getNursingProdCASU2());
 
 
 
@@ -506,6 +508,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingHCAProdC.setDirCareCostNonProdHrsTotalYtd(root.getNursingNProdC_calc3());
 			nursingHCAProdC.setDirCareCostHourlyRateStaffYtd(root.getNursingStaffRate3());
 			nursingHCAProdC.setDirCareCostHourlyRateContractedYtd(root.getNursingContractRate3());
+			nursingHCAProdC.setDirCareCostProdHrsAgencyStaffUtil(root.getNursingProdCASU3());
 
 
 			LtcYtdDirectCareCost nursingOthProdC = new LtcYtdDirectCareCost();
@@ -525,6 +528,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingOthProdC.setDirCareCostHourlyRateStaffYtd(root.getNursingStaffRate4());
 			nursingOthProdC.setDirCareCostHourlyRateContractedYtd(root.getNursingContractRate4());
 			nursingOthProdC.setDirCareOtherValue(root.getNursing_label4());
+			nursingOthProdC.setDirCareCostProdHrsAgencyStaffUtil(root.getNursingProdCASU4());
 
 
 
