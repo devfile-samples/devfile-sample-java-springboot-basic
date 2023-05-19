@@ -1471,6 +1471,9 @@ public class Root{
 	public String opEx_data_total_label;
 	public String opRev_YTD_total_label;
 	public String opSu_data_total_label;
+	@JsonProperty("opSuB_item1-1_label")
+	public String opSuB_item11_label;
+	public String nopSu_data_label;
 	public String opEx_note_sum6;
     public String opEx_note1;
     public String opEx_note10;
@@ -1682,7 +1685,7 @@ public class Root{
     public String opRev_YTD9;
     public String opSu_data_total;
     public String opSu_data_total_note;
-    @JsonProperty("opRev_item1-1")
+	@JsonProperty("opSuB_item1-1")
     public String opSuB_item11;
     public String opSuB_note;
     public String outScopeBedTotal1;
@@ -10737,5 +10740,17 @@ public class Root{
 	}
 	public void setOpSu_data_total_label(String opSu_data_total_label) {
 		this.opSu_data_total_label = opSu_data_total_label;
+	}
+	public String getOpSuB_item11_label() {
+		return opSuB_item11_label;
+	}
+	public void setOpSuB_item11_label(String opSuB_item11_label) {
+		this.opSuB_item11_label = opSuB_item11_label;
+	}
+	public String getNopSu_data_label() {
+		return nopSu_data_label;
+	}
+	public void setNopSu_data_label(String nopSu_data_label) {
+		this.nopSu_data_label = nopSu_data_label;
 	}
 }

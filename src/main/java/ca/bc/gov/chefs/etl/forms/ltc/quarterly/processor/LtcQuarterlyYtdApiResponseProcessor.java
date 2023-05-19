@@ -2189,13 +2189,26 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			/* END */
 
 			/* LtcYtdSumTotals */
-			LtcYtdSumTotals YtdTotal = new LtcYtdSumTotals();
-			YtdTotal.setConfirmationId(root.getForm().getConfirmationId());
-			YtdTotal.setTotName(root.getOpSu_data_total_label());
-			YtdTotal.setSumYTD(root.getOpSu_data_total());
-			YtdTotal.setTotNotes(root.getOpSu_data_total_note());
+			LtcYtdSumTotals totalNonOperatingSurplus = new LtcYtdSumTotals();
+			totalNonOperatingSurplus.setConfirmationId(root.getForm().getConfirmationId());
+			totalNonOperatingSurplus.setTotName(root.getNopSu_data_label());
+			totalNonOperatingSurplus.setSumYTD(root.getNopSu_data1());
+			totalNonOperatingSurplus.setTotNotes(root.getNopSu_note());
 
-			ltcYtdSumTotals.add(YtdTotal);
+			LtcYtdSumTotals operatingSurplusBeforeDepreciation = new LtcYtdSumTotals();
+			operatingSurplusBeforeDepreciation.setConfirmationId(root.getForm().getConfirmationId());
+			operatingSurplusBeforeDepreciation.setTotName(root.getOpSuB_item11_label());
+			operatingSurplusBeforeDepreciation.setSumYTD(root.getOpSuB_item11());
+			operatingSurplusBeforeDepreciation.setTotNotes(root.getOpSuB_note());
+
+			LtcYtdSumTotals totalOperatingSurplus = new LtcYtdSumTotals();
+			totalOperatingSurplus.setConfirmationId(root.getForm().getConfirmationId());
+			totalOperatingSurplus.setTotName(root.getOpSu_data_total_label());
+			totalOperatingSurplus.setSumYTD(root.getOpSu_data_total());
+			totalOperatingSurplus.setTotNotes(root.getOpSu_data_total_note());
+
+			Collections.addAll(ltcYtdSumTotals, operatingSurplusBeforeDepreciation, totalNonOperatingSurplus,
+			 totalOperatingSurplus);
 
 			/* END */
 			
