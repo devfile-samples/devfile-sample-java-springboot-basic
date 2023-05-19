@@ -565,7 +565,7 @@ public class Root{
     public String bTotal_benefits;
     public String bTotal_recSalaryWage;
     public String bTotal_salaryWage;
-    public String bTotal_value_sum1;
+    public String bTotal_value_sum;
     public String bTotal_YTDSalaryWage;
     public String ccimsid;
     public String compB_accrued;
@@ -5094,11 +5094,11 @@ public class Root{
 	public void setbTotal_salaryWage(String bTotal_salaryWage) {
 		this.bTotal_salaryWage = bTotal_salaryWage;
 	}
-	public String getbTotal_value_sum1() {
-		return bTotal_value_sum1;
+	public String getbTotal_value_sum() {
+		return bTotal_value_sum;
 	}
-	public void setbTotal_value_sum1(String bTotal_value_sum1) {
-		this.bTotal_value_sum1 = bTotal_value_sum1;
+	public void setbTotal_value_sum(String bTotal_value_sum) {
+		this.bTotal_value_sum = bTotal_value_sum;
 	}
 	public String getbTotal_YTDSalaryWage() {
 		return bTotal_YTDSalaryWage;

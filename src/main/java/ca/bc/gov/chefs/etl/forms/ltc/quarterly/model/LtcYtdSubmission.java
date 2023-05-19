@@ -27,7 +27,9 @@ public class LtcYtdSubmission implements IModel {
 	private String nbTotalBeds;
 	private String nbFundedBeds;
 	private String occRateThreshold;
+	private String totalSalariesWages;
 	private String totalBenefits;
+	private String benefitsPercent;
 
 	private List<LtcBedYtdMaxOccupancy> ltcBedYtdMaxOccupancy;
 	private List<LtcBedYtdOccupancyRate> ltcBedYtdOccupancyRate;
@@ -82,7 +84,9 @@ public class LtcYtdSubmission implements IModel {
 		elements.add(this.getNbTotalBeds());
 		elements.add(this.getNbFundedBeds());
 		elements.add(this.getOccRateThreshold());
+		elements.add(this.getTotalSalariesWages());
 		elements.add(this.getTotalBenefits());
+		elements.add(this.getBenefitsPercent());
 		return elements;
 	}
 
@@ -402,6 +406,22 @@ public class LtcYtdSubmission implements IModel {
 
 	public void setTotalBenefits(String totalBenefits) {
 		this.totalBenefits = totalBenefits;
+	}
+	
+	public String getBenefitsPercent() {
+		return benefitsPercent;
+	}
+
+	public void setBenefitsPercent(String benefitsPercent) {
+		this.benefitsPercent = benefitsPercent;
+	}
+
+	public String getTotalSalariesWages() {
+		return totalSalariesWages;
+	}
+
+	public void setTotalSalariesWages(String totalSalariesWages) {
+		this.totalSalariesWages = totalSalariesWages;
 	}
 	
 }
