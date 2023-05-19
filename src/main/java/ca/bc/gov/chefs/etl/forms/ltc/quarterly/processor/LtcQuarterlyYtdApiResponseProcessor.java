@@ -1893,36 +1893,43 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			revFromHA1Subttl.setConfirmationId(root.getForm().getConfirmationId());
 			revFromHA1Subttl.setRevType(root.getOpRev_1_label());
 			revFromHA1Subttl.setSubTotalRevYtd(root.getOpRev_sum11());
+			revFromHA1Subttl.setSubTotalRevNotes(root.getOpRev_sum_note1());
 
 			LtcYtdRevSubTotals revFromHA2Subttl = new LtcYtdRevSubTotals();
 			revFromHA2Subttl.setConfirmationId(root.getForm().getConfirmationId());
 			revFromHA2Subttl.setRevType(root.getOpRev_2_label());
 			revFromHA2Subttl.setSubTotalRevYtd(root.getOpRev_sum12());
+			revFromHA2Subttl.setSubTotalRevNotes(root.getOpRev_sum_note2());
 
 			LtcYtdRevSubTotals revFromHA4Subttl = new LtcYtdRevSubTotals();
 			revFromHA4Subttl.setConfirmationId(root.getForm().getConfirmationId());
 			revFromHA4Subttl.setRevType(root.getOpRev_4_label());
 			revFromHA4Subttl.setSubTotalRevYtd(root.getOpRev_sum13());
+			revFromHA4Subttl.setSubTotalRevNotes(root.getOpRev_sum_note3());
 
 			LtcYtdRevSubTotals clntRevSubttl = new LtcYtdRevSubTotals();
 			clntRevSubttl.setConfirmationId(root.getForm().getConfirmationId());
 			clntRevSubttl.setRevType(root.getOpRev_client_label());
 			clntRevSubttl.setSubTotalRevYtd(root.getOpRev_sum14());
+			clntRevSubttl.setSubTotalRevNotes(root.getOpRev_sum_note4());
 
 			LtcYtdRevSubTotals othRevSubttl = new LtcYtdRevSubTotals();
 			othRevSubttl.setConfirmationId(root.getForm().getConfirmationId());
 			othRevSubttl.setRevType(root.getOpRev_otherRev_label());
 			othRevSubttl.setSubTotalRevYtd(root.getOpRev_sum15());
+			othRevSubttl.setSubTotalRevNotes(root.getOpRev_sum_note5());
 
 			LtcYtdRevSubTotals opRevSubttl = new LtcYtdRevSubTotals();
 			opRevSubttl.setConfirmationId(root.getForm().getConfirmationId());
 			opRevSubttl.setRevType(root.getOpRev_YTD_total_label());
 			opRevSubttl.setSubTotalRevYtd(root.getOpRev_YTD_total());
+			opRevSubttl.setSubTotalRevNotes(root.getOpRev_total_note());
 
 			LtcYtdRevSubTotals nonOpRevSubttl = new LtcYtdRevSubTotals();
 			nonOpRevSubttl.setConfirmationId(root.getForm().getConfirmationId());
 			nonOpRevSubttl.setRevType(root.getNopRev_label());
 			nonOpRevSubttl.setSubTotalRevYtd(root.getNopRev_sum11());
+			nonOpRevSubttl.setSubTotalRevNotes(root.getNopRev_sub_note());
 
 			Collections.addAll(ltcYtdRevSubTtls, revFromHA1Subttl,revFromHA2Subttl,revFromHA4Subttl,clntRevSubttl,othRevSubttl,opRevSubttl, nonOpRevSubttl);
 

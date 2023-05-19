@@ -13,7 +13,7 @@ public class LtcYtdRevSubTotals implements IModel {
 	private String confirmationId;
 	private String revType;
 	private String subTotalRevYtd;
-	
+	private String subTotalRevNotes;
 	
 	public String getConfirmationId() {
 		return confirmationId;
@@ -33,6 +33,12 @@ public class LtcYtdRevSubTotals implements IModel {
 	public void setSubTotalRevYtd(String subTotalRevYtd) {
 		this.subTotalRevYtd = subTotalRevYtd;
 	}
+	public String getSubTotalRevNotes() {
+		return subTotalRevNotes;
+	}
+	public void setSubTotalRevNotes(String subTotalRevNotes) {
+		this.subTotalRevNotes = subTotalRevNotes;
+	}
 	
 	
 	@Override
@@ -50,6 +56,7 @@ public class LtcYtdRevSubTotals implements IModel {
 		elements.add(this.getConfirmationId());
 		elements.add(this.getRevType());
 		elements.add(this.getSubTotalRevYtd());
+		elements.add(this.getSubTotalRevNotes());
 		return elements;
 	}
 	@Override
