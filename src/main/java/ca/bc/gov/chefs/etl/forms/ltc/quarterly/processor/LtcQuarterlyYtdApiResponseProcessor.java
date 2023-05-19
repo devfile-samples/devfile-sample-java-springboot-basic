@@ -118,6 +118,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			ltcYtdSubmission.setTotalSalariesWages(root.getbTotal_YTDSalaryWage());
 			ltcYtdSubmission.setTotalBenefits(root.getBenefit_value_total());
 			ltcYtdSubmission.setBenefitsPercent(root.getbTotal_value_sum());
+			ltcYtdSubmission.setTotalVacancies(root.getNursingNVP_sum11());
 			
 			/* START : Direct Care Hours */
 			/* Productive and NP Nursing */ // why no subtotal and total?

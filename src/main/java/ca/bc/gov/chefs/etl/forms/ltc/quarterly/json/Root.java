@@ -2121,7 +2121,15 @@ public class Root{
 	@JsonProperty("opEx_YTD_label-39")
 	public String opEx_YTD_label39;
 	public String benefit_value_rec_label;
+	@JsonProperty("nursingNVP_sum1-1")
+	public String nursingNVP_sum11;
 
+	public String getNursingNVP_sum11() {
+		return nursingNVP_sum11;
+	}
+	public void setNursingNVP_sum11(String nursingNVP_sum11) {
+		this.nursingNVP_sum11 = nursingNVP_sum11;
+	}
 	public String getBenefit_value_rec_label() {
 		return benefit_value_rec_label;
 	}
