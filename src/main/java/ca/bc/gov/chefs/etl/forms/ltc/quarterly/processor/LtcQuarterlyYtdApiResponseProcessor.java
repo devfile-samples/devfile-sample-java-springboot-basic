@@ -794,6 +794,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingCareCostSubtotals.setSubTotalDirCareCostNonProdHrsTotalYTD(root.getNursingNProdC_calcsum1());
 			nursingCareCostSubtotals.setSubTotalDirCareCostHourlyRateStaffYTD(root.getNursingStaffRate_total());
 			nursingCareCostSubtotals.setSubTotalDirCareCostHourlyRateContractedYTD(root.getNursingContractRate_total());
+			nursingCareCostSubtotals.setSubTotalDirCareCostProdHrsAgencyStaffUtil(root.getNursingProdCASU_subsum());
 
 			LtcYtdDirectCareCostSubtotals alliedCareCostSubtotals = new LtcYtdDirectCareCostSubtotals();
 			alliedCareCostSubtotals.setConfirmationID(root.getForm().getConfirmationId());

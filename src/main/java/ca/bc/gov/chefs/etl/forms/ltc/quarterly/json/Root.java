@@ -1182,7 +1182,8 @@ public class Root{
     public String numberOfTotalBeds;
     public String numberOfTotalFundedBeds;
     public String nursingContractRate_total;
-    public String nursingContractRate1;
+    public String nursingProdCASU_subsum;
+	public String nursingContractRate1;
     public String nursingContractRate2;
     public String nursingContractRate3;
     public String nursingContractRate4;
@@ -7514,6 +7515,12 @@ public class Root{
 	}
 	public void setNursingContractRate_total(String nursingContractRate_total) {
 		this.nursingContractRate_total = nursingContractRate_total;
+	}
+	public String getNursingProdCASU_subsum() {
+		return nursingProdCASU_subsum;
+	}
+	public void setNursingProdCASU_subsum(String nursingProdCASU_subsum) {
+		this.nursingProdCASU_subsum = nursingProdCASU_subsum;
 	}
 	public String getNursingContractRate1() {
 		return nursingContractRate1;
