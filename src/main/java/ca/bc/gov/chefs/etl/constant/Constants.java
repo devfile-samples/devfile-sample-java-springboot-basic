@@ -202,8 +202,8 @@ public class Constants {
 				"Total_Comp_Sal_Contract_Services_YTD", "Total_Comp_Sal_Total_Cost_YTD" });
 
 		HEADERS.put(LTC_YTD_COMP_HRS,
-				new String[] { "CONFIRMATION_ID", "COMP_HRS_TYPE", "COMP_HRS_NAME",
-						"COMP_HRS_STAFF_YTD", "COMP_HRS_CONTRACT_SERVICES_YTD", "COMP_TOTAL_WORKED_HRS_YTD" });
+				new String[] { "CONFIRMATION_ID", "COMP_HRS_TYPE", "COMP_HRS_NAME", "COMP_HRS_STAFF_YTD",
+				 "COMP_HRS_CONTRACT_SERVICES_YTD", "COMP_TOTAL_WORKED_HRS_YTD", "COMP_HRS_OTHER_NAME" });
 
 		HEADERS.put(LTC_YTD_COMP_HRS_SUBTOTALS,
 				new String[] { "Confirmation_ID", "Comp_Hrs_Type", "Sub_Total_Comp_Hrs_Staff_YTD",
