@@ -1422,7 +1422,11 @@ public class Root{
     public String nursingProdHCS2;
     public String nursingProdHCS3;
     public String nursingProdHCS4;
-    public String nursingProvider1;
+    public String nursingProdHASU1;
+    public String nursingProdHASU2;
+    public String nursingProdHASU3;
+    public String nursingProdHASU4;
+	public String nursingProvider1;
     public String nursingProvider2;
     public String nursingProvider3;
     public String nursingProvider4;
@@ -8442,6 +8446,30 @@ public class Root{
 	}
 	public void setNursingProdHCS4(String nursingProdHCS4) {
 		this.nursingProdHCS4 = nursingProdHCS4;
+	}
+	public String getNursingProdHASU1() {
+		return nursingProdHASU1;
+	}
+	public void setNursingProdHASU1(String nursingProdHASU1) {
+		this.nursingProdHASU1 = nursingProdHASU1;
+	}
+	public String getNursingProdHASU2() {
+		return nursingProdHASU2;
+	}
+	public void setNursingProdHASU2(String nursingProdHASU2) {
+		this.nursingProdHASU2 = nursingProdHASU2;
+	}
+	public String getNursingProdHASU3() {
+		return nursingProdHASU3;
+	}
+	public void setNursingProdHASU3(String nursingProdHASU3) {
+		this.nursingProdHASU3 = nursingProdHASU3;
+	}
+	public String getNursingProdHASU4() {
+		return nursingProdHASU4;
+	}
+	public void setNursingProdHASU4(String nursingProdHASU4) {
+		this.nursingProdHASU4 = nursingProdHASU4;
 	}
 	public String getNursingProvider1() {
 		return nursingProvider1;

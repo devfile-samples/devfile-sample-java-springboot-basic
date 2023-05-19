@@ -135,7 +135,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingRNProdH.setDirCareProdHrsTotalYtd(root.getNursingProdH_sub1());
 			nursingRNProdH.setDirCareTotalHrsPaidYtd(root.getNursingNProdH_THP1());
 			nursingRNProdH.setDirCareNonProdHrsTotalYtd(root.getNursingNProdH_calc1());
-			nursingRNProdH.setDirCareProdHrsAgencyStuffUtilYtd(root.getNursingProdHCS1());
+			nursingRNProdH.setDirCareProdHrsAgencyStuffUtilYtd(root.getNursingProdHASU1());
 
 			LtcYtdDirectCareHrs nursingLPNProdH = new LtcYtdDirectCareHrs();
 			nursingLPNProdH.setDirCareProdHrsRegYtd(root.getNursingProdH_item12());
@@ -151,7 +151,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingLPNProdH.setDirCareProdHrsTotalYtd(root.getNursingProdH_sub2());
 			nursingLPNProdH.setDirCareTotalHrsPaidYtd(root.getNursingNProdH_THP2());
 			nursingLPNProdH.setDirCareNonProdHrsTotalYtd(root.getNursingNProdH_calc2());
-			nursingLPNProdH.setDirCareProdHrsAgencyStuffUtilYtd(root.getNursingProdHCS2());
+			nursingLPNProdH.setDirCareProdHrsAgencyStuffUtilYtd(root.getNursingProdHASU2());
 
 
 			
@@ -169,7 +169,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingHCAProdH.setDirCareProdHrsTotalYtd(root.getNursingProdH_sub3());
 			nursingHCAProdH.setDirCareTotalHrsPaidYtd(root.getNursingNProdH_THP3());
 			nursingHCAProdH.setDirCareNonProdHrsTotalYtd(root.getNursingNProdH_calc3());
-			nursingHCAProdH.setDirCareProdHrsAgencyStuffUtilYtd(root.getNursingProdHCS3());
+			nursingHCAProdH.setDirCareProdHrsAgencyStuffUtilYtd(root.getNursingProdHASU3());
 
 			LtcYtdDirectCareHrs nursingOthProdH = new LtcYtdDirectCareHrs();
 			nursingOthProdH.setDirCareProdHrsRegYtd(root.getNursingProdH_item14());
@@ -186,7 +186,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingOthProdH.setDirCareTotalHrsPaidYtd(root.getNursingNProdH_THP4());
 			nursingOthProdH.setDirCareNonProdHrsTotalYtd(root.getNursingNProdH_calc4());
 			nursingOthProdH.setDirCareOtherValue(root.getNursing_label4());
-			nursingOthProdH.setDirCareProdHrsAgencyStuffUtilYtd(root.getNursingProdHCS4());
+			nursingOthProdH.setDirCareProdHrsAgencyStuffUtilYtd(root.getNursingProdHASU4());
 
 			// to check what is with the subtotal fields
 
