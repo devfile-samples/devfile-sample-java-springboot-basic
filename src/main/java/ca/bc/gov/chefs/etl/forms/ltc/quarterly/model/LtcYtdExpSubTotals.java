@@ -12,7 +12,7 @@ public class LtcYtdExpSubTotals implements IModel {
 
 	private String confirmationId;
 	private String expType;
-	private String subTotalRevYtd;
+	private String subTotalExpYtd;
 	
 	public String getConfirmationId() {
 		return confirmationId;
@@ -26,11 +26,11 @@ public class LtcYtdExpSubTotals implements IModel {
 	public void setExpType(String expType) {
 		this.expType = StringUtils.defaultIfEmpty(expType, Constants.DEFAULT_STRING_VALUE);
 	}
-	public String getSubTotalRevYtd() {
-		return subTotalRevYtd;
+	public String getSubTotalExpYtd() {
+		return subTotalExpYtd;
 	}
-	public void setSubTotalRevYtd(String subTotalRevYtd) {
-		this.subTotalRevYtd = subTotalRevYtd;
+	public void setSubTotalExpYtd(String subTotalExpYtd) {
+		this.subTotalExpYtd = subTotalExpYtd;
 	}
 	
 	@Override
@@ -47,7 +47,7 @@ public class LtcYtdExpSubTotals implements IModel {
 		List<String> elements = new ArrayList<>();
 		elements.add(this.getConfirmationId());
 		elements.add(this.getExpType());
-		elements.add(this.getSubTotalRevYtd());
+		elements.add(this.getSubTotalExpYtd());
 		return elements;
 	}
 	@Override
