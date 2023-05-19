@@ -1417,7 +1417,8 @@ public class Root{
 	public String alliedNP_label_CSP6;
     public String nursingProdH_THPsum1;
     public String nursingProdHCS_subsum1;
-    public String nursingProdHCS1;
+    public String nursingProdHASU_subsum;
+	public String nursingProdHCS1;
     public String nursingProdHCS2;
     public String nursingProdHCS3;
     public String nursingProdHCS4;
@@ -8411,6 +8412,12 @@ public class Root{
 	}
 	public void setNursingProdHCS_subsum1(String nursingProdHCS_subsum1) {
 		this.nursingProdHCS_subsum1 = nursingProdHCS_subsum1;
+	}
+	public String getNursingProdHASU_subsum() {
+		return nursingProdHASU_subsum;
+	}
+	public void setNursingProdHASU_subsum(String nursingProdHASU_subsum) {
+		this.nursingProdHASU_subsum = nursingProdHASU_subsum;
 	}
 	public String getNursingProdHCS1() {
 		return nursingProdHCS1;
