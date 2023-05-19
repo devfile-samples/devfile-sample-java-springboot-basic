@@ -2107,7 +2107,14 @@ public class Root{
 	public String opEx_YTD_label38;
 	@JsonProperty("opEx_YTD_label-39")
 	public String opEx_YTD_label39;
+	public String benefit_value_rec_label;
 
+	public String getBenefit_value_rec_label() {
+		return benefit_value_rec_label;
+	}
+	public void setBenefit_value_rec_label(String benefit_value_rec_label) {
+		this.benefit_value_rec_label = benefit_value_rec_label;
+	}
 	public String getOpEx_1A_label() {
 		return opEx_1A_label;
 	}

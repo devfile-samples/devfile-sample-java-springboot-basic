@@ -1695,8 +1695,15 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			otherBenefit.setBenefitsPercentageAlloc(root.getBenefit_percentage8());
 			otherBenefit.setConfirmationId(root.getForm().getConfirmationId());
 
+			LtcYtdCompBenefits lessBenefitsRecovery = new LtcYtdCompBenefits();
+			lessBenefitsRecovery.setBenefitsAmountYtd(root.getBenefit_value_rec());
+			lessBenefitsRecovery.setBenefitsType(root.getBenefit_value_rec_label());
+			lessBenefitsRecovery.setBenefitsPercentageAlloc(root.getBenefit_percentage_rec());
+			lessBenefitsRecovery.setConfirmationId(root.getForm().getConfirmationId());
+
 			Collections.addAll(ltcYtdCompBenefits, empInsBenefit, canPenPlnBenefit, wrkrCompBoardBenefit,
-					empHlthTaxBenefit, penPlanBenefit, exHlthDntlBenefit, grpLifeBenefit, otherBenefit);
+					empHlthTaxBenefit, penPlanBenefit, exHlthDntlBenefit, grpLifeBenefit, otherBenefit, 
+					lessBenefitsRecovery);
 			/* Are we setting the subtotal and total things? */
 
 			/* Summary of Rev & Exp Budget */
