@@ -928,10 +928,11 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal adminOther = new LtcYtdCompSal();
 			adminOther.setCompSalStaffYtd(root.getAdminC_item110());
 			adminOther.setCompSalContractServicesYtd(root.getAdminC_item210());
-			adminOther.setCompSalName(root.getAdmin_label10());
+			adminOther.setCompSalName(Constants.DEFAULT_OTHER_VALUE);
 			adminOther.setCompSalType(root.getAdmin_label());
 			adminOther.setConfirmationId(root.getForm().getConfirmationId());
 			adminOther.setCompSalTotalCostYtd(root.getAdminC_calc10());
+			adminOther.setCompSalOtherName(root.getAdmin_label10());
 
 			/* Direct Care Nursing */
 			LtcYtdCompSal nursingRNSal = new LtcYtdCompSal();
@@ -963,10 +964,11 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal nursingOthSal = new LtcYtdCompSal();
 			nursingOthSal.setCompSalStaffYtd(root.getCompB_item116());
 			nursingOthSal.setCompSalContractServicesYtd(root.getCompB_item216());
-			nursingOthSal.setCompSalName(root.getNursing_label_comp4());
+			nursingOthSal.setCompSalName(Constants.DEFAULT_OTHER_VALUE);
 			nursingOthSal.setCompSalType(root.getNursing_label_comp());
 			nursingOthSal.setConfirmationId(root.getForm().getConfirmationId());
 			nursingOthSal.setCompSalTotalCostYtd(root.getCompB_calc16());
+			nursingOthSal.setCompSalOtherName(root.getNursing_label_comp4());
 
 			/* Allied Professional */
 			LtcYtdCompSal alliedProfOTSal = new LtcYtdCompSal();
@@ -1020,10 +1022,11 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal alliedProfOTHSal = new LtcYtdCompSal();
 			alliedProfOTHSal.setCompSalStaffYtd(root.getCompB_item129());
 			alliedProfOTHSal.setCompSalContractServicesYtd(root.getCompB_item229());
-			alliedProfOTHSal.setCompSalName(root.getAlliedProf_label_comp7());
+			alliedProfOTHSal.setCompSalName(Constants.DEFAULT_OTHER_VALUE);
 			alliedProfOTHSal.setCompSalType(root.getAlliedProf_label_comp());
 			alliedProfOTHSal.setConfirmationId(root.getForm().getConfirmationId());
 			alliedProfOTHSal.setCompSalTotalCostYtd(root.getCompB_calc29());
+			alliedProfOTHSal.setCompSalOtherName(root.getAlliedProf_label_comp7());
 
 			/* Allied Non Professional */
 			LtcYtdCompSal alliedNPRTSal = new LtcYtdCompSal();
@@ -1069,10 +1072,11 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal alliedNPOTHSal = new LtcYtdCompSal();
 			alliedNPOTHSal.setCompSalStaffYtd(root.getCompB_item127());
 			alliedNPOTHSal.setCompSalContractServicesYtd(root.getCompB_item227());
-			alliedNPOTHSal.setCompSalName(root.getAlliedNP_label_comp6());
+			alliedNPOTHSal.setCompSalName(Constants.DEFAULT_OTHER_VALUE);
 			alliedNPOTHSal.setCompSalType(root.getAlliedNP_label_comp());
 			alliedNPOTHSal.setConfirmationId(root.getForm().getConfirmationId());
 			alliedNPOTHSal.setCompSalTotalCostYtd(root.getCompB_calc27());
+			alliedNPOTHSal.setCompSalOtherName(root.getAlliedNP_label_comp6());
 
 			Collections.addAll(ltcYtdCompSal, supportFoodServices, supportLaundryServices, supportHousekeeping,
 					supportPlantMntnce, adminAdministrator, adminDirOfCare, adminDeptManagers, adminSupport,

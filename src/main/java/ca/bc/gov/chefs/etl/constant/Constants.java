@@ -40,8 +40,8 @@ public class Constants {
 	public static final String LTC_FACILITY_PREPARER = "LTC_FACILITY_PREPARER";
 
 	/* LTC Quarterly YTD */
-	public final static String LTC_YTD_USERNAME = "ltc.ytd.username";
-	public final static String LTC_YTD_PASSWORD = "ltc.ytd.password";
+	public final static String LTC_YTD_USERNAME = "ltc.ytd.test.username";
+	public final static String LTC_YTD_PASSWORD = "ltc.ytd.test.password";
 	public final static String IN_SCOPE = "inScope";
 	public final static String OUT_OF_SCOPE = "outOfScope";
 	public final static String PRIVATE_BED = "privateBed";
@@ -51,6 +51,8 @@ public class Constants {
 
 	// Constants for Sub table: LTC_YTD_COMP_ADD_POS
 	public final static String POS_TYPE_OTHER = "Other";
+
+	public final static String DEFAULT_OTHER_VALUE = "Other";
 
 	/* Form Names */
 	public final static String LTC_BED_YTD_OCCUPIED_DAYS = "LTC_BED_YTD_OCCUPIED_DAYS";
@@ -189,7 +191,7 @@ public class Constants {
 
 		HEADERS.put(LTC_YTD_COMP_SAL,
 		new String[] { "CONFIRMATION_ID", "COMP_SAL_TYPE", "COMP_SAL_NAME", "COMP_SAL_STAFF_YTD",
-				"COMP_SAL_CONTRACT_SERVICES_YTD", "COMP_SAL_TOTAL_COST_YTD" });
+				"COMP_SAL_CONTRACT_SERVICES_YTD", "COMP_SAL_TOTAL_COST_YTD", "COMP_SAL_OTHER_NAME" });
 
 		HEADERS.put(LTC_YTD_COMP_SAL_SUBTOTALS,
 		new String[] { "Confirmation_ID", "Comp_Sal_Type", "Sub_Total_Comp_Sal_Staff_YTD",

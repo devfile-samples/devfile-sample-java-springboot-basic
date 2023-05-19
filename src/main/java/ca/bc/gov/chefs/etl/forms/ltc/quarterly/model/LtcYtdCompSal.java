@@ -16,6 +16,8 @@ public class LtcYtdCompSal implements IModel{
 	private String compSalStaffYtd;
 	private String compSalContractServicesYtd;
 	private String compSalTotalCostYtd;
+	private String compSalOtherName = Constants.DEFAULT_STRING_VALUE;
+
 	public String getCompSalTotalCostYtd() {
 		return compSalTotalCostYtd;
 	}
@@ -52,6 +54,12 @@ public class LtcYtdCompSal implements IModel{
 	public void setCompSalContractServicesYtd(String compSalContractServicesYtd) {
 		this.compSalContractServicesYtd = StringUtils.defaultIfEmpty(compSalContractServicesYtd, Constants.DEFAULT_DECIMAL_VALUE);
 	}
+	public String getCompSalOtherName() {
+		return compSalOtherName;
+	}
+	public void setCompSalOtherName(String compSalOtherName) {
+		this.compSalOtherName = compSalOtherName;
+	}
 	@Override
 	public String getFileName() {
 		// TODO Auto-generated method stub
@@ -70,6 +78,7 @@ public class LtcYtdCompSal implements IModel{
 		elements.add(this.getCompSalStaffYtd());
 		elements.add(this.getCompSalContractServicesYtd());
 		elements.add(this.getCompSalTotalCostYtd());
+		elements.add(this.getCompSalOtherName());
 		return elements;
 	}
 	@Override
