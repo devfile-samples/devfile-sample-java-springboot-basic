@@ -13,6 +13,7 @@ public class LtcYtdExpSubTotals implements IModel {
 	private String confirmationId;
 	private String expType;
 	private String subTotalExpYtd;
+	private String subTotalExpNotes;
 	
 	public String getConfirmationId() {
 		return confirmationId;
@@ -32,7 +33,12 @@ public class LtcYtdExpSubTotals implements IModel {
 	public void setSubTotalExpYtd(String subTotalExpYtd) {
 		this.subTotalExpYtd = subTotalExpYtd;
 	}
-	
+	public String getSubTotalExpNotes() {
+		return subTotalExpNotes;
+	}
+	public void setSubTotalExpNotes(String subTotalExpNotes) {
+		this.subTotalExpNotes = subTotalExpNotes;
+	}
 	@Override
 	public String getFileName() {
 		// TODO Auto-generated method stub
@@ -48,6 +54,7 @@ public class LtcYtdExpSubTotals implements IModel {
 		elements.add(this.getConfirmationId());
 		elements.add(this.getExpType());
 		elements.add(this.getSubTotalExpYtd());
+		elements.add(this.getSubTotalExpNotes());
 		return elements;
 	}
 	@Override

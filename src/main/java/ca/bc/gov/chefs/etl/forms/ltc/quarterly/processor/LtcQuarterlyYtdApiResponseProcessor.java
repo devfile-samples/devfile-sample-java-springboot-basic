@@ -2136,41 +2136,49 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			staffCost1ASubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			staffCost1ASubtotal.setExpType(root.getOpEx_1A_label());
 			staffCost1ASubtotal.setSubTotalExpYtd(root.getOpEx_sum11());
+			staffCost1ASubtotal.setSubTotalExpNotes(root.getOpEx_sum_note1());
 
 			LtcYtdExpSubTotals staffCost1BSubtotal = new LtcYtdExpSubTotals();
 			staffCost1BSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			staffCost1BSubtotal.setExpType(root.getOpEx_1B_label());
 			staffCost1BSubtotal.setSubTotalExpYtd(root.getOpEx_sum12());
+			staffCost1BSubtotal.setSubTotalExpNotes(root.getOpEx_sum_note2());
 
 			LtcYtdExpSubTotals propertyCostSubtotal = new LtcYtdExpSubTotals();
 			propertyCostSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			propertyCostSubtotal.setExpType(root.getOpEx_2_label());
 			propertyCostSubtotal.setSubTotalExpYtd(root.getOpEx_sum13());
+			propertyCostSubtotal.setSubTotalExpNotes(root.getOpEx_sum_note3());
 
 			LtcYtdExpSubTotals suppliesSubtotal = new LtcYtdExpSubTotals();
 			suppliesSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			suppliesSubtotal.setExpType(root.getOpEx_3_label());
 			suppliesSubtotal.setSubTotalExpYtd(root.getOpEx_sum14());
+			suppliesSubtotal.setSubTotalExpNotes(root.getOpEx_sum_note4());
 
 			LtcYtdExpSubTotals adminCostSubtotal = new LtcYtdExpSubTotals();
 			adminCostSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			adminCostSubtotal.setExpType(root.getOpEx_4_label());
 			adminCostSubtotal.setSubTotalExpYtd(root.getOpEx_sum15());
+			adminCostSubtotal.setSubTotalExpNotes(root.getOpEx_sum_note5());
 
 			LtcYtdExpSubTotals operatingCostSubtotal = new LtcYtdExpSubTotals();
 			operatingCostSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			operatingCostSubtotal.setExpType(root.getOpEx_data_total_label());
 			operatingCostSubtotal.setSubTotalExpYtd(root.getOpEx_data_total());
+			operatingCostSubtotal.setSubTotalExpNotes(root.getOpEx_total_note());
 
 			LtcYtdExpSubTotals nonOperationalExpSubtotal = new LtcYtdExpSubTotals();
 			nonOperationalExpSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			nonOperationalExpSubtotal.setExpType(root.getNopEx_label());
 			nonOperationalExpSubtotal.setSubTotalExpYtd(root.getNopEx_sum11());
+			nonOperationalExpSubtotal.setSubTotalExpNotes(root.getNopEx_sub_note());
 
 			LtcYtdExpSubTotals beforeSalaryWagesRecAcc = new LtcYtdExpSubTotals();
 			beforeSalaryWagesRecAcc.setConfirmationId(root.getForm().getConfirmationId());
 			beforeSalaryWagesRecAcc.setExpType("Before salary/wages rec./accruals");
 			beforeSalaryWagesRecAcc.setSubTotalExpYtd(root.getOpEx_sub1());
+			beforeSalaryWagesRecAcc.setSubTotalExpNotes(root.getOpEx_sub_note());
 
 			// /getOpEx_sub1()
 
