@@ -56,6 +56,7 @@ public class LtcYtdSubmission implements IModel {
 	private List<LtcBedYtdMaxOccupancyTotals> ltcBedYtdMaxOccTtls;
 	private List<LtcBedYtdOccupiedDaysTotals> ltcBedYtdOccDaysTtls;
 	private List<LtcBedYtdOccupancyRateTotals> ltcBedYtdOccRateTtls;
+	private List<LtcYtdDirectCareVacancy> LtcYtdDirectCareVacancy;
 	
 
 	@Override
@@ -119,6 +120,7 @@ public class LtcYtdSubmission implements IModel {
 		ltcQtdInstances.addAll(this.getLtcBedYtdMaxOccTtls());
 		ltcQtdInstances.addAll(this.getLtcBedYtdOccDaysTtls());
 		ltcQtdInstances.addAll(this.getLtcBedYtdOccRateTtls());
+		ltcQtdInstances.addAll(this.getLtcYtdDirectCareVacancy());
 
 		return ltcQtdInstances;
 	}
@@ -377,6 +379,14 @@ public class LtcYtdSubmission implements IModel {
 
 	public void setLtcBedYtdOccRateTtls(List<LtcBedYtdOccupancyRateTotals> ltcBedYtdOccRateTtls) {
 		this.ltcBedYtdOccRateTtls = ltcBedYtdOccRateTtls;
+	}
+
+	public List<LtcYtdDirectCareVacancy> getLtcYtdDirectCareVacancy() {
+		return LtcYtdDirectCareVacancy;
+	}
+
+	public void setLtcYtdDirectCareVacancy(List<LtcYtdDirectCareVacancy> ltcYtdDirectCareVacancy) {
+		this.LtcYtdDirectCareVacancy = ltcYtdDirectCareVacancy;
 	}
 
 	public String getSubmissionFy() {

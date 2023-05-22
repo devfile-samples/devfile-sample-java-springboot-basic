@@ -41,6 +41,7 @@ import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdDirectCareCost;
 import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdDirectCareCostSubtotals;
 import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdDirectCareHrs;
 import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdDirectCareHrsSubTotals;
+import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdDirectCareVacancy;
 import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdExp;
 import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdExpSubTotals;
 import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdRev;
@@ -101,6 +102,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			List<LtcBedYtdOccupiedDays> ltcBedYtdOccupiedDays = new ArrayList<>();
 			List<LtcBedYtdOccupiedDaysTotals> ltcBedYtdOccDaysTtls = new ArrayList<>();
 			List<LtcBedYtdOccupancyRateTotals> ltcBedYtdOccRateTtls = new ArrayList<>();
+			List<LtcYtdDirectCareVacancy> LtcYtdDirectCareVacancy = new ArrayList<>();
 		
 
 			/* Form Meta */
@@ -2320,6 +2322,37 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			// subtotal
 			// total operating expenses
 
+			//DIRECT CARE VACANCY : 
+			//LtcYtdDirectCareVacancy
+
+			LtcYtdDirectCareVacancy directCareVacancyNurseRN = new LtcYtdDirectCareVacancy();
+			directCareVacancyNurseRN.setConfirmationId(root.getForm().getConfirmationId());
+			directCareVacancyNurseRN.setDirectCareVacancyType(root.getNursing_label());
+			directCareVacancyNurseRN.setDirectCareVacancyName(root.getNursing_label1());
+			directCareVacancyNurseRN.setDirectCareVacPositions(root.getNursingNVP_item11());
+
+			LtcYtdDirectCareVacancy directCareVacancyNurseLPN = new LtcYtdDirectCareVacancy();
+			directCareVacancyNurseLPN.setConfirmationId(root.getForm().getConfirmationId());
+			directCareVacancyNurseLPN.setDirectCareVacancyType(root.getNursing_label());
+			directCareVacancyNurseLPN.setDirectCareVacancyName(root.getNursing_label2());
+			directCareVacancyNurseLPN.setDirectCareVacPositions(root.getNursingNVP_item12());
+
+			LtcYtdDirectCareVacancy directCareVacancyNurseHCA = new LtcYtdDirectCareVacancy();
+			directCareVacancyNurseHCA.setConfirmationId(root.getForm().getConfirmationId());
+			directCareVacancyNurseHCA.setDirectCareVacancyType(root.getNursing_label());
+			directCareVacancyNurseHCA.setDirectCareVacancyName(root.getNursing_label3());
+			directCareVacancyNurseHCA.setDirectCareVacPositions(root.getNursingNVP_item13());
+
+			LtcYtdDirectCareVacancy directCareVacancyNurseOther = new LtcYtdDirectCareVacancy();
+			directCareVacancyNurseOther.setConfirmationId(root.getForm().getConfirmationId());
+			directCareVacancyNurseOther.setDirectCareVacancyType(root.getNursing_label());
+			directCareVacancyNurseOther.setDirectCareVacancyName(root.getNursing_label4());
+			directCareVacancyNurseOther.setDirectCareVacPositions(root.getNursingNVP_item14());
+
+			Collections.addAll(LtcYtdDirectCareVacancy, directCareVacancyNurseRN, directCareVacancyNurseLPN,
+			 directCareVacancyNurseHCA, directCareVacancyNurseOther);
+
+			
 			/* Bed Inventory */
 
 			/* mandatory bed grid */
@@ -2832,6 +2865,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			ltcYtdSubmission.setLtcBedYtdMaxOccTtls(ltcBedYtdMaxOccTtls);
 			ltcYtdSubmission.setLtcBedYtdOccDaysTtls(ltcBedYtdOccDaysTtls);
 			ltcYtdSubmission.setLtcBedYtdOccRateTtls(ltcBedYtdOccRateTtls);
+			ltcYtdSubmission.setLtcYtdDirectCareVacancy(LtcYtdDirectCareVacancy);
 			
 			
 			ltcYtdSubmissions.add(ltcYtdSubmission);

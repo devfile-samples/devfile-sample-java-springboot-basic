@@ -2123,7 +2123,39 @@ public class Root{
 	public String benefit_value_rec_label;
 	@JsonProperty("nursingNVP_sum1-1")
 	public String nursingNVP_sum11;
+	@JsonProperty("nursingNVP_item1-1")
+	public String nursingNVP_item11;
+	@JsonProperty("nursingNVP_item1-2")
+	public String nursingNVP_item12;
+	@JsonProperty("nursingNVP_item1-3")
+	public String nursingNVP_item13;
+	@JsonProperty("nursingNVP_item1-4")
+	public String nursingNVP_item14;
 
+	public String getNursingNVP_item11() {
+		return nursingNVP_item11;
+	}
+	public void setNursingNVP_item11(String nursingNVP_item11) {
+		this.nursingNVP_item11 = nursingNVP_item11;
+	}
+	public String getNursingNVP_item12() {
+		return nursingNVP_item12;
+	}
+	public void setNursingNVP_item12(String nursingNVP_item12) {
+		this.nursingNVP_item12 = nursingNVP_item12;
+	}
+	public String getNursingNVP_item13() {
+		return nursingNVP_item13;
+	}
+	public void setNursingNVP_item13(String nursingNVP_item13) {
+		this.nursingNVP_item13 = nursingNVP_item13;
+	}
+	public String getNursingNVP_item14() {
+		return nursingNVP_item14;
+	}
+	public void setNursingNVP_item14(String nursingNVP_item14) {
+		this.nursingNVP_item14 = nursingNVP_item14;
+	}
 	public String getNursingNVP_sum11() {
 		return nursingNVP_sum11;
 	}

@@ -81,6 +81,7 @@ public class Constants {
 	public static final String LTC_YTD_DIRECT_CARE_COST_SUBTOTALS = "LTC_YTD_DIRECT_CARE_COST_SUBTOTALS";
 	public static final String LTC_BED_YTD_OCCUPANCY_RATE_TOTALS = "LTC_BED_YTD_OCCUPANCY_RATE_TOTALS";
 	public static final String LTC_BED_YTD_OCCUPIED_DAYS_TOTALS = "LTC_BED_YTD_OCCUPIED_DAYS_TOTALS";
+	public static final String LTC_YTD_DIRECT_CARE_VACANCY = "LTC_YTD_DIRECT_CARE_VACANCY";
 
 	/* File Constants */
 	public final static String PROPERTIES_DATA_DIR = "data-dir";
@@ -303,6 +304,12 @@ public class Constants {
 				"TOTAL_YTD_MAX_OCC_DAYS",
 				"TOTAL_YTD_OCC_DAYS",
 				"TOTAL_PERCENT_OCC"
+		});
+		HEADERS.put(LTC_YTD_DIRECT_CARE_VACANCY, new String[] {
+				"CONFIRMATION_ID",
+				"DIR_CARE_VACANCY_TYPE",
+				"DIR_CARE_VACANCY_NAME",
+				"DIR_CARE_VAC_POSITIONS"		
 		});
 	}
 }
