@@ -565,7 +565,7 @@ public class Root{
     public String bTotal_benefits;
     public String bTotal_recSalaryWage;
     public String bTotal_salaryWage;
-    public String bTotal_value_sum1;
+    public String bTotal_value_sum;
     public String bTotal_YTDSalaryWage;
     public String ccimsid;
     public String compB_accrued;
@@ -1182,7 +1182,8 @@ public class Root{
     public String numberOfTotalBeds;
     public String numberOfTotalFundedBeds;
     public String nursingContractRate_total;
-    public String nursingContractRate1;
+    public String nursingProdCASU_subsum;
+	public String nursingContractRate1;
     public String nursingContractRate2;
     public String nursingContractRate3;
     public String nursingContractRate4;
@@ -1311,7 +1312,11 @@ public class Root{
     public String nursingProdCCS2;
     public String nursingProdCCS3;
     public String nursingProdCCS4;
-    public String nursingProdH_calc1;
+    public String nursingProdCASU1;
+    public String nursingProdCASU2;
+    public String nursingProdCASU3;
+    public String nursingProdCASU4;
+	public String nursingProdH_calc1;
     public String nursingProdH_calc2;
     public String nursingProdH_calc3;
     public String nursingProdH_calc4;
@@ -1417,11 +1422,16 @@ public class Root{
 	public String alliedNP_label_CSP6;
     public String nursingProdH_THPsum1;
     public String nursingProdHCS_subsum1;
-    public String nursingProdHCS1;
+    public String nursingProdHASU_subsum;
+	public String nursingProdHCS1;
     public String nursingProdHCS2;
     public String nursingProdHCS3;
     public String nursingProdHCS4;
-    public String nursingProvider1;
+    public String nursingProdHASU1;
+    public String nursingProdHASU2;
+    public String nursingProdHASU3;
+    public String nursingProdHASU4;
+	public String nursingProvider1;
     public String nursingProvider2;
     public String nursingProvider3;
     public String nursingProvider4;
@@ -1461,6 +1471,9 @@ public class Root{
 	public String opEx_data_total_label;
 	public String opRev_YTD_total_label;
 	public String opSu_data_total_label;
+	@JsonProperty("opSuB_item1-1_label")
+	public String opSuB_item11_label;
+	public String nopSu_data_label;
 	public String opEx_note_sum6;
     public String opEx_note1;
     public String opEx_note10;
@@ -1672,7 +1685,7 @@ public class Root{
     public String opRev_YTD9;
     public String opSu_data_total;
     public String opSu_data_total_note;
-    @JsonProperty("opRev_item1-1")
+	@JsonProperty("opSuB_item1-1")
     public String opSuB_item11;
     public String opSuB_note;
     public String outScopeBedTotal1;
@@ -2107,7 +2120,54 @@ public class Root{
 	public String opEx_YTD_label38;
 	@JsonProperty("opEx_YTD_label-39")
 	public String opEx_YTD_label39;
+	public String benefit_value_rec_label;
+	@JsonProperty("nursingNVP_sum1-1")
+	public String nursingNVP_sum11;
+	@JsonProperty("nursingNVP_item1-1")
+	public String nursingNVP_item11;
+	@JsonProperty("nursingNVP_item1-2")
+	public String nursingNVP_item12;
+	@JsonProperty("nursingNVP_item1-3")
+	public String nursingNVP_item13;
+	@JsonProperty("nursingNVP_item1-4")
+	public String nursingNVP_item14;
 
+	public String getNursingNVP_item11() {
+		return nursingNVP_item11;
+	}
+	public void setNursingNVP_item11(String nursingNVP_item11) {
+		this.nursingNVP_item11 = nursingNVP_item11;
+	}
+	public String getNursingNVP_item12() {
+		return nursingNVP_item12;
+	}
+	public void setNursingNVP_item12(String nursingNVP_item12) {
+		this.nursingNVP_item12 = nursingNVP_item12;
+	}
+	public String getNursingNVP_item13() {
+		return nursingNVP_item13;
+	}
+	public void setNursingNVP_item13(String nursingNVP_item13) {
+		this.nursingNVP_item13 = nursingNVP_item13;
+	}
+	public String getNursingNVP_item14() {
+		return nursingNVP_item14;
+	}
+	public void setNursingNVP_item14(String nursingNVP_item14) {
+		this.nursingNVP_item14 = nursingNVP_item14;
+	}
+	public String getNursingNVP_sum11() {
+		return nursingNVP_sum11;
+	}
+	public void setNursingNVP_sum11(String nursingNVP_sum11) {
+		this.nursingNVP_sum11 = nursingNVP_sum11;
+	}
+	public String getBenefit_value_rec_label() {
+		return benefit_value_rec_label;
+	}
+	public void setBenefit_value_rec_label(String benefit_value_rec_label) {
+		this.benefit_value_rec_label = benefit_value_rec_label;
+	}
 	public String getOpEx_1A_label() {
 		return opEx_1A_label;
 	}
@@ -5087,11 +5147,11 @@ public class Root{
 	public void setbTotal_salaryWage(String bTotal_salaryWage) {
 		this.bTotal_salaryWage = bTotal_salaryWage;
 	}
-	public String getbTotal_value_sum1() {
-		return bTotal_value_sum1;
+	public String getbTotal_value_sum() {
+		return bTotal_value_sum;
 	}
-	public void setbTotal_value_sum1(String bTotal_value_sum1) {
-		this.bTotal_value_sum1 = bTotal_value_sum1;
+	public void setbTotal_value_sum(String bTotal_value_sum) {
+		this.bTotal_value_sum = bTotal_value_sum;
 	}
 	public String getbTotal_YTDSalaryWage() {
 		return bTotal_YTDSalaryWage;
@@ -7499,6 +7559,12 @@ public class Root{
 	public void setNursingContractRate_total(String nursingContractRate_total) {
 		this.nursingContractRate_total = nursingContractRate_total;
 	}
+	public String getNursingProdCASU_subsum() {
+		return nursingProdCASU_subsum;
+	}
+	public void setNursingProdCASU_subsum(String nursingProdCASU_subsum) {
+		this.nursingProdCASU_subsum = nursingProdCASU_subsum;
+	}
 	public String getNursingContractRate1() {
 		return nursingContractRate1;
 	}
@@ -8033,6 +8099,30 @@ public class Root{
 	public void setNursingProdCCS4(String nursingProdCCS4) {
 		this.nursingProdCCS4 = nursingProdCCS4;
 	}
+	public String getNursingProdCASU1() {
+		return nursingProdCASU1;
+	}
+	public void setNursingProdCASU1(String nursingProdCASU1) {
+		this.nursingProdCASU1 = nursingProdCASU1;
+	}
+	public String getNursingProdCASU2() {
+		return nursingProdCASU2;
+	}
+	public void setNursingProdCASU2(String nursingProdCASU2) {
+		this.nursingProdCASU2 = nursingProdCASU2;
+	}
+	public String getNursingProdCASU3() {
+		return nursingProdCASU3;
+	}
+	public void setNursingProdCASU3(String nursingProdCASU3) {
+		this.nursingProdCASU3 = nursingProdCASU3;
+	}
+	public String getNursingProdCASU4() {
+		return nursingProdCASU4;
+	}
+	public void setNursingProdCASU4(String nursingProdCASU4) {
+		this.nursingProdCASU4 = nursingProdCASU4;
+	}
 	public String getNursingProdH_calc1() {
 		return nursingProdH_calc1;
 	}
@@ -8405,6 +8495,12 @@ public class Root{
 	public void setNursingProdHCS_subsum1(String nursingProdHCS_subsum1) {
 		this.nursingProdHCS_subsum1 = nursingProdHCS_subsum1;
 	}
+	public String getNursingProdHASU_subsum() {
+		return nursingProdHASU_subsum;
+	}
+	public void setNursingProdHASU_subsum(String nursingProdHASU_subsum) {
+		this.nursingProdHASU_subsum = nursingProdHASU_subsum;
+	}
 	public String getNursingProdHCS1() {
 		return nursingProdHCS1;
 	}
@@ -8428,6 +8524,30 @@ public class Root{
 	}
 	public void setNursingProdHCS4(String nursingProdHCS4) {
 		this.nursingProdHCS4 = nursingProdHCS4;
+	}
+	public String getNursingProdHASU1() {
+		return nursingProdHASU1;
+	}
+	public void setNursingProdHASU1(String nursingProdHASU1) {
+		this.nursingProdHASU1 = nursingProdHASU1;
+	}
+	public String getNursingProdHASU2() {
+		return nursingProdHASU2;
+	}
+	public void setNursingProdHASU2(String nursingProdHASU2) {
+		this.nursingProdHASU2 = nursingProdHASU2;
+	}
+	public String getNursingProdHASU3() {
+		return nursingProdHASU3;
+	}
+	public void setNursingProdHASU3(String nursingProdHASU3) {
+		this.nursingProdHASU3 = nursingProdHASU3;
+	}
+	public String getNursingProdHASU4() {
+		return nursingProdHASU4;
+	}
+	public void setNursingProdHASU4(String nursingProdHASU4) {
+		this.nursingProdHASU4 = nursingProdHASU4;
 	}
 	public String getNursingProvider1() {
 		return nursingProvider1;
@@ -10660,5 +10780,17 @@ public class Root{
 	}
 	public void setOpSu_data_total_label(String opSu_data_total_label) {
 		this.opSu_data_total_label = opSu_data_total_label;
+	}
+	public String getOpSuB_item11_label() {
+		return opSuB_item11_label;
+	}
+	public void setOpSuB_item11_label(String opSuB_item11_label) {
+		this.opSuB_item11_label = opSuB_item11_label;
+	}
+	public String getNopSu_data_label() {
+		return nopSu_data_label;
+	}
+	public void setNopSu_data_label(String nopSu_data_label) {
+		this.nopSu_data_label = nopSu_data_label;
 	}
 }

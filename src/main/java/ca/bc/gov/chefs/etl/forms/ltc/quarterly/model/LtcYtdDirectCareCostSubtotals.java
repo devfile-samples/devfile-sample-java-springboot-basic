@@ -16,6 +16,7 @@ public class LtcYtdDirectCareCostSubtotals implements IModel{
 	private String subTotalDirCareCostProdHrsOTYTD;
 	private String subTotalDirCareCostProdHrsSubtotalYTD;
 	private String subTotalDirCareCostProdHrsContServYTD;
+	private String subTotalDirCareCostProdHrsAgencyStaffUtil = Constants.DEFAULT_STRING_VALUE;
 	private String subTotalDirCareCostProdHrsTotalYTD;
 	private String subTotalDirCareCostNonProdHrsVacYTD;
 	private String subTotalDirCareCostNonProdHrsSickYTD;
@@ -72,6 +73,14 @@ public class LtcYtdDirectCareCostSubtotals implements IModel{
 
 	public void setSubTotalDirCareCostProdHrsContServYTD(String subTotalDirCareCostProdHrsContServYTD) {
 		this.subTotalDirCareCostProdHrsContServYTD = subTotalDirCareCostProdHrsContServYTD;
+	}
+
+	public String getSubTotalDirCareCostProdHrsAgencyStaffUtil() {
+		return subTotalDirCareCostProdHrsAgencyStaffUtil;
+	}
+
+	public void setSubTotalDirCareCostProdHrsAgencyStaffUtil(String subTotalDirCareCostProdHrsAgencyStaffUtil) {
+		this.subTotalDirCareCostProdHrsAgencyStaffUtil = subTotalDirCareCostProdHrsAgencyStaffUtil;
 	}
 
 	public String getSubTotalDirCareCostProdHrsTotalYTD() {
@@ -158,6 +167,7 @@ public class LtcYtdDirectCareCostSubtotals implements IModel{
 		elements.add(this.getSubTotalDirCareCostProdHrsOTYTD());
 		elements.add(this.getSubTotalDirCareCostProdHrsSubtotalYTD());
 		elements.add(this.getSubTotalDirCareCostProdHrsContServYTD());
+		elements.add(this.getSubTotalDirCareCostProdHrsAgencyStaffUtil());
 		elements.add(this.getSubTotalDirCareCostProdHrsTotalYTD());
 		elements.add(this.getSubTotalDirCareCostNonProdHrsVacYTD());
 		elements.add(this.getSubTotalDirCareCostNonProdHrsSickYTD());
