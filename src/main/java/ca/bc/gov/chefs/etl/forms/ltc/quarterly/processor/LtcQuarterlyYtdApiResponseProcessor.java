@@ -41,6 +41,7 @@ import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdDirectCareCost;
 import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdDirectCareCostSubtotals;
 import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdDirectCareHrs;
 import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdDirectCareHrsSubTotals;
+import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdDirectCareVacancy;
 import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdExp;
 import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdExpSubTotals;
 import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdRev;
@@ -101,6 +102,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			List<LtcBedYtdOccupiedDays> ltcBedYtdOccupiedDays = new ArrayList<>();
 			List<LtcBedYtdOccupiedDaysTotals> ltcBedYtdOccDaysTtls = new ArrayList<>();
 			List<LtcBedYtdOccupancyRateTotals> ltcBedYtdOccRateTtls = new ArrayList<>();
+			List<LtcYtdDirectCareVacancy> LtcYtdDirectCareVacancy = new ArrayList<>();
 		
 
 			/* Form Meta */
@@ -115,6 +117,10 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			ltcYtdSubmission.setNbTotalBeds(root.getNumberOfTotalBeds());
 			ltcYtdSubmission.setNbFundedBeds(root.getNumberOfTotalFundedBeds());
 			ltcYtdSubmission.setOccRateThreshold(root.getThreshold());
+			ltcYtdSubmission.setTotalSalariesWages(root.getbTotal_YTDSalaryWage());
+			ltcYtdSubmission.setTotalBenefits(root.getBenefit_value_total());
+			ltcYtdSubmission.setBenefitsPercent(root.getbTotal_value_sum());
+			ltcYtdSubmission.setTotalVacancies(root.getNursingNVP_sum11());
 			
 			/* START : Direct Care Hours */
 			/* Productive and NP Nursing */ // why no subtotal and total?
@@ -132,6 +138,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingRNProdH.setDirCareProdHrsTotalYtd(root.getNursingProdH_sub1());
 			nursingRNProdH.setDirCareTotalHrsPaidYtd(root.getNursingNProdH_THP1());
 			nursingRNProdH.setDirCareNonProdHrsTotalYtd(root.getNursingNProdH_calc1());
+			nursingRNProdH.setDirCareProdHrsAgencyStuffUtilYtd(root.getNursingProdHASU1());
 
 			LtcYtdDirectCareHrs nursingLPNProdH = new LtcYtdDirectCareHrs();
 			nursingLPNProdH.setDirCareProdHrsRegYtd(root.getNursingProdH_item12());
@@ -147,6 +154,8 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingLPNProdH.setDirCareProdHrsTotalYtd(root.getNursingProdH_sub2());
 			nursingLPNProdH.setDirCareTotalHrsPaidYtd(root.getNursingNProdH_THP2());
 			nursingLPNProdH.setDirCareNonProdHrsTotalYtd(root.getNursingNProdH_calc2());
+			nursingLPNProdH.setDirCareProdHrsAgencyStuffUtilYtd(root.getNursingProdHASU2());
+
 
 			
 			LtcYtdDirectCareHrs nursingHCAProdH = new LtcYtdDirectCareHrs();
@@ -163,6 +172,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingHCAProdH.setDirCareProdHrsTotalYtd(root.getNursingProdH_sub3());
 			nursingHCAProdH.setDirCareTotalHrsPaidYtd(root.getNursingNProdH_THP3());
 			nursingHCAProdH.setDirCareNonProdHrsTotalYtd(root.getNursingNProdH_calc3());
+			nursingHCAProdH.setDirCareProdHrsAgencyStuffUtilYtd(root.getNursingProdHASU3());
 
 			LtcYtdDirectCareHrs nursingOthProdH = new LtcYtdDirectCareHrs();
 			nursingOthProdH.setDirCareProdHrsRegYtd(root.getNursingProdH_item14());
@@ -179,6 +189,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingOthProdH.setDirCareTotalHrsPaidYtd(root.getNursingNProdH_THP4());
 			nursingOthProdH.setDirCareNonProdHrsTotalYtd(root.getNursingNProdH_calc4());
 			nursingOthProdH.setDirCareOtherValue(root.getNursing_label4());
+			nursingOthProdH.setDirCareProdHrsAgencyStuffUtilYtd(root.getNursingProdHASU4());
 
 			// to check what is with the subtotal fields
 
@@ -408,6 +419,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingDirCareHrsSubTotal.setSubTotalDirCareNonProdHrsOtherServYTD(root.getNursingNProdH_sum31());
 			nursingDirCareHrsSubTotal.setSubTotalDirCareNonProdHrsTotalYTD(root.getNursingNProdH_calcsum1());
 			nursingDirCareHrsSubTotal.setConfirmationID(root.getForm().getConfirmationId());
+			nursingDirCareHrsSubTotal.setSubTotalDirCareProdHrsAgencyStaffUtil(root.getNursingProdHASU_subsum());
 			
 
 			LtcYtdDirectCareHrsSubTotals alliedDirCareHrsSubTotal = new LtcYtdDirectCareHrsSubTotals();
@@ -460,6 +472,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingRNProdC.setDirCareCostNonProdHrsTotalYtd(root.getNursingNProdC_calc1());
 			nursingRNProdC.setDirCareCostHourlyRateStaffYtd(root.getNursingStaffRate1());
 			nursingRNProdC.setDirCareCostHourlyRateContractedYtd(root.getNursingContractRate1());
+			nursingRNProdC.setDirCareCostProdHrsAgencyStaffUtil(root.getNursingProdCASU1());
 			/* END : Direct Care Cost */
 
 			LtcYtdDirectCareCost nursingLPNProdC = new LtcYtdDirectCareCost();
@@ -478,6 +491,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingLPNProdC.setDirCareCostNonProdHrsTotalYtd(root.getNursingNProdC_calc2());
 			nursingLPNProdC.setDirCareCostHourlyRateStaffYtd(root.getNursingStaffRate2());
 			nursingLPNProdC.setDirCareCostHourlyRateContractedYtd(root.getNursingContractRate2());
+			nursingLPNProdC.setDirCareCostProdHrsAgencyStaffUtil(root.getNursingProdCASU2());
 
 
 
@@ -497,6 +511,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingHCAProdC.setDirCareCostNonProdHrsTotalYtd(root.getNursingNProdC_calc3());
 			nursingHCAProdC.setDirCareCostHourlyRateStaffYtd(root.getNursingStaffRate3());
 			nursingHCAProdC.setDirCareCostHourlyRateContractedYtd(root.getNursingContractRate3());
+			nursingHCAProdC.setDirCareCostProdHrsAgencyStaffUtil(root.getNursingProdCASU3());
 
 
 			LtcYtdDirectCareCost nursingOthProdC = new LtcYtdDirectCareCost();
@@ -516,6 +531,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingOthProdC.setDirCareCostHourlyRateStaffYtd(root.getNursingStaffRate4());
 			nursingOthProdC.setDirCareCostHourlyRateContractedYtd(root.getNursingContractRate4());
 			nursingOthProdC.setDirCareOtherValue(root.getNursing_label4());
+			nursingOthProdC.setDirCareCostProdHrsAgencyStaffUtil(root.getNursingProdCASU4());
 
 
 
@@ -781,6 +797,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingCareCostSubtotals.setSubTotalDirCareCostNonProdHrsTotalYTD(root.getNursingNProdC_calcsum1());
 			nursingCareCostSubtotals.setSubTotalDirCareCostHourlyRateStaffYTD(root.getNursingStaffRate_total());
 			nursingCareCostSubtotals.setSubTotalDirCareCostHourlyRateContractedYTD(root.getNursingContractRate_total());
+			nursingCareCostSubtotals.setSubTotalDirCareCostProdHrsAgencyStaffUtil(root.getNursingProdCASU_subsum());
 
 			LtcYtdDirectCareCostSubtotals alliedCareCostSubtotals = new LtcYtdDirectCareCostSubtotals();
 			alliedCareCostSubtotals.setConfirmationID(root.getForm().getConfirmationId());
@@ -928,10 +945,11 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal adminOther = new LtcYtdCompSal();
 			adminOther.setCompSalStaffYtd(root.getAdminC_item110());
 			adminOther.setCompSalContractServicesYtd(root.getAdminC_item210());
-			adminOther.setCompSalName(root.getAdmin_label10());
+			adminOther.setCompSalName(Constants.DEFAULT_OTHER_VALUE);
 			adminOther.setCompSalType(root.getAdmin_label());
 			adminOther.setConfirmationId(root.getForm().getConfirmationId());
 			adminOther.setCompSalTotalCostYtd(root.getAdminC_calc10());
+			adminOther.setCompSalOtherName(root.getAdmin_label10());
 
 			/* Direct Care Nursing */
 			LtcYtdCompSal nursingRNSal = new LtcYtdCompSal();
@@ -963,10 +981,11 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal nursingOthSal = new LtcYtdCompSal();
 			nursingOthSal.setCompSalStaffYtd(root.getCompB_item116());
 			nursingOthSal.setCompSalContractServicesYtd(root.getCompB_item216());
-			nursingOthSal.setCompSalName(root.getNursing_label_comp4());
+			nursingOthSal.setCompSalName(Constants.DEFAULT_OTHER_VALUE);
 			nursingOthSal.setCompSalType(root.getNursing_label_comp());
 			nursingOthSal.setConfirmationId(root.getForm().getConfirmationId());
 			nursingOthSal.setCompSalTotalCostYtd(root.getCompB_calc16());
+			nursingOthSal.setCompSalOtherName(root.getNursing_label_comp4());
 
 			/* Allied Professional */
 			LtcYtdCompSal alliedProfOTSal = new LtcYtdCompSal();
@@ -1020,10 +1039,11 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal alliedProfOTHSal = new LtcYtdCompSal();
 			alliedProfOTHSal.setCompSalStaffYtd(root.getCompB_item129());
 			alliedProfOTHSal.setCompSalContractServicesYtd(root.getCompB_item229());
-			alliedProfOTHSal.setCompSalName(root.getAlliedProf_label_comp7());
+			alliedProfOTHSal.setCompSalName(Constants.DEFAULT_OTHER_VALUE);
 			alliedProfOTHSal.setCompSalType(root.getAlliedProf_label_comp());
 			alliedProfOTHSal.setConfirmationId(root.getForm().getConfirmationId());
 			alliedProfOTHSal.setCompSalTotalCostYtd(root.getCompB_calc29());
+			alliedProfOTHSal.setCompSalOtherName(root.getAlliedProf_label_comp7());
 
 			/* Allied Non Professional */
 			LtcYtdCompSal alliedNPRTSal = new LtcYtdCompSal();
@@ -1069,10 +1089,11 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSal alliedNPOTHSal = new LtcYtdCompSal();
 			alliedNPOTHSal.setCompSalStaffYtd(root.getCompB_item127());
 			alliedNPOTHSal.setCompSalContractServicesYtd(root.getCompB_item227());
-			alliedNPOTHSal.setCompSalName(root.getAlliedNP_label_comp6());
+			alliedNPOTHSal.setCompSalName(Constants.DEFAULT_OTHER_VALUE);
 			alliedNPOTHSal.setCompSalType(root.getAlliedNP_label_comp());
 			alliedNPOTHSal.setConfirmationId(root.getForm().getConfirmationId());
 			alliedNPOTHSal.setCompSalTotalCostYtd(root.getCompB_calc27());
+			alliedNPOTHSal.setCompSalOtherName(root.getAlliedNP_label_comp6());
 
 			Collections.addAll(ltcYtdCompSal, supportFoodServices, supportLaundryServices, supportHousekeeping,
 					supportPlantMntnce, adminAdministrator, adminDirOfCare, adminDeptManagers, adminSupport,
@@ -1271,10 +1292,11 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 		//	adminOtherHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP12());
 			adminOtherHrs.setCompHrsStaffYtd(root.getAdminH_item110());
 			adminOtherHrs.setCompHrsContractServicesYtd(root.getAdminH_item210());
-			adminOtherHrs.setCompHrsName(root.getAdmin_label10());
+			adminOtherHrs.setCompHrsName(Constants.DEFAULT_OTHER_VALUE);
 			adminOtherHrs.setCompHrsType(root.getAdmin_label());
 			adminOtherHrs.setConfirmationId(root.getForm().getConfirmationId());
 			adminOtherHrs.setCompTotalWorkedHrsYtd(root.getAdminH_calc10());
+			adminOtherHrs.setCompHrsOtherName(root.getAdmin_label10());
 
 			/* Nursing, Allied, Non Allied Hours */
 			LtcYtdCompHrs nursingRNHrs = new LtcYtdCompHrs();
@@ -1308,10 +1330,11 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			//nursingOthHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP16());
 			nursingOthHrs.setCompHrsStaffYtd(root.getCompH_item116());
 			nursingOthHrs.setCompHrsContractServicesYtd(root.getCompH_item216());
-			nursingOthHrs.setCompHrsName(root.getNursing_label_comp4());
+			nursingOthHrs.setCompHrsName(Constants.DEFAULT_OTHER_VALUE);
 			nursingOthHrs.setCompHrsType(root.getNursing_label_comp());
 			nursingOthHrs.setConfirmationId(root.getForm().getConfirmationId());
 			nursingOthHrs.setCompTotalWorkedHrsYtd(root.getCompH_calc16());
+			nursingOthHrs.setCompHrsOtherName(root.getNursing_label_comp4());
 
 			LtcYtdCompHrs alliedProfOTHrs = new LtcYtdCompHrs();
 			//alliedProfOTHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP17());
@@ -1371,10 +1394,11 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			//alliedProfOTHHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP21());
 			alliedProfOTHHrs.setCompHrsStaffYtd(root.getCompH_item129());
 			alliedProfOTHHrs.setCompHrsContractServicesYtd(root.getCompH_item229());
-			alliedProfOTHHrs.setCompHrsName(root.getAlliedProf_label_comp7());
+			alliedProfOTHHrs.setCompHrsName(Constants.DEFAULT_OTHER_VALUE);
 			alliedProfOTHHrs.setCompHrsType(root.getAlliedProf_label_comp());
 			alliedProfOTHHrs.setConfirmationId(root.getForm().getConfirmationId());
 			alliedProfOTHHrs.setCompTotalWorkedHrsYtd(root.getCompH_calc29());
+			alliedProfOTHHrs.setCompHrsOtherName(root.getAlliedProf_label_comp7());
 
 			LtcYtdCompHrs alliedNPRTHrs = new LtcYtdCompHrs();
 			//alliedNPRTHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP22());
@@ -1425,10 +1449,11 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			//alliedNPOTHHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP27());
 			alliedNPOTHHrs.setCompHrsStaffYtd(root.getCompH_item127());
 			alliedNPOTHHrs.setCompHrsContractServicesYtd(root.getCompH_item227());
-			alliedNPOTHHrs.setCompHrsName(root.getAlliedNP_label_comp6());
+			alliedNPOTHHrs.setCompHrsName(Constants.DEFAULT_OTHER_VALUE);
 			alliedNPOTHHrs.setCompHrsType(root.getAlliedNP_label_comp());
 			alliedNPOTHHrs.setConfirmationId(root.getForm().getConfirmationId());
 			alliedNPOTHHrs.setCompTotalWorkedHrsYtd(root.getCompH_calc27());
+			alliedNPOTHHrs.setCompHrsOtherName(root.getAlliedNP_label_comp6());
 
 			Collections.addAll(ltcYtdCompHrs, supportFoodServicesHrs, supportLaundryServicesHrs, supportHousekeepingHrs,
 					supportPlantMntnceHrs, adminAdministratorHrs, adminDirOfCareHrs, adminDeptManagersHrs,
@@ -1686,8 +1711,15 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			otherBenefit.setBenefitsPercentageAlloc(root.getBenefit_percentage8());
 			otherBenefit.setConfirmationId(root.getForm().getConfirmationId());
 
+			LtcYtdCompBenefits lessBenefitsRecovery = new LtcYtdCompBenefits();
+			lessBenefitsRecovery.setBenefitsAmountYtd(root.getBenefit_value_rec());
+			lessBenefitsRecovery.setBenefitsType(root.getBenefit_value_rec_label());
+			lessBenefitsRecovery.setBenefitsPercentageAlloc(root.getBenefit_percentage_rec());
+			lessBenefitsRecovery.setConfirmationId(root.getForm().getConfirmationId());
+
 			Collections.addAll(ltcYtdCompBenefits, empInsBenefit, canPenPlnBenefit, wrkrCompBoardBenefit,
-					empHlthTaxBenefit, penPlanBenefit, exHlthDntlBenefit, grpLifeBenefit, otherBenefit);
+					empHlthTaxBenefit, penPlanBenefit, exHlthDntlBenefit, grpLifeBenefit, otherBenefit, 
+					lessBenefitsRecovery);
 			/* Are we setting the subtotal and total things? */
 
 			/* Summary of Rev & Exp Budget */
@@ -1864,36 +1896,43 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			revFromHA1Subttl.setConfirmationId(root.getForm().getConfirmationId());
 			revFromHA1Subttl.setRevType(root.getOpRev_1_label());
 			revFromHA1Subttl.setSubTotalRevYtd(root.getOpRev_sum11());
+			revFromHA1Subttl.setSubTotalRevNotes(root.getOpRev_sum_note1());
 
 			LtcYtdRevSubTotals revFromHA2Subttl = new LtcYtdRevSubTotals();
 			revFromHA2Subttl.setConfirmationId(root.getForm().getConfirmationId());
 			revFromHA2Subttl.setRevType(root.getOpRev_2_label());
 			revFromHA2Subttl.setSubTotalRevYtd(root.getOpRev_sum12());
+			revFromHA2Subttl.setSubTotalRevNotes(root.getOpRev_sum_note2());
 
 			LtcYtdRevSubTotals revFromHA4Subttl = new LtcYtdRevSubTotals();
 			revFromHA4Subttl.setConfirmationId(root.getForm().getConfirmationId());
 			revFromHA4Subttl.setRevType(root.getOpRev_4_label());
 			revFromHA4Subttl.setSubTotalRevYtd(root.getOpRev_sum13());
+			revFromHA4Subttl.setSubTotalRevNotes(root.getOpRev_sum_note3());
 
 			LtcYtdRevSubTotals clntRevSubttl = new LtcYtdRevSubTotals();
 			clntRevSubttl.setConfirmationId(root.getForm().getConfirmationId());
 			clntRevSubttl.setRevType(root.getOpRev_client_label());
 			clntRevSubttl.setSubTotalRevYtd(root.getOpRev_sum14());
+			clntRevSubttl.setSubTotalRevNotes(root.getOpRev_sum_note4());
 
 			LtcYtdRevSubTotals othRevSubttl = new LtcYtdRevSubTotals();
 			othRevSubttl.setConfirmationId(root.getForm().getConfirmationId());
 			othRevSubttl.setRevType(root.getOpRev_otherRev_label());
 			othRevSubttl.setSubTotalRevYtd(root.getOpRev_sum15());
+			othRevSubttl.setSubTotalRevNotes(root.getOpRev_sum_note5());
 
 			LtcYtdRevSubTotals opRevSubttl = new LtcYtdRevSubTotals();
 			opRevSubttl.setConfirmationId(root.getForm().getConfirmationId());
 			opRevSubttl.setRevType(root.getOpRev_YTD_total_label());
 			opRevSubttl.setSubTotalRevYtd(root.getOpRev_YTD_total());
+			opRevSubttl.setSubTotalRevNotes(root.getOpRev_total_note());
 
 			LtcYtdRevSubTotals nonOpRevSubttl = new LtcYtdRevSubTotals();
 			nonOpRevSubttl.setConfirmationId(root.getForm().getConfirmationId());
 			nonOpRevSubttl.setRevType(root.getNopRev_label());
 			nonOpRevSubttl.setSubTotalRevYtd(root.getNopRev_sum11());
+			nonOpRevSubttl.setSubTotalRevNotes(root.getNopRev_sub_note());
 
 			Collections.addAll(ltcYtdRevSubTtls, revFromHA1Subttl,revFromHA2Subttl,revFromHA4Subttl,clntRevSubttl,othRevSubttl,opRevSubttl, nonOpRevSubttl);
 
@@ -2099,40 +2138,55 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdExpSubTotals staffCost1ASubtotal = new LtcYtdExpSubTotals();
 			staffCost1ASubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			staffCost1ASubtotal.setExpType(root.getOpEx_1A_label());
-			staffCost1ASubtotal.setSubTotalRevYtd(root.getOpEx_sum11());
+			staffCost1ASubtotal.setSubTotalExpYtd(root.getOpEx_sum11());
+			staffCost1ASubtotal.setSubTotalExpNotes(root.getOpEx_sum_note1());
 
 			LtcYtdExpSubTotals staffCost1BSubtotal = new LtcYtdExpSubTotals();
 			staffCost1BSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			staffCost1BSubtotal.setExpType(root.getOpEx_1B_label());
-			staffCost1BSubtotal.setSubTotalRevYtd(root.getOpEx_sum12());
+			staffCost1BSubtotal.setSubTotalExpYtd(root.getOpEx_sum12());
+			staffCost1BSubtotal.setSubTotalExpNotes(root.getOpEx_sum_note2());
 
 			LtcYtdExpSubTotals propertyCostSubtotal = new LtcYtdExpSubTotals();
 			propertyCostSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			propertyCostSubtotal.setExpType(root.getOpEx_2_label());
-			propertyCostSubtotal.setSubTotalRevYtd(root.getOpEx_sum13());
+			propertyCostSubtotal.setSubTotalExpYtd(root.getOpEx_sum13());
+			propertyCostSubtotal.setSubTotalExpNotes(root.getOpEx_sum_note3());
 
 			LtcYtdExpSubTotals suppliesSubtotal = new LtcYtdExpSubTotals();
 			suppliesSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			suppliesSubtotal.setExpType(root.getOpEx_3_label());
-			suppliesSubtotal.setSubTotalRevYtd(root.getOpEx_sum14());
+			suppliesSubtotal.setSubTotalExpYtd(root.getOpEx_sum14());
+			suppliesSubtotal.setSubTotalExpNotes(root.getOpEx_sum_note4());
 
 			LtcYtdExpSubTotals adminCostSubtotal = new LtcYtdExpSubTotals();
 			adminCostSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			adminCostSubtotal.setExpType(root.getOpEx_4_label());
-			adminCostSubtotal.setSubTotalRevYtd(root.getOpEx_sum15());
+			adminCostSubtotal.setSubTotalExpYtd(root.getOpEx_sum15());
+			adminCostSubtotal.setSubTotalExpNotes(root.getOpEx_sum_note5());
 
 			LtcYtdExpSubTotals operatingCostSubtotal = new LtcYtdExpSubTotals();
 			operatingCostSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			operatingCostSubtotal.setExpType(root.getOpEx_data_total_label());
-			operatingCostSubtotal.setSubTotalRevYtd(root.getOpEx_data_total());
+			operatingCostSubtotal.setSubTotalExpYtd(root.getOpEx_data_total());
+			operatingCostSubtotal.setSubTotalExpNotes(root.getOpEx_total_note());
 
 			LtcYtdExpSubTotals nonOperationalExpSubtotal = new LtcYtdExpSubTotals();
 			nonOperationalExpSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			nonOperationalExpSubtotal.setExpType(root.getNopEx_label());
-			nonOperationalExpSubtotal.setSubTotalRevYtd(root.getNopEx_sum11());
+			nonOperationalExpSubtotal.setSubTotalExpYtd(root.getNopEx_sum11());
+			nonOperationalExpSubtotal.setSubTotalExpNotes(root.getNopEx_sub_note());
 
-			Collections.addAll(ltcYtdExpSubttls,staffCost1ASubtotal,staffCost1BSubtotal,propertyCostSubtotal,suppliesSubtotal,adminCostSubtotal,operatingCostSubtotal,
-			 nonOperationalExpSubtotal);
+			LtcYtdExpSubTotals beforeSalaryWagesRecAcc = new LtcYtdExpSubTotals();
+			beforeSalaryWagesRecAcc.setConfirmationId(root.getForm().getConfirmationId());
+			beforeSalaryWagesRecAcc.setExpType("Before salary/wages rec./accruals");
+			beforeSalaryWagesRecAcc.setSubTotalExpYtd(root.getOpEx_sub1());
+			beforeSalaryWagesRecAcc.setSubTotalExpNotes(root.getOpEx_sub_note());
+
+			// /getOpEx_sub1()
+
+			Collections.addAll(ltcYtdExpSubttls,staffCost1ASubtotal,staffCost1BSubtotal,propertyCostSubtotal,suppliesSubtotal,adminCostSubtotal,operatingCostSubtotal, nonOperationalExpSubtotal,
+			 beforeSalaryWagesRecAcc);
 
 			/* END */
 
@@ -2153,13 +2207,26 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			/* END */
 
 			/* LtcYtdSumTotals */
-			LtcYtdSumTotals YtdTotal = new LtcYtdSumTotals();
-			YtdTotal.setConfirmationId(root.getForm().getConfirmationId());
-			YtdTotal.setTotName(root.getOpSu_data_total_label());
-			YtdTotal.setSumYTD(root.getOpSu_data_total());
-			YtdTotal.setTotNotes(root.getOpSu_data_total_note());
+			LtcYtdSumTotals totalNonOperatingSurplus = new LtcYtdSumTotals();
+			totalNonOperatingSurplus.setConfirmationId(root.getForm().getConfirmationId());
+			totalNonOperatingSurplus.setTotName(root.getNopSu_data_label());
+			totalNonOperatingSurplus.setSumYTD(root.getNopSu_data1());
+			totalNonOperatingSurplus.setTotNotes(root.getNopSu_note());
 
-			ltcYtdSumTotals.add(YtdTotal);
+			LtcYtdSumTotals operatingSurplusBeforeDepreciation = new LtcYtdSumTotals();
+			operatingSurplusBeforeDepreciation.setConfirmationId(root.getForm().getConfirmationId());
+			operatingSurplusBeforeDepreciation.setTotName(root.getOpSuB_item11_label());
+			operatingSurplusBeforeDepreciation.setSumYTD(root.getOpSuB_item11());
+			operatingSurplusBeforeDepreciation.setTotNotes(root.getOpSuB_note());
+
+			LtcYtdSumTotals totalOperatingSurplus = new LtcYtdSumTotals();
+			totalOperatingSurplus.setConfirmationId(root.getForm().getConfirmationId());
+			totalOperatingSurplus.setTotName(root.getOpSu_data_total_label());
+			totalOperatingSurplus.setSumYTD(root.getOpSu_data_total());
+			totalOperatingSurplus.setTotNotes(root.getOpSu_data_total_note());
+
+			Collections.addAll(ltcYtdSumTotals, operatingSurplusBeforeDepreciation, totalNonOperatingSurplus,
+			 totalOperatingSurplus);
 
 			/* END */
 			
@@ -2255,13 +2322,44 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			// subtotal
 			// total operating expenses
 
+			//DIRECT CARE VACANCY : 
+			//LtcYtdDirectCareVacancy
+
+			LtcYtdDirectCareVacancy directCareVacancyNurseRN = new LtcYtdDirectCareVacancy();
+			directCareVacancyNurseRN.setConfirmationId(root.getForm().getConfirmationId());
+			directCareVacancyNurseRN.setDirectCareVacancyType(root.getNursing_label());
+			directCareVacancyNurseRN.setDirectCareVacancyName(root.getNursing_label1());
+			directCareVacancyNurseRN.setDirectCareVacPositions(root.getNursingNVP_item11());
+
+			LtcYtdDirectCareVacancy directCareVacancyNurseLPN = new LtcYtdDirectCareVacancy();
+			directCareVacancyNurseLPN.setConfirmationId(root.getForm().getConfirmationId());
+			directCareVacancyNurseLPN.setDirectCareVacancyType(root.getNursing_label());
+			directCareVacancyNurseLPN.setDirectCareVacancyName(root.getNursing_label2());
+			directCareVacancyNurseLPN.setDirectCareVacPositions(root.getNursingNVP_item12());
+
+			LtcYtdDirectCareVacancy directCareVacancyNurseHCA = new LtcYtdDirectCareVacancy();
+			directCareVacancyNurseHCA.setConfirmationId(root.getForm().getConfirmationId());
+			directCareVacancyNurseHCA.setDirectCareVacancyType(root.getNursing_label());
+			directCareVacancyNurseHCA.setDirectCareVacancyName(root.getNursing_label3());
+			directCareVacancyNurseHCA.setDirectCareVacPositions(root.getNursingNVP_item13());
+
+			LtcYtdDirectCareVacancy directCareVacancyNurseOther = new LtcYtdDirectCareVacancy();
+			directCareVacancyNurseOther.setConfirmationId(root.getForm().getConfirmationId());
+			directCareVacancyNurseOther.setDirectCareVacancyType(root.getNursing_label());
+			directCareVacancyNurseOther.setDirectCareVacancyName(root.getNursing_label4());
+			directCareVacancyNurseOther.setDirectCareVacPositions(root.getNursingNVP_item14());
+
+			Collections.addAll(LtcYtdDirectCareVacancy, directCareVacancyNurseRN, directCareVacancyNurseLPN,
+			 directCareVacancyNurseHCA, directCareVacancyNurseOther);
+
+			
 			/* Bed Inventory */
 
 			/* mandatory bed grid */
 			for (BedGrid0 maxOcp : root.getBedGrid0()) {
 				LtcBedYtdMaxOccupancy numOfBeds = new LtcBedYtdMaxOccupancy();
 				numOfBeds.setBedFundingType(maxOcp.getBedType());
-				numOfBeds.setQuarterInventory(maxOcp.getQuarter());
+				numOfBeds.setQuarterInventory("Inventory");
 				numOfBeds.setConfirmationId(root.getForm().getConfirmationId());
 				numOfBeds.setStartDate(maxOcp.getStartDate0());
 				numOfBeds.setEndDate(maxOcp.getEndDate0());
@@ -2370,7 +2468,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 					numOfBeds.setEndDate(maxOcp.getEndDate1());
 					numOfBeds.setNumberOfBeds(maxOcp.getNumberOfBeds1());
 					numOfBeds.setMaximumBedDays(maxOcp.getMaximumBedDays1());
-					numOfBeds.setQuarterInventory(root.getQuarter());
+					numOfBeds.setQuarterInventory("Q1");
 					numOfBeds.setNotes(maxOcp.getQuarterNote1());
 					numOfBeds.setBedSubype(maxOcp.getSubTypeLabel());
 					ltcBedYtdMaxOccupancies.add(numOfBeds);
@@ -2467,7 +2565,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 					numOfBeds.setEndDate(maxOcp.getEndDate2());
 					numOfBeds.setNumberOfBeds(maxOcp.getNumberOfBeds2());
 					numOfBeds.setMaximumBedDays(maxOcp.getMaximumBedDays2());
-					numOfBeds.setQuarterInventory(root.getQuarter());
+					numOfBeds.setQuarterInventory("Q2");
 					numOfBeds.setNotes(maxOcp.getNotes2());
 					numOfBeds.setBedSubype(maxOcp.getSubTypeLabel());
 					ltcBedYtdMaxOccupancies.add(numOfBeds);
@@ -2565,7 +2663,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 					numOfBeds.setEndDate(maxOcp.getEndDate3());
 					numOfBeds.setNumberOfBeds(maxOcp.getNumberOfBeds3());
 					numOfBeds.setMaximumBedDays(maxOcp.getMaximumBedDays3());
-					numOfBeds.setQuarterInventory(root.getQuarter());
+					numOfBeds.setQuarterInventory("Q3");
 					numOfBeds.setNotes(maxOcp.getNotes3());
 					numOfBeds.setBedSubype(maxOcp.getSubTypeLabel());
 					ltcBedYtdMaxOccupancies.add(numOfBeds);
@@ -2654,7 +2752,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 					numOfBeds.setEndDate(maxOcp.getEndDate4());
 					numOfBeds.setNumberOfBeds(maxOcp.getNumberOfBeds4());
 					numOfBeds.setMaximumBedDays(maxOcp.getMaximumBedDays4());
-					numOfBeds.setQuarterInventory(root.getQuarter());
+					numOfBeds.setQuarterInventory("Q4");
 					numOfBeds.setNotes(maxOcp.getNotes4());
 					numOfBeds.setBedSubype(maxOcp.getSubTypeLabel());
 					ltcBedYtdMaxOccupancies.add(numOfBeds);
@@ -2767,6 +2865,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			ltcYtdSubmission.setLtcBedYtdMaxOccTtls(ltcBedYtdMaxOccTtls);
 			ltcYtdSubmission.setLtcBedYtdOccDaysTtls(ltcBedYtdOccDaysTtls);
 			ltcYtdSubmission.setLtcBedYtdOccRateTtls(ltcBedYtdOccRateTtls);
+			ltcYtdSubmission.setLtcYtdDirectCareVacancy(LtcYtdDirectCareVacancy);
 			
 			
 			ltcYtdSubmissions.add(ltcYtdSubmission);

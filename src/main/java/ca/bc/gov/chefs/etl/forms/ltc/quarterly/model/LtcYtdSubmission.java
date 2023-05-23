@@ -27,6 +27,10 @@ public class LtcYtdSubmission implements IModel {
 	private String nbTotalBeds;
 	private String nbFundedBeds;
 	private String occRateThreshold;
+	private String totalSalariesWages;
+	private String totalBenefits;
+	private String benefitsPercent;
+	private String totalVacancies;
 
 	private List<LtcBedYtdMaxOccupancy> ltcBedYtdMaxOccupancy;
 	private List<LtcBedYtdOccupancyRate> ltcBedYtdOccupancyRate;
@@ -52,6 +56,7 @@ public class LtcYtdSubmission implements IModel {
 	private List<LtcBedYtdMaxOccupancyTotals> ltcBedYtdMaxOccTtls;
 	private List<LtcBedYtdOccupiedDaysTotals> ltcBedYtdOccDaysTtls;
 	private List<LtcBedYtdOccupancyRateTotals> ltcBedYtdOccRateTtls;
+	private List<LtcYtdDirectCareVacancy> LtcYtdDirectCareVacancy;
 	
 
 	@Override
@@ -81,6 +86,10 @@ public class LtcYtdSubmission implements IModel {
 		elements.add(this.getNbTotalBeds());
 		elements.add(this.getNbFundedBeds());
 		elements.add(this.getOccRateThreshold());
+		elements.add(this.getTotalBenefits());
+		elements.add(this.getTotalSalariesWages());
+		elements.add(this.getBenefitsPercent());
+		elements.add(this.getTotalVacancies());
 		return elements;
 	}
 
@@ -111,6 +120,7 @@ public class LtcYtdSubmission implements IModel {
 		ltcQtdInstances.addAll(this.getLtcBedYtdMaxOccTtls());
 		ltcQtdInstances.addAll(this.getLtcBedYtdOccDaysTtls());
 		ltcQtdInstances.addAll(this.getLtcBedYtdOccRateTtls());
+		ltcQtdInstances.addAll(this.getLtcYtdDirectCareVacancy());
 
 		return ltcQtdInstances;
 	}
@@ -371,6 +381,14 @@ public class LtcYtdSubmission implements IModel {
 		this.ltcBedYtdOccRateTtls = ltcBedYtdOccRateTtls;
 	}
 
+	public List<LtcYtdDirectCareVacancy> getLtcYtdDirectCareVacancy() {
+		return LtcYtdDirectCareVacancy;
+	}
+
+	public void setLtcYtdDirectCareVacancy(List<LtcYtdDirectCareVacancy> ltcYtdDirectCareVacancy) {
+		this.LtcYtdDirectCareVacancy = ltcYtdDirectCareVacancy;
+	}
+
 	public String getSubmissionFy() {
 		return submissionFy;
 	}
@@ -394,6 +412,36 @@ public class LtcYtdSubmission implements IModel {
 		this.ltcYtdSumTotals = ltcYtdSumTotals;
 	}
 	
+	public String getTotalBenefits() {
+		return totalBenefits;
+	}
 
+	public void setTotalBenefits(String totalBenefits) {
+		this.totalBenefits = totalBenefits;
+	}
+	
+	public String getBenefitsPercent() {
+		return benefitsPercent;
+	}
+
+	public void setBenefitsPercent(String benefitsPercent) {
+		this.benefitsPercent = benefitsPercent;
+	}
+
+	public String getTotalVacancies() {
+		return totalVacancies;
+	}
+
+	public void setTotalVacancies(String totalVacancies) {
+		this.totalVacancies = totalVacancies;
+	}
+
+	public String getTotalSalariesWages() {
+		return totalSalariesWages;
+	}
+
+	public void setTotalSalariesWages(String totalSalariesWages) {
+		this.totalSalariesWages = totalSalariesWages;
+	}
 	
 }
