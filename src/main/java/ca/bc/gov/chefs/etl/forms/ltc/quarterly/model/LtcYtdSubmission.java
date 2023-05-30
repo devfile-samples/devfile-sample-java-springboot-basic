@@ -43,6 +43,7 @@ public class LtcYtdSubmission implements IModel {
 	private List<LtcYtdDirectCareHrs> ltcYtdDirectCareHrs;
 	private List<LtcYtdExp> ltcYtdExp;
 	private List<LtcYtdDep> ltcYtdDep;
+	private List<LtcYtdDepSubTotals> ltcYtdDepSubTotals;
 	private List<LtcYtdRev> ltcYtdRev;
 	private List<LtcYtdExpSubTotals> ltcYtdExpSubttls;
 	private List<LtcYtdRevSubTotals> ltcYtdRevSubttls;
@@ -108,6 +109,7 @@ public class LtcYtdSubmission implements IModel {
 		ltcQtdInstances.addAll(this.getLtcYtdExp());
 		ltcQtdInstances.addAll(this.getLtcYtdRev());
 		ltcQtdInstances.addAll(this.getLtcYtdDep());
+		ltcQtdInstances.addAll(this.getLtcYtdDepSubTotals());
 		ltcQtdInstances.addAll(this.getLtcYtdSumTotals());
 		ltcQtdInstances.addAll(this.getLtcYtdExpSubttls());
 		ltcQtdInstances.addAll(this.getLtcYtdRevSubttls());
@@ -403,7 +405,13 @@ public class LtcYtdSubmission implements IModel {
 	public void setLtcYtdDep(List<LtcYtdDep> ltcYtdDep) {
 		this.ltcYtdDep = ltcYtdDep;
 	}
+	public List<LtcYtdDepSubTotals> getLtcYtdDepSubTotals() {
+		return ltcYtdDepSubTotals;
+	}
 
+	public void setLtcYtdDepSubTotals(List<LtcYtdDepSubTotals> ltcYtdDepSubTotals) {
+		this.ltcYtdDepSubTotals = ltcYtdDepSubTotals;
+	}
 	public List<LtcYtdSumTotals> getLtcYtdSumTotals() {
 		return ltcYtdSumTotals;
 	}
