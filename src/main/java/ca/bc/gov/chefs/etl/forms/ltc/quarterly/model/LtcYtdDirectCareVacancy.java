@@ -32,7 +32,7 @@ public class LtcYtdDirectCareVacancy implements IModel {
 		return directCareVacancyName;
 	}
 	public void setDirectCareVacancyName(String directCareVacancyName) {
-		this.directCareVacancyName = directCareVacancyName;
+		this.directCareVacancyName = StringUtils.defaultIfEmpty(directCareVacancyName, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getDirectCareVacPositions() {
 		return directCareVacPositions;
