@@ -33,14 +33,12 @@ public class LtcYtdCompBenefits implements IModel {
 	public void setBenefitsAmountYtd(String benefitsAmountYtd) {
 		this.benefitsAmountYtd = StringUtils.defaultIfEmpty(benefitsAmountYtd, Constants.DEFAULT_DECIMAL_VALUE);
 	}
-	
-	
-	
 	public String getBenefitsPercentageAlloc() {
 		return StringUtils.isEmpty(benefitsPercentageAlloc) ? "0" : benefitsPercentageAlloc;
 	}
 	public void setBenefitsPercentageAlloc(String benefitsPercentageAlloc) {
-		this.benefitsPercentageAlloc = benefitsPercentageAlloc;
+		this.benefitsPercentageAlloc = 
+		benefitsPercentageAlloc.equals("NaN") ? Constants.DEFAULT_DECIMAL_VALUE : benefitsPercentageAlloc;
 	}
 	@Override
 	public String getFileName() {
