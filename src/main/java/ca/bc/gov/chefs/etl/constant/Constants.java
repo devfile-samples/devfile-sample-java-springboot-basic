@@ -20,8 +20,8 @@ public class Constants {
 	public final static String CHEFS_API_URL = "chefs.http.uri";
 
 	/* Default values for empty Strings and Numbers */
-	public final static String DEFAULT_STRING_VALUE = "";
-	public final static String DEFAULT_DECIMAL_VALUE = "0";
+	public final static String DEFAULT_STRING_VALUE = "Not Provided";
+	public final static String DEFAULT_DECIMAL_VALUE = "-99";
 	
 	/* AIMS */
 	public final static String AIMS_USERNAME = "aims.username";
@@ -70,6 +70,7 @@ public class Constants {
 	public static final String LTC_YTD_REV_SUB_TOTALS = "LTC_YTD_REV_SUB_TOTALS";
 	public static final String LTC_YTD_EXP_SUB_TOTALS = "LTC_YTD_EXP_SUB_TOTALS";
 	public static final String LTC_YTD_DEP = "LTC_YTD_DEP";
+	public static final String LTC_YTD_DEP_SUB_TOTALS = "LTC_YTD_DEP_SUB_TOTALS";
 	public static final String LTC_YTD_SUM_TOTALS = "LTC_YTD_SUM_TOTALS";
 	public final static String LTC_FACILITY = "LTC_FACILITY";
 	public static final String LTC_YTD_COMP_SAL_SUBTOTALS = "LTC_YTD_COMP_SAL_SUBTOTALS";
@@ -188,6 +189,8 @@ public class Constants {
 		HEADERS.put(LTC_YTD_EXP_SUB_TOTALS, new String[] { "CONFIRMATION_ID", "EXP_TYPE", "SUB_TOTAL_EXP_YTD", "SUB_TOTAL_EXP_NOTES"});
 		
 		HEADERS.put(LTC_YTD_DEP, new String[] { "CONFIRMATION_ID", "DEP_NAME", "DEP_YTD", "DEP_NOTES"});
+		
+		HEADERS.put(LTC_YTD_DEP_SUB_TOTALS, new String[] { "CONFIRMATION_ID", "SUB_TOTAL_DEP_YTD", "SUB_TOTAL_DEP_NOTES"});
 		
 		HEADERS.put(LTC_YTD_SUM_TOTALS, new String[] { "CONFIRMATION_ID", "TOT_NAME", "SUM_YTD","TOT_NOTES"});
 

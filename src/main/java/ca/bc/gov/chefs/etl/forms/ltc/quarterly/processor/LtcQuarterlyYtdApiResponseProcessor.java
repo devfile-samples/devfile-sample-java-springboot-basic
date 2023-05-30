@@ -37,6 +37,7 @@ import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdCompSal;
 import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdCompSalSubtotals;
 import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdCompSalTotals;
 import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdDep;
+import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdDepSubTotals;
 import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdDirectCareCost;
 import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdDirectCareCostSubtotals;
 import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdDirectCareHrs;
@@ -95,6 +96,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			List<LtcYtdExpSubTotals> ltcYtdExpSubttls = new ArrayList<LtcYtdExpSubTotals>();
 			List<LtcYtdExp> ltcYtdExp = new ArrayList<>();
 			List<LtcYtdDep> ltcYtdDep = new ArrayList<>();
+			List<LtcYtdDepSubTotals> ltcYtdDepSubTotals = new ArrayList<>();
 			List<LtcYtdSumTotals> ltcYtdSumTotals = new ArrayList<>();
 			List<LtcBedYtdOccupancyRate> ltcBedYtdOccupancyRates = new ArrayList<>();
 			List<LtcBedYtdMaxOccupancy> ltcBedYtdMaxOccupancies = new ArrayList<>();
@@ -2206,6 +2208,16 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			Collections.addAll(ltcYtdDep, buildingDep, furnitureEquipmentDep);
 			/* END */
 
+			/* LTC YTD SUBTOTALS */
+
+			LtcYtdDepSubTotals subTotalYtdDep = new LtcYtdDepSubTotals();
+			subTotalYtdDep.setConfirmationId(root.getForm().getConfirmationId());
+			subTotalYtdDep.setSubTotalDepYtd(root.getOpEx_sum16());
+			subTotalYtdDep.setSubTotalDepNotes(root.getOpEx_note_sum6());
+
+			Collections.addAll(ltcYtdDepSubTotals, subTotalYtdDep);
+			/* END */
+
 			/* LtcYtdSumTotals */
 			LtcYtdSumTotals totalNonOperatingSurplus = new LtcYtdSumTotals();
 			totalNonOperatingSurplus.setConfirmationId(root.getForm().getConfirmationId());
@@ -2852,6 +2864,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			ltcYtdSubmission.setLtcYtdDirectCareHrs(ltcYtdDcHrs);
 			ltcYtdSubmission.setLtcYtdExp(ltcYtdExp);
 			ltcYtdSubmission.setLtcYtdDep(ltcYtdDep);
+			ltcYtdSubmission.setLtcYtdDepSubTotals(ltcYtdDepSubTotals);
 			ltcYtdSubmission.setLtcYtdSumTotals(ltcYtdSumTotals);
 			ltcYtdSubmission.setLtcYtdRev(ltcYtdRev);
 			ltcYtdSubmission.setLtcYtdExpSubttls(ltcYtdExpSubttls);
