@@ -91,7 +91,7 @@ public class LtcBedYtdMaxOccupancyTotals implements IModel {
 
 	@Override
 	public String getFormType() {
-		return Constants.LTC_BED_YTD_MAX_OCCUPANCY_TOTALS;
+		return Constants.LTC_BED_YTD_MAX_OCCY_TOTALS;
 	}
 
 	@Override

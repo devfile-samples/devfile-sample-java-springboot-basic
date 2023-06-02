@@ -40,7 +40,7 @@ public class LtcYtdDepSubTotals implements IModel {
 	}
 	@Override
 	public String getFormType() {
-		return Constants.LTC_YTD_DEP_SUB_TOTALS;
+		return Constants.LTC_YTD_DEP_SUBTOTALS;
 	}
 	@Override
 	public List<String> getCsvElements() {

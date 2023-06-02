@@ -61,7 +61,7 @@ public class LtcBedYtdOccupiedDaysTotals implements IModel {
 	}
 	@Override
 	public String getFormType() {
-		return Constants.LTC_BED_YTD_OCCUPIED_DAYS_TOTALS;
+		return Constants.LTC_BED_YTD_OCCUPIED_DAYS_TOT;
 	}
 	@Override
 	public List<String> getCsvElements() {
