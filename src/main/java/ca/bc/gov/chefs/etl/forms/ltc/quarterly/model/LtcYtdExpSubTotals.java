@@ -46,7 +46,7 @@ public class LtcYtdExpSubTotals implements IModel {
 	}
 	@Override
 	public String getFormType() {
-		return Constants.LTC_YTD_EXP_SUB_TOTALS;
+		return Constants.LTC_YTD_EXP_SUBTOTALS;
 	}
 	@Override
 	public List<String> getCsvElements() {

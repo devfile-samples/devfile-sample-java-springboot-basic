@@ -155,7 +155,7 @@ public class LtcYtdDirectCareCostSubtotals implements IModel{
 
 	@Override
 	public String getFormType() {
-		return Constants.LTC_YTD_DIRECT_CARE_COST_SUBTOTALS;
+		return Constants.LTC_YTD_DIRECT_CARE_COST_SUBS;
 	}
 
 	@Override

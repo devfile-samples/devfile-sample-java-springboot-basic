@@ -137,7 +137,7 @@ public class LtcYtdDirectCareHrsSubTotals implements IModel{
 
 	@Override
 	public String getFormType() {
-		return Constants.LTC_YTD_DIRECT_CARE_HRS_SUB_TOTALS;
+		return Constants.LTC_YTD_DIRECT_CARE_HRS_SUBS;
 	}
 
 	@Override
