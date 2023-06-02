@@ -61,19 +61,19 @@ public class LtcYtdDirectCareCost implements IModel{
 		return StringUtils.isBlank(dirCareCostProdHrsRegYtd) ? "0" : dirCareCostProdHrsRegYtd;
 	}
 	public void setDirCareCostProdHrsRegYtd(String dirCareCostProdHrsRegYtd) {
-		this.dirCareCostProdHrsRegYtd = StringUtils.defaultIfEmpty(dirCareCostProdHrsRegYtd, Constants.DEFAULT_STRING_VALUE);
+		this.dirCareCostProdHrsRegYtd = StringUtils.defaultIfEmpty(dirCareCostProdHrsRegYtd, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getDirCareCostProdHrsOtYtd() {
 		return StringUtils.isBlank(dirCareCostProdHrsOtYtd) ? "0" : dirCareCostProdHrsOtYtd;
 	}
 	public void setDirCareCostProdHrsOtYtd(String dirCareCostProdHrsOtYtd) {
-		this.dirCareCostProdHrsOtYtd = StringUtils.defaultIfEmpty(dirCareCostProdHrsOtYtd, Constants.DEFAULT_STRING_VALUE);
+		this.dirCareCostProdHrsOtYtd = StringUtils.defaultIfEmpty(dirCareCostProdHrsOtYtd, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getDirCareCostProdHrsContractedYtd() {
 		return StringUtils.isBlank(dirCareCostProdHrsContractedYtd) ? "0" : dirCareCostProdHrsContractedYtd;
 	}
 	public void setDirCareCostProdHrsContractedYtd(String dirCareCostProdHrsContractedYtd) {
-		this.dirCareCostProdHrsContractedYtd = StringUtils.defaultIfEmpty(dirCareCostProdHrsContractedYtd, Constants.DEFAULT_STRING_VALUE);
+		this.dirCareCostProdHrsContractedYtd = StringUtils.defaultIfEmpty(dirCareCostProdHrsContractedYtd, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getDirCareCostNonProdHrsVacYtd() {
 		return dirCareCostNonProdHrsVacYtd;
