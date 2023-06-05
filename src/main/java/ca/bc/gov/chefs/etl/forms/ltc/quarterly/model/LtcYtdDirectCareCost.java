@@ -25,7 +25,7 @@ public class LtcYtdDirectCareCost implements IModel{
 	private String dirCareCostTotalHrsPaidYtd;
 	private String dirCareCostHourlyRateStaffYtd;
 	private String dirCareCostHourlyRateContractedYtd;
-	private String dirCareCostProdHrsAgencyStaffUtil = Constants.DEFAULT_STRING_VALUE;
+	private String dirCareCostProdHrsAgencyStaffUtil = Constants.DEFAULT_DECIMAL_VALUE;
 	
 	public String getDirCareCostProdHrsAgencyStaffUtil() {
 		return dirCareCostProdHrsAgencyStaffUtil;
@@ -149,8 +149,8 @@ public class LtcYtdDirectCareCost implements IModel{
 		elements.add(this.getDirCareCostProdHrsRegYtd());
 		elements.add(this.getDirCareCostProdHrsOtYtd());
 		elements.add(this.getDirCareCostProdHrsContractedYtd());
-		elements.add(this.getDirCareCostProdHrsSubtotalYtd());
 		elements.add(this.getDirCareCostProdHrsAgencyStaffUtil());
+		elements.add(this.getDirCareCostProdHrsSubtotalYtd());
 		elements.add(this.getDirCareCostProdHrsTotalYtd());
 		elements.add(this.getDirCareCostNonProdHrsVacYtd());
 		elements.add(this.getDirCareCostNonProdHrsSickYtd());
