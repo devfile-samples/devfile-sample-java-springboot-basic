@@ -16,7 +16,7 @@ public class LtcYtdDirectCareCostSubtotals implements IModel{
 	private String subTotalDirCareCostProdHrsOTYTD;
 	private String subTotalDirCareCostProdHrsSubtotalYTD;
 	private String subTotalDirCareCostProdHrsContServYTD;
-	private String subTotalDirCareCostProdHrsAgencyStaffUtil = Constants.DEFAULT_STRING_VALUE;
+	private String subTotalDirCareCostProdHrsAgencyStaffUtil = Constants.DEFAULT_DECIMAL_VALUE;
 	private String subTotalDirCareCostProdHrsTotalYTD;
 	private String subTotalDirCareCostNonProdHrsVacYTD;
 	private String subTotalDirCareCostNonProdHrsSickYTD;

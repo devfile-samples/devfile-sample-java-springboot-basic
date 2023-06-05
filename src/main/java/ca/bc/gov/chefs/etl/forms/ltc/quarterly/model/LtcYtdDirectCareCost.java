@@ -25,7 +25,7 @@ public class LtcYtdDirectCareCost implements IModel{
 	private String dirCareCostTotalHrsPaidYtd;
 	private String dirCareCostHourlyRateStaffYtd;
 	private String dirCareCostHourlyRateContractedYtd;
-	private String dirCareCostProdHrsAgencyStaffUtil = Constants.DEFAULT_STRING_VALUE;
+	private String dirCareCostProdHrsAgencyStaffUtil = Constants.DEFAULT_DECIMAL_VALUE;
 	
 	public String getDirCareCostProdHrsAgencyStaffUtil() {
 		return dirCareCostProdHrsAgencyStaffUtil;
