@@ -135,8 +135,8 @@ public class LtcYtdDirectCareHrs implements IModel{
 		elements.add(this.getDirCareProdHrsRegYtd());
 		elements.add(this.getDirCareProdHrsOtYtd());
 		elements.add(this.getDirCareProdHrsContractedYtd());
-		elements.add(this.getDirCareProdHrsSubtotalYtd());
 		elements.add(this.getDirCareProdHrsAgencyStuffUtilYtd());
+		elements.add(this.getDirCareProdHrsSubtotalYtd());
 		elements.add(this.getDirCareProdHrsTotalYtd());
 		elements.add(this.getDirCareNonProdHrsVacYtd());
 		elements.add(this.getDirCareNonProdHrsSickYtd());
