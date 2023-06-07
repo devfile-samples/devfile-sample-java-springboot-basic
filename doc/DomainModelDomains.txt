@@ -716,6 +716,7 @@
 "EXPENDITURE_TYPE","Operating Surplus/Deficit","6"
 "EXPENDITURE_TYPE","Depreciation/Amortization","7"
 "EXPENDITURE_TYPE","Non-operating Expense","8"
+"EXPENDITURE_TYPE,"Before salary/wages rec./accruals","9"
 "EXPENDITURE_NAME","Direct Care","1"
 "EXPENDITURE_NAME","Food Services","2"
 "EXPENDITURE_NAME","Laundry Services","3"
