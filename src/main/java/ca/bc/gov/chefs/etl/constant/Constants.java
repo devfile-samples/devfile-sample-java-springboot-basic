@@ -311,7 +311,8 @@ public class Constants {
 				"CONFIRMATION_ID",
 				"DIR_CARE_VACANCY_TYPE",
 				"DIR_CARE_VACANCY_NAME",
-				"DIR_CARE_VAC_POSITIONS"		
+				"DIR_CARE_VAC_POSITIONS",		
+				"DIR_CARE_VAC_OTHER_NAME"		
 		});
 	}
 }
