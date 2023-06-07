@@ -188,7 +188,7 @@ public class LtcYtdSubmission implements IModel {
 	}
 
 	public void setIsDeleted(String isDeleted) {
-		this.isDeleted = StringUtils.defaultIfEmpty(isDeleted, Constants.DEFAULT_STRING_VALUE);;
+		this.isDeleted = StringUtils.defaultIfEmpty(isDeleted, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getCCIMSID() {
@@ -396,7 +396,7 @@ public class LtcYtdSubmission implements IModel {
 	}
 
 	public void setSubmissionFy(String submissionFy) {
-		this.submissionFy = StringUtils.defaultIfEmpty(submissionFy, Constants.DEFAULT_STRING_VALUE);;
+		this.submissionFy = StringUtils.defaultIfEmpty(submissionFy, Constants.DEFAULT_STRING_VALUE);
 	}
 	public List<LtcYtdDep> getLtcYtdDep() {
 		return ltcYtdDep;
