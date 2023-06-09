@@ -2358,8 +2358,9 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdDirectCareVacancy directCareVacancyNurseOther = new LtcYtdDirectCareVacancy();
 			directCareVacancyNurseOther.setConfirmationId(root.getForm().getConfirmationId());
 			directCareVacancyNurseOther.setDirectCareVacancyType(root.getNursing_label());
-			directCareVacancyNurseOther.setDirectCareVacancyName(root.getNursing_label4());
+			directCareVacancyNurseOther.setDirectCareVacancyName(Constants.DEFAULT_OTHER_VALUE);
 			directCareVacancyNurseOther.setDirectCareVacPositions(root.getNursingNVP_item14());
+			directCareVacancyNurseOther.setDirectCareVacOtherName(root.getNursing_label4());
 
 			Collections.addAll(LtcYtdDirectCareVacancy, directCareVacancyNurseRN, directCareVacancyNurseLPN,
 			 directCareVacancyNurseHCA, directCareVacancyNurseOther);

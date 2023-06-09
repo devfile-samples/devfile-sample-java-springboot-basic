@@ -14,8 +14,15 @@ public class LtcYtdDirectCareVacancy implements IModel {
 	private String directCareVacancyType;
 	private String directCareVacancyName;
 	private String directCareVacPositions;
+	private String directCareVacOtherName = "";
 
 	
+	public String getDirectCareVacOtherName() {
+		return directCareVacOtherName;
+	}
+	public void setDirectCareVacOtherName(String directCareVacOtherName) {
+		this.directCareVacOtherName = directCareVacOtherName;
+	}
 	public String getConfirmationId() {
 		return confirmationId;
 	}
@@ -56,6 +63,7 @@ public class LtcYtdDirectCareVacancy implements IModel {
 		elements.add(this.getDirectCareVacancyType());
 		elements.add(this.getDirectCareVacancyName());
 		elements.add(this.getDirectCareVacPositions());
+		elements.add(this.getDirectCareVacOtherName());
 		return elements;
 	}
 	@Override
