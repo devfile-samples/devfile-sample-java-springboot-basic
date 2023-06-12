@@ -2726,6 +2726,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 				occInRateQ3.setYtdOccDays(root.getyTDOccupiedInScopeQ3());
 				occInRateQ3.setOccRateNotes(root.getNoteInScopeQ3());
 				occInRateQ3.setPercentOcc(root.getOccupiedPercentageInScopeQ3());
+				occInRateQ3.setOccRateQuarter("Q3");
 
 				LtcBedYtdOccupancyRate occOutRateQ3 = new LtcBedYtdOccupancyRate();
 				occOutRateQ3.setConfirmationID(root.getForm().getConfirmationId());
@@ -2734,6 +2735,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 				occOutRateQ3.setYtdMaxOccDays(root.getyTDMaxOutScopeQ3());
 				occOutRateQ3.setYtdOccDays(root.getyTDOccupiedOutScopeQ3());
 				occOutRateQ3.setPercentOcc(root.getOccupiedPercentageOutScopeQ3());
+				occOutRateQ3.setOccRateQuarter("Q3");
 				//occOutRateQ3.setOccRateNotes(root.getNoteInScopeQ3());
 
 				LtcBedYtdOccupancyRate occRateQ3 = new LtcBedYtdOccupancyRate();
@@ -2743,6 +2745,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 				occRateQ3.setYtdMaxOccDays(root.getyTDMaxPrivateQ3());
 				occRateQ3.setYtdOccDays(root.getyTDOccupiedPrivateQ3());
 				occRateQ3.setPercentOcc(root.getOccupiedPercentagePrivateQ3());
+				occRateQ3.setOccRateQuarter("Q3");
 				//occRateQ3.setOccRateNotes(root.getNoteInScopeQ3());
 				
 				LtcBedYtdOccupancyRateTotals q3RateTotals = new LtcBedYtdOccupancyRateTotals();
@@ -2819,6 +2822,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 				occInRateQ4.setYtdOccDays(root.getyTDOccupiedInScopeQ4());
 				occInRateQ4.setOccRateNotes(root.getNoteInScopeQ4());
 				occInRateQ4.setPercentOcc(root.getOccupiedPercentageInScopeQ4());
+				occInRateQ4.setOccRateQuarter("Q4");
 
 				LtcBedYtdOccupancyRate occOutRateQ4 = new LtcBedYtdOccupancyRate();
 				occOutRateQ4.setConfirmationID(root.getForm().getConfirmationId());
@@ -2827,6 +2831,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 				occOutRateQ4.setYtdMaxOccDays(root.getyTDMaxOutScopeQ4());
 				occOutRateQ4.setYtdOccDays(root.getyTDOccupiedOutScopeQ4());
 				occOutRateQ4.setPercentOcc(root.getOccupiedPercentageOutScopeQ4());
+				occOutRateQ4.setOccRateQuarter("Q4");
 				// occOutRateQ4.setOccRateNotes(root.getNoteInScopeQ4());
 
 				LtcBedYtdOccupancyRate occRateQ4 = new LtcBedYtdOccupancyRate();
@@ -2836,6 +2841,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 				occRateQ4.setYtdMaxOccDays(root.getyTDMaxPrivateQ4());
 				occRateQ4.setYtdOccDays(root.getyTDOccupiedPrivateQ4());
 				occRateQ4.setPercentOcc(root.getOccupiedPercentagePrivateQ4());
+				occRateQ4.setOccRateQuarter("Q4");
 				// occRateQ4.setOccRateNotes(root.getNoteInScopeQ4());
 				
 				LtcBedYtdOccupancyRateTotals q4RateTotals = new LtcBedYtdOccupancyRateTotals();
