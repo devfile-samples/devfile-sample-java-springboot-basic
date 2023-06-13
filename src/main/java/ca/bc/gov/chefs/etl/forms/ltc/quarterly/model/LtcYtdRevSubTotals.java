@@ -34,7 +34,7 @@ public class LtcYtdRevSubTotals implements IModel {
 		this.subTotalRevYtd = subTotalRevYtd;
 	}
 	public String getSubTotalRevNotes() {
-		return subTotalRevNotes;
+		return subTotalRevNotes != null ? subTotalRevNotes.replaceAll("\\R", " ") : subTotalRevNotes;
 	}
 	public void setSubTotalRevNotes(String subTotalRevNotes) {
 		this.subTotalRevNotes = subTotalRevNotes;

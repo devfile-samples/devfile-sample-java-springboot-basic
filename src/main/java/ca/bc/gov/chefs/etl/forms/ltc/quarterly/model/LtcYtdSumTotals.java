@@ -35,7 +35,7 @@ public class LtcYtdSumTotals implements IModel {
 		this.sumYTD = StringUtils.defaultIfEmpty(sumYTD, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getTotNotes() {
-		return totNotes;
+		return totNotes != null ? totNotes.replaceAll("\\R", " ") : totNotes;
 	}
 	public void setTotNotes(String totNotes) {
 		this.totNotes = totNotes;

@@ -41,7 +41,7 @@ public class LtcYtdRev implements IModel {
 		this.revYTD = StringUtils.defaultIfEmpty(revYTD, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getRevNotes() {
-		return revNotes;
+		return revNotes != null ? revNotes.replaceAll("\\R", " ") : revNotes;
 	}
 	public void setRevNotes(String revNotes) {
 		this.revNotes = revNotes;
