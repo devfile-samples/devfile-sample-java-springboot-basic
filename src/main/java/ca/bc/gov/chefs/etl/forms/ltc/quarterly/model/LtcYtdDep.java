@@ -34,7 +34,7 @@ public class LtcYtdDep implements IModel {
 		this.depYtd = StringUtils.defaultIfEmpty(depYtd, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getDepNotes() {
-		return depNotes;
+		return depNotes != null ? depNotes.replaceAll("\\R", " ") : depNotes;
 	}
 	public void setDepNotes(String depNotes) {
 		this.depNotes = depNotes;

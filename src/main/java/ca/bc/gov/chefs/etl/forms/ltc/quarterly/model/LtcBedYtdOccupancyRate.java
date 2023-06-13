@@ -63,7 +63,7 @@ public class LtcBedYtdOccupancyRate implements IModel {
 		this.percentOcc = percentOcc;
 	}
 	public String getOccRateNotes() {
-		return occRateNotes;
+		return occRateNotes != null ? occRateNotes.replaceAll("\\R", " ") : occRateNotes;
 	}
 	public void setOccRateNotes(String occRateNotes) {
 		this.occRateNotes = occRateNotes;

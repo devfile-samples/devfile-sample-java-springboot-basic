@@ -27,7 +27,7 @@ public class LtcYtdDepSubTotals implements IModel {
 		this.subTotalDepYtd = StringUtils.defaultIfEmpty(subTotalDepYtd, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getSubTotalDepNotes() {
-		return subTotalDepNotes;
+		return subTotalDepNotes != null ? subTotalDepNotes.replaceAll("\\R", " ") : subTotalDepNotes;
 	}
 	public void setSubTotalDepNotes(String subTotalDepNotes) {
 		this.subTotalDepNotes = subTotalDepNotes;
