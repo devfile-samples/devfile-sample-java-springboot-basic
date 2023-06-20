@@ -19,6 +19,7 @@ public class Constants {
 
 	/* CHEFS API  */
 	public final static String CHEFS_API_URL = "chefs.http.uri";
+	public final static String COMPLETED_STATUS = "COMPLETED";
 
 	/* Default values for empty Strings and Numbers */
 	public final static String DEFAULT_STRING_VALUE = "Not Provided";

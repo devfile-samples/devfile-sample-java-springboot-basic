@@ -78,6 +78,9 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 	private List<LtcYtdSubmission> parseYtdQuarterlyRequest(List<Root> ltcQuarterlyYTDSubmissions) {
 		List<LtcYtdSubmission> ltcYtdSubmissions = new ArrayList<>();
 		for (Root root : ltcQuarterlyYTDSubmissions) {
+			if(!root.getForm().getStatus().equals(Constants.COMPLETED_STATUS)){
+				continue;
+			}
 			LtcYtdSubmission ltcYtdSubmission = new LtcYtdSubmission();
 			List<LtcYtdDirectCareHrs> ltcYtdDcHrs = new ArrayList<>();
 			List<LtcYtdDirectCareHrsSubTotals> ltcYtdDcHrsSubttls = new ArrayList<>();
