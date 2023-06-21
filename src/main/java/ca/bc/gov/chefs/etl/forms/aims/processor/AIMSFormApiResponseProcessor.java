@@ -24,7 +24,6 @@ public class AIMSFormApiResponseProcessor implements Processor {
 	@Override
 	public void process(Exchange exchange) throws Exception {
 		String payload = exchange.getIn().getBody(String.class);
-		System.out.println(payload);
 		ObjectMapper mapper = new ObjectMapper();
 		Counter.resetCounter(Constants.AIMS_REFERRAL);
 		List<MainEntity> aimsModels = mapper.readValue(payload, new TypeReference<List<MainEntity>>() {
