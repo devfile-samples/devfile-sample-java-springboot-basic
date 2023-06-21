@@ -21,6 +21,19 @@ public class Constants {
 	public final static String CHEFS_API_URL = "chefs.http.uri";
 	public final static String COMPLETED_STATUS = "COMPLETED";
 
+	/* Custom Properties */
+
+	public final static String IS_HEADER_ADDED = "isHeaderAdded";
+
+	/* HealthAuthorities */
+	static{
+		HA_DICTIONNARY.put("FHA", "fraser");
+		HA_DICTIONNARY.put("IHA", "interior");
+		HA_DICTIONNARY.put("VIHA", "island");
+		HA_DICTIONNARY.put("NHA", "northern");
+		HA_DICTIONNARY.put("VCH", "vancouver.coastal");
+	}
+
 	/* Default values for empty Strings and Numbers */
 	public final static String DEFAULT_STRING_VALUE = "Not Provided";
 	public final static String DEFAULT_DECIMAL_VALUE = "-99";
@@ -45,15 +58,6 @@ public class Constants {
 	public final static String IN_SCOPE = "inScope";
 	public final static String OUT_OF_SCOPE = "outOfScope";
 	public final static String PRIVATE_BED = "privateBed";
-
-	/* HealthAuthorities */
-	static{
-		HA_DICTIONNARY.put("FHA", "fraser");
-		HA_DICTIONNARY.put("IHA", "interior");
-		HA_DICTIONNARY.put("VIHA", "island");
-		HA_DICTIONNARY.put("NHA", "northern");
-		HA_DICTIONNARY.put("VCH", "vancouver.coastal");
-	}
 
 	// Constants for Sub table: LTC_YTD_DIRECT_CARE_HRS
 	public final static String DC_HRS_OTHER = "Other";

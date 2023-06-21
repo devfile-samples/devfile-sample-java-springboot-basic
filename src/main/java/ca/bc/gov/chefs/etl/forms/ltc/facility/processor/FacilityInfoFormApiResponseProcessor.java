@@ -27,17 +27,15 @@ public class FacilityInfoFormApiResponseProcessor implements Processor {
 	@Override
 	public void process(Exchange exchange) throws Exception {
 		String payload = exchange.getIn().getBody(String.class);
-		System.out.println(payload);
 		ObjectMapper mapper = new ObjectMapper();
-
 		List<Root> facilityInformationModels = mapper.readValue(payload,
 				new TypeReference<List<Root>>() {
 				});
 		List<FacilityInformation> parsedFacilityInfo = parseFacilityInfo(facilityInformationModels);
 		List<IModel> iModels = (List<IModel>) (List<?>) parsedFacilityInfo;
 		Map<String, List<List<String>>> map = CSVUtil.provider(iModels);
-			
-		List<String> filesGenerated = FileUtil.writeToCSVFile(map,Constants.LTC_FACILITY_DIR);
+		boolean isHeaderAdded = (boolean) exchange.getProperties().get(Constants.IS_HEADER_ADDED);
+		List<String> filesGenerated = FileUtil.writeToCSVFile(map,Constants.LTC_FACILITY_DIR, isHeaderAdded);
 		// TODO remove successReponse or uncomment
 		// SuccessResponse successResponse = new SuccessResponse();
 		// successResponse.setFiles(filesGenerated);

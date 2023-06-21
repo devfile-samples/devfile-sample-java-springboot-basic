@@ -162,7 +162,7 @@ public class FileUtil {
 		}
 	}
 
-	public static List<String> writeToCSVFile(Map<String, List<List<String>>> map,  String directoryKey) throws IOException {
+	public static List<String> writeToCSVFile(Map<String, List<List<String>>> map,  String directoryKey, boolean isHeaderAdded) throws IOException {
 		FileProperties fileProperties = new FileProperties();
 		fileProperties.setUnEncDirForThisExchange(Constants.UNENC_FILE_PATH.get(directoryKey));
 		fileProperties.setEncDirForThisExchange(Constants.ENC_FILE_PATH.get(directoryKey));
@@ -178,7 +178,9 @@ public class FileUtil {
 			try {
 
 				listWriter = new CsvListWriter(new FileWriter(fileName), ALWAYS_USE_QUOTE);
-				listWriter.writeHeader(headers);
+				if(isHeaderAdded){
+					listWriter.writeHeader(headers);
+				}
 				
 				for (List<String> items : entry.getValue()) {
 					listWriter.write(items);

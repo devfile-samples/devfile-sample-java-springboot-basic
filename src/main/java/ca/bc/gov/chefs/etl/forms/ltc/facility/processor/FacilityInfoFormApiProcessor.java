@@ -35,6 +35,7 @@ public class FacilityInfoFormApiProcessor implements Processor {
 		exchange.getIn().setHeader("Authorization",
 				AuthUtil.getBasicAuth(PropertiesUtil.getValue(LTC_FACILITY_USERNAME),
 						PropertiesUtil.getValue(LTC_FACILITY_PASSWORD)));
+		exchange.setProperty(Constants.IS_HEADER_ADDED, payload.isHeaderAdded());
 	}
 
 }

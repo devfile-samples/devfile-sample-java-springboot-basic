@@ -67,7 +67,8 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 		List<LtcYtdSubmission> parsedLtycYtdSubmissions = parseYtdQuarterlyRequest(ltcYtdForms);
 		List<IModel> iModels =  (List<IModel>)(List<?>) parsedLtycYtdSubmissions;
 		Map<String,List<List<String>>> map = CSVUtil.provider(iModels);
-		List<String> filesGenerated = FileUtil.writeToCSVFile(map,Constants.LTC_QUARTERLY_DIR);
+		boolean isHeaderAdded = (boolean) exchange.getProperties().get(Constants.IS_HEADER_ADDED);
+		List<String> filesGenerated = FileUtil.writeToCSVFile(map,Constants.LTC_QUARTERLY_DIR, isHeaderAdded);
 		//TODO uncomment or remove dead code
 		// SuccessResponse successResponse = new SuccessResponse();
 		// successResponse.setFiles(filesGenerated);
