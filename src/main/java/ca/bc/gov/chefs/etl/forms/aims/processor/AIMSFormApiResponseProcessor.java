@@ -24,7 +24,6 @@ public class AIMSFormApiResponseProcessor implements Processor {
 	@Override
 	public void process(Exchange exchange) throws Exception {
 		String payload = exchange.getIn().getBody(String.class);
-		System.out.println(payload);
 		ObjectMapper mapper = new ObjectMapper();
 		Counter.resetCounter(Constants.AIMS_REFERRAL);
 		List<MainEntity> aimsModels = mapper.readValue(payload, new TypeReference<List<MainEntity>>() {
@@ -33,8 +32,8 @@ public class AIMSFormApiResponseProcessor implements Processor {
 		List<IModel> iModels =  (List<IModel>)(List<?>) aimsModels;
 		
 		Map<String,List<List<String>>> map = CSVUtil.provider(iModels);
-		
-		FileUtil.writeToCSVFile(map,Constants.AIMS_DIR);
+		boolean isHeaderAdded = (boolean) exchange.getProperties().get(Constants.IS_HEADER_ADDED);
+		FileUtil.writeToCSVFile(map,Constants.AIMS_DIR, isHeaderAdded);
 	}
 
 }

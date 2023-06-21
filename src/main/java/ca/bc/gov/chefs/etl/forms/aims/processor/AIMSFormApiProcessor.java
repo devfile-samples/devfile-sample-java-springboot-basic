@@ -27,7 +27,8 @@ public class AIMSFormApiProcessor implements Processor {
 		exchange.getIn().setHeader("CamelHttpMethod", "GET");
 		exchange.getIn().setHeader("Content-Type", "application/json");
 		exchange.getIn().setHeader("accept", "application/json");
-		exchange.getIn().setHeader("Authorization", AuthUtil.getBasicAuth(PropertiesUtil.getValue(Constants.AIMS_USERNAME), PropertiesUtil.getValue(Constants.AIMS_PASSWORD)));		
+		exchange.getIn().setHeader("Authorization", AuthUtil.getBasicAuth(PropertiesUtil.getValue(Constants.AIMS_USERNAME), PropertiesUtil.getValue(Constants.AIMS_PASSWORD)));
+		exchange.setProperty(Constants.IS_HEADER_ADDED, payload.isHeaderAdded());		
 	}
 
 }
