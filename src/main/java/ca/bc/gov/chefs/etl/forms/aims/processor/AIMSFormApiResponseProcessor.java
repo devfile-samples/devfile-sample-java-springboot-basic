@@ -33,8 +33,8 @@ public class AIMSFormApiResponseProcessor implements Processor {
 		List<IModel> iModels =  (List<IModel>)(List<?>) aimsModels;
 		
 		Map<String,List<List<String>>> map = CSVUtil.provider(iModels);
-		
-		FileUtil.writeToCSVFile(map,Constants.AIMS_DIR);
+		boolean isHeaderAdded = (boolean) exchange.getProperties().get(Constants.IS_HEADER_ADDED);
+		FileUtil.writeToCSVFile(map,Constants.AIMS_DIR, isHeaderAdded);
 	}
 
 }

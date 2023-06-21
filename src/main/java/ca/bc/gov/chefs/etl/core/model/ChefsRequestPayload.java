@@ -1,6 +1,7 @@
 package ca.bc.gov.chefs.etl.core.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ChefsRequestPayload {
@@ -9,6 +10,16 @@ public class ChefsRequestPayload {
 	private String startDate;
 	private String endDate;
 	private String healthAuthority;
+	private boolean isHeaderAdded = true;
+
+	public boolean isHeaderAdded() {
+		return isHeaderAdded;
+	}
+
+	@JsonProperty("isHeaderAdded")
+	public void setHeaderAdded(boolean isHeaderAdded) {
+		this.isHeaderAdded = Boolean.valueOf(isHeaderAdded);
+	}
 	
 	public String getVersion() {
 		return version;
