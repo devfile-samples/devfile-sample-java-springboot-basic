@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+import ca.bc.gov.chefs.etl.constant.Constants;
+
 public class PropertiesUtil {
 
 	public static Properties loadProperties()  {
@@ -29,6 +31,11 @@ public class PropertiesUtil {
 	public static String getValue(String key) {
 		Properties properties = loadProperties();
 		return properties.getProperty(key);
+	}
+
+	public static String buildFormProperty(String property, String healthAuthority, boolean isUsername){
+		String result = property.concat(Constants.HA_DICTIONNARY.get(healthAuthority));
+		return isUsername ? result.concat(".username") : result.concat(".password");
 	}
 	
 }
