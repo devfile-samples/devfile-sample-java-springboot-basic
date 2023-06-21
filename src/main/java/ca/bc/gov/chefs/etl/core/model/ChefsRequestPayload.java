@@ -8,6 +8,7 @@ public class ChefsRequestPayload {
 	private String version;
 	private String startDate;
 	private String endDate;
+	private String healthAuthority;
 	
 	public String getVersion() {
 		return version;
@@ -27,6 +28,11 @@ public class ChefsRequestPayload {
 	public void setEndDate(String endDate) {
 		this.endDate = endDate;
 	}
-	
+	public String getHealthAuthority() {
+		return healthAuthority;
+	}
+	public void setHealthAuthority(String healthAuthority) {
+		this.healthAuthority = healthAuthority;
+	}
 	
 }

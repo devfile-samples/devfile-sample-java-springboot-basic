@@ -51,6 +51,7 @@ import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdSubmission;
 import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdSumTotals;
 import ca.bc.gov.chefs.etl.util.CSVUtil;
 import ca.bc.gov.chefs.etl.util.FileUtil;
+import ca.bc.gov.chefs.etl.util.JsonUtil;
 
 public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 
@@ -59,7 +60,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 	@SuppressWarnings("unchecked")
 	public void process(Exchange exchange) throws Exception {
 		String payload = exchange.getIn().getBody(String.class);
-		System.out.println(payload);
+		payload = JsonUtil.preProcess(payload);
 		ObjectMapper mapper = new ObjectMapper();
 		List<Root> ltcYtdForms = mapper.readValue(payload, new TypeReference<List<Root>>() {
 		});
@@ -78,6 +79,9 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 	private List<LtcYtdSubmission> parseYtdQuarterlyRequest(List<Root> ltcQuarterlyYTDSubmissions) {
 		List<LtcYtdSubmission> ltcYtdSubmissions = new ArrayList<>();
 		for (Root root : ltcQuarterlyYTDSubmissions) {
+			if(!root.getForm().getStatus().equals(Constants.COMPLETED_STATUS)){
+				continue;
+			}
 			LtcYtdSubmission ltcYtdSubmission = new LtcYtdSubmission();
 			List<LtcYtdDirectCareHrs> ltcYtdDcHrs = new ArrayList<>();
 			List<LtcYtdDirectCareHrsSubTotals> ltcYtdDcHrsSubttls = new ArrayList<>();

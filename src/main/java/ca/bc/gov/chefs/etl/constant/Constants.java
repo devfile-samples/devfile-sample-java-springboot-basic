@@ -15,9 +15,11 @@ public class Constants {
 	public final static Map<String, String[]> HEADERS = new HashMap<String, String[]>();
 	public final static Map<String,String> UNENC_FILE_PATH = new HashMap<String,String>();
 	public final static Map<String,String> ENC_FILE_PATH = new HashMap<String,String>();
+	public final static Map<String,String> HA_DICTIONNARY = new HashMap<String,String>();
 
 	/* CHEFS API  */
 	public final static String CHEFS_API_URL = "chefs.http.uri";
+	public final static String COMPLETED_STATUS = "COMPLETED";
 
 	/* Default values for empty Strings and Numbers */
 	public final static String DEFAULT_STRING_VALUE = "Not Provided";
@@ -33,18 +35,25 @@ public class Constants {
 	public final static String AIMS_REFERRAL = "AIMS_REFERRAL";
 
 	/* LTC Facility */
-	public final static String LTC_FACILITY_USERNAME = "ltc.facility.username";
-	public final static String LTC_FACILITY_PASSWORD = "ltc.facility.password";
+	public final static String LTC_FACILITY_PROPERTY = "ltc.facility.";
 
 	public static final String LTC_FACILITY_APPROVER = "LTC_FACILITY_APPROVER";
 	public static final String LTC_FACILITY_PREPARER = "LTC_FACILITY_PREPARER";
 
 	/* LTC Quarterly YTD */
-	public final static String LTC_YTD_USERNAME = "ltc.ytd.username";
-	public final static String LTC_YTD_PASSWORD = "ltc.ytd.password";
+	public final static String LTC_YTD_PROPERTY = "ltc.ytd.";
 	public final static String IN_SCOPE = "inScope";
 	public final static String OUT_OF_SCOPE = "outOfScope";
 	public final static String PRIVATE_BED = "privateBed";
+
+	/* HealthAuthorities */
+	static{
+		HA_DICTIONNARY.put("FHA", "fraser");
+		HA_DICTIONNARY.put("IHA", "interior");
+		HA_DICTIONNARY.put("VIHA", "island");
+		HA_DICTIONNARY.put("NHA", "northern");
+		HA_DICTIONNARY.put("VCH", "vancouver.coastal");
+	}
 
 	// Constants for Sub table: LTC_YTD_DIRECT_CARE_HRS
 	public final static String DC_HRS_OTHER = "Other";
