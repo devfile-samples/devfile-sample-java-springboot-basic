@@ -40,7 +40,7 @@ public class LtcBedYtdMaxOccupancyTotals implements IModel {
 	}
 
 	public void setTotalBedQuarter1(String totalBedQuarter1) {
-		this.totalBedQuarter1 = totalBedQuarter1;
+		this.totalBedQuarter1 = StringUtils.defaultIfEmpty(totalBedQuarter1, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getTotalBedQuarter2() {
@@ -48,7 +48,7 @@ public class LtcBedYtdMaxOccupancyTotals implements IModel {
 	}
 
 	public void setTotalBedQuarter2(String totalBedQuarter2) {
-		this.totalBedQuarter2 = totalBedQuarter2;
+		this.totalBedQuarter2 = StringUtils.defaultIfEmpty(totalBedQuarter2, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getTotalBedQuarter3() {
@@ -56,7 +56,7 @@ public class LtcBedYtdMaxOccupancyTotals implements IModel {
 	}
 
 	public void setTotalBedQuarter3(String totalBedQuarter3) {
-		this.totalBedQuarter3 = totalBedQuarter3;
+		this.totalBedQuarter3 = StringUtils.defaultIfEmpty(totalBedQuarter3, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getTotalBedQuarter4() {
@@ -64,7 +64,7 @@ public class LtcBedYtdMaxOccupancyTotals implements IModel {
 	}
 
 	public void setTotalBedQuarter4(String totalBedQuarter4) {
-		this.totalBedQuarter4 = totalBedQuarter4;
+		this.totalBedQuarter4 = StringUtils.defaultIfEmpty(totalBedQuarter4, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getTotalBedDays() {
@@ -91,7 +91,7 @@ public class LtcBedYtdMaxOccupancyTotals implements IModel {
 
 	@Override
 	public String getFormType() {
-		return Constants.LTC_BED_YTD_MAX_OCCUPANCY_TOTALS;
+		return Constants.LTC_BED_YTD_MAX_OCCY_TOTALS;
 	}
 
 	@Override

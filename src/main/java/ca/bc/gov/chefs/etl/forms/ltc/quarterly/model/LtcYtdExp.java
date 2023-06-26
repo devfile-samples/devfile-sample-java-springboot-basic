@@ -41,7 +41,7 @@ public class LtcYtdExp implements IModel {
 		this.expYtd = StringUtils.defaultIfEmpty(expYtd, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getExpNotes() {
-		return expNotes;
+		return expNotes != null ? expNotes.replaceAll("\\R", " ") : expNotes;
 	}
 	public void setExpNotes(String expNotes) {
 		this.expNotes = expNotes;

@@ -16,6 +16,7 @@ public class LtcYtdDirectCareHrsSubTotals implements IModel{
 	private String subTotalDirCareProdHrsOTYTD;
 	private String subTotalDirCareProdHrsSubtotalYTD;
 	private String subTotalDirCareProdHrsContServYTD;
+	private String subTotalDirCareProdHrsAgencyStaffUtil = Constants.DEFAULT_DECIMAL_VALUE;
 	private String subTotalDirCareProdHrsTotalYTD;
 	private String subTotalDirCareNonProdHrsVacYTD;
 	private String subTotalDirCareNonProdHrsSickYTD;
@@ -120,6 +121,14 @@ public class LtcYtdDirectCareHrsSubTotals implements IModel{
 		this.subTotalDirCareTotalHrsPaidYTD = subTotalDirCareTotalHrsPaidYTD;
 	}
 
+	public String getSubTotalDirCareProdHrsAgencyStaffUtil() {
+		return subTotalDirCareProdHrsAgencyStaffUtil;
+	}
+
+	public void setSubTotalDirCareProdHrsAgencyStaffUtil(String subTotalDirCareProdHrsAgencyStaffUtil) {
+		this.subTotalDirCareProdHrsAgencyStaffUtil = subTotalDirCareProdHrsAgencyStaffUtil;
+	}
+
 	@Override
 	public String getFileName() {
 		// TODO Auto-generated method stub
@@ -128,7 +137,7 @@ public class LtcYtdDirectCareHrsSubTotals implements IModel{
 
 	@Override
 	public String getFormType() {
-		return Constants.LTC_YTD_DIRECT_CARE_HRS_SUB_TOTALS;
+		return Constants.LTC_YTD_DIRECT_CARE_HRS_SUBS;
 	}
 
 	@Override
@@ -140,6 +149,7 @@ public class LtcYtdDirectCareHrsSubTotals implements IModel{
 		elements.add(this.getSubTotalDirCareProdHrsOTYTD());
 		elements.add(this.getSubTotalDirCareProdHrsSubtotalYTD());
 		elements.add(this.getSubTotalDirCareProdHrsContServYTD());
+		elements.add(this.getSubTotalDirCareProdHrsAgencyStaffUtil());
 		elements.add(this.getSubTotalDirCareProdHrsTotalYTD());
 		elements.add(this.getSubTotalDirCareNonProdHrsVacYTD());
 		elements.add(this.getSubTotalDirCareNonProdHrsSickYTD());

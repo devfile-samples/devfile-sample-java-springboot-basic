@@ -12,7 +12,8 @@ public class LtcYtdExpSubTotals implements IModel {
 
 	private String confirmationId;
 	private String expType;
-	private String subTotalRevYtd;
+	private String subTotalExpYtd;
+	private String subTotalExpNotes;
 	
 	public String getConfirmationId() {
 		return confirmationId;
@@ -26,13 +27,18 @@ public class LtcYtdExpSubTotals implements IModel {
 	public void setExpType(String expType) {
 		this.expType = StringUtils.defaultIfEmpty(expType, Constants.DEFAULT_STRING_VALUE);
 	}
-	public String getSubTotalRevYtd() {
-		return subTotalRevYtd;
+	public String getSubTotalExpYtd() {
+		return subTotalExpYtd;
 	}
-	public void setSubTotalRevYtd(String subTotalRevYtd) {
-		this.subTotalRevYtd = subTotalRevYtd;
+	public void setSubTotalExpYtd(String subTotalExpYtd) {
+		this.subTotalExpYtd = subTotalExpYtd;
 	}
-	
+	public String getSubTotalExpNotes() {
+		return subTotalExpNotes != null ? subTotalExpNotes.replaceAll("\\R", " ") : subTotalExpNotes;
+	}
+	public void setSubTotalExpNotes(String subTotalExpNotes) {
+		this.subTotalExpNotes = subTotalExpNotes;
+	}
 	@Override
 	public String getFileName() {
 		// TODO Auto-generated method stub
@@ -40,14 +46,15 @@ public class LtcYtdExpSubTotals implements IModel {
 	}
 	@Override
 	public String getFormType() {
-		return Constants.LTC_YTD_EXP_SUB_TOTALS;
+		return Constants.LTC_YTD_EXP_SUBTOTALS;
 	}
 	@Override
 	public List<String> getCsvElements() {
 		List<String> elements = new ArrayList<>();
 		elements.add(this.getConfirmationId());
 		elements.add(this.getExpType());
-		elements.add(this.getSubTotalRevYtd());
+		elements.add(this.getSubTotalExpYtd());
+		elements.add(this.getSubTotalExpNotes());
 		return elements;
 	}
 	@Override

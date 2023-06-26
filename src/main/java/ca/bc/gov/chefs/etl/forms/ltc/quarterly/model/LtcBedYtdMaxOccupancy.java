@@ -12,6 +12,7 @@ import ca.bc.gov.chefs.etl.util.CSVUtil;
 public class LtcBedYtdMaxOccupancy implements IModel {
 
 	private String confirmationId;
+	private String bedIndex;
 	private String quarterInventory;
 	private String bedFundingType;
 	private String bedSubype;
@@ -26,6 +27,12 @@ public class LtcBedYtdMaxOccupancy implements IModel {
 	}
 	public void setConfirmationId(String confirmationId) {
 		this.confirmationId = StringUtils.defaultIfEmpty(confirmationId, Constants.DEFAULT_STRING_VALUE);
+	}
+	public String getBedIndex() {
+		return bedIndex;
+	}
+	public void setBedIndex(String bedIndex) {
+		this.bedIndex = bedIndex;
 	}
 	public String getQuarterInventory() {
 		return quarterInventory;
@@ -43,7 +50,7 @@ public class LtcBedYtdMaxOccupancy implements IModel {
 		return bedSubype;
 	}
 	public void setBedSubype(String bedSubype) {
-		this.bedSubype = bedSubype;
+		this.bedSubype = StringUtils.defaultIfEmpty(bedSubype, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getStartDate() {
 		return startDate.isBlank() || startDate.isEmpty() ? Constants.DEFAULT_STRING_VALUE : CSVUtil.getFormattedDate(startDate);
@@ -71,7 +78,7 @@ public class LtcBedYtdMaxOccupancy implements IModel {
 	}
 	
 	public String getNotes() {
-		return notes;
+		return notes != null ? notes.replaceAll("\\R", " ") : notes;
 	}
 	public void setNotes(String notes) {
 		this.notes = notes;
@@ -89,6 +96,7 @@ public class LtcBedYtdMaxOccupancy implements IModel {
 	public List<String> getCsvElements() {
 		List<String> elements = new ArrayList<>();
 		elements.add(this.getConfirmationId());
+		elements.add(this.getBedIndex());
 		elements.add(this.getQuarterInventory());
 		elements.add(this.getBedFundingType());
 		elements.add(this.getBedSubype());

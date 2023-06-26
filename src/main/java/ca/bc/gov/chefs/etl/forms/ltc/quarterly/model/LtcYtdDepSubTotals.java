@@ -8,13 +8,11 @@ import org.apache.commons.lang3.StringUtils;
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
 
-public class LtcYtdSumTotals implements IModel {
+public class LtcYtdDepSubTotals implements IModel {
 
 	private String confirmationId;
-	private String totName;
-	private String sumYTD;
-	private String totNotes;
-	
+	private String subTotalDepYtd;
+	private String subTotalDepNotes;
 	
 	public String getConfirmationId() {
 		return confirmationId;
@@ -22,24 +20,19 @@ public class LtcYtdSumTotals implements IModel {
 	public void setConfirmationId(String confirmationId) {
 		this.confirmationId = StringUtils.defaultIfEmpty(confirmationId, Constants.DEFAULT_STRING_VALUE);
 	}
-	public String getTotName() {
-		return totName;
+	public String getSubTotalDepYtd() {
+		return subTotalDepYtd;
 	}
-	public void setTotName(String totName) {
-		this.totName = StringUtils.defaultIfEmpty(totName, Constants.DEFAULT_STRING_VALUE);
+	public void setSubTotalDepYtd(String subTotalDepYtd) {
+		this.subTotalDepYtd = StringUtils.defaultIfEmpty(subTotalDepYtd, Constants.DEFAULT_DECIMAL_VALUE);
 	}
-	public String getSumYTD() {
-		return sumYTD;
+	public String getSubTotalDepNotes() {
+		return subTotalDepNotes != null ? subTotalDepNotes.replaceAll("\\R", " ") : subTotalDepNotes;
 	}
-	public void setSumYTD(String sumYTD) {
-		this.sumYTD = StringUtils.defaultIfEmpty(sumYTD, Constants.DEFAULT_DECIMAL_VALUE);
+	public void setSubTotalDepNotes(String subTotalDepNotes) {
+		this.subTotalDepNotes = subTotalDepNotes;
 	}
-	public String getTotNotes() {
-		return totNotes != null ? totNotes.replaceAll("\\R", " ") : totNotes;
-	}
-	public void setTotNotes(String totNotes) {
-		this.totNotes = totNotes;
-	}
+
 	@Override
 	public String getFileName() {
 		// TODO Auto-generated method stub
@@ -47,22 +40,18 @@ public class LtcYtdSumTotals implements IModel {
 	}
 	@Override
 	public String getFormType() {
-		return Constants.LTC_YTD_SUM_TOTALS;
+		return Constants.LTC_YTD_DEP_SUBTOTALS;
 	}
 	@Override
 	public List<String> getCsvElements() {
-		List<String> elements = new ArrayList<>();
+		List<String> elements = new ArrayList<String>();
 		elements.add(this.getConfirmationId());
-		elements.add(this.getTotName());
-		elements.add(this.getSumYTD());
-		elements.add(this.getTotNotes());
+		elements.add(this.getSubTotalDepYtd());
+		elements.add(this.getSubTotalDepNotes());
 		return elements;
 	}
 	@Override
 	public List<IModel> getObjects() {
 		return new ArrayList<>();
 	}
-	
-	
-	
 }

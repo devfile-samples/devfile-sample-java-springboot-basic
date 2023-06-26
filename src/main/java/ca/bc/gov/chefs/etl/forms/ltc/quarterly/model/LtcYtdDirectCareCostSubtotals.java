@@ -16,6 +16,7 @@ public class LtcYtdDirectCareCostSubtotals implements IModel{
 	private String subTotalDirCareCostProdHrsOTYTD;
 	private String subTotalDirCareCostProdHrsSubtotalYTD;
 	private String subTotalDirCareCostProdHrsContServYTD;
+	private String subTotalDirCareCostProdHrsAgencyStaffUtil = Constants.DEFAULT_DECIMAL_VALUE;
 	private String subTotalDirCareCostProdHrsTotalYTD;
 	private String subTotalDirCareCostNonProdHrsVacYTD;
 	private String subTotalDirCareCostNonProdHrsSickYTD;
@@ -74,6 +75,14 @@ public class LtcYtdDirectCareCostSubtotals implements IModel{
 		this.subTotalDirCareCostProdHrsContServYTD = subTotalDirCareCostProdHrsContServYTD;
 	}
 
+	public String getSubTotalDirCareCostProdHrsAgencyStaffUtil() {
+		return subTotalDirCareCostProdHrsAgencyStaffUtil;
+	}
+
+	public void setSubTotalDirCareCostProdHrsAgencyStaffUtil(String subTotalDirCareCostProdHrsAgencyStaffUtil) {
+		this.subTotalDirCareCostProdHrsAgencyStaffUtil = subTotalDirCareCostProdHrsAgencyStaffUtil;
+	}
+
 	public String getSubTotalDirCareCostProdHrsTotalYTD() {
 		return subTotalDirCareCostProdHrsTotalYTD;
 	}
@@ -127,7 +136,7 @@ public class LtcYtdDirectCareCostSubtotals implements IModel{
 	}
 
 	public void setSubTotalDirCareCostHourlyRateStaffYTD(String subTotalDirCareCostHourlyRateStaffYTD) {
-		this.subTotalDirCareCostHourlyRateStaffYTD = subTotalDirCareCostHourlyRateStaffYTD;
+		this.subTotalDirCareCostHourlyRateStaffYTD = StringUtils.defaultIfEmpty(subTotalDirCareCostHourlyRateStaffYTD, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getSubTotalDirCareCostHourlyRateContractedYTD() {
@@ -135,7 +144,7 @@ public class LtcYtdDirectCareCostSubtotals implements IModel{
 	}
 
 	public void setSubTotalDirCareCostHourlyRateContractedYTD(String subTotalDirCareCostHourlyRateContractedYTD) {
-		this.subTotalDirCareCostHourlyRateContractedYTD = subTotalDirCareCostHourlyRateContractedYTD;
+		this.subTotalDirCareCostHourlyRateContractedYTD = StringUtils.defaultIfEmpty(subTotalDirCareCostHourlyRateContractedYTD, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	@Override
@@ -146,7 +155,7 @@ public class LtcYtdDirectCareCostSubtotals implements IModel{
 
 	@Override
 	public String getFormType() {
-		return Constants.LTC_YTD_DIRECT_CARE_COST_SUBTOTALS;
+		return Constants.LTC_YTD_DIRECT_CARE_COST_SUBS;
 	}
 
 	@Override
@@ -158,6 +167,7 @@ public class LtcYtdDirectCareCostSubtotals implements IModel{
 		elements.add(this.getSubTotalDirCareCostProdHrsOTYTD());
 		elements.add(this.getSubTotalDirCareCostProdHrsSubtotalYTD());
 		elements.add(this.getSubTotalDirCareCostProdHrsContServYTD());
+		elements.add(this.getSubTotalDirCareCostProdHrsAgencyStaffUtil());
 		elements.add(this.getSubTotalDirCareCostProdHrsTotalYTD());
 		elements.add(this.getSubTotalDirCareCostNonProdHrsVacYTD());
 		elements.add(this.getSubTotalDirCareCostNonProdHrsSickYTD());

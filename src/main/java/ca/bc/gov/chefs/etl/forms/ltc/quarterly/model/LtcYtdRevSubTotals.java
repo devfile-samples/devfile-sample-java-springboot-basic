@@ -13,7 +13,7 @@ public class LtcYtdRevSubTotals implements IModel {
 	private String confirmationId;
 	private String revType;
 	private String subTotalRevYtd;
-	
+	private String subTotalRevNotes;
 	
 	public String getConfirmationId() {
 		return confirmationId;
@@ -33,6 +33,12 @@ public class LtcYtdRevSubTotals implements IModel {
 	public void setSubTotalRevYtd(String subTotalRevYtd) {
 		this.subTotalRevYtd = subTotalRevYtd;
 	}
+	public String getSubTotalRevNotes() {
+		return subTotalRevNotes != null ? subTotalRevNotes.replaceAll("\\R", " ") : subTotalRevNotes;
+	}
+	public void setSubTotalRevNotes(String subTotalRevNotes) {
+		this.subTotalRevNotes = subTotalRevNotes;
+	}
 	
 	
 	@Override
@@ -42,7 +48,7 @@ public class LtcYtdRevSubTotals implements IModel {
 	}
 	@Override
 	public String getFormType() {
-		return Constants.LTC_YTD_REV_SUB_TOTALS;
+		return Constants.LTC_YTD_REV_SUBTOTALS;
 	}
 	@Override
 	public List<String> getCsvElements() {
@@ -50,6 +56,7 @@ public class LtcYtdRevSubTotals implements IModel {
 		elements.add(this.getConfirmationId());
 		elements.add(this.getRevType());
 		elements.add(this.getSubTotalRevYtd());
+		elements.add(this.getSubTotalRevNotes());
 		return elements;
 	}
 	@Override
