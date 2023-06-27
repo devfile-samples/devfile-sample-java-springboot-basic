@@ -37,6 +37,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 		List<LTCStaffingPlanMainEntity> parsedStaffingPlan = parseStaffingPlan(staffingPlanModels);
 		List<IModel> iModels = (List<IModel>) (List<?>) parsedStaffingPlan;
 		Map<String, List<List<String>>> map = CSVUtil.provider(iModels);
+		map = CSVUtil.removeAllNullKeys(map);
 		boolean isHeaderAdded = (boolean) exchange.getProperties().get(Constants.IS_HEADER_ADDED);
 		List<String> filesGenerated = FileUtil.writeToCSVFile(map,Constants.LTC_STAFFING_PLAN_DIR, isHeaderAdded);
 		// TODO remove successReponse or uncomment
