@@ -44,12 +44,6 @@ public class LTCStaffingPlan implements IModel{
     private String hprdTotalAlliedSat;
     private String hprdTotalAlliedSun;
     private String hprdTotalAlliedWkTotal;
-
-    private List<LTCStaffPlanPerf> LTCStaffPlanPerf;
-    private List<LTCStaffPlanPosType> LTCStaffPlanPosType;
-    private List<LTCStaffingHrs> LTCStaffingHrs;
-    private List<LTCStaffingAddPos> LTCStaffingAddPos;
-
 	
 	public String getConfirmationId() {
         return confirmationId;
@@ -339,38 +333,6 @@ public class LTCStaffingPlan implements IModel{
         this.hprdTotalAlliedWkTotal = hprdTotalAlliedWkTotal;
     }
 
-    public List<LTCStaffPlanPerf> getLTCStaffPlanPerf() {
-        return LTCStaffPlanPerf;
-    }
-
-    public void setLTCStaffPlanPerf(List<LTCStaffPlanPerf> lTCStaffPlanPerf) {
-        LTCStaffPlanPerf = lTCStaffPlanPerf;
-    }
-
-    public List<LTCStaffPlanPosType> getLTCStaffPlanPosType() {
-        return LTCStaffPlanPosType;
-    }
-
-    public void setLTCStaffPlanPosType(List<LTCStaffPlanPosType> lTCStaffPlanPosType) {
-        LTCStaffPlanPosType = lTCStaffPlanPosType;
-    }
-
-    public List<LTCStaffingHrs> getLTCStaffingHrs() {
-        return LTCStaffingHrs;
-    }
-
-    public void setLTCStaffingHrs(List<LTCStaffingHrs> lTCStaffingHrs) {
-        LTCStaffingHrs = lTCStaffingHrs;
-    }
-
-    public List<LTCStaffingAddPos> getLTCStaffingAddPos() {
-        return LTCStaffingAddPos;
-    }
-
-    public void setLTCStaffingAddPos(List<LTCStaffingAddPos> lTCStaffingAddPos) {
-        LTCStaffingAddPos = lTCStaffingAddPos;
-    }
-
     @Override
 	public String getFileName() {
 		// TODO Auto-generated method stub
@@ -425,12 +387,7 @@ public class LTCStaffingPlan implements IModel{
 
 	@Override
 	public List<IModel> getObjects() {
-        List<IModel> ltcStaffingPlanIModels = new ArrayList<>();
-        ltcStaffingPlanIModels.addAll(this.getLTCStaffPlanPerf());
-        ltcStaffingPlanIModels.addAll(this.getLTCStaffPlanPosType());
-        ltcStaffingPlanIModels.addAll(this.getLTCStaffingHrs());
-        ltcStaffingPlanIModels.addAll(this.getLTCStaffingAddPos());
-		return ltcStaffingPlanIModels;
+        return new ArrayList<>();
 	}
 
 }
