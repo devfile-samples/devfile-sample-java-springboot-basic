@@ -2414,6 +2414,11 @@ public class Root {
     public String summary_contracted_otherAlliedNProf3;
     public String summary_contracted_otherAlliedNProf4;
     public String summary_contracted_otherAlliedNProf5;
+    public String additionalNotes21;
+    public String additionalNotes22;
+    public String additionalNotes23;
+    public String additionalNotes24;
+    public String additionalNotes25;
     public ArrayList<NpDatagrid> npDatagrid1;
     public ArrayList<NpDatagrid> npDatagrid2;
     public ArrayList<NpDatagrid> npDatagrid3;
@@ -16881,6 +16886,36 @@ public class Root {
     }
     public void setSummary_contracted_otherAlliedNProf5(String summary_contracted_otherAlliedNProf5) {
         this.summary_contracted_otherAlliedNProf5 = summary_contracted_otherAlliedNProf5;
+    }
+    public String getAdditionalNotes21() {
+        return additionalNotes21;
+    }
+    public void setAdditionalNotes21(String additionalNotes21) {
+        this.additionalNotes21 = additionalNotes21;
+    }
+    public String getAdditionalNotes22() {
+        return additionalNotes22;
+    }
+    public void setAdditionalNotes22(String additionalNotes22) {
+        this.additionalNotes22 = additionalNotes22;
+    }
+    public String getAdditionalNotes23() {
+        return additionalNotes23;
+    }
+    public void setAdditionalNotes23(String additionalNotes23) {
+        this.additionalNotes23 = additionalNotes23;
+    }
+    public String getAdditionalNotes24() {
+        return additionalNotes24;
+    }
+    public void setAdditionalNotes24(String additionalNotes24) {
+        this.additionalNotes24 = additionalNotes24;
+    }
+    public String getAdditionalNotes25() {
+        return additionalNotes25;
+    }
+    public void setAdditionalNotes25(String additionalNotes25) {
+        this.additionalNotes25 = additionalNotes25;
     }
     public ArrayList<NpDatagrid> getNpDatagrid1() {
         return npDatagrid1;
