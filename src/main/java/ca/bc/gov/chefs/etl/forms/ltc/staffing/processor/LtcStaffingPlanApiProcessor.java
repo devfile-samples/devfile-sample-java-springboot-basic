@@ -26,7 +26,8 @@ public class LtcStaffingPlanApiProcessor implements Processor{
 		exchange.getIn().setHeader("CamelHttpMethod", "GET");
 		exchange.getIn().setHeader("Content-Type", "application/json");
 		exchange.getIn().setHeader("accept", "application/json");
-		exchange.getIn().setHeader("Authorization", AuthUtil.getBasicAuth(PropertiesUtil.getValue(Constants.LTC_STAFFING_PLAN_USERNAME), PropertiesUtil.getValue(Constants.LTC_STAFFING_PLAN_PASSWORD)));		
+		exchange.getIn().setHeader("Authorization", AuthUtil.getBasicAuth(PropertiesUtil.getValue(Constants.LTC_STAFFING_PLAN_USERNAME), PropertiesUtil.getValue(Constants.LTC_STAFFING_PLAN_PASSWORD)));
+		exchange.setProperty(Constants.IS_HEADER_ADDED, payload.isHeaderAdded());				
 	}
 
 }
