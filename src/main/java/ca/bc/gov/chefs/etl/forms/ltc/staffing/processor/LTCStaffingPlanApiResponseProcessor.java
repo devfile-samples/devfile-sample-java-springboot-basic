@@ -21,12 +21,14 @@ import ca.bc.gov.chefs.etl.forms.ltc.staffing.model.LTCStaffingAddPos;
 import ca.bc.gov.chefs.etl.forms.ltc.staffing.model.LTCStaffingHrs;
 import ca.bc.gov.chefs.etl.forms.ltc.staffing.model.LTCStaffingPlan;
 import ca.bc.gov.chefs.etl.forms.ltc.staffing.model.LTCStaffingSubmission;
+import ca.bc.gov.chefs.etl.forms.ltc.staffing.util.StaffingPlanUtil;
 import ca.bc.gov.chefs.etl.util.CSVUtil;
 import ca.bc.gov.chefs.etl.util.FileUtil;
 
 public class LTCStaffingPlanApiResponseProcessor implements Processor {
 
 	@Override
+	@SuppressWarnings("unchecked")
 	public void process(Exchange exchange) throws Exception {
 		String payload = exchange.getIn().getBody(String.class);
 		ObjectMapper mapper = new ObjectMapper();
@@ -277,6 +279,23 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 	
 				LTCstaffingPlan.add(LTCStaffingPlan5);
 			}
+
+			/* mapping LTC_STAFF_PLAN_PERF_4_2 */
+
+			LTCStaffPlanPerf = StaffingPlanUtil.mapPlanPerf(LTCStaffPlanPerf, root.getDoesTheStaffingPatternProvide1(),
+			root.getForm().getConfirmationId(), "1");
+
+			LTCStaffPlanPerf = StaffingPlanUtil.mapPlanPerf(LTCStaffPlanPerf, root.getDoesTheStaffingPatternProvide2(),
+			root.getForm().getConfirmationId(), "2");
+
+			LTCStaffPlanPerf = StaffingPlanUtil.mapPlanPerf(LTCStaffPlanPerf, root.getDoesTheStaffingPatternProvide3(),
+			root.getForm().getConfirmationId(), "3");
+
+			LTCStaffPlanPerf = StaffingPlanUtil.mapPlanPerf(LTCStaffPlanPerf, root.getDoesTheStaffingPatternProvide4(),
+			root.getForm().getConfirmationId(), "4");
+
+			LTCStaffPlanPerf = StaffingPlanUtil.mapPlanPerf(LTCStaffPlanPerf, root.getDoesTheStaffingPatternProvide5(),
+			root.getForm().getConfirmationId(), "5");
 
 			/* adding all other elements to LTCstaffingPlan */
 			lTCstaffingPlanMainEntity.setLTCStaffingPlan(LTCstaffingPlan);
