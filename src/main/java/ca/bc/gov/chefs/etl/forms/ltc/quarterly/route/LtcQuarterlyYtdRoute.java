@@ -7,7 +7,6 @@ import ca.bc.gov.chefs.etl.core.routes.BaseRoute;
 import ca.bc.gov.chefs.etl.forms.aims.route.AIMSFormRoute;
 import ca.bc.gov.chefs.etl.forms.ltc.quarterly.processor.LtcQuarterlyYtdApiProcessor;
 import ca.bc.gov.chefs.etl.forms.ltc.quarterly.processor.LtcQuarterlyYtdApiResponseProcessor;
-import ca.bc.gov.chefs.etl.forms.ltc.quarterly.processor.LtcQuarterlyYtdProcessor;
 
 public class LtcQuarterlyYtdRoute extends BaseRoute {
 
@@ -26,7 +25,7 @@ public class LtcQuarterlyYtdRoute extends BaseRoute {
 		from("jetty:http://{{hostname}}:{{port}}/ltc-quarterly-ytd").routeId("ltc-quarterly-ytd-form")
 				.log("CHEFS-ETL received a request for LTCQ Form extraction")
 				.process(exchange -> sharedData.put("body", exchange.getIn().getBody(String.class)))
-				.process(new LtcQuarterlyYtdProcessor()).to("direct:ltc-quarterly-ytd").end();
+				.to("direct:ltc-quarterly-ytd").end();
 
 		from("direct:ltc-quarterly-ytd")
 				// to the http uri
