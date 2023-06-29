@@ -25,6 +25,7 @@ public class Constants {
 	public final static String IS_HEADER_ADDED = "isHeaderAdded";
 
 	/* HealthAuthorities */
+	//test of git push
 	static{
 		HA_DICTIONNARY.put("FHA", "fraser");
 		HA_DICTIONNARY.put("IHA", "interior");
