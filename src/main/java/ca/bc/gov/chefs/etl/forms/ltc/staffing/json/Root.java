@@ -2419,6 +2419,11 @@ public class Root {
     public String additionalNotes23;
     public String additionalNotes24;
     public String additionalNotes25;
+    public String[] doesTheStaffingPatternProvide1;
+    public String[] doesTheStaffingPatternProvide2;
+    public String[] doesTheStaffingPatternProvide3;
+    public String[] doesTheStaffingPatternProvide4;
+    public String[] doesTheStaffingPatternProvide5;
     public ArrayList<NpDatagrid> npDatagrid1;
     public ArrayList<NpDatagrid> npDatagrid2;
     public ArrayList<NpDatagrid> npDatagrid3;
@@ -16916,6 +16921,36 @@ public class Root {
     }
     public void setAdditionalNotes25(String additionalNotes25) {
         this.additionalNotes25 = additionalNotes25;
+    }
+    public String[] getDoesTheStaffingPatternProvide1() {
+        return doesTheStaffingPatternProvide1;
+    }
+    public void setDoesTheStaffingPatternProvide1(String[] doesTheStaffingPatternProvide1) {
+        this.doesTheStaffingPatternProvide1 = doesTheStaffingPatternProvide1;
+    }
+    public String[] getDoesTheStaffingPatternProvide2() {
+        return doesTheStaffingPatternProvide2;
+    }
+    public void setDoesTheStaffingPatternProvide2(String[] doesTheStaffingPatternProvide2) {
+        this.doesTheStaffingPatternProvide2 = doesTheStaffingPatternProvide2;
+    }
+    public String[] getDoesTheStaffingPatternProvide3() {
+        return doesTheStaffingPatternProvide3;
+    }
+    public void setDoesTheStaffingPatternProvide3(String[] doesTheStaffingPatternProvide3) {
+        this.doesTheStaffingPatternProvide3 = doesTheStaffingPatternProvide3;
+    }
+    public String[] getDoesTheStaffingPatternProvide4() {
+        return doesTheStaffingPatternProvide4;
+    }
+    public void setDoesTheStaffingPatternProvide4(String[] doesTheStaffingPatternProvide4) {
+        this.doesTheStaffingPatternProvide4 = doesTheStaffingPatternProvide4;
+    }
+    public String[] getDoesTheStaffingPatternProvide5() {
+        return doesTheStaffingPatternProvide5;
+    }
+    public void setDoesTheStaffingPatternProvide5(String[] doesTheStaffingPatternProvide5) {
+        this.doesTheStaffingPatternProvide5 = doesTheStaffingPatternProvide5;
     }
     public ArrayList<NpDatagrid> getNpDatagrid1() {
         return npDatagrid1;
