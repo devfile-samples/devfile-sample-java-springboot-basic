@@ -20,7 +20,7 @@ import ca.bc.gov.chefs.etl.forms.ltc.staffing.model.LTCStaffPlanPosType;
 import ca.bc.gov.chefs.etl.forms.ltc.staffing.model.LTCStaffingAddPos;
 import ca.bc.gov.chefs.etl.forms.ltc.staffing.model.LTCStaffingHrs;
 import ca.bc.gov.chefs.etl.forms.ltc.staffing.model.LTCStaffingPlan;
-import ca.bc.gov.chefs.etl.forms.ltc.staffing.model.LTCStaffingPlanMainEntity;
+import ca.bc.gov.chefs.etl.forms.ltc.staffing.model.LTCStaffingSubmission;
 import ca.bc.gov.chefs.etl.util.CSVUtil;
 import ca.bc.gov.chefs.etl.util.FileUtil;
 
@@ -34,10 +34,10 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 		List<Root> staffingPlanModels = mapper.readValue(payload,
 				new TypeReference<List<Root>>() {
 				});
-		List<LTCStaffingPlanMainEntity> parsedStaffingPlan = parseStaffingPlan(staffingPlanModels);
+		List<LTCStaffingSubmission> parsedStaffingPlan = parseStaffingPlan(staffingPlanModels);
 		List<IModel> iModels = (List<IModel>) (List<?>) parsedStaffingPlan;
 		Map<String, List<List<String>>> map = CSVUtil.provider(iModels);
-		map = CSVUtil.removeAllNullKeys(map);
+		//map = CSVUtil.removeAllNullKeys(map);
 		boolean isHeaderAdded = (boolean) exchange.getProperties().get(Constants.IS_HEADER_ADDED);
 		List<String> filesGenerated = FileUtil.writeToCSVFile(map,Constants.LTC_STAFFING_PLAN_DIR, isHeaderAdded);
 		// TODO remove successReponse or uncomment
@@ -46,17 +46,26 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 		// exchange.getIn().setBody(mapper.writeValueAsString(successResponse));
 	}
 	
-	private List<LTCStaffingPlanMainEntity> parseStaffingPlan(List<Root> staffingPlans) {
+	private List<LTCStaffingSubmission> parseStaffingPlan(List<Root> staffingPlans) {
 		/* Mandatory fields */
-		List<LTCStaffingPlanMainEntity> staffingPlanParsed = new ArrayList<>();
+		List<LTCStaffingSubmission> staffingPlanParsed = new ArrayList<>();
 		for(Root root : staffingPlans) {
 			
-			LTCStaffingPlanMainEntity lTCstaffingPlanMainEntity = new LTCStaffingPlanMainEntity();
+			LTCStaffingSubmission lTCstaffingPlanMainEntity = new LTCStaffingSubmission();
 			List<LTCStaffingPlan> LTCstaffingPlan = new ArrayList<>();
 			List<LTCStaffPlanPerf> LTCStaffPlanPerf = new ArrayList<>();
 			List<LTCStaffPlanPosType> LTCStaffPlanPosType = new ArrayList<>();
 			List<LTCStaffingAddPos> LTCStaffingAddPos = new ArrayList<>();
 			List<LTCStaffingHrs> LTCStaffingHrs = new ArrayList<>();
+
+			/* mapping LTCstaffingSubmission */
+			lTCstaffingPlanMainEntity.setConfirmationId(root.getForm().getConfirmationId());
+			lTCstaffingPlanMainEntity.setIsDeleted("false"); //TODO GET ACTUAL VALUE ONCE READY 
+			lTCstaffingPlanMainEntity.setSubmissionDate(root.getForm().getCreatedAt());
+			lTCstaffingPlanMainEntity.setSubmittedBy(root.getForm().getFullName());
+			lTCstaffingPlanMainEntity.setCCIMSID(root.getCcimsid());
+			lTCstaffingPlanMainEntity.setSubmission_FY(root.getQuarter());
+
 
 			/* mapping LTCstaffingPlan */
 			LTCStaffingPlan LTCStaffingPlan1 = new LTCStaffingPlan();

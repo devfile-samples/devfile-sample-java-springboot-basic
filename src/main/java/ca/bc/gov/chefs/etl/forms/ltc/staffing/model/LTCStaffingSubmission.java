@@ -6,13 +6,69 @@ import java.util.List;
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
 
-public class LTCStaffingPlanMainEntity implements IModel{
+public class LTCStaffingSubmission implements IModel{
+
+	private String confirmationId;
+	private String isDeleted;
+	private String submissionDate;
+	private String submittedBy;
+	private String CCIMSID;
+	private String submission_FY;
 
     private List<LTCStaffingPlan> LTCStaffingPlan;
     private List<LTCStaffPlanPerf> LTCStaffPlanPerf;
     private List<LTCStaffPlanPosType> LTCStaffPlanPosType;
     private List<LTCStaffingHrs> LTCStaffingHrs;
     private List<LTCStaffingAddPos> LTCStaffingAddPos;
+
+    
+    public String getConfirmationId() {
+        return confirmationId;
+    }
+
+    public void setConfirmationId(String confirmationId) {
+        this.confirmationId = confirmationId;
+    }
+
+    public String getIsDeleted() {
+        return isDeleted;
+    }
+
+    public void setIsDeleted(String isDeleted) {
+        this.isDeleted = isDeleted;
+    }
+
+    public String getSubmissionDate() {
+        return submissionDate;
+    }
+
+    public void setSubmissionDate(String submissionDate) {
+        this.submissionDate = submissionDate;
+    }
+
+    public String getSubmittedBy() {
+        return submittedBy;
+    }
+
+    public void setSubmittedBy(String submittedBy) {
+        this.submittedBy = submittedBy;
+    }
+
+    public String getCCIMSID() {
+        return CCIMSID;
+    }
+
+    public void setCCIMSID(String cCIMSID) {
+        CCIMSID = cCIMSID;
+    }
+
+    public String getSubmission_FY() {
+        return submission_FY;
+    }
+
+    public void setSubmission_FY(String submission_FY) {
+        this.submission_FY = submission_FY;
+    }
 
     public List<LTCStaffingPlan> getLTCStaffingPlan() {
         return LTCStaffingPlan;
@@ -62,12 +118,19 @@ public class LTCStaffingPlanMainEntity implements IModel{
 
 	@Override
 	public String getFormType() {
-		return null;
+		return Constants.LTC_STAFFING_SUBMISSION;
 	}
 
 	@Override
 	public List<String> getCsvElements() {
-        return null;
+        List<String> elements = new ArrayList<String>();
+		elements.add(this.getConfirmationId());
+		elements.add("false"); // FIXME Replace with elements.add(this.getIsDeleted()) when isDeleted is available in the CHEFS API.
+		elements.add(this.getSubmissionDate());
+		elements.add(this.getSubmittedBy());
+		elements.add(this.getCCIMSID());
+		elements.add(this.getSubmission_FY());
+		return elements;
 	}
 
 	@Override

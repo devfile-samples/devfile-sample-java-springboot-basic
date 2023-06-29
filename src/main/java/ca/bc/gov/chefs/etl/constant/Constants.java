@@ -100,6 +100,7 @@ public class Constants {
 	public static final String LTC_FACILITY_APPROVER = "LTC_FACILITY_APPROVER";
 	public static final String LTC_FACILITY_PREPARER = "LTC_FACILITY_PREPARER";
 
+	public final static String LTC_STAFFING_SUBMISSION = "LTC_STAFFING_SUBMISSION";
 	public final static String LTC_STAFFING_PLAN = "LTC_STAFFING_PLAN";
 	public final static String LTC_STAFF_PLAN_PERF_4_2 = "LTC_STAFF_PLAN_PERF_4_2";
 	public final static String LTC_STAFF_PLAN_POS_TYPE = "LTC_STAFF_PLAN_POS_TYPE";
@@ -342,6 +343,10 @@ public class Constants {
 				"DIR_CARE_VACANCY_NAME",
 				"DIR_CARE_VAC_POSITIONS",		
 				"DIR_CARE_VAC_OTHER_NAME"		
+		});
+
+		HEADERS.put(LTC_STAFFING_SUBMISSION, new String[] {
+			"CONFIRMATION_ID", "IS_DELETED", "SUBMISSION_DATE", "SUBMITTED_BY", "CCIMS_ID", "SUBMISSION_FY"
 		});
 
 		HEADERS.put(LTC_STAFFING_PLAN, new String[] {
