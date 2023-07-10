@@ -10,6 +10,8 @@ public class JsonUtil {
     }
 	
 	public static String preProcess(String payload){
+		// The following code aims to replace occurences of "subTypeX":"" with "subTypeX":{}, as "subTypeX" is expected to be
+		// an object (can be empty) and not a String. 
 		String result = payload.replaceAll("\"(subType\\d*)\":\"\"", "\"$1\":{}");
 		return result;
 	}
