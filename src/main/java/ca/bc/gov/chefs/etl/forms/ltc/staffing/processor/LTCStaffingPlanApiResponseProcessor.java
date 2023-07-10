@@ -89,22 +89,22 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 			LTCStaffingPlan1.setTotalHrsNursSun(root.getNursing_sun_total1());
 			LTCStaffingPlan1.setTotalHrsNursWkTotal(root.getNursing_week_total1());
 			LTCStaffingPlan1.setTotalHrsNursAnnual(root.getNursing_annual_total1());
-			LTCStaffingPlan1.setHprdTotalNursMon(root.getMon_total1());
-			LTCStaffingPlan1.setHprdTotalNursTues(root.getTue_total1());
-			LTCStaffingPlan1.setHprdTotalNursWed(root.getWed_total1());
-			LTCStaffingPlan1.setHprdTotalNursThurs(root.getThu_total1());
-			LTCStaffingPlan1.setHprdTotalNursFri(root.getFri_total1());
-			LTCStaffingPlan1.setHprdTotalNursSat(root.getSat_total1());
-			LTCStaffingPlan1.setHprdTotalNursSun(root.getSun_total1());
-			LTCStaffingPlan1.setHprdTotalNursWkTotal(root.getWeek_total1());
-			LTCStaffingPlan1.setHprdTotalAlliedMon(root.getAllied_mon_total1());
-			LTCStaffingPlan1.setHprdTotalAlliedTues(root.getAllied_tue_total1());
-			LTCStaffingPlan1.setHprdTotalAlliedWed(root.getAllied_wed_total1());
-			LTCStaffingPlan1.setHprdTotalAlliedThurs(root.getAllied_thu_total1());
-			LTCStaffingPlan1.setHprdTotalAlliedFri(root.getAllied_fri_total1());
-			LTCStaffingPlan1.setHprdTotalAlliedSat(root.getAllied_sat_total1());
-			LTCStaffingPlan1.setHprdTotalAlliedSun(root.getAllied_sun_total1());
-			LTCStaffingPlan1.setHprdTotalAlliedWkTotal(root.getAllied_week_total1());
+			LTCStaffingPlan1.setHprdTotalNursMon(root.getHPRD_nursing_mon1());
+			LTCStaffingPlan1.setHprdTotalNursTues(root.getHPRD_nursing_tue1());
+			LTCStaffingPlan1.setHprdTotalNursWed(root.getHPRD_nursing_wed1());
+			LTCStaffingPlan1.setHprdTotalNursThurs(root.getHPRD_nursing_thu1());
+			LTCStaffingPlan1.setHprdTotalNursFri(root.getHPRD_nursing_fri1());
+			LTCStaffingPlan1.setHprdTotalNursSat(root.getHPRD_nursing_sat1());
+			LTCStaffingPlan1.setHprdTotalNursSun(root.getHPRD_nursing_sun1());
+			LTCStaffingPlan1.setHprdTotalNursWkTotal(root.getHPRD_nursing_total1());
+			LTCStaffingPlan1.setHprdTotalAlliedMon(root.getHPRD_allied_mon1());
+			LTCStaffingPlan1.setHprdTotalAlliedTues(root.getHPRD_allied_tue1());
+			LTCStaffingPlan1.setHprdTotalAlliedWed(root.getHPRD_allied_wed1());
+			LTCStaffingPlan1.setHprdTotalAlliedThurs(root.getHPRD_allied_thu1());
+			LTCStaffingPlan1.setHprdTotalAlliedFri(root.getHPRD_allied_fri1());
+			LTCStaffingPlan1.setHprdTotalAlliedSat(root.getHPRD_allied_sat1());
+			LTCStaffingPlan1.setHprdTotalAlliedSun(root.getHPRD_allied_sun1());
+			LTCStaffingPlan1.setHprdTotalAlliedWkTotal(root.getHPRD_allied_total1());
 			//LTCstaffingPlan1.setPerfOtherSpecify("");
 			//LTCstaffingPlan1.setStaffPlanForOther(root.getAdditionalNotes21());
 
@@ -130,22 +130,22 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				LTCStaffingPlan2.setTotalHrsNursSun(root.getNursing_sun_total2());
 				LTCStaffingPlan2.setTotalHrsNursWkTotal(root.getNursing_week_total2());
 				LTCStaffingPlan2.setTotalHrsNursAnnual(root.getNursing_annual_total2());
-				LTCStaffingPlan2.setHprdTotalNursMon(root.getMon_total2());
-				LTCStaffingPlan2.setHprdTotalNursTues(root.getTue_total2());
-				LTCStaffingPlan2.setHprdTotalNursWed(root.getWed_total2());
-				LTCStaffingPlan2.setHprdTotalNursThurs(root.getThu_total2());
-				LTCStaffingPlan2.setHprdTotalNursFri(root.getFri_total2());
-				LTCStaffingPlan2.setHprdTotalNursSat(root.getSat_total2());
-				LTCStaffingPlan2.setHprdTotalNursSun(root.getSun_total2());
-				LTCStaffingPlan2.setHprdTotalNursWkTotal(root.getWeek_total2());
-				LTCStaffingPlan2.setHprdTotalAlliedMon(root.getAllied_mon_total2());
-				LTCStaffingPlan2.setHprdTotalAlliedTues(root.getAllied_tue_total2());
-				LTCStaffingPlan2.setHprdTotalAlliedWed(root.getAllied_wed_total2());
-				LTCStaffingPlan2.setHprdTotalAlliedThurs(root.getAllied_thu_total2());
-				LTCStaffingPlan2.setHprdTotalAlliedFri(root.getAllied_fri_total2());
-				LTCStaffingPlan2.setHprdTotalAlliedSat(root.getAllied_sat_total2());
-				LTCStaffingPlan2.setHprdTotalAlliedSun(root.getAllied_sun_total2());
-				LTCStaffingPlan2.setHprdTotalAlliedWkTotal(root.getAllied_week_total2());
+				LTCStaffingPlan2.setHprdTotalNursMon(root.getHPRD_nursing_mon2());
+				LTCStaffingPlan2.setHprdTotalNursTues(root.getHPRD_nursing_tue2());
+				LTCStaffingPlan2.setHprdTotalNursWed(root.getHPRD_nursing_wed2());
+				LTCStaffingPlan2.setHprdTotalNursThurs(root.getHPRD_nursing_thu2());
+				LTCStaffingPlan2.setHprdTotalNursFri(root.getHPRD_nursing_fri2());
+				LTCStaffingPlan2.setHprdTotalNursSat(root.getHPRD_nursing_sat2());
+				LTCStaffingPlan2.setHprdTotalNursSun(root.getHPRD_nursing_sun2());
+				LTCStaffingPlan2.setHprdTotalNursWkTotal(root.getHPRD_nursing_total2());
+				LTCStaffingPlan2.setHprdTotalAlliedMon(root.getHPRD_allied_mon2());
+				LTCStaffingPlan2.setHprdTotalAlliedTues(root.getHPRD_allied_tue2());
+				LTCStaffingPlan2.setHprdTotalAlliedWed(root.getHPRD_allied_wed2());
+				LTCStaffingPlan2.setHprdTotalAlliedThurs(root.getHPRD_allied_thu2());
+				LTCStaffingPlan2.setHprdTotalAlliedFri(root.getHPRD_allied_fri2());
+				LTCStaffingPlan2.setHprdTotalAlliedSat(root.getHPRD_allied_sat2());
+				LTCStaffingPlan2.setHprdTotalAlliedSun(root.getHPRD_allied_sun2());
+				LTCStaffingPlan2.setHprdTotalAlliedWkTotal(root.getHPRD_allied_total2());
 				//LTCstaffingPlan2.setPerfOtherSpecify("");
 				//LTCstaffingPlan2.setStaffPlanForOther(root.getAdditionalNotes21());
 
@@ -173,22 +173,22 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				LTCStaffingPlan3.setTotalHrsNursSun(root.getNursing_sun_total3());
 				LTCStaffingPlan3.setTotalHrsNursWkTotal(root.getNursing_week_total3());
 				LTCStaffingPlan3.setTotalHrsNursAnnual(root.getNursing_annual_total3());
-				LTCStaffingPlan3.setHprdTotalNursMon(root.getMon_total3());
-				LTCStaffingPlan3.setHprdTotalNursTues(root.getTue_total3());
-				LTCStaffingPlan3.setHprdTotalNursWed(root.getWed_total3());
-				LTCStaffingPlan3.setHprdTotalNursThurs(root.getThu_total3());
-				LTCStaffingPlan3.setHprdTotalNursFri(root.getFri_total3());
-				LTCStaffingPlan3.setHprdTotalNursSat(root.getSat_total3());
-				LTCStaffingPlan3.setHprdTotalNursSun(root.getSun_total3());
-				LTCStaffingPlan3.setHprdTotalNursWkTotal(root.getWeek_total3());
-				LTCStaffingPlan3.setHprdTotalAlliedMon(root.getAllied_mon_total3());
-				LTCStaffingPlan3.setHprdTotalAlliedTues(root.getAllied_tue_total3());
-				LTCStaffingPlan3.setHprdTotalAlliedWed(root.getAllied_wed_total3());
-				LTCStaffingPlan3.setHprdTotalAlliedThurs(root.getAllied_thu_total3());
-				LTCStaffingPlan3.setHprdTotalAlliedFri(root.getAllied_fri_total3());
-				LTCStaffingPlan3.setHprdTotalAlliedSat(root.getAllied_sat_total3());
-				LTCStaffingPlan3.setHprdTotalAlliedSun(root.getAllied_sun_total3());
-				LTCStaffingPlan3.setHprdTotalAlliedWkTotal(root.getAllied_week_total3());
+				LTCStaffingPlan3.setHprdTotalNursMon(root.getHPRD_nursing_mon3());
+				LTCStaffingPlan3.setHprdTotalNursTues(root.getHPRD_nursing_tue3());
+				LTCStaffingPlan3.setHprdTotalNursWed(root.getHPRD_nursing_wed3());
+				LTCStaffingPlan3.setHprdTotalNursThurs(root.getHPRD_nursing_thu3());
+				LTCStaffingPlan3.setHprdTotalNursFri(root.getHPRD_nursing_fri3());
+				LTCStaffingPlan3.setHprdTotalNursSat(root.getHPRD_nursing_sat3());
+				LTCStaffingPlan3.setHprdTotalNursSun(root.getHPRD_nursing_sun3());
+				LTCStaffingPlan3.setHprdTotalNursWkTotal(root.getHPRD_nursing_total3());
+				LTCStaffingPlan3.setHprdTotalAlliedMon(root.getHPRD_allied_mon3());
+				LTCStaffingPlan3.setHprdTotalAlliedTues(root.getHPRD_allied_tue3());
+				LTCStaffingPlan3.setHprdTotalAlliedWed(root.getHPRD_allied_wed3());
+				LTCStaffingPlan3.setHprdTotalAlliedThurs(root.getHPRD_allied_thu3());
+				LTCStaffingPlan3.setHprdTotalAlliedFri(root.getHPRD_allied_fri3());
+				LTCStaffingPlan3.setHprdTotalAlliedSat(root.getHPRD_allied_sat3());
+				LTCStaffingPlan3.setHprdTotalAlliedSun(root.getHPRD_allied_sun3());
+				LTCStaffingPlan3.setHprdTotalAlliedWkTotal(root.getHPRD_allied_total3());
 				//LTCstaffingPlan3.setPerfOtherSpecify("");
 				//LTCstaffingPlan3.setStaffPlanForOther(root.getAdditionalNotes21());
 
@@ -216,22 +216,22 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				LTCStaffingPlan4.setTotalHrsNursSun(root.getNursing_sun_total4());
 				LTCStaffingPlan4.setTotalHrsNursWkTotal(root.getNursing_week_total4());
 				LTCStaffingPlan4.setTotalHrsNursAnnual(root.getNursing_annual_total4());
-				LTCStaffingPlan4.setHprdTotalNursMon(root.getMon_total4());
-				LTCStaffingPlan4.setHprdTotalNursTues(root.getTue_total4());
-				LTCStaffingPlan4.setHprdTotalNursWed(root.getWed_total4());
-				LTCStaffingPlan4.setHprdTotalNursThurs(root.getThu_total4());
-				LTCStaffingPlan4.setHprdTotalNursFri(root.getFri_total4());
-				LTCStaffingPlan4.setHprdTotalNursSat(root.getSat_total4());
-				LTCStaffingPlan4.setHprdTotalNursSun(root.getSun_total4());
-				LTCStaffingPlan4.setHprdTotalNursWkTotal(root.getWeek_total4());
-				LTCStaffingPlan4.setHprdTotalAlliedMon(root.getAllied_mon_total4());
-				LTCStaffingPlan4.setHprdTotalAlliedTues(root.getAllied_tue_total4());
-				LTCStaffingPlan4.setHprdTotalAlliedWed(root.getAllied_wed_total4());
-				LTCStaffingPlan4.setHprdTotalAlliedThurs(root.getAllied_thu_total4());
-				LTCStaffingPlan4.setHprdTotalAlliedFri(root.getAllied_fri_total4());
-				LTCStaffingPlan4.setHprdTotalAlliedSat(root.getAllied_sat_total4());
-				LTCStaffingPlan4.setHprdTotalAlliedSun(root.getAllied_sun_total4());
-				LTCStaffingPlan4.setHprdTotalAlliedWkTotal(root.getAllied_week_total4());
+				LTCStaffingPlan4.setHprdTotalNursMon(root.getHPRD_nursing_mon4());
+				LTCStaffingPlan4.setHprdTotalNursTues(root.getHPRD_nursing_tue4());
+				LTCStaffingPlan4.setHprdTotalNursWed(root.getHPRD_nursing_wed4());
+				LTCStaffingPlan4.setHprdTotalNursThurs(root.getHPRD_nursing_thu4());
+				LTCStaffingPlan4.setHprdTotalNursFri(root.getHPRD_nursing_fri4());
+				LTCStaffingPlan4.setHprdTotalNursSat(root.getHPRD_nursing_sat4());
+				LTCStaffingPlan4.setHprdTotalNursSun(root.getHPRD_nursing_sun4());
+				LTCStaffingPlan4.setHprdTotalNursWkTotal(root.getHPRD_nursing_total4());
+				LTCStaffingPlan4.setHprdTotalAlliedMon(root.getHPRD_allied_mon4());
+				LTCStaffingPlan4.setHprdTotalAlliedTues(root.getHPRD_allied_tue4());
+				LTCStaffingPlan4.setHprdTotalAlliedWed(root.getHPRD_allied_wed4());
+				LTCStaffingPlan4.setHprdTotalAlliedThurs(root.getHPRD_allied_thu4());
+				LTCStaffingPlan4.setHprdTotalAlliedFri(root.getHPRD_allied_fri4());
+				LTCStaffingPlan4.setHprdTotalAlliedSat(root.getHPRD_allied_sat4());
+				LTCStaffingPlan4.setHprdTotalAlliedSun(root.getHPRD_allied_sun4());
+				LTCStaffingPlan4.setHprdTotalAlliedWkTotal(root.getHPRD_allied_total4());
 				//LTCstaffingPlan4.setPerfOtherSpecify("");
 				//LTCstaffingPlan4.setStaffPlanForOther(root.getAdditionalNotes21());
 				
@@ -258,22 +258,22 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				LTCStaffingPlan5.setTotalHrsNursSun(root.getNursing_sun_total5());
 				LTCStaffingPlan5.setTotalHrsNursWkTotal(root.getNursing_week_total5());
 				LTCStaffingPlan5.setTotalHrsNursAnnual(root.getNursing_annual_total5());
-				LTCStaffingPlan5.setHprdTotalNursMon(root.getMon_total5());
-				LTCStaffingPlan5.setHprdTotalNursTues(root.getTue_total5());
-				LTCStaffingPlan5.setHprdTotalNursWed(root.getWed_total5());
-				LTCStaffingPlan5.setHprdTotalNursThurs(root.getThu_total5());
-				LTCStaffingPlan5.setHprdTotalNursFri(root.getFri_total5());
-				LTCStaffingPlan5.setHprdTotalNursSat(root.getSat_total5());
-				LTCStaffingPlan5.setHprdTotalNursSun(root.getSun_total5());
-				LTCStaffingPlan5.setHprdTotalNursWkTotal(root.getWeek_total5());
-				LTCStaffingPlan5.setHprdTotalAlliedMon(root.getAllied_mon_total5());
-				LTCStaffingPlan5.setHprdTotalAlliedTues(root.getAllied_tue_total5());
-				LTCStaffingPlan5.setHprdTotalAlliedWed(root.getAllied_wed_total5());
-				LTCStaffingPlan5.setHprdTotalAlliedThurs(root.getAllied_thu_total5());
-				LTCStaffingPlan5.setHprdTotalAlliedFri(root.getAllied_fri_total5());
-				LTCStaffingPlan5.setHprdTotalAlliedSat(root.getAllied_sat_total5());
-				LTCStaffingPlan5.setHprdTotalAlliedSun(root.getAllied_sun_total5());
-				LTCStaffingPlan5.setHprdTotalAlliedWkTotal(root.getAllied_week_total5());
+				LTCStaffingPlan5.setHprdTotalNursMon(root.getHPRD_nursing_mon5());
+				LTCStaffingPlan5.setHprdTotalNursTues(root.getHPRD_nursing_tue5());
+				LTCStaffingPlan5.setHprdTotalNursWed(root.getHPRD_nursing_wed5());
+				LTCStaffingPlan5.setHprdTotalNursThurs(root.getHPRD_nursing_thu5());
+				LTCStaffingPlan5.setHprdTotalNursFri(root.getHPRD_nursing_fri5());
+				LTCStaffingPlan5.setHprdTotalNursSat(root.getHPRD_nursing_sat5());
+				LTCStaffingPlan5.setHprdTotalNursSun(root.getHPRD_nursing_sun5());
+				LTCStaffingPlan5.setHprdTotalNursWkTotal(root.getHPRD_nursing_total5());
+				LTCStaffingPlan5.setHprdTotalAlliedMon(root.getHPRD_allied_mon5());
+				LTCStaffingPlan5.setHprdTotalAlliedTues(root.getHPRD_allied_tue5());
+				LTCStaffingPlan5.setHprdTotalAlliedWed(root.getHPRD_allied_wed5());
+				LTCStaffingPlan5.setHprdTotalAlliedThurs(root.getHPRD_allied_thu5());
+				LTCStaffingPlan5.setHprdTotalAlliedFri(root.getHPRD_allied_fri5());
+				LTCStaffingPlan5.setHprdTotalAlliedSat(root.getHPRD_allied_sat5());
+				LTCStaffingPlan5.setHprdTotalAlliedSun(root.getHPRD_allied_sun5());
+				LTCStaffingPlan5.setHprdTotalAlliedWkTotal(root.getHPRD_allied_total5());
 				//LTCstaffingPlan5.setPerfOtherSpecify("");
 				//LTCstaffingPlan5.setStaffPlanForOther(root.getAdditionalNotes21());
 	
@@ -296,6 +296,11 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 
 			LTCStaffPlanPerf = StaffingPlanUtil.mapPlanPerf(LTCStaffPlanPerf, root.getDoesTheStaffingPatternProvide5(),
 			root.getForm().getConfirmationId(), "5");
+
+			/* mapping LTC_STAFF_PLAN_POS_TYPE */
+
+			//LTCStaffPlanPosType LTCStaffPlan
+
 
 			/* adding all other elements to LTCstaffingPlan */
 			lTCstaffingPlanMainEntity.setLTCStaffingPlan(LTCstaffingPlan);
