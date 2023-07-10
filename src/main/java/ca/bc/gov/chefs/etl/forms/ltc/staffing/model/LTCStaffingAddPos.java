@@ -1,7 +1,9 @@
-package ca.bc.gov.chefs.etl.forms.ltc.staffing;
+package ca.bc.gov.chefs.etl.forms.ltc.staffing.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
 
 public class LTCStaffingAddPos implements IModel {
@@ -72,20 +74,24 @@ public class LTCStaffingAddPos implements IModel {
 
 	@Override
 	public String getFormType() {
-		// TODO Auto-generated method stub
-		return null;
+		return Constants.LTC_STAFFING_ADD_POS;
 	}
 
 	@Override
 	public List<String> getCsvElements() {
-		// TODO Auto-generated method stub
-		return null;
+		List<String> elements = new ArrayList<String>();
+		elements.add(this.confirmationId);
+		elements.add(this.staffingPlanNum);
+		elements.add(this.staffingHrsPosType);
+		elements.add(this.staffHrsServiceContractOut);
+		elements.add(this.staffHrsLegalNameContractService);
+		elements.add(this.staffHoursPercentServiceContractOut);
+		return elements;
 	}
 
 	@Override
 	public List<IModel> getObjects() {
-		// TODO Auto-generated method stub
-		return null;
+		return new ArrayList<>();
 	}
 
 }

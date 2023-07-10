@@ -11,6 +11,7 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.forms.ltc.facility.route.FacilityFormRoute;
 import ca.bc.gov.chefs.etl.forms.ltc.quarterly.route.LtcQuarterlyYtdRoute;
+import ca.bc.gov.chefs.etl.forms.ltc.staffing.route.LtcStaffingPlanRoute;
 import ca.bc.gov.chefs.etl.forms.aims.route.AIMSFormRoute;
 /**
  * Camel Class runner.
@@ -38,6 +39,7 @@ public class ChefsETLMainMethod {
 		main.configure().addRoutesBuilder(AIMSFormRoute.class);
 		main.configure().addRoutesBuilder(FacilityFormRoute.class);
 		main.configure().addRoutesBuilder(LtcQuarterlyYtdRoute.class);
+		main.configure().addRoutesBuilder(LtcStaffingPlanRoute.class);
 		main.run(args);
 	}
 }

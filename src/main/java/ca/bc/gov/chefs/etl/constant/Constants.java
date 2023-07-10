@@ -1,7 +1,6 @@
 package ca.bc.gov.chefs.etl.constant;
 
 import java.util.HashMap;
-
 import java.util.Map;
 
 import ca.bc.gov.chefs.etl.util.FileUtil;
@@ -50,14 +49,15 @@ public class Constants {
 	/* LTC Facility */
 	public final static String LTC_FACILITY_PROPERTY = "ltc.facility.";
 
-	public static final String LTC_FACILITY_APPROVER = "LTC_FACILITY_APPROVER";
-	public static final String LTC_FACILITY_PREPARER = "LTC_FACILITY_PREPARER";
-
 	/* LTC Quarterly YTD */
 	public final static String LTC_YTD_PROPERTY = "ltc.ytd.";
 	public final static String IN_SCOPE = "inScope";
 	public final static String OUT_OF_SCOPE = "outOfScope";
 	public final static String PRIVATE_BED = "privateBed";
+
+	/* LTC Staffing Plan */
+	public final static String LTC_STAFFING_PLAN_USERNAME = "ltc.staffing.plan.username";
+	public final static String LTC_STAFFING_PLAN_PASSWORD = "ltc.staffing.plan.password";
 
 	// Constants for Sub table: LTC_YTD_DIRECT_CARE_HRS
 	public final static String DC_HRS_OTHER = "Other";
@@ -85,7 +85,6 @@ public class Constants {
 	public static final String LTC_YTD_DEP = "LTC_YTD_DEP";
 	public static final String LTC_YTD_DEP_SUBTOTALS = "LTC_YTD_DEP_SUBTOTALS";
 	public static final String LTC_YTD_SUM_TOTALS = "LTC_YTD_SUM_TOTALS";
-	public final static String LTC_FACILITY = "LTC_FACILITY";
 	public static final String LTC_YTD_COMP_SAL_SUBTOTALS = "LTC_YTD_COMP_SAL_SUBTOTALS";
 	public static final String LTC_BED_YTD_MAX_OCCY_TOTALS = "LTC_BED_YTD_MAX_OCCY_TOTALS";
 	public static final String LTC_YTD_COMP_HRS_SUBTOTALS = "LTC_YTD_COMP_HRS_SUBTOTALS";
@@ -96,6 +95,17 @@ public class Constants {
 	public static final String LTC_BED_YTD_OCCUPANCY_RATE_TOT = "LTC_BED_YTD_OCCUPANCY_RATE_TOT";
 	public static final String LTC_BED_YTD_OCCUPIED_DAYS_TOT = "LTC_BED_YTD_OCCUPIED_DAYS_TOT";
 	public static final String LTC_YTD_DIRECT_CARE_VACANCY = "LTC_YTD_DIRECT_CARE_VACANCY";
+
+	public final static String LTC_FACILITY = "LTC_FACILITY";
+	public static final String LTC_FACILITY_APPROVER = "LTC_FACILITY_APPROVER";
+	public static final String LTC_FACILITY_PREPARER = "LTC_FACILITY_PREPARER";
+
+	public final static String LTC_STAFFING_SUBMISSION = "LTC_STAFFING_SUBMISSION";
+	public final static String LTC_STAFFING_PLAN = "LTC_STAFFING_PLAN";
+	public final static String LTC_STAFF_PLAN_PERF_4_2 = "LTC_STAFF_PLAN_PERF_4_2";
+	public final static String LTC_STAFF_PLAN_POS_TYPE = "LTC_STAFF_PLAN_POS_TYPE";
+	public final static String LTC_STAFFING_HRS = "LTC_STAFFING_HRS";
+	public final static String LTC_STAFFING_ADD_POS = "LTC_STAFFING_ADD_POS";
 
 	/* File Constants */
 	public final static String PROPERTIES_DATA_DIR = "data-dir";
@@ -121,6 +131,11 @@ public class Constants {
 	public static final String LTC_QUARTERLY_YTD_UNENCRYPTED_FP = FileUtil.buildDestinationPath(PROPERTIES_LTC_QUARTERLY_DIR, false);
 	public static final String LTC_QUARTERLY_YTD_ENCRYPTED_FP = FileUtil.buildDestinationPath(PROPERTIES_LTC_QUARTERLY_DIR, true);
 
+	public final static String PROPERTIES_LTC_STAFFING_PLAN_DIR = "ltc-staffing-plan-dir";
+	public final static String LTC_STAFFING_PLAN_DIR = FileUtil.getDirectoryName(PROPERTIES_LTC_STAFFING_PLAN_DIR);
+	public static final String LTC_STAFFING_PLAN_UNENCRYPTED_FP = FileUtil.buildDestinationPath(PROPERTIES_LTC_STAFFING_PLAN_DIR, false);
+	public static final String LTC_STAFFING_PLAN_ENCRYPTED_FP = FileUtil.buildDestinationPath(PROPERTIES_LTC_STAFFING_PLAN_DIR, true);
+
 	/* public Encryption Key */
 	public final static String PUBLIC_KEY_NAME_PROPERTY = "public-key-file-name";
 	public final static String PUBLIC_KEY_PATH = FileUtil.buildPublicKeyPath(PUBLIC_KEY_NAME_PROPERTY);
@@ -132,10 +147,12 @@ public class Constants {
 		UNENC_FILE_PATH.put(LTC_FACILITY_DIR, LTC_FACILITY_UNENCRYPTED_FP);
 		UNENC_FILE_PATH.put(LTC_QUARTERLY_DIR, LTC_QUARTERLY_YTD_UNENCRYPTED_FP);
 		UNENC_FILE_PATH.put(AIMS_DIR,AIMS_UNENCRYPTED_FP);
+		UNENC_FILE_PATH.put(LTC_STAFFING_PLAN_DIR, LTC_STAFFING_PLAN_UNENCRYPTED_FP);
 		
 		ENC_FILE_PATH.put(AIMS_DIR, AIMS_ENCRYPTED_FP);
 		ENC_FILE_PATH.put(LTC_FACILITY_DIR, LTC_FACILITY_ENCRYPTED_FP);
 		ENC_FILE_PATH.put(LTC_QUARTERLY_DIR, LTC_QUARTERLY_YTD_ENCRYPTED_FP);
+		ENC_FILE_PATH.put(LTC_STAFFING_PLAN_DIR, LTC_STAFFING_PLAN_ENCRYPTED_FP);
 		
 		HEADERS.put("TestModel#Main", new String[] { "confirmationId", "formName", "version", "createdAt", "fullName",
 				"username", "email", "status", "assignee", "assigneeEmail", });
@@ -326,6 +343,46 @@ public class Constants {
 				"DIR_CARE_VACANCY_NAME",
 				"DIR_CARE_VAC_POSITIONS",		
 				"DIR_CARE_VAC_OTHER_NAME"		
+		});
+
+		HEADERS.put(LTC_STAFFING_SUBMISSION, new String[] {
+			"CONFIRMATION_ID", "IS_DELETED", "SUBMISSION_DATE", "SUBMITTED_BY", "CCIMS_ID", "SUBMISSION_FY"
+		});
+
+		HEADERS.put(LTC_STAFFING_PLAN, new String[] {
+			"Confirmation_ID", "Staffing_plan_num", "Staff_Plan_For", "Period_start", "Period_end",
+			"Revision_date", "Reason_for_rev", "Nb_Total_Beds", "Perf_4.1", "Perf_Other_specify",
+			"Staff_Plan_For_Other", "Total_Hrs_Nurs_Mon", "Total_Hrs_Nurs_Tues", "Total_Hrs_Nurs_Wed",
+			"Total_Hrs_Nurs_Thurs", "Total_Hrs_Nurs_Fri", "Total_Hrs_Nurs_Sat", "Total_Hrs_Nurs_Sun",
+			"Total_Hrs_Nurs_Wk_Total", "Total_Hrs_Nurs_Annual", "HPRD_Total_Nurs_Mon", "HPRD_Total_Nurs_Tues",
+			"HPRD_Total_Nurs_Wed", "HPRD_Total_Nurs_Thurs", "HPRD_Total_Nurs_Fri","HPRD_Total_Nurs_Sat",
+			"HPRD_Total_Nurs_Sun","HPRD_Total_Nurs_Wk_Total", "HPRD_Total_Allied_Mon", "HPRD_Total_Allied_Tues",
+			"HPRD_Total_Allied_Wed","HPRD_Total_Allied_Thurs", "HPRD_Total_Allied_Fri", "HPRD_Total_Allied_Sat",
+			"HPRD_Total_Allied_Sun", "HPRD_Total_Allied_Wk_Total"
+		});
+
+		HEADERS.put(LTC_STAFF_PLAN_PERF_4_2, new String[] {
+			"Confirmation_ID", "Staffing_plan_Num", "Perf_4_2"
+		});
+
+		HEADERS.put(LTC_STAFF_PLAN_POS_TYPE, new String[]{
+			"Confirmation_ID", "Staffing_plan_Num", "Staff_hrs_Pos_Type", "Sum_Staff_hrs_Mon", "Sum_Staff_hrs_Tue",
+			"Sum_Staff_hrs_Wed", "Sum_Staff_hrs_Thu", "Sum_Staff_hrs_Fri", "Sum_Staff_hrs_Sat", "Sum_Staff_hrs_Sun",
+			"Sum_Staff_hrs_wk_total", "Sum_Staff_hrs_annual", "Sum_nurs_annual","Sum_nurs_inhouse", "Sum_nurs_contracted",
+			"Sum_nurs_total", "Sum_allied_np_annual", "Sum _allied_np_inhouse", "Sum_allied_np_contracted",
+			"Sum _allied_np_total", "Sum_allied_prof_annual", "Sum_allied_prof_inhouse", "Sum_allied_prof_contracted",
+			"Sum_allied_prof_total"
+		});
+
+		HEADERS.put(LTC_STAFFING_HRS, new String[]{
+			"Confirmation_ID","Staffing_plan_Num", "Staff_hrs_Pos_Type", "Staff_hrs_pos_shift_type", "Staff_hrs_Mon",
+			"Staff_hrs_Tue","Staff_hrs_Wed","Staff_hrs_Thu","Staff_hrs_Fri", "Staff_hrs_Sat", "Staff_hrs_Sun",
+			"Staff_hrs_Wk_Total", "Staff_hrs_Annual", "RN_24_7"
+		});
+
+		HEADERS.put(LTC_STAFFING_ADD_POS, new String[]{
+			"Confirmation_ID", "Staffing_plan_Num", "Staff_hrs_Pos_Type", "Staff_hrs_Service_Contract_Out", 
+			"Staff_hrs_Legal_Name_Contract_Service", "Staff_hrs_Percent_Service_Contract_Out"
 		});
 	}
 }
