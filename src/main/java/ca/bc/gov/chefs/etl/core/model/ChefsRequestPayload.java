@@ -9,13 +9,31 @@ public class ChefsRequestPayload {
 	private String version;
 	private String startDate;
 	private String endDate;
+	private String updatedMinDate;
+	private String updatedMaxDate;
+	private boolean draft = true;
+	private boolean deleted = true;
+	private String status;
 	private String healthAuthority;
 	private boolean isHeaderAdded = true;
 
+	public boolean isDraft() {
+		return draft;
+	}
+	@JsonProperty("draft")
+	public void setDraft(boolean draft) {
+		this.draft = Boolean.valueOf(draft);
+	}
+	public boolean isDeleted() {
+		return deleted;
+	}
+	@JsonProperty("deleted")
+	public void setDeleted(boolean deleted) {
+		this.deleted = Boolean.valueOf(deleted);
+	}
 	public boolean isHeaderAdded() {
 		return isHeaderAdded;
 	}
-
 	@JsonProperty("isHeaderAdded")
 	public void setHeaderAdded(boolean isHeaderAdded) {
 		this.isHeaderAdded = Boolean.valueOf(isHeaderAdded);
@@ -38,6 +56,24 @@ public class ChefsRequestPayload {
 	}
 	public void setEndDate(String endDate) {
 		this.endDate = endDate;
+	}
+	public String getUpdatedMinDate() {
+		return updatedMinDate;
+	}
+	public void setUpdatedMinDate(String updatedMinDate) {
+		this.updatedMinDate = updatedMinDate;
+	}
+	public String getUpdatedMaxDate() {
+		return updatedMaxDate;
+	}
+	public void setUpdatedMaxDate(String updatedMaxDate) {
+		this.updatedMaxDate = updatedMaxDate;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
 	}
 	public String getHealthAuthority() {
 		return healthAuthority;
