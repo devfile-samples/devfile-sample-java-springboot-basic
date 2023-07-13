@@ -18,6 +18,7 @@ public class Constants {
 
 	/* CHEFS API  */
 	public final static String CHEFS_API_URL = "chefs.http.uri";
+	// public final static String CHEFS_API_URL_TEST = "chefs.http.uri.new";
 	public final static String COMPLETED_STATUS = "COMPLETED";
 
 	/* Custom Properties */
@@ -56,8 +57,7 @@ public class Constants {
 	public final static String PRIVATE_BED = "privateBed";
 
 	/* LTC Staffing Plan */
-	public final static String LTC_STAFFING_PLAN_USERNAME = "ltc.staffing.plan.username";
-	public final static String LTC_STAFFING_PLAN_PASSWORD = "ltc.staffing.plan.password";
+	public final static String LTC_STAFFING_PLAN_PROPERTY = "ltc.staffing.plan.";
 
 	// Constants for Sub table: LTC_YTD_DIRECT_CARE_HRS
 	public final static String DC_HRS_OTHER = "Other";

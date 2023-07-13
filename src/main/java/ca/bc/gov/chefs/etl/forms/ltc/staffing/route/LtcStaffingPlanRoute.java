@@ -3,6 +3,7 @@ package ca.bc.gov.chefs.etl.forms.ltc.staffing.route;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.routes.BaseRoute;
 import ca.bc.gov.chefs.etl.forms.aims.route.AIMSFormRoute;
 import ca.bc.gov.chefs.etl.forms.ltc.staffing.processor.LTCStaffingPlanApiResponseProcessor;
@@ -29,7 +30,7 @@ public class LtcStaffingPlanRoute extends BaseRoute {
 
 		from("direct:ltc-staffing-plan")
 				// to the http uri
-				.process(new LtcStaffingPlanApiProcessor(sharedData))
+				.process(new LtcStaffingPlanApiProcessor(sharedData, Constants.LTC_STAFFING_PLAN_PROPERTY))
 				.toD("${header.RequestUri}")
 				.log("This is the status code from the response: ${header.CamelHttpResponseCode}")
 				.log("Trying to convert the received body OK").convertBodyTo(String.class)
