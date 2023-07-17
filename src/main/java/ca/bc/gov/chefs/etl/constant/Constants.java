@@ -18,7 +18,6 @@ public class Constants {
 
 	/* CHEFS API  */
 	public final static String CHEFS_API_URL = "chefs.http.uri";
-	// public final static String CHEFS_API_URL_TEST = "chefs.http.uri.new";
 	public final static String COMPLETED_STATUS = "COMPLETED";
 
 	/* Custom Properties */

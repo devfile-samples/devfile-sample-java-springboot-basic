@@ -23,11 +23,8 @@ public class BaseApiProcessor implements Processor {
 		ChefsRequestPayload payload =  JsonUtil.parseJsonString((String)sharedData.get("body"), ChefsRequestPayload.class);
 		String FORM_USERNAME = PropertiesUtil.buildFormProperty(formPropertyName, payload.getHealthAuthority(), true);
 		String FORM_PASSWORD = PropertiesUtil.buildFormProperty(formPropertyName, payload.getHealthAuthority(), false);
-		String uri = PropertiesUtil.getValue(Constants.CHEFS_API_URL).formatted(PropertiesUtil.getValue(FORM_USERNAME), payload.getVersion(),payload.getStartDate(),payload.getEndDate());
-		// String uriNew = PropertiesUtil.getValue(Constants.CHEFS_API_URL_TEST).formatted(PropertiesUtil.getValue(FORM_USERNAME), payload.getVersion(),payload.getStartDate(),payload.getEndDate(),
-		// 				payload.getUpdatedMinDate(), payload.getUpdatedMaxDate(), payload.isDraft(), payload.isDeleted(), payload.getStatus());
-
-		// System.out.println("the new uri" + uriNew);
+		String uri = PropertiesUtil.getValue(Constants.CHEFS_API_URL).formatted(PropertiesUtil.getValue(FORM_USERNAME), payload.getVersion(),payload.getStartDate(),payload.getEndDate(),
+						payload.getUpdatedMinDate(), payload.getUpdatedMaxDate(), payload.isDraft(), payload.isDeleted(), payload.getStatus());
 
 		exchange.getIn().setHeader("RequestUri", uri);
 		exchange.getIn().setHeader("CamelHttpMethod", "GET");

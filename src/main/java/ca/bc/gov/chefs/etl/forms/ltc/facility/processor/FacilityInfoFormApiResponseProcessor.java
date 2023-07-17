@@ -46,9 +46,6 @@ public class FacilityInfoFormApiResponseProcessor implements Processor {
 		/* Mandatory fields */
 		List<FacilityInformation> facilityInfoParsed = new ArrayList<>();
 		for(Root facility : facilities) {
-			if(!facility.getForm().getStatus().equals(Constants.COMPLETED_STATUS)){
-				continue;
-			}
 			FacilityInformation facilityInfo = new FacilityInformation();
 			facilityInfo.setAccreditationBody(facility.getFacilityAccreditationBody());
 			facilityInfo.setAccreditationDate(facility.getFacilityAccreditationDate());
