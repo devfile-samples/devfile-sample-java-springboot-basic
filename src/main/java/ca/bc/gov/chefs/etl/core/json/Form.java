@@ -14,6 +14,9 @@ public class Form{
     public String status;
     public String assignee;
     public String assigneeEmail;
+    public String draft;
+    public String deleted;
+    public String updatedAt;
 	public String getConfirmationId() {
 		return confirmationId;
 	}
@@ -74,7 +77,24 @@ public class Form{
 	public void setAssigneeEmail(String assigneeEmail) {
 		this.assigneeEmail = assigneeEmail;
 	}
-    
+	public String getDraft() {
+		return draft;
+	}
+	public void setDraft(String draft) {
+		this.draft = draft;
+	}
+	public String getDeleted() {
+		return deleted;
+	}
+	public void setDeleted(String deleted) {
+		this.deleted = deleted;
+	}
+	public String getUpdatedAt() {
+		return updatedAt;
+	}
+	public void setUpdatedAt(String updatedAt) {
+		this.updatedAt = updatedAt;
+	}
     
     
     
