@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import ca.bc.gov.chefs.etl.core.json.Form;
 import ca.bc.gov.chefs.etl.core.model.IModel;
 
 @JsonIgnoreProperties(ignoreUnknown = true)

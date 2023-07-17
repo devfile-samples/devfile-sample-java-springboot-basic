@@ -1,4 +1,4 @@
-package ca.bc.gov.chefs.etl.forms.ltc.facility.json;
+package ca.bc.gov.chefs.etl.core.json;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
