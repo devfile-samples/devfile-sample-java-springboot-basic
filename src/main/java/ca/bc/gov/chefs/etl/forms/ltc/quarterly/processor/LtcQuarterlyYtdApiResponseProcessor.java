@@ -111,7 +111,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 
 			/* Form Meta */
 			ltcYtdSubmission.setConfirmationId(root.getForm().getConfirmationId());
-			ltcYtdSubmission.setIsDeleted("");
+			ltcYtdSubmission.setIsDeleted(root.getForm().getDeleted());
 			ltcYtdSubmission.setSubmissionDate(root.getForm().getCreatedAt());
 			ltcYtdSubmission.setSubmittedBy(root.getForm().getFullName());
 			ltcYtdSubmission.setCCIMSID(root.getCcimsid());

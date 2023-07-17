@@ -59,7 +59,7 @@ public class FacilityInfoFormApiResponseProcessor implements Processor {
 			facilityInfo.setFacilityTelephone(facility.getPhoneNumber());
 			facilityInfo.setFacilityWebsite(facility.getFacilityWebsite());
 			facilityInfo.setHealthAuthority(facility.getHealthAuthority());
-			facilityInfo.setIsDeleted("false"); // TODO FIXME 
+			facilityInfo.setIsDeleted(facility.getForm().getDeleted());
 			facilityInfo.setLegislationtype(facility.getFacilityLegislationType());
 			facilityInfo.setOwnerAddress(facility.getOwnerAddress().getProperties().getFullAddress());
 			facilityInfo.setOwnerCity(facility.getOwnerCity());

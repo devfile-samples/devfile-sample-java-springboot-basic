@@ -62,7 +62,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 
 			/* mapping LTCstaffingSubmission */
 			lTCstaffingPlanMainEntity.setConfirmationId(root.getForm().getConfirmationId());
-			lTCstaffingPlanMainEntity.setIsDeleted("false"); //TODO GET ACTUAL VALUE ONCE READY 
+			lTCstaffingPlanMainEntity.setIsDeleted(root.getForm().getDeleted());
 			lTCstaffingPlanMainEntity.setSubmissionDate(root.getForm().getCreatedAt());
 			lTCstaffingPlanMainEntity.setSubmittedBy(root.getForm().getFullName());
 			lTCstaffingPlanMainEntity.setCCIMSID(root.getCcimsid());
