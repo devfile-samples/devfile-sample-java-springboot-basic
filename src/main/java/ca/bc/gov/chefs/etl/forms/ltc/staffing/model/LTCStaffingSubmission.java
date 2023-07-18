@@ -125,7 +125,7 @@ public class LTCStaffingSubmission implements IModel{
 	public List<String> getCsvElements() {
         List<String> elements = new ArrayList<String>();
 		elements.add(this.getConfirmationId());
-		elements.add("false"); // FIXME Replace with elements.add(this.getIsDeleted()) when isDeleted is available in the CHEFS API.
+		elements.add(this.getIsDeleted());
 		elements.add(this.getSubmissionDate());
 		elements.add(this.getSubmittedBy());
 		elements.add(this.getCCIMSID());
