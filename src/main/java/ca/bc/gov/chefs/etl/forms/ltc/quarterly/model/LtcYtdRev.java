@@ -7,6 +7,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
+import ca.bc.gov.chefs.etl.util.CSVUtil;
 
 public class LtcYtdRev implements IModel {
 
@@ -41,7 +42,7 @@ public class LtcYtdRev implements IModel {
 		this.revYTD = StringUtils.defaultIfEmpty(revYTD, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getRevNotes() {
-		return revNotes != null ? revNotes.replaceAll("\\R", " ") : revNotes;
+		return revNotes != null ? CSVUtil.replaceLineBreaks(revNotes) : revNotes;
 	}
 	public void setRevNotes(String revNotes) {
 		this.revNotes = revNotes;

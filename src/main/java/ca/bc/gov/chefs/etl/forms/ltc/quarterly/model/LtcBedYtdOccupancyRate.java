@@ -7,6 +7,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
+import ca.bc.gov.chefs.etl.util.CSVUtil;
 
 public class LtcBedYtdOccupancyRate implements IModel {
 
@@ -63,7 +64,7 @@ public class LtcBedYtdOccupancyRate implements IModel {
 		this.percentOcc = percentOcc;
 	}
 	public String getOccRateNotes() {
-		return occRateNotes != null ? occRateNotes.replaceAll("\\R", " ") : occRateNotes;
+		return occRateNotes != null ? CSVUtil.replaceLineBreaks(occRateNotes) : occRateNotes;
 	}
 	public void setOccRateNotes(String occRateNotes) {
 		this.occRateNotes = occRateNotes;

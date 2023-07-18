@@ -7,6 +7,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
+import ca.bc.gov.chefs.etl.util.CSVUtil;
 
 public class LtcYtdSumTotals implements IModel {
 
@@ -35,7 +36,7 @@ public class LtcYtdSumTotals implements IModel {
 		this.sumYTD = StringUtils.defaultIfEmpty(sumYTD, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getTotNotes() {
-		return totNotes != null ? totNotes.replaceAll("\\R", " ") : totNotes;
+		return totNotes != null ? CSVUtil.replaceLineBreaks(totNotes) : totNotes;
 	}
 	public void setTotNotes(String totNotes) {
 		this.totNotes = totNotes;
