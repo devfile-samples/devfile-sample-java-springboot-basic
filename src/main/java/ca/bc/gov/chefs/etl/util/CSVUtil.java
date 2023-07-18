@@ -4,6 +4,7 @@ import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -38,7 +39,23 @@ public class CSVUtil {
 		}
 		return map;
 	}
+
+	public static Map<String, List<List<String>>> removeAllNullKeys(Map<String, List<List<String>>> map){
+		Iterator<Map.Entry<String, List<List<String>>>> iterator = map.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, List<List<String>>> entry = iterator.next();
+            if (entry.getKey() == null) {
+                iterator.remove();
+            }
+        }
+		return map;
+	}
 	
+	/* Replaces any found line breaks with a whitespace */
+	public static String replaceLineBreaks(String data){
+		return data.replaceAll("\\R", " ");
+	}
+
 	public static String getFormattedDate(String date) {
 		try {
 //		String isoDate = date;

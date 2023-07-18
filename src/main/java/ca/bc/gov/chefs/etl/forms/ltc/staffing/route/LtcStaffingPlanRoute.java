@@ -1,4 +1,4 @@
-package ca.bc.gov.chefs.etl.forms.ltc.quarterly.route;
+package ca.bc.gov.chefs.etl.forms.ltc.staffing.route;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,16 +6,16 @@ import org.slf4j.LoggerFactory;
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.routes.BaseRoute;
 import ca.bc.gov.chefs.etl.forms.aims.route.AIMSFormRoute;
-import ca.bc.gov.chefs.etl.forms.ltc.quarterly.processor.LtcQuarterlyYtdApiProcessor;
-import ca.bc.gov.chefs.etl.forms.ltc.quarterly.processor.LtcQuarterlyYtdApiResponseProcessor;
+import ca.bc.gov.chefs.etl.forms.ltc.staffing.processor.LTCStaffingPlanApiResponseProcessor;
+import ca.bc.gov.chefs.etl.forms.ltc.staffing.processor.LtcStaffingPlanApiProcessor;
 
-public class LtcQuarterlyYtdRoute extends BaseRoute {
+public class LtcStaffingPlanRoute extends BaseRoute {
 
 	private static final Logger logger = LoggerFactory.getLogger(AIMSFormRoute.class);
 	@Override
 	public void configure() throws Exception {
 		super.configure();
-		logger.info("Loaded LTC QYTD Form Route");
+		logger.info("Loaded LTC Staffing Plan Route");
 
 		/**
 		 * receive JSON payload, parse and set to make an API call
@@ -23,18 +23,18 @@ public class LtcQuarterlyYtdRoute extends BaseRoute {
 		 * 
 		 */
 		// trigger
-		from("jetty:http://{{hostname}}:{{port}}/ltc-quarterly-ytd").routeId("ltc-quarterly-ytd-form")
-				.log("CHEFS-ETL received a request for LTCQ Form extraction")
+		from("jetty:http://{{hostname}}:{{port}}/ltc-staffing-plan").routeId("ltc-staffing-plan-form")
+				.log("CHEFS-ETL received a request for LTC Staffing Plan  Form extraction")
 				.process(exchange -> sharedData.put("body", exchange.getIn().getBody(String.class)))
-				.to("direct:ltc-quarterly-ytd").end();
+				.to("direct:ltc-staffing-plan").end();
 
-		from("direct:ltc-quarterly-ytd")
+		from("direct:ltc-staffing-plan")
 				// to the http uri
-				.process(new LtcQuarterlyYtdApiProcessor(sharedData, Constants.LTC_YTD_PROPERTY))
+				.process(new LtcStaffingPlanApiProcessor(sharedData, Constants.LTC_STAFFING_PLAN_PROPERTY))
 				.toD("${header.RequestUri}")
 				.log("This is the status code from the response: ${header.CamelHttpResponseCode}")
 				.log("Trying to convert the received body OK").convertBodyTo(String.class)
-				.process(new LtcQuarterlyYtdApiResponseProcessor()).end();
+				.process(new LTCStaffingPlanApiResponseProcessor()).end();
 
 		// file conversion
 		/*

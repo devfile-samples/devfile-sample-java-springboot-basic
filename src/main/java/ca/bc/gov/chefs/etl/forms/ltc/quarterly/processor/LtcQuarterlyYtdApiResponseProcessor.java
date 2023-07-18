@@ -61,6 +61,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 	public void process(Exchange exchange) throws Exception {
 		String payload = exchange.getIn().getBody(String.class);
 		payload = JsonUtil.preProcess(payload);
+		payload = JsonUtil.roundDigitsNumber(payload);
 		ObjectMapper mapper = new ObjectMapper();
 		List<Root> ltcYtdForms = mapper.readValue(payload, new TypeReference<List<Root>>() {
 		});
@@ -80,9 +81,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 	private List<LtcYtdSubmission> parseYtdQuarterlyRequest(List<Root> ltcQuarterlyYTDSubmissions) {
 		List<LtcYtdSubmission> ltcYtdSubmissions = new ArrayList<>();
 		for (Root root : ltcQuarterlyYTDSubmissions) {
-			if(!root.getForm().getStatus().equals(Constants.COMPLETED_STATUS)){
-				continue;
-			}
 			LtcYtdSubmission ltcYtdSubmission = new LtcYtdSubmission();
 			List<LtcYtdDirectCareHrs> ltcYtdDcHrs = new ArrayList<>();
 			List<LtcYtdDirectCareHrsSubTotals> ltcYtdDcHrsSubttls = new ArrayList<>();
@@ -114,7 +112,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 
 			/* Form Meta */
 			ltcYtdSubmission.setConfirmationId(root.getForm().getConfirmationId());
-			ltcYtdSubmission.setIsDeleted("");
+			ltcYtdSubmission.setIsDeleted(root.getForm().getDeleted());
 			ltcYtdSubmission.setSubmissionDate(root.getForm().getCreatedAt());
 			ltcYtdSubmission.setSubmittedBy(root.getForm().getFullName());
 			ltcYtdSubmission.setCCIMSID(root.getCcimsid());

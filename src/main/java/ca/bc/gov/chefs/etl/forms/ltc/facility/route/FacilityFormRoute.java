@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 
 import org.slf4j.LoggerFactory;
 
+import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.routes.BaseRoute;
 import ca.bc.gov.chefs.etl.forms.ltc.facility.processor.FacilityInfoFormApiProcessor;
 import ca.bc.gov.chefs.etl.forms.ltc.facility.processor.FacilityInfoFormApiResponseProcessor;
@@ -31,7 +32,7 @@ public class FacilityFormRoute extends BaseRoute {
 
 		from("direct:ltc-facility-information")
 				// to the http uri
-				.process(new FacilityInfoFormApiProcessor(sharedData))
+				.process(new FacilityInfoFormApiProcessor(sharedData, Constants.LTC_FACILITY_PROPERTY))
 				.toD("${header.RequestUri}")
 				.log("This is the status code from the response: ${header.CamelHttpResponseCode}")
 				.log("Trying to convert the received body OK").convertBodyTo(String.class)

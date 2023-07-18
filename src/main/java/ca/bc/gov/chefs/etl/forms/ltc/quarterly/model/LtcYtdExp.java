@@ -7,6 +7,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
+import ca.bc.gov.chefs.etl.util.CSVUtil;
 
 public class LtcYtdExp implements IModel {
 
@@ -41,7 +42,7 @@ public class LtcYtdExp implements IModel {
 		this.expYtd = StringUtils.defaultIfEmpty(expYtd, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getExpNotes() {
-		return expNotes != null ? expNotes.replaceAll("\\R", " ") : expNotes;
+		return expNotes != null ? CSVUtil.replaceLineBreaks(expNotes) : expNotes;
 	}
 	public void setExpNotes(String expNotes) {
 		this.expNotes = expNotes;

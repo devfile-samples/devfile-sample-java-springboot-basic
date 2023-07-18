@@ -78,7 +78,7 @@ public class LtcBedYtdMaxOccupancy implements IModel {
 	}
 	
 	public String getNotes() {
-		return notes != null ? notes.replaceAll("\\R", " ") : notes;
+		return notes != null ? CSVUtil.replaceLineBreaks(notes) : notes;
 	}
 	public void setNotes(String notes) {
 		this.notes = notes;
