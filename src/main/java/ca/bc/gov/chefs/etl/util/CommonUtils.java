@@ -17,6 +17,10 @@ import org.bouncycastle.openpgp.jcajce.JcaPGPObjectFactory;
 import org.bouncycastle.openpgp.operator.PublicKeyDataDecryptorFactory;
 import org.bouncycastle.openpgp.operator.jcajce.JcaKeyFingerprintCalculator;
 import org.bouncycastle.openpgp.operator.jcajce.JcePublicKeyDataDecryptorFactoryBuilder;
+
+import ca.bc.gov.chefs.etl.constant.Constants;
+import ca.bc.gov.chefs.etl.core.model.ChefsRequestPayload;
+
 import org.apache.commons.io.IOUtils;
 
 import java.io.BufferedInputStream;
@@ -137,4 +141,16 @@ public class CommonUtils {
             }
         }
     }
+
+	public static String generateRequestUri(ChefsRequestPayload payload, String formUsername){
+		String uri = PropertiesUtil.getValue(Constants.CHEFS_API_URL).formatted(PropertiesUtil.getValue(formUsername), payload.getVersion(),payload.getStartDate(),payload.getEndDate(),
+		payload.getUpdatedMinDate(), payload.getUpdatedMaxDate(), payload.isDraft(), payload.isDeleted(), payload.getStatus());
+		if(!payload.isDraft()){
+			uri = uri.replaceAll("&drafts=false&", "&");
+		}
+		if(!payload.isDeleted()){
+			uri = uri.replaceAll("&deleted=false&", "&");
+		}
+		return uri;
+	}
 }

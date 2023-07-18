@@ -9,6 +9,7 @@ import org.apache.camel.Processor;
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.ChefsRequestPayload;
 import ca.bc.gov.chefs.etl.util.AuthUtil;
+import ca.bc.gov.chefs.etl.util.CommonUtils;
 import ca.bc.gov.chefs.etl.util.JsonUtil;
 import ca.bc.gov.chefs.etl.util.PropertiesUtil;
 
@@ -23,8 +24,7 @@ public class BaseApiProcessor implements Processor {
 		ChefsRequestPayload payload =  JsonUtil.parseJsonString((String)sharedData.get("body"), ChefsRequestPayload.class);
 		String FORM_USERNAME = PropertiesUtil.buildFormProperty(formPropertyName, payload.getHealthAuthority(), true);
 		String FORM_PASSWORD = PropertiesUtil.buildFormProperty(formPropertyName, payload.getHealthAuthority(), false);
-		String uri = PropertiesUtil.getValue(Constants.CHEFS_API_URL).formatted(PropertiesUtil.getValue(FORM_USERNAME), payload.getVersion(),payload.getStartDate(),payload.getEndDate(),
-						payload.getUpdatedMinDate(), payload.getUpdatedMaxDate(), payload.isDraft(), payload.isDeleted(), payload.getStatus());
+		String uri = CommonUtils.generateRequestUri(payload, FORM_USERNAME);
 
 		exchange.getIn().setHeader("RequestUri", uri);
 		exchange.getIn().setHeader("CamelHttpMethod", "GET");
