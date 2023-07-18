@@ -51,6 +51,11 @@ public class CSVUtil {
 		return map;
 	}
 	
+	/* Replaces any found line breaks with a whitespace */
+	public static String replaceLineBreaks(String data){
+		return data.replaceAll("\\R", " ");
+	}
+
 	public static String getFormattedDate(String date) {
 		try {
 //		String isoDate = date;
