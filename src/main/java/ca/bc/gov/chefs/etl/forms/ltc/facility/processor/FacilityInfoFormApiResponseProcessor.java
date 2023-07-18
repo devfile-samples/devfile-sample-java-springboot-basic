@@ -20,6 +20,7 @@ import ca.bc.gov.chefs.etl.forms.ltc.facility.model.FacilityInformation;
 import ca.bc.gov.chefs.etl.forms.ltc.facility.model.Preparer;
 import ca.bc.gov.chefs.etl.util.CSVUtil;
 import ca.bc.gov.chefs.etl.util.FileUtil;
+import ca.bc.gov.chefs.etl.util.JsonUtil;
 
 public class FacilityInfoFormApiResponseProcessor implements Processor {
 
@@ -27,6 +28,7 @@ public class FacilityInfoFormApiResponseProcessor implements Processor {
 	@Override
 	public void process(Exchange exchange) throws Exception {
 		String payload = exchange.getIn().getBody(String.class);
+		payload = JsonUtil.roundDigitsNumber(payload);
 		ObjectMapper mapper = new ObjectMapper();
 		List<Root> facilityInformationModels = mapper.readValue(payload,
 				new TypeReference<List<Root>>() {
