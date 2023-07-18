@@ -1,6 +1,7 @@
 package ca.bc.gov.chefs.etl.core.json;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class Form{
@@ -14,9 +15,9 @@ public class Form{
     public String status;
     public String assignee;
     public String assigneeEmail;
-    public String draft;
-    public String deleted;
-    public String updatedAt;
+    public boolean draft;
+    public boolean deleted;
+	public String updatedAt;
 	public String getConfirmationId() {
 		return confirmationId;
 	}
@@ -77,23 +78,25 @@ public class Form{
 	public void setAssigneeEmail(String assigneeEmail) {
 		this.assigneeEmail = assigneeEmail;
 	}
-	public String getDraft() {
-		return draft;
-	}
-	public void setDraft(String draft) {
-		this.draft = draft;
-	}
-	public String getDeleted() {
-		return deleted;
-	}
-	public void setDeleted(String deleted) {
-		this.deleted = deleted;
-	}
 	public String getUpdatedAt() {
 		return updatedAt;
 	}
 	public void setUpdatedAt(String updatedAt) {
 		this.updatedAt = updatedAt;
+	}
+	public boolean isDraft() {
+		return draft;
+	}
+	@JsonProperty("draft")
+	public void setDraft(boolean draft) {
+		this.draft = Boolean.valueOf(draft);
+	}
+	public boolean isDeleted() {
+		return deleted;
+	}
+	@JsonProperty("deleted")
+	public void setDeleted(boolean deleted) {
+		this.deleted = Boolean.valueOf(deleted);
 	}
     
     
