@@ -11,7 +11,7 @@ public class ChefsRequestPayload {
 	private String endDate;
 	private String updatedMinDate;
 	private String updatedMaxDate;
-	private boolean draft = true;
+	private boolean draft;
 	private boolean deleted = true;
 	private String status;
 	private String healthAuthority;
