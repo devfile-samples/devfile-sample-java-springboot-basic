@@ -3,6 +3,7 @@ package ca.bc.gov.chefs.etl.forms.ltc.quarterly.route;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.routes.BaseRoute;
 import ca.bc.gov.chefs.etl.forms.aims.route.AIMSFormRoute;
 import ca.bc.gov.chefs.etl.forms.ltc.quarterly.processor.LtcQuarterlyYtdApiProcessor;
@@ -29,7 +30,7 @@ public class LtcQuarterlyYtdRoute extends BaseRoute {
 
 		from("direct:ltc-quarterly-ytd")
 				// to the http uri
-				.process(new LtcQuarterlyYtdApiProcessor(sharedData))
+				.process(new LtcQuarterlyYtdApiProcessor(sharedData, Constants.LTC_YTD_PROPERTY))
 				.toD("${header.RequestUri}")
 				.log("This is the status code from the response: ${header.CamelHttpResponseCode}")
 				.log("Trying to convert the received body OK").convertBodyTo(String.class)

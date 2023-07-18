@@ -34,6 +34,9 @@ public class PropertiesUtil {
 	}
 
 	public static String buildFormProperty(String property, String healthAuthority, boolean isUsername){
+		if(healthAuthority == null){
+			return isUsername ? property.concat("username") : property.concat("password");
+		}
 		String result = property.concat(Constants.HA_DICTIONNARY.get(healthAuthority));
 		return isUsername ? result.concat(".username") : result.concat(".password");
 	}

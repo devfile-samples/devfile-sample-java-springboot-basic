@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import ca.bc.gov.chefs.etl.core.json.Form;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Root{
     public String alliedNPContractRate_total;

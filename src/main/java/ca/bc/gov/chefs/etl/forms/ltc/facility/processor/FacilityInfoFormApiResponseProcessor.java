@@ -20,6 +20,7 @@ import ca.bc.gov.chefs.etl.forms.ltc.facility.model.FacilityInformation;
 import ca.bc.gov.chefs.etl.forms.ltc.facility.model.Preparer;
 import ca.bc.gov.chefs.etl.util.CSVUtil;
 import ca.bc.gov.chefs.etl.util.FileUtil;
+import ca.bc.gov.chefs.etl.util.JsonUtil;
 
 public class FacilityInfoFormApiResponseProcessor implements Processor {
 
@@ -27,6 +28,7 @@ public class FacilityInfoFormApiResponseProcessor implements Processor {
 	@Override
 	public void process(Exchange exchange) throws Exception {
 		String payload = exchange.getIn().getBody(String.class);
+		payload = JsonUtil.roundDigitsNumber(payload);
 		ObjectMapper mapper = new ObjectMapper();
 		List<Root> facilityInformationModels = mapper.readValue(payload,
 				new TypeReference<List<Root>>() {
@@ -46,9 +48,6 @@ public class FacilityInfoFormApiResponseProcessor implements Processor {
 		/* Mandatory fields */
 		List<FacilityInformation> facilityInfoParsed = new ArrayList<>();
 		for(Root facility : facilities) {
-			if(!facility.getForm().getStatus().equals(Constants.COMPLETED_STATUS)){
-				continue;
-			}
 			FacilityInformation facilityInfo = new FacilityInformation();
 			facilityInfo.setAccreditationBody(facility.getFacilityAccreditationBody());
 			facilityInfo.setAccreditationDate(facility.getFacilityAccreditationDate());
@@ -62,7 +61,7 @@ public class FacilityInfoFormApiResponseProcessor implements Processor {
 			facilityInfo.setFacilityTelephone(facility.getPhoneNumber());
 			facilityInfo.setFacilityWebsite(facility.getFacilityWebsite());
 			facilityInfo.setHealthAuthority(facility.getHealthAuthority());
-			facilityInfo.setIsDeleted("false"); // TODO FIXME 
+			facilityInfo.setIsDeleted(facility.getForm().getDeleted());
 			facilityInfo.setLegislationtype(facility.getFacilityLegislationType());
 			facilityInfo.setOwnerAddress(facility.getOwnerAddress().getProperties().getFullAddress());
 			facilityInfo.setOwnerCity(facility.getOwnerCity());
