@@ -16,6 +16,7 @@ import ca.bc.gov.chefs.etl.core.model.SuccessResponse;
 import ca.bc.gov.chefs.etl.forms.ltc.facility.model.Approver;
 import ca.bc.gov.chefs.etl.forms.ltc.staffing.json.Root;
 import ca.bc.gov.chefs.etl.forms.ltc.staffing.model.LTCStaffPlanPerf;
+import ca.bc.gov.chefs.etl.forms.ltc.staffing.model.LTCStaffPlanPosSubtotal;
 import ca.bc.gov.chefs.etl.forms.ltc.staffing.model.LTCStaffPlanPosType;
 import ca.bc.gov.chefs.etl.forms.ltc.staffing.model.LTCStaffingAddPos;
 import ca.bc.gov.chefs.etl.forms.ltc.staffing.model.LTCStaffingHrs;
@@ -58,6 +59,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 			LTCStaffingSubmission lTCstaffingPlanMainEntity = new LTCStaffingSubmission();
 			List<LTCStaffingPlan> LTCstaffingPlan = new ArrayList<>();
 			List<LTCStaffPlanPerf> LTCStaffPlanPerf = new ArrayList<>();
+			List<LTCStaffPlanPosSubtotal> LTCStaffPlanPosSubtotal = new ArrayList<>();
 			List<LTCStaffPlanPosType> LTCStaffPlanPosType = new ArrayList<>();
 			List<LTCStaffingAddPos> LTCStaffingAddPos = new ArrayList<>();
 			List<LTCStaffingHrs> LTCStaffingHrs = new ArrayList<>();
@@ -87,6 +89,8 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 			LTCStaffingPlan1.setCumulative_Total_DCH_Q4(root.getDCH_q41());
 			LTCStaffingPlan1.setPerf_4_1(root.getMinimumRN1());
 			LTCStaffingPlan1.setStaffPlanForOther(root.getDoesTheStaffingPatternProvideNote1());
+			LTCStaffingPlan1.setProfessional_Staffing_Percentage(root.getProf_staff_percentage1());
+			LTCStaffingPlan1.setRn_lpn_Staffing_Percentage(root.getRN_LPN_staff_percentage1());
 
 			LTCstaffingPlan.add(LTCStaffingPlan1);
 
@@ -106,6 +110,8 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				LTCStaffingPlan2.setCumulative_Total_DCH_Q4(root.getDCH_q42());
 				LTCStaffingPlan2.setPerf_4_1(root.getMinimumRN2());
 				LTCStaffingPlan2.setStaffPlanForOther(root.getDoesTheStaffingPatternProvideNote2());
+				LTCStaffingPlan2.setProfessional_Staffing_Percentage(root.getProf_staff_percentage2());
+				LTCStaffingPlan2.setRn_lpn_Staffing_Percentage(root.getRN_LPN_staff_percentage2());
 				//LTCstaffingPlan2.setPerfOtherSpecify("");
 				//LTCstaffingPlan2.setStaffPlanForOther(root.getAdditionalNotes21());
 
@@ -129,6 +135,8 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				LTCStaffingPlan3.setCumulative_Total_DCH_Q4(root.getDCH_q43());
 				LTCStaffingPlan3.setPerf_4_1(root.getMinimumRN3());
 				LTCStaffingPlan3.setStaffPlanForOther(root.getDoesTheStaffingPatternProvideNote3());
+				LTCStaffingPlan3.setProfessional_Staffing_Percentage(root.getProf_staff_percentage3());
+				LTCStaffingPlan3.setRn_lpn_Staffing_Percentage(root.getRN_LPN_staff_percentage3());
 
 				LTCstaffingPlan.add(LTCStaffingPlan3);
 
@@ -150,6 +158,8 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				LTCStaffingPlan4.setCumulative_Total_DCH_Q4(root.getDCH_q44());
 				LTCStaffingPlan4.setPerf_4_1(root.getMinimumRN4());
 				LTCStaffingPlan4.setStaffPlanForOther(root.getDoesTheStaffingPatternProvideNote4());
+				LTCStaffingPlan4.setProfessional_Staffing_Percentage(root.getProf_staff_percentage4());
+				LTCStaffingPlan4.setRn_lpn_Staffing_Percentage(root.getRN_LPN_staff_percentage4());
 				
 				LTCstaffingPlan.add(LTCStaffingPlan4);
 			}
@@ -170,6 +180,8 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				LTCStaffingPlan5.setCumulative_Total_DCH_Q4(root.getDCH_q45());
 				LTCStaffingPlan5.setPerf_4_1(root.getMinimumRN5());
 				LTCStaffingPlan5.setStaffPlanForOther(root.getDoesTheStaffingPatternProvideNote5());
+				LTCStaffingPlan5.setProfessional_Staffing_Percentage(root.getProf_staff_percentage5());
+				LTCStaffingPlan5.setRn_lpn_Staffing_Percentage(root.getRN_LPN_staff_percentage5());
 	
 				LTCstaffingPlan.add(LTCStaffingPlan5);
 			}
@@ -199,6 +211,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 			/* adding all other elements to LTCstaffingPlan */
 			lTCstaffingPlanMainEntity.setLTCStaffingPlan(LTCstaffingPlan);
 			lTCstaffingPlanMainEntity.setLTCStaffPlanPerf(LTCStaffPlanPerf);
+			lTCstaffingPlanMainEntity.setLTCStaffPlanPosSubtotal(LTCStaffPlanPosSubtotal);
 			lTCstaffingPlanMainEntity.setLTCStaffPlanPosType(LTCStaffPlanPosType);
 			lTCstaffingPlanMainEntity.setLTCStaffingAddPos(LTCStaffingAddPos);
 			lTCstaffingPlanMainEntity.setLTCStaffingHrs(LTCStaffingHrs);
