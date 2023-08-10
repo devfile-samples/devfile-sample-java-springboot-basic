@@ -350,14 +350,9 @@ public class Constants {
 
 		HEADERS.put(LTC_STAFFING_PLAN, new String[] {
 			"Confirmation_ID", "Staffing_plan_num", "Staff_Plan_For", "Period_start", "Period_end",
-			"Revision_date", "Reason_for_rev", "Nb_Total_Beds", "Perf_4.1", "Perf_Other_specify",
-			"Staff_Plan_For_Other", "Total_Hrs_Nurs_Mon", "Total_Hrs_Nurs_Tues", "Total_Hrs_Nurs_Wed",
-			"Total_Hrs_Nurs_Thurs", "Total_Hrs_Nurs_Fri", "Total_Hrs_Nurs_Sat", "Total_Hrs_Nurs_Sun",
-			"Total_Hrs_Nurs_Wk_Total", "Total_Hrs_Nurs_Annual", "HPRD_Total_Nurs_Mon", "HPRD_Total_Nurs_Tues",
-			"HPRD_Total_Nurs_Wed", "HPRD_Total_Nurs_Thurs", "HPRD_Total_Nurs_Fri","HPRD_Total_Nurs_Sat",
-			"HPRD_Total_Nurs_Sun","HPRD_Total_Nurs_Wk_Total", "HPRD_Total_Allied_Mon", "HPRD_Total_Allied_Tues",
-			"HPRD_Total_Allied_Wed","HPRD_Total_Allied_Thurs", "HPRD_Total_Allied_Fri", "HPRD_Total_Allied_Sat",
-			"HPRD_Total_Allied_Sun", "HPRD_Total_Allied_Wk_Total"
+			"Revision_date", "Reason_for_rev", "Nb_Total_Beds", "Cumulative_Total_DCH_Q1", "Cumulative_Total_DCH_Q2",
+			"Cumulative_Total_DCH_Q3", "Cumulative_Total_DCH_Q4", "Perf_4.1",
+			"Staff_Plan_For_Other"
 		});
 
 		HEADERS.put(LTC_STAFF_PLAN_PERF_4_2, new String[] {

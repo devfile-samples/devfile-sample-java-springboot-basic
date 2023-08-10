@@ -16,36 +16,17 @@ public class LTCStaffingPlan implements IModel{
     private String revisionDate;
     private String reasonForRev;
     private String nbTotalBeds;
+    private String cumulative_Total_DCH_Q1;
+    private String cumulative_Total_DCH_Q2;
+    private String cumulative_Total_DCH_Q3;
+    private String cumulative_Total_DCH_Q4;
     private String perf_4_1;
-    private String perfOtherSpecify;
     private String staffPlanForOther;
-    private String totalHrsNursMon;
-    private String totalHrsNursTues;
-    private String totalHrsNursWed;
-    private String totalHrsNursThurs;
-    private String totalHrsNursFri;
-    private String totalHrsNursSat;
-    private String totalHrsNursSun;
-    private String totalHrsNursWkTotal;
-    private String totalHrsNursAnnual;
-    private String hprdTotalNursMon;
-    private String hprdTotalNursTues;
-    private String hprdTotalNursWed;
-    private String hprdTotalNursThurs;
-    private String hprdTotalNursFri;
-    private String hprdTotalNursSat;
-    private String hprdTotalNursSun;
-    private String hprdTotalNursWkTotal;
-    private String hprdTotalAlliedMon;
-    private String hprdTotalAlliedTues;
-    private String hprdTotalAlliedWed;
-    private String hprdTotalAlliedThurs;
-    private String hprdTotalAlliedFri;
-    private String hprdTotalAlliedSat;
-    private String hprdTotalAlliedSun;
-    private String hprdTotalAlliedWkTotal;
-	
-	public String getConfirmationId() {
+    private String professional_Staffing_Percentage;
+    private String rn_lpn_Staffing_Percentage;
+
+
+    public String getConfirmationId() {
         return confirmationId;
     }
 
@@ -109,20 +90,44 @@ public class LTCStaffingPlan implements IModel{
         this.nbTotalBeds = nbTotalBeds;
     }
 
+    public String getCumulative_Total_DCH_Q1() {
+        return cumulative_Total_DCH_Q1;
+    }
+
+    public void setCumulative_Total_DCH_Q1(String cumulative_Total_DCH_Q1) {
+        this.cumulative_Total_DCH_Q1 = cumulative_Total_DCH_Q1;
+    }
+
+    public String getCumulative_Total_DCH_Q2() {
+        return cumulative_Total_DCH_Q2;
+    }
+
+    public void setCumulative_Total_DCH_Q2(String cumulative_Total_DCH_Q2) {
+        this.cumulative_Total_DCH_Q2 = cumulative_Total_DCH_Q2;
+    }
+
+    public String getCumulative_Total_DCH_Q3() {
+        return cumulative_Total_DCH_Q3;
+    }
+
+    public void setCumulative_Total_DCH_Q3(String cumulative_Total_DCH_Q3) {
+        this.cumulative_Total_DCH_Q3 = cumulative_Total_DCH_Q3;
+    }
+
+    public String getCumulative_Total_DCH_Q4() {
+        return cumulative_Total_DCH_Q4;
+    }
+
+    public void setCumulative_Total_DCH_Q4(String cumulative_Total_DCH_Q4) {
+        this.cumulative_Total_DCH_Q4 = cumulative_Total_DCH_Q4;
+    }
+
     public String getPerf_4_1() {
         return perf_4_1;
     }
 
     public void setPerf_4_1(String perf_4_1) {
         this.perf_4_1 = perf_4_1;
-    }
-
-    public String getPerfOtherSpecify() {
-        return perfOtherSpecify;
-    }
-
-    public void setPerfOtherSpecify(String perfOtherSpecify) {
-        this.perfOtherSpecify = perfOtherSpecify;
     }
 
     public String getStaffPlanForOther() {
@@ -133,204 +138,20 @@ public class LTCStaffingPlan implements IModel{
         this.staffPlanForOther = staffPlanForOther;
     }
 
-    public String getTotalHrsNursMon() {
-        return totalHrsNursMon;
+    public String getProfessional_Staffing_Percentage() {
+        return professional_Staffing_Percentage;
     }
 
-    public void setTotalHrsNursMon(String totalHrsNursMon) {
-        this.totalHrsNursMon = totalHrsNursMon;
+    public void setProfessional_Staffing_Percentage(String professional_Staffing_Percentage) {
+        this.professional_Staffing_Percentage = professional_Staffing_Percentage;
     }
 
-    public String getTotalHrsNursTues() {
-        return totalHrsNursTues;
+    public String getRn_lpn_Staffing_Percentage() {
+        return rn_lpn_Staffing_Percentage;
     }
 
-    public void setTotalHrsNursTues(String totalHrsNursTues) {
-        this.totalHrsNursTues = totalHrsNursTues;
-    }
-
-    public String getTotalHrsNursWed() {
-        return totalHrsNursWed;
-    }
-
-    public void setTotalHrsNursWed(String totalHrsNursWed) {
-        this.totalHrsNursWed = totalHrsNursWed;
-    }
-
-    public String getTotalHrsNursThurs() {
-        return totalHrsNursThurs;
-    }
-
-    public void setTotalHrsNursThurs(String totalHrsNursThurs) {
-        this.totalHrsNursThurs = totalHrsNursThurs;
-    }
-
-    public String getTotalHrsNursFri() {
-        return totalHrsNursFri;
-    }
-
-    public void setTotalHrsNursFri(String totalHrsNursFri) {
-        this.totalHrsNursFri = totalHrsNursFri;
-    }
-
-    public String getTotalHrsNursSat() {
-        return totalHrsNursSat;
-    }
-
-    public void setTotalHrsNursSat(String totalHrsNursSat) {
-        this.totalHrsNursSat = totalHrsNursSat;
-    }
-
-    public String getTotalHrsNursSun() {
-        return totalHrsNursSun;
-    }
-
-    public void setTotalHrsNursSun(String totalHrsNursSun) {
-        this.totalHrsNursSun = totalHrsNursSun;
-    }
-
-    public String getTotalHrsNursWkTotal() {
-        return totalHrsNursWkTotal;
-    }
-
-    public void setTotalHrsNursWkTotal(String totalHrsNursWkTotal) {
-        this.totalHrsNursWkTotal = totalHrsNursWkTotal;
-    }
-
-    public String getTotalHrsNursAnnual() {
-        return totalHrsNursAnnual;
-    }
-
-    public void setTotalHrsNursAnnual(String totalHrsNursAnnual) {
-        this.totalHrsNursAnnual = totalHrsNursAnnual;
-    }
-
-    public String getHprdTotalNursMon() {
-        return hprdTotalNursMon;
-    }
-
-    public void setHprdTotalNursMon(String hprdTotalNursMon) {
-        this.hprdTotalNursMon = hprdTotalNursMon;
-    }
-
-    public String getHprdTotalNursTues() {
-        return hprdTotalNursTues;
-    }
-
-    public void setHprdTotalNursTues(String hprdTotalNursTues) {
-        this.hprdTotalNursTues = hprdTotalNursTues;
-    }
-
-    public String getHprdTotalNursWed() {
-        return hprdTotalNursWed;
-    }
-
-    public void setHprdTotalNursWed(String hprdTotalNursWed) {
-        this.hprdTotalNursWed = hprdTotalNursWed;
-    }
-
-    public String getHprdTotalNursThurs() {
-        return hprdTotalNursThurs;
-    }
-
-    public void setHprdTotalNursThurs(String hprdTotalNursThurs) {
-        this.hprdTotalNursThurs = hprdTotalNursThurs;
-    }
-
-    public String getHprdTotalNursFri() {
-        return hprdTotalNursFri;
-    }
-
-    public void setHprdTotalNursFri(String hprdTotalNursFri) {
-        this.hprdTotalNursFri = hprdTotalNursFri;
-    }
-
-    public String getHprdTotalNursSat() {
-        return hprdTotalNursSat;
-    }
-
-    public void setHprdTotalNursSat(String hprdTotalNursSat) {
-        this.hprdTotalNursSat = hprdTotalNursSat;
-    }
-
-    public String getHprdTotalNursSun() {
-        return hprdTotalNursSun;
-    }
-
-    public void setHprdTotalNursSun(String hprdTotalNursSun) {
-        this.hprdTotalNursSun = hprdTotalNursSun;
-    }
-
-    public String getHprdTotalNursWkTotal() {
-        return hprdTotalNursWkTotal;
-    }
-
-    public void setHprdTotalNursWkTotal(String hprdTotalNursWkTotal) {
-        this.hprdTotalNursWkTotal = hprdTotalNursWkTotal;
-    }
-
-    public String getHprdTotalAlliedMon() {
-        return hprdTotalAlliedMon;
-    }
-
-    public void setHprdTotalAlliedMon(String hprdTotalAlliedMon) {
-        this.hprdTotalAlliedMon = hprdTotalAlliedMon;
-    }
-
-    public String getHprdTotalAlliedTues() {
-        return hprdTotalAlliedTues;
-    }
-
-    public void setHprdTotalAlliedTues(String hprdTotalAlliedTues) {
-        this.hprdTotalAlliedTues = hprdTotalAlliedTues;
-    }
-
-    public String getHprdTotalAlliedWed() {
-        return hprdTotalAlliedWed;
-    }
-
-    public void setHprdTotalAlliedWed(String hprdTotalAlliedWed) {
-        this.hprdTotalAlliedWed = hprdTotalAlliedWed;
-    }
-
-    public String getHprdTotalAlliedThurs() {
-        return hprdTotalAlliedThurs;
-    }
-
-    public void setHprdTotalAlliedThurs(String hprdTotalAlliedThurs) {
-        this.hprdTotalAlliedThurs = hprdTotalAlliedThurs;
-    }
-
-    public String getHprdTotalAlliedFri() {
-        return hprdTotalAlliedFri;
-    }
-
-    public void setHprdTotalAlliedFri(String hprdTotalAlliedFri) {
-        this.hprdTotalAlliedFri = hprdTotalAlliedFri;
-    }
-
-    public String getHprdTotalAlliedSat() {
-        return hprdTotalAlliedSat;
-    }
-
-    public void setHprdTotalAlliedSat(String hprdTotalAlliedSat) {
-        this.hprdTotalAlliedSat = hprdTotalAlliedSat;
-    }
-
-    public String getHprdTotalAlliedSun() {
-        return hprdTotalAlliedSun;
-    }
-
-    public void setHprdTotalAlliedSun(String hprdTotalAlliedSun) {
-        this.hprdTotalAlliedSun = hprdTotalAlliedSun;
-    }
-
-    public String getHprdTotalAlliedWkTotal() {
-        return hprdTotalAlliedWkTotal;
-    }
-
-    public void setHprdTotalAlliedWkTotal(String hprdTotalAlliedWkTotal) {
-        this.hprdTotalAlliedWkTotal = hprdTotalAlliedWkTotal;
+    public void setRn_lpn_Staffing_Percentage(String rn_lpn_Staffing_Percentage) {
+        this.rn_lpn_Staffing_Percentage = rn_lpn_Staffing_Percentage;
     }
 
     @Override
@@ -355,33 +176,14 @@ public class LTCStaffingPlan implements IModel{
         elements.add(this.revisionDate);
         elements.add(this.reasonForRev);
         elements.add(this.nbTotalBeds);
+        elements.add(this.cumulative_Total_DCH_Q1);
+        elements.add(this.cumulative_Total_DCH_Q2);
+        elements.add(this.cumulative_Total_DCH_Q3);
+        elements.add(this.cumulative_Total_DCH_Q4);
         elements.add(this.perf_4_1);
-        elements.add(this.perfOtherSpecify);
-        elements.add(this.totalHrsNursMon);
-        elements.add(this.totalHrsNursTues);
-        elements.add(this.totalHrsNursWed);
-        elements.add(this.totalHrsNursThurs);
-        elements.add(this.totalHrsNursFri);
-        elements.add(this.totalHrsNursSat);
-        elements.add(this.totalHrsNursSun);
-        elements.add(this.totalHrsNursWkTotal);
-        elements.add(this.totalHrsNursAnnual);
-        elements.add(this.hprdTotalNursMon);
-        elements.add(this.hprdTotalNursTues);
-        elements.add(this.hprdTotalNursWed);
-        elements.add(this.hprdTotalNursThurs);
-        elements.add(this.hprdTotalNursFri);
-        elements.add(this.hprdTotalNursSat);
-        elements.add(this.hprdTotalNursSun);
-        elements.add(this.hprdTotalNursWkTotal);
-        elements.add(this.hprdTotalAlliedMon);
-        elements.add(this.hprdTotalAlliedTues);
-        elements.add(this.hprdTotalAlliedWed);
-        elements.add(this.hprdTotalAlliedThurs);
-        elements.add(this.hprdTotalAlliedFri);
-        elements.add(this.hprdTotalAlliedSat);
-        elements.add(this.hprdTotalAlliedSun);
-        elements.add(this.hprdTotalAlliedWkTotal);
+        elements.add(this.staffPlanForOther);
+        elements.add(this.professional_Staffing_Percentage);
+        elements.add(this.rn_lpn_Staffing_Percentage);
 		return elements;
 	}
 
