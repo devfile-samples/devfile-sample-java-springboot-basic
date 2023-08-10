@@ -17,6 +17,7 @@ public class LTCStaffingSubmission implements IModel{
 
     private List<LTCStaffingPlan> LTCStaffingPlan;
     private List<LTCStaffPlanPerf> LTCStaffPlanPerf;
+    private List<LTCStaffPlanPosSubtotal> LTCStaffPlanPosSubtotal;
     private List<LTCStaffPlanPosType> LTCStaffPlanPosType;
     private List<LTCStaffingHrs> LTCStaffingHrs;
     private List<LTCStaffingAddPos> LTCStaffingAddPos;
@@ -86,6 +87,14 @@ public class LTCStaffingSubmission implements IModel{
         LTCStaffPlanPerf = lTCStaffPlanPerf;
     }
 
+    public List<LTCStaffPlanPosSubtotal> getLTCStaffPlanPosSubtotal() {
+        return LTCStaffPlanPosSubtotal;
+    }
+
+    public void setLTCStaffPlanPosSubtotal(List<LTCStaffPlanPosSubtotal> lTCStaffPlanPosSubtotal) {
+        LTCStaffPlanPosSubtotal = lTCStaffPlanPosSubtotal;
+    }
+
     public List<LTCStaffPlanPosType> getLTCStaffPlanPosType() {
         return LTCStaffPlanPosType;
     }
@@ -138,6 +147,7 @@ public class LTCStaffingSubmission implements IModel{
         List<IModel> ltcStaffingPlanIModels = new ArrayList<>();
         ltcStaffingPlanIModels.addAll(this.getLTCStaffingPlan());
         ltcStaffingPlanIModels.addAll(this.getLTCStaffPlanPerf());
+        ltcStaffingPlanIModels.addAll(this.getLTCStaffPlanPosSubtotal());
         ltcStaffingPlanIModels.addAll(this.getLTCStaffPlanPosType());
         ltcStaffingPlanIModels.addAll(this.getLTCStaffingHrs());
         ltcStaffingPlanIModels.addAll(this.getLTCStaffingAddPos());

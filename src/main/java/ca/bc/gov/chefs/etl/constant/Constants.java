@@ -102,6 +102,7 @@ public class Constants {
 	public final static String LTC_STAFFING_SUBMISSION = "LTC_STAFFING_SUBMISSION";
 	public final static String LTC_STAFFING_PLAN = "LTC_STAFFING_PLAN";
 	public final static String LTC_STAFF_PLAN_PERF_4_2 = "LTC_STAFF_PLAN_PERF_4_2";
+	public final static String LTC_STAFF_PLAN_POS_SUBTOTALS = "LTC_STAFF_PLAN_POS_SUBTOTALS";
 	public final static String LTC_STAFF_PLAN_POS_TYPE = "LTC_STAFF_PLAN_POS_TYPE";
 	public final static String LTC_STAFFING_HRS = "LTC_STAFFING_HRS";
 	public final static String LTC_STAFFING_ADD_POS = "LTC_STAFFING_ADD_POS";
@@ -357,6 +358,12 @@ public class Constants {
 
 		HEADERS.put(LTC_STAFF_PLAN_PERF_4_2, new String[] {
 			"Confirmation_ID", "Staffing_plan_Num", "Perf_4_2"
+		});
+
+		HEADERS.put(LTC_STAFF_PLAN_POS_SUBTOTALS, new String[] {
+			"Confirmation_ID", "Staffing_plan_Num", "Perf_4_2", "Staff_Plan_staffing_type", "Sum_Staff_Class_hrs_Mon",
+			"Sum_Staff_Class_hrs_Tue","Sum_Staff_Class_hrs_Wed","Sum_Staff_Class_hrs_Thu", "Sum_Staff_Class_hrs_Fri",
+			"Sum_Staff_Class_hrs_Sat", "Sum_Staff_Class_hrs_Sun", "Sum_Staff_Class_hrs_Wk_Total", "Sum_Staff_Class_hrs_Annual"
 		});
 
 		HEADERS.put(LTC_STAFF_PLAN_POS_TYPE, new String[]{
