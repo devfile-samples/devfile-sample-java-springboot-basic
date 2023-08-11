@@ -2442,6 +2442,9 @@ public class Root {
     public String doesTheStaffingPatternProvideNote3;
     public String doesTheStaffingPatternProvideNote4;
     public String doesTheStaffingPatternProvideNote5;
+    public String rn_label1;
+    public String lpn_label1;
+    public String hca_label1;
     public String[] doesTheStaffingPatternProvide1;
     public String[] doesTheStaffingPatternProvide2;
     public String[] doesTheStaffingPatternProvide3;
@@ -2616,6 +2619,24 @@ public class Root {
     }
     public void setLateEntry(String lateEntry) {
         this.lateEntry = lateEntry;
+    }
+    public String getRn_label1() {
+        return rn_label1;
+    }
+    public void setRn_label1(String rn_label1) {
+        this.rn_label1 = rn_label1;
+    }
+    public String getLpn_label1() {
+        return lpn_label1;
+    }
+    public void setLpn_label1(String lpn_label1) {
+        this.lpn_label1 = lpn_label1;
+    }
+    public String getHca_label1() {
+        return hca_label1;
+    }
+    public void setHca_label1(String hca_label1) {
+        this.hca_label1 = hca_label1;
     }
     public String getNp_label1() {
         return np_label1;
