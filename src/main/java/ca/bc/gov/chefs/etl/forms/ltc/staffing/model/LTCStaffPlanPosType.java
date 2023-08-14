@@ -21,6 +21,9 @@ public class LTCStaffPlanPosType implements IModel {
 	private String sumStaffHrsSun;
 	private String sumStaffHrsWkTotal;
 	private String sumStaffHrsAnnual;
+	private String sumPosAnnual;
+	private String sumPosInhouse;
+	private String sumPosContracted;
 
 	public String getConfirmationId() {
 		return confirmationId;
@@ -126,6 +129,30 @@ public class LTCStaffPlanPosType implements IModel {
 		this.sumStaffHrsAnnual = sumStaffHrsAnnual;
 	}
 
+	public String getSumPosAnnual() {
+		return sumPosAnnual;
+	}
+
+	public void setSumPosAnnual(String sumPosAnnual) {
+		this.sumPosAnnual = sumPosAnnual;
+	}
+
+	public String getSumPosInhouse() {
+		return sumPosInhouse;
+	}
+
+	public void setSumPosInhouse(String sumPosInhouse) {
+		this.sumPosInhouse = sumPosInhouse;
+	}
+
+	public String getSumPosContracted() {
+		return sumPosContracted;
+	}
+
+	public void setSumPosContracted(String sumPosContracted) {
+		this.sumPosContracted = sumPosContracted;
+	}
+
 	@Override
 	public String getFileName() {
 		// TODO Auto-generated method stub
@@ -153,6 +180,9 @@ public class LTCStaffPlanPosType implements IModel {
 		elements.add(this.sumStaffHrsSun);
 		elements.add(this.sumStaffHrsWkTotal);
 		elements.add(this.sumStaffHrsAnnual);
+		elements.add(this.sumPosAnnual);
+		elements.add(this.sumPosInhouse);
+		elements.add(this.sumPosContracted);
 		return elements;
 	}
 
