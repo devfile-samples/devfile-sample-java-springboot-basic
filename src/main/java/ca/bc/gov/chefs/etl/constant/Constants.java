@@ -36,6 +36,7 @@ public class Constants {
 	/* Default values for empty Strings and Numbers */
 	public final static String DEFAULT_STRING_VALUE = "Not Provided";
 	public final static String DEFAULT_DECIMAL_VALUE = "-99";
+	public final static String DEFAULT_NA_VALUE = "Not Applicable";
 	
 	/* AIMS */
 	public final static String AIMS_USERNAME = "aims.username";
