@@ -107,6 +107,7 @@ public class Constants {
 	public final static String LTC_STAFF_PLAN_POS_TYPE = "LTC_STAFF_PLAN_POS_TYPE";
 	public final static String LTC_STAFFING_HRS = "LTC_STAFFING_HRS";
 	public final static String LTC_STAFFING_ADD_POS = "LTC_STAFFING_ADD_POS";
+	public final static String LTC_STAFF_PLAN_SUMMARY_SUBTOTAL= "LTC_STAFF_PLAN_SUMMARY_SUBTOTAL";
 
 	/* File Constants */
 	public final static String PROPERTIES_DATA_DIR = "data-dir";
@@ -383,6 +384,10 @@ public class Constants {
 		HEADERS.put(LTC_STAFFING_ADD_POS, new String[]{
 			"Confirmation_ID", "Staffing_plan_Num", "Staff_hrs_Pos_Type", "Staff_hrs_Service_Contract_Out", 
 			"Staff_hrs_Legal_Name_Contract_Service", "Staff_hrs_Percent_Service_Contract_Out"
+		});
+		HEADERS.put(LTC_STAFF_PLAN_SUMMARY_SUBTOTAL, new String[]{
+			"Confirmation_ID", "Staffing_plan_Num", "Staff_Plan_Sum_Subtotal_type", "Sum_Pos_annual", 
+			"Sum_Pos_inhouse", "Sum_Pos_contracted"
 		});
 	}
 }
