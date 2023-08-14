@@ -125,7 +125,7 @@ public class LTCStaffPlanPosSubtotal implements IModel{
 
 	@Override
 	public String getFormType() {
-		return Constants.LTC_STAFFING_SUBMISSION;
+		return Constants.LTC_STAFF_PLAN_POS_SUBTOTALS;
 	}
 
 	@Override
