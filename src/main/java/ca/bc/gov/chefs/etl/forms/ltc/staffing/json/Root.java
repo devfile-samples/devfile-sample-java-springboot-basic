@@ -6317,7 +6317,7 @@ public class Root {
         return rn_day_label;
     }
     public void setRn_day_label(String rn_day_label) {
-        this.rn_day_label = rn_day_label1;
+        this.rn_day_label = rn_day_label;
     }
     public String getRn_day_label1() {
         return rn_day_label1;
