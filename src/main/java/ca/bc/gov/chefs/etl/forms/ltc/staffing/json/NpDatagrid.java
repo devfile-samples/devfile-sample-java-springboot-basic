@@ -5,13 +5,13 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class NpDatagrid {
 
-    public String np_other_fri;
     public String np_other_mon;
-    public String np_other_sat;
-    public String np_other_sun;
-    public String np_other_thu;
     public String np_other_tue;
     public String np_other_wed;
+    public String np_other_thu;
+    public String np_other_fri;
+    public String np_other_sat;
+    public String np_other_sun;
     public String npPositionType;
     public String np_other_total;
     public String np_other_annual;

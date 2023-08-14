@@ -3,6 +3,7 @@ package ca.bc.gov.chefs.etl.forms.ltc.staffing.json;
 import java.util.ArrayList;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import ca.bc.gov.chefs.etl.core.json.Form;
 
@@ -10,25 +11,45 @@ import ca.bc.gov.chefs.etl.core.json.Form;
 public class Root {
     public Form form;
     public String admin;
-    public String DCH_q1;
-    public String DCH_q2;
-    public String DCH_q3;
-    public String DCH_q4;
-    public String DCH_q5;
+    @JsonProperty("DCH_q1-1")
+    public String DCH_q11;
+    @JsonProperty("DCH_q2-1")
     public String DCH_q21;
-    public String DCH_q22;
-    public String DCH_q23;
-    public String DCH_q24;
-    public String DCH_q25;
+    @JsonProperty("DCH_q3-1")
     public String DCH_q31;
-    public String DCH_q32;
-    public String DCH_q33;
-    public String DCH_q34;
-    public String DCH_q35;
+    @JsonProperty("DCH_q4-1")
     public String DCH_q41;
+    @JsonProperty("DCH_q1-2")
+    public String DCH_q12;
+    @JsonProperty("DCH_q2-2")
+    public String DCH_q22;
+    @JsonProperty("DCH_q3-2")
+    public String DCH_q32;
+    @JsonProperty("DCH_q4-2")
     public String DCH_q42;
+    @JsonProperty("DCH_q1-3")
+    public String DCH_q13;
+    @JsonProperty("DCH_q2-3")
+    public String DCH_q23;
+    @JsonProperty("DCH_q3-3")
+    public String DCH_q33;
+    @JsonProperty("DCH_q4-3")
     public String DCH_q43;
+    @JsonProperty("DCH_q1-4")
+    public String DCH_q14;
+    @JsonProperty("DCH_q2-4")
+    public String DCH_q24;
+    @JsonProperty("DCH_q3-4")
+    public String DCH_q34;
+    @JsonProperty("DCH_q4-4")
     public String DCH_q44;
+    @JsonProperty("DCH_q1-5")
+    public String DCH_q15;
+    @JsonProperty("DCH_q2-5")
+    public String DCH_q25;
+    @JsonProperty("DCH_q3-5")
+    public String DCH_q35;
+    @JsonProperty("DCH_q4-5")
     public String DCH_q45;
     public String ccimsid;
     public String quarter;
@@ -645,6 +666,7 @@ public class Root {
     public String revisionDate3;
     public String revisionDate4;
     public String revisionDate5;
+    public String rn_day_label;
     public String rn_day_label1;
     public String rn_day_label2;
     public String rn_day_label3;
@@ -655,6 +677,7 @@ public class Root {
     public String rn_day_total3;
     public String rn_day_total4;
     public String rn_day_total5;
+    public String rn_eve_label;
     public String rn_eve_label1;
     public String rn_eve_label2;
     public String rn_eve_label3;
@@ -1300,6 +1323,7 @@ public class Root {
     public String revisionReason3;
     public String revisionReason4;
     public String revisionReason5;
+    public String rn_night_label;
     public String rn_night_label1;
     public String rn_night_label2;
     public String rn_night_label3;
@@ -2416,11 +2440,14 @@ public class Root {
     public String summary_contracted_otherAlliedNProf3;
     public String summary_contracted_otherAlliedNProf4;
     public String summary_contracted_otherAlliedNProf5;
-    public String additionalNotes21;
-    public String additionalNotes22;
-    public String additionalNotes23;
-    public String additionalNotes24;
-    public String additionalNotes25;
+    public String doesTheStaffingPatternProvideNote1;
+    public String doesTheStaffingPatternProvideNote2;
+    public String doesTheStaffingPatternProvideNote3;
+    public String doesTheStaffingPatternProvideNote4;
+    public String doesTheStaffingPatternProvideNote5;
+    public String rn_label1;
+    public String lpn_label1;
+    public String hca_label1;
     public String[] doesTheStaffingPatternProvide1;
     public String[] doesTheStaffingPatternProvide2;
     public String[] doesTheStaffingPatternProvide3;
@@ -2441,11 +2468,11 @@ public class Root {
     public ArrayList<AldDatagrid> aldDatagrid3;
     public ArrayList<AldDatagrid> aldDatagrid4;
     public ArrayList<AldDatagrid> aldDatagrid5;
-    public ArrayList<AldNopDatagrid> aldNopDatagrid1;
-    public ArrayList<AldNopDatagrid> aldNopDatagrid2;
-    public ArrayList<AldNopDatagrid> aldNopDatagrid3;
-    public ArrayList<AldNopDatagrid> aldNopDatagrid4;
-    public ArrayList<AldNopDatagrid> aldNopDatagrid5;
+    public ArrayList<AldNopDatagrid> aldnopDatagrid1;
+    public ArrayList<AldNopDatagrid> aldnopDatagrid2;
+    public ArrayList<AldNopDatagrid> aldnopDatagrid3;
+    public ArrayList<AldNopDatagrid> aldnopDatagrid4;
+    public ArrayList<AldNopDatagrid> aldnopDatagrid5;
     public Form getForm() {
         return form;
     }
@@ -2458,35 +2485,35 @@ public class Root {
     public void setAdmin(String admin) {
         this.admin = admin;
     }
-    public String getDCH_q1() {
-        return DCH_q1;
+    public String getDCH_q11() {
+        return DCH_q11;
     }
-    public void setDCH_q1(String dCH_q1) {
-        DCH_q1 = dCH_q1;
+    public void setDCH_q11(String dCH_q11) {
+        DCH_q11 = dCH_q11;
     }
-    public String getDCH_q2() {
-        return DCH_q2;
+    public String getDCH_q12() {
+        return DCH_q12;
     }
-    public void setDCH_q2(String dCH_q2) {
-        DCH_q2 = dCH_q2;
+    public void setDCH_q12(String dCH_q12) {
+        DCH_q12 = dCH_q12;
     }
-    public String getDCH_q3() {
-        return DCH_q3;
+    public String getDCH_q13() {
+        return DCH_q13;
     }
-    public void setDCH_q3(String dCH_q3) {
-        DCH_q3 = dCH_q3;
+    public void setDCH_q13(String dCH_q13) {
+        DCH_q13 = dCH_q13;
     }
-    public String getDCH_q4() {
-        return DCH_q4;
+    public String getDCH_q14() {
+        return DCH_q14;
     }
-    public void setDCH_q4(String dCH_q4) {
-        DCH_q4 = dCH_q4;
+    public void setDCH_q14(String dCH_q14) {
+        DCH_q14 = dCH_q14;
     }
-    public String getDCH_q5() {
-        return DCH_q5;
+    public String getDCH_q15() {
+        return DCH_q15;
     }
-    public void setDCH_q5(String dCH_q5) {
-        DCH_q5 = dCH_q5;
+    public void setDCH_q15(String dCH_q15) {
+        DCH_q15 = dCH_q15;
     }
     public String getDCH_q21() {
         return DCH_q21;
@@ -2595,6 +2622,24 @@ public class Root {
     }
     public void setLateEntry(String lateEntry) {
         this.lateEntry = lateEntry;
+    }
+    public String getRn_label1() {
+        return rn_label1;
+    }
+    public void setRn_label1(String rn_label1) {
+        this.rn_label1 = rn_label1;
+    }
+    public String getLpn_label1() {
+        return lpn_label1;
+    }
+    public void setLpn_label1(String lpn_label1) {
+        this.lpn_label1 = lpn_label1;
+    }
+    public String getHca_label1() {
+        return hca_label1;
+    }
+    public void setHca_label1(String hca_label1) {
+        this.hca_label1 = hca_label1;
     }
     public String getNp_label1() {
         return np_label1;
@@ -6268,6 +6313,12 @@ public class Root {
     public void setRevisionDate5(String revisionDate5) {
         this.revisionDate5 = revisionDate5;
     }
+    public String getRn_day_label() {
+        return rn_day_label;
+    }
+    public void setRn_day_label(String rn_day_label) {
+        this.rn_day_label = rn_day_label;
+    }
     public String getRn_day_label1() {
         return rn_day_label1;
     }
@@ -6327,6 +6378,12 @@ public class Root {
     }
     public void setRn_day_total5(String rn_day_total5) {
         this.rn_day_total5 = rn_day_total5;
+    }
+    public String getRn_eve_label() {
+        return rn_eve_label;
+    }
+    public void setRn_eve_label(String rn_eve_label) {
+        this.rn_eve_label = rn_eve_label;
     }
     public String getRn_eve_label1() {
         return rn_eve_label1;
@@ -10197,6 +10254,12 @@ public class Root {
     }
     public void setRevisionReason5(String revisionReason5) {
         this.revisionReason5 = revisionReason5;
+    }
+    public String getRn_night_label() {
+        return rn_night_label;
+    }
+    public void setRn_night_label(String rn_night_label) {
+        this.rn_night_label = rn_night_label;
     }
     public String getRn_night_label1() {
         return rn_night_label1;
@@ -16894,35 +16957,35 @@ public class Root {
     public void setSummary_contracted_otherAlliedNProf5(String summary_contracted_otherAlliedNProf5) {
         this.summary_contracted_otherAlliedNProf5 = summary_contracted_otherAlliedNProf5;
     }
-    public String getAdditionalNotes21() {
-        return additionalNotes21;
+    public String getDoesTheStaffingPatternProvideNote1() {
+        return doesTheStaffingPatternProvideNote1;
     }
-    public void setAdditionalNotes21(String additionalNotes21) {
-        this.additionalNotes21 = additionalNotes21;
+    public void setDoesTheStaffingPatternProvideNote1(String doesTheStaffingPatternProvideNote1) {
+        this.doesTheStaffingPatternProvideNote1 = doesTheStaffingPatternProvideNote1;
     }
-    public String getAdditionalNotes22() {
-        return additionalNotes22;
+    public String getDoesTheStaffingPatternProvideNote2() {
+        return doesTheStaffingPatternProvideNote2;
     }
-    public void setAdditionalNotes22(String additionalNotes22) {
-        this.additionalNotes22 = additionalNotes22;
+    public void setDoesTheStaffingPatternProvideNote2(String doesTheStaffingPatternProvideNote2) {
+        this.doesTheStaffingPatternProvideNote2 = doesTheStaffingPatternProvideNote2;
     }
-    public String getAdditionalNotes23() {
-        return additionalNotes23;
+    public String getDoesTheStaffingPatternProvideNote3() {
+        return doesTheStaffingPatternProvideNote3;
     }
-    public void setAdditionalNotes23(String additionalNotes23) {
-        this.additionalNotes23 = additionalNotes23;
+    public void setDoesTheStaffingPatternProvideNote3(String doesTheStaffingPatternProvideNote3) {
+        this.doesTheStaffingPatternProvideNote3 = doesTheStaffingPatternProvideNote3;
     }
-    public String getAdditionalNotes24() {
-        return additionalNotes24;
+    public String getDoesTheStaffingPatternProvideNote4() {
+        return doesTheStaffingPatternProvideNote4;
     }
-    public void setAdditionalNotes24(String additionalNotes24) {
-        this.additionalNotes24 = additionalNotes24;
+    public void setDoesTheStaffingPatternProvideNote4(String doesTheStaffingPatternProvideNote4) {
+        this.doesTheStaffingPatternProvideNote4 = doesTheStaffingPatternProvideNote4;
     }
-    public String getAdditionalNotes25() {
-        return additionalNotes25;
+    public String getDoesTheStaffingPatternProvideNote5() {
+        return doesTheStaffingPatternProvideNote5;
     }
-    public void setAdditionalNotes25(String additionalNotes25) {
-        this.additionalNotes25 = additionalNotes25;
+    public void setDoesTheStaffingPatternProvideNote5(String doesTheStaffingPatternProvideNote5) {
+        this.doesTheStaffingPatternProvideNote5 = doesTheStaffingPatternProvideNote5;
     }
     public String[] getDoesTheStaffingPatternProvide1() {
         return doesTheStaffingPatternProvide1;
@@ -17044,34 +17107,34 @@ public class Root {
     public void setAldDatagrid5(ArrayList<AldDatagrid> aldDatagrid5) {
         this.aldDatagrid5 = aldDatagrid5;
     }
-    public ArrayList<AldNopDatagrid> getAldNopDatagrid1() {
-        return aldNopDatagrid1;
+    public ArrayList<AldNopDatagrid> getAldnopDatagrid1() {
+        return aldnopDatagrid1;
     }
-    public void setAldNopDatagrid1(ArrayList<AldNopDatagrid> aldNopDatagrid1) {
-        this.aldNopDatagrid1 = aldNopDatagrid1;
+    public void setAldnopDatagrid1(ArrayList<AldNopDatagrid> aldNopDatagrid1) {
+        this.aldnopDatagrid1 = aldNopDatagrid1;
     }
-    public ArrayList<AldNopDatagrid> getAldNopDatagrid2() {
-        return aldNopDatagrid2;
+    public ArrayList<AldNopDatagrid> getAldnopDatagrid2() {
+        return aldnopDatagrid2;
     }
-    public void setAldNopDatagrid2(ArrayList<AldNopDatagrid> aldNopDatagrid2) {
-        this.aldNopDatagrid2 = aldNopDatagrid2;
+    public void setAldnopDatagrid2(ArrayList<AldNopDatagrid> aldNopDatagrid2) {
+        this.aldnopDatagrid2 = aldNopDatagrid2;
     }
-    public ArrayList<AldNopDatagrid> getAldNopDatagrid3() {
-        return aldNopDatagrid3;
+    public ArrayList<AldNopDatagrid> getAldnopDatagrid3() {
+        return aldnopDatagrid3;
     }
-    public void setAldNopDatagrid3(ArrayList<AldNopDatagrid> aldNopDatagrid3) {
-        this.aldNopDatagrid3 = aldNopDatagrid3;
+    public void setAldnopDatagrid3(ArrayList<AldNopDatagrid> aldNopDatagrid3) {
+        this.aldnopDatagrid3 = aldNopDatagrid3;
     }
-    public ArrayList<AldNopDatagrid> getAldNopDatagrid4() {
-        return aldNopDatagrid4;
+    public ArrayList<AldNopDatagrid> getAldnopDatagrid4() {
+        return aldnopDatagrid4;
     }
-    public void setAldNopDatagrid4(ArrayList<AldNopDatagrid> aldNopDatagrid4) {
-        this.aldNopDatagrid4 = aldNopDatagrid4;
+    public void setAldnopDatagrid4(ArrayList<AldNopDatagrid> aldNopDatagrid4) {
+        this.aldnopDatagrid4 = aldNopDatagrid4;
     }
-    public ArrayList<AldNopDatagrid> getAldNopDatagrid5() {
-        return aldNopDatagrid5;
+    public ArrayList<AldNopDatagrid> getAldnopDatagrid5() {
+        return aldnopDatagrid5;
     }
-    public void setAldNopDatagrid5(ArrayList<AldNopDatagrid> aldNopDatagrid5) {
-        this.aldNopDatagrid5 = aldNopDatagrid5;
+    public void setAldnopDatagrid5(ArrayList<AldNopDatagrid> aldNopDatagrid5) {
+        this.aldnopDatagrid5 = aldNopDatagrid5;
     }
 }
