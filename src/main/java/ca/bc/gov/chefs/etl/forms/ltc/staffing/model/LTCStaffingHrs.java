@@ -22,11 +22,6 @@ public class LTCStaffingHrs implements IModel{
 	private String staffHrsSun;
 	private String staffHrsWkTotal;
 	private String staffHrsAnnual;
-	
-	/* repeated field 4.1*/
-	private String rn247;
-	
-	
 
 	public String getConfirmationId() {
 		return confirmationId;
@@ -132,14 +127,6 @@ public class LTCStaffingHrs implements IModel{
 		this.staffHrsAnnual = staffHrsAnnual;
 	}
 
-	public String getRn247() {
-		return rn247;
-	}
-
-	public void setRn247(String rn247) {
-		this.rn247 = rn247;
-	}
-
 	@Override
 	public String getFileName() {
 		// TODO Auto-generated method stub
@@ -167,7 +154,6 @@ public class LTCStaffingHrs implements IModel{
 		elements.add(this.staffHrsSun);
 		elements.add(this.staffHrsWkTotal);
 		elements.add(this.staffHrsAnnual);
-		elements.add(this.rn247);
 		return elements;
 	}
 

@@ -377,7 +377,7 @@ public class Constants {
 		HEADERS.put(LTC_STAFFING_HRS, new String[]{
 			"Confirmation_ID","Staffing_plan_Num", "Staff_hrs_Pos_Type", "Staff_hrs_pos_shift_type", "Staff_hrs_Mon",
 			"Staff_hrs_Tue","Staff_hrs_Wed","Staff_hrs_Thu","Staff_hrs_Fri", "Staff_hrs_Sat", "Staff_hrs_Sun",
-			"Staff_hrs_Wk_Total", "Staff_hrs_Annual", "RN_24_7"
+			"Staff_hrs_Wk_Total", "Staff_hrs_Annual"
 		});
 
 		HEADERS.put(LTC_STAFFING_ADD_POS, new String[]{
