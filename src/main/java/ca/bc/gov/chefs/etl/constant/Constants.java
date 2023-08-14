@@ -362,7 +362,7 @@ public class Constants {
 		});
 
 		HEADERS.put(LTC_STAFF_PLAN_POS_SUBTOTALS, new String[] {
-			"Confirmation_ID", "Staffing_plan_Num", "Perf_4_2", "Staff_Plan_staffing_type", "Sum_Staff_Class_hrs_Mon",
+			"Confirmation_ID", "Staffing_plan_Num", "Staff_Plan_staffing_type", "Sum_Staff_Class_hrs_Mon",
 			"Sum_Staff_Class_hrs_Tue","Sum_Staff_Class_hrs_Wed","Sum_Staff_Class_hrs_Thu", "Sum_Staff_Class_hrs_Fri",
 			"Sum_Staff_Class_hrs_Sat", "Sum_Staff_Class_hrs_Sun", "Sum_Staff_Class_hrs_Wk_Total", "Sum_Staff_Class_hrs_Annual"
 		});
