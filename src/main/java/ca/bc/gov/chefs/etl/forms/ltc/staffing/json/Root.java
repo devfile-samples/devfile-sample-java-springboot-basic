@@ -666,6 +666,7 @@ public class Root {
     public String revisionDate3;
     public String revisionDate4;
     public String revisionDate5;
+    public String rn_day_label;
     public String rn_day_label1;
     public String rn_day_label2;
     public String rn_day_label3;
@@ -676,6 +677,7 @@ public class Root {
     public String rn_day_total3;
     public String rn_day_total4;
     public String rn_day_total5;
+    public String rn_eve_label;
     public String rn_eve_label1;
     public String rn_eve_label2;
     public String rn_eve_label3;
@@ -1321,6 +1323,7 @@ public class Root {
     public String revisionReason3;
     public String revisionReason4;
     public String revisionReason5;
+    public String rn_night_label;
     public String rn_night_label1;
     public String rn_night_label2;
     public String rn_night_label3;
@@ -6310,6 +6313,12 @@ public class Root {
     public void setRevisionDate5(String revisionDate5) {
         this.revisionDate5 = revisionDate5;
     }
+    public String getRn_day_label() {
+        return rn_day_label;
+    }
+    public void setRn_day_label(String rn_day_label) {
+        this.rn_day_label = rn_day_label1;
+    }
     public String getRn_day_label1() {
         return rn_day_label1;
     }
@@ -6369,6 +6378,12 @@ public class Root {
     }
     public void setRn_day_total5(String rn_day_total5) {
         this.rn_day_total5 = rn_day_total5;
+    }
+    public String getRn_eve_label() {
+        return rn_eve_label;
+    }
+    public void setRn_eve_label(String rn_eve_label) {
+        this.rn_eve_label = rn_eve_label;
     }
     public String getRn_eve_label1() {
         return rn_eve_label1;
@@ -10239,6 +10254,12 @@ public class Root {
     }
     public void setRevisionReason5(String revisionReason5) {
         this.revisionReason5 = revisionReason5;
+    }
+    public String getRn_night_label() {
+        return rn_night_label;
+    }
+    public void setRn_night_label(String rn_night_label) {
+        this.rn_night_label = rn_night_label;
     }
     public String getRn_night_label1() {
         return rn_night_label1;
