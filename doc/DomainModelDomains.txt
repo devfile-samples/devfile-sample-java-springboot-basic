@@ -680,6 +680,7 @@
 "FACILITY_OWNERSHIP_TYPE","privateForProfitPfp","4"
 "FACILITY_OWNERSHIP_TYPE","privateNotForProfitPnfp","5"
 "FACILITY_OWNERSHIP_TYPE","healthAuthorityOwnedOperatedOO","6"
+"FACILITY_OWNERSHIP_TYPE","operatedLeasedOL","7"
 "HA_ABBREVIATED","FHA ","1"
 "HA_ABBREVIATED","IHA","2"
 "HA_ABBREVIATED","NHA","3"
