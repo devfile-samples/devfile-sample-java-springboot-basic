@@ -3,6 +3,8 @@ package ca.bc.gov.chefs.etl.forms.ltc.staffing.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
 
@@ -62,7 +64,7 @@ public class LTCStaffPlanPosType implements IModel {
 	}
 
 	public void setSumStaffHrsMon(String sumStaffHrsMon) {
-		this.sumStaffHrsMon = sumStaffHrsMon;
+		this.sumStaffHrsMon = StringUtils.defaultIfEmpty(sumStaffHrsMon, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getSumStaffHrsTue() {
@@ -70,7 +72,7 @@ public class LTCStaffPlanPosType implements IModel {
 	}
 
 	public void setSumStaffHrsTue(String sumStaffHrsTue) {
-		this.sumStaffHrsTue = sumStaffHrsTue;
+		this.sumStaffHrsTue = StringUtils.defaultIfEmpty(sumStaffHrsTue, Constants.DEFAULT_DECIMAL_VALUE);;
 	}
 
 	public String getSumStaffHrsWed() {
@@ -78,7 +80,7 @@ public class LTCStaffPlanPosType implements IModel {
 	}
 
 	public void setSumStaffHrsWed(String sumStaffHrsWed) {
-		this.sumStaffHrsWed = sumStaffHrsWed;
+		this.sumStaffHrsWed = StringUtils.defaultIfEmpty(sumStaffHrsWed, Constants.DEFAULT_DECIMAL_VALUE);;
 	}
 
 	public String getSumStaffHrsThurs() {
@@ -86,7 +88,7 @@ public class LTCStaffPlanPosType implements IModel {
 	}
 
 	public void setSumStaffHrsThurs(String sumStaffHrsThurs) {
-		this.sumStaffHrsThurs = sumStaffHrsThurs;
+		this.sumStaffHrsThurs = StringUtils.defaultIfEmpty(sumStaffHrsThurs, Constants.DEFAULT_DECIMAL_VALUE);;
 	}
 
 	public String getSumStaffHrsFri() {
@@ -94,7 +96,7 @@ public class LTCStaffPlanPosType implements IModel {
 	}
 
 	public void setSumStaffHrsFri(String sumStaffHrsFri) {
-		this.sumStaffHrsFri = sumStaffHrsFri;
+		this.sumStaffHrsFri = StringUtils.defaultIfEmpty(sumStaffHrsFri, Constants.DEFAULT_DECIMAL_VALUE);;
 	}
 
 	public String getSumStaffHrsSat() {
@@ -102,7 +104,7 @@ public class LTCStaffPlanPosType implements IModel {
 	}
 
 	public void setSumStaffHrsSat(String sumStaffHrsSat) {
-		this.sumStaffHrsSat = sumStaffHrsSat;
+		this.sumStaffHrsSat = StringUtils.defaultIfEmpty(sumStaffHrsSat, Constants.DEFAULT_DECIMAL_VALUE);;
 	}
 
 	public String getSumStaffHrsSun() {
@@ -110,7 +112,7 @@ public class LTCStaffPlanPosType implements IModel {
 	}
 
 	public void setSumStaffHrsSun(String sumStaffHrsSun) {
-		this.sumStaffHrsSun = sumStaffHrsSun;
+		this.sumStaffHrsSun = StringUtils.defaultIfEmpty(sumStaffHrsSun, Constants.DEFAULT_DECIMAL_VALUE);;
 	}
 
 	public String getSumStaffHrsWkTotal() {
