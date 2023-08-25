@@ -36,6 +36,7 @@ public class Constants {
 	/* Default values for empty Strings and Numbers */
 	public final static String DEFAULT_STRING_VALUE = "Not Provided";
 	public final static String DEFAULT_DECIMAL_VALUE = "-99";
+	public final static String DEFAULT_NA_VALUE = "Not Applicable";
 	
 	/* AIMS */
 	public final static String AIMS_USERNAME = "aims.username";
@@ -102,9 +103,11 @@ public class Constants {
 	public final static String LTC_STAFFING_SUBMISSION = "LTC_STAFFING_SUBMISSION";
 	public final static String LTC_STAFFING_PLAN = "LTC_STAFFING_PLAN";
 	public final static String LTC_STAFF_PLAN_PERF_4_2 = "LTC_STAFF_PLAN_PERF_4_2";
+	public final static String LTC_STAFF_PLAN_POS_SUBTOTALS = "LTC_STAFF_PLAN_POS_SUBTOTALS";
 	public final static String LTC_STAFF_PLAN_POS_TYPE = "LTC_STAFF_PLAN_POS_TYPE";
 	public final static String LTC_STAFFING_HRS = "LTC_STAFFING_HRS";
 	public final static String LTC_STAFFING_ADD_POS = "LTC_STAFFING_ADD_POS";
+	public final static String LTC_STAFF_PLAN_SUMMARY_SUBTOTAL= "LTC_STAFF_PLAN_SUMMARY_SUBTOTAL";
 
 	/* File Constants */
 	public final static String PROPERTIES_DATA_DIR = "data-dir";
@@ -350,38 +353,41 @@ public class Constants {
 
 		HEADERS.put(LTC_STAFFING_PLAN, new String[] {
 			"Confirmation_ID", "Staffing_plan_num", "Staff_Plan_For", "Period_start", "Period_end",
-			"Revision_date", "Reason_for_rev", "Nb_Total_Beds", "Perf_4.1", "Perf_Other_specify",
-			"Staff_Plan_For_Other", "Total_Hrs_Nurs_Mon", "Total_Hrs_Nurs_Tues", "Total_Hrs_Nurs_Wed",
-			"Total_Hrs_Nurs_Thurs", "Total_Hrs_Nurs_Fri", "Total_Hrs_Nurs_Sat", "Total_Hrs_Nurs_Sun",
-			"Total_Hrs_Nurs_Wk_Total", "Total_Hrs_Nurs_Annual", "HPRD_Total_Nurs_Mon", "HPRD_Total_Nurs_Tues",
-			"HPRD_Total_Nurs_Wed", "HPRD_Total_Nurs_Thurs", "HPRD_Total_Nurs_Fri","HPRD_Total_Nurs_Sat",
-			"HPRD_Total_Nurs_Sun","HPRD_Total_Nurs_Wk_Total", "HPRD_Total_Allied_Mon", "HPRD_Total_Allied_Tues",
-			"HPRD_Total_Allied_Wed","HPRD_Total_Allied_Thurs", "HPRD_Total_Allied_Fri", "HPRD_Total_Allied_Sat",
-			"HPRD_Total_Allied_Sun", "HPRD_Total_Allied_Wk_Total"
+			"Revision_date", "Reason_for_rev", "Nb_Total_Beds", "Cumulative_Total_DCH_Q1", "Cumulative_Total_DCH_Q2",
+			"Cumulative_Total_DCH_Q3", "Cumulative_Total_DCH_Q4", "Perf_4.1",
+			"Staff_Plan_For_Other"
 		});
 
 		HEADERS.put(LTC_STAFF_PLAN_PERF_4_2, new String[] {
 			"Confirmation_ID", "Staffing_plan_Num", "Perf_4_2"
 		});
 
+		HEADERS.put(LTC_STAFF_PLAN_POS_SUBTOTALS, new String[] {
+			"Confirmation_ID", "Staffing_plan_Num", "Staff_Plan_staffing_type", "Sum_Staff_Class_hrs_Mon",
+			"Sum_Staff_Class_hrs_Tue","Sum_Staff_Class_hrs_Wed","Sum_Staff_Class_hrs_Thu", "Sum_Staff_Class_hrs_Fri",
+			"Sum_Staff_Class_hrs_Sat", "Sum_Staff_Class_hrs_Sun", "Sum_Staff_Class_hrs_Wk_Total", "Sum_Staff_Class_hrs_Annual"
+		});
+
 		HEADERS.put(LTC_STAFF_PLAN_POS_TYPE, new String[]{
-			"Confirmation_ID", "Staffing_plan_Num", "Staff_hrs_Pos_Type", "Sum_Staff_hrs_Mon", "Sum_Staff_hrs_Tue",
-			"Sum_Staff_hrs_Wed", "Sum_Staff_hrs_Thu", "Sum_Staff_hrs_Fri", "Sum_Staff_hrs_Sat", "Sum_Staff_hrs_Sun",
-			"Sum_Staff_hrs_wk_total", "Sum_Staff_hrs_annual", "Sum_nurs_annual","Sum_nurs_inhouse", "Sum_nurs_contracted",
-			"Sum_nurs_total", "Sum_allied_np_annual", "Sum _allied_np_inhouse", "Sum_allied_np_contracted",
-			"Sum _allied_np_total", "Sum_allied_prof_annual", "Sum_allied_prof_inhouse", "Sum_allied_prof_contracted",
-			"Sum_allied_prof_total"
+			"Confirmation_ID", "Staffing_plan_Num", "Staff_hrs_Pos_Type", "Staff_hrs_Pos_Other_Name", "Sum_Staff_hrs_Mon",
+			"Sum_Staff_hrs_Tue", "Sum_Staff_hrs_Wed", "Sum_Staff_hrs_Thu", "Sum_Staff_hrs_Fri", "Sum_Staff_hrs_Sat",
+			"Sum_Staff_hrs_Sun", "Sum_Staff_hrs_wk_total", "Sum_Staff_hrs_annual", "Sum_Pos_Annual", "Sum_Pos_Inhouse",
+			"Sum_Pos_Contracted"
 		});
 
 		HEADERS.put(LTC_STAFFING_HRS, new String[]{
 			"Confirmation_ID","Staffing_plan_Num", "Staff_hrs_Pos_Type", "Staff_hrs_pos_shift_type", "Staff_hrs_Mon",
 			"Staff_hrs_Tue","Staff_hrs_Wed","Staff_hrs_Thu","Staff_hrs_Fri", "Staff_hrs_Sat", "Staff_hrs_Sun",
-			"Staff_hrs_Wk_Total", "Staff_hrs_Annual", "RN_24_7"
+			"Staff_hrs_Wk_Total", "Staff_hrs_Annual"
 		});
 
 		HEADERS.put(LTC_STAFFING_ADD_POS, new String[]{
 			"Confirmation_ID", "Staffing_plan_Num", "Staff_hrs_Pos_Type", "Staff_hrs_Service_Contract_Out", 
 			"Staff_hrs_Legal_Name_Contract_Service", "Staff_hrs_Percent_Service_Contract_Out"
+		});
+		HEADERS.put(LTC_STAFF_PLAN_SUMMARY_SUBTOTAL, new String[]{
+			"Confirmation_ID", "Staffing_plan_Num", "Staff_Plan_Sum_Subtotal_type", "Sum_Pos_annual", 
+			"Sum_Pos_inhouse", "Sum_Pos_contracted"
 		});
 	}
 }

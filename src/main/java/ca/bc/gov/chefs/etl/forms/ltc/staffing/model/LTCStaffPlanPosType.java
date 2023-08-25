@@ -3,6 +3,8 @@ package ca.bc.gov.chefs.etl.forms.ltc.staffing.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
 
@@ -11,6 +13,7 @@ public class LTCStaffPlanPosType implements IModel {
 	private String confirmationId;
 	private String staffingPlanNum;
 	private String staffHrsPosType;
+	private String staffHrsPosOtherName;
 	private String sumStaffHrsMon;
 	private String sumStaffHrsTue;
 	private String sumStaffHrsWed;
@@ -20,21 +23,9 @@ public class LTCStaffPlanPosType implements IModel {
 	private String sumStaffHrsSun;
 	private String sumStaffHrsWkTotal;
 	private String sumStaffHrsAnnual;
-	
-	/* Summary of Annual Hours Paid  one and only*/
-	private String sumNursAnnual;
-	private String sumNursInhouse;
-	private String sumNursContracted;
-	private String sumNursTotal;
-	private String sumAlliedNpAnnual;
-	private String sumAlliedNpInhouse;
-	private String sumAlliedNpContracted;
-	private String sumAlliedNpTotal;
-	private String sumAlliedProfAnnual;
-	private String sumAlliedProfInhouse;
-	private String sumAlliedProfContracted;
-	private String sumAlliedProfTotal;
-	
+	private String sumPosAnnual;
+	private String sumPosInhouse;
+	private String sumPosContracted;
 
 	public String getConfirmationId() {
 		return confirmationId;
@@ -60,12 +51,20 @@ public class LTCStaffPlanPosType implements IModel {
 		this.staffHrsPosType = staffHrsPosType;
 	}
 
+	public String getStaffHrsPosOtherName() {
+		return staffHrsPosOtherName;
+	}
+
+	public void setStaffHrsPosOtherName(String staffHrsPosOtherName) {
+		this.staffHrsPosOtherName = staffHrsPosOtherName;
+	}
+
 	public String getSumStaffHrsMon() {
 		return sumStaffHrsMon;
 	}
 
 	public void setSumStaffHrsMon(String sumStaffHrsMon) {
-		this.sumStaffHrsMon = sumStaffHrsMon;
+		this.sumStaffHrsMon = StringUtils.defaultIfEmpty(sumStaffHrsMon, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getSumStaffHrsTue() {
@@ -73,7 +72,7 @@ public class LTCStaffPlanPosType implements IModel {
 	}
 
 	public void setSumStaffHrsTue(String sumStaffHrsTue) {
-		this.sumStaffHrsTue = sumStaffHrsTue;
+		this.sumStaffHrsTue = StringUtils.defaultIfEmpty(sumStaffHrsTue, Constants.DEFAULT_DECIMAL_VALUE);;
 	}
 
 	public String getSumStaffHrsWed() {
@@ -81,7 +80,7 @@ public class LTCStaffPlanPosType implements IModel {
 	}
 
 	public void setSumStaffHrsWed(String sumStaffHrsWed) {
-		this.sumStaffHrsWed = sumStaffHrsWed;
+		this.sumStaffHrsWed = StringUtils.defaultIfEmpty(sumStaffHrsWed, Constants.DEFAULT_DECIMAL_VALUE);;
 	}
 
 	public String getSumStaffHrsThurs() {
@@ -89,7 +88,7 @@ public class LTCStaffPlanPosType implements IModel {
 	}
 
 	public void setSumStaffHrsThurs(String sumStaffHrsThurs) {
-		this.sumStaffHrsThurs = sumStaffHrsThurs;
+		this.sumStaffHrsThurs = StringUtils.defaultIfEmpty(sumStaffHrsThurs, Constants.DEFAULT_DECIMAL_VALUE);;
 	}
 
 	public String getSumStaffHrsFri() {
@@ -97,7 +96,7 @@ public class LTCStaffPlanPosType implements IModel {
 	}
 
 	public void setSumStaffHrsFri(String sumStaffHrsFri) {
-		this.sumStaffHrsFri = sumStaffHrsFri;
+		this.sumStaffHrsFri = StringUtils.defaultIfEmpty(sumStaffHrsFri, Constants.DEFAULT_DECIMAL_VALUE);;
 	}
 
 	public String getSumStaffHrsSat() {
@@ -105,7 +104,7 @@ public class LTCStaffPlanPosType implements IModel {
 	}
 
 	public void setSumStaffHrsSat(String sumStaffHrsSat) {
-		this.sumStaffHrsSat = sumStaffHrsSat;
+		this.sumStaffHrsSat = StringUtils.defaultIfEmpty(sumStaffHrsSat, Constants.DEFAULT_DECIMAL_VALUE);;
 	}
 
 	public String getSumStaffHrsSun() {
@@ -113,7 +112,7 @@ public class LTCStaffPlanPosType implements IModel {
 	}
 
 	public void setSumStaffHrsSun(String sumStaffHrsSun) {
-		this.sumStaffHrsSun = sumStaffHrsSun;
+		this.sumStaffHrsSun = StringUtils.defaultIfEmpty(sumStaffHrsSun, Constants.DEFAULT_DECIMAL_VALUE);;
 	}
 
 	public String getSumStaffHrsWkTotal() {
@@ -132,100 +131,28 @@ public class LTCStaffPlanPosType implements IModel {
 		this.sumStaffHrsAnnual = sumStaffHrsAnnual;
 	}
 
-	public String getSumNursAnnual() {
-		return sumNursAnnual;
+	public String getSumPosAnnual() {
+		return sumPosAnnual;
 	}
 
-	public void setSumNursAnnual(String sumNursAnnual) {
-		this.sumNursAnnual = sumNursAnnual;
+	public void setSumPosAnnual(String sumPosAnnual) {
+		this.sumPosAnnual = sumPosAnnual;
 	}
 
-	public String getSumNursInhouse() {
-		return sumNursInhouse;
+	public String getSumPosInhouse() {
+		return sumPosInhouse;
 	}
 
-	public void setSumNursInhouse(String sumNursInhouse) {
-		this.sumNursInhouse = sumNursInhouse;
+	public void setSumPosInhouse(String sumPosInhouse) {
+		this.sumPosInhouse = sumPosInhouse;
 	}
 
-	public String getSumNursContracted() {
-		return sumNursContracted;
+	public String getSumPosContracted() {
+		return sumPosContracted;
 	}
 
-	public void setSumNursContracted(String sumNursContracted) {
-		this.sumNursContracted = sumNursContracted;
-	}
-
-	public String getSumNursTotal() {
-		return sumNursTotal;
-	}
-
-	public void setSumNursTotal(String sumNursTotal) {
-		this.sumNursTotal = sumNursTotal;
-	}
-
-	public String getSumAlliedNpAnnual() {
-		return sumAlliedNpAnnual;
-	}
-
-	public void setSumAlliedNpAnnual(String sumAlliedNpAnnual) {
-		this.sumAlliedNpAnnual = sumAlliedNpAnnual;
-	}
-
-	public String getSumAlliedNpInhouse() {
-		return sumAlliedNpInhouse;
-	}
-
-	public void setSumAlliedNpInhouse(String sumAlliedNpInhouse) {
-		this.sumAlliedNpInhouse = sumAlliedNpInhouse;
-	}
-
-	public String getSumAlliedNpContracted() {
-		return sumAlliedNpContracted;
-	}
-
-	public void setSumAlliedNpContracted(String sumAlliedNpContracted) {
-		this.sumAlliedNpContracted = sumAlliedNpContracted;
-	}
-
-	public String getSumAlliedNpTotal() {
-		return sumAlliedNpTotal;
-	}
-
-	public void setSumAlliedNpTotal(String sumAlliedNpTotal) {
-		this.sumAlliedNpTotal = sumAlliedNpTotal;
-	}
-
-	public String getSumAlliedProfAnnual() {
-		return sumAlliedProfAnnual;
-	}
-
-	public void setSumAlliedProfAnnual(String sumAlliedProfAnnual) {
-		this.sumAlliedProfAnnual = sumAlliedProfAnnual;
-	}
-
-	public String getSumAlliedProfInhouse() {
-		return sumAlliedProfInhouse;
-	}
-
-	public void setSumAlliedProfInhouse(String sumAlliedProfInhouse) {
-		this.sumAlliedProfInhouse = sumAlliedProfInhouse;
-	}
-
-	public String getSumAlliedProfContracted() {
-		return sumAlliedProfContracted;
-	}
-
-	public void setSumAlliedProfContracted(String sumAlliedProfContracted) {
-		this.sumAlliedProfContracted = sumAlliedProfContracted;
-	}
-
-	public String getSumAlliedProfTotal() {
-		return sumAlliedProfTotal;
-	}
-
-	public void setSumAlliedProfTotal(String sumAlliedProfTotal) {
-		this.sumAlliedProfTotal = sumAlliedProfTotal;
+	public void setSumPosContracted(String sumPosContracted) {
+		this.sumPosContracted = sumPosContracted;
 	}
 
 	@Override
@@ -245,6 +172,7 @@ public class LTCStaffPlanPosType implements IModel {
 		elements.add(this.confirmationId);
 		elements.add(this.staffingPlanNum);
 		elements.add(this.staffHrsPosType);
+		elements.add(this.staffHrsPosOtherName);
 		elements.add(this.sumStaffHrsMon);
 		elements.add(this.sumStaffHrsTue);
 		elements.add(this.sumStaffHrsWed);
@@ -254,18 +182,9 @@ public class LTCStaffPlanPosType implements IModel {
 		elements.add(this.sumStaffHrsSun);
 		elements.add(this.sumStaffHrsWkTotal);
 		elements.add(this.sumStaffHrsAnnual);
-		elements.add(this.sumNursAnnual);
-		elements.add(this.sumNursInhouse);
-		elements.add(this.sumNursContracted);
-		elements.add(this.sumNursTotal);
-		elements.add(this.sumAlliedNpAnnual);
-		elements.add(this.sumAlliedNpInhouse);
-		elements.add(this.sumAlliedNpContracted);
-		elements.add(this.sumAlliedNpTotal);
-		elements.add(this.sumAlliedProfAnnual);
-		elements.add(this.sumAlliedProfInhouse);
-		elements.add(this.sumAlliedProfContracted);
-		elements.add(this.sumAlliedProfTotal);
+		elements.add(this.sumPosAnnual);
+		elements.add(this.sumPosInhouse);
+		elements.add(this.sumPosContracted);
 		return elements;
 	}
 

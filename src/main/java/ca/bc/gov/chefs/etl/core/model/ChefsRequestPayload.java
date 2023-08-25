@@ -12,7 +12,7 @@ public class ChefsRequestPayload {
 	private String updatedMinDate;
 	private String updatedMaxDate;
 	private boolean draft;
-	private boolean deleted = true;
+	private boolean deleted;
 	private String status;
 	private String healthAuthority;
 	private boolean isHeaderAdded = true;
