@@ -62,10 +62,10 @@ public class FacilityInformation implements IModel {
 		IsDeleted = StringUtils.defaultIfEmpty(isDeleted, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getSubmissionDate() {
-		return SubmissionDate.isBlank() || SubmissionDate.isEmpty() ?  Constants.DEFAULT_STRING_VALUE : CSVUtil.getFormattedDate(SubmissionDate);
+		return SubmissionDate;
 	}
 	public void setSubmissionDate(String submissionDate) {
-		SubmissionDate = StringUtils.defaultIfEmpty(submissionDate, Constants.DEFAULT_STRING_VALUE);
+		SubmissionDate = StringUtils.defaultIfEmpty(CSVUtil.getFormattedDate(submissionDate), Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getSubmittedby() {
 		return Submittedby;
@@ -140,17 +140,16 @@ public class FacilityInformation implements IModel {
 		AccreditationBody = StringUtils.defaultIfEmpty(accreditationBody, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getAccreditationDate() {
-		return AccreditationDate.isBlank() || AccreditationDate.isEmpty() ? Constants.DEFAULT_STRING_VALUE : CSVUtil.getFormattedDate(AccreditationDate);
+		return AccreditationDate;
 	}
 	public void setAccreditationDate(String accreditationDate) {
-		AccreditationDate = StringUtils.defaultIfEmpty(accreditationDate, Constants.DEFAULT_STRING_VALUE);
+		AccreditationDate = StringUtils.defaultIfEmpty(CSVUtil.getFormattedDate(accreditationDate), Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getAccreditationExpiryDate() {
-		return AccreditationExpiryDate.isBlank() || AccreditationExpiryDate.isEmpty() ? 
-		Constants.DEFAULT_STRING_VALUE : CSVUtil.getFormattedDate(AccreditationExpiryDate);
+		return AccreditationExpiryDate;
 	}
 	public void setAccreditationExpiryDate(String accreditationExpiryDate) {
-		AccreditationExpiryDate = StringUtils.defaultIfEmpty(accreditationExpiryDate, Constants.DEFAULT_STRING_VALUE);
+		AccreditationExpiryDate = StringUtils.defaultIfEmpty(CSVUtil.getFormattedDate(accreditationExpiryDate), Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getHealthAuthority() {
 		return HealthAuthority;
