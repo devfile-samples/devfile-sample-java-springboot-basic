@@ -3,8 +3,11 @@ package ca.bc.gov.chefs.etl.forms.ltc.staffing.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
+import ca.bc.gov.chefs.etl.util.CSVUtil;
 
 public class LTCStaffingPlan implements IModel{
 
@@ -31,7 +34,7 @@ public class LTCStaffingPlan implements IModel{
     }
 
     public void setConfirmationId(String confirmationId) {
-        this.confirmationId = confirmationId;
+        this.confirmationId = StringUtils.defaultIfEmpty(confirmationId, Constants.DEFAULT_STRING_VALUE);
     }
 
     public String getStaffingPlanNum() {
@@ -39,7 +42,7 @@ public class LTCStaffingPlan implements IModel{
     }
 
     public void setStaffingPlanNum(String staffingPlanNum) {
-        this.staffingPlanNum = staffingPlanNum;
+        this.staffingPlanNum = StringUtils.defaultIfEmpty(staffingPlanNum, Constants.DEFAULT_DECIMAL_VALUE);
     }
 
     public String getStaffPlanFor() {
@@ -47,7 +50,7 @@ public class LTCStaffingPlan implements IModel{
     }
 
     public void setStaffPlanFor(String staffPlanFor) {
-        this.staffPlanFor = staffPlanFor;
+        this.staffPlanFor = StringUtils.defaultIfEmpty(staffPlanFor, Constants.DEFAULT_STRING_VALUE);
     }
 
     public String getPeriodStart() {
@@ -55,7 +58,7 @@ public class LTCStaffingPlan implements IModel{
     }
 
     public void setPeriodStart(String periodStart) {
-        this.periodStart = periodStart;
+        this.periodStart = StringUtils.defaultIfEmpty(CSVUtil.getFormattedDate(periodStart), Constants.DEFAULT_STRING_VALUE);
     }
 
     public String getPeriodEnd() {
@@ -63,7 +66,7 @@ public class LTCStaffingPlan implements IModel{
     }
 
     public void setPeriodEnd(String periodEnd) {
-        this.periodEnd = periodEnd;
+        this.periodEnd = StringUtils.defaultIfEmpty(CSVUtil.getFormattedDate(periodEnd), Constants.DEFAULT_STRING_VALUE);
     }
 
     public String getRevisionDate() {
@@ -71,7 +74,7 @@ public class LTCStaffingPlan implements IModel{
     }
 
     public void setRevisionDate(String revisionDate) {
-        this.revisionDate = revisionDate;
+        this.revisionDate = StringUtils.defaultIfEmpty(CSVUtil.getFormattedDate(revisionDate), Constants.DEFAULT_STRING_VALUE);
     }
 
     public String getReasonForRev() {
@@ -87,7 +90,7 @@ public class LTCStaffingPlan implements IModel{
     }
 
     public void setNbTotalBeds(String nbTotalBeds) {
-        this.nbTotalBeds = nbTotalBeds;
+        this.nbTotalBeds = StringUtils.defaultIfEmpty(nbTotalBeds, Constants.DEFAULT_DECIMAL_VALUE);
     }
 
     public String getCumulative_Total_DCH_Q1() {
@@ -127,7 +130,7 @@ public class LTCStaffingPlan implements IModel{
     }
 
     public void setPerf_4_1(String perf_4_1) {
-        this.perf_4_1 = perf_4_1;
+        this.perf_4_1 = StringUtils.defaultIfEmpty(perf_4_1, Constants.DEFAULT_STRING_VALUE);
     }
 
     public String getStaffPlanForOther() {

@@ -78,7 +78,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 			lTCstaffingPlanMainEntity.setSubmissionDate(root.getForm().getCreatedAt());
 			lTCstaffingPlanMainEntity.setSubmittedBy(root.getForm().getFullName());
 			lTCstaffingPlanMainEntity.setCCIMSID(root.getCcimsid());
-			lTCstaffingPlanMainEntity.setSubmission_FY(root.getQuarter());
+			lTCstaffingPlanMainEntity.setSubmission_FY(root.getFiscalYear());
 
 
 			/* mapping LTCstaffingPlan */
@@ -2918,7 +2918,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 			lpnDayShift1.setConfirmationId(root.getForm().getConfirmationId());
 			lpnDayShift1.setStaffingPlanNum("1");
 			lpnDayShift1.setStaffHrsPosType(root.getLpn_label1());
-			lpnDayShift1.setStaffHrsPosShiftType(root.getLpn_day_label1());
+			lpnDayShift1.setStaffHrsPosShiftType("Days");
 			lpnDayShift1.setStaffHrsMon(root.getLpn_day_mon1());
 			lpnDayShift1.setStaffHrsTue(root.getLpn_day_tue1());
 			lpnDayShift1.setStaffHrsWed(root.getLpn_day_wed1());
@@ -3057,7 +3057,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				lpnDayShift2.setConfirmationId(root.getForm().getConfirmationId());
 				lpnDayShift2.setStaffingPlanNum("2");
 				lpnDayShift2.setStaffHrsPosType(root.getLpn_label1());
-				lpnDayShift2.setStaffHrsPosShiftType(root.getLpn_day_label1());
+				lpnDayShift2.setStaffHrsPosShiftType("Days");
 				lpnDayShift2.setStaffHrsMon(root.getLpn_day_mon2());
 				lpnDayShift2.setStaffHrsTue(root.getLpn_day_tue2());
 				lpnDayShift2.setStaffHrsWed(root.getLpn_day_wed2());
@@ -3197,7 +3197,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				lpnDayShift3.setConfirmationId(root.getForm().getConfirmationId());
 				lpnDayShift3.setStaffingPlanNum("3");
 				lpnDayShift3.setStaffHrsPosType(root.getLpn_label1());
-				lpnDayShift3.setStaffHrsPosShiftType(root.getLpn_day_label1());
+				lpnDayShift3.setStaffHrsPosShiftType("Days");
 				lpnDayShift3.setStaffHrsMon(root.getLpn_day_mon3());
 				lpnDayShift3.setStaffHrsTue(root.getLpn_day_tue3());
 				lpnDayShift3.setStaffHrsWed(root.getLpn_day_wed3());
@@ -3337,7 +3337,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				lpnDayShift4.setConfirmationId(root.getForm().getConfirmationId());
 				lpnDayShift4.setStaffingPlanNum("4");
 				lpnDayShift4.setStaffHrsPosType(root.getLpn_label1());
-				lpnDayShift4.setStaffHrsPosShiftType(root.getLpn_day_label1());
+				lpnDayShift4.setStaffHrsPosShiftType("Days");
 				lpnDayShift4.setStaffHrsMon(root.getLpn_day_mon4());
 				lpnDayShift4.setStaffHrsTue(root.getLpn_day_tue4());
 				lpnDayShift4.setStaffHrsWed(root.getLpn_day_wed4());
@@ -3477,7 +3477,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				lpnDayShift5.setConfirmationId(root.getForm().getConfirmationId());
 				lpnDayShift5.setStaffingPlanNum("5");
 				lpnDayShift5.setStaffHrsPosType(root.getLpn_label1());
-				lpnDayShift5.setStaffHrsPosShiftType(root.getLpn_day_label1());
+				lpnDayShift5.setStaffHrsPosShiftType("Days");
 				lpnDayShift5.setStaffHrsMon(root.getLpn_day_mon5());
 				lpnDayShift5.setStaffHrsTue(root.getLpn_day_tue5());
 				lpnDayShift5.setStaffHrsWed(root.getLpn_day_wed5());

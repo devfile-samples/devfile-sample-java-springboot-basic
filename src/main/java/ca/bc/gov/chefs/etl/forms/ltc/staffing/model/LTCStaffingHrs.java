@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
 
@@ -28,7 +30,7 @@ public class LTCStaffingHrs implements IModel{
 	}
 
 	public void setConfirmationId(String confirmationId) {
-		this.confirmationId = confirmationId;
+		this.confirmationId = StringUtils.defaultIfEmpty(confirmationId, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getStaffingPlanNum() {
@@ -36,7 +38,7 @@ public class LTCStaffingHrs implements IModel{
 	}
 
 	public void setStaffingPlanNum(String staffingPlanNum) {
-		this.staffingPlanNum = staffingPlanNum;
+		this.staffingPlanNum = StringUtils.defaultIfEmpty(staffingPlanNum, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getStaffHrsPosType() {
@@ -44,7 +46,7 @@ public class LTCStaffingHrs implements IModel{
 	}
 
 	public void setStaffHrsPosType(String staffHrsPosType) {
-		this.staffHrsPosType = staffHrsPosType;
+		this.staffHrsPosType = StringUtils.defaultIfEmpty(staffHrsPosType, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getStaffHrsPosShiftType() {
@@ -52,7 +54,7 @@ public class LTCStaffingHrs implements IModel{
 	}
 
 	public void setStaffHrsPosShiftType(String staffHrsPosShiftType) {
-		this.staffHrsPosShiftType = staffHrsPosShiftType;
+		this.staffHrsPosShiftType = StringUtils.defaultIfEmpty(staffHrsPosShiftType, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getStaffHrsMon() {
@@ -60,7 +62,7 @@ public class LTCStaffingHrs implements IModel{
 	}
 
 	public void setStaffHrsMon(String staffHrsMon) {
-		this.staffHrsMon = staffHrsMon;
+		this.staffHrsMon = StringUtils.defaultIfEmpty(staffHrsMon, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getStaffHrsTue() {
@@ -68,7 +70,7 @@ public class LTCStaffingHrs implements IModel{
 	}
 
 	public void setStaffHrsTue(String staffHrsTue) {
-		this.staffHrsTue = staffHrsTue;
+		this.staffHrsTue = StringUtils.defaultIfEmpty(staffHrsTue, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getStaffHrsWed() {
@@ -76,7 +78,7 @@ public class LTCStaffingHrs implements IModel{
 	}
 
 	public void setStaffHrsWed(String staffHrsWed) {
-		this.staffHrsWed = staffHrsWed;
+		this.staffHrsWed = StringUtils.defaultIfEmpty(staffHrsWed, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getStaffHrsThurs() {
@@ -84,7 +86,7 @@ public class LTCStaffingHrs implements IModel{
 	}
 
 	public void setStaffHrsThurs(String staffHrsThurs) {
-		this.staffHrsThurs = staffHrsThurs;
+		this.staffHrsThurs = StringUtils.defaultIfEmpty(staffHrsThurs, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getStaffHrsFri() {
@@ -92,7 +94,7 @@ public class LTCStaffingHrs implements IModel{
 	}
 
 	public void setStaffHrsFri(String staffHrsFri) {
-		this.staffHrsFri = staffHrsFri;
+		this.staffHrsFri = StringUtils.defaultIfEmpty(staffHrsFri, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getStaffHrsSat() {
@@ -100,7 +102,7 @@ public class LTCStaffingHrs implements IModel{
 	}
 
 	public void setStaffHrsSat(String staffHrsSat) {
-		this.staffHrsSat = staffHrsSat;
+		this.staffHrsSat = StringUtils.defaultIfEmpty(staffHrsSat, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getStaffHrsSun() {
@@ -108,7 +110,7 @@ public class LTCStaffingHrs implements IModel{
 	}
 
 	public void setStaffHrsSun(String staffHrsSun) {
-		this.staffHrsSun = staffHrsSun;
+		this.staffHrsSun = StringUtils.defaultIfEmpty(staffHrsSun, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getStaffHrsWkTotal() {

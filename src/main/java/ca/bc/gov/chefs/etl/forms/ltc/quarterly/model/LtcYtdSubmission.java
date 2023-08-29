@@ -136,11 +136,11 @@ public class LtcYtdSubmission implements IModel {
 	}
 
 	public String getSubmissionDate() {
-		return submissionDate.isBlank() || submissionDate.isEmpty() ? Constants.DEFAULT_STRING_VALUE : CSVUtil.getFormattedDate(submissionDate);
+		return submissionDate;
 	}
 
 	public void setSubmissionDate(String submissionDate) {
-		this.submissionDate = StringUtils.defaultIfEmpty(submissionDate, Constants.DEFAULT_STRING_VALUE);;
+		this.submissionDate = StringUtils.defaultIfEmpty(CSVUtil.getFormattedDate(submissionDate), Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getSubmittedBy() {
@@ -148,7 +148,7 @@ public class LtcYtdSubmission implements IModel {
 	}
 
 	public void setSubmittedBy(String submittedBy) {
-		this.submittedBy = StringUtils.defaultIfEmpty(submittedBy, Constants.DEFAULT_STRING_VALUE);;
+		this.submittedBy = StringUtils.defaultIfEmpty(submittedBy, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getPeriod() {
