@@ -3,6 +3,8 @@ package ca.bc.gov.chefs.etl.forms.ltc.staffing.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
 
@@ -23,7 +25,7 @@ public class LTCStaffingAddPos implements IModel {
 	}
 
 	public void setConfirmationId(String confirmationId) {
-		this.confirmationId = confirmationId;
+		this.confirmationId = StringUtils.defaultIfEmpty(confirmationId, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getStaffingPlanNum() {
@@ -31,7 +33,7 @@ public class LTCStaffingAddPos implements IModel {
 	}
 
 	public void setStaffingPlanNum(String staffingPlanNum) {
-		this.staffingPlanNum = staffingPlanNum;
+		this.staffingPlanNum = StringUtils.defaultIfEmpty(staffingPlanNum, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getStaffingHrsPosType() {
@@ -39,7 +41,7 @@ public class LTCStaffingAddPos implements IModel {
 	}
 
 	public void setStaffingHrsPosType(String staffingHrsPosType) {
-		this.staffingHrsPosType = staffingHrsPosType;
+		this.staffingHrsPosType = StringUtils.defaultIfEmpty(staffingHrsPosType, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getStaffHrsServiceContractOut() {
@@ -55,7 +57,7 @@ public class LTCStaffingAddPos implements IModel {
 	}
 
 	public void setStaffHrsLegalNameContractService(String staffHrsLegalNameContractService) {
-		this.staffHrsLegalNameContractService = staffHrsLegalNameContractService;
+		this.staffHrsLegalNameContractService = StringUtils.defaultIfEmpty(staffHrsLegalNameContractService, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getStaffHoursPercentServiceContractOut() {
@@ -63,7 +65,7 @@ public class LTCStaffingAddPos implements IModel {
 	}
 
 	public void setStaffHoursPercentServiceContractOut(String staffHoursPercentServiceContractOut) {
-		this.staffHoursPercentServiceContractOut = staffHoursPercentServiceContractOut;
+		this.staffHoursPercentServiceContractOut = StringUtils.defaultIfEmpty(staffHoursPercentServiceContractOut, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	@Override

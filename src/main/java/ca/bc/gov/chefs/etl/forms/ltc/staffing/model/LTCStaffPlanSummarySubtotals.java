@@ -3,6 +3,8 @@ package ca.bc.gov.chefs.etl.forms.ltc.staffing.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
 
@@ -21,7 +23,7 @@ public class LTCStaffPlanSummarySubtotals implements IModel {
 	}
 
 	public void setConfirmationId(String confirmationId) {
-		this.confirmationId = confirmationId;
+		this.confirmationId = StringUtils.defaultIfEmpty(confirmationId, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getStaffingPlanNum() {
@@ -29,7 +31,7 @@ public class LTCStaffPlanSummarySubtotals implements IModel {
 	}
 
 	public void setStaffingPlanNum(String staffingPlanNum) {
-		this.staffingPlanNum = staffingPlanNum;
+		this.staffingPlanNum = StringUtils.defaultIfEmpty(staffingPlanNum, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getStaffPlanSumSubtotalType() {
@@ -37,7 +39,7 @@ public class LTCStaffPlanSummarySubtotals implements IModel {
 	}
 
 	public void setStaffPlanSumSubtotalType(String staffPlanSumSubtotalType) {
-		this.staffPlanSumSubtotalType = staffPlanSumSubtotalType;
+		this.staffPlanSumSubtotalType = StringUtils.defaultIfEmpty(staffPlanSumSubtotalType, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getSumPosAnnual() {

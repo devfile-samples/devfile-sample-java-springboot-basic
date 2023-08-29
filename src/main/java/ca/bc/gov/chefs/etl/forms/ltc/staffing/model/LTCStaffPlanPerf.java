@@ -3,6 +3,8 @@ package ca.bc.gov.chefs.etl.forms.ltc.staffing.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
 
@@ -16,19 +18,19 @@ public class LTCStaffPlanPerf implements IModel{
 		return confirmationId;
 	}
 	public void setConfirmationId(String confirmationId) {
-		this.confirmationId = confirmationId;
+		this.confirmationId = StringUtils.defaultIfEmpty(confirmationId, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getStaffingPlanNum() {
 		return staffingPlanNum;
 	}
 	public void setStaffingPlanNum(String staffingPlanNum) {
-		this.staffingPlanNum = staffingPlanNum;
+		this.staffingPlanNum = StringUtils.defaultIfEmpty(staffingPlanNum, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getPerf_4_2() {
 		return perf_4_2;
 	}
 	public void setPerf_4_2(String perf_4_2) {
-		this.perf_4_2 = perf_4_2;
+		this.perf_4_2 = StringUtils.defaultIfEmpty(perf_4_2, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	@Override

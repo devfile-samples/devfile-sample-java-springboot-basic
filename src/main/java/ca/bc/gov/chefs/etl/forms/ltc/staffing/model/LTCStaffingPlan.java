@@ -34,7 +34,7 @@ public class LTCStaffingPlan implements IModel{
     }
 
     public void setConfirmationId(String confirmationId) {
-        this.confirmationId = confirmationId;
+        this.confirmationId = StringUtils.defaultIfEmpty(confirmationId, Constants.DEFAULT_STRING_VALUE);
     }
 
     public String getStaffingPlanNum() {
@@ -42,7 +42,7 @@ public class LTCStaffingPlan implements IModel{
     }
 
     public void setStaffingPlanNum(String staffingPlanNum) {
-        this.staffingPlanNum = staffingPlanNum;
+        this.staffingPlanNum = StringUtils.defaultIfEmpty(staffingPlanNum, Constants.DEFAULT_DECIMAL_VALUE);
     }
 
     public String getStaffPlanFor() {
@@ -50,7 +50,7 @@ public class LTCStaffingPlan implements IModel{
     }
 
     public void setStaffPlanFor(String staffPlanFor) {
-        this.staffPlanFor = staffPlanFor;
+        this.staffPlanFor = StringUtils.defaultIfEmpty(staffPlanFor, Constants.DEFAULT_STRING_VALUE);
     }
 
     public String getPeriodStart() {
@@ -90,7 +90,7 @@ public class LTCStaffingPlan implements IModel{
     }
 
     public void setNbTotalBeds(String nbTotalBeds) {
-        this.nbTotalBeds = nbTotalBeds;
+        this.nbTotalBeds = StringUtils.defaultIfEmpty(nbTotalBeds, Constants.DEFAULT_DECIMAL_VALUE);
     }
 
     public String getCumulative_Total_DCH_Q1() {
@@ -130,7 +130,7 @@ public class LTCStaffingPlan implements IModel{
     }
 
     public void setPerf_4_1(String perf_4_1) {
-        this.perf_4_1 = perf_4_1;
+        this.perf_4_1 = StringUtils.defaultIfEmpty(perf_4_1, Constants.DEFAULT_STRING_VALUE);
     }
 
     public String getStaffPlanForOther() {

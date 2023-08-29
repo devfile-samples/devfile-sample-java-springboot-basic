@@ -31,7 +31,7 @@ public class LTCStaffingSubmission implements IModel{
     }
 
     public void setConfirmationId(String confirmationId) {
-        this.confirmationId = confirmationId;
+        this.confirmationId = StringUtils.defaultIfEmpty(confirmationId, Constants.DEFAULT_STRING_VALUE);
     }
 
     public String getIsDeleted() {
@@ -39,7 +39,7 @@ public class LTCStaffingSubmission implements IModel{
     }
 
     public void setIsDeleted(String isDeleted) {
-        this.isDeleted = isDeleted;
+        this.isDeleted = StringUtils.defaultIfEmpty(isDeleted, Constants.DEFAULT_STRING_VALUE);
     }
 
     public String getSubmissionDate() {
@@ -63,7 +63,7 @@ public class LTCStaffingSubmission implements IModel{
     }
 
     public void setCCIMSID(String cCIMSID) {
-        CCIMSID = cCIMSID;
+        CCIMSID = StringUtils.defaultIfEmpty(cCIMSID, Constants.DEFAULT_STRING_VALUE);
     }
 
     public String getSubmission_FY() {
@@ -71,7 +71,7 @@ public class LTCStaffingSubmission implements IModel{
     }
 
     public void setSubmission_FY(String submission_FY) {
-        this.submission_FY = submission_FY;
+        this.submission_FY = StringUtils.defaultIfEmpty(submission_FY, Constants.DEFAULT_STRING_VALUE);
     }
 
     public List<LTCStaffingPlan> getLTCStaffingPlan() {

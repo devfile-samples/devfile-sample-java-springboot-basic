@@ -32,7 +32,7 @@ public class LTCStaffPlanPosType implements IModel {
 	}
 
 	public void setConfirmationId(String confirmationId) {
-		this.confirmationId = confirmationId;
+		this.confirmationId = StringUtils.defaultIfEmpty(confirmationId, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getStaffingPlanNum() {
@@ -40,7 +40,7 @@ public class LTCStaffPlanPosType implements IModel {
 	}
 
 	public void setStaffingPlanNum(String staffingPlanNum) {
-		this.staffingPlanNum = staffingPlanNum;
+		this.staffingPlanNum = StringUtils.defaultIfEmpty(staffingPlanNum, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getStaffHrsPosType() {
@@ -48,7 +48,7 @@ public class LTCStaffPlanPosType implements IModel {
 	}
 
 	public void setStaffHrsPosType(String staffHrsPosType) {
-		this.staffHrsPosType = staffHrsPosType;
+		this.staffHrsPosType = StringUtils.defaultIfEmpty(staffHrsPosType, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getStaffHrsPosOtherName() {
@@ -56,7 +56,7 @@ public class LTCStaffPlanPosType implements IModel {
 	}
 
 	public void setStaffHrsPosOtherName(String staffHrsPosOtherName) {
-		this.staffHrsPosOtherName = staffHrsPosOtherName;
+		this.staffHrsPosOtherName = StringUtils.defaultIfEmpty(staffHrsPosOtherName, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getSumStaffHrsMon() {
