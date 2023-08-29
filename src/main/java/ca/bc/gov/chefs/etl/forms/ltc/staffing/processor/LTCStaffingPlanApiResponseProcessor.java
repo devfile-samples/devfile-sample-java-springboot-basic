@@ -78,7 +78,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 			lTCstaffingPlanMainEntity.setSubmissionDate(root.getForm().getCreatedAt());
 			lTCstaffingPlanMainEntity.setSubmittedBy(root.getForm().getFullName());
 			lTCstaffingPlanMainEntity.setCCIMSID(root.getCcimsid());
-			lTCstaffingPlanMainEntity.setSubmission_FY(root.getQuarter());
+			lTCstaffingPlanMainEntity.setSubmission_FY(root.getFiscalYear());
 
 
 			/* mapping LTCstaffingPlan */

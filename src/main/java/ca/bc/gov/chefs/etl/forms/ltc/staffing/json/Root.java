@@ -52,7 +52,7 @@ public class Root {
     @JsonProperty("DCH_q4-5")
     public String DCH_q45;
     public String ccimsid;
-    public String quarter;
+    public String fiscalYear;
     public String lateEntry;
     public String np_label1;
     public String np_label2;
@@ -2611,11 +2611,11 @@ public class Root {
     public void setCcimsid(String ccimsid) {
         this.ccimsid = ccimsid;
     }
-    public String getQuarter() {
-        return quarter;
+    public String getFiscalYear() {
+        return fiscalYear;
     }
-    public void setQuarter(String quarter) {
-        this.quarter = quarter;
+    public void setFiscalYear(String fiscalYear) {
+        this.fiscalYear = fiscalYear;
     }
     public String getLateEntry() {
         return lateEntry;
