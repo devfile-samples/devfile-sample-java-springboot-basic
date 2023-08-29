@@ -72,7 +72,7 @@ public class LTCStaffPlanPosType implements IModel {
 	}
 
 	public void setSumStaffHrsTue(String sumStaffHrsTue) {
-		this.sumStaffHrsTue = StringUtils.defaultIfEmpty(sumStaffHrsTue, Constants.DEFAULT_DECIMAL_VALUE);;
+		this.sumStaffHrsTue = StringUtils.defaultIfEmpty(sumStaffHrsTue, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getSumStaffHrsWed() {
@@ -80,7 +80,7 @@ public class LTCStaffPlanPosType implements IModel {
 	}
 
 	public void setSumStaffHrsWed(String sumStaffHrsWed) {
-		this.sumStaffHrsWed = StringUtils.defaultIfEmpty(sumStaffHrsWed, Constants.DEFAULT_DECIMAL_VALUE);;
+		this.sumStaffHrsWed = StringUtils.defaultIfEmpty(sumStaffHrsWed, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getSumStaffHrsThurs() {
@@ -88,7 +88,7 @@ public class LTCStaffPlanPosType implements IModel {
 	}
 
 	public void setSumStaffHrsThurs(String sumStaffHrsThurs) {
-		this.sumStaffHrsThurs = StringUtils.defaultIfEmpty(sumStaffHrsThurs, Constants.DEFAULT_DECIMAL_VALUE);;
+		this.sumStaffHrsThurs = StringUtils.defaultIfEmpty(sumStaffHrsThurs, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getSumStaffHrsFri() {
@@ -96,7 +96,7 @@ public class LTCStaffPlanPosType implements IModel {
 	}
 
 	public void setSumStaffHrsFri(String sumStaffHrsFri) {
-		this.sumStaffHrsFri = StringUtils.defaultIfEmpty(sumStaffHrsFri, Constants.DEFAULT_DECIMAL_VALUE);;
+		this.sumStaffHrsFri = StringUtils.defaultIfEmpty(sumStaffHrsFri, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getSumStaffHrsSat() {
@@ -104,7 +104,7 @@ public class LTCStaffPlanPosType implements IModel {
 	}
 
 	public void setSumStaffHrsSat(String sumStaffHrsSat) {
-		this.sumStaffHrsSat = StringUtils.defaultIfEmpty(sumStaffHrsSat, Constants.DEFAULT_DECIMAL_VALUE);;
+		this.sumStaffHrsSat = StringUtils.defaultIfEmpty(sumStaffHrsSat, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getSumStaffHrsSun() {
@@ -112,7 +112,7 @@ public class LTCStaffPlanPosType implements IModel {
 	}
 
 	public void setSumStaffHrsSun(String sumStaffHrsSun) {
-		this.sumStaffHrsSun = StringUtils.defaultIfEmpty(sumStaffHrsSun, Constants.DEFAULT_DECIMAL_VALUE);;
+		this.sumStaffHrsSun = StringUtils.defaultIfEmpty(sumStaffHrsSun, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 
 	public String getSumStaffHrsWkTotal() {

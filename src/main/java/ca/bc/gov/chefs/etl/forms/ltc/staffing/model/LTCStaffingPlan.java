@@ -3,8 +3,11 @@ package ca.bc.gov.chefs.etl.forms.ltc.staffing.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
+import ca.bc.gov.chefs.etl.util.CSVUtil;
 
 public class LTCStaffingPlan implements IModel{
 
@@ -55,7 +58,7 @@ public class LTCStaffingPlan implements IModel{
     }
 
     public void setPeriodStart(String periodStart) {
-        this.periodStart = periodStart;
+        this.periodStart = StringUtils.defaultIfEmpty(CSVUtil.getFormattedDate(periodStart), Constants.DEFAULT_STRING_VALUE);
     }
 
     public String getPeriodEnd() {
@@ -63,7 +66,7 @@ public class LTCStaffingPlan implements IModel{
     }
 
     public void setPeriodEnd(String periodEnd) {
-        this.periodEnd = periodEnd;
+        this.periodEnd = StringUtils.defaultIfEmpty(CSVUtil.getFormattedDate(periodEnd), Constants.DEFAULT_STRING_VALUE);
     }
 
     public String getRevisionDate() {
@@ -71,7 +74,7 @@ public class LTCStaffingPlan implements IModel{
     }
 
     public void setRevisionDate(String revisionDate) {
-        this.revisionDate = revisionDate;
+        this.revisionDate = StringUtils.defaultIfEmpty(CSVUtil.getFormattedDate(revisionDate), Constants.DEFAULT_STRING_VALUE);
     }
 
     public String getReasonForRev() {

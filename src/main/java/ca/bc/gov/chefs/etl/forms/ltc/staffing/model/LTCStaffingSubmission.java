@@ -3,8 +3,11 @@ package ca.bc.gov.chefs.etl.forms.ltc.staffing.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
+
 import ca.bc.gov.chefs.etl.constant.Constants;
 import ca.bc.gov.chefs.etl.core.model.IModel;
+import ca.bc.gov.chefs.etl.util.CSVUtil;
 
 public class LTCStaffingSubmission implements IModel{
 
@@ -44,7 +47,7 @@ public class LTCStaffingSubmission implements IModel{
     }
 
     public void setSubmissionDate(String submissionDate) {
-        this.submissionDate = submissionDate;
+        this.submissionDate = StringUtils.defaultIfEmpty(CSVUtil.getFormattedDate(submissionDate), Constants.DEFAULT_STRING_VALUE);
     }
 
     public String getSubmittedBy() {

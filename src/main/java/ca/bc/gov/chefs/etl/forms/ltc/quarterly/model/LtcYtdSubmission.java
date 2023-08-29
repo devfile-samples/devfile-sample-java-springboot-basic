@@ -148,7 +148,7 @@ public class LtcYtdSubmission implements IModel {
 	}
 
 	public void setSubmittedBy(String submittedBy) {
-		this.submittedBy = StringUtils.defaultIfEmpty(submittedBy, Constants.DEFAULT_STRING_VALUE);;
+		this.submittedBy = StringUtils.defaultIfEmpty(submittedBy, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getPeriod() {
