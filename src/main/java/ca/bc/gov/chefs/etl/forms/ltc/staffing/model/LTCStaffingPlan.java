@@ -58,7 +58,7 @@ public class LTCStaffingPlan implements IModel{
     }
 
     public void setPeriodStart(String periodStart) {
-        this.periodStart = StringUtils.defaultIfEmpty(CSVUtil.getFormattedDate(periodStart), Constants.DEFAULT_STRING_VALUE);
+        this.periodStart = CSVUtil.getFormattedDate(periodStart);
     }
 
     public String getPeriodEnd() {
@@ -66,7 +66,7 @@ public class LTCStaffingPlan implements IModel{
     }
 
     public void setPeriodEnd(String periodEnd) {
-        this.periodEnd = StringUtils.defaultIfEmpty(CSVUtil.getFormattedDate(periodEnd), Constants.DEFAULT_STRING_VALUE);
+        this.periodEnd = CSVUtil.getFormattedDate(periodEnd);
     }
 
     public String getRevisionDate() {
@@ -74,7 +74,7 @@ public class LTCStaffingPlan implements IModel{
     }
 
     public void setRevisionDate(String revisionDate) {
-        this.revisionDate = StringUtils.defaultIfEmpty(CSVUtil.getFormattedDate(revisionDate), Constants.DEFAULT_STRING_VALUE);
+        this.revisionDate = CSVUtil.getFormattedDate(revisionDate);
     }
 
     public String getReasonForRev() {

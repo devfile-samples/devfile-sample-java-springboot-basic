@@ -65,7 +65,7 @@ public class FacilityInformation implements IModel {
 		return SubmissionDate;
 	}
 	public void setSubmissionDate(String submissionDate) {
-		SubmissionDate = StringUtils.defaultIfEmpty(CSVUtil.getFormattedDate(submissionDate), Constants.DEFAULT_STRING_VALUE);
+		SubmissionDate = CSVUtil.getFormattedDate(submissionDate);
 	}
 	public String getSubmittedby() {
 		return Submittedby;
@@ -143,13 +143,13 @@ public class FacilityInformation implements IModel {
 		return AccreditationDate;
 	}
 	public void setAccreditationDate(String accreditationDate) {
-		AccreditationDate = StringUtils.defaultIfEmpty(CSVUtil.getFormattedDate(accreditationDate), Constants.DEFAULT_STRING_VALUE);
+		AccreditationDate = CSVUtil.getFormattedDate(accreditationDate);
 	}
 	public String getAccreditationExpiryDate() {
 		return AccreditationExpiryDate;
 	}
 	public void setAccreditationExpiryDate(String accreditationExpiryDate) {
-		AccreditationExpiryDate = StringUtils.defaultIfEmpty(CSVUtil.getFormattedDate(accreditationExpiryDate), Constants.DEFAULT_STRING_VALUE);
+		AccreditationExpiryDate = CSVUtil.getFormattedDate(accreditationExpiryDate);
 	}
 	public String getHealthAuthority() {
 		return HealthAuthority;

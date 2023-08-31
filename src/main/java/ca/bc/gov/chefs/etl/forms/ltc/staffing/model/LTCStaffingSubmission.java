@@ -47,7 +47,7 @@ public class LTCStaffingSubmission implements IModel{
     }
 
     public void setSubmissionDate(String submissionDate) {
-        this.submissionDate = StringUtils.defaultIfEmpty(CSVUtil.getFormattedDate(submissionDate), Constants.DEFAULT_STRING_VALUE);
+        this.submissionDate = CSVUtil.getFormattedDate(submissionDate);
     }
 
     public String getSubmittedBy() {
