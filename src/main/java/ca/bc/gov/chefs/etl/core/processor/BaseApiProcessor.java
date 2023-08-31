@@ -15,13 +15,12 @@ import ca.bc.gov.chefs.etl.util.PropertiesUtil;
 
 public class BaseApiProcessor implements Processor {
     
-    protected Map<String,String> sharedData = new HashMap<String,String>();
     protected String formPropertyName;
 	
 
 	@Override
 	public void process(Exchange exchange) throws Exception {
-		ChefsRequestPayload payload =  JsonUtil.parseJsonString((String)sharedData.get("body"), ChefsRequestPayload.class);
+		ChefsRequestPayload payload =  JsonUtil.parseJsonString(exchange.getIn().getBody(String.class), ChefsRequestPayload.class);
 		String FORM_USERNAME = PropertiesUtil.buildFormProperty(formPropertyName, payload.getHealthAuthority(), true);
 		String FORM_PASSWORD = PropertiesUtil.buildFormProperty(formPropertyName, payload.getHealthAuthority(), false);
 		String uri = CommonUtils.generateRequestUri(payload, FORM_USERNAME);

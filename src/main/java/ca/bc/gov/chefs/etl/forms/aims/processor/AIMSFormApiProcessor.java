@@ -13,15 +13,10 @@ import ca.bc.gov.chefs.etl.util.PropertiesUtil;
 
 public class AIMSFormApiProcessor implements Processor {
 
-	private Map<String,String> sharedData;
-	
-	public AIMSFormApiProcessor(Map<String, String> sharedData2) {
-		this.sharedData = sharedData2;
-	}
 ///  https://submit.digital.gov.bc.ca/app/api/v1/forms/%s/export?format=json&bridgeEndpoint=true&version=%s&type=submissions&minDate=%s&maxDate=%s
 	@Override
 	public void process(Exchange exchange) throws Exception {
-		ChefsRequestPayload payload =  JsonUtil.parseJsonString((String)sharedData.get("body"), ChefsRequestPayload.class) ;
+		ChefsRequestPayload payload =  JsonUtil.parseJsonString(exchange.getIn().getBody(String.class), ChefsRequestPayload.class) ;
 		String uri = PropertiesUtil.getValue(Constants.CHEFS_API_URL).formatted(PropertiesUtil.getValue(Constants.AIMS_USERNAME), payload.getVersion(),payload.getStartDate(),payload.getEndDate());
 		exchange.getIn().setHeader("RequestUri", uri);
 		exchange.getIn().setHeader("CamelHttpMethod", "GET");

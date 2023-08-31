@@ -27,12 +27,11 @@ public class FacilityFormRoute extends BaseRoute {
 		// trigger
 		from("jetty:http://{{hostname}}:{{port}}/ltc/facility-information").routeId("ltc-facility-information-form")
 				.log("CHEFS-ETL received a request for LTC Facility Information Form extraction")// .bean(AIMSFormPayloadExtractor.class)
-				.process(exchange -> sharedData.put("body", exchange.getIn().getBody(String.class)))
 				.to("direct:ltc-facility-information").end();
 
 		from("direct:ltc-facility-information")
 				// to the http uri
-				.process(new FacilityInfoFormApiProcessor(sharedData, Constants.LTC_FACILITY_PROPERTY))
+				.process(new FacilityInfoFormApiProcessor())
 				.toD("${header.RequestUri}")
 				.log("This is the status code from the response: ${header.CamelHttpResponseCode}")
 				.log("Trying to convert the received body OK").convertBodyTo(String.class)

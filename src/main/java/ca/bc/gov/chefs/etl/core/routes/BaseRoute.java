@@ -19,7 +19,6 @@ import ca.bc.gov.chefs.etl.util.PropertiesUtil;
 
 public abstract class BaseRoute extends RouteBuilder {
 	static Properties properties = PropertiesUtil.loadProperties();
-	protected Map<String,String> sharedData = new HashMap<String,String>();
 	private static final Logger logger = LoggerFactory.getLogger(BaseRoute.class);
 	
 	@Override
