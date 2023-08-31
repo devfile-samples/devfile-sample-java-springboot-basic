@@ -56,13 +56,13 @@ public class LtcBedYtdMaxOccupancy implements IModel {
 		return startDate;
 	}
 	public void setStartDate(String startDate) {
-		this.startDate = StringUtils.defaultIfEmpty(CSVUtil.getFormattedDate(startDate), Constants.DEFAULT_STRING_VALUE);
+		this.startDate = CSVUtil.getFormattedDate(startDate);
 	}
 	public String getEndDate() {
 		return endDate;
 	}
 	public void setEndDate(String endDate) {
-		this.endDate = StringUtils.defaultIfEmpty(CSVUtil.getFormattedDate(endDate), Constants.DEFAULT_STRING_VALUE);
+		this.endDate = CSVUtil.getFormattedDate(endDate);
 	}
 	public String getNumberOfBeds() {
 		return numberOfBeds;
