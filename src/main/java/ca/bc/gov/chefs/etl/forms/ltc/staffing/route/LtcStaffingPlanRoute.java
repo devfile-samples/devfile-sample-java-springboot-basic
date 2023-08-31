@@ -25,12 +25,11 @@ public class LtcStaffingPlanRoute extends BaseRoute {
 		// trigger
 		from("jetty:http://{{hostname}}:{{port}}/ltc-staffing-plan").routeId("ltc-staffing-plan-form")
 				.log("CHEFS-ETL received a request for LTC Staffing Plan  Form extraction")
-				.process(exchange -> sharedData.put("body", exchange.getIn().getBody(String.class)))
 				.to("direct:ltc-staffing-plan").end();
 
 		from("direct:ltc-staffing-plan")
 				// to the http uri
-				.process(new LtcStaffingPlanApiProcessor(sharedData, Constants.LTC_STAFFING_PLAN_PROPERTY))
+				.process(new LtcStaffingPlanApiProcessor())
 				.toD("${header.RequestUri}")
 				.log("This is the status code from the response: ${header.CamelHttpResponseCode}")
 				.log("Trying to convert the received body OK").convertBodyTo(String.class)

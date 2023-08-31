@@ -25,12 +25,11 @@ public class LtcQuarterlyYtdRoute extends BaseRoute {
 		// trigger
 		from("jetty:http://{{hostname}}:{{port}}/ltc-quarterly-ytd").routeId("ltc-quarterly-ytd-form")
 				.log("CHEFS-ETL received a request for LTCQ Form extraction")
-				.process(exchange -> sharedData.put("body", exchange.getIn().getBody(String.class)))
 				.to("direct:ltc-quarterly-ytd").end();
 
 		from("direct:ltc-quarterly-ytd")
 				// to the http uri
-				.process(new LtcQuarterlyYtdApiProcessor(sharedData, Constants.LTC_YTD_PROPERTY))
+				.process(new LtcQuarterlyYtdApiProcessor())
 				.toD("${header.RequestUri}")
 				.log("This is the status code from the response: ${header.CamelHttpResponseCode}")
 				.log("Trying to convert the received body OK").convertBodyTo(String.class)
