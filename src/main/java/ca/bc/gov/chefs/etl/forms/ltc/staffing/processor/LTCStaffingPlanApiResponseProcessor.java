@@ -1335,12 +1335,13 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				ArtTherapist1);
 
 			if(root.getNpDatagrid1() != null){
+				int indexnp1 = 0;
 				for(NpDatagrid otherProfessionalNurse : root.getNpDatagrid1()){
 					LTCStaffPlanPosType otherNurse = new LTCStaffPlanPosType();
 					otherNurse.setConfirmationId(root.getForm().getConfirmationId());
 					otherNurse.setStaffingPlanNum("1");
 					otherNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
-					otherNurse.setStaffHrsPosOtherName(otherProfessionalNurse.getNpPositionType());
+					otherNurse.setStaffHrsPosOtherName(otherProfessionalNurse.getNpPositionType() + ++indexnp1);
 					otherNurse.setSumStaffHrsMon(otherProfessionalNurse.getNp_other_mon());
 					otherNurse.setSumStaffHrsTue(otherProfessionalNurse.getNp_other_tue());
 					otherNurse.setSumStaffHrsWed(otherProfessionalNurse.getNp_other_wed());
@@ -1360,12 +1361,13 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 			}
 
 			if(root.getNnpDatagrid1() != null){
+				int indexnnp1 = 0;
 				for(NnpDatagrid otherNonProfessionalNurse : root.getNnpDatagrid1()){
 					LTCStaffPlanPosType otherNPNurse = new LTCStaffPlanPosType();
 					otherNPNurse.setConfirmationId(root.getForm().getConfirmationId());
 					otherNPNurse.setStaffingPlanNum("1");
 					otherNPNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
-					otherNPNurse.setStaffHrsPosOtherName(otherNonProfessionalNurse.getNnpPositionType());
+					otherNPNurse.setStaffHrsPosOtherName(otherNonProfessionalNurse.getNnpPositionType() + ++indexnnp1);
 					otherNPNurse.setSumStaffHrsMon(otherNonProfessionalNurse.getNnp_other_mon());
 					otherNPNurse.setSumStaffHrsTue(otherNonProfessionalNurse.getNnp_other_tue());
 					otherNPNurse.setSumStaffHrsWed(otherNonProfessionalNurse.getNnp_other_wed());
@@ -1384,12 +1386,13 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 			}
 
 			if(root.getAldDatagrid1() != null){
+				int indexald1 = 0;
 				for(AldDatagrid otherProfessionalAllied : root.getAldDatagrid1()){
 					LTCStaffPlanPosType otherProfAllied = new LTCStaffPlanPosType();
 					otherProfAllied.setConfirmationId(root.getForm().getConfirmationId());
 					otherProfAllied.setStaffingPlanNum("1");
 					otherProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
-					otherProfAllied.setStaffHrsPosOtherName(otherProfessionalAllied.getAldPositionType());
+					otherProfAllied.setStaffHrsPosOtherName(otherProfessionalAllied.getAldPositionType() + ++indexald1);
 					otherProfAllied.setSumStaffHrsMon(otherProfessionalAllied.getAld_other_mon());
 					otherProfAllied.setSumStaffHrsTue(otherProfessionalAllied.getAld_other_tue());
 					otherProfAllied.setSumStaffHrsWed(otherProfessionalAllied.getAld_other_wed());
@@ -1408,12 +1411,13 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 			}
 
 			if(root.getAldnopDatagrid1() != null){
+				int indexaldnop1 = 0;
 				for(AldNopDatagrid otherNonProfessionalAllied : root.getAldnopDatagrid1()){
 					LTCStaffPlanPosType otherNonProfAllied = new LTCStaffPlanPosType();
 					otherNonProfAllied.setConfirmationId(root.getForm().getConfirmationId());
 					otherNonProfAllied.setStaffingPlanNum("1");
 					otherNonProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
-					otherNonProfAllied.setStaffHrsPosOtherName(otherNonProfessionalAllied.getAldnopPositionType());
+					otherNonProfAllied.setStaffHrsPosOtherName(otherNonProfessionalAllied.getAldnopPositionType() + ++indexaldnop1 );
 					otherNonProfAllied.setSumStaffHrsMon(otherNonProfessionalAllied.getAldnop_other_mon());
 					otherNonProfAllied.setSumStaffHrsTue(otherNonProfessionalAllied.getAldnop_other_tue());
 					otherNonProfAllied.setSumStaffHrsWed(otherNonProfessionalAllied.getAldnop_other_wed());
@@ -1689,12 +1693,13 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 					ArtTherapist2);
 	
 				if(root.getNpDatagrid2() != null){
+					int indexnp2 = 0;
 					for(NpDatagrid otherProfessionalNurse : root.getNpDatagrid2()){
 						LTCStaffPlanPosType otherNurse = new LTCStaffPlanPosType();
 						otherNurse.setConfirmationId(root.getForm().getConfirmationId());
 						otherNurse.setStaffingPlanNum("2");
 						otherNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
-						otherNurse.setStaffHrsPosOtherName(otherProfessionalNurse.getNpPositionType());
+						otherNurse.setStaffHrsPosOtherName(otherProfessionalNurse.getNpPositionType() + ++indexnp2);
 						otherNurse.setSumStaffHrsMon(otherProfessionalNurse.getNp_other_mon());
 						otherNurse.setSumStaffHrsTue(otherProfessionalNurse.getNp_other_tue());
 						otherNurse.setSumStaffHrsWed(otherProfessionalNurse.getNp_other_wed());
@@ -1714,12 +1719,13 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				}
 	
 				if(root.getNnpDatagrid2() != null){
+					int indexnnp2 = 0;
 					for(NnpDatagrid otherNonProfessionalNurse : root.getNnpDatagrid2()){
 						LTCStaffPlanPosType otherNPNurse = new LTCStaffPlanPosType();
 						otherNPNurse.setConfirmationId(root.getForm().getConfirmationId());
 						otherNPNurse.setStaffingPlanNum("2");
 						otherNPNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
-						otherNPNurse.setStaffHrsPosOtherName(otherNonProfessionalNurse.getNnpPositionType());
+						otherNPNurse.setStaffHrsPosOtherName(otherNonProfessionalNurse.getNnpPositionType() + ++indexnnp2 );
 						otherNPNurse.setSumStaffHrsMon(otherNonProfessionalNurse.getNnp_other_mon());
 						otherNPNurse.setSumStaffHrsTue(otherNonProfessionalNurse.getNnp_other_tue());
 						otherNPNurse.setSumStaffHrsWed(otherNonProfessionalNurse.getNnp_other_wed());
@@ -1738,12 +1744,13 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				}
 	
 				if(root.getAldDatagrid2() != null){
+					int indexald2 = 0;
 					for(AldDatagrid otherProfessionalAllied : root.getAldDatagrid2()){
 						LTCStaffPlanPosType otherProfAllied = new LTCStaffPlanPosType();
 						otherProfAllied.setConfirmationId(root.getForm().getConfirmationId());
 						otherProfAllied.setStaffingPlanNum("2");
 						otherProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
-						otherProfAllied.setStaffHrsPosOtherName(otherProfessionalAllied.getAldPositionType());
+						otherProfAllied.setStaffHrsPosOtherName(otherProfessionalAllied.getAldPositionType() + ++indexald2);
 						otherProfAllied.setSumStaffHrsMon(otherProfessionalAllied.getAld_other_mon());
 						otherProfAllied.setSumStaffHrsTue(otherProfessionalAllied.getAld_other_tue());
 						otherProfAllied.setSumStaffHrsWed(otherProfessionalAllied.getAld_other_wed());
@@ -1762,12 +1769,13 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				}
 	
 				if(root.getAldnopDatagrid2() != null){
+					int indexaldnop2 = 0;
 					for(AldNopDatagrid otherNonProfessionalAllied : root.getAldnopDatagrid2()){
 						LTCStaffPlanPosType otherNonProfAllied = new LTCStaffPlanPosType();
 						otherNonProfAllied.setConfirmationId(root.getForm().getConfirmationId());
 						otherNonProfAllied.setStaffingPlanNum("2");
 						otherNonProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
-						otherNonProfAllied.setStaffHrsPosOtherName(otherNonProfessionalAllied.getAldnopPositionType());
+						otherNonProfAllied.setStaffHrsPosOtherName(otherNonProfessionalAllied.getAldnopPositionType() + ++indexaldnop2);
 						otherNonProfAllied.setSumStaffHrsMon(otherNonProfessionalAllied.getAldnop_other_mon());
 						otherNonProfAllied.setSumStaffHrsTue(otherNonProfessionalAllied.getAldnop_other_tue());
 						otherNonProfAllied.setSumStaffHrsWed(otherNonProfessionalAllied.getAldnop_other_wed());
@@ -2044,12 +2052,13 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 					ArtTherapist3);
 	
 				if(root.getNpDatagrid3() != null){
+					int indexnp3 = 0;
 					for(NpDatagrid otherProfessionalNurse : root.getNpDatagrid3()){
 						LTCStaffPlanPosType otherNurse = new LTCStaffPlanPosType();
 						otherNurse.setConfirmationId(root.getForm().getConfirmationId());
 						otherNurse.setStaffingPlanNum("3");
 						otherNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
-						otherNurse.setStaffHrsPosOtherName(otherProfessionalNurse.getNpPositionType());
+						otherNurse.setStaffHrsPosOtherName(otherProfessionalNurse.getNpPositionType() + ++indexnp3);
 						otherNurse.setSumStaffHrsMon(otherProfessionalNurse.getNp_other_mon());
 						otherNurse.setSumStaffHrsTue(otherProfessionalNurse.getNp_other_tue());
 						otherNurse.setSumStaffHrsWed(otherProfessionalNurse.getNp_other_wed());
@@ -2069,12 +2078,13 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				}
 	
 				if(root.getNnpDatagrid3() != null){
+					int indexnnp3 = 0;
 					for(NnpDatagrid otherNonProfessionalNurse : root.getNnpDatagrid3()){
 						LTCStaffPlanPosType otherNPNurse = new LTCStaffPlanPosType();
 						otherNPNurse.setConfirmationId(root.getForm().getConfirmationId());
 						otherNPNurse.setStaffingPlanNum("3");
 						otherNPNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
-						otherNPNurse.setStaffHrsPosOtherName(otherNonProfessionalNurse.getNnpPositionType());
+						otherNPNurse.setStaffHrsPosOtherName(otherNonProfessionalNurse.getNnpPositionType() + ++indexnnp3);
 						otherNPNurse.setSumStaffHrsMon(otherNonProfessionalNurse.getNnp_other_mon());
 						otherNPNurse.setSumStaffHrsTue(otherNonProfessionalNurse.getNnp_other_tue());
 						otherNPNurse.setSumStaffHrsWed(otherNonProfessionalNurse.getNnp_other_wed());
@@ -2093,12 +2103,13 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				}
 	
 				if(root.getAldDatagrid3() != null){
+					int indexald3 = 0;
 					for(AldDatagrid otherProfessionalAllied : root.getAldDatagrid3()){
 						LTCStaffPlanPosType otherProfAllied = new LTCStaffPlanPosType();
 						otherProfAllied.setConfirmationId(root.getForm().getConfirmationId());
 						otherProfAllied.setStaffingPlanNum("3");
 						otherProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
-						otherProfAllied.setStaffHrsPosOtherName(otherProfessionalAllied.getAldPositionType());
+						otherProfAllied.setStaffHrsPosOtherName(otherProfessionalAllied.getAldPositionType() + ++indexald3);
 						otherProfAllied.setSumStaffHrsMon(otherProfessionalAllied.getAld_other_mon());
 						otherProfAllied.setSumStaffHrsTue(otherProfessionalAllied.getAld_other_tue());
 						otherProfAllied.setSumStaffHrsWed(otherProfessionalAllied.getAld_other_wed());
@@ -2117,12 +2128,13 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				}
 	
 				if(root.getAldnopDatagrid3() != null){
+					int indexaldnop3 = 0;
 					for(AldNopDatagrid otherNonProfessionalAllied : root.getAldnopDatagrid3()){
 						LTCStaffPlanPosType otherNonProfAllied = new LTCStaffPlanPosType();
 						otherNonProfAllied.setConfirmationId(root.getForm().getConfirmationId());
 						otherNonProfAllied.setStaffingPlanNum("3");
 						otherNonProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
-						otherNonProfAllied.setStaffHrsPosOtherName(otherNonProfessionalAllied.getAldnopPositionType());
+						otherNonProfAllied.setStaffHrsPosOtherName(otherNonProfessionalAllied.getAldnopPositionType() + ++indexaldnop3);
 						otherNonProfAllied.setSumStaffHrsMon(otherNonProfessionalAllied.getAldnop_other_mon());
 						otherNonProfAllied.setSumStaffHrsTue(otherNonProfessionalAllied.getAldnop_other_tue());
 						otherNonProfAllied.setSumStaffHrsWed(otherNonProfessionalAllied.getAldnop_other_wed());
@@ -2399,12 +2411,13 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 					ArtTherapist4);
 	
 				if(root.getNpDatagrid4() != null){
+					int indexnp4 = 0;
 					for(NpDatagrid otherProfessionalNurse : root.getNpDatagrid4()){
 						LTCStaffPlanPosType otherNurse = new LTCStaffPlanPosType();
 						otherNurse.setConfirmationId(root.getForm().getConfirmationId());
 						otherNurse.setStaffingPlanNum("4");
 						otherNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
-						otherNurse.setStaffHrsPosOtherName(otherProfessionalNurse.getNpPositionType());
+						otherNurse.setStaffHrsPosOtherName(otherProfessionalNurse.getNpPositionType() + ++indexnp4);
 						otherNurse.setSumStaffHrsMon(otherProfessionalNurse.getNp_other_mon());
 						otherNurse.setSumStaffHrsTue(otherProfessionalNurse.getNp_other_tue());
 						otherNurse.setSumStaffHrsWed(otherProfessionalNurse.getNp_other_wed());
@@ -2424,12 +2437,13 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				}
 	
 				if(root.getNnpDatagrid4() != null){
+					int indexnnp4 = 0;
 					for(NnpDatagrid otherNonProfessionalNurse : root.getNnpDatagrid4()){
 						LTCStaffPlanPosType otherNPNurse = new LTCStaffPlanPosType();
 						otherNPNurse.setConfirmationId(root.getForm().getConfirmationId());
 						otherNPNurse.setStaffingPlanNum("4");
 						otherNPNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
-						otherNPNurse.setStaffHrsPosOtherName(otherNonProfessionalNurse.getNnpPositionType());
+						otherNPNurse.setStaffHrsPosOtherName(otherNonProfessionalNurse.getNnpPositionType() + ++indexnnp4);
 						otherNPNurse.setSumStaffHrsMon(otherNonProfessionalNurse.getNnp_other_mon());
 						otherNPNurse.setSumStaffHrsTue(otherNonProfessionalNurse.getNnp_other_tue());
 						otherNPNurse.setSumStaffHrsWed(otherNonProfessionalNurse.getNnp_other_wed());
@@ -2448,12 +2462,13 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				}
 	
 				if(root.getAldDatagrid4() != null){
+					int indexald4 = 0;
 					for(AldDatagrid otherProfessionalAllied : root.getAldDatagrid4()){
 						LTCStaffPlanPosType otherProfAllied = new LTCStaffPlanPosType();
 						otherProfAllied.setConfirmationId(root.getForm().getConfirmationId());
 						otherProfAllied.setStaffingPlanNum("4");
 						otherProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
-						otherProfAllied.setStaffHrsPosOtherName(otherProfessionalAllied.getAldPositionType());
+						otherProfAllied.setStaffHrsPosOtherName(otherProfessionalAllied.getAldPositionType() + ++indexald4);
 						otherProfAllied.setSumStaffHrsMon(otherProfessionalAllied.getAld_other_mon());
 						otherProfAllied.setSumStaffHrsTue(otherProfessionalAllied.getAld_other_tue());
 						otherProfAllied.setSumStaffHrsWed(otherProfessionalAllied.getAld_other_wed());
@@ -2472,12 +2487,13 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				}
 	
 				if(root.getAldnopDatagrid4() != null){
+					int indexaldnop4 = 0;
 					for(AldNopDatagrid otherNonProfessionalAllied : root.getAldnopDatagrid4()){
 						LTCStaffPlanPosType otherNonProfAllied = new LTCStaffPlanPosType();
 						otherNonProfAllied.setConfirmationId(root.getForm().getConfirmationId());
 						otherNonProfAllied.setStaffingPlanNum("4");
 						otherNonProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
-						otherNonProfAllied.setStaffHrsPosOtherName(otherNonProfessionalAllied.getAldnopPositionType());
+						otherNonProfAllied.setStaffHrsPosOtherName(otherNonProfessionalAllied.getAldnopPositionType() + ++indexaldnop4);
 						otherNonProfAllied.setSumStaffHrsMon(otherNonProfessionalAllied.getAldnop_other_mon());
 						otherNonProfAllied.setSumStaffHrsTue(otherNonProfessionalAllied.getAldnop_other_tue());
 						otherNonProfAllied.setSumStaffHrsWed(otherNonProfessionalAllied.getAldnop_other_wed());
@@ -2754,12 +2770,13 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 					ArtTherapist5);
 	
 				if(root.getNpDatagrid5() != null){
+					int indexnp5 = 0;
 					for(NpDatagrid otherProfessionalNurse : root.getNpDatagrid5()){
 						LTCStaffPlanPosType otherNurse = new LTCStaffPlanPosType();
 						otherNurse.setConfirmationId(root.getForm().getConfirmationId());
 						otherNurse.setStaffingPlanNum("5");
 						otherNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
-						otherNurse.setStaffHrsPosOtherName(otherProfessionalNurse.getNpPositionType());
+						otherNurse.setStaffHrsPosOtherName(otherProfessionalNurse.getNpPositionType() + ++indexnp5);
 						otherNurse.setSumStaffHrsMon(otherProfessionalNurse.getNp_other_mon());
 						otherNurse.setSumStaffHrsTue(otherProfessionalNurse.getNp_other_tue());
 						otherNurse.setSumStaffHrsWed(otherProfessionalNurse.getNp_other_wed());
@@ -2779,12 +2796,13 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				}
 	
 				if(root.getNnpDatagrid5() != null){
+					int indexnnp5 = 0;
 					for(NnpDatagrid otherNonProfessionalNurse : root.getNnpDatagrid5()){
 						LTCStaffPlanPosType otherNPNurse = new LTCStaffPlanPosType();
 						otherNPNurse.setConfirmationId(root.getForm().getConfirmationId());
 						otherNPNurse.setStaffingPlanNum("5");
 						otherNPNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
-						otherNPNurse.setStaffHrsPosOtherName(otherNonProfessionalNurse.getNnpPositionType());
+						otherNPNurse.setStaffHrsPosOtherName(otherNonProfessionalNurse.getNnpPositionType() + ++indexnnp5);
 						otherNPNurse.setSumStaffHrsMon(otherNonProfessionalNurse.getNnp_other_mon());
 						otherNPNurse.setSumStaffHrsTue(otherNonProfessionalNurse.getNnp_other_tue());
 						otherNPNurse.setSumStaffHrsWed(otherNonProfessionalNurse.getNnp_other_wed());
@@ -2803,12 +2821,13 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				}
 	
 				if(root.getAldDatagrid5() != null){
+					int indexald5 = 0;
 					for(AldDatagrid otherProfessionalAllied : root.getAldDatagrid5()){
 						LTCStaffPlanPosType otherProfAllied = new LTCStaffPlanPosType();
 						otherProfAllied.setConfirmationId(root.getForm().getConfirmationId());
 						otherProfAllied.setStaffingPlanNum("5");
 						otherProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
-						otherProfAllied.setStaffHrsPosOtherName(otherProfessionalAllied.getAldPositionType());
+						otherProfAllied.setStaffHrsPosOtherName(otherProfessionalAllied.getAldPositionType() + ++indexald5);
 						otherProfAllied.setSumStaffHrsMon(otherProfessionalAllied.getAld_other_mon());
 						otherProfAllied.setSumStaffHrsTue(otherProfessionalAllied.getAld_other_tue());
 						otherProfAllied.setSumStaffHrsWed(otherProfessionalAllied.getAld_other_wed());
@@ -2827,12 +2846,13 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 				}
 	
 				if(root.getAldnopDatagrid5() != null){
+					int indexaldnop5 = 0;
 					for(AldNopDatagrid otherNonProfessionalAllied : root.getAldnopDatagrid5()){
 						LTCStaffPlanPosType otherNonProfAllied = new LTCStaffPlanPosType();
 						otherNonProfAllied.setConfirmationId(root.getForm().getConfirmationId());
 						otherNonProfAllied.setStaffingPlanNum("5");
 						otherNonProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
-						otherNonProfAllied.setStaffHrsPosOtherName(otherNonProfessionalAllied.getAldnopPositionType());
+						otherNonProfAllied.setStaffHrsPosOtherName(otherNonProfessionalAllied.getAldnopPositionType() + ++indexaldnop5);
 						otherNonProfAllied.setSumStaffHrsMon(otherNonProfessionalAllied.getAldnop_other_mon());
 						otherNonProfAllied.setSumStaffHrsTue(otherNonProfessionalAllied.getAldnop_other_tue());
 						otherNonProfAllied.setSumStaffHrsWed(otherNonProfessionalAllied.getAldnop_other_wed());
