@@ -37,6 +37,7 @@ public class Constants {
 	public final static String DEFAULT_STRING_VALUE = "Not Provided";
 	public final static String DEFAULT_DECIMAL_VALUE = "-99";
 	public final static String DEFAULT_NA_VALUE = "Not Applicable";
+	public final static String DEFAULT_OTHER_VALUE = "Other";
 	
 	/* AIMS */
 	public final static String AIMS_USERNAME = "aims.username";
@@ -67,7 +68,11 @@ public class Constants {
 	// Constants for Sub table: LTC_YTD_COMP_ADD_POS
 	public final static String POS_TYPE_OTHER = "Other";
 
-	public final static String DEFAULT_OTHER_VALUE = "Other";
+	public final static String DEFAULT_OTHER_PROF_NURSE_VALUE = "Other Nursing Professional";
+	public final static String DEFAULT_OTHER_NONPROF_NURSE_VALUE = "Other Nursing Non-Professional";
+	public final static String DEFAULT_OTHER_PROF_ALLIED_VALUE = "Other Allied Professional";
+	public final static String DEFAULT_OTHER_NONPROF_ALLIED_VALUE = "Other Allied Non-Professional";
+
 
 	/* Form Names */
 	public final static String LTC_BED_YTD_OCCUPIED_DAYS = "LTC_BED_YTD_OCCUPIED_DAYS";
