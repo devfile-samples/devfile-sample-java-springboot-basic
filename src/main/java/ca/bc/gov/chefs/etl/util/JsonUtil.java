@@ -1,9 +1,12 @@
 package ca.bc.gov.chefs.etl.util;
 
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import ca.bc.gov.chefs.etl.constant.Constants;
 
 public class JsonUtil {
 	private static final ObjectMapper mapper = new ObjectMapper();
@@ -18,6 +21,15 @@ public class JsonUtil {
 		String result = payload.replaceAll("\"(subType\\d*)\":\"\"", "\"$1\":{}");
 		return result;
 	}
+
+    public static String ltcYTDBackwardCompatibility(String payload){
+        for (Map.Entry<String, String> entry : Constants.LTC_YTD_OLD_KEYS_COMPATIBILITY.entrySet()) {
+            String key = entry.getKey();
+            String value = entry.getValue();
+            payload = payload.replace(key, value);
+        }
+        return payload;
+    }
 
 	public static String roundDigitsNumber(String payload){
 

@@ -1340,7 +1340,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 					LTCStaffPlanPosType otherNurse = new LTCStaffPlanPosType();
 					otherNurse.setConfirmationId(root.getForm().getConfirmationId());
 					otherNurse.setStaffingPlanNum("1");
-					otherNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
+					otherNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_PROF_NURSE_VALUE);
 					otherNurse.setStaffHrsPosOtherName(otherProfessionalNurse.getNpPositionType() + ++indexnp1);
 					otherNurse.setSumStaffHrsMon(otherProfessionalNurse.getNp_other_mon());
 					otherNurse.setSumStaffHrsTue(otherProfessionalNurse.getNp_other_tue());
@@ -1366,7 +1366,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 					LTCStaffPlanPosType otherNPNurse = new LTCStaffPlanPosType();
 					otherNPNurse.setConfirmationId(root.getForm().getConfirmationId());
 					otherNPNurse.setStaffingPlanNum("1");
-					otherNPNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
+					otherNPNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_NONPROF_NURSE_VALUE);
 					otherNPNurse.setStaffHrsPosOtherName(otherNonProfessionalNurse.getNnpPositionType() + ++indexnnp1);
 					otherNPNurse.setSumStaffHrsMon(otherNonProfessionalNurse.getNnp_other_mon());
 					otherNPNurse.setSumStaffHrsTue(otherNonProfessionalNurse.getNnp_other_tue());
@@ -1391,7 +1391,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 					LTCStaffPlanPosType otherProfAllied = new LTCStaffPlanPosType();
 					otherProfAllied.setConfirmationId(root.getForm().getConfirmationId());
 					otherProfAllied.setStaffingPlanNum("1");
-					otherProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
+					otherProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_PROF_ALLIED_VALUE);
 					otherProfAllied.setStaffHrsPosOtherName(otherProfessionalAllied.getAldPositionType() + ++indexald1);
 					otherProfAllied.setSumStaffHrsMon(otherProfessionalAllied.getAld_other_mon());
 					otherProfAllied.setSumStaffHrsTue(otherProfessionalAllied.getAld_other_tue());
@@ -1416,7 +1416,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 					LTCStaffPlanPosType otherNonProfAllied = new LTCStaffPlanPosType();
 					otherNonProfAllied.setConfirmationId(root.getForm().getConfirmationId());
 					otherNonProfAllied.setStaffingPlanNum("1");
-					otherNonProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
+					otherNonProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_NONPROF_ALLIED_VALUE);
 					otherNonProfAllied.setStaffHrsPosOtherName(otherNonProfessionalAllied.getAldnopPositionType() + ++indexaldnop1 );
 					otherNonProfAllied.setSumStaffHrsMon(otherNonProfessionalAllied.getAldnop_other_mon());
 					otherNonProfAllied.setSumStaffHrsTue(otherNonProfessionalAllied.getAldnop_other_tue());
@@ -1698,7 +1698,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 						LTCStaffPlanPosType otherNurse = new LTCStaffPlanPosType();
 						otherNurse.setConfirmationId(root.getForm().getConfirmationId());
 						otherNurse.setStaffingPlanNum("2");
-						otherNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
+						otherNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_PROF_NURSE_VALUE);
 						otherNurse.setStaffHrsPosOtherName(otherProfessionalNurse.getNpPositionType() + ++indexnp2);
 						otherNurse.setSumStaffHrsMon(otherProfessionalNurse.getNp_other_mon());
 						otherNurse.setSumStaffHrsTue(otherProfessionalNurse.getNp_other_tue());
@@ -1724,7 +1724,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 						LTCStaffPlanPosType otherNPNurse = new LTCStaffPlanPosType();
 						otherNPNurse.setConfirmationId(root.getForm().getConfirmationId());
 						otherNPNurse.setStaffingPlanNum("2");
-						otherNPNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
+						otherNPNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_NONPROF_NURSE_VALUE);
 						otherNPNurse.setStaffHrsPosOtherName(otherNonProfessionalNurse.getNnpPositionType() + ++indexnnp2 );
 						otherNPNurse.setSumStaffHrsMon(otherNonProfessionalNurse.getNnp_other_mon());
 						otherNPNurse.setSumStaffHrsTue(otherNonProfessionalNurse.getNnp_other_tue());
@@ -1749,7 +1749,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 						LTCStaffPlanPosType otherProfAllied = new LTCStaffPlanPosType();
 						otherProfAllied.setConfirmationId(root.getForm().getConfirmationId());
 						otherProfAllied.setStaffingPlanNum("2");
-						otherProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
+						otherProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_PROF_ALLIED_VALUE);
 						otherProfAllied.setStaffHrsPosOtherName(otherProfessionalAllied.getAldPositionType() + ++indexald2);
 						otherProfAllied.setSumStaffHrsMon(otherProfessionalAllied.getAld_other_mon());
 						otherProfAllied.setSumStaffHrsTue(otherProfessionalAllied.getAld_other_tue());
@@ -1774,7 +1774,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 						LTCStaffPlanPosType otherNonProfAllied = new LTCStaffPlanPosType();
 						otherNonProfAllied.setConfirmationId(root.getForm().getConfirmationId());
 						otherNonProfAllied.setStaffingPlanNum("2");
-						otherNonProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
+						otherNonProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_NONPROF_ALLIED_VALUE);
 						otherNonProfAllied.setStaffHrsPosOtherName(otherNonProfessionalAllied.getAldnopPositionType() + ++indexaldnop2);
 						otherNonProfAllied.setSumStaffHrsMon(otherNonProfessionalAllied.getAldnop_other_mon());
 						otherNonProfAllied.setSumStaffHrsTue(otherNonProfessionalAllied.getAldnop_other_tue());
@@ -2057,7 +2057,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 						LTCStaffPlanPosType otherNurse = new LTCStaffPlanPosType();
 						otherNurse.setConfirmationId(root.getForm().getConfirmationId());
 						otherNurse.setStaffingPlanNum("3");
-						otherNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
+						otherNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_PROF_NURSE_VALUE);
 						otherNurse.setStaffHrsPosOtherName(otherProfessionalNurse.getNpPositionType() + ++indexnp3);
 						otherNurse.setSumStaffHrsMon(otherProfessionalNurse.getNp_other_mon());
 						otherNurse.setSumStaffHrsTue(otherProfessionalNurse.getNp_other_tue());
@@ -2083,7 +2083,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 						LTCStaffPlanPosType otherNPNurse = new LTCStaffPlanPosType();
 						otherNPNurse.setConfirmationId(root.getForm().getConfirmationId());
 						otherNPNurse.setStaffingPlanNum("3");
-						otherNPNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
+						otherNPNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_NONPROF_NURSE_VALUE);
 						otherNPNurse.setStaffHrsPosOtherName(otherNonProfessionalNurse.getNnpPositionType() + ++indexnnp3);
 						otherNPNurse.setSumStaffHrsMon(otherNonProfessionalNurse.getNnp_other_mon());
 						otherNPNurse.setSumStaffHrsTue(otherNonProfessionalNurse.getNnp_other_tue());
@@ -2108,7 +2108,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 						LTCStaffPlanPosType otherProfAllied = new LTCStaffPlanPosType();
 						otherProfAllied.setConfirmationId(root.getForm().getConfirmationId());
 						otherProfAllied.setStaffingPlanNum("3");
-						otherProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
+						otherProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_PROF_ALLIED_VALUE);
 						otherProfAllied.setStaffHrsPosOtherName(otherProfessionalAllied.getAldPositionType() + ++indexald3);
 						otherProfAllied.setSumStaffHrsMon(otherProfessionalAllied.getAld_other_mon());
 						otherProfAllied.setSumStaffHrsTue(otherProfessionalAllied.getAld_other_tue());
@@ -2133,7 +2133,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 						LTCStaffPlanPosType otherNonProfAllied = new LTCStaffPlanPosType();
 						otherNonProfAllied.setConfirmationId(root.getForm().getConfirmationId());
 						otherNonProfAllied.setStaffingPlanNum("3");
-						otherNonProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
+						otherNonProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_NONPROF_ALLIED_VALUE);
 						otherNonProfAllied.setStaffHrsPosOtherName(otherNonProfessionalAllied.getAldnopPositionType() + ++indexaldnop3);
 						otherNonProfAllied.setSumStaffHrsMon(otherNonProfessionalAllied.getAldnop_other_mon());
 						otherNonProfAllied.setSumStaffHrsTue(otherNonProfessionalAllied.getAldnop_other_tue());
@@ -2416,7 +2416,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 						LTCStaffPlanPosType otherNurse = new LTCStaffPlanPosType();
 						otherNurse.setConfirmationId(root.getForm().getConfirmationId());
 						otherNurse.setStaffingPlanNum("4");
-						otherNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
+						otherNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_PROF_NURSE_VALUE);
 						otherNurse.setStaffHrsPosOtherName(otherProfessionalNurse.getNpPositionType() + ++indexnp4);
 						otherNurse.setSumStaffHrsMon(otherProfessionalNurse.getNp_other_mon());
 						otherNurse.setSumStaffHrsTue(otherProfessionalNurse.getNp_other_tue());
@@ -2442,7 +2442,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 						LTCStaffPlanPosType otherNPNurse = new LTCStaffPlanPosType();
 						otherNPNurse.setConfirmationId(root.getForm().getConfirmationId());
 						otherNPNurse.setStaffingPlanNum("4");
-						otherNPNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
+						otherNPNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_NONPROF_NURSE_VALUE);
 						otherNPNurse.setStaffHrsPosOtherName(otherNonProfessionalNurse.getNnpPositionType() + ++indexnnp4);
 						otherNPNurse.setSumStaffHrsMon(otherNonProfessionalNurse.getNnp_other_mon());
 						otherNPNurse.setSumStaffHrsTue(otherNonProfessionalNurse.getNnp_other_tue());
@@ -2467,7 +2467,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 						LTCStaffPlanPosType otherProfAllied = new LTCStaffPlanPosType();
 						otherProfAllied.setConfirmationId(root.getForm().getConfirmationId());
 						otherProfAllied.setStaffingPlanNum("4");
-						otherProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
+						otherProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_PROF_ALLIED_VALUE);
 						otherProfAllied.setStaffHrsPosOtherName(otherProfessionalAllied.getAldPositionType() + ++indexald4);
 						otherProfAllied.setSumStaffHrsMon(otherProfessionalAllied.getAld_other_mon());
 						otherProfAllied.setSumStaffHrsTue(otherProfessionalAllied.getAld_other_tue());
@@ -2492,7 +2492,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 						LTCStaffPlanPosType otherNonProfAllied = new LTCStaffPlanPosType();
 						otherNonProfAllied.setConfirmationId(root.getForm().getConfirmationId());
 						otherNonProfAllied.setStaffingPlanNum("4");
-						otherNonProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
+						otherNonProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_NONPROF_ALLIED_VALUE);
 						otherNonProfAllied.setStaffHrsPosOtherName(otherNonProfessionalAllied.getAldnopPositionType() + ++indexaldnop4);
 						otherNonProfAllied.setSumStaffHrsMon(otherNonProfessionalAllied.getAldnop_other_mon());
 						otherNonProfAllied.setSumStaffHrsTue(otherNonProfessionalAllied.getAldnop_other_tue());
@@ -2775,7 +2775,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 						LTCStaffPlanPosType otherNurse = new LTCStaffPlanPosType();
 						otherNurse.setConfirmationId(root.getForm().getConfirmationId());
 						otherNurse.setStaffingPlanNum("5");
-						otherNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
+						otherNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_PROF_NURSE_VALUE);
 						otherNurse.setStaffHrsPosOtherName(otherProfessionalNurse.getNpPositionType() + ++indexnp5);
 						otherNurse.setSumStaffHrsMon(otherProfessionalNurse.getNp_other_mon());
 						otherNurse.setSumStaffHrsTue(otherProfessionalNurse.getNp_other_tue());
@@ -2801,7 +2801,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 						LTCStaffPlanPosType otherNPNurse = new LTCStaffPlanPosType();
 						otherNPNurse.setConfirmationId(root.getForm().getConfirmationId());
 						otherNPNurse.setStaffingPlanNum("5");
-						otherNPNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
+						otherNPNurse.setStaffHrsPosType(Constants.DEFAULT_OTHER_NONPROF_NURSE_VALUE);
 						otherNPNurse.setStaffHrsPosOtherName(otherNonProfessionalNurse.getNnpPositionType() + ++indexnnp5);
 						otherNPNurse.setSumStaffHrsMon(otherNonProfessionalNurse.getNnp_other_mon());
 						otherNPNurse.setSumStaffHrsTue(otherNonProfessionalNurse.getNnp_other_tue());
@@ -2826,7 +2826,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 						LTCStaffPlanPosType otherProfAllied = new LTCStaffPlanPosType();
 						otherProfAllied.setConfirmationId(root.getForm().getConfirmationId());
 						otherProfAllied.setStaffingPlanNum("5");
-						otherProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
+						otherProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_PROF_ALLIED_VALUE);
 						otherProfAllied.setStaffHrsPosOtherName(otherProfessionalAllied.getAldPositionType() + ++indexald5);
 						otherProfAllied.setSumStaffHrsMon(otherProfessionalAllied.getAld_other_mon());
 						otherProfAllied.setSumStaffHrsTue(otherProfessionalAllied.getAld_other_tue());
@@ -2851,7 +2851,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 						LTCStaffPlanPosType otherNonProfAllied = new LTCStaffPlanPosType();
 						otherNonProfAllied.setConfirmationId(root.getForm().getConfirmationId());
 						otherNonProfAllied.setStaffingPlanNum("5");
-						otherNonProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_VALUE);
+						otherNonProfAllied.setStaffHrsPosType(Constants.DEFAULT_OTHER_NONPROF_ALLIED_VALUE);
 						otherNonProfAllied.setStaffHrsPosOtherName(otherNonProfessionalAllied.getAldnopPositionType() + ++indexaldnop5);
 						otherNonProfAllied.setSumStaffHrsMon(otherNonProfessionalAllied.getAldnop_other_mon());
 						otherNonProfAllied.setSumStaffHrsTue(otherNonProfessionalAllied.getAldnop_other_tue());
