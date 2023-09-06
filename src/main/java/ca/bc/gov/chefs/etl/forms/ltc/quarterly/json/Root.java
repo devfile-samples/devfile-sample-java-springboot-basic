@@ -2134,6 +2134,918 @@ public class Root{
 	@JsonProperty("nursingNVP_item1-4")
 	public String nursingNVP_item14;
 
+	// Updated fields 
+
+	public String compBNursing_calc1;
+	public String compBNursing_calc2;
+	public String compBNursing_calc3;
+	public String compBNursing_calc4;
+	public String compBAlliedProf_calc1;
+	public String compBAlliedProf_calc2;
+	public String compBAlliedProf_calc3;
+	public String compBAlliedProf_calc4;
+	public String compBAlliedProf_calc5;
+	public String compBAlliedNP_calc1;
+	public String compBAlliedNP_calc2;
+	public String compBAlliedNP_calc3;
+	public String compBAlliedNP_calc4;
+	public String compBAlliedNP_calc5;
+	public String compBAlliedNP_calc6;
+	public String compBAlliedProf_calc6;
+	public String compBAlliedProf_calc7;
+	public String compBNursing_calcsum;
+	public String compBAlliedProf_calcsum;
+	public String compBAlliedNP_calcsum;
+	@JsonProperty("compBNursing_item1-1")
+	public String compBNursing_item11;
+	@JsonProperty("compBNursing_item1-2")
+	public String compBNursing_item12;
+	@JsonProperty("compBNursing_item1-3")
+	public String compBNursing_item13;
+	@JsonProperty("compBNursing_item1-4")
+	public String compBNursing_item14;
+	@JsonProperty("compBAlliedProf_item1-1")
+	public String compBAlliedProf_item11;
+	@JsonProperty("compBAlliedProf_item1-2")
+	public String compBAlliedProf_item12;
+	@JsonProperty("compBAlliedProf_item1-3")
+	public String compBAlliedProf_item13;
+	@JsonProperty("compBAlliedProf_item1-4")
+	public String compBAlliedProf_item14;
+	@JsonProperty("compBAlliedProf_item1-5")
+	public String compBAlliedProf_item15;
+	@JsonProperty("compBAlliedNP_item1-1")
+	public String compBAlliedNP_item11;
+	@JsonProperty("compBAlliedNP_item1-2")
+	public String compBAlliedNP_item12;
+	@JsonProperty("compBAlliedNP_item1-3")
+	public String compBAlliedNP_item13;
+	@JsonProperty("compBAlliedNP_item1-4")
+	public String compBAlliedNP_item14;
+	@JsonProperty("compBAlliedNP_item1-5")
+	public String compBAlliedNP_item15;
+	@JsonProperty("compBAlliedNP_item1-6")
+	public String compBAlliedNP_item16;
+	@JsonProperty("compBAlliedProf_item1-6")
+	public String compBAlliedProf_item16;
+	@JsonProperty("compBAlliedProf_item1-7")
+	public String compBAlliedProf_item17;
+	@JsonProperty("compHAlliedProf_item1-7")
+	public String compHAlliedProf_item17;
+	@JsonProperty("compBNursing_item2-1")
+	public String compBNursing_item21;
+	@JsonProperty("compBNursing_item2-2")
+	public String compBNursing_item22;
+	@JsonProperty("compBNursing_item2-3")
+	public String compBNursing_item23;
+	@JsonProperty("compBNursing_item2-4")
+	public String compBNursing_item24;
+	@JsonProperty("compBAlliedProf_item2-1")
+	public String compBAlliedProf_item21;
+	@JsonProperty("compBAlliedProf_item2-2")
+	public String compBAlliedProf_item22;
+	@JsonProperty("compBAlliedProf_item2-3")
+	public String compBAlliedProf_item23;
+	@JsonProperty("compBAlliedProf_item2-4")
+	public String compBAlliedProf_item24;
+	@JsonProperty("compBAlliedProf_item2-5")
+	public String compBAlliedProf_item25;
+	@JsonProperty("compBAlliedNP_item2-1")
+	public String compBAlliedNP_item21;
+	@JsonProperty("compBAlliedNP_item2-2")
+	public String compBAlliedNP_item22;
+	@JsonProperty("compBAlliedNP_item2-3")
+	public String compBAlliedNP_item23;
+	@JsonProperty("compBAlliedNP_item2-4")
+	public String compBAlliedNP_item24;
+	@JsonProperty("compBAlliedNP_item2-5")
+	public String compBAlliedNP_item25;
+	@JsonProperty("compBAlliedNP_item2-6")
+	public String compBAlliedNP_item26;
+	@JsonProperty("compBAlliedProf_item2-6")
+	public String compBAlliedProf_item26;
+	@JsonProperty("compHAlliedProf_item2-6")
+	public String compHAlliedProf_item26;
+	@JsonProperty("compBAlliedProf_item2-7")
+	public String compBAlliedProf_item27;
+	@JsonProperty("compHAlliedProf_item2-7")
+	public String compHAlliedProf_item27;
+	public String compBNursing_sum1;
+	public String compBAlliedProf_sum1;
+	public String compBAlliedNP_sum1;
+	public String compBNursing_sum2;
+	public String compBAlliedProf_sum2;
+	public String compBAlliedNP_sum2;
+	public String compHNursing_calc1;
+	public String compHNursing_calc2;
+	public String compHNursing_calc3;
+	public String compHNursing_calc4;
+	public String compHAlliedProf_calc1;
+	public String compHAlliedProf_calc2;
+	public String compHAlliedProf_calc3;
+	public String compHAlliedProf_calc4;
+	public String compHAlliedProf_calc5;
+	public String compHAlliedNP_calc1;
+	public String compHAlliedNP_calc2;
+	public String compHAlliedNP_calc3;
+	public String compHAlliedNP_calc4;
+	public String compHAlliedNP_calc5;
+	public String compHAlliedNP_calc6;
+	public String compHAlliedProf_calc6;
+	public String compHAlliedProf_calc7;
+	public String compHNursing_calcsum;
+	public String compHAlliedProf_calcsum;
+	public String compHAlliedNP_calcsum;
+	@JsonProperty("compHNursing_item1-1")
+	public String compHNursing_item11;
+	@JsonProperty("compHNursing_item1-2")
+	public String compHNursing_item12;
+	@JsonProperty("compHNursing_item1-3")
+	public String compHNursing_item13;
+	@JsonProperty("compHNursing_item1-4")
+	public String compHNursing_item14;
+	@JsonProperty("compHAlliedProf_item1-1")
+	public String compHAlliedProf_item11;
+	@JsonProperty("compHAlliedProf_item1-2")
+	public String compHAlliedProf_item12;
+	@JsonProperty("compHAlliedProf_item1-3")
+	public String compHAlliedProf_item13;
+	@JsonProperty("compHAlliedProf_item1-4")
+	public String compHAlliedProf_item14;
+	@JsonProperty("compHAlliedProf_item1-5")
+	public String compHAlliedProf_item15;
+	@JsonProperty("compHAlliedNP_item1-1")
+	public String compHAlliedNP_item11;
+	@JsonProperty("compHAlliedNP_item1-2")
+	public String compHAlliedNP_item12;
+	@JsonProperty("compHAlliedNP_item1-3")
+	public String compHAlliedNP_item13;
+	@JsonProperty("compHAlliedNP_item1-4")
+	public String compHAlliedNP_item14;
+	@JsonProperty("compHAlliedNP_item1-5")
+	public String compHAlliedNP_item15;
+	@JsonProperty("compHAlliedNP_item1-6")
+	public String compHAlliedNP_item16;
+	@JsonProperty("compHAlliedProf_item1-6")
+	public String compHAlliedProf_item16;
+	@JsonProperty("compHNursing_item2-1")
+	public String compHNursing_item21;
+	@JsonProperty("compHNursing_item2-2")
+	public String compHNursing_item22;
+	@JsonProperty("compHNursing_item2-3")
+	public String compHNursing_item23;
+	@JsonProperty("compHNursing_item2-4")
+	public String compHNursing_item24;
+	@JsonProperty("compHAlliedProf_item2-1")
+	public String compHAlliedProf_item21;
+	@JsonProperty("compHAlliedProf_item2-2")
+	public String compHAlliedProf_item22;
+	@JsonProperty("compHAlliedProf_item2-3")
+	public String compHAlliedProf_item23;
+	@JsonProperty("compHAlliedProf_item2-4")
+	public String compHAlliedProf_item24;
+	@JsonProperty("compHAlliedProf_item2-5")
+	public String compHAlliedProf_item25;
+	@JsonProperty("compHAlliedNP_item2-1")
+	public String compHAlliedNP_item21;
+	@JsonProperty("compHAlliedNP_item2-2")
+	public String compHAlliedNP_item22;
+	@JsonProperty("compHAlliedNP_item2-3")
+	public String compHAlliedNP_item23;
+	@JsonProperty("compHAlliedNP_item2-4")
+	public String compHAlliedNP_item24;
+	@JsonProperty("compHAlliedNP_item2-5")
+	public String compHAlliedNP_item25;
+	@JsonProperty("compHAlliedNP_item2-6")
+	public String compHAlliedNP_item26;
+	public String compHNursing_sum1;
+	public String compHAlliedProf_sum1;
+	public String compHAlliedNP_sum1;
+	public String compHNursing_sum2;
+	public String compHAlliedProf_sum2;
+	public String compHAlliedNP_sum2;
+	
+
+	public String getCompBNursing_calc1() {
+		return compBNursing_calc1;
+	}
+	public void setCompBNursing_calc1(String compBNursing_calc1) {
+		this.compBNursing_calc1 = compBNursing_calc1;
+	}
+	public String getCompBNursing_calc2() {
+		return compBNursing_calc2;
+	}
+	public void setCompBNursing_calc2(String compBNursing_calc2) {
+		this.compBNursing_calc2 = compBNursing_calc2;
+	}
+	public String getCompBNursing_calc3() {
+		return compBNursing_calc3;
+	}
+	public void setCompBNursing_calc3(String compBNursing_calc3) {
+		this.compBNursing_calc3 = compBNursing_calc3;
+	}
+	public String getCompBNursing_calc4() {
+		return compBNursing_calc4;
+	}
+	public void setCompBNursing_calc4(String compBNursing_calc4) {
+		this.compBNursing_calc4 = compBNursing_calc4;
+	}
+	public String getCompBAlliedProf_calc1() {
+		return compBAlliedProf_calc1;
+	}
+	public void setCompBAlliedProf_calc1(String compBAlliedProf_calc1) {
+		this.compBAlliedProf_calc1 = compBAlliedProf_calc1;
+	}
+	public String getCompBAlliedProf_calc2() {
+		return compBAlliedProf_calc2;
+	}
+	public void setCompBAlliedProf_calc2(String compBAlliedProf_calc2) {
+		this.compBAlliedProf_calc2 = compBAlliedProf_calc2;
+	}
+	public String getCompBAlliedProf_calc3() {
+		return compBAlliedProf_calc3;
+	}
+	public void setCompBAlliedProf_calc3(String compBAlliedProf_calc3) {
+		this.compBAlliedProf_calc3 = compBAlliedProf_calc3;
+	}
+	public String getCompBAlliedProf_calc4() {
+		return compBAlliedProf_calc4;
+	}
+	public void setCompBAlliedProf_calc4(String compBAlliedProf_calc4) {
+		this.compBAlliedProf_calc4 = compBAlliedProf_calc4;
+	}
+	public String getCompBAlliedProf_calc5() {
+		return compBAlliedProf_calc5;
+	}
+	public void setCompBAlliedProf_calc5(String compBAlliedProf_calc5) {
+		this.compBAlliedProf_calc5 = compBAlliedProf_calc5;
+	}
+	public String getCompBAlliedNP_calc1() {
+		return compBAlliedNP_calc1;
+	}
+	public void setCompBAlliedNP_calc1(String compBAlliedNP_calc1) {
+		this.compBAlliedNP_calc1 = compBAlliedNP_calc1;
+	}
+	public String getCompBAlliedNP_calc2() {
+		return compBAlliedNP_calc2;
+	}
+	public void setCompBAlliedNP_calc2(String compBAlliedNP_calc2) {
+		this.compBAlliedNP_calc2 = compBAlliedNP_calc2;
+	}
+	public String getCompBAlliedNP_calc3() {
+		return compBAlliedNP_calc3;
+	}
+	public void setCompBAlliedNP_calc3(String compBAlliedNP_calc3) {
+		this.compBAlliedNP_calc3 = compBAlliedNP_calc3;
+	}
+	public String getCompBAlliedNP_calc4() {
+		return compBAlliedNP_calc4;
+	}
+	public void setCompBAlliedNP_calc4(String compBAlliedNP_calc4) {
+		this.compBAlliedNP_calc4 = compBAlliedNP_calc4;
+	}
+	public String getCompBAlliedNP_calc5() {
+		return compBAlliedNP_calc5;
+	}
+	public void setCompBAlliedNP_calc5(String compBAlliedNP_calc5) {
+		this.compBAlliedNP_calc5 = compBAlliedNP_calc5;
+	}
+	public String getCompBAlliedNP_calc6() {
+		return compBAlliedNP_calc6;
+	}
+	public void setCompBAlliedNP_calc6(String compBAlliedNP_calc6) {
+		this.compBAlliedNP_calc6 = compBAlliedNP_calc6;
+	}
+	public String getCompBAlliedProf_calc6() {
+		return compBAlliedProf_calc6;
+	}
+	public void setCompBAlliedProf_calc6(String compBAlliedProf_calc6) {
+		this.compBAlliedProf_calc6 = compBAlliedProf_calc6;
+	}
+	public String getCompBAlliedProf_calc7() {
+		return compBAlliedProf_calc7;
+	}
+	public void setCompBAlliedProf_calc7(String compBAlliedProf_calc7) {
+		this.compBAlliedProf_calc7 = compBAlliedProf_calc7;
+	}
+	public String getCompBNursing_calcsum() {
+		return compBNursing_calcsum;
+	}
+	public void setCompBNursing_calcsum(String compBNursing_calcsum) {
+		this.compBNursing_calcsum = compBNursing_calcsum;
+	}
+	public String getCompBAlliedProf_calcsum() {
+		return compBAlliedProf_calcsum;
+	}
+	public void setCompBAlliedProf_calcsum(String compBAlliedProf_calcsum) {
+		this.compBAlliedProf_calcsum = compBAlliedProf_calcsum;
+	}
+	public String getCompBAlliedNP_calcsum() {
+		return compBAlliedNP_calcsum;
+	}
+	public void setCompBAlliedNP_calcsum(String compBAlliedNP_calcsum) {
+		this.compBAlliedNP_calcsum = compBAlliedNP_calcsum;
+	}
+	public String getCompBNursing_item11() {
+		return compBNursing_item11;
+	}
+	public void setCompBNursing_item11(String compBNursing_item11) {
+		this.compBNursing_item11 = compBNursing_item11;
+	}
+	public String getCompBNursing_item12() {
+		return compBNursing_item12;
+	}
+	public void setCompBNursing_item12(String compBNursing_item12) {
+		this.compBNursing_item12 = compBNursing_item12;
+	}
+	public String getCompBNursing_item13() {
+		return compBNursing_item13;
+	}
+	public void setCompBNursing_item13(String compBNursing_item13) {
+		this.compBNursing_item13 = compBNursing_item13;
+	}
+	public String getCompBNursing_item14() {
+		return compBNursing_item14;
+	}
+	public void setCompBNursing_item14(String compBNursing_item14) {
+		this.compBNursing_item14 = compBNursing_item14;
+	}
+	public String getCompBAlliedProf_item11() {
+		return compBAlliedProf_item11;
+	}
+	public void setCompBAlliedProf_item11(String compBAlliedProf_item11) {
+		this.compBAlliedProf_item11 = compBAlliedProf_item11;
+	}
+	public String getCompBAlliedProf_item12() {
+		return compBAlliedProf_item12;
+	}
+	public void setCompBAlliedProf_item12(String compBAlliedProf_item12) {
+		this.compBAlliedProf_item12 = compBAlliedProf_item12;
+	}
+	public String getCompBAlliedProf_item13() {
+		return compBAlliedProf_item13;
+	}
+	public void setCompBAlliedProf_item13(String compBAlliedProf_item13) {
+		this.compBAlliedProf_item13 = compBAlliedProf_item13;
+	}
+	public String getCompBAlliedProf_item14() {
+		return compBAlliedProf_item14;
+	}
+	public void setCompBAlliedProf_item14(String compBAlliedProf_item14) {
+		this.compBAlliedProf_item14 = compBAlliedProf_item14;
+	}
+	public String getCompBAlliedProf_item15() {
+		return compBAlliedProf_item15;
+	}
+	public void setCompBAlliedProf_item15(String compBAlliedProf_item15) {
+		this.compBAlliedProf_item15 = compBAlliedProf_item15;
+	}
+	public String getCompBAlliedNP_item11() {
+		return compBAlliedNP_item11;
+	}
+	public void setCompBAlliedNP_item11(String compBAlliedNP_item11) {
+		this.compBAlliedNP_item11 = compBAlliedNP_item11;
+	}
+	public String getCompBAlliedNP_item12() {
+		return compBAlliedNP_item12;
+	}
+	public void setCompBAlliedNP_item12(String compBAlliedNP_item12) {
+		this.compBAlliedNP_item12 = compBAlliedNP_item12;
+	}
+	public String getCompBAlliedNP_item13() {
+		return compBAlliedNP_item13;
+	}
+	public void setCompBAlliedNP_item13(String compBAlliedNP_item13) {
+		this.compBAlliedNP_item13 = compBAlliedNP_item13;
+	}
+	public String getCompBAlliedNP_item14() {
+		return compBAlliedNP_item14;
+	}
+	public void setCompBAlliedNP_item14(String compBAlliedNP_item14) {
+		this.compBAlliedNP_item14 = compBAlliedNP_item14;
+	}
+	public String getCompBAlliedNP_item15() {
+		return compBAlliedNP_item15;
+	}
+	public void setCompBAlliedNP_item15(String compBAlliedNP_item15) {
+		this.compBAlliedNP_item15 = compBAlliedNP_item15;
+	}
+	public String getCompBAlliedNP_item16() {
+		return compBAlliedNP_item16;
+	}
+	public void setCompBAlliedNP_item16(String compBAlliedNP_item16) {
+		this.compBAlliedNP_item16 = compBAlliedNP_item16;
+	}
+	public String getCompBAlliedProf_item16() {
+		return compBAlliedProf_item16;
+	}
+	public void setCompBAlliedProf_item16(String compBAlliedProf_item16) {
+		this.compBAlliedProf_item16 = compBAlliedProf_item16;
+	}
+	public String getCompBAlliedProf_item17() {
+		return compBAlliedProf_item17;
+	}
+	public void setCompBAlliedProf_item17(String compBAlliedProf_item17) {
+		this.compBAlliedProf_item17 = compBAlliedProf_item17;
+	}
+	public String getCompHAlliedProf_item17() {
+		return compHAlliedProf_item17;
+	}
+	public void setCompHAlliedProf_item17(String compHAlliedProf_item17) {
+		this.compHAlliedProf_item17 = compHAlliedProf_item17;
+	}
+	public String getCompBNursing_item21() {
+		return compBNursing_item21;
+	}
+	public void setCompBNursing_item21(String compBNursing_item21) {
+		this.compBNursing_item21 = compBNursing_item21;
+	}
+	public String getCompBNursing_item22() {
+		return compBNursing_item22;
+	}
+	public void setCompBNursing_item22(String compBNursing_item22) {
+		this.compBNursing_item22 = compBNursing_item22;
+	}
+	public String getCompBNursing_item23() {
+		return compBNursing_item23;
+	}
+	public void setCompBNursing_item23(String compBNursing_item23) {
+		this.compBNursing_item23 = compBNursing_item23;
+	}
+	public String getCompBNursing_item24() {
+		return compBNursing_item24;
+	}
+	public void setCompBNursing_item24(String compBNursing_item24) {
+		this.compBNursing_item24 = compBNursing_item24;
+	}
+	public String getCompBAlliedProf_item21() {
+		return compBAlliedProf_item21;
+	}
+	public void setCompBAlliedProf_item21(String compBAlliedProf_item21) {
+		this.compBAlliedProf_item21 = compBAlliedProf_item21;
+	}
+	public String getCompBAlliedProf_item22() {
+		return compBAlliedProf_item22;
+	}
+	public void setCompBAlliedProf_item22(String compBAlliedProf_item22) {
+		this.compBAlliedProf_item22 = compBAlliedProf_item22;
+	}
+	public String getCompBAlliedProf_item23() {
+		return compBAlliedProf_item23;
+	}
+	public void setCompBAlliedProf_item23(String compBAlliedProf_item23) {
+		this.compBAlliedProf_item23 = compBAlliedProf_item23;
+	}
+	public String getCompBAlliedProf_item24() {
+		return compBAlliedProf_item24;
+	}
+	public void setCompBAlliedProf_item24(String compBAlliedProf_item24) {
+		this.compBAlliedProf_item24 = compBAlliedProf_item24;
+	}
+	public String getCompBAlliedProf_item25() {
+		return compBAlliedProf_item25;
+	}
+	public void setCompBAlliedProf_item25(String compBAlliedProf_item25) {
+		this.compBAlliedProf_item25 = compBAlliedProf_item25;
+	}
+	public String getCompBAlliedNP_item21() {
+		return compBAlliedNP_item21;
+	}
+	public void setCompBAlliedNP_item21(String compBAlliedNP_item21) {
+		this.compBAlliedNP_item21 = compBAlliedNP_item21;
+	}
+	public String getCompBAlliedNP_item22() {
+		return compBAlliedNP_item22;
+	}
+	public void setCompBAlliedNP_item22(String compBAlliedNP_item22) {
+		this.compBAlliedNP_item22 = compBAlliedNP_item22;
+	}
+	public String getCompBAlliedNP_item23() {
+		return compBAlliedNP_item23;
+	}
+	public void setCompBAlliedNP_item23(String compBAlliedNP_item23) {
+		this.compBAlliedNP_item23 = compBAlliedNP_item23;
+	}
+	public String getCompBAlliedNP_item24() {
+		return compBAlliedNP_item24;
+	}
+	public void setCompBAlliedNP_item24(String compBAlliedNP_item24) {
+		this.compBAlliedNP_item24 = compBAlliedNP_item24;
+	}
+	public String getCompBAlliedNP_item25() {
+		return compBAlliedNP_item25;
+	}
+	public void setCompBAlliedNP_item25(String compBAlliedNP_item25) {
+		this.compBAlliedNP_item25 = compBAlliedNP_item25;
+	}
+	public String getCompBAlliedNP_item26() {
+		return compBAlliedNP_item26;
+	}
+	public void setCompBAlliedNP_item26(String compBAlliedNP_item26) {
+		this.compBAlliedNP_item26 = compBAlliedNP_item26;
+	}
+	public String getCompBAlliedProf_item26() {
+		return compBAlliedProf_item26;
+	}
+	public void setCompBAlliedProf_item26(String compBAlliedProf_item26) {
+		this.compBAlliedProf_item26 = compBAlliedProf_item26;
+	}
+	public String getCompHAlliedProf_item26() {
+		return compHAlliedProf_item26;
+	}
+	public void setCompHAlliedProf_item26(String compHAlliedProf_item26) {
+		this.compHAlliedProf_item26 = compHAlliedProf_item26;
+	}
+	public String getCompBAlliedProf_item27() {
+		return compBAlliedProf_item27;
+	}
+	public void setCompBAlliedProf_item27(String compBAlliedProf_item27) {
+		this.compBAlliedProf_item27 = compBAlliedProf_item27;
+	}
+	public String getCompHAlliedProf_item27() {
+		return compHAlliedProf_item27;
+	}
+	public void setCompHAlliedProf_item27(String compHAlliedProf_item27) {
+		this.compHAlliedProf_item27 = compHAlliedProf_item27;
+	}
+	public String getCompBNursing_sum1() {
+		return compBNursing_sum1;
+	}
+	public void setCompBNursing_sum1(String compBNursing_sum1) {
+		this.compBNursing_sum1 = compBNursing_sum1;
+	}
+	public String getCompBAlliedProf_sum1() {
+		return compBAlliedProf_sum1;
+	}
+	public void setCompBAlliedProf_sum1(String compBAlliedProf_sum1) {
+		this.compBAlliedProf_sum1 = compBAlliedProf_sum1;
+	}
+	public String getCompBAlliedNP_sum1() {
+		return compBAlliedNP_sum1;
+	}
+	public void setCompBAlliedNP_sum1(String compBAlliedNP_sum1) {
+		this.compBAlliedNP_sum1 = compBAlliedNP_sum1;
+	}
+	public String getCompBNursing_sum2() {
+		return compBNursing_sum2;
+	}
+	public void setCompBNursing_sum2(String compBNursing_sum2) {
+		this.compBNursing_sum2 = compBNursing_sum2;
+	}
+	public String getCompBAlliedProf_sum2() {
+		return compBAlliedProf_sum2;
+	}
+	public void setCompBAlliedProf_sum2(String compBAlliedProf_sum2) {
+		this.compBAlliedProf_sum2 = compBAlliedProf_sum2;
+	}
+	public String getCompBAlliedNP_sum2() {
+		return compBAlliedNP_sum2;
+	}
+	public void setCompBAlliedNP_sum2(String compBAlliedNP_sum2) {
+		this.compBAlliedNP_sum2 = compBAlliedNP_sum2;
+	}
+	public String getCompHNursing_calc1() {
+		return compHNursing_calc1;
+	}
+	public void setCompHNursing_calc1(String compHNursing_calc1) {
+		this.compHNursing_calc1 = compHNursing_calc1;
+	}
+	public String getCompHNursing_calc2() {
+		return compHNursing_calc2;
+	}
+	public void setCompHNursing_calc2(String compHNursing_calc2) {
+		this.compHNursing_calc2 = compHNursing_calc2;
+	}
+	public String getCompHNursing_calc3() {
+		return compHNursing_calc3;
+	}
+	public void setCompHNursing_calc3(String compHNursing_calc3) {
+		this.compHNursing_calc3 = compHNursing_calc3;
+	}
+	public String getCompHNursing_calc4() {
+		return compHNursing_calc4;
+	}
+	public void setCompHNursing_calc4(String compHNursing_calc4) {
+		this.compHNursing_calc4 = compHNursing_calc4;
+	}
+	public String getCompHAlliedProf_calc1() {
+		return compHAlliedProf_calc1;
+	}
+	public void setCompHAlliedProf_calc1(String compHAlliedProf_calc1) {
+		this.compHAlliedProf_calc1 = compHAlliedProf_calc1;
+	}
+	public String getCompHAlliedProf_calc2() {
+		return compHAlliedProf_calc2;
+	}
+	public void setCompHAlliedProf_calc2(String compHAlliedProf_calc2) {
+		this.compHAlliedProf_calc2 = compHAlliedProf_calc2;
+	}
+	public String getCompHAlliedProf_calc3() {
+		return compHAlliedProf_calc3;
+	}
+	public void setCompHAlliedProf_calc3(String compHAlliedProf_calc3) {
+		this.compHAlliedProf_calc3 = compHAlliedProf_calc3;
+	}
+	public String getCompHAlliedProf_calc4() {
+		return compHAlliedProf_calc4;
+	}
+	public void setCompHAlliedProf_calc4(String compHAlliedProf_calc4) {
+		this.compHAlliedProf_calc4 = compHAlliedProf_calc4;
+	}
+	public String getCompHAlliedProf_calc5() {
+		return compHAlliedProf_calc5;
+	}
+	public void setCompHAlliedProf_calc5(String compHAlliedProf_calc5) {
+		this.compHAlliedProf_calc5 = compHAlliedProf_calc5;
+	}
+	public String getCompHAlliedNP_calc1() {
+		return compHAlliedNP_calc1;
+	}
+	public void setCompHAlliedNP_calc1(String compHAlliedNP_calc1) {
+		this.compHAlliedNP_calc1 = compHAlliedNP_calc1;
+	}
+	public String getCompHAlliedNP_calc2() {
+		return compHAlliedNP_calc2;
+	}
+	public void setCompHAlliedNP_calc2(String compHAlliedNP_calc2) {
+		this.compHAlliedNP_calc2 = compHAlliedNP_calc2;
+	}
+	public String getCompHAlliedNP_calc3() {
+		return compHAlliedNP_calc3;
+	}
+	public void setCompHAlliedNP_calc3(String compHAlliedNP_calc3) {
+		this.compHAlliedNP_calc3 = compHAlliedNP_calc3;
+	}
+	public String getCompHAlliedNP_calc4() {
+		return compHAlliedNP_calc4;
+	}
+	public void setCompHAlliedNP_calc4(String compHAlliedNP_calc4) {
+		this.compHAlliedNP_calc4 = compHAlliedNP_calc4;
+	}
+	public String getCompHAlliedNP_calc5() {
+		return compHAlliedNP_calc5;
+	}
+	public void setCompHAlliedNP_calc5(String compHAlliedNP_calc5) {
+		this.compHAlliedNP_calc5 = compHAlliedNP_calc5;
+	}
+	public String getCompHAlliedNP_calc6() {
+		return compHAlliedNP_calc6;
+	}
+	public void setCompHAlliedNP_calc6(String compHAlliedNP_calc6) {
+		this.compHAlliedNP_calc6 = compHAlliedNP_calc6;
+	}
+	public String getCompHAlliedProf_calc6() {
+		return compHAlliedProf_calc6;
+	}
+	public void setCompHAlliedProf_calc6(String compHAlliedProf_calc6) {
+		this.compHAlliedProf_calc6 = compHAlliedProf_calc6;
+	}
+	public String getCompHAlliedProf_calc7() {
+		return compHAlliedProf_calc7;
+	}
+	public void setCompHAlliedProf_calc7(String compHAlliedProf_calc7) {
+		this.compHAlliedProf_calc7 = compHAlliedProf_calc7;
+	}
+	public String getCompHNursing_calcsum() {
+		return compHNursing_calcsum;
+	}
+	public void setCompHNursing_calcsum(String compHNursing_calcsum) {
+		this.compHNursing_calcsum = compHNursing_calcsum;
+	}
+	public String getCompHAlliedProf_calcsum() {
+		return compHAlliedProf_calcsum;
+	}
+	public void setCompHAlliedProf_calcsum(String compHAlliedProf_calcsum) {
+		this.compHAlliedProf_calcsum = compHAlliedProf_calcsum;
+	}
+	public String getCompHAlliedNP_calcsum() {
+		return compHAlliedNP_calcsum;
+	}
+	public void setCompHAlliedNP_calcsum(String compHAlliedNP_calcsum) {
+		this.compHAlliedNP_calcsum = compHAlliedNP_calcsum;
+	}
+	public String getCompHNursing_item11() {
+		return compHNursing_item11;
+	}
+	public void setCompHNursing_item11(String compHNursing_item11) {
+		this.compHNursing_item11 = compHNursing_item11;
+	}
+	public String getCompHNursing_item12() {
+		return compHNursing_item12;
+	}
+	public void setCompHNursing_item12(String compHNursing_item12) {
+		this.compHNursing_item12 = compHNursing_item12;
+	}
+	public String getCompHNursing_item13() {
+		return compHNursing_item13;
+	}
+	public void setCompHNursing_item13(String compHNursing_item13) {
+		this.compHNursing_item13 = compHNursing_item13;
+	}
+	public String getCompHNursing_item14() {
+		return compHNursing_item14;
+	}
+	public void setCompHNursing_item14(String compHNursing_item14) {
+		this.compHNursing_item14 = compHNursing_item14;
+	}
+	public String getCompHAlliedProf_item11() {
+		return compHAlliedProf_item11;
+	}
+	public void setCompHAlliedProf_item11(String compHAlliedProf_item11) {
+		this.compHAlliedProf_item11 = compHAlliedProf_item11;
+	}
+	public String getCompHAlliedProf_item12() {
+		return compHAlliedProf_item12;
+	}
+	public void setCompHAlliedProf_item12(String compHAlliedProf_item12) {
+		this.compHAlliedProf_item12 = compHAlliedProf_item12;
+	}
+	public String getCompHAlliedProf_item13() {
+		return compHAlliedProf_item13;
+	}
+	public void setCompHAlliedProf_item13(String compHAlliedProf_item13) {
+		this.compHAlliedProf_item13 = compHAlliedProf_item13;
+	}
+	public String getCompHAlliedProf_item14() {
+		return compHAlliedProf_item14;
+	}
+	public void setCompHAlliedProf_item14(String compHAlliedProf_item14) {
+		this.compHAlliedProf_item14 = compHAlliedProf_item14;
+	}
+	public String getCompHAlliedProf_item15() {
+		return compHAlliedProf_item15;
+	}
+	public void setCompHAlliedProf_item15(String compHAlliedProf_item15) {
+		this.compHAlliedProf_item15 = compHAlliedProf_item15;
+	}
+	public String getCompHAlliedNP_item11() {
+		return compHAlliedNP_item11;
+	}
+	public void setCompHAlliedNP_item11(String compHAlliedNP_item11) {
+		this.compHAlliedNP_item11 = compHAlliedNP_item11;
+	}
+	public String getCompHAlliedNP_item12() {
+		return compHAlliedNP_item12;
+	}
+	public void setCompHAlliedNP_item12(String compHAlliedNP_item12) {
+		this.compHAlliedNP_item12 = compHAlliedNP_item12;
+	}
+	public String getCompHAlliedNP_item13() {
+		return compHAlliedNP_item13;
+	}
+	public void setCompHAlliedNP_item13(String compHAlliedNP_item13) {
+		this.compHAlliedNP_item13 = compHAlliedNP_item13;
+	}
+	public String getCompHAlliedNP_item14() {
+		return compHAlliedNP_item14;
+	}
+	public void setCompHAlliedNP_item14(String compHAlliedNP_item14) {
+		this.compHAlliedNP_item14 = compHAlliedNP_item14;
+	}
+	public String getCompHAlliedNP_item15() {
+		return compHAlliedNP_item15;
+	}
+	public void setCompHAlliedNP_item15(String compHAlliedNP_item15) {
+		this.compHAlliedNP_item15 = compHAlliedNP_item15;
+	}
+	public String getCompHAlliedNP_item16() {
+		return compHAlliedNP_item16;
+	}
+	public void setCompHAlliedNP_item16(String compHAlliedNP_item16) {
+		this.compHAlliedNP_item16 = compHAlliedNP_item16;
+	}
+	public String getCompHAlliedProf_item16() {
+		return compHAlliedProf_item16;
+	}
+	public void setCompHAlliedProf_item16(String compHAlliedProf_item16) {
+		this.compHAlliedProf_item16 = compHAlliedProf_item16;
+	}
+	public String getCompHNursing_item21() {
+		return compHNursing_item21;
+	}
+	public void setCompHNursing_item21(String compHNursing_item21) {
+		this.compHNursing_item21 = compHNursing_item21;
+	}
+	public String getCompHNursing_item22() {
+		return compHNursing_item22;
+	}
+	public void setCompHNursing_item22(String compHNursing_item22) {
+		this.compHNursing_item22 = compHNursing_item22;
+	}
+	public String getCompHNursing_item23() {
+		return compHNursing_item23;
+	}
+	public void setCompHNursing_item23(String compHNursing_item23) {
+		this.compHNursing_item23 = compHNursing_item23;
+	}
+	public String getCompHNursing_item24() {
+		return compHNursing_item24;
+	}
+	public void setCompHNursing_item24(String compHNursing_item24) {
+		this.compHNursing_item24 = compHNursing_item24;
+	}
+	public String getCompHAlliedProf_item21() {
+		return compHAlliedProf_item21;
+	}
+	public void setCompHAlliedProf_item21(String compHAlliedProf_item21) {
+		this.compHAlliedProf_item21 = compHAlliedProf_item21;
+	}
+	public String getCompHAlliedProf_item22() {
+		return compHAlliedProf_item22;
+	}
+	public void setCompHAlliedProf_item22(String compHAlliedProf_item22) {
+		this.compHAlliedProf_item22 = compHAlliedProf_item22;
+	}
+	public String getCompHAlliedProf_item23() {
+		return compHAlliedProf_item23;
+	}
+	public void setCompHAlliedProf_item23(String compHAlliedProf_item23) {
+		this.compHAlliedProf_item23 = compHAlliedProf_item23;
+	}
+	public String getCompHAlliedProf_item24() {
+		return compHAlliedProf_item24;
+	}
+	public void setCompHAlliedProf_item24(String compHAlliedProf_item24) {
+		this.compHAlliedProf_item24 = compHAlliedProf_item24;
+	}
+	public String getCompHAlliedProf_item25() {
+		return compHAlliedProf_item25;
+	}
+	public void setCompHAlliedProf_item25(String compHAlliedProf_item25) {
+		this.compHAlliedProf_item25 = compHAlliedProf_item25;
+	}
+	public String getCompHAlliedNP_item21() {
+		return compHAlliedNP_item21;
+	}
+	public void setCompHAlliedNP_item21(String compHAlliedNP_item21) {
+		this.compHAlliedNP_item21 = compHAlliedNP_item21;
+	}
+	public String getCompHAlliedNP_item22() {
+		return compHAlliedNP_item22;
+	}
+	public void setCompHAlliedNP_item22(String compHAlliedNP_item22) {
+		this.compHAlliedNP_item22 = compHAlliedNP_item22;
+	}
+	public String getCompHAlliedNP_item23() {
+		return compHAlliedNP_item23;
+	}
+	public void setCompHAlliedNP_item23(String compHAlliedNP_item23) {
+		this.compHAlliedNP_item23 = compHAlliedNP_item23;
+	}
+	public String getCompHAlliedNP_item24() {
+		return compHAlliedNP_item24;
+	}
+	public void setCompHAlliedNP_item24(String compHAlliedNP_item24) {
+		this.compHAlliedNP_item24 = compHAlliedNP_item24;
+	}
+	public String getCompHAlliedNP_item25() {
+		return compHAlliedNP_item25;
+	}
+	public void setCompHAlliedNP_item25(String compHAlliedNP_item25) {
+		this.compHAlliedNP_item25 = compHAlliedNP_item25;
+	}
+	public String getCompHAlliedNP_item26() {
+		return compHAlliedNP_item26;
+	}
+	public void setCompHAlliedNP_item26(String compHAlliedNP_item26) {
+		this.compHAlliedNP_item26 = compHAlliedNP_item26;
+	}
+	public String getCompHNursing_sum1() {
+		return compHNursing_sum1;
+	}
+	public void setCompHNursing_sum1(String compHNursing_sum1) {
+		this.compHNursing_sum1 = compHNursing_sum1;
+	}
+	public String getCompHAlliedProf_sum1() {
+		return compHAlliedProf_sum1;
+	}
+	public void setCompHAlliedProf_sum1(String compHAlliedProf_sum1) {
+		this.compHAlliedProf_sum1 = compHAlliedProf_sum1;
+	}
+	public String getCompHAlliedNP_sum1() {
+		return compHAlliedNP_sum1;
+	}
+	public void setCompHAlliedNP_sum1(String compHAlliedNP_sum1) {
+		this.compHAlliedNP_sum1 = compHAlliedNP_sum1;
+	}
+	public String getCompHNursing_sum2() {
+		return compHNursing_sum2;
+	}
+	public void setCompHNursing_sum2(String compHNursing_sum2) {
+		this.compHNursing_sum2 = compHNursing_sum2;
+	}
+	public String getCompHAlliedProf_sum2() {
+		return compHAlliedProf_sum2;
+	}
+	public void setCompHAlliedProf_sum2(String compHAlliedProf_sum2) {
+		this.compHAlliedProf_sum2 = compHAlliedProf_sum2;
+	}
+	public String getCompHAlliedNP_sum2() {
+		return compHAlliedNP_sum2;
+	}
+	public void setCompHAlliedNP_sum2(String compHAlliedNP_sum2) {
+		this.compHAlliedNP_sum2 = compHAlliedNP_sum2;
+	}
 	public String getNursingNVP_item11() {
 		return nursingNVP_item11;
 	}

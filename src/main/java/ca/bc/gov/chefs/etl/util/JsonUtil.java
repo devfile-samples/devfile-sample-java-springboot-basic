@@ -22,7 +22,7 @@ public class JsonUtil {
 		return result;
 	}
 
-    public String ltcYTDBackwardCompatibility(String payload){
+    public static String ltcYTDBackwardCompatibility(String payload){
         for (Map.Entry<String, String> entry : Constants.LTC_YTD_OLD_KEYS_COMPATIBILITY.entrySet()) {
             String key = entry.getKey();
             String value = entry.getValue();
