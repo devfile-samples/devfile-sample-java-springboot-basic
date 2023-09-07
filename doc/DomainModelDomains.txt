@@ -869,6 +869,8 @@
 "CARE_UNIT_TYPE","respite","6"
 "CARE_UNIT_TYPE","flexBed","7"
 "CARE_UNIT_TYPE","otherSpecify","8"
+"CARE_UNIT_TYPE","ltc","9"
+"CARE_UNIT_TYPE","specializedUnits","10"
 "REVISION_REASON","increaseInBeds","1"
 "REVISION_REASON","increaseInHPRD","2"
 "REVISION_REASON","licensingIssue","3"
