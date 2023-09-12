@@ -200,7 +200,7 @@ public class Constants {
 		LTC_YTD_OLD_KEYS_COMPATIBILITY.put("compB_item1-27","compBAlliedNP_item1-6");
 		LTC_YTD_OLD_KEYS_COMPATIBILITY.put("compB_item1-28","compBAlliedProf_item1-6");
 		LTC_YTD_OLD_KEYS_COMPATIBILITY.put("compB_item1-29","compBAlliedProf_item1-7");
-		LTC_YTD_OLD_KEYS_COMPATIBILITY.put("compB_item1-29","compHAlliedProf_item1-7");
+		LTC_YTD_OLD_KEYS_COMPATIBILITY.put("compH_item1-29","compHAlliedProf_item1-7");
 		LTC_YTD_OLD_KEYS_COMPATIBILITY.put("compB_item2-13","compBNursing_item2-1");
 		LTC_YTD_OLD_KEYS_COMPATIBILITY.put("compB_item2-14","compBNursing_item2-2");
 		LTC_YTD_OLD_KEYS_COMPATIBILITY.put("compB_item2-15","compBNursing_item2-3");
@@ -217,9 +217,9 @@ public class Constants {
 		LTC_YTD_OLD_KEYS_COMPATIBILITY.put("compB_item2-26","compBAlliedNP_item2-5");
 		LTC_YTD_OLD_KEYS_COMPATIBILITY.put("compB_item2-27","compBAlliedNP_item2-6");
 		LTC_YTD_OLD_KEYS_COMPATIBILITY.put("compB_item2-28","compBAlliedProf_item2-6");
-		LTC_YTD_OLD_KEYS_COMPATIBILITY.put("compB_item2-28","compHAlliedProf_item2-6");
+		LTC_YTD_OLD_KEYS_COMPATIBILITY.put("compH_item2-28","compHAlliedProf_item2-6");
 		LTC_YTD_OLD_KEYS_COMPATIBILITY.put("compB_item2-29","compBAlliedProf_item2-7");
-		LTC_YTD_OLD_KEYS_COMPATIBILITY.put("compB_item2-29","compHAlliedProf_item2-7");
+		LTC_YTD_OLD_KEYS_COMPATIBILITY.put("compH_item2-29","compHAlliedProf_item2-7");
 		LTC_YTD_OLD_KEYS_COMPATIBILITY.put("compB_sum1-3","compBNursing_sum1");
 		LTC_YTD_OLD_KEYS_COMPATIBILITY.put("compB_sum1-4","compBAlliedProf_sum1");
 		LTC_YTD_OLD_KEYS_COMPATIBILITY.put("compB_sum1-5","compBAlliedNP_sum1");
