@@ -1128,7 +1128,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			nursingSalSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			nursingSalSubtotal.setSubTotalCompSalStaffYTD(root.getCompBNursing_sum1());
 			nursingSalSubtotal.setSubTotalCompSalContractServicesYTD(root.getCompBNursing_sum2());
-			nursingSalSubtotal.setSubTotalCompSalTotalCostYTD(root.getCompBAlliedProf_calcsum());
+			nursingSalSubtotal.setSubTotalCompSalTotalCostYTD(root.getCompBNursing_calcsum());
 
 			LtcYtdCompSalSubtotals alliedSalSubtotal = new LtcYtdCompSalSubtotals();
 			alliedSalSubtotal.setCompSalType(root.getAlliedProf_label_comp());
