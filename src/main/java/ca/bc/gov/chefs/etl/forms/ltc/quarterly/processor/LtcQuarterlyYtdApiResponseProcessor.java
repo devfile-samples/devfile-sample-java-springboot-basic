@@ -959,146 +959,146 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 
 			/* Direct Care Nursing */
 			LtcYtdCompSal nursingRNSal = new LtcYtdCompSal();
-			nursingRNSal.setCompSalStaffYtd(root.getCompB_item113());
-			nursingRNSal.setCompSalContractServicesYtd(root.getCompB_item213());
+			nursingRNSal.setCompSalStaffYtd(root.getCompBNursing_item11());
+			nursingRNSal.setCompSalContractServicesYtd(root.getCompBNursing_item21());
 			nursingRNSal.setCompSalName(root.getNursing_label_comp1());
 			nursingRNSal.setCompSalType(root.getNursing_label_comp());
 			nursingRNSal.setConfirmationId(root.getForm().getConfirmationId());
-			nursingRNSal.setCompSalTotalCostYtd(root.getCompB_calc13());
+			nursingRNSal.setCompSalTotalCostYtd(root.getCompBNursing_calc1());
 			
 
 			LtcYtdCompSal nursingLPNSal = new LtcYtdCompSal();
-			nursingLPNSal.setCompSalStaffYtd(root.getCompB_item114());
-			nursingLPNSal.setCompSalContractServicesYtd(root.getCompB_item214());
+			nursingLPNSal.setCompSalStaffYtd(root.getCompBNursing_item12());
+			nursingLPNSal.setCompSalContractServicesYtd(root.getCompBNursing_item22());
 			nursingLPNSal.setCompSalName(root.getNursing_label_comp2());
 			nursingLPNSal.setCompSalType(root.getNursing_label_comp());
 			nursingLPNSal.setConfirmationId(root.getForm().getConfirmationId());
-			nursingLPNSal.setCompSalTotalCostYtd(root.getCompB_calc14());
+			nursingLPNSal.setCompSalTotalCostYtd(root.getCompBNursing_calc2());
 
 			LtcYtdCompSal nursingHCASal = new LtcYtdCompSal();
-			nursingHCASal.setCompSalStaffYtd(root.getCompB_item115());
-			nursingHCASal.setCompSalContractServicesYtd(root.getCompB_item215());
+			nursingHCASal.setCompSalStaffYtd(root.getCompBNursing_item13());
+			nursingHCASal.setCompSalContractServicesYtd(root.getCompBNursing_item23());
 			nursingHCASal.setCompSalName(root.getNursing_label_comp3());
 			nursingHCASal.setCompSalType(root.getNursing_label_comp());
 			nursingHCASal.setConfirmationId(root.getForm().getConfirmationId());
-			nursingHCASal.setCompSalTotalCostYtd(root.getCompB_calc15());
+			nursingHCASal.setCompSalTotalCostYtd(root.getCompBNursing_calc3());
 			
 
 			LtcYtdCompSal nursingOthSal = new LtcYtdCompSal();
-			nursingOthSal.setCompSalStaffYtd(root.getCompB_item116());
-			nursingOthSal.setCompSalContractServicesYtd(root.getCompB_item216());
+			nursingOthSal.setCompSalStaffYtd(root.getCompBNursing_item14());
+			nursingOthSal.setCompSalContractServicesYtd(root.getCompBNursing_item24());
 			nursingOthSal.setCompSalName(Constants.DEFAULT_OTHER_VALUE);
 			nursingOthSal.setCompSalType(root.getNursing_label_comp());
 			nursingOthSal.setConfirmationId(root.getForm().getConfirmationId());
-			nursingOthSal.setCompSalTotalCostYtd(root.getCompB_calc16());
+			nursingOthSal.setCompSalTotalCostYtd(root.getCompBNursing_calc4());
 			nursingOthSal.setCompSalOtherName(root.getNursing_label_comp4());
 
 			/* Allied Professional */
 			LtcYtdCompSal alliedProfOTSal = new LtcYtdCompSal();
-			alliedProfOTSal.setCompSalStaffYtd(root.getCompB_item117());
-			alliedProfOTSal.setCompSalContractServicesYtd(root.getCompB_item217());
+			alliedProfOTSal.setCompSalStaffYtd(root.getCompBAlliedProf_item11());
+			alliedProfOTSal.setCompSalContractServicesYtd(root.getCompBAlliedProf_item21());
 			alliedProfOTSal.setCompSalName(root.getAlliedProf_label_comp1());
 			alliedProfOTSal.setCompSalType(root.getAlliedProf_label_comp());
 			alliedProfOTSal.setConfirmationId(root.getForm().getConfirmationId());
-			alliedProfOTSal.setCompSalTotalCostYtd(root.getCompB_calc17());
+			alliedProfOTSal.setCompSalTotalCostYtd(root.getCompBAlliedProf_calc1());
 
 			LtcYtdCompSal alliedProfPTSal = new LtcYtdCompSal();
-			alliedProfPTSal.setCompSalStaffYtd(root.getCompB_item118());
-			alliedProfPTSal.setCompSalContractServicesYtd(root.getCompB_item218());
+			alliedProfPTSal.setCompSalStaffYtd(root.getCompBAlliedProf_item12());
+			alliedProfPTSal.setCompSalContractServicesYtd(root.getCompBAlliedProf_item22());
 			alliedProfPTSal.setCompSalName(root.getAlliedProf_label_comp2());
 			alliedProfPTSal.setCompSalType(root.getAlliedProf_label_comp());
 			alliedProfPTSal.setConfirmationId(root.getForm().getConfirmationId());
-			alliedProfPTSal.setCompSalTotalCostYtd(root.getCompB_calc18());
+			alliedProfPTSal.setCompSalTotalCostYtd(root.getCompBAlliedProf_calc2());
 
 			LtcYtdCompSal alliedProfDTSal = new LtcYtdCompSal();
-			alliedProfDTSal.setCompSalStaffYtd(root.getCompB_item119());
-			alliedProfDTSal.setCompSalContractServicesYtd(root.getCompB_item219());
+			alliedProfDTSal.setCompSalStaffYtd(root.getCompBAlliedProf_item13());
+			alliedProfDTSal.setCompSalContractServicesYtd(root.getCompBAlliedProf_item23());
 			alliedProfDTSal.setCompSalName(root.getAlliedProf_label_comp3());
 			alliedProfDTSal.setCompSalType(root.getAlliedProf_label_comp());
 			alliedProfDTSal.setConfirmationId(root.getForm().getConfirmationId());
-			alliedProfDTSal.setCompSalTotalCostYtd(root.getCompB_calc19());
+			alliedProfDTSal.setCompSalTotalCostYtd(root.getCompBAlliedProf_calc3());
 
 			LtcYtdCompSal alliedProfSWSal = new LtcYtdCompSal();
-			alliedProfSWSal.setCompSalStaffYtd(root.getCompB_item120());
-			alliedProfSWSal.setCompSalContractServicesYtd(root.getCompB_item220());
+			alliedProfSWSal.setCompSalStaffYtd(root.getCompBAlliedProf_item14());
+			alliedProfSWSal.setCompSalContractServicesYtd(root.getCompBAlliedProf_item24());
 			alliedProfSWSal.setCompSalName(root.getAlliedProf_label_comp4());
 			alliedProfSWSal.setCompSalType(root.getAlliedProf_label_comp());
 			alliedProfSWSal.setConfirmationId(root.getForm().getConfirmationId());
-			alliedProfSWSal.setCompSalTotalCostYtd(root.getCompB_calc20());
+			alliedProfSWSal.setCompSalTotalCostYtd(root.getCompBAlliedProf_calc4());
 
 			LtcYtdCompSal alliedProfSLPSal = new LtcYtdCompSal();
-			alliedProfSLPSal.setCompSalStaffYtd(root.getCompB_item121());
-			alliedProfSLPSal.setCompSalContractServicesYtd(root.getCompB_item221());
+			alliedProfSLPSal.setCompSalStaffYtd(root.getCompBAlliedProf_item15());
+			alliedProfSLPSal.setCompSalContractServicesYtd(root.getCompBAlliedProf_item25());
 			alliedProfSLPSal.setCompSalName(root.getAlliedProf_label_comp5());
 			alliedProfSLPSal.setCompSalType(root.getAlliedProf_label_comp());
 			alliedProfSLPSal.setConfirmationId(root.getForm().getConfirmationId());
-			alliedProfSLPSal.setCompSalTotalCostYtd(root.getCompB_calc21());
+			alliedProfSLPSal.setCompSalTotalCostYtd(root.getCompBAlliedProf_calc5());
 
 			LtcYtdCompSal alliedProfRPPSal = new LtcYtdCompSal();
-			alliedProfRPPSal.setCompSalStaffYtd(root.getCompB_item128());
-			alliedProfRPPSal.setCompSalContractServicesYtd(root.getCompB_item228());
+			alliedProfRPPSal.setCompSalStaffYtd(root.getCompBAlliedProf_item16());
+			alliedProfRPPSal.setCompSalContractServicesYtd(root.getCompBAlliedProf_item26());
 			alliedProfRPPSal.setCompSalName(root.getAlliedProf_label_comp6());
 			alliedProfRPPSal.setCompSalType(root.getAlliedProf_label_comp());
 			alliedProfRPPSal.setConfirmationId(root.getForm().getConfirmationId());
-			alliedProfRPPSal.setCompSalTotalCostYtd(root.getCompB_calc28());
+			alliedProfRPPSal.setCompSalTotalCostYtd(root.getCompBAlliedProf_calc6());
 
 			LtcYtdCompSal alliedProfOTHSal = new LtcYtdCompSal();
-			alliedProfOTHSal.setCompSalStaffYtd(root.getCompB_item129());
-			alliedProfOTHSal.setCompSalContractServicesYtd(root.getCompB_item229());
+			alliedProfOTHSal.setCompSalStaffYtd(root.getCompBAlliedProf_item17());
+			alliedProfOTHSal.setCompSalContractServicesYtd(root.getCompBAlliedProf_item27());
 			alliedProfOTHSal.setCompSalName(Constants.DEFAULT_OTHER_VALUE);
 			alliedProfOTHSal.setCompSalType(root.getAlliedProf_label_comp());
 			alliedProfOTHSal.setConfirmationId(root.getForm().getConfirmationId());
-			alliedProfOTHSal.setCompSalTotalCostYtd(root.getCompB_calc29());
+			alliedProfOTHSal.setCompSalTotalCostYtd(root.getCompBAlliedProf_calc7());
 			alliedProfOTHSal.setCompSalOtherName(root.getAlliedProf_label_comp7());
 
 			/* Allied Non Professional */
 			LtcYtdCompSal alliedNPRTSal = new LtcYtdCompSal();
-			alliedNPRTSal.setCompSalStaffYtd(root.getCompB_item122());
-			alliedNPRTSal.setCompSalContractServicesYtd(root.getCompB_item222());
+			alliedNPRTSal.setCompSalStaffYtd(root.getCompBAlliedNP_item11());
+			alliedNPRTSal.setCompSalContractServicesYtd(root.getCompBAlliedNP_item21());
 			alliedNPRTSal.setCompSalName(root.getAlliedNP_label_comp1());
 			alliedNPRTSal.setCompSalType(root.getAlliedNP_label_comp());
 			alliedNPRTSal.setConfirmationId(root.getForm().getConfirmationId());
-			alliedNPRTSal.setCompSalTotalCostYtd(root.getCompB_calc22());
+			alliedNPRTSal.setCompSalTotalCostYtd(root.getCompBAlliedNP_calc1());
 
 			LtcYtdCompSal alliedNPRASal = new LtcYtdCompSal();
-			alliedNPRASal.setCompSalStaffYtd(root.getCompB_item123());
-			alliedNPRASal.setCompSalContractServicesYtd(root.getCompB_item223());
+			alliedNPRASal.setCompSalStaffYtd(root.getCompBAlliedNP_item12());
+			alliedNPRASal.setCompSalContractServicesYtd(root.getCompBAlliedNP_item22());
 			alliedNPRASal.setCompSalName(root.getAlliedNP_label_comp2());
 			alliedNPRASal.setCompSalType(root.getAlliedNP_label_comp());
 			alliedNPRASal.setConfirmationId(root.getForm().getConfirmationId());
-			alliedNPRASal.setCompSalTotalCostYtd(root.getCompB_calc23());
+			alliedNPRASal.setCompSalTotalCostYtd(root.getCompBAlliedNP_calc2());
 
 			LtcYtdCompSal alliedNPAWSal = new LtcYtdCompSal();
-			alliedNPAWSal.setCompSalStaffYtd(root.getCompB_item124());
-			alliedNPAWSal.setCompSalContractServicesYtd(root.getCompB_item224());
+			alliedNPAWSal.setCompSalStaffYtd(root.getCompBAlliedNP_item13());
+			alliedNPAWSal.setCompSalContractServicesYtd(root.getCompBAlliedNP_item23());
 			alliedNPAWSal.setCompSalName(root.getAlliedNP_label_comp3());
 			alliedNPAWSal.setCompSalType(root.getAlliedNP_label_comp());
 			alliedNPAWSal.setConfirmationId(root.getForm().getConfirmationId());
-			alliedNPAWSal.setCompSalTotalCostYtd(root.getCompB_calc24());
+			alliedNPAWSal.setCompSalTotalCostYtd(root.getCompBAlliedNP_calc3());
 
 			LtcYtdCompSal alliedNPMTSal = new LtcYtdCompSal();
-			alliedNPMTSal.setCompSalStaffYtd(root.getCompB_item125());
-			alliedNPMTSal.setCompSalContractServicesYtd(root.getCompB_item225());
+			alliedNPMTSal.setCompSalStaffYtd(root.getCompBAlliedNP_item14());
+			alliedNPMTSal.setCompSalContractServicesYtd(root.getCompBAlliedNP_item24());
 			alliedNPMTSal.setCompSalName(root.getAlliedNP_label_comp4());
 			alliedNPMTSal.setCompSalType(root.getAlliedNP_label_comp());
 			alliedNPMTSal.setConfirmationId(root.getForm().getConfirmationId());
-			alliedNPMTSal.setCompSalTotalCostYtd(root.getCompB_calc25());
+			alliedNPMTSal.setCompSalTotalCostYtd(root.getCompBAlliedNP_calc4());
 
 			LtcYtdCompSal alliedNPATSal = new LtcYtdCompSal();
-			alliedNPATSal.setCompSalStaffYtd(root.getCompB_item126());
-			alliedNPATSal.setCompSalContractServicesYtd(root.getCompB_item226());
+			alliedNPATSal.setCompSalStaffYtd(root.getCompBAlliedNP_item15());
+			alliedNPATSal.setCompSalContractServicesYtd(root.getCompBAlliedNP_item25());
 			alliedNPATSal.setCompSalName(root.getAlliedNP_label_comp5());
 			alliedNPATSal.setCompSalType(root.getAlliedNP_label_comp());
 			alliedNPATSal.setConfirmationId(root.getForm().getConfirmationId());
-			alliedNPATSal.setCompSalTotalCostYtd(root.getCompB_calc26());
+			alliedNPATSal.setCompSalTotalCostYtd(root.getCompBAlliedNP_calc5());
 
 			LtcYtdCompSal alliedNPOTHSal = new LtcYtdCompSal();
-			alliedNPOTHSal.setCompSalStaffYtd(root.getCompB_item127());
-			alliedNPOTHSal.setCompSalContractServicesYtd(root.getCompB_item227());
+			alliedNPOTHSal.setCompSalStaffYtd(root.getCompBAlliedNP_item16());
+			alliedNPOTHSal.setCompSalContractServicesYtd(root.getCompBAlliedNP_item26());
 			alliedNPOTHSal.setCompSalName(Constants.DEFAULT_OTHER_VALUE);
 			alliedNPOTHSal.setCompSalType(root.getAlliedNP_label_comp());
 			alliedNPOTHSal.setConfirmationId(root.getForm().getConfirmationId());
-			alliedNPOTHSal.setCompSalTotalCostYtd(root.getCompB_calc27());
+			alliedNPOTHSal.setCompSalTotalCostYtd(root.getCompBAlliedNP_calc6());
 			alliedNPOTHSal.setCompSalOtherName(root.getAlliedNP_label_comp6());
 
 			Collections.addAll(ltcYtdCompSal, supportFoodServices, supportLaundryServices, supportHousekeeping,
@@ -1126,23 +1126,23 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompSalSubtotals nursingSalSubtotal = new LtcYtdCompSalSubtotals();
 			nursingSalSubtotal.setCompSalType(root.getNursing_label_comp());
 			nursingSalSubtotal.setConfirmationId(root.getForm().getConfirmationId());
-			nursingSalSubtotal.setSubTotalCompSalStaffYTD(root.getCompB_sum13());
-			nursingSalSubtotal.setSubTotalCompSalContractServicesYTD(root.getCompB_sum23());
-			nursingSalSubtotal.setSubTotalCompSalTotalCostYTD(root.getCompB_calcsum3());
+			nursingSalSubtotal.setSubTotalCompSalStaffYTD(root.getCompBNursing_sum1());
+			nursingSalSubtotal.setSubTotalCompSalContractServicesYTD(root.getCompBNursing_sum2());
+			nursingSalSubtotal.setSubTotalCompSalTotalCostYTD(root.getCompBAlliedProf_calcsum());
 
 			LtcYtdCompSalSubtotals alliedSalSubtotal = new LtcYtdCompSalSubtotals();
 			alliedSalSubtotal.setCompSalType(root.getAlliedProf_label_comp());
 			alliedSalSubtotal.setConfirmationId(root.getForm().getConfirmationId());
-			alliedSalSubtotal.setSubTotalCompSalStaffYTD(root.getCompB_sum14());
-			alliedSalSubtotal.setSubTotalCompSalContractServicesYTD(root.getCompB_sum24());
-			alliedSalSubtotal.setSubTotalCompSalTotalCostYTD(root.getCompB_calcsum4());
+			alliedSalSubtotal.setSubTotalCompSalStaffYTD(root.getCompBAlliedProf_sum1());
+			alliedSalSubtotal.setSubTotalCompSalContractServicesYTD(root.getCompBAlliedProf_sum2());
+			alliedSalSubtotal.setSubTotalCompSalTotalCostYTD(root.getCompBAlliedProf_calcsum());
 
 			LtcYtdCompSalSubtotals alliedNPSalSubtotal = new LtcYtdCompSalSubtotals();
 			alliedNPSalSubtotal.setCompSalType(root.getAlliedNP_label_comp());
 			alliedNPSalSubtotal.setConfirmationId(root.getForm().getConfirmationId());
-			alliedNPSalSubtotal.setSubTotalCompSalStaffYTD(root.getCompB_sum15());
-			alliedNPSalSubtotal.setSubTotalCompSalContractServicesYTD(root.getCompB_sum25());
-			alliedNPSalSubtotal.setSubTotalCompSalTotalCostYTD(root.getCompB_calcsum5());
+			alliedNPSalSubtotal.setSubTotalCompSalStaffYTD(root.getCompBAlliedNP_sum1());
+			alliedNPSalSubtotal.setSubTotalCompSalContractServicesYTD(root.getCompBAlliedNP_sum2());
+			alliedNPSalSubtotal.setSubTotalCompSalTotalCostYTD(root.getCompBAlliedNP_calcsum());
 
 			Collections.addAll(ltcYtdCompSalSubttls,administrationSalSubtotal,nursingSalSubtotal,supportSalSubtotal,alliedSalSubtotal,alliedNPSalSubtotal);
 
@@ -1307,158 +1307,158 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			/* Nursing, Allied, Non Allied Hours */
 			LtcYtdCompHrs nursingRNHrs = new LtcYtdCompHrs();
 			//nursingRNHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP13());
-			nursingRNHrs.setCompHrsStaffYtd(root.getCompH_item113());
-			nursingRNHrs.setCompHrsContractServicesYtd(root.getCompH_item213());
+			nursingRNHrs.setCompHrsStaffYtd(root.getCompHNursing_item11());
+			nursingRNHrs.setCompHrsContractServicesYtd(root.getCompHNursing_item21());
 			nursingRNHrs.setCompHrsName(root.getNursing_label_comp1());
 			nursingRNHrs.setCompHrsType(root.getNursing_label_comp());
 			nursingRNHrs.setConfirmationId(root.getForm().getConfirmationId());
-			nursingRNHrs.setCompTotalWorkedHrsYtd(root.getCompH_calc13());
+			nursingRNHrs.setCompTotalWorkedHrsYtd(root.getCompHNursing_calc1());
 
 			LtcYtdCompHrs nursingLPNHrs = new LtcYtdCompHrs();
 			//nursingLPNHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP14());
-			nursingLPNHrs.setCompHrsStaffYtd(root.getCompH_item114());
-			nursingLPNHrs.setCompHrsContractServicesYtd(root.getCompH_item214());
+			nursingLPNHrs.setCompHrsStaffYtd(root.getCompHNursing_item12());
+			nursingLPNHrs.setCompHrsContractServicesYtd(root.getCompHNursing_item22());
 			nursingLPNHrs.setCompHrsName(root.getNursing_label_comp2());
 			nursingLPNHrs.setCompHrsType(root.getNursing_label_comp());
 			nursingLPNHrs.setConfirmationId(root.getForm().getConfirmationId());
-			nursingLPNHrs.setCompTotalWorkedHrsYtd(root.getCompH_calc14());
+			nursingLPNHrs.setCompTotalWorkedHrsYtd(root.getCompHNursing_calc2());
 
 			LtcYtdCompHrs nursingHCAHrs = new LtcYtdCompHrs();
 			//nursingHCAHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP15());
-			nursingHCAHrs.setCompHrsStaffYtd(root.getCompH_item115());
-			nursingHCAHrs.setCompHrsContractServicesYtd(root.getCompH_item215());
+			nursingHCAHrs.setCompHrsStaffYtd(root.getCompHNursing_item13());
+			nursingHCAHrs.setCompHrsContractServicesYtd(root.getCompHNursing_item23());
 			nursingHCAHrs.setCompHrsName(root.getNursing_label_comp3());
 			nursingHCAHrs.setCompHrsType(root.getNursing_label_comp());
 			nursingHCAHrs.setConfirmationId(root.getForm().getConfirmationId());
-			nursingHCAHrs.setCompTotalWorkedHrsYtd(root.getCompH_calc15());
+			nursingHCAHrs.setCompTotalWorkedHrsYtd(root.getCompHNursing_calc3());
 
 			LtcYtdCompHrs nursingOthHrs = new LtcYtdCompHrs();
 			//nursingOthHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP16());
-			nursingOthHrs.setCompHrsStaffYtd(root.getCompH_item116());
-			nursingOthHrs.setCompHrsContractServicesYtd(root.getCompH_item216());
+			nursingOthHrs.setCompHrsStaffYtd(root.getCompHNursing_item14());
+			nursingOthHrs.setCompHrsContractServicesYtd(root.getCompHNursing_item24());
 			nursingOthHrs.setCompHrsName(Constants.DEFAULT_OTHER_VALUE);
 			nursingOthHrs.setCompHrsType(root.getNursing_label_comp());
 			nursingOthHrs.setConfirmationId(root.getForm().getConfirmationId());
-			nursingOthHrs.setCompTotalWorkedHrsYtd(root.getCompH_calc16());
+			nursingOthHrs.setCompTotalWorkedHrsYtd(root.getCompHNursing_calc4());
 			nursingOthHrs.setCompHrsOtherName(root.getNursing_label_comp4());
 
 			LtcYtdCompHrs alliedProfOTHrs = new LtcYtdCompHrs();
 			//alliedProfOTHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP17());
-			alliedProfOTHrs.setCompHrsStaffYtd(root.getCompH_item117());
-			alliedProfOTHrs.setCompHrsContractServicesYtd(root.getCompH_item217());
+			alliedProfOTHrs.setCompHrsStaffYtd(root.getCompHAlliedProf_item11());
+			alliedProfOTHrs.setCompHrsContractServicesYtd(root.getCompHAlliedProf_item21());
 			alliedProfOTHrs.setCompHrsName(root.getAlliedProf_label_comp1());
 			alliedProfOTHrs.setCompHrsType(root.getAlliedProf_label_comp());
 			alliedProfOTHrs.setConfirmationId(root.getForm().getConfirmationId());
-			alliedProfOTHrs.setCompTotalWorkedHrsYtd(root.getCompH_calc17());
+			alliedProfOTHrs.setCompTotalWorkedHrsYtd(root.getCompHAlliedProf_calc1());
 
 			LtcYtdCompHrs alliedProfPTHrs = new LtcYtdCompHrs();
 			//alliedProfPTHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP18());
-			alliedProfPTHrs.setCompHrsStaffYtd(root.getCompH_item118());
-			alliedProfPTHrs.setCompHrsContractServicesYtd(root.getCompH_item218());
+			alliedProfPTHrs.setCompHrsStaffYtd(root.getCompHAlliedProf_item12());
+			alliedProfPTHrs.setCompHrsContractServicesYtd(root.getCompHAlliedProf_item22());
 			alliedProfPTHrs.setCompHrsName(root.getAlliedProf_label_comp2());
 			alliedProfPTHrs.setCompHrsType(root.getAlliedProf_label_comp());
 			alliedProfPTHrs.setConfirmationId(root.getForm().getConfirmationId());
-			alliedProfPTHrs.setCompTotalWorkedHrsYtd(root.getCompH_calc18());
+			alliedProfPTHrs.setCompTotalWorkedHrsYtd(root.getCompHAlliedProf_calc2());
 
 			LtcYtdCompHrs alliedProfDTHrs = new LtcYtdCompHrs();
 			//alliedProfDTHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP19());
-			alliedProfDTHrs.setCompHrsStaffYtd(root.getCompH_item119());
-			alliedProfDTHrs.setCompHrsContractServicesYtd(root.getCompH_item219());
+			alliedProfDTHrs.setCompHrsStaffYtd(root.getCompHAlliedProf_item13());
+			alliedProfDTHrs.setCompHrsContractServicesYtd(root.getCompHAlliedProf_item23());
 			alliedProfDTHrs.setCompHrsName(root.getAlliedProf_label_comp3());
 			alliedProfDTHrs.setCompHrsType(root.getAlliedProf_label_comp());
 			alliedProfDTHrs.setConfirmationId(root.getForm().getConfirmationId());
-			alliedProfDTHrs.setCompTotalWorkedHrsYtd(root.getCompH_calc19());
+			alliedProfDTHrs.setCompTotalWorkedHrsYtd(root.getCompHAlliedProf_calc3());
 
 			LtcYtdCompHrs alliedProfSWHrs = new LtcYtdCompHrs();
 			//alliedProfSWHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP20());
-			alliedProfSWHrs.setCompHrsStaffYtd(root.getCompH_item120());
-			alliedProfSWHrs.setCompHrsContractServicesYtd(root.getCompH_item220());
+			alliedProfSWHrs.setCompHrsStaffYtd(root.getCompHAlliedProf_item14());
+			alliedProfSWHrs.setCompHrsContractServicesYtd(root.getCompHAlliedProf_item24());
 			alliedProfSWHrs.setCompHrsName(root.getAlliedProf_label_comp4());
 			alliedProfSWHrs.setCompHrsType(root.getAlliedProf_label_comp());
 			alliedProfSWHrs.setConfirmationId(root.getForm().getConfirmationId());
-			alliedProfSWHrs.setCompTotalWorkedHrsYtd(root.getCompH_calc20());
+			alliedProfSWHrs.setCompTotalWorkedHrsYtd(root.getCompHAlliedProf_calc4());
 
 			LtcYtdCompHrs alliedProfSLPHrs = new LtcYtdCompHrs();
 			//alliedProfSWHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP20());
-			alliedProfSLPHrs.setCompHrsStaffYtd(root.getCompH_item121());
-			alliedProfSLPHrs.setCompHrsContractServicesYtd(root.getCompH_item221());
+			alliedProfSLPHrs.setCompHrsStaffYtd(root.getCompHAlliedProf_item15());
+			alliedProfSLPHrs.setCompHrsContractServicesYtd(root.getCompHAlliedProf_item25());
 			alliedProfSLPHrs.setCompHrsName(root.getAlliedProf_label_comp5());
 			alliedProfSLPHrs.setCompHrsType(root.getAlliedProf_label_comp());
 			alliedProfSLPHrs.setConfirmationId(root.getForm().getConfirmationId());
-			alliedProfSLPHrs.setCompTotalWorkedHrsYtd(root.getCompH_calc21());
+			alliedProfSLPHrs.setCompTotalWorkedHrsYtd(root.getCompHAlliedProf_calc5());
 
 			LtcYtdCompHrs alliedProfRTHrs = new LtcYtdCompHrs();
 			//alliedProfSWHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP20());
-			alliedProfRTHrs.setCompHrsStaffYtd(root.getCompH_item128());
-			alliedProfRTHrs.setCompHrsContractServicesYtd(root.getCompH_item228());
+			alliedProfRTHrs.setCompHrsStaffYtd(root.getCompHAlliedProf_item16());
+			alliedProfRTHrs.setCompHrsContractServicesYtd(root.getCompHAlliedProf_item26());
 			alliedProfRTHrs.setCompHrsName(root.getAlliedProf_label_comp6());
 			alliedProfRTHrs.setCompHrsType(root.getAlliedProf_label_comp());
 			alliedProfRTHrs.setConfirmationId(root.getForm().getConfirmationId());
-			alliedProfRTHrs.setCompTotalWorkedHrsYtd(root.getCompH_calc28());
+			alliedProfRTHrs.setCompTotalWorkedHrsYtd(root.getCompHAlliedProf_calc6());
 
 			LtcYtdCompHrs alliedProfOTHHrs = new LtcYtdCompHrs();
 			//alliedProfOTHHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP21());
-			alliedProfOTHHrs.setCompHrsStaffYtd(root.getCompH_item129());
-			alliedProfOTHHrs.setCompHrsContractServicesYtd(root.getCompH_item229());
+			alliedProfOTHHrs.setCompHrsStaffYtd(root.getCompHAlliedProf_item17());
+			alliedProfOTHHrs.setCompHrsContractServicesYtd(root.getCompHAlliedProf_item27());
 			alliedProfOTHHrs.setCompHrsName(Constants.DEFAULT_OTHER_VALUE);
 			alliedProfOTHHrs.setCompHrsType(root.getAlliedProf_label_comp());
 			alliedProfOTHHrs.setConfirmationId(root.getForm().getConfirmationId());
-			alliedProfOTHHrs.setCompTotalWorkedHrsYtd(root.getCompH_calc29());
+			alliedProfOTHHrs.setCompTotalWorkedHrsYtd(root.getCompHAlliedProf_calc7());
 			alliedProfOTHHrs.setCompHrsOtherName(root.getAlliedProf_label_comp7());
 
 			LtcYtdCompHrs alliedNPRTHrs = new LtcYtdCompHrs();
 			//alliedNPRTHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP22());
-			alliedNPRTHrs.setCompHrsStaffYtd(root.getCompH_item122());
-			alliedNPRTHrs.setCompHrsContractServicesYtd(root.getCompH_item222());
+			alliedNPRTHrs.setCompHrsStaffYtd(root.getCompHAlliedNP_item11());
+			alliedNPRTHrs.setCompHrsContractServicesYtd(root.getCompHAlliedNP_item21());
 			alliedNPRTHrs.setCompHrsName(root.getAlliedNP_label_comp1());
 			alliedNPRTHrs.setCompHrsType(root.getAlliedNP_label_comp());
 			alliedNPRTHrs.setConfirmationId(root.getForm().getConfirmationId());
-			alliedNPRTHrs.setCompTotalWorkedHrsYtd(root.getCompH_calc22());
+			alliedNPRTHrs.setCompTotalWorkedHrsYtd(root.getCompHAlliedNP_calc1());
 
 			LtcYtdCompHrs alliedNPRAHrs = new LtcYtdCompHrs();
 			//alliedNPRAHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP23());
-			alliedNPRAHrs.setCompHrsStaffYtd(root.getCompH_item123());
-			alliedNPRAHrs.setCompHrsContractServicesYtd(root.getCompH_item223());
+			alliedNPRAHrs.setCompHrsStaffYtd(root.getCompHAlliedNP_item12());
+			alliedNPRAHrs.setCompHrsContractServicesYtd(root.getCompHAlliedNP_item22());
 			alliedNPRAHrs.setCompHrsName(root.getAlliedNP_label_comp2());
 			alliedNPRAHrs.setCompHrsType(root.getAlliedNP_label_comp());
 			alliedNPRAHrs.setConfirmationId(root.getForm().getConfirmationId());
-			alliedNPRAHrs.setCompTotalWorkedHrsYtd(root.getCompH_calc23());
+			alliedNPRAHrs.setCompTotalWorkedHrsYtd(root.getCompHAlliedNP_calc2());
 
 			LtcYtdCompHrs alliedNPAWHrs = new LtcYtdCompHrs();
 			//alliedNPAWHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP24());
-			alliedNPAWHrs.setCompHrsStaffYtd(root.getCompH_item124());
-			alliedNPAWHrs.setCompHrsContractServicesYtd(root.getCompH_item224());
+			alliedNPAWHrs.setCompHrsStaffYtd(root.getCompHAlliedNP_item13());
+			alliedNPAWHrs.setCompHrsContractServicesYtd(root.getCompHAlliedNP_item23());
 			alliedNPAWHrs.setCompHrsName(root.getAlliedNP_label_comp3());
 			alliedNPAWHrs.setCompHrsType(root.getAlliedNP_label_comp());
 			alliedNPAWHrs.setConfirmationId(root.getForm().getConfirmationId());
-			alliedNPAWHrs.setCompTotalWorkedHrsYtd(root.getCompH_calc24());
+			alliedNPAWHrs.setCompTotalWorkedHrsYtd(root.getCompHAlliedNP_calc3());
 
 			LtcYtdCompHrs alliedNPMTHrs = new LtcYtdCompHrs();
 			//alliedNPMTHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP25());
-			alliedNPMTHrs.setCompHrsStaffYtd(root.getCompH_item125());
-			alliedNPMTHrs.setCompHrsContractServicesYtd(root.getCompH_item225());
+			alliedNPMTHrs.setCompHrsStaffYtd(root.getCompHAlliedNP_item14());
+			alliedNPMTHrs.setCompHrsContractServicesYtd(root.getCompHAlliedNP_item24());
 			alliedNPMTHrs.setCompHrsName(root.getAlliedNP_label_comp4());
 			alliedNPMTHrs.setCompHrsType(root.getAlliedNP_label_comp());
 			alliedNPMTHrs.setConfirmationId(root.getForm().getConfirmationId());
-			alliedNPMTHrs.setCompTotalWorkedHrsYtd(root.getCompH_calc25());
+			alliedNPMTHrs.setCompTotalWorkedHrsYtd(root.getCompHAlliedNP_calc4());
 
 			LtcYtdCompHrs alliedNPATHrs = new LtcYtdCompHrs();
 			//alliedNPATHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP26());
-			alliedNPATHrs.setCompHrsStaffYtd(root.getCompH_item126());
-			alliedNPATHrs.setCompHrsContractServicesYtd(root.getCompH_item226());
+			alliedNPATHrs.setCompHrsStaffYtd(root.getCompHAlliedNP_item15());
+			alliedNPATHrs.setCompHrsContractServicesYtd(root.getCompHAlliedNP_item25());
 			alliedNPATHrs.setCompHrsName(root.getAlliedNP_label_comp5());
 			alliedNPATHrs.setCompHrsType(root.getAlliedNP_label_comp());
 			alliedNPATHrs.setConfirmationId(root.getForm().getConfirmationId());
-			alliedNPATHrs.setCompTotalWorkedHrsYtd(root.getCompH_calc26());
+			alliedNPATHrs.setCompTotalWorkedHrsYtd(root.getCompHAlliedNP_calc5());
 
 			LtcYtdCompHrs alliedNPOTHHrs = new LtcYtdCompHrs();
 			//alliedNPOTHHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP27());
-			alliedNPOTHHrs.setCompHrsStaffYtd(root.getCompH_item127());
-			alliedNPOTHHrs.setCompHrsContractServicesYtd(root.getCompH_item227());
+			alliedNPOTHHrs.setCompHrsStaffYtd(root.getCompHAlliedNP_item16());
+			alliedNPOTHHrs.setCompHrsContractServicesYtd(root.getCompHAlliedNP_item26());
 			alliedNPOTHHrs.setCompHrsName(Constants.DEFAULT_OTHER_VALUE);
 			alliedNPOTHHrs.setCompHrsType(root.getAlliedNP_label_comp());
 			alliedNPOTHHrs.setConfirmationId(root.getForm().getConfirmationId());
-			alliedNPOTHHrs.setCompTotalWorkedHrsYtd(root.getCompH_calc27());
+			alliedNPOTHHrs.setCompTotalWorkedHrsYtd(root.getCompHAlliedNP_calc6());
 			alliedNPOTHHrs.setCompHrsOtherName(root.getAlliedNP_label_comp6());
 
 			Collections.addAll(ltcYtdCompHrs, supportFoodServicesHrs, supportLaundryServicesHrs, supportHousekeepingHrs,
@@ -1486,23 +1486,23 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdCompHrsSubtotals nursingHrsSubtotals = new LtcYtdCompHrsSubtotals();
 			nursingHrsSubtotals.setConfirmationID(root.getForm().getConfirmationId());
 			nursingHrsSubtotals.setCompHrsType(root.getNursing_label_comp());
-			nursingHrsSubtotals.setSubTotalCompHrsStaffYTD(root.getCompH_sum13());
-			nursingHrsSubtotals.setSubTotalCompHrsContractServicesYTD(root.getCompH_sum23());
-			nursingHrsSubtotals.setSubTotalCompTotalWorkedHrsYTD(root.getCompH_calcsum3());
+			nursingHrsSubtotals.setSubTotalCompHrsStaffYTD(root.getCompHNursing_sum1());
+			nursingHrsSubtotals.setSubTotalCompHrsContractServicesYTD(root.getCompHNursing_sum2());
+			nursingHrsSubtotals.setSubTotalCompTotalWorkedHrsYTD(root.getCompHNursing_calcsum());
 
 			LtcYtdCompHrsSubtotals alliedHrsSubtotals = new LtcYtdCompHrsSubtotals();
 			alliedHrsSubtotals.setConfirmationID(root.getForm().getConfirmationId());
 			alliedHrsSubtotals.setCompHrsType(root.getAlliedProf_label_comp());
-			alliedHrsSubtotals.setSubTotalCompHrsStaffYTD(root.getCompH_sum14());
-			alliedHrsSubtotals.setSubTotalCompHrsContractServicesYTD(root.getCompH_sum24());
-			alliedHrsSubtotals.setSubTotalCompTotalWorkedHrsYTD(root.getCompH_calcsum4());
+			alliedHrsSubtotals.setSubTotalCompHrsStaffYTD(root.getCompHAlliedProf_sum1());
+			alliedHrsSubtotals.setSubTotalCompHrsContractServicesYTD(root.getCompHAlliedProf_sum2());
+			alliedHrsSubtotals.setSubTotalCompTotalWorkedHrsYTD(root.getCompHAlliedProf_calcsum());
 
 			LtcYtdCompHrsSubtotals alliedNPHrsSubtotals = new LtcYtdCompHrsSubtotals();
 			alliedNPHrsSubtotals.setConfirmationID(root.getForm().getConfirmationId());
 			alliedNPHrsSubtotals.setCompHrsType(root.getAlliedNP_label_comp());
-			alliedNPHrsSubtotals.setSubTotalCompHrsStaffYTD(root.getCompH_sum15());
-			alliedNPHrsSubtotals.setSubTotalCompHrsContractServicesYTD(root.getCompH_sum25());
-			alliedNPHrsSubtotals.setSubTotalCompTotalWorkedHrsYTD(root.getCompH_calcsum5());
+			alliedNPHrsSubtotals.setSubTotalCompHrsStaffYTD(root.getCompHAlliedNP_sum1());
+			alliedNPHrsSubtotals.setSubTotalCompHrsContractServicesYTD(root.getCompHAlliedNP_sum2());
+			alliedNPHrsSubtotals.setSubTotalCompTotalWorkedHrsYTD(root.getCompHAlliedNP_calcsum());
 
 			Collections.addAll(ltcYtdCompHrsSubttls, supportHrsSubtotals,adminHrsSubtotals,nursingHrsSubtotals,alliedHrsSubtotals,alliedNPHrsSubtotals);
 
