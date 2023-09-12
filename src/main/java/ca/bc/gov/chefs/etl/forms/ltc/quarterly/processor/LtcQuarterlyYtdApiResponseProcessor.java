@@ -2341,6 +2341,13 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			adminSupAdCost.setExpType(root.getOpEx_4_label());
 			adminSupAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
+			LtcYtdExp badDeptAdCost = new LtcYtdExp();
+			badDeptAdCost.setExpYtd(root.getOpEx_YTD37());
+			badDeptAdCost.setExpNotes(root.getOpEx_note37());
+			badDeptAdCost.setExpName(root.getOpEx_YTD_label37());
+			badDeptAdCost.setExpType(root.getOpEx_4_label());
+			badDeptAdCost.setConfirmationId(root.getForm().getConfirmationId());
+
 			LtcYtdExp othAdCost = new LtcYtdExp();
 			othAdCost.setExpYtd(root.getOpEx_YTD36());
 			othAdCost.setExpNotes(root.getOpEx_note36());
@@ -2371,8 +2378,8 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 					sickSevrnceAccExp, buildingRentExp, intrstMortgageLngTrmExp, propertyTaxesExp, mntnceExp,
 					suppliesExp, utilitiesExp, wasteMgmntExp, resTranServExp, othExp, medSupExp, rawFoodCostExp,
 					drgsPharmaExp, dietSupExp, ldrySupExp, houseSupExp, incontinenceSupExp, OthSupExp, officeExpAdCost,
-					mgmntAdCost, hoAllocpAdCost, accAdCost, apaAdCost, insuranceAdCost, adminSupAdCost, othAdCost,
-					dirCareNonOpExpMortgage, dirCareNonOpExpOther);
+					mgmntAdCost, hoAllocpAdCost, accAdCost, apaAdCost, insuranceAdCost, adminSupAdCost, badDeptAdCost,
+					othAdCost, dirCareNonOpExpMortgage, dirCareNonOpExpOther);
 
 			// subtotal
 			// total operating expenses
