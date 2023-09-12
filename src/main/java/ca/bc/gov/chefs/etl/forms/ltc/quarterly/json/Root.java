@@ -6035,6 +6035,12 @@ public class Root{
 	public void setAdminC_item110(String compB_item112) {
 		this.adminC_item110 = compB_item112;
 	}
+	public String getSupportC_item12() {
+		return supportC_item12;
+	}
+	public void setSupportC_item12(String supportC_item12) {
+		this.supportC_item12 = supportC_item12;
+	}
 	public String getSupportC_item13() {
 		return supportC_item13;
 	}
