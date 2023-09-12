@@ -15,6 +15,7 @@ public class LtcYtdDirectCareCost implements IModel{
 	private String dirCareOtherValue = Constants.DEFAULT_STRING_VALUE;
 	private String dirCareCostProdHrsRegYtd;
 	private String dirCareCostProdHrsOtYtd;
+	private String dirCareCostProdHrsOrientationYtd;
 	private String dirCareCostProdHrsContractedYtd;
 	private String dirCareCostProdHrsSubtotalYtd;
 	private String dirCareCostProdHrsTotalYtd;
@@ -68,6 +69,12 @@ public class LtcYtdDirectCareCost implements IModel{
 	}
 	public void setDirCareCostProdHrsOtYtd(String dirCareCostProdHrsOtYtd) {
 		this.dirCareCostProdHrsOtYtd = StringUtils.defaultIfEmpty(dirCareCostProdHrsOtYtd, Constants.DEFAULT_DECIMAL_VALUE);
+	}
+	public String getDirCareCostProdHrsOrientationYtd() {
+		return dirCareCostProdHrsOrientationYtd;
+	}
+	public void setDirCareCostProdHrsOrientationYtd(String dirCareCostProdHrsOrientationYtd) {
+		this.dirCareCostProdHrsOrientationYtd = dirCareCostProdHrsOrientationYtd;
 	}
 	public String getDirCareCostProdHrsContractedYtd() {
 		return StringUtils.isBlank(dirCareCostProdHrsContractedYtd) ? "0" : dirCareCostProdHrsContractedYtd;
@@ -148,6 +155,7 @@ public class LtcYtdDirectCareCost implements IModel{
 		elements.add(this.getDirCareOtherValue());
 		elements.add(this.getDirCareCostProdHrsRegYtd());
 		elements.add(this.getDirCareCostProdHrsOtYtd());
+		elements.add(this.getDirCareCostProdHrsOrientationYtd());
 		elements.add(this.getDirCareCostProdHrsContractedYtd());
 		elements.add(this.getDirCareCostProdHrsAgencyStaffUtil());
 		elements.add(this.getDirCareCostProdHrsSubtotalYtd());
