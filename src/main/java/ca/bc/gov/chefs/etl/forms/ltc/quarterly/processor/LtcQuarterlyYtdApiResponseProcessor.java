@@ -62,7 +62,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 		String payload = exchange.getIn().getBody(String.class);
 		payload = JsonUtil.preProcess(payload);
 		payload = JsonUtil.roundDigitsNumber(payload);
-		//payload = JsonUtil.ltcYTDBackwardCompatibility(payload);
+		payload = JsonUtil.ltcYTDBackwardCompatibility(payload);
 		ObjectMapper mapper = new ObjectMapper();
 		List<Root> ltcYtdForms = mapper.readValue(payload, new TypeReference<List<Root>>() {
 		});
