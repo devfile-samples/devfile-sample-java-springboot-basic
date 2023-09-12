@@ -128,6 +128,88 @@ public class Root{
     public String alliedNPNProdH_sum21;
     @JsonProperty("alliedNPNProdH_sum3-1")
     public String alliedNPNProdH_sum31;
+
+    @JsonProperty("alliedNPProdC_item3-1")
+    public String alliedNPProdC_item31;
+    @JsonProperty("alliedNPProdC_item3-2")
+    public String alliedNPProdC_item32;
+    @JsonProperty("alliedNPProdC_item3-3")
+    public String alliedNPProdC_item33;
+    @JsonProperty("alliedNPProdC_item3-4")
+    public String alliedNPProdC_item34;
+    @JsonProperty("alliedNPProdC_item3-5")
+    public String alliedNPProdC_item35;
+    @JsonProperty("alliedNPProdC_item3-6")
+    public String alliedNPProdC_item36;
+    @JsonProperty("alliedNPProdC_sum3-1")
+    public String alliedNPProdC_sum31;
+    @JsonProperty("alliedNPProdH_item3-1")
+    public String alliedNPProdH_item31;
+    @JsonProperty("alliedNPProdH_item3-2")
+    public String alliedNPProdH_item32;
+    @JsonProperty("alliedNPProdH_item3-3")
+    public String alliedNPProdH_item33;
+    @JsonProperty("alliedNPProdH_item3-4")
+    public String alliedNPProdH_item34;
+    @JsonProperty("alliedNPProdH_item3-5")
+    public String alliedNPProdH_item35;
+    @JsonProperty("alliedNPProdH_item3-6")
+    public String alliedNPProdH_item36;
+    @JsonProperty("alliedNPProdH_sum3-1")
+    public String alliedNPProdH_sum31;
+    @JsonProperty("alliedProfProdC_item3-1")
+    public String alliedProfProdC_item31;
+    @JsonProperty("alliedProfProdC_item3-2")
+    public String alliedProfProdC_item32;
+    @JsonProperty("alliedProfProdC_item3-3")
+    public String alliedProfProdC_item33;
+    @JsonProperty("alliedProfProdC_item3-4")
+    public String alliedProfProdC_item34;
+    @JsonProperty("alliedProfProdC_item3-5")
+    public String alliedProfProdC_item35;
+    @JsonProperty("alliedProfProdC_item3-6")
+    public String alliedProfProdC_item36;
+    @JsonProperty("alliedProfProdC_item3-7")
+    public String alliedProfProdC_item37;
+    @JsonProperty("alliedProfProdC_sum3-1")
+    public String alliedProfProdC_sum31;
+    @JsonProperty("alliedProfProdH_item3-1")
+    public String alliedProfProdH_item31;
+    @JsonProperty("alliedProfProdH_item3-2")
+    public String alliedProfProdH_item32;
+    @JsonProperty("alliedProfProdH_item3-3")
+    public String alliedProfProdH_item33;
+    @JsonProperty("alliedProfProdH_item3-4")
+    public String alliedProfProdH_item34;
+    @JsonProperty("alliedProfProdH_item3-5")
+    public String alliedProfProdH_item35;
+    @JsonProperty("alliedProfProdH_item3-6")
+    public String alliedProfProdH_item36;
+    @JsonProperty("alliedProfProdH_item3-7")
+    public String alliedProfProdH_item37;
+    @JsonProperty("alliedProfProdH_sum3-1")
+    public String alliedProfProdH_sum31;
+    @JsonProperty("nursingProdC_item3-1")
+    public String nursingProdC_item31;
+    @JsonProperty("nursingProdC_item3-2")
+    public String nursingProdC_item32;
+    @JsonProperty("nursingProdC_item3-3")
+    public String nursingProdC_item33;
+    @JsonProperty("nursingProdC_item3-4")
+    public String nursingProdC_item34;
+    @JsonProperty("nursingProdC_sum3-1")
+    public String nursingProdC_sum31;
+    @JsonProperty("nursingProdH_item3-1")
+    public String nursingProdH_item31;
+    @JsonProperty("nursingProdH_item3-2")
+    public String nursingProdH_item32;
+    @JsonProperty("nursingProdH_item3-3")
+    public String nursingProdH_item33;
+    @JsonProperty("nursingProdH_item3-4")
+    public String nursingProdH_item34;
+    @JsonProperty("nursingProdH_sum3-1")
+    public String nursingProdH_sum31;
+
     public String alliedNPNProdH_THP1;
     public String alliedNPNProdH_THP2;
     public String alliedNPNProdH_THP3;
@@ -1307,7 +1389,8 @@ public class Root{
     public String opEx_note34;
     public String opEx_note35;
     public String opEx_note36;
-    public String opEx_note38;
+    public String opEx_note37;
+	public String opEx_note38;
     public String opEx_note39;
     public String opEx_note4;
     public String opEx_note5;
@@ -1396,6 +1479,8 @@ public class Root{
     public String opEx_YTD35;
 	@JsonProperty("opEx_YTD-36")
     public String opEx_YTD36;
+	@JsonProperty("opEx_YTD-37")
+    public String opEx_YTD37;
 	@JsonProperty("opEx_YTD-4")
     public String opEx_YTD4;
     @JsonProperty("opEx_YTD-5")
@@ -1918,6 +2003,8 @@ public class Root{
 	public String opEx_YTD_label35;
 	@JsonProperty("opEx_YTD_label-36")
 	public String opEx_YTD_label36;
+	@JsonProperty("opEx_YTD_label-37")
+	public String opEx_YTD_label37;
 	@JsonProperty("opEx_YTD_label-38")
 	public String opEx_YTD_label38;
 	@JsonProperty("opEx_YTD_label-39")
@@ -3127,6 +3214,24 @@ public class Root{
 	}
 	public void setOpEx_YTD_label36(String opEx_YTD_label36) {
 		this.opEx_YTD_label36 = opEx_YTD_label36;
+	}
+	public String getOpEx_YTD37() {
+		return opEx_YTD37;
+	}
+	public void setOpEx_YTD37(String opEx_YTD37) {
+		this.opEx_YTD37 = opEx_YTD37;
+	}
+    public String getOpEx_note37() {
+		return opEx_note37;
+	}
+	public void setOpEx_note37(String opEx_note37) {
+		this.opEx_note37 = opEx_note37;
+	}
+	public String getOpEx_YTD_label37() {
+		return opEx_YTD_label37;
+	}
+	public void setOpEx_YTD_label37(String opEx_YTD_label37) {
+		this.opEx_YTD_label37 = opEx_YTD_label37;
 	}
 	public String getOpEx_YTD_label38() {
 		return opEx_YTD_label38;
@@ -10786,5 +10891,245 @@ public class Root{
 	}
 	public void setNopSu_data_label(String nopSu_data_label) {
 		this.nopSu_data_label = nopSu_data_label;
+	}
+	public String getAlliedNPProdC_item31() {
+		return alliedNPProdC_item31;
+	}
+	public void setAlliedNPProdC_item31(String alliedNPProdC_item31) {
+		this.alliedNPProdC_item31 = alliedNPProdC_item31;
+	}
+	public String getAlliedNPProdC_item32() {
+		return alliedNPProdC_item32;
+	}
+	public void setAlliedNPProdC_item32(String alliedNPProdC_item32) {
+		this.alliedNPProdC_item32 = alliedNPProdC_item32;
+	}
+	public String getAlliedNPProdC_item33() {
+		return alliedNPProdC_item33;
+	}
+	public void setAlliedNPProdC_item33(String alliedNPProdC_item33) {
+		this.alliedNPProdC_item33 = alliedNPProdC_item33;
+	}
+	public String getAlliedNPProdC_item34() {
+		return alliedNPProdC_item34;
+	}
+	public void setAlliedNPProdC_item34(String alliedNPProdC_item34) {
+		this.alliedNPProdC_item34 = alliedNPProdC_item34;
+	}
+	public String getAlliedNPProdC_item35() {
+		return alliedNPProdC_item35;
+	}
+	public void setAlliedNPProdC_item35(String alliedNPProdC_item35) {
+		this.alliedNPProdC_item35 = alliedNPProdC_item35;
+	}
+	public String getAlliedNPProdC_item36() {
+		return alliedNPProdC_item36;
+	}
+	public void setAlliedNPProdC_item36(String alliedNPProdC_item36) {
+		this.alliedNPProdC_item36 = alliedNPProdC_item36;
+	}
+	public String getAlliedNPProdC_sum31() {
+		return alliedNPProdC_sum31;
+	}
+	public void setAlliedNPProdC_sum31(String alliedNPProdC_sum31) {
+		this.alliedNPProdC_sum31 = alliedNPProdC_sum31;
+	}
+	public String getAlliedNPProdH_item31() {
+		return alliedNPProdH_item31;
+	}
+	public void setAlliedNPProdH_item31(String alliedNPProdH_item31) {
+		this.alliedNPProdH_item31 = alliedNPProdH_item31;
+	}
+	public String getAlliedNPProdH_item32() {
+		return alliedNPProdH_item32;
+	}
+	public void setAlliedNPProdH_item32(String alliedNPProdH_item32) {
+		this.alliedNPProdH_item32 = alliedNPProdH_item32;
+	}
+	public String getAlliedNPProdH_item33() {
+		return alliedNPProdH_item33;
+	}
+	public void setAlliedNPProdH_item33(String alliedNPProdH_item33) {
+		this.alliedNPProdH_item33 = alliedNPProdH_item33;
+	}
+	public String getAlliedNPProdH_item34() {
+		return alliedNPProdH_item34;
+	}
+	public void setAlliedNPProdH_item34(String alliedNPProdH_item34) {
+		this.alliedNPProdH_item34 = alliedNPProdH_item34;
+	}
+	public String getAlliedNPProdH_item35() {
+		return alliedNPProdH_item35;
+	}
+	public void setAlliedNPProdH_item35(String alliedNPProdH_item35) {
+		this.alliedNPProdH_item35 = alliedNPProdH_item35;
+	}
+	public String getAlliedNPProdH_item36() {
+		return alliedNPProdH_item36;
+	}
+	public void setAlliedNPProdH_item36(String alliedNPProdH_item36) {
+		this.alliedNPProdH_item36 = alliedNPProdH_item36;
+	}
+	public String getAlliedNPProdH_sum31() {
+		return alliedNPProdH_sum31;
+	}
+	public void setAlliedNPProdH_sum31(String alliedNPProdH_sum31) {
+		this.alliedNPProdH_sum31 = alliedNPProdH_sum31;
+	}
+	public String getAlliedProfProdC_item31() {
+		return alliedProfProdC_item31;
+	}
+	public void setAlliedProfProdC_item31(String alliedProfProdC_item31) {
+		this.alliedProfProdC_item31 = alliedProfProdC_item31;
+	}
+	public String getAlliedProfProdC_item32() {
+		return alliedProfProdC_item32;
+	}
+	public void setAlliedProfProdC_item32(String alliedProfProdC_item32) {
+		this.alliedProfProdC_item32 = alliedProfProdC_item32;
+	}
+	public String getAlliedProfProdC_item33() {
+		return alliedProfProdC_item33;
+	}
+	public void setAlliedProfProdC_item33(String alliedProfProdC_item33) {
+		this.alliedProfProdC_item33 = alliedProfProdC_item33;
+	}
+	public String getAlliedProfProdC_item34() {
+		return alliedProfProdC_item34;
+	}
+	public void setAlliedProfProdC_item34(String alliedProfProdC_item34) {
+		this.alliedProfProdC_item34 = alliedProfProdC_item34;
+	}
+	public String getAlliedProfProdC_item35() {
+		return alliedProfProdC_item35;
+	}
+	public void setAlliedProfProdC_item35(String alliedProfProdC_item35) {
+		this.alliedProfProdC_item35 = alliedProfProdC_item35;
+	}
+	public String getAlliedProfProdC_item36() {
+		return alliedProfProdC_item36;
+	}
+	public void setAlliedProfProdC_item36(String alliedProfProdC_item36) {
+		this.alliedProfProdC_item36 = alliedProfProdC_item36;
+	}
+	public String getAlliedProfProdC_item37() {
+		return alliedProfProdC_item37;
+	}
+	public void setAlliedProfProdC_item37(String alliedProfProdC_item37) {
+		this.alliedProfProdC_item37 = alliedProfProdC_item37;
+	}
+	public String getAlliedProfProdC_sum31() {
+		return alliedProfProdC_sum31;
+	}
+	public void setAlliedProfProdC_sum31(String alliedProfProdC_sum31) {
+		this.alliedProfProdC_sum31 = alliedProfProdC_sum31;
+	}
+	public String getAlliedProfProdH_item31() {
+		return alliedProfProdH_item31;
+	}
+	public void setAlliedProfProdH_item31(String alliedProfProdH_item31) {
+		this.alliedProfProdH_item31 = alliedProfProdH_item31;
+	}
+	public String getAlliedProfProdH_item32() {
+		return alliedProfProdH_item32;
+	}
+	public void setAlliedProfProdH_item32(String alliedProfProdH_item32) {
+		this.alliedProfProdH_item32 = alliedProfProdH_item32;
+	}
+	public String getAlliedProfProdH_item33() {
+		return alliedProfProdH_item33;
+	}
+	public void setAlliedProfProdH_item33(String alliedProfProdH_item33) {
+		this.alliedProfProdH_item33 = alliedProfProdH_item33;
+	}
+	public String getAlliedProfProdH_item34() {
+		return alliedProfProdH_item34;
+	}
+	public void setAlliedProfProdH_item34(String alliedProfProdH_item34) {
+		this.alliedProfProdH_item34 = alliedProfProdH_item34;
+	}
+	public String getAlliedProfProdH_item35() {
+		return alliedProfProdH_item35;
+	}
+	public void setAlliedProfProdH_item35(String alliedProfProdH_item35) {
+		this.alliedProfProdH_item35 = alliedProfProdH_item35;
+	}
+	public String getAlliedProfProdH_item36() {
+		return alliedProfProdH_item36;
+	}
+	public void setAlliedProfProdH_item36(String alliedProfProdH_item36) {
+		this.alliedProfProdH_item36 = alliedProfProdH_item36;
+	}
+	public String getAlliedProfProdH_item37() {
+		return alliedProfProdH_item37;
+	}
+	public void setAlliedProfProdH_item37(String alliedProfProdH_item37) {
+		this.alliedProfProdH_item37 = alliedProfProdH_item37;
+	}
+	public String getAlliedProfProdH_sum31() {
+		return alliedProfProdH_sum31;
+	}
+	public void setAlliedProfProdH_sum31(String alliedProfProdH_sum31) {
+		this.alliedProfProdH_sum31 = alliedProfProdH_sum31;
+	}
+	public String getNursingProdC_item31() {
+		return nursingProdC_item31;
+	}
+	public void setNursingProdC_item31(String nursingProdC_item31) {
+		this.nursingProdC_item31 = nursingProdC_item31;
+	}
+	public String getNursingProdC_item32() {
+		return nursingProdC_item32;
+	}
+	public void setNursingProdC_item32(String nursingProdC_item32) {
+		this.nursingProdC_item32 = nursingProdC_item32;
+	}
+	public String getNursingProdC_item33() {
+		return nursingProdC_item33;
+	}
+	public void setNursingProdC_item33(String nursingProdC_item33) {
+		this.nursingProdC_item33 = nursingProdC_item33;
+	}
+	public String getNursingProdC_item34() {
+		return nursingProdC_item34;
+	}
+	public void setNursingProdC_item34(String nursingProdC_item34) {
+		this.nursingProdC_item34 = nursingProdC_item34;
+	}
+	public String getNursingProdC_sum31() {
+		return nursingProdC_sum31;
+	}
+	public void setNursingProdC_sum31(String nursingProdC_sum31) {
+		this.nursingProdC_sum31 = nursingProdC_sum31;
+	}
+	public String getNursingProdH_item31() {
+		return nursingProdH_item31;
+	}
+	public void setNursingProdH_item31(String nursingProdH_item31) {
+		this.nursingProdH_item31 = nursingProdH_item31;
+	}
+	public String getNursingProdH_item32() {
+		return nursingProdH_item32;
+	}
+	public void setNursingProdH_item32(String nursingProdH_item32) {
+		this.nursingProdH_item32 = nursingProdH_item32;
+	}
+	public String getNursingProdH_item33() {
+		return nursingProdH_item33;
+	}
+	public void setNursingProdH_item33(String nursingProdH_item33) {
+		this.nursingProdH_item33 = nursingProdH_item33;
+	}
+	public String getNursingProdH_item34() {
+		return nursingProdH_item34;
+	}
+	public void setNursingProdH_item34(String nursingProdH_item34) {
+		this.nursingProdH_item34 = nursingProdH_item34;
+	}
+	public String getNursingProdH_sum31() {
+		return nursingProdH_sum31;
+	}
+	public void setNursingProdH_sum31(String nursingProdH_sum31) {
+		this.nursingProdH_sum31 = nursingProdH_sum31;
 	}
 }
