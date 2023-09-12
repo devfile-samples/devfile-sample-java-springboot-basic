@@ -585,31 +585,11 @@ public class Root{
 	public String adminC_calc8;
 	public String adminC_calc9;
 	public String adminC_calc10;
-	public String compB_calc13;
-    public String compB_calc14;
-    public String compB_calc15;
-    public String compB_calc16;
-    public String compB_calc17;
-    public String compB_calc18;
-    public String compB_calc19;
     public String supportC_calc2;
-    public String compB_calc20;
-    public String compB_calc21;
-    public String compB_calc22;
-    public String compB_calc23;
-    public String compB_calc24;
-    public String compB_calc25;
-    public String compB_calc26;
-    public String compB_calc27;
-	public String compB_calc28;
-	public String compB_calc29;
 	public String supportC_calc3;
     public String supportC_calc4;
     public String supportC_calcsum;
     public String adminC_calcsum;
-    public String compB_calcsum3;
-    public String compB_calcsum4;
-    public String compB_calcsum5;
     @JsonProperty("supportC_item1-1")
     public String supportC_item11;
     @JsonProperty("adminC_item1-6")
@@ -622,42 +602,8 @@ public class Root{
     public String adminC_item19;
 	@JsonProperty("adminC_item1-10")
     public String adminC_item110;
-    @JsonProperty("compB_item1-13")
-    public String compB_item113;
-    @JsonProperty("compB_item1-14")
-    public String compB_item114;
-    @JsonProperty("compB_item1-15")
-    public String compB_item115;
-    @JsonProperty("compB_item1-16")
-    public String compB_item116;
-    @JsonProperty("compB_item1-17")
-    public String compB_item117;
-    @JsonProperty("compB_item1-18")
-    public String compB_item118;
-    @JsonProperty("compB_item1-19")
-    public String compB_item119;
     @JsonProperty("supportC_item1-2")
     public String supportC_item12;
-    @JsonProperty("compB_item1-20")
-    public String compB_item120;
-    @JsonProperty("compB_item1-21")
-    public String compB_item121;
-    @JsonProperty("compB_item1-22")
-    public String compB_item122;
-    @JsonProperty("compB_item1-23")
-    public String compB_item123;
-    @JsonProperty("compB_item1-24")
-    public String compB_item124;
-    @JsonProperty("compB_item1-25")
-    public String compB_item125;
-    @JsonProperty("compB_item1-26")
-    public String compB_item126;
-    @JsonProperty("compB_item1-27")
-    public String compB_item127;
-	@JsonProperty("compB_item1-28")
-    public String compB_item128;
-	@JsonProperty("compB_item1-29")
-    public String compB_item129;
 	@JsonProperty("supportC_item1-3")
     public String supportC_item13;
     @JsonProperty("supportC_item1-4")
@@ -684,42 +630,8 @@ public class Root{
     public String adminC_item29;
 	@JsonProperty("adminC_item2-10")
     public String adminC_item210;
-    @JsonProperty("compB_item2-13")
-    public String compB_item213;
-    @JsonProperty("compB_item2-14")
-    public String compB_item214;
-    @JsonProperty("compB_item2-15")
-    public String compB_item215;
-    @JsonProperty("compB_item2-16")
-    public String compB_item216;
-    @JsonProperty("compB_item2-17")
-    public String compB_item217;
-    @JsonProperty("compB_item2-18")
-    public String compB_item218;
-    @JsonProperty("compB_item2-19")
-    public String compB_item219;
     @JsonProperty("compB_item2-2")
     public String compB_item22;
-    @JsonProperty("compB_item2-20")
-    public String compB_item220;
-    @JsonProperty("compB_item2-21")
-    public String compB_item221;
-    @JsonProperty("compB_item2-22")
-    public String compB_item222;
-    @JsonProperty("compB_item2-23")
-    public String compB_item223;
-    @JsonProperty("compB_item2-24")
-    public String compB_item224;
-    @JsonProperty("compB_item2-25")
-    public String compB_item225;
-    @JsonProperty("compB_item2-26")
-    public String compB_item226;
-    @JsonProperty("compB_item2-27")
-    public String compB_item227;
-	@JsonProperty("compB_item2-28")
-    public String compB_item228;
-	@JsonProperty("compB_item2-29")
-    public String compB_item229;
 	@JsonProperty("compB_item2-3")
     public String compB_item23;
     @JsonProperty("compB_item2-4")
@@ -804,12 +716,6 @@ public class Root{
     public String supportC_sum2;
 	public String adminC_sum1;
 	public String adminC_sum2;
-	@JsonProperty("compB_sum1-3")
-    public String compB_sum13;
-    @JsonProperty("compB_sum1-4")
-    public String compB_sum14;
-    @JsonProperty("compB_sum1-5")
-    public String compB_sum15;
     @JsonProperty("supportC_item2-1")
     public String supportC_item21;
     @JsonProperty("supportC_item2-2")
@@ -818,12 +724,6 @@ public class Root{
     public String supportC_item23;
     @JsonProperty("supportC_item2-4")
     public String supportC_item24;
-	@JsonProperty("compB_sum2-3")
-    public String compB_sum23;
-	@JsonProperty("compB_sum2-4")
-    public String compB_sum24;
-	@JsonProperty("compB_sum2-5")
-    public String compB_sum25;
     @JsonProperty("compB_sum3-1")
     public String compB_sum31;
     @JsonProperty("compB_sum3-2")
@@ -842,31 +742,11 @@ public class Root{
     public String compH_accrued1;
     public String compH_accrued2;
     public String supportH_calc1;
-    public String compH_calc13;
-    public String compH_calc14;
-    public String compH_calc15;
-    public String compH_calc16;
-    public String compH_calc17;
-    public String compH_calc18;
-    public String compH_calc19;
     public String supportH_calc2;
-    public String compH_calc20;
-    public String compH_calc21;
-    public String compH_calc22;
-    public String compH_calc23;
-    public String compH_calc24;
-    public String compH_calc25;
-    public String compH_calc26;
-    public String compH_calc27;
-    public String compH_calc28;
-    public String compH_calc29;
 	public String supportH_calc3;
     public String supportH_calc4;
     public String supportH_calcsum;
     public String adminH_calcsum;
-    public String compH_calcsum3;
-    public String compH_calcsum4;
-    public String compH_calcsum5;
     @JsonProperty("supportH_item1-1")
     public String supportH_item11;
     @JsonProperty("adminH_item1-6")
@@ -879,42 +759,8 @@ public class Root{
     public String adminH_item19;
 	@JsonProperty("adminH_item1-10")
     public String adminH_item110;
-    @JsonProperty("compH_item1-13")
-    public String compH_item113;
-    @JsonProperty("compH_item1-14")
-    public String compH_item114;
-    @JsonProperty("compH_item1-15")
-    public String compH_item115;
-    @JsonProperty("compH_item1-16")
-    public String compH_item116;
-    @JsonProperty("compH_item1-17")
-    public String compH_item117;
-    @JsonProperty("compH_item1-18")
-    public String compH_item118;
-    @JsonProperty("compH_item1-19")
-    public String compH_item119;
     @JsonProperty("supportH_item1-2")
     public String supportH_item12;
-    @JsonProperty("compH_item1-20")
-    public String compH_item120;
-    @JsonProperty("compH_item1-21")
-    public String compH_item121;
-    @JsonProperty("compH_item1-22")
-    public String compH_item122;
-    @JsonProperty("compH_item1-23")
-    public String compH_item123;
-    @JsonProperty("compH_item1-24")
-    public String compH_item124;
-    @JsonProperty("compH_item1-25")
-    public String compH_item125;
-    @JsonProperty("compH_item1-26")
-    public String compH_item126;
-    @JsonProperty("compH_item1-27")
-    public String compH_item127;
-	@JsonProperty("compH_item1-28")
-    public String compH_item128;
-	@JsonProperty("compH_item1-29")
-    public String compH_item129;
 	@JsonProperty("supportH_item1-3")
     public String supportH_item13;
     @JsonProperty("supportH_item1-4")
@@ -951,42 +797,8 @@ public class Root{
     public String adminH_item29;
 	@JsonProperty("adminH_item2-10")
     public String adminH_item210;
-    @JsonProperty("compH_item2-13")
-    public String compH_item213;
-    @JsonProperty("compH_item2-14")
-    public String compH_item214;
-    @JsonProperty("compH_item2-15")
-    public String compH_item215;
-    @JsonProperty("compH_item2-16")
-    public String compH_item216;
-    @JsonProperty("compH_item2-17")
-    public String compH_item217;
-    @JsonProperty("compH_item2-18")
-    public String compH_item218;
-    @JsonProperty("compH_item2-19")
-    public String compH_item219;
     @JsonProperty("supportH_item2-2")
     public String supportH_item22;
-    @JsonProperty("compH_item2-20")
-    public String compH_item220;
-    @JsonProperty("compH_item2-21")
-    public String compH_item221;
-    @JsonProperty("compH_item2-22")
-    public String compH_item222;
-    @JsonProperty("compH_item2-23")
-    public String compH_item223;
-    @JsonProperty("compH_item2-24")
-    public String compH_item224;
-    @JsonProperty("compH_item2-25")
-    public String compH_item225;
-    @JsonProperty("compH_item2-26")
-    public String compH_item226;
-    @JsonProperty("compH_item2-27")
-    public String compH_item227;
-	@JsonProperty("compH_item2-28")
-    public String compH_item228;
-	@JsonProperty("compH_item2-29")
-    public String compH_item229;
 	@JsonProperty("supportH_item2-3")
     public String supportH_item23;
     @JsonProperty("supportH_item2-4")
@@ -1093,20 +905,8 @@ public class Root{
     public String compH_PHPsum5;
     public String supportH_sum1;
     public String adminH_sum1;
-    @JsonProperty("compH_sum1-3")
-    public String compH_sum13;
-    @JsonProperty("compH_sum1-4")
-    public String compH_sum14;
-    @JsonProperty("compH_sum1-5")
-    public String compH_sum15;
     public String supportH_sum2;
     public String adminH_sum2;
-    @JsonProperty("compH_sum2-3")
-    public String compH_sum23;
-    @JsonProperty("compH_sum2-4")
-    public String compH_sum24;
-    @JsonProperty("compH_sum2-5")
-    public String compH_sum25;
     @JsonProperty("compH_sum3-1")
     public String compH_sum31;
     @JsonProperty("compH_sum3-2")
@@ -6169,113 +5969,11 @@ public class Root{
 	public void setAdminC_calc10(String adminC_calc10) {
 		this.adminC_calc10 = adminC_calc10;
 	}
-	public String getCompB_calc13() {
-		return compB_calc13;
-	}
-	public void setCompB_calc13(String compB_calc13) {
-		this.compB_calc13 = compB_calc13;
-	}
-	public String getCompB_calc14() {
-		return compB_calc14;
-	}
-	public void setCompB_calc14(String compB_calc14) {
-		this.compB_calc14 = compB_calc14;
-	}
-	public String getCompB_calc15() {
-		return compB_calc15;
-	}
-	public void setCompB_calc15(String compB_calc15) {
-		this.compB_calc15 = compB_calc15;
-	}
-	public String getCompB_calc16() {
-		return compB_calc16;
-	}
-	public void setCompB_calc16(String compB_calc16) {
-		this.compB_calc16 = compB_calc16;
-	}
-	public String getCompB_calc17() {
-		return compB_calc17;
-	}
-	public void setCompB_calc17(String compB_calc17) {
-		this.compB_calc17 = compB_calc17;
-	}
-	public String getCompB_calc18() {
-		return compB_calc18;
-	}
-	public void setCompB_calc18(String compB_calc18) {
-		this.compB_calc18 = compB_calc18;
-	}
-	public String getCompB_calc19() {
-		return compB_calc19;
-	}
-	public void setCompB_calc19(String compB_calc19) {
-		this.compB_calc19 = compB_calc19;
-	}
 	public String getSupportC_calc2() {
 		return supportC_calc2;
 	}
 	public void setSupportC_calc2(String compB_calc2) {
 		this.supportC_calc2 = compB_calc2;
-	}
-	public String getCompB_calc20() {
-		return compB_calc20;
-	}
-	public void setCompB_calc20(String compB_calc20) {
-		this.compB_calc20 = compB_calc20;
-	}
-	public String getCompB_calc21() {
-		return compB_calc21;
-	}
-	public void setCompB_calc21(String compB_calc21) {
-		this.compB_calc21 = compB_calc21;
-	}
-	public String getCompB_calc22() {
-		return compB_calc22;
-	}
-	public void setCompB_calc22(String compB_calc22) {
-		this.compB_calc22 = compB_calc22;
-	}
-	public String getCompB_calc23() {
-		return compB_calc23;
-	}
-	public void setCompB_calc23(String compB_calc23) {
-		this.compB_calc23 = compB_calc23;
-	}
-	public String getCompB_calc24() {
-		return compB_calc24;
-	}
-	public void setCompB_calc24(String compB_calc24) {
-		this.compB_calc24 = compB_calc24;
-	}
-	public String getCompB_calc25() {
-		return compB_calc25;
-	}
-	public void setCompB_calc25(String compB_calc25) {
-		this.compB_calc25 = compB_calc25;
-	}
-	public String getCompB_calc26() {
-		return compB_calc26;
-	}
-	public void setCompB_calc26(String compB_calc26) {
-		this.compB_calc26 = compB_calc26;
-	}
-	public String getCompB_calc27() {
-		return compB_calc27;
-	}
-	public void setCompB_calc27(String compB_calc27) {
-		this.compB_calc27 = compB_calc27;
-	}
-	public String getCompB_calc28() {
-		return compB_calc28;
-	}
-	public void setCompB_calc28(String compB_calc28) {
-		this.compB_calc28 = compB_calc28;
-	}
-	public String getCompB_calc29() {
-		return compB_calc29;
-	}
-	public void setCompB_calc29(String compB_calc29) {
-		this.compB_calc29 = compB_calc29;
 	}
 	public String getSupportC_calc3() {
 		return supportC_calc3;
@@ -6300,24 +5998,6 @@ public class Root{
 	}
 	public void setAdminC_calcsum(String compB_calcsum2) {
 		this.adminC_calcsum = compB_calcsum2;
-	}
-	public String getCompB_calcsum3() {
-		return compB_calcsum3;
-	}
-	public void setCompB_calcsum3(String compB_calcsum3) {
-		this.compB_calcsum3 = compB_calcsum3;
-	}
-	public String getCompB_calcsum4() {
-		return compB_calcsum4;
-	}
-	public void setCompB_calcsum4(String compB_calcsum4) {
-		this.compB_calcsum4 = compB_calcsum4;
-	}
-	public String getCompB_calcsum5() {
-		return compB_calcsum5;
-	}
-	public void setCompB_calcsum5(String compB_calcsum5) {
-		this.compB_calcsum5 = compB_calcsum5;
 	}
 	public String getSupportC_item11() {
 		return supportC_item11;
@@ -6354,126 +6034,6 @@ public class Root{
 	}
 	public void setAdminC_item110(String compB_item112) {
 		this.adminC_item110 = compB_item112;
-	}
-	public String getCompB_item113() {
-		return compB_item113;
-	}
-	public void setCompB_item113(String compB_item113) {
-		this.compB_item113 = compB_item113;
-	}
-	public String getCompB_item114() {
-		return compB_item114;
-	}
-	public void setCompB_item114(String compB_item114) {
-		this.compB_item114 = compB_item114;
-	}
-	public String getCompB_item115() {
-		return compB_item115;
-	}
-	public void setCompB_item115(String compB_item115) {
-		this.compB_item115 = compB_item115;
-	}
-	public String getCompB_item116() {
-		return compB_item116;
-	}
-	public void setCompB_item116(String compB_item116) {
-		this.compB_item116 = compB_item116;
-	}
-	public String getCompB_item117() {
-		return compB_item117;
-	}
-	public void setCompB_item117(String compB_item117) {
-		this.compB_item117 = compB_item117;
-	}
-	public String getCompB_item118() {
-		return compB_item118;
-	}
-	public void setCompB_item118(String compB_item118) {
-		this.compB_item118 = compB_item118;
-	}
-	public String getCompB_item119() {
-		return compB_item119;
-	}
-	public void setCompB_item119(String compB_item119) {
-		this.compB_item119 = compB_item119;
-	}
-	public String getSupportC_item12() {
-		return supportC_item12;
-	}
-	public void setSupportC_item12(String compB_item12) {
-		this.supportC_item12 = compB_item12;
-	}
-	public String getCompB_item120() {
-		return compB_item120;
-	}
-	public void setCompB_item120(String compB_item120) {
-		this.compB_item120 = compB_item120;
-	}
-	public String getCompB_item121() {
-		return compB_item121;
-	}
-	public void setCompB_item121(String compB_item121) {
-		this.compB_item121 = compB_item121;
-	}
-	public String getCompB_item122() {
-		return compB_item122;
-	}
-	public void setCompB_item122(String compB_item122) {
-		this.compB_item122 = compB_item122;
-	}
-	public String getCompB_item123() {
-		return compB_item123;
-	}
-	public void setCompB_item123(String compB_item123) {
-		this.compB_item123 = compB_item123;
-	}
-	public String getCompB_item124() {
-		return compB_item124;
-	}
-	public void setCompB_item124(String compB_item124) {
-		this.compB_item124 = compB_item124;
-	}
-	public String getCompB_item125() {
-		return compB_item125;
-	}
-	public void setCompB_item125(String compB_item125) {
-		this.compB_item125 = compB_item125;
-	}
-	public String getCompB_item126() {
-		return compB_item126;
-	}
-	public void setCompB_item126(String compB_item126) {
-		this.compB_item126 = compB_item126;
-	}
-	public String getCompB_item127() {
-		return compB_item127;
-	}
-	public void setCompB_item127(String compB_item127) {
-		this.compB_item127 = compB_item127;
-	}
-    public String getCompB_item128() {
-		return compB_item128;
-	}
-	public void setCompB_item128(String compB_item128) {
-		this.compB_item128 = compB_item128;
-	}
-	public String getCompB_item129() {
-		return compB_item129;
-	}
-	public void setCompB_item129(String compB_item129) {
-		this.compB_item129 = compB_item129;
-	}
-	public String getCompB_item228() {
-		return compB_item228;
-	}
-	public void setCompB_item228(String compB_item228) {
-		this.compB_item228 = compB_item228;
-	}
-	public String getCompB_item229() {
-		return compB_item229;
-	}
-	public void setCompB_item229(String compB_item229) {
-		this.compB_item229 = compB_item229;
 	}
 	public String getSupportC_item13() {
 		return supportC_item13;
@@ -6553,101 +6113,11 @@ public class Root{
 	public void setAdminC_item210(String compB_item212) {
 		this.adminC_item210 = compB_item212;
 	}
-	public String getCompB_item213() {
-		return compB_item213;
-	}
-	public void setCompB_item213(String compB_item213) {
-		this.compB_item213 = compB_item213;
-	}
-	public String getCompB_item214() {
-		return compB_item214;
-	}
-	public void setCompB_item214(String compB_item214) {
-		this.compB_item214 = compB_item214;
-	}
-	public String getCompB_item215() {
-		return compB_item215;
-	}
-	public void setCompB_item215(String compB_item215) {
-		this.compB_item215 = compB_item215;
-	}
-	public String getCompB_item216() {
-		return compB_item216;
-	}
-	public void setCompB_item216(String compB_item216) {
-		this.compB_item216 = compB_item216;
-	}
-	public String getCompB_item217() {
-		return compB_item217;
-	}
-	public void setCompB_item217(String compB_item217) {
-		this.compB_item217 = compB_item217;
-	}
-	public String getCompB_item218() {
-		return compB_item218;
-	}
-	public void setCompB_item218(String compB_item218) {
-		this.compB_item218 = compB_item218;
-	}
-	public String getCompB_item219() {
-		return compB_item219;
-	}
-	public void setCompB_item219(String compB_item219) {
-		this.compB_item219 = compB_item219;
-	}
 	public String getCompB_item22() {
 		return compB_item22;
 	}
 	public void setCompB_item22(String compB_item22) {
 		this.compB_item22 = compB_item22;
-	}
-	public String getCompB_item220() {
-		return compB_item220;
-	}
-	public void setCompB_item220(String compB_item220) {
-		this.compB_item220 = compB_item220;
-	}
-	public String getCompB_item221() {
-		return compB_item221;
-	}
-	public void setCompB_item221(String compB_item221) {
-		this.compB_item221 = compB_item221;
-	}
-	public String getCompB_item222() {
-		return compB_item222;
-	}
-	public void setCompB_item222(String compB_item222) {
-		this.compB_item222 = compB_item222;
-	}
-	public String getCompB_item223() {
-		return compB_item223;
-	}
-	public void setCompB_item223(String compB_item223) {
-		this.compB_item223 = compB_item223;
-	}
-	public String getCompB_item224() {
-		return compB_item224;
-	}
-	public void setCompB_item224(String compB_item224) {
-		this.compB_item224 = compB_item224;
-	}
-	public String getCompB_item225() {
-		return compB_item225;
-	}
-	public void setCompB_item225(String compB_item225) {
-		this.compB_item225 = compB_item225;
-	}
-	public String getCompB_item226() {
-		return compB_item226;
-	}
-	public void setCompB_item226(String compB_item226) {
-		this.compB_item226 = compB_item226;
-	}
-	public String getCompB_item227() {
-		return compB_item227;
-	}
-	public void setCompB_item227(String compB_item227) {
-		this.compB_item227 = compB_item227;
 	}
 	public String getCompB_item23() {
 		return compB_item23;
@@ -6937,24 +6407,6 @@ public class Root{
 	public void setAdminC_sum2(String adminC_sum2) {
 		this.adminC_sum2 = adminC_sum2;
 	}
-	public String getCompB_sum13() {
-		return compB_sum13;
-	}
-	public void setCompB_sum13(String compB_sum13) {
-		this.compB_sum13 = compB_sum13;
-	}
-	public String getCompB_sum14() {
-		return compB_sum14;
-	}
-	public void setCompB_sum14(String compB_sum14) {
-		this.compB_sum14 = compB_sum14;
-	}
-	public String getCompB_sum15() {
-		return compB_sum15;
-	}
-	public void setCompB_sum15(String compB_sum15) {
-		this.compB_sum15 = compB_sum15;
-	}
 	public String getSupportC_item21() {
 		return supportC_item21;
 	}
@@ -6978,24 +6430,6 @@ public class Root{
 	}
 	public void setSupportC_item24(String compB_sum24) {
 		this.supportC_item24 = compB_sum24;
-	}
-	public String getCompB_sum23() {
-		return compB_sum23;
-	}
-	public void setCompB_sum23(String compB_sum23) {
-		this.compB_sum23 = compB_sum23;
-	}
-	public String getCompB_sum24() {
-		return compB_sum24;
-	}
-	public void setCompB_sum24(String compB_sum24) {
-		this.compB_sum24 = compB_sum24;
-	}
-	public String getCompB_sum25() {
-		return compB_sum25;
-	}
-	public void setCompB_sum25(String compB_sum25) {
-		this.compB_sum25 = compB_sum25;
 	}
 	public String getCompB_sum31() {
 		return compB_sum31;
@@ -7075,113 +6509,11 @@ public class Root{
 	public void setSupportH_calc1(String compH_calc1) {
 		this.supportH_calc1 = compH_calc1;
 	}
-	public String getCompH_calc13() {
-		return compH_calc13;
-	}
-	public void setCompH_calc13(String compH_calc13) {
-		this.compH_calc13 = compH_calc13;
-	}
-	public String getCompH_calc14() {
-		return compH_calc14;
-	}
-	public void setCompH_calc14(String compH_calc14) {
-		this.compH_calc14 = compH_calc14;
-	}
-	public String getCompH_calc15() {
-		return compH_calc15;
-	}
-	public void setCompH_calc15(String compH_calc15) {
-		this.compH_calc15 = compH_calc15;
-	}
-	public String getCompH_calc16() {
-		return compH_calc16;
-	}
-	public void setCompH_calc16(String compH_calc16) {
-		this.compH_calc16 = compH_calc16;
-	}
-	public String getCompH_calc17() {
-		return compH_calc17;
-	}
-	public void setCompH_calc17(String compH_calc17) {
-		this.compH_calc17 = compH_calc17;
-	}
-	public String getCompH_calc18() {
-		return compH_calc18;
-	}
-	public void setCompH_calc18(String compH_calc18) {
-		this.compH_calc18 = compH_calc18;
-	}
-	public String getCompH_calc19() {
-		return compH_calc19;
-	}
-	public void setCompH_calc19(String compH_calc19) {
-		this.compH_calc19 = compH_calc19;
-	}
 	public String getSupportH_calc2() {
 		return supportH_calc2;
 	}
 	public void setSupportH_calc2(String compH_calc2) {
 		this.supportH_calc2 = compH_calc2;
-	}
-	public String getCompH_calc20() {
-		return compH_calc20;
-	}
-	public void setCompH_calc20(String compH_calc20) {
-		this.compH_calc20 = compH_calc20;
-	}
-	public String getCompH_calc21() {
-		return compH_calc21;
-	}
-	public void setCompH_calc21(String compH_calc21) {
-		this.compH_calc21 = compH_calc21;
-	}
-	public String getCompH_calc22() {
-		return compH_calc22;
-	}
-	public void setCompH_calc22(String compH_calc22) {
-		this.compH_calc22 = compH_calc22;
-	}
-	public String getCompH_calc23() {
-		return compH_calc23;
-	}
-	public void setCompH_calc23(String compH_calc23) {
-		this.compH_calc23 = compH_calc23;
-	}
-	public String getCompH_calc24() {
-		return compH_calc24;
-	}
-	public void setCompH_calc24(String compH_calc24) {
-		this.compH_calc24 = compH_calc24;
-	}
-	public String getCompH_calc25() {
-		return compH_calc25;
-	}
-	public void setCompH_calc25(String compH_calc25) {
-		this.compH_calc25 = compH_calc25;
-	}
-	public String getCompH_calc26() {
-		return compH_calc26;
-	}
-	public void setCompH_calc26(String compH_calc26) {
-		this.compH_calc26 = compH_calc26;
-	}
-	public String getCompH_calc27() {
-		return compH_calc27;
-	}
-	public void setCompH_calc27(String compH_calc27) {
-		this.compH_calc27 = compH_calc27;
-	}
-	public String getCompH_calc28() {
-		return compH_calc28;
-	}
-	public void setCompH_calc28(String compH_calc28) {
-		this.compH_calc28 = compH_calc28;
-	}
-	public String getCompH_calc29() {
-		return compH_calc29;
-	}
-	public void setCompH_calc29(String compH_calc29) {
-		this.compH_calc29 = compH_calc29;
 	}
 	public String getSupportH_calc3() {
 		return supportH_calc3;
@@ -7206,24 +6538,6 @@ public class Root{
 	}
 	public void setAdminH_calcsum(String compH_calcsum2) {
 		this.adminH_calcsum = compH_calcsum2;
-	}
-	public String getCompH_calcsum3() {
-		return compH_calcsum3;
-	}
-	public void setCompH_calcsum3(String compH_calcsum3) {
-		this.compH_calcsum3 = compH_calcsum3;
-	}
-	public String getCompH_calcsum4() {
-		return compH_calcsum4;
-	}
-	public void setCompH_calcsum4(String compH_calcsum4) {
-		this.compH_calcsum4 = compH_calcsum4;
-	}
-	public String getCompH_calcsum5() {
-		return compH_calcsum5;
-	}
-	public void setCompH_calcsum5(String compH_calcsum5) {
-		this.compH_calcsum5 = compH_calcsum5;
 	}
 	public String getSupportH_item11() {
 		return supportH_item11;
@@ -7261,113 +6575,11 @@ public class Root{
 	public void setAdminH_item110(String compH_item112) {
 		this.adminH_item110 = compH_item112;
 	}
-	public String getCompH_item113() {
-		return compH_item113;
-	}
-	public void setCompH_item113(String compH_item113) {
-		this.compH_item113 = compH_item113;
-	}
-	public String getCompH_item114() {
-		return compH_item114;
-	}
-	public void setCompH_item114(String compH_item114) {
-		this.compH_item114 = compH_item114;
-	}
-	public String getCompH_item115() {
-		return compH_item115;
-	}
-	public void setCompH_item115(String compH_item115) {
-		this.compH_item115 = compH_item115;
-	}
-	public String getCompH_item116() {
-		return compH_item116;
-	}
-	public void setCompH_item116(String compH_item116) {
-		this.compH_item116 = compH_item116;
-	}
-	public String getCompH_item117() {
-		return compH_item117;
-	}
-	public void setCompH_item117(String compH_item117) {
-		this.compH_item117 = compH_item117;
-	}
-	public String getCompH_item118() {
-		return compH_item118;
-	}
-	public void setCompH_item118(String compH_item118) {
-		this.compH_item118 = compH_item118;
-	}
-	public String getCompH_item119() {
-		return compH_item119;
-	}
-	public void setCompH_item119(String compH_item119) {
-		this.compH_item119 = compH_item119;
-	}
 	public String getSupportH_item12() {
 		return supportH_item12;
 	}
 	public void setSupportH_item12(String compH_item12) {
 		this.supportH_item12 = compH_item12;
-	}
-	public String getCompH_item120() {
-		return compH_item120;
-	}
-	public void setCompH_item120(String compH_item120) {
-		this.compH_item120 = compH_item120;
-	}
-	public String getCompH_item121() {
-		return compH_item121;
-	}
-	public void setCompH_item121(String compH_item121) {
-		this.compH_item121 = compH_item121;
-	}
-	public String getCompH_item122() {
-		return compH_item122;
-	}
-	public void setCompH_item122(String compH_item122) {
-		this.compH_item122 = compH_item122;
-	}
-	public String getCompH_item123() {
-		return compH_item123;
-	}
-	public void setCompH_item123(String compH_item123) {
-		this.compH_item123 = compH_item123;
-	}
-	public String getCompH_item124() {
-		return compH_item124;
-	}
-	public void setCompH_item124(String compH_item124) {
-		this.compH_item124 = compH_item124;
-	}
-	public String getCompH_item125() {
-		return compH_item125;
-	}
-	public void setCompH_item125(String compH_item125) {
-		this.compH_item125 = compH_item125;
-	}
-	public String getCompH_item126() {
-		return compH_item126;
-	}
-	public void setCompH_item126(String compH_item126) {
-		this.compH_item126 = compH_item126;
-	}
-	public String getCompH_item127() {
-		return compH_item127;
-	}
-	public void setCompH_item127(String compH_item127) {
-		this.compH_item127 = compH_item127;
-	}
-    public String getCompH_item128() {
-		return compH_item128;
-	}
-	public void setCompH_item128(String compH_item128) {
-		this.compH_item128 = compH_item128;
-	}
-	public String getCompH_item129() {
-		return compH_item129;
-	}
-	public void setCompH_item129(String compH_item129) {
-		this.compH_item129 = compH_item129;
 	}
 	public String getSupportH_item13() {
 		return supportH_item13;
@@ -7507,113 +6719,11 @@ public class Root{
 	public void setAdminH_item210(String compH_item212) {
 		this.adminH_item210 = compH_item212;
 	}
-	public String getCompH_item213() {
-		return compH_item213;
-	}
-	public void setCompH_item213(String compH_item213) {
-		this.compH_item213 = compH_item213;
-	}
-	public String getCompH_item214() {
-		return compH_item214;
-	}
-	public void setCompH_item214(String compH_item214) {
-		this.compH_item214 = compH_item214;
-	}
-	public String getCompH_item215() {
-		return compH_item215;
-	}
-	public void setCompH_item215(String compH_item215) {
-		this.compH_item215 = compH_item215;
-	}
-	public String getCompH_item216() {
-		return compH_item216;
-	}
-	public void setCompH_item216(String compH_item216) {
-		this.compH_item216 = compH_item216;
-	}
-	public String getCompH_item217() {
-		return compH_item217;
-	}
-	public void setCompH_item217(String compH_item217) {
-		this.compH_item217 = compH_item217;
-	}
-	public String getCompH_item218() {
-		return compH_item218;
-	}
-	public void setCompH_item218(String compH_item218) {
-		this.compH_item218 = compH_item218;
-	}
-	public String getCompH_item219() {
-		return compH_item219;
-	}
-	public void setCompH_item219(String compH_item219) {
-		this.compH_item219 = compH_item219;
-	}
 	public String getSupportH_item22() {
 		return supportH_item22;
 	}
 	public void setSupportH_item22(String compH_item22) {
 		this.supportH_item22 = compH_item22;
-	}
-	public String getCompH_item220() {
-		return compH_item220;
-	}
-	public void setCompH_item220(String compH_item220) {
-		this.compH_item220 = compH_item220;
-	}
-	public String getCompH_item221() {
-		return compH_item221;
-	}
-	public void setCompH_item221(String compH_item221) {
-		this.compH_item221 = compH_item221;
-	}
-	public String getCompH_item222() {
-		return compH_item222;
-	}
-	public void setCompH_item222(String compH_item222) {
-		this.compH_item222 = compH_item222;
-	}
-	public String getCompH_item223() {
-		return compH_item223;
-	}
-	public void setCompH_item223(String compH_item223) {
-		this.compH_item223 = compH_item223;
-	}
-	public String getCompH_item224() {
-		return compH_item224;
-	}
-	public void setCompH_item224(String compH_item224) {
-		this.compH_item224 = compH_item224;
-	}
-	public String getCompH_item225() {
-		return compH_item225;
-	}
-	public void setCompH_item225(String compH_item225) {
-		this.compH_item225 = compH_item225;
-	}
-	public String getCompH_item226() {
-		return compH_item226;
-	}
-	public void setCompH_item226(String compH_item226) {
-		this.compH_item226 = compH_item226;
-	}
-	public String getCompH_item227() {
-		return compH_item227;
-	}
-	public void setCompH_item227(String compH_item227) {
-		this.compH_item227 = compH_item227;
-	}
-	public String getCompH_item228() {
-		return compH_item228;
-	}
-	public void setCompH_item228(String compH_item228) {
-		this.compH_item228 = compH_item228;
-	}
-	public String getCompH_item229() {
-		return compH_item229;
-	}
-	public void setCompH_item229(String compH_item229) {
-		this.compH_item229 = compH_item229;
 	}
 	public String getSupportH_item23() {
 		return supportH_item23;
@@ -8035,24 +7145,6 @@ public class Root{
 	public void setAdminH_sum1(String compH_sum12) {
 		this.adminH_sum1 = compH_sum12;
 	}
-	public String getCompH_sum13() {
-		return compH_sum13;
-	}
-	public void setCompH_sum13(String compH_sum13) {
-		this.compH_sum13 = compH_sum13;
-	}
-	public String getCompH_sum14() {
-		return compH_sum14;
-	}
-	public void setCompH_sum14(String compH_sum14) {
-		this.compH_sum14 = compH_sum14;
-	}
-	public String getCompH_sum15() {
-		return compH_sum15;
-	}
-	public void setCompH_sum15(String compH_sum15) {
-		this.compH_sum15 = compH_sum15;
-	}
 	public String getSupportH_sum2() {
 		return supportH_sum2;
 	}
@@ -8064,24 +7156,6 @@ public class Root{
 	}
 	public void setAdminH_sum2(String compH_sum22) {
 		this.adminH_sum2 = compH_sum22;
-	}
-	public String getCompH_sum23() {
-		return compH_sum23;
-	}
-	public void setCompH_sum23(String compH_sum23) {
-		this.compH_sum23 = compH_sum23;
-	}
-	public String getCompH_sum24() {
-		return compH_sum24;
-	}
-	public void setCompH_sum24(String compH_sum24) {
-		this.compH_sum24 = compH_sum24;
-	}
-	public String getCompH_sum25() {
-		return compH_sum25;
-	}
-	public void setCompH_sum25(String compH_sum25) {
-		this.compH_sum25 = compH_sum25;
 	}
 	public String getCompH_sum31() {
 		return compH_sum31;
