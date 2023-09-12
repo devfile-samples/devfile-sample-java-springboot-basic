@@ -35,7 +35,7 @@ public class Constants {
 
 	/* Default values for empty Strings and Numbers */
 	public final static String DEFAULT_STRING_VALUE = "Not Provided";
-	public final static String DEFAULT_DECIMAL_VALUE = "-99";
+	public final static String DEFAULT_DECIMAL_VALUE = "0";
 	public final static String DEFAULT_NA_VALUE = "Not Applicable";
 	public final static String DEFAULT_OTHER_VALUE = "Other";
 	
