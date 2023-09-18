@@ -99,7 +99,6 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			ltcBudgetSubmission.setSubmissionFy(root.getFiscalYear());
 			ltcBudgetSubmission.setNbTotalBeds(root.getNumberOfTotalBeds());
 			ltcBudgetSubmission.setNbFundedBeds(root.getNumberOfTotalFundedBeds());
-			ltcBudgetSubmission.setOccRateThreshold(root.getThreshold());
 			ltcBudgetSubmission.setTotalSalariesWages(root.getbTotal_YTDSalaryWage());
 			ltcBudgetSubmission.setTotalBenefits(root.getBenefit_value_total());
 			ltcBudgetSubmission.setBenefitsPercent(root.getbTotal_value_sum());

@@ -26,7 +26,6 @@ public class LtcBudgetSubmission implements IModel {
 	private String submissionFy;
 	private String nbTotalBeds;
 	private String nbFundedBeds;
-	private String occRateThreshold;
 	private String totalSalariesWages;
 	private String totalBenefits;
 	private String benefitsPercent;
@@ -79,7 +78,6 @@ public class LtcBudgetSubmission implements IModel {
 		elements.add(this.getSubmissionFy());
 		elements.add(this.getNbTotalBeds());
 		elements.add(this.getNbFundedBeds());
-		elements.add(this.getOccRateThreshold());
 		elements.add(this.getTotalBenefits());
 		elements.add(this.getTotalSalariesWages());
 		elements.add(this.getBenefitsPercent());
@@ -159,14 +157,6 @@ public class LtcBudgetSubmission implements IModel {
 
 	public void setNbFundedBeds(String nbFundedBeds) {
 		this.nbFundedBeds = nbFundedBeds;
-	}
-
-	public String getOccRateThreshold() {
-		return occRateThreshold;
-	}
-
-	public void setOccRateThreshold(String occRateThreshold) {
-		this.occRateThreshold = occRateThreshold;
 	}
 
 	public String getIsDeleted() {

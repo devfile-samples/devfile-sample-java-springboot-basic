@@ -1647,7 +1647,6 @@ public class Root{
     public String quarter;
     public String startPeriod;
     public String submission;
-    public String threshold;
     public String totalBed1;
     public String totalBed2;
     public String totalBed3;
@@ -10154,12 +10153,6 @@ public class Root{
 	}
 	public void setSubmission(String submission) {
 		this.submission = submission;
-	}
-	public String getThreshold() {
-		return threshold;
-	}
-	public void setThreshold(String threshold) {
-		this.threshold = threshold;
 	}
 	public String getTotalBed1() {
 		return totalBed1;
