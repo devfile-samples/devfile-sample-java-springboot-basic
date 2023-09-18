@@ -1746,91 +1746,91 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 
 			/* Summary of Rev & Exp Budget */
 			LtcBudgetRev revFrmHA1Adj = new LtcBudgetRev();
-			revFrmHA1Adj.setRevBudget(root.getOpRev_YTD1());
+			revFrmHA1Adj.setRevBudget(root.getOpRev_Budget1());
 			revFrmHA1Adj.setRevNotes(root.getOpRev_note1());
-			revFrmHA1Adj.setRevName(root.getOpRev_YTD_label_1());	
+			revFrmHA1Adj.setRevName(root.getOpRev_Budget_label_1());	
 			revFrmHA1Adj.setRevType(root.getOpRev_1_label());
 			revFrmHA1Adj.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev revFrmHA1DirCare = new LtcBudgetRev();
-			revFrmHA1DirCare.setRevBudget(root.getOpRev_YTD2());
+			revFrmHA1DirCare.setRevBudget(root.getOpRev_Budget2());
 			revFrmHA1DirCare.setRevNotes(root.getOpRev_note2());
-			revFrmHA1DirCare.setRevName(root.getOpRev_YTD_label_2());
+			revFrmHA1DirCare.setRevName(root.getOpRev_Budget_label_2());
 			revFrmHA1DirCare.setRevType(root.getOpRev_1_label());
 			revFrmHA1DirCare.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev revFrmHA1Others = new LtcBudgetRev();
-			revFrmHA1Others.setRevBudget(root.getOpRev_YTD3());
+			revFrmHA1Others.setRevBudget(root.getOpRev_Budget3());
 			revFrmHA1Others.setRevNotes(root.getOpRev_note3());
-			revFrmHA1Others.setRevName(root.getOpRev_YTD_label_3());
+			revFrmHA1Others.setRevName(root.getOpRev_Budget_label_3());
 			revFrmHA1Others.setRevType(root.getOpRev_1_label());
 			revFrmHA1Others.setConfirmationId(root.getForm().getConfirmationId());
 
 			// skipping subtotal for now
 
 			LtcBudgetRev revFrmHA2OpFundMinEq = new LtcBudgetRev();
-			revFrmHA2OpFundMinEq.setRevBudget(root.getOpRev_YTD4());
+			revFrmHA2OpFundMinEq.setRevBudget(root.getOpRev_Budget4());
 			revFrmHA2OpFundMinEq.setRevNotes(root.getOpRev_note4());
-			revFrmHA2OpFundMinEq.setRevName(root.getOpRev_YTD_label_4());
+			revFrmHA2OpFundMinEq.setRevName(root.getOpRev_Budget_label_4());
 			revFrmHA2OpFundMinEq.setRevType(root.getOpRev_2_label());
 			revFrmHA2OpFundMinEq.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev revFrmHA2OpFundOth = new LtcBudgetRev();
-			revFrmHA2OpFundOth.setRevBudget(root.getOpRev_YTD5());
+			revFrmHA2OpFundOth.setRevBudget(root.getOpRev_Budget5());
 			revFrmHA2OpFundOth.setRevNotes(root.getOpRev_note5());
-			revFrmHA2OpFundOth.setRevName(root.getOpRev_YTD_label_5());
+			revFrmHA2OpFundOth.setRevName(root.getOpRev_Budget_label_5());
 			revFrmHA2OpFundOth.setRevType(root.getOpRev_2_label());
 			revFrmHA2OpFundOth.setConfirmationId(root.getForm().getConfirmationId());
 
 			// skipping subtotal
 
 			LtcBudgetRev revFrmHA3 = new LtcBudgetRev();
-			revFrmHA3.setRevBudget(root.getOpRev_YTD6());
+			revFrmHA3.setRevBudget(root.getOpRev_Budget6());
 			revFrmHA3.setRevNotes(root.getOpRev_note6());
-			revFrmHA3.setRevName(root.getOpRev_YTD_label_6());
+			revFrmHA3.setRevName(root.getOpRev_Budget_label_6());
 			revFrmHA3.setRevType(root.getOpRev_3_label());
 			revFrmHA3.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev revFrmHA4OccThld = new LtcBudgetRev();
-			revFrmHA4OccThld.setRevBudget(root.getOpRev_YTD7());
+			revFrmHA4OccThld.setRevBudget(root.getOpRev_Budget7());
 			revFrmHA4OccThld.setRevNotes(root.getOpRev_note7());
-			revFrmHA4OccThld.setRevName(root.getOpRev_YTD_label_7());
+			revFrmHA4OccThld.setRevName(root.getOpRev_Budget_label_7());
 			revFrmHA4OccThld.setRevType(root.getOpRev_4_label());
 			revFrmHA4OccThld.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev revFrmHA4CliConReconc = new LtcBudgetRev();
-			revFrmHA4CliConReconc.setRevBudget(root.getOpRev_YTD8());
+			revFrmHA4CliConReconc.setRevBudget(root.getOpRev_Budget8());
 			revFrmHA4CliConReconc.setRevNotes(root.getOpRev_note8());
-			revFrmHA4CliConReconc.setRevName(root.getOpRev_YTD_label_8());
+			revFrmHA4CliConReconc.setRevName(root.getOpRev_Budget_label_8());
 			revFrmHA4CliConReconc.setRevType(root.getOpRev_4_label());
 			revFrmHA4CliConReconc.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev revFrmHA4DirCare = new LtcBudgetRev();
-			revFrmHA4DirCare.setRevBudget(root.getOpRev_YTD9());
+			revFrmHA4DirCare.setRevBudget(root.getOpRev_Budget9());
 			revFrmHA4DirCare.setRevNotes(root.getOpRev_note9());
-			revFrmHA4DirCare.setRevName(root.getOpRev_YTD_label_9());
+			revFrmHA4DirCare.setRevName(root.getOpRev_Budget_label_9());
 			revFrmHA4DirCare.setRevType(root.getOpRev_4_label());
 			revFrmHA4DirCare.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev revFrmHA4Oth = new LtcBudgetRev();
-			revFrmHA4Oth.setRevBudget(root.getOpRev_YTD10());
+			revFrmHA4Oth.setRevBudget(root.getOpRev_Budget10());
 			revFrmHA4Oth.setRevNotes(root.getOpRev_note10());
-			revFrmHA4Oth.setRevName(root.getOpRev_YTD_label_10());
+			revFrmHA4Oth.setRevName(root.getOpRev_Budget_label_10());
 			revFrmHA4Oth.setRevType(root.getOpRev_4_label());
 			revFrmHA4Oth.setConfirmationId(root.getForm().getConfirmationId());
 
 			/* Non operating revenu */
 			LtcBudgetRev nonOperatingRevOth = new LtcBudgetRev();
-			nonOperatingRevOth.setRevBudget(root.getNopRev_YTD1());
+			nonOperatingRevOth.setRevBudget(root.getNopRev_Budget1());
 			nonOperatingRevOth.setRevNotes(root.getNopRev_note1());
-			nonOperatingRevOth.setRevName(root.getNopRev_YTD_label1());
+			nonOperatingRevOth.setRevName(root.getNopRev_Budget_label1());
 			nonOperatingRevOth.setRevType(root.getNopRev_label());
 			nonOperatingRevOth.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev nonOperatingRevOthThirdParty = new LtcBudgetRev();
-			nonOperatingRevOthThirdParty.setRevBudget(root.getNopRev_YTD2());
+			nonOperatingRevOthThirdParty.setRevBudget(root.getNopRev_Budget2());
 			nonOperatingRevOthThirdParty.setRevNotes(root.getNopRev_note2());
-			nonOperatingRevOthThirdParty.setRevName(root.getNopRev_YTD_label2());
+			nonOperatingRevOthThirdParty.setRevName(root.getNopRev_Budget_label2());
 			nonOperatingRevOthThirdParty.setRevType(root.getNopRev_label());
 			nonOperatingRevOthThirdParty.setConfirmationId(root.getForm().getConfirmationId());
 			/* END */
@@ -1838,73 +1838,73 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			// skipping subtotal for now
 
 			LtcBudgetRev clntRvnHAClient = new LtcBudgetRev();
-			clntRvnHAClient.setRevBudget(root.getOpRev_YTD11());
+			clntRvnHAClient.setRevBudget(root.getOpRev_Budget11());
 			clntRvnHAClient.setRevNotes(root.getOpRev_note11());
-			clntRvnHAClient.setRevName(root.getOpRev_YTD_label_11());
+			clntRvnHAClient.setRevName(root.getOpRev_Budget_label_11());
 			clntRvnHAClient.setRevType(root.getOpRev_client_label());
 			clntRvnHAClient.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev clntRvnFeePaidParties = new LtcBudgetRev();
-			clntRvnFeePaidParties.setRevBudget(root.getOpRev_YTD12());
+			clntRvnFeePaidParties.setRevBudget(root.getOpRev_Budget12());
 			clntRvnFeePaidParties.setRevNotes(root.getOpRev_note12());
-			clntRvnFeePaidParties.setRevName(root.getOpRev_YTD_label_12());
+			clntRvnFeePaidParties.setRevName(root.getOpRev_Budget_label_12());
 			clntRvnFeePaidParties.setRevType(root.getOpRev_client_label());
 			clntRvnFeePaidParties.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev clntRvnFeePaidNonEligible = new LtcBudgetRev();
-			clntRvnFeePaidNonEligible.setRevBudget(root.getOpRev_YTD13());
+			clntRvnFeePaidNonEligible.setRevBudget(root.getOpRev_Budget13());
 			clntRvnFeePaidNonEligible.setRevNotes(root.getOpRev_note13());
-			clntRvnFeePaidNonEligible.setRevName(root.getOpRev_YTD_label_13());
+			clntRvnFeePaidNonEligible.setRevName(root.getOpRev_Budget_label_13());
 			clntRvnFeePaidNonEligible.setRevType(root.getOpRev_client_label());
 			clntRvnFeePaidNonEligible.setConfirmationId(root.getForm().getConfirmationId());
 
 			// skipping subtotal for now
 			LtcBudgetRev othRevInvstOpFund = new LtcBudgetRev();
-			othRevInvstOpFund.setRevBudget(root.getOpRev_YTD14());
+			othRevInvstOpFund.setRevBudget(root.getOpRev_Budget14());
 			othRevInvstOpFund.setRevNotes(root.getOpRev_note14());
-			othRevInvstOpFund.setRevName(root.getOpRev_YTD_label_14());
+			othRevInvstOpFund.setRevName(root.getOpRev_Budget_label_14());
 			othRevInvstOpFund.setRevType(root.getOpRev_otherRev_label());
 			othRevInvstOpFund.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev othRevInvstCmBcFund = new LtcBudgetRev();
-			othRevInvstCmBcFund.setRevBudget(root.getOpRev_YTD15());
+			othRevInvstCmBcFund.setRevBudget(root.getOpRev_Budget15());
 			othRevInvstCmBcFund.setRevNotes(root.getOpRev_note15());
-			othRevInvstCmBcFund.setRevName(root.getOpRev_YTD_label_15());
+			othRevInvstCmBcFund.setRevName(root.getOpRev_Budget_label_15());
 			othRevInvstCmBcFund.setRevType(root.getOpRev_otherRev_label());
 			othRevInvstCmBcFund.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev othRevFoodServ = new LtcBudgetRev();
-			othRevFoodServ.setRevBudget(root.getOpRev_YTD16());
+			othRevFoodServ.setRevBudget(root.getOpRev_Budget16());
 			othRevFoodServ.setRevNotes(root.getOpRev_note16());
-			othRevFoodServ.setRevName(root.getOpRev_YTD_label_16());
+			othRevFoodServ.setRevName(root.getOpRev_Budget_label_16());
 			othRevFoodServ.setRevType(root.getOpRev_otherRev_label());
 			othRevFoodServ.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev othRevLdryServ = new LtcBudgetRev();
-			othRevLdryServ.setRevBudget(root.getOpRev_YTD17());
+			othRevLdryServ.setRevBudget(root.getOpRev_Budget17());
 			othRevLdryServ.setRevNotes(root.getOpRev_note17());
-			othRevLdryServ.setRevName(root.getOpRev_YTD_label_17());
+			othRevLdryServ.setRevName(root.getOpRev_Budget_label_17());
 			othRevLdryServ.setRevType(root.getOpRev_otherRev_label());
 			othRevLdryServ.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev othRevCabl = new LtcBudgetRev();
-			othRevCabl.setRevBudget(root.getOpRev_YTD18());
+			othRevCabl.setRevBudget(root.getOpRev_Budget18());
 			othRevCabl.setRevNotes(root.getOpRev_note18());
-			othRevCabl.setRevName(root.getOpRev_YTD_label_18());
+			othRevCabl.setRevName(root.getOpRev_Budget_label_18());
 			othRevCabl.setRevType(root.getOpRev_otherRev_label());
 			othRevCabl.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev othRevOthRec = new LtcBudgetRev();
-			othRevOthRec.setRevBudget(root.getOpRev_YTD19());
+			othRevOthRec.setRevBudget(root.getOpRev_Budget19());
 			othRevOthRec.setRevNotes(root.getOpRev_note19());
-			othRevOthRec.setRevName(root.getOpRev_YTD_label_19());
+			othRevOthRec.setRevName(root.getOpRev_Budget_label_19());
 			othRevOthRec.setRevType(root.getOpRev_otherRev_label());
 			othRevOthRec.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev othRevOthSpcfy = new LtcBudgetRev();
-			othRevOthSpcfy.setRevBudget(root.getOpRev_YTD20());
+			othRevOthSpcfy.setRevBudget(root.getOpRev_Budget20());
 			othRevOthSpcfy.setRevNotes(root.getOpRev_note20());
-			othRevOthSpcfy.setRevName(root.getOpRev_YTD_label_20());
+			othRevOthSpcfy.setRevName(root.getOpRev_Budget_label_20());
 			othRevOthSpcfy.setRevType(root.getOpRev_otherRev_label());
 			othRevOthSpcfy.setConfirmationId(root.getForm().getConfirmationId());
 			Collections.addAll(ltcBudgetRev, revFrmHA1Adj, revFrmHA1DirCare, revFrmHA1Others, revFrmHA2OpFundMinEq,
@@ -1946,8 +1946,8 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 
 			LtcBudgetRevTotals opRevSubttl = new LtcBudgetRevTotals();
 			opRevSubttl.setConfirmationId(root.getForm().getConfirmationId());
-			opRevSubttl.setRevType(root.getOpRev_YTD_total_label());
-			opRevSubttl.setSubTotalRevBudget(root.getOpRev_YTD_total());
+			opRevSubttl.setRevType(root.getOpRev_budget_total_label());
+			opRevSubttl.setSubTotalRevBudget(root.getOpRev_budget_total());
 			opRevSubttl.setSubTotalRevNotes(root.getOpRev_total_note());
 
 			LtcBudgetRevTotals nonOpRevSubttl = new LtcBudgetRevTotals();
@@ -1959,199 +1959,199 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			Collections.addAll(ltcBudgetRevSubTtls, revFromHA1Subttl,revFromHA2Subttl,revFromHA4Subttl,clntRevSubttl,othRevSubttl,opRevSubttl, nonOpRevSubttl);
 
 			LtcBudgetExp dirCareCostExp = new LtcBudgetExp();
-			dirCareCostExp.setExpBudget(root.getOpEx_YTD1());
+			dirCareCostExp.setExpBudget(root.getOpEx_Budget1());
 			dirCareCostExp.setExpNotes(root.getOpEx_note1());
-			dirCareCostExp.setExpName(root.getOpEx_YTD_label1());
+			dirCareCostExp.setExpName(root.getOpEx_Budget_label1());
 			dirCareCostExp.setExpType(root.getOpEx_1A_label());
 			dirCareCostExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp foodCostExp = new LtcBudgetExp();
-			foodCostExp.setExpBudget(root.getOpEx_YTD2());
+			foodCostExp.setExpBudget(root.getOpEx_Budget2());
 			foodCostExp.setExpNotes(root.getOpEx_note2());
-			foodCostExp.setExpName(root.getOpEx_YTD_label2());
+			foodCostExp.setExpName(root.getOpEx_Budget_label2());
 			foodCostExp.setExpType(root.getOpEx_1A_label());
 			foodCostExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp ldryServExp = new LtcBudgetExp();
-			ldryServExp.setExpBudget(root.getOpEx_YTD3());
+			ldryServExp.setExpBudget(root.getOpEx_Budget3());
 			ldryServExp.setExpNotes(root.getOpEx_note3());
-			ldryServExp.setExpName(root.getOpEx_YTD_label3());
+			ldryServExp.setExpName(root.getOpEx_Budget_label3());
 			ldryServExp.setExpType(root.getOpEx_1A_label());
 			ldryServExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp housekeepingCostExp = new LtcBudgetExp();
-			housekeepingCostExp.setExpBudget(root.getOpEx_YTD4());
+			housekeepingCostExp.setExpBudget(root.getOpEx_Budget4());
 			housekeepingCostExp.setExpNotes(root.getOpEx_note4());
-			housekeepingCostExp.setExpName(root.getOpEx_YTD_label4());
+			housekeepingCostExp.setExpName(root.getOpEx_Budget_label4());
 			housekeepingCostExp.setExpType(root.getOpEx_1A_label());
 			housekeepingCostExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp adminServCostExp = new LtcBudgetExp();
-			adminServCostExp.setExpBudget(root.getOpEx_YTD5());
+			adminServCostExp.setExpBudget(root.getOpEx_Budget5());
 			adminServCostExp.setExpNotes(root.getOpEx_note5());
-			adminServCostExp.setExpName(root.getOpEx_YTD_label5());
+			adminServCostExp.setExpName(root.getOpEx_Budget_label5());
 			adminServCostExp.setExpType(root.getOpEx_1A_label());
 			adminServCostExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp plantMainOpStaffExp = new LtcBudgetExp();
-			plantMainOpStaffExp.setExpBudget(root.getOpEx_YTD6());
+			plantMainOpStaffExp.setExpBudget(root.getOpEx_Budget6());
 			plantMainOpStaffExp.setExpNotes(root.getOpEx_note6());
-			plantMainOpStaffExp.setExpName(root.getOpEx_YTD_label6());
+			plantMainOpStaffExp.setExpName(root.getOpEx_Budget_label6());
 			plantMainOpStaffExp.setExpType(root.getOpEx_1A_label());
 			plantMainOpStaffExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			// subtotal before salary and wages - omitted
 			LtcBudgetExp salWagRecvExp = new LtcBudgetExp();
-			salWagRecvExp.setExpBudget(root.getOpEx_YTD7());
+			salWagRecvExp.setExpBudget(root.getOpEx_Budget7());
 			salWagRecvExp.setExpNotes(root.getOpEx_note7());
-			salWagRecvExp.setExpName(root.getOpEx_YTD_label7());
+			salWagRecvExp.setExpName(root.getOpEx_Budget_label7());
 			salWagRecvExp.setExpType(root.getOpEx_1A_label());
 			salWagRecvExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp salWagAccExp = new LtcBudgetExp();
-			salWagAccExp.setExpBudget(root.getOpEx_YTD8());
+			salWagAccExp.setExpBudget(root.getOpEx_Budget8());
 			salWagAccExp.setExpNotes(root.getOpEx_note8());
-			salWagAccExp.setExpName(root.getOpEx_YTD_label8());
+			salWagAccExp.setExpName(root.getOpEx_Budget_label8());
 			salWagAccExp.setExpType(root.getOpEx_1A_label());
 			salWagAccExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp othLabCostExp = new LtcBudgetExp();
-			othLabCostExp.setExpBudget(root.getOpEx_YTD9());
+			othLabCostExp.setExpBudget(root.getOpEx_Budget9());
 			othLabCostExp.setExpNotes(root.getOpEx_note9());
-			othLabCostExp.setExpName(root.getOpEx_YTD_label9());
+			othLabCostExp.setExpName(root.getOpEx_Budget_label9());
 			othLabCostExp.setExpType(root.getOpEx_1A_label());
 			othLabCostExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			// subtotal
 
 			LtcBudgetExp bnftCostExp = new LtcBudgetExp();
-			bnftCostExp.setExpBudget(root.getOpEx_YTD10());
+			bnftCostExp.setExpBudget(root.getOpEx_Budget10());
 			bnftCostExp.setExpNotes(root.getOpEx_note10());
-			bnftCostExp.setExpName(root.getOpEx_YTD_label10());
+			bnftCostExp.setExpName(root.getOpEx_Budget_label10());
 			bnftCostExp.setExpType(root.getOpEx_1B_label());
 			bnftCostExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp sickSevrnceAccExp = new LtcBudgetExp();
-			sickSevrnceAccExp.setExpBudget(root.getOpEx_YTD11());
+			sickSevrnceAccExp.setExpBudget(root.getOpEx_Budget11());
 			sickSevrnceAccExp.setExpNotes(root.getOpEx_note11());
-			sickSevrnceAccExp.setExpName(root.getOpEx_YTD_label11());
+			sickSevrnceAccExp.setExpName(root.getOpEx_Budget_label11());
 			sickSevrnceAccExp.setExpType(root.getOpEx_1B_label());
 			sickSevrnceAccExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			// subtotal
 			LtcBudgetExp buildingRentExp = new LtcBudgetExp();
-			buildingRentExp.setExpBudget(root.getOpEx_YTD12());
+			buildingRentExp.setExpBudget(root.getOpEx_Budget12());
 			buildingRentExp.setExpNotes(root.getOpEx_note12());
-			buildingRentExp.setExpName(root.getOpEx_YTD_label12());
+			buildingRentExp.setExpName(root.getOpEx_Budget_label12());
 			buildingRentExp.setExpType(root.getOpEx_2_label());
 			buildingRentExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp intrstMortgageLngTrmExp = new LtcBudgetExp();
-			intrstMortgageLngTrmExp.setExpBudget(root.getOpEx_YTD13());
+			intrstMortgageLngTrmExp.setExpBudget(root.getOpEx_Budget13());
 			intrstMortgageLngTrmExp.setExpNotes(root.getOpEx_note13());
-			intrstMortgageLngTrmExp.setExpName(root.getOpEx_YTD_label13());
+			intrstMortgageLngTrmExp.setExpName(root.getOpEx_Budget_label13());
 			intrstMortgageLngTrmExp.setExpType(root.getOpEx_2_label());
 			intrstMortgageLngTrmExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp propertyTaxesExp = new LtcBudgetExp();
-			propertyTaxesExp.setExpBudget(root.getOpEx_YTD14());
+			propertyTaxesExp.setExpBudget(root.getOpEx_Budget14());
 			propertyTaxesExp.setExpNotes(root.getOpEx_note14());
-			propertyTaxesExp.setExpName(root.getOpEx_YTD_label14());
+			propertyTaxesExp.setExpName(root.getOpEx_Budget_label14());
 			propertyTaxesExp.setExpType(root.getOpEx_2_label());
 			propertyTaxesExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp mntnceExp = new LtcBudgetExp();
-			mntnceExp.setExpBudget(root.getOpEx_YTD15());
+			mntnceExp.setExpBudget(root.getOpEx_Budget15());
 			mntnceExp.setExpNotes(root.getOpEx_note15());
-			mntnceExp.setExpName(root.getOpEx_YTD_label15());
+			mntnceExp.setExpName(root.getOpEx_Budget_label15());
 			mntnceExp.setExpType(root.getOpEx_2_label());
 			mntnceExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp suppliesExp = new LtcBudgetExp();
-			suppliesExp.setExpBudget(root.getOpEx_YTD16());
+			suppliesExp.setExpBudget(root.getOpEx_Budget16());
 			suppliesExp.setExpNotes(root.getOpEx_note16());
-			suppliesExp.setExpName(root.getOpEx_YTD_label16());
+			suppliesExp.setExpName(root.getOpEx_Budget_label16());
 			suppliesExp.setExpType(root.getOpEx_2_label());
 			suppliesExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp utilitiesExp = new LtcBudgetExp();
-			utilitiesExp.setExpBudget(root.getOpEx_YTD17());
+			utilitiesExp.setExpBudget(root.getOpEx_Budget17());
 			utilitiesExp.setExpNotes(root.getOpEx_note17());
-			utilitiesExp.setExpName(root.getOpEx_YTD_label17());
+			utilitiesExp.setExpName(root.getOpEx_Budget_label17());
 			utilitiesExp.setExpType(root.getOpEx_2_label());
 			utilitiesExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp wasteMgmntExp = new LtcBudgetExp();
-			wasteMgmntExp.setExpBudget(root.getOpEx_YTD18());
+			wasteMgmntExp.setExpBudget(root.getOpEx_Budget18());
 			wasteMgmntExp.setExpNotes(root.getOpEx_note18());
-			wasteMgmntExp.setExpName(root.getOpEx_YTD_label18());
+			wasteMgmntExp.setExpName(root.getOpEx_Budget_label18());
 			wasteMgmntExp.setExpType(root.getOpEx_2_label());
 			wasteMgmntExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp resTranServExp = new LtcBudgetExp();
-			resTranServExp.setExpBudget(root.getOpEx_YTD19());
+			resTranServExp.setExpBudget(root.getOpEx_Budget19());
 			resTranServExp.setExpNotes(root.getOpEx_note19());
-			resTranServExp.setExpName(root.getOpEx_YTD_label19());
+			resTranServExp.setExpName(root.getOpEx_Budget_label19());
 			resTranServExp.setExpType(root.getOpEx_2_label());
 			resTranServExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp othExp = new LtcBudgetExp();
-			othExp.setExpBudget(root.getOpEx_YTD20());
+			othExp.setExpBudget(root.getOpEx_Budget20());
 			othExp.setExpNotes(root.getOpEx_note20());
-			othExp.setExpName(root.getOpEx_YTD_label20());
+			othExp.setExpName(root.getOpEx_Budget_label20());
 			othExp.setExpType(root.getOpEx_2_label());
 			othExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			// skipping subtotal for now
 
 			LtcBudgetExp medSupExp = new LtcBudgetExp();
-			medSupExp.setExpBudget(root.getOpEx_YTD21());
+			medSupExp.setExpBudget(root.getOpEx_Budget21());
 			medSupExp.setExpNotes(root.getOpEx_note21());
-			medSupExp.setExpName(root.getOpEx_YTD_label21());
+			medSupExp.setExpName(root.getOpEx_Budget_label21());
 			medSupExp.setExpType(root.getOpEx_3_label());
 			medSupExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp drgsPharmaExp = new LtcBudgetExp();
-			drgsPharmaExp.setExpBudget(root.getOpEx_YTD22());
+			drgsPharmaExp.setExpBudget(root.getOpEx_Budget22());
 			drgsPharmaExp.setExpNotes(root.getOpEx_note22());
-			drgsPharmaExp.setExpName(root.getOpEx_YTD_label22());
+			drgsPharmaExp.setExpName(root.getOpEx_Budget_label22());
 			drgsPharmaExp.setExpType(root.getOpEx_3_label());
 			drgsPharmaExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp rawFoodCostExp = new LtcBudgetExp();
-			rawFoodCostExp.setExpBudget(root.getOpEx_YTD23());
+			rawFoodCostExp.setExpBudget(root.getOpEx_Budget23());
 			rawFoodCostExp.setExpNotes(root.getOpEx_note23());
-			rawFoodCostExp.setExpName(root.getOpEx_YTD_label23());
+			rawFoodCostExp.setExpName(root.getOpEx_Budget_label23());
 			rawFoodCostExp.setExpType(root.getOpEx_3_label());
 			rawFoodCostExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			
 
 			LtcBudgetExp dietSupExp = new LtcBudgetExp();
-			dietSupExp.setExpBudget(root.getOpEx_YTD24());
+			dietSupExp.setExpBudget(root.getOpEx_Budget24());
 			dietSupExp.setExpNotes(root.getOpEx_note24());
-			dietSupExp.setExpName(root.getOpEx_YTD_label24());
+			dietSupExp.setExpName(root.getOpEx_Budget_label24());
 			dietSupExp.setExpType(root.getOpEx_3_label());
 			dietSupExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp ldrySupExp = new LtcBudgetExp();
-			ldrySupExp.setExpBudget(root.getOpEx_YTD25());
+			ldrySupExp.setExpBudget(root.getOpEx_Budget25());
 			ldrySupExp.setExpNotes(root.getOpEx_note25());
-			ldrySupExp.setExpName(root.getOpEx_YTD_label25());
+			ldrySupExp.setExpName(root.getOpEx_Budget_label25());
 			ldrySupExp.setExpType(root.getOpEx_3_label());
 			ldrySupExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp houseSupExp = new LtcBudgetExp();
-			houseSupExp.setExpBudget(root.getOpEx_YTD26());
+			houseSupExp.setExpBudget(root.getOpEx_Budget26());
 			houseSupExp.setExpNotes(root.getOpEx_note26());
-			houseSupExp.setExpName(root.getOpEx_YTD_label26());
+			houseSupExp.setExpName(root.getOpEx_Budget_label26());
 			houseSupExp.setExpType(root.getOpEx_3_label());
 			houseSupExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp incontinenceSupExp = new LtcBudgetExp();
-			incontinenceSupExp.setExpBudget(root.getOpEx_YTD27());
+			incontinenceSupExp.setExpBudget(root.getOpEx_Budget27());
 			incontinenceSupExp.setExpNotes(root.getOpEx_note27());
-			incontinenceSupExp.setExpName(root.getOpEx_YTD_label27());
+			incontinenceSupExp.setExpName(root.getOpEx_Budget_label27());
 			incontinenceSupExp.setExpType(root.getOpEx_3_label());
 			incontinenceSupExp.setConfirmationId(root.getForm().getConfirmationId());
 
@@ -2215,13 +2215,13 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			/*LtcBudgetDep */
 			LtcBudgetDep buildingDep = new LtcBudgetDep();
 			buildingDep.setConfirmationId(root.getForm().getConfirmationId());
-			buildingDep.setDepName(root.getOpEx_YTD_label38());
+			buildingDep.setDepName(root.getOpDep_Budget_label1());
 			buildingDep.setDepBudget(root.getOpEx_item138());
 			buildingDep.setDepNotes(root.getOpEx_note38());
 
 			LtcBudgetDep furnitureEquipmentDep = new LtcBudgetDep();
 			furnitureEquipmentDep.setConfirmationId(root.getForm().getConfirmationId());
-			furnitureEquipmentDep.setDepName(root.getOpEx_YTD_label39());
+			furnitureEquipmentDep.setDepName(root.getOpDep_Budget_label2());
 			furnitureEquipmentDep.setDepBudget(root.getOpEx_item139());
 			furnitureEquipmentDep.setDepNotes(root.getOpEx_note39());
 
@@ -2263,88 +2263,88 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			/* END */
 			
 			LtcBudgetExp OthSupExp = new LtcBudgetExp();
-			OthSupExp.setExpBudget(root.getOpEx_YTD28());
+			OthSupExp.setExpBudget(root.getOpEx_Budget28());
 			OthSupExp.setExpNotes(root.getOpEx_note28());
-			OthSupExp.setExpName(root.getOpEx_YTD_label28());
+			OthSupExp.setExpName(root.getOpEx_Budget_label28());
 			OthSupExp.setExpType(root.getOpEx_3_label());
 			OthSupExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp officeExpAdCost = new LtcBudgetExp();
-			officeExpAdCost.setExpBudget(root.getOpEx_YTD29());
+			officeExpAdCost.setExpBudget(root.getOpEx_Budget29());
 			officeExpAdCost.setExpNotes(root.getOpEx_note29());
-			officeExpAdCost.setExpName(root.getOpEx_YTD_label29());
+			officeExpAdCost.setExpName(root.getOpEx_Budget_label29());
 			officeExpAdCost.setExpType(root.getOpEx_4_label());
 			officeExpAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp mgmntAdCost = new LtcBudgetExp();
-			mgmntAdCost.setExpBudget(root.getOpEx_YTD30());
+			mgmntAdCost.setExpBudget(root.getOpEx_Budget30());
 			mgmntAdCost.setExpNotes(root.getOpEx_note30());
-			mgmntAdCost.setExpName(root.getOpEx_YTD_label30());
+			mgmntAdCost.setExpName(root.getOpEx_Budget_label30());
 			mgmntAdCost.setExpType(root.getOpEx_4_label());
 			mgmntAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp hoAllocpAdCost = new LtcBudgetExp();
-			hoAllocpAdCost.setExpBudget(root.getOpEx_YTD31());
+			hoAllocpAdCost.setExpBudget(root.getOpEx_Budget31());
 			hoAllocpAdCost.setExpNotes(root.getOpEx_note31());
-			hoAllocpAdCost.setExpName(root.getOpEx_YTD_label31());
+			hoAllocpAdCost.setExpName(root.getOpEx_Budget_label31());
 			hoAllocpAdCost.setExpType(root.getOpEx_4_label());
 			hoAllocpAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp accAdCost = new LtcBudgetExp();
-			accAdCost.setExpBudget(root.getOpEx_YTD32());
+			accAdCost.setExpBudget(root.getOpEx_Budget32());
 			accAdCost.setExpNotes(root.getOpEx_note32());
-			accAdCost.setExpName(root.getOpEx_YTD_label32());
+			accAdCost.setExpName(root.getOpEx_Budget_label32());
 			accAdCost.setExpType(root.getOpEx_4_label());
 			accAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp apaAdCost = new LtcBudgetExp();
-			apaAdCost.setExpBudget(root.getOpEx_YTD33());
+			apaAdCost.setExpBudget(root.getOpEx_Budget33());
 			apaAdCost.setExpNotes(root.getOpEx_note33());
-			apaAdCost.setExpName(root.getOpEx_YTD_label33());
+			apaAdCost.setExpName(root.getOpEx_Budget_label33());
 			apaAdCost.setExpType(root.getOpEx_4_label());
 			apaAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp insuranceAdCost = new LtcBudgetExp();
-			insuranceAdCost.setExpBudget(root.getOpEx_YTD34());
+			insuranceAdCost.setExpBudget(root.getOpEx_Budget34());
 			insuranceAdCost.setExpNotes(root.getOpEx_note34());
-			insuranceAdCost.setExpName(root.getOpEx_YTD_label34());
+			insuranceAdCost.setExpName(root.getOpEx_Budget_label34());
 			insuranceAdCost.setExpType(root.getOpEx_4_label());
 			insuranceAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp adminSupAdCost = new LtcBudgetExp();
-			adminSupAdCost.setExpBudget(root.getOpEx_YTD35());
+			adminSupAdCost.setExpBudget(root.getOpEx_Budget35());
 			adminSupAdCost.setExpNotes(root.getOpEx_note35());
-			adminSupAdCost.setExpName(root.getOpEx_YTD_label35());
+			adminSupAdCost.setExpName(root.getOpEx_Budget_label35());
 			adminSupAdCost.setExpType(root.getOpEx_4_label());
 			adminSupAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp badDeptAdCost = new LtcBudgetExp();
-			badDeptAdCost.setExpBudget(root.getOpEx_YTD37());
+			badDeptAdCost.setExpBudget(root.getOpEx_Budget37());
 			badDeptAdCost.setExpNotes(root.getOpEx_note37());
-			badDeptAdCost.setExpName(root.getOpEx_YTD_label37());
+			badDeptAdCost.setExpName(root.getOpEx_Budget_label37());
 			badDeptAdCost.setExpType(root.getOpEx_4_label());
 			badDeptAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp othAdCost = new LtcBudgetExp();
-			othAdCost.setExpBudget(root.getOpEx_YTD36());
+			othAdCost.setExpBudget(root.getOpEx_Budget36());
 			othAdCost.setExpNotes(root.getOpEx_note36());
-			othAdCost.setExpName(root.getOpEx_YTD_label36());
+			othAdCost.setExpName(root.getOpEx_Budget_label36());
 			othAdCost.setExpType(root.getOpEx_4_label());
 			othAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			
 			/* Non operating expense */
 			LtcBudgetExp dirCareNonOpExpMortgage = new LtcBudgetExp();
-			dirCareNonOpExpMortgage.setExpBudget(root.getNopEx_YTD1());
+			dirCareNonOpExpMortgage.setExpBudget(root.getNopEx_Budget1());
 			dirCareNonOpExpMortgage.setExpNotes(root.getNopEx_note1());
-			dirCareNonOpExpMortgage.setExpName(root.getNopEx_YTD_label1());
+			dirCareNonOpExpMortgage.setExpName(root.getNopEx_Budget_label1());
 			dirCareNonOpExpMortgage.setExpType(root.getNopEx_label());
 			dirCareNonOpExpMortgage.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp dirCareNonOpExpOther = new LtcBudgetExp();
-			dirCareNonOpExpOther.setExpBudget(root.getNopEx_YTD2());
+			dirCareNonOpExpOther.setExpBudget(root.getNopEx_Budget2());
 			dirCareNonOpExpOther.setExpNotes(root.getNopEx_note2());
-			dirCareNonOpExpOther.setExpName(root.getNopEx_YTD_label2());
+			dirCareNonOpExpOther.setExpName(root.getNopEx_Budget_label2());
 			dirCareNonOpExpOther.setExpType(root.getNopEx_label());
 			dirCareNonOpExpOther.setConfirmationId(root.getForm().getConfirmationId());
 			/* END */

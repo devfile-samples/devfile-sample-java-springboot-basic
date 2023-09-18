@@ -1037,19 +1037,19 @@ public class Root{
     public String nopEx_sub_note;
     @JsonProperty("nopEx_sum1-1")
     public String nopEx_sum11;
-    @JsonProperty("nopEx_YTD-1")
-    public String nopEx_YTD1;
-    @JsonProperty("nopEx_YTD-2")
-    public String nopEx_YTD2;
+    @JsonProperty("nopEx_budget-1")
+    public String nopEx_Budget1;
+    @JsonProperty("nopEx_budget-2")
+    public String nopEx_Budget2;
     public String nopRev_note1;
     public String nopRev_note2;
     public String nopRev_sub_note;
     @JsonProperty("nopRev_sum1-1")
     public String nopRev_sum11;
-    @JsonProperty("nopRev_YTD-1")
-    public String nopRev_YTD1;
-    @JsonProperty("nopRev_YTD-2")
-    public String nopRev_YTD2;
+    @JsonProperty("nopRev_budget-1")
+    public String nopRev_Budget1;
+    @JsonProperty("nopRev_budget-2")
+    public String nopRev_Budget2;
     
     public String nopSu_data1;
     public String nopSu_note;
@@ -1348,7 +1348,7 @@ public class Root{
     @JsonProperty("opEx_item1-39")
     public String opEx_item139;
 	public String opEx_data_total_label;
-	public String opRev_YTD_total_label;
+	public String opRev_budget_total_label;
 	public String opSu_data_total_label;
 	@JsonProperty("opSuB_item1-1_label")
 	public String opSuB_item11_label;
@@ -1414,80 +1414,80 @@ public class Root{
     public String opEx_sum16;
     @JsonProperty("opEx_total_note")
     public String opEx_total_note;
-    @JsonProperty("opEx_YTD-1")
-    public String opEx_YTD1;
-    @JsonProperty("opEx_YTD-10")
-    public String opEx_YTD10;
-    @JsonProperty("opEx_YTD-11")
-    public String opEx_YTD11;
-    @JsonProperty("opEx_YTD-12")
-    public String opEx_YTD12;
-    @JsonProperty("opEx_YTD-13")
-    public String opEx_YTD13;
-    @JsonProperty("opEx_YTD-14")
-    public String opEx_YTD14;
-    @JsonProperty("opEx_YTD-15")
-    public String opEx_YTD15;
-    @JsonProperty("opEx_YTD-16")
-    public String opEx_YTD16;
-    @JsonProperty("opEx_YTD-17")
-    public String opEx_YTD17;
-    @JsonProperty("opEx_YTD-18")
-    public String opEx_YTD18;
-    @JsonProperty("opEx_YTD-19")
-    public String opEx_YTD19;
-    @JsonProperty("opEx_YTD-2")
-    public String opEx_YTD2;
-    @JsonProperty("opEx_YTD-20")
-    public String opEx_YTD20;
-    @JsonProperty("opEx_YTD-21")
-    public String opEx_YTD21;
-    @JsonProperty("opEx_YTD-22")
-    public String opEx_YTD22;
-    @JsonProperty("opEx_YTD-23")
-    public String opEx_YTD23;
-    @JsonProperty("opEx_YTD-24")
-    public String opEx_YTD24;
-    @JsonProperty("opEx_YTD-25")
-    public String opEx_YTD25;
-    @JsonProperty("opEx_YTD-26")
-    public String opEx_YTD26;
-    @JsonProperty("opEx_YTD-27")
-    public String opEx_YTD27;
-    @JsonProperty("opEx_YTD-28")
-    public String opEx_YTD28;
-    @JsonProperty("opEx_YTD-29")
-    public String opEx_YTD29;
-    @JsonProperty("opEx_YTD-3")
-    public String opEx_YTD3;
-    @JsonProperty("opEx_YTD-30")
-    public String opEx_YTD30;
-    @JsonProperty("opEx_YTD-31")
-    public String opEx_YTD31;
-    @JsonProperty("opEx_YTD-32")
-    public String opEx_YTD32;
-    @JsonProperty("opEx_YTD-33")
-    public String opEx_YTD33;
-    @JsonProperty("opEx_YTD-34")
-    public String opEx_YTD34;
-    @JsonProperty("opEx_YTD-35")
-    public String opEx_YTD35;
-	@JsonProperty("opEx_YTD-36")
-    public String opEx_YTD36;
-	@JsonProperty("opEx_YTD-37")
-    public String opEx_YTD37;
-	@JsonProperty("opEx_YTD-4")
-    public String opEx_YTD4;
-    @JsonProperty("opEx_YTD-5")
-    public String opEx_YTD5;
-    @JsonProperty("opEx_YTD-6")
-    public String opEx_YTD6;
-    @JsonProperty("opEx_YTD-7")
-    public String opEx_YTD7;
-    @JsonProperty("opEx_YTD-8")
-    public String opEx_YTD8;
-    @JsonProperty("opEx_YTD-9")
-    public String opEx_YTD9;
+    @JsonProperty("opEx_budget-1")
+    public String opEx_Budget1;
+    @JsonProperty("opEx_budget-10")
+    public String opEx_Budget10;
+    @JsonProperty("opEx_budget-11")
+    public String opEx_Budget11;
+    @JsonProperty("opEx_budget-12")
+    public String opEx_Budget12;
+    @JsonProperty("opEx_budget-13")
+    public String opEx_Budget13;
+    @JsonProperty("opEx_budget-14")
+    public String opEx_Budget14;
+    @JsonProperty("opEx_budget-15")
+    public String opEx_Budget15;
+    @JsonProperty("opEx_budget-16")
+    public String opEx_Budget16;
+    @JsonProperty("opEx_budget-17")
+    public String opEx_Budget17;
+    @JsonProperty("opEx_budget-18")
+    public String opEx_Budget18;
+    @JsonProperty("opEx_budget-19")
+    public String opEx_Budget19;
+    @JsonProperty("opEx_budget-2")
+    public String opEx_Budget2;
+    @JsonProperty("opEx_budget-20")
+    public String opEx_Budget20;
+    @JsonProperty("opEx_budget-21")
+    public String opEx_Budget21;
+    @JsonProperty("opEx_budget-22")
+    public String opEx_Budget22;
+    @JsonProperty("opEx_budget-23")
+    public String opEx_Budget23;
+    @JsonProperty("opEx_budget-24")
+    public String opEx_Budget24;
+    @JsonProperty("opEx_budget-25")
+    public String opEx_Budget25;
+    @JsonProperty("opEx_budget-26")
+    public String opEx_Budget26;
+    @JsonProperty("opEx_budget-27")
+    public String opEx_Budget27;
+    @JsonProperty("opEx_budget-28")
+    public String opEx_Budget28;
+    @JsonProperty("opEx_budget-29")
+    public String opEx_Budget29;
+    @JsonProperty("opEx_budget-3")
+    public String opEx_Budget3;
+    @JsonProperty("opEx_budget-30")
+    public String opEx_Budget30;
+    @JsonProperty("opEx_budget-31")
+    public String opEx_Budget31;
+    @JsonProperty("opEx_budget-32")
+    public String opEx_Budget32;
+    @JsonProperty("opEx_budget-33")
+    public String opEx_Budget33;
+    @JsonProperty("opEx_budget-34")
+    public String opEx_Budget34;
+    @JsonProperty("opEx_budget-35")
+    public String opEx_Budget35;
+	@JsonProperty("opEx_budget-36")
+    public String opEx_Budget36;
+	@JsonProperty("opEx_budget-37")
+    public String opEx_Budget37;
+	@JsonProperty("opEx_budget-4")
+    public String opEx_Budget4;
+    @JsonProperty("opEx_budget-5")
+    public String opEx_Budget5;
+    @JsonProperty("opEx_budget-6")
+    public String opEx_Budget6;
+    @JsonProperty("opEx_budget-7")
+    public String opEx_Budget7;
+    @JsonProperty("opEx_budget-8")
+    public String opEx_Budget8;
+    @JsonProperty("opEx_budget-9")
+    public String opEx_Budget9;
     public String opRev_note1;
     public String opRev_note10;
     public String opRev_note11;
@@ -1524,47 +1524,47 @@ public class Root{
     @JsonProperty("opRev_sum1-5")
     public String opRev_sum15;
     public String opRev_total_note;
-    public String opRev_YTD_total;
-    @JsonProperty("opRev_YTD-1")
-    public String opRev_YTD1;
-    @JsonProperty("opRev_YTD-10")
-    public String opRev_YTD10;
-    @JsonProperty("opRev_YTD-11")
-    public String opRev_YTD11;
-    @JsonProperty("opRev_YTD-12")
-    public String opRev_YTD12;
-    @JsonProperty("opRev_YTD-13")
-    public String opRev_YTD13;
-    @JsonProperty("opRev_YTD-14")
-    public String opRev_YTD14;
-    @JsonProperty("opRev_YTD-15")
-    public String opRev_YTD15;
-    @JsonProperty("opRev_YTD-16")
-    public String opRev_YTD16;
-    @JsonProperty("opRev_YTD-17")
-    public String opRev_YTD17;
-    @JsonProperty("opRev_YTD-18")
-    public String opRev_YTD18;
-    @JsonProperty("opRev_YTD-19")
-    public String opRev_YTD19;
-    @JsonProperty("opRev_YTD-2")
-    public String opRev_YTD2;
-    @JsonProperty("opRev_YTD-20")
-    public String opRev_YTD20;
-    @JsonProperty("opRev_YTD-3")
-    public String opRev_YTD3;
-    @JsonProperty("opRev_YTD-4")
-    public String opRev_YTD4;
-    @JsonProperty("opRev_YTD-5")
-    public String opRev_YTD5;
-    @JsonProperty("opRev_YTD-6")
-    public String opRev_YTD6;
-    @JsonProperty("opRev_YTD-7")
-    public String opRev_YTD7;
-    @JsonProperty("opRev_YTD-8")
-    public String opRev_YTD8;
-    @JsonProperty("opRev_YTD-9")
-    public String opRev_YTD9;
+    public String opRev_budget_total;
+    @JsonProperty("opRev_budget-1")
+    public String opRev_Budget1;
+    @JsonProperty("opRev_budget-10")
+    public String opRev_Budget10;
+    @JsonProperty("opRev_budget-11")
+    public String opRev_Budget11;
+    @JsonProperty("opRev_budget-12")
+    public String opRev_Budget12;
+    @JsonProperty("opRev_budget-13")
+    public String opRev_Budget13;
+    @JsonProperty("opRev_budget-14")
+    public String opRev_Budget14;
+    @JsonProperty("opRev_budget-15")
+    public String opRev_Budget15;
+    @JsonProperty("opRev_budget-16")
+    public String opRev_Budget16;
+    @JsonProperty("opRev_budget-17")
+    public String opRev_Budget17;
+    @JsonProperty("opRev_budget-18")
+    public String opRev_Budget18;
+    @JsonProperty("opRev_budget-19")
+    public String opRev_Budget19;
+    @JsonProperty("opRev_budget-2")
+    public String opRev_Budget2;
+    @JsonProperty("opRev_budget-20")
+    public String opRev_Budget20;
+    @JsonProperty("opRev_budget-3")
+    public String opRev_Budget3;
+    @JsonProperty("opRev_budget-4")
+    public String opRev_Budget4;
+    @JsonProperty("opRev_budget-5")
+    public String opRev_Budget5;
+    @JsonProperty("opRev_budget-6")
+    public String opRev_Budget6;
+    @JsonProperty("opRev_budget-7")
+    public String opRev_Budget7;
+    @JsonProperty("opRev_budget-8")
+    public String opRev_Budget8;
+    @JsonProperty("opRev_budget-9")
+    public String opRev_Budget9;
     public String opSu_data_total;
     public String opSu_data_total_note;
 	@JsonProperty("opSuB_item1-1")
@@ -1772,46 +1772,46 @@ public class Root{
 	public String opRev_2_label;
 	public String opRev_3_label;
 	public String opRev_4_label;
-	@JsonProperty("opRev_YTD_label-1")
-	public String opRev_YTD_label_1;
-	@JsonProperty("opRev_YTD_label-2")
-	public String opRev_YTD_label_2;
-	@JsonProperty("opRev_YTD_label-3")
-	public String opRev_YTD_label_3;
-	@JsonProperty("opRev_YTD_label-4")
-	public String opRev_YTD_label_4;
-	@JsonProperty("opRev_YTD_label-5")
-	public String opRev_YTD_label_5;
-	@JsonProperty("opRev_YTD_label-6")
-	public String opRev_YTD_label_6;
-	@JsonProperty("opRev_YTD_label-7")
-	public String opRev_YTD_label_7;
-	@JsonProperty("opRev_YTD_label-8")
-	public String opRev_YTD_label_8;
-	@JsonProperty("opRev_YTD_label-9")
-	public String opRev_YTD_label_9;
-	@JsonProperty("opRev_YTD_label-10")
-	public String opRev_YTD_label_10;
-	@JsonProperty("opRev_YTD_label-11")
-	public String opRev_YTD_label_11;
-	@JsonProperty("opRev_YTD_label-12")
-	public String opRev_YTD_label_12;
-	@JsonProperty("opRev_YTD_label-13")
-	public String opRev_YTD_label_13;
-	@JsonProperty("opRev_YTD_label-14")
-	public String opRev_YTD_label_14;
-	@JsonProperty("opRev_YTD_label-15")
-	public String opRev_YTD_label_15;
-	@JsonProperty("opRev_YTD_label-16")
-	public String opRev_YTD_label_16;
-	@JsonProperty("opRev_YTD_label-17")
-	public String opRev_YTD_label_17;
-	@JsonProperty("opRev_YTD_label-18")
-	public String opRev_YTD_label_18;
-	@JsonProperty("opRev_YTD_label-19")
-	public String opRev_YTD_label_19;
-	@JsonProperty("opRev_YTD_label-20")
-	public String opRev_YTD_label_20;
+	@JsonProperty("opRev_budget_label-1")
+	public String opRev_Budget_label_1;
+	@JsonProperty("opRev_budget_label-2")
+	public String opRev_Budget_label_2;
+	@JsonProperty("opRev_budget_label-3")
+	public String opRev_Budget_label_3;
+	@JsonProperty("opRev_budget_label-4")
+	public String opRev_Budget_label_4;
+	@JsonProperty("opRev_budget_label-5")
+	public String opRev_Budget_label_5;
+	@JsonProperty("opRev_budget_label-6")
+	public String opRev_Budget_label_6;
+	@JsonProperty("opRev_budget_label-7")
+	public String opRev_Budget_label_7;
+	@JsonProperty("opRev_budget_label-8")
+	public String opRev_Budget_label_8;
+	@JsonProperty("opRev_budget_label-9")
+	public String opRev_Budget_label_9;
+	@JsonProperty("opRev_budget_label-10")
+	public String opRev_Budget_label_10;
+	@JsonProperty("opRev_budget_label-11")
+	public String opRev_Budget_label_11;
+	@JsonProperty("opRev_budget_label-12")
+	public String opRev_Budget_label_12;
+	@JsonProperty("opRev_budget_label-13")
+	public String opRev_Budget_label_13;
+	@JsonProperty("opRev_budget_label-14")
+	public String opRev_Budget_label_14;
+	@JsonProperty("opRev_budget_label-15")
+	public String opRev_Budget_label_15;
+	@JsonProperty("opRev_budget_label-16")
+	public String opRev_Budget_label_16;
+	@JsonProperty("opRev_budget_label-17")
+	public String opRev_Budget_label_17;
+	@JsonProperty("opRev_budget_label-18")
+	public String opRev_Budget_label_18;
+	@JsonProperty("opRev_budget_label-19")
+	public String opRev_Budget_label_19;
+	@JsonProperty("opRev_budget_label-20")
+	public String opRev_Budget_label_20;
 	public String support_label;
 	@JsonProperty("support_label-1")
 	public String support_label1;
@@ -1911,14 +1911,14 @@ public class Root{
 
 	public String nopRev_label;
 	public String nopEx_label;
-	@JsonProperty("nopRev_YTD_label-1")
-	public String nopRev_YTD_label1;
-	@JsonProperty("nopRev_YTD_label-2")
-	public String nopRev_YTD_label2;
-	@JsonProperty("nopEx_YTD_label-1")
-	public String nopEx_YTD_label1;
-	@JsonProperty("nopEx_YTD_label-2")
-	public String nopEx_YTD_label2;
+	@JsonProperty("nopRev_budget_label-1")
+	public String nopRev_Budget_label1;
+	@JsonProperty("nopRev_budget_label-2")
+	public String nopRev_Budget_label2;
+	@JsonProperty("nopEx_budget_label-1")
+	public String nopEx_Budget_label1;
+	@JsonProperty("nopEx_budget_label-2")
+	public String nopEx_Budget_label2;
 	public String opRev_client_label;
 
 	public String opEx_1A_label;
@@ -1926,84 +1926,84 @@ public class Root{
 	public String opEx_2_label;
 	public String opEx_3_label;
 	public String opEx_4_label;
-	@JsonProperty("opEx_YTD_label-1")
-	public String opEx_YTD_label1;
-	@JsonProperty("opEx_YTD_label-2")
-	public String opEx_YTD_label2;
-	@JsonProperty("opEx_YTD_label-3")
-	public String opEx_YTD_label3;
-	@JsonProperty("opEx_YTD_label-4")
-	public String opEx_YTD_label4;
-	@JsonProperty("opEx_YTD_label-5")
-	public String opEx_YTD_label5;
-	@JsonProperty("opEx_YTD_label-6")
-	public String opEx_YTD_label6;
-	@JsonProperty("opEx_YTD_label-7")
-	public String opEx_YTD_label7;
-	@JsonProperty("opEx_YTD_label-8")
-	public String opEx_YTD_label8;
-	@JsonProperty("opEx_YTD_label-9")
-	public String opEx_YTD_label9;
-	@JsonProperty("opEx_YTD_label-10")
-	public String opEx_YTD_label10;
-	@JsonProperty("opEx_YTD_label-11")
-	public String opEx_YTD_label11;
-	@JsonProperty("opEx_YTD_label-12")
-	public String opEx_YTD_label12;
-	@JsonProperty("opEx_YTD_label-13")
-	public String opEx_YTD_label13;
-	@JsonProperty("opEx_YTD_label-14")
-	public String opEx_YTD_label14;
-	@JsonProperty("opEx_YTD_label-15")
-	public String opEx_YTD_label15;
-	@JsonProperty("opEx_YTD_label-16")
-	public String opEx_YTD_label16;
-	@JsonProperty("opEx_YTD_label-17")
-	public String opEx_YTD_label17;
-	@JsonProperty("opEx_YTD_label-18")
-	public String opEx_YTD_label18;
-	@JsonProperty("opEx_YTD_label-19")
-	public String opEx_YTD_label19;
-	@JsonProperty("opEx_YTD_label-20")
-	public String opEx_YTD_label20;
-	@JsonProperty("opEx_YTD_label-21")
-	public String opEx_YTD_label21;
-	@JsonProperty("opEx_YTD_label-22")
-	public String opEx_YTD_label22;
-	@JsonProperty("opEx_YTD_label-23")
-	public String opEx_YTD_label23;
-	@JsonProperty("opEx_YTD_label-24")
-	public String opEx_YTD_label24;
-	@JsonProperty("opEx_YTD_label-25")
-	public String opEx_YTD_label25;
-	@JsonProperty("opEx_YTD_label-26")
-	public String opEx_YTD_label26;
-	@JsonProperty("opEx_YTD_label-27")
-	public String opEx_YTD_label27;
-	@JsonProperty("opEx_YTD_label-28")
-	public String opEx_YTD_label28;
-	@JsonProperty("opEx_YTD_label-29")
-	public String opEx_YTD_label29;
-	@JsonProperty("opEx_YTD_label-30")
-	public String opEx_YTD_label30;
-	@JsonProperty("opEx_YTD_label-31")
-	public String opEx_YTD_label31;
-	@JsonProperty("opEx_YTD_label-32")
-	public String opEx_YTD_label32;
-	@JsonProperty("opEx_YTD_label-33")
-	public String opEx_YTD_label33;
-	@JsonProperty("opEx_YTD_label-34")
-	public String opEx_YTD_label34;
-	@JsonProperty("opEx_YTD_label-35")
-	public String opEx_YTD_label35;
-	@JsonProperty("opEx_YTD_label-36")
-	public String opEx_YTD_label36;
-	@JsonProperty("opEx_YTD_label-37")
-	public String opEx_YTD_label37;
-	@JsonProperty("opEx_YTD_label-38")
-	public String opEx_YTD_label38;
-	@JsonProperty("opEx_YTD_label-39")
-	public String opEx_YTD_label39;
+	@JsonProperty("opEx_budget_label-1")
+	public String opEx_Budget_label1;
+	@JsonProperty("opEx_budget_label-2")
+	public String opEx_Budget_label2;
+	@JsonProperty("opEx_budget_label-3")
+	public String opEx_Budget_label3;
+	@JsonProperty("opEx_budget_label-4")
+	public String opEx_Budget_label4;
+	@JsonProperty("opEx_budget_label-5")
+	public String opEx_Budget_label5;
+	@JsonProperty("opEx_budget_label-6")
+	public String opEx_Budget_label6;
+	@JsonProperty("opEx_budget_label-7")
+	public String opEx_Budget_label7;
+	@JsonProperty("opEx_budget_label-8")
+	public String opEx_Budget_label8;
+	@JsonProperty("opEx_budget_label-9")
+	public String opEx_Budget_label9;
+	@JsonProperty("opEx_budget_label-10")
+	public String opEx_Budget_label10;
+	@JsonProperty("opEx_budget_label-11")
+	public String opEx_Budget_label11;
+	@JsonProperty("opEx_budget_label-12")
+	public String opEx_Budget_label12;
+	@JsonProperty("opEx_budget_label-13")
+	public String opEx_Budget_label13;
+	@JsonProperty("opEx_budget_label-14")
+	public String opEx_Budget_label14;
+	@JsonProperty("opEx_budget_label-15")
+	public String opEx_Budget_label15;
+	@JsonProperty("opEx_budget_label-16")
+	public String opEx_Budget_label16;
+	@JsonProperty("opEx_budget_label-17")
+	public String opEx_Budget_label17;
+	@JsonProperty("opEx_budget_label-18")
+	public String opEx_Budget_label18;
+	@JsonProperty("opEx_budget_label-19")
+	public String opEx_Budget_label19;
+	@JsonProperty("opEx_budget_label-20")
+	public String opEx_Budget_label20;
+	@JsonProperty("opEx_budget_label-21")
+	public String opEx_Budget_label21;
+	@JsonProperty("opEx_budget_label-22")
+	public String opEx_Budget_label22;
+	@JsonProperty("opEx_budget_label-23")
+	public String opEx_Budget_label23;
+	@JsonProperty("opEx_budget_label-24")
+	public String opEx_Budget_label24;
+	@JsonProperty("opEx_budget_label-25")
+	public String opEx_Budget_label25;
+	@JsonProperty("opEx_budget_label-26")
+	public String opEx_Budget_label26;
+	@JsonProperty("opEx_budget_label-27")
+	public String opEx_Budget_label27;
+	@JsonProperty("opEx_budget_label-28")
+	public String opEx_Budget_label28;
+	@JsonProperty("opEx_budget_label-29")
+	public String opEx_Budget_label29;
+	@JsonProperty("opEx_budget_label-30")
+	public String opEx_Budget_label30;
+	@JsonProperty("opEx_budget_label-31")
+	public String opEx_Budget_label31;
+	@JsonProperty("opEx_budget_label-32")
+	public String opEx_Budget_label32;
+	@JsonProperty("opEx_budget_label-33")
+	public String opEx_Budget_label33;
+	@JsonProperty("opEx_budget_label-34")
+	public String opEx_Budget_label34;
+	@JsonProperty("opEx_budget_label-35")
+	public String opEx_Budget_label35;
+	@JsonProperty("opEx_budget_label-36")
+	public String opEx_Budget_label36;
+	@JsonProperty("opEx_budget_label-37")
+	public String opEx_Budget_label37;
+	@JsonProperty("opDep_budget_label-1")
+	public String opDep_Budget_label1;
+	@JsonProperty("opDep_budget_label-2")
+	public String opDep_Budget_label2;
 	public String benefit_value_rec_label;
 	@JsonProperty("nursingNVP_sum1-1")
 	public String nursingNVP_sum11;
@@ -2994,227 +2994,227 @@ public class Root{
 	public void setOpEx_4_label(String opEx_4_label) {
 		this.opEx_4_label = opEx_4_label;
 	}
-	public String getOpEx_YTD_label1() {
-		return opEx_YTD_label1;
+	public String getOpEx_Budget_label1() {
+		return opEx_Budget_label1;
 	}
-	public void setOpEx_YTD_label1(String opEx_YTD_label1) {
-		this.opEx_YTD_label1 = opEx_YTD_label1;
+	public void setOpEx_Budget_label1(String opEx_Budget_label1) {
+		this.opEx_Budget_label1 = opEx_Budget_label1;
 	}
-	public String getOpEx_YTD_label2() {
-		return opEx_YTD_label2;
+	public String getOpEx_Budget_label2() {
+		return opEx_Budget_label2;
 	}
-	public void setOpEx_YTD_label2(String opEx_YTD_label2) {
-		this.opEx_YTD_label2 = opEx_YTD_label2;
+	public void setOpEx_Budget_label2(String opEx_Budget_label2) {
+		this.opEx_Budget_label2 = opEx_Budget_label2;
 	}
-	public String getOpEx_YTD_label3() {
-		return opEx_YTD_label3;
+	public String getOpEx_Budget_label3() {
+		return opEx_Budget_label3;
 	}
-	public void setOpEx_YTD_label3(String opEx_YTD_label3) {
-		this.opEx_YTD_label3 = opEx_YTD_label3;
+	public void setOpEx_Budget_label3(String opEx_Budget_label3) {
+		this.opEx_Budget_label3 = opEx_Budget_label3;
 	}
-	public String getOpEx_YTD_label4() {
-		return opEx_YTD_label4;
+	public String getOpEx_Budget_label4() {
+		return opEx_Budget_label4;
 	}
-	public void setOpEx_YTD_label4(String opEx_YTD_label4) {
-		this.opEx_YTD_label4 = opEx_YTD_label4;
+	public void setOpEx_Budget_label4(String opEx_Budget_label4) {
+		this.opEx_Budget_label4 = opEx_Budget_label4;
 	}
-	public String getOpEx_YTD_label5() {
-		return opEx_YTD_label5;
+	public String getOpEx_Budget_label5() {
+		return opEx_Budget_label5;
 	}
-	public void setOpEx_YTD_label5(String opEx_YTD_label5) {
-		this.opEx_YTD_label5 = opEx_YTD_label5;
+	public void setOpEx_Budget_label5(String opEx_Budget_label5) {
+		this.opEx_Budget_label5 = opEx_Budget_label5;
 	}
-	public String getOpEx_YTD_label6() {
-		return opEx_YTD_label6;
+	public String getOpEx_Budget_label6() {
+		return opEx_Budget_label6;
 	}
-	public void setOpEx_YTD_label6(String opEx_YTD_label6) {
-		this.opEx_YTD_label6 = opEx_YTD_label6;
+	public void setOpEx_Budget_label6(String opEx_Budget_label6) {
+		this.opEx_Budget_label6 = opEx_Budget_label6;
 	}
-	public String getOpEx_YTD_label7() {
-		return opEx_YTD_label7;
+	public String getOpEx_Budget_label7() {
+		return opEx_Budget_label7;
 	}
-	public void setOpEx_YTD_label7(String opEx_YTD_label7) {
-		this.opEx_YTD_label7 = opEx_YTD_label7;
+	public void setOpEx_Budget_label7(String opEx_Budget_label7) {
+		this.opEx_Budget_label7 = opEx_Budget_label7;
 	}
-	public String getOpEx_YTD_label8() {
-		return opEx_YTD_label8;
+	public String getOpEx_Budget_label8() {
+		return opEx_Budget_label8;
 	}
-	public void setOpEx_YTD_label8(String opEx_YTD_label8) {
-		this.opEx_YTD_label8 = opEx_YTD_label8;
+	public void setOpEx_Budget_label8(String opEx_Budget_label8) {
+		this.opEx_Budget_label8 = opEx_Budget_label8;
 	}
-	public String getOpEx_YTD_label9() {
-		return opEx_YTD_label9;
+	public String getOpEx_Budget_label9() {
+		return opEx_Budget_label9;
 	}
-	public void setOpEx_YTD_label9(String opEx_YTD_label9) {
-		this.opEx_YTD_label9 = opEx_YTD_label9;
+	public void setOpEx_Budget_label9(String opEx_Budget_label9) {
+		this.opEx_Budget_label9 = opEx_Budget_label9;
 	}
-	public String getOpEx_YTD_label10() {
-		return opEx_YTD_label10;
+	public String getOpEx_Budget_label10() {
+		return opEx_Budget_label10;
 	}
-	public void setOpEx_YTD_label10(String opEx_YTD_label10) {
-		this.opEx_YTD_label10 = opEx_YTD_label10;
+	public void setOpEx_Budget_label10(String opEx_Budget_label10) {
+		this.opEx_Budget_label10 = opEx_Budget_label10;
 	}
-	public String getOpEx_YTD_label11() {
-		return opEx_YTD_label11;
+	public String getOpEx_Budget_label11() {
+		return opEx_Budget_label11;
 	}
-	public void setOpEx_YTD_label11(String opEx_YTD_label11) {
-		this.opEx_YTD_label11 = opEx_YTD_label11;
+	public void setOpEx_Budget_label11(String opEx_Budget_label11) {
+		this.opEx_Budget_label11 = opEx_Budget_label11;
 	}
-	public String getOpEx_YTD_label12() {
-		return opEx_YTD_label12;
+	public String getOpEx_Budget_label12() {
+		return opEx_Budget_label12;
 	}
-	public void setOpEx_YTD_label12(String opEx_YTD_label12) {
-		this.opEx_YTD_label12 = opEx_YTD_label12;
+	public void setOpEx_Budget_label12(String opEx_Budget_label12) {
+		this.opEx_Budget_label12 = opEx_Budget_label12;
 	}
-	public String getOpEx_YTD_label13() {
-		return opEx_YTD_label13;
+	public String getOpEx_Budget_label13() {
+		return opEx_Budget_label13;
 	}
-	public void setOpEx_YTD_label13(String opEx_YTD_label13) {
-		this.opEx_YTD_label13 = opEx_YTD_label13;
+	public void setOpEx_Budget_label13(String opEx_Budget_label13) {
+		this.opEx_Budget_label13 = opEx_Budget_label13;
 	}
-	public String getOpEx_YTD_label14() {
-		return opEx_YTD_label14;
+	public String getOpEx_Budget_label14() {
+		return opEx_Budget_label14;
 	}
-	public void setOpEx_YTD_label14(String opEx_YTD_label14) {
-		this.opEx_YTD_label14 = opEx_YTD_label14;
+	public void setOpEx_Budget_label14(String opEx_Budget_label14) {
+		this.opEx_Budget_label14 = opEx_Budget_label14;
 	}
-	public String getOpEx_YTD_label15() {
-		return opEx_YTD_label15;
+	public String getOpEx_Budget_label15() {
+		return opEx_Budget_label15;
 	}
-	public void setOpEx_YTD_label15(String opEx_YTD_label15) {
-		this.opEx_YTD_label15 = opEx_YTD_label15;
+	public void setOpEx_Budget_label15(String opEx_Budget_label15) {
+		this.opEx_Budget_label15 = opEx_Budget_label15;
 	}
-	public String getOpEx_YTD_label16() {
-		return opEx_YTD_label16;
+	public String getOpEx_Budget_label16() {
+		return opEx_Budget_label16;
 	}
-	public void setOpEx_YTD_label16(String opEx_YTD_label16) {
-		this.opEx_YTD_label16 = opEx_YTD_label16;
+	public void setOpEx_Budget_label16(String opEx_Budget_label16) {
+		this.opEx_Budget_label16 = opEx_Budget_label16;
 	}
-	public String getOpEx_YTD_label17() {
-		return opEx_YTD_label17;
+	public String getOpEx_Budget_label17() {
+		return opEx_Budget_label17;
 	}
-	public void setOpEx_YTD_label17(String opEx_YTD_label17) {
-		this.opEx_YTD_label17 = opEx_YTD_label17;
+	public void setOpEx_Budget_label17(String opEx_Budget_label17) {
+		this.opEx_Budget_label17 = opEx_Budget_label17;
 	}
-	public String getOpEx_YTD_label18() {
-		return opEx_YTD_label18;
+	public String getOpEx_Budget_label18() {
+		return opEx_Budget_label18;
 	}
-	public void setOpEx_YTD_label18(String opEx_YTD_label18) {
-		this.opEx_YTD_label18 = opEx_YTD_label18;
+	public void setOpEx_Budget_label18(String opEx_Budget_label18) {
+		this.opEx_Budget_label18 = opEx_Budget_label18;
 	}
-	public String getOpEx_YTD_label19() {
-		return opEx_YTD_label19;
+	public String getOpEx_Budget_label19() {
+		return opEx_Budget_label19;
 	}
-	public void setOpEx_YTD_label19(String opEx_YTD_label19) {
-		this.opEx_YTD_label19 = opEx_YTD_label19;
+	public void setOpEx_Budget_label19(String opEx_Budget_label19) {
+		this.opEx_Budget_label19 = opEx_Budget_label19;
 	}
-	public String getOpEx_YTD_label20() {
-		return opEx_YTD_label20;
+	public String getOpEx_Budget_label20() {
+		return opEx_Budget_label20;
 	}
-	public void setOpEx_YTD_label20(String opEx_YTD_label20) {
-		this.opEx_YTD_label20 = opEx_YTD_label20;
+	public void setOpEx_Budget_label20(String opEx_Budget_label20) {
+		this.opEx_Budget_label20 = opEx_Budget_label20;
 	}
-	public String getOpEx_YTD_label21() {
-		return opEx_YTD_label21;
+	public String getOpEx_Budget_label21() {
+		return opEx_Budget_label21;
 	}
-	public void setOpEx_YTD_label21(String opEx_YTD_label21) {
-		this.opEx_YTD_label21 = opEx_YTD_label21;
+	public void setOpEx_Budget_label21(String opEx_Budget_label21) {
+		this.opEx_Budget_label21 = opEx_Budget_label21;
 	}
-	public String getOpEx_YTD_label22() {
-		return opEx_YTD_label22;
+	public String getOpEx_Budget_label22() {
+		return opEx_Budget_label22;
 	}
-	public void setOpEx_YTD_label22(String opEx_YTD_label22) {
-		this.opEx_YTD_label22 = opEx_YTD_label22;
+	public void setOpEx_Budget_label22(String opEx_Budget_label22) {
+		this.opEx_Budget_label22 = opEx_Budget_label22;
 	}
-	public String getOpEx_YTD_label23() {
-		return opEx_YTD_label23;
+	public String getOpEx_Budget_label23() {
+		return opEx_Budget_label23;
 	}
-	public void setOpEx_YTD_label23(String opEx_YTD_label23) {
-		this.opEx_YTD_label23 = opEx_YTD_label23;
+	public void setOpEx_Budget_label23(String opEx_Budget_label23) {
+		this.opEx_Budget_label23 = opEx_Budget_label23;
 	}
-	public String getOpEx_YTD_label24() {
-		return opEx_YTD_label24;
+	public String getOpEx_Budget_label24() {
+		return opEx_Budget_label24;
 	}
-	public void setOpEx_YTD_label24(String opEx_YTD_label24) {
-		this.opEx_YTD_label24 = opEx_YTD_label24;
+	public void setOpEx_Budget_label24(String opEx_Budget_label24) {
+		this.opEx_Budget_label24 = opEx_Budget_label24;
 	}
-	public String getOpEx_YTD_label25() {
-		return opEx_YTD_label25;
+	public String getOpEx_Budget_label25() {
+		return opEx_Budget_label25;
 	}
-	public void setOpEx_YTD_label25(String opEx_YTD_label25) {
-		this.opEx_YTD_label25 = opEx_YTD_label25;
+	public void setOpEx_Budget_label25(String opEx_Budget_label25) {
+		this.opEx_Budget_label25 = opEx_Budget_label25;
 	}
-	public String getOpEx_YTD_label26() {
-		return opEx_YTD_label26;
+	public String getOpEx_Budget_label26() {
+		return opEx_Budget_label26;
 	}
-	public void setOpEx_YTD_label26(String opEx_YTD_label26) {
-		this.opEx_YTD_label26 = opEx_YTD_label26;
+	public void setOpEx_Budget_label26(String opEx_Budget_label26) {
+		this.opEx_Budget_label26 = opEx_Budget_label26;
 	}
-	public String getOpEx_YTD_label27() {
-		return opEx_YTD_label27;
+	public String getOpEx_Budget_label27() {
+		return opEx_Budget_label27;
 	}
-	public void setOpEx_YTD_label27(String opEx_YTD_label27) {
-		this.opEx_YTD_label27 = opEx_YTD_label27;
+	public void setOpEx_Budget_label27(String opEx_Budget_label27) {
+		this.opEx_Budget_label27 = opEx_Budget_label27;
 	}
-	public String getOpEx_YTD_label28() {
-		return opEx_YTD_label28;
+	public String getOpEx_Budget_label28() {
+		return opEx_Budget_label28;
 	}
-	public void setOpEx_YTD_label28(String opEx_YTD_label28) {
-		this.opEx_YTD_label28 = opEx_YTD_label28;
+	public void setOpEx_Budget_label28(String opEx_Budget_label28) {
+		this.opEx_Budget_label28 = opEx_Budget_label28;
 	}
-	public String getOpEx_YTD_label29() {
-		return opEx_YTD_label29;
+	public String getOpEx_Budget_label29() {
+		return opEx_Budget_label29;
 	}
-	public void setOpEx_YTD_label29(String opEx_YTD_label29) {
-		this.opEx_YTD_label29 = opEx_YTD_label29;
+	public void setOpEx_Budget_label29(String opEx_Budget_label29) {
+		this.opEx_Budget_label29 = opEx_Budget_label29;
 	}
-	public String getOpEx_YTD_label30() {
-		return opEx_YTD_label30;
+	public String getOpEx_Budget_label30() {
+		return opEx_Budget_label30;
 	}
-	public void setOpEx_YTD_label30(String opEx_YTD_label30) {
-		this.opEx_YTD_label30 = opEx_YTD_label30;
+	public void setOpEx_Budget_label30(String opEx_Budget_label30) {
+		this.opEx_Budget_label30 = opEx_Budget_label30;
 	}
-	public String getOpEx_YTD_label31() {
-		return opEx_YTD_label31;
+	public String getOpEx_Budget_label31() {
+		return opEx_Budget_label31;
 	}
-	public void setOpEx_YTD_label31(String opEx_YTD_label31) {
-		this.opEx_YTD_label31 = opEx_YTD_label31;
+	public void setOpEx_Budget_label31(String opEx_Budget_label31) {
+		this.opEx_Budget_label31 = opEx_Budget_label31;
 	}
-	public String getOpEx_YTD_label32() {
-		return opEx_YTD_label32;
+	public String getOpEx_Budget_label32() {
+		return opEx_Budget_label32;
 	}
-	public void setOpEx_YTD_label32(String opEx_YTD_label32) {
-		this.opEx_YTD_label32 = opEx_YTD_label32;
+	public void setOpEx_Budget_label32(String opEx_Budget_label32) {
+		this.opEx_Budget_label32 = opEx_Budget_label32;
 	}
-	public String getOpEx_YTD_label33() {
-		return opEx_YTD_label33;
+	public String getOpEx_Budget_label33() {
+		return opEx_Budget_label33;
 	}
-	public void setOpEx_YTD_label33(String opEx_YTD_label33) {
-		this.opEx_YTD_label33 = opEx_YTD_label33;
+	public void setOpEx_Budget_label33(String opEx_Budget_label33) {
+		this.opEx_Budget_label33 = opEx_Budget_label33;
 	}
-	public String getOpEx_YTD_label34() {
-		return opEx_YTD_label34;
+	public String getOpEx_Budget_label34() {
+		return opEx_Budget_label34;
 	}
-	public void setOpEx_YTD_label34(String opEx_YTD_label34) {
-		this.opEx_YTD_label34 = opEx_YTD_label34;
+	public void setOpEx_Budget_label34(String opEx_Budget_label34) {
+		this.opEx_Budget_label34 = opEx_Budget_label34;
 	}
-	public String getOpEx_YTD_label35() {
-		return opEx_YTD_label35;
+	public String getOpEx_Budget_label35() {
+		return opEx_Budget_label35;
 	}
-	public void setOpEx_YTD_label35(String opEx_YTD_label35) {
-		this.opEx_YTD_label35 = opEx_YTD_label35;
+	public void setOpEx_Budget_label35(String opEx_Budget_label35) {
+		this.opEx_Budget_label35 = opEx_Budget_label35;
 	}
-	public String getOpEx_YTD_label36() {
-		return opEx_YTD_label36;
+	public String getOpEx_Budget_label36() {
+		return opEx_Budget_label36;
 	}
-	public void setOpEx_YTD_label36(String opEx_YTD_label36) {
-		this.opEx_YTD_label36 = opEx_YTD_label36;
+	public void setOpEx_Budget_label36(String opEx_Budget_label36) {
+		this.opEx_Budget_label36 = opEx_Budget_label36;
 	}
-	public String getOpEx_YTD37() {
-		return opEx_YTD37;
+	public String getOpEx_Budget37() {
+		return opEx_Budget37;
 	}
-	public void setOpEx_YTD37(String opEx_YTD37) {
-		this.opEx_YTD37 = opEx_YTD37;
+	public void setOpEx_Budget37(String opEx_YTD37) {
+		this.opEx_Budget37 = opEx_YTD37;
 	}
     public String getOpEx_note37() {
 		return opEx_note37;
@@ -3222,23 +3222,23 @@ public class Root{
 	public void setOpEx_note37(String opEx_note37) {
 		this.opEx_note37 = opEx_note37;
 	}
-	public String getOpEx_YTD_label37() {
-		return opEx_YTD_label37;
+	public String getOpEx_Budget_label37() {
+		return opEx_Budget_label37;
 	}
-	public void setOpEx_YTD_label37(String opEx_YTD_label37) {
-		this.opEx_YTD_label37 = opEx_YTD_label37;
+	public void setOpEx_Budget_label37(String opEx_Budget_label37) {
+		this.opEx_Budget_label37 = opEx_Budget_label37;
 	}
-	public String getOpEx_YTD_label38() {
-		return opEx_YTD_label38;
+	public String getOpDep_Budget_label1() {
+		return opDep_Budget_label1;
 	}
-	public void setOpEx_YTD_label38(String opEx_YTD_label38) {
-		this.opEx_YTD_label38 = opEx_YTD_label38;
+	public void setOpDep_Budget_label1(String opDep_Budget_label1) {
+		this.opDep_Budget_label1 = opDep_Budget_label1;
 	}
-	public String getOpEx_YTD_label39() {
-		return opEx_YTD_label39;
+	public String getOpDep_Budget_label2() {
+		return opDep_Budget_label2;
 	}
-	public void setOpEx_YTD_label39(String opEx_YTD_label39) {
-		this.opEx_YTD_label39 = opEx_YTD_label39;
+	public void setOpDep_Budget_label2(String opDep_Budget_label2) {
+		this.opDep_Budget_label2 = opDep_Budget_label2;
 	}
 	public String getOpRev_otherRev_label() {
 		return opRev_otherRev_label;
@@ -3266,29 +3266,29 @@ public class Root{
 	public void setNopEx_label(String nopEx_label) {
 		this.nopEx_label = nopEx_label;
 	}
-	public String getNopRev_YTD_label1() {
-		return nopRev_YTD_label1;
+	public String getNopRev_Budget_label1() {
+		return nopRev_Budget_label1;
 	}
-	public void setNopRev_YTD_label1(String nopRev_YTD_label1) {
-		this.nopRev_YTD_label1 = nopRev_YTD_label1;
+	public void setNopRev_Budget_label1(String nopRev_Budget_label1) {
+		this.nopRev_Budget_label1 = nopRev_Budget_label1;
 	}
-	public String getNopRev_YTD_label2() {
-		return nopRev_YTD_label2;
+	public String getNopRev_Budget_label2() {
+		return nopRev_Budget_label2;
 	}
-	public void setNopRev_YTD_label2(String nopRev_YTD_label2) {
-		this.nopRev_YTD_label2 = nopRev_YTD_label2;
+	public void setNopRev_Budget_label2(String nopRev_Budget_label2) {
+		this.nopRev_Budget_label2 = nopRev_Budget_label2;
 	}
-	public String getNopEx_YTD_label1() {
-		return nopEx_YTD_label1;
+	public String getNopEx_Budget_label1() {
+		return nopEx_Budget_label1;
 	}
-	public void setNopEx_YTD_label1(String nopEx_YTD_label1) {
-		this.nopEx_YTD_label1 = nopEx_YTD_label1;
+	public void setNopEx_Budget_label1(String nopEx_Budget_label1) {
+		this.nopEx_Budget_label1 = nopEx_Budget_label1;
 	}
-	public String getNopEx_YTD_label2() {
-		return nopEx_YTD_label2;
+	public String getNopEx_Budget_label2() {
+		return nopEx_Budget_label2;
 	}
-	public void setNopEx_YTD_label2(String nopEx_YTD_label2) {
-		this.nopEx_YTD_label2 = nopEx_YTD_label2;
+	public void setNopEx_Budget_label2(String nopEx_Budget_label2) {
+		this.nopEx_Budget_label2 = nopEx_Budget_label2;
 	}
 	public String getBenefit_value_label1() {
 		return benefit_value_label1;
@@ -3651,125 +3651,125 @@ public class Root{
 	public void setOpRev_4_label(String opRev_4_label) {
 		this.opRev_4_label = opRev_4_label;
 	}
-	public String getOpRev_YTD_label_1() {
-		return opRev_YTD_label_1;
+	public String getOpRev_Budget_label_1() {
+		return opRev_Budget_label_1;
 	}
-	public void setOpRev_YTD_label_1(String opRev_YTD_label_1) {
-		this.opRev_YTD_label_1 = opRev_YTD_label_1;
+	public void setOpRev_Budget_label_1(String opRev_Budget_label_1) {
+		this.opRev_Budget_label_1 = opRev_Budget_label_1;
 	}
-	public String getOpRev_YTD_label_2() {
-		return opRev_YTD_label_2;
+	public String getOpRev_Budget_label_2() {
+		return opRev_Budget_label_2;
 	}
-	public void setOpRev_YTD_label_2(String opRev_YTD_label_2) {
-		this.opRev_YTD_label_2 = opRev_YTD_label_2;
+	public void setOpRev_Budget_label_2(String opRev_Budget_label_2) {
+		this.opRev_Budget_label_2 = opRev_Budget_label_2;
 	}
-	public String getOpRev_YTD_label_3() {
-		return opRev_YTD_label_3;
+	public String getOpRev_Budget_label_3() {
+		return opRev_Budget_label_3;
 	}
-	public void setOpRev_YTD_label_3(String opRev_YTD_label_3) {
-		this.opRev_YTD_label_3 = opRev_YTD_label_3;
+	public void setOpRev_Budget_label_3(String opRev_Budget_label_3) {
+		this.opRev_Budget_label_3 = opRev_Budget_label_3;
 	}
-	public String getOpRev_YTD_label_4() {
-		return opRev_YTD_label_4;
+	public String getOpRev_Budget_label_4() {
+		return opRev_Budget_label_4;
 	}
-	public void setOpRev_YTD_label_4(String opRev_YTD_label_4) {
-		this.opRev_YTD_label_4 = opRev_YTD_label_4;
+	public void setOpRev_Budget_label_4(String opRev_Budget_label_4) {
+		this.opRev_Budget_label_4 = opRev_Budget_label_4;
 	}
-	public String getOpRev_YTD_label_5() {
-		return opRev_YTD_label_5;
+	public String getOpRev_Budget_label_5() {
+		return opRev_Budget_label_5;
 	}
-	public void setOpRev_YTD_label_5(String opRev_YTD_label_5) {
-		this.opRev_YTD_label_5 = opRev_YTD_label_5;
+	public void setOpRev_Budget_label_5(String opRev_Budget_label_5) {
+		this.opRev_Budget_label_5 = opRev_Budget_label_5;
 	}
-	public String getOpRev_YTD_label_6() {
-		return opRev_YTD_label_6;
+	public String getOpRev_Budget_label_6() {
+		return opRev_Budget_label_6;
 	}
-	public void setOpRev_YTD_label_6(String opRev_YTD_label_6) {
-		this.opRev_YTD_label_6 = opRev_YTD_label_6;
+	public void setOpRev_Budget_label_6(String opRev_Budget_label_6) {
+		this.opRev_Budget_label_6 = opRev_Budget_label_6;
 	}
-	public String getOpRev_YTD_label_7() {
-		return opRev_YTD_label_7;
+	public String getOpRev_Budget_label_7() {
+		return opRev_Budget_label_7;
 	}
-	public void setOpRev_YTD_label_7(String opRev_YTD_label_7) {
-		this.opRev_YTD_label_7 = opRev_YTD_label_7;
+	public void setOpRev_Budget_label_7(String opRev_Budget_label_7) {
+		this.opRev_Budget_label_7 = opRev_Budget_label_7;
 	}
-	public String getOpRev_YTD_label_8() {
-		return opRev_YTD_label_8;
+	public String getOpRev_Budget_label_8() {
+		return opRev_Budget_label_8;
 	}
-	public void setOpRev_YTD_label_8(String opRev_YTD_label_8) {
-		this.opRev_YTD_label_8 = opRev_YTD_label_8;
+	public void setOpRev_Budget_label_8(String opRev_Budget_label_8) {
+		this.opRev_Budget_label_8 = opRev_Budget_label_8;
 	}
-	public String getOpRev_YTD_label_9() {
-		return opRev_YTD_label_9;
+	public String getOpRev_Budget_label_9() {
+		return opRev_Budget_label_9;
 	}
-	public void setOpRev_YTD_label_9(String opRev_YTD_label_9) {
-		this.opRev_YTD_label_9 = opRev_YTD_label_9;
+	public void setOpRev_Budget_label_9(String opRev_Budget_label_9) {
+		this.opRev_Budget_label_9 = opRev_Budget_label_9;
 	}
-	public String getOpRev_YTD_label_10() {
-		return opRev_YTD_label_10;
+	public String getOpRev_Budget_label_10() {
+		return opRev_Budget_label_10;
 	}
-	public void setOpRev_YTD_label_10(String opRev_YTD_label_10) {
-		this.opRev_YTD_label_10 = opRev_YTD_label_10;
+	public void setOpRev_Budget_label_10(String opRev_Budget_label_10) {
+		this.opRev_Budget_label_10 = opRev_Budget_label_10;
 	}
-	public String getOpRev_YTD_label_11() {
-		return opRev_YTD_label_11;
+	public String getOpRev_Budget_label_11() {
+		return opRev_Budget_label_11;
 	}
-	public void setOpRev_YTD_label_11(String opRev_YTD_label_11) {
-		this.opRev_YTD_label_11 = opRev_YTD_label_11;
+	public void setOpRev_Budget_label_11(String opRev_Budget_label_11) {
+		this.opRev_Budget_label_11 = opRev_Budget_label_11;
 	}
-	public String getOpRev_YTD_label_12() {
-		return opRev_YTD_label_12;
+	public String getOpRev_Budget_label_12() {
+		return opRev_Budget_label_12;
 	}
-	public void setOpRev_YTD_label_12(String opRev_YTD_label_12) {
-		this.opRev_YTD_label_12 = opRev_YTD_label_12;
+	public void setOpRev_Budget_label_12(String opRev_Budget_label_12) {
+		this.opRev_Budget_label_12 = opRev_Budget_label_12;
 	}
-	public String getOpRev_YTD_label_13() {
-		return opRev_YTD_label_13;
+	public String getOpRev_Budget_label_13() {
+		return opRev_Budget_label_13;
 	}
-	public void setOpRev_YTD_label_13(String opRev_YTD_label_13) {
-		this.opRev_YTD_label_13 = opRev_YTD_label_13;
+	public void setOpRev_Budget_label_13(String opRev_Budget_label_13) {
+		this.opRev_Budget_label_13 = opRev_Budget_label_13;
 	}
-	public String getOpRev_YTD_label_14() {
-		return opRev_YTD_label_14;
+	public String getOpRev_Budget_label_14() {
+		return opRev_Budget_label_14;
 	}
-	public void setOpRev_YTD_label_14(String opRev_YTD_label_14) {
-		this.opRev_YTD_label_14 = opRev_YTD_label_14;
+	public void setOpRev_Budget_label_14(String opRev_Budget_label_14) {
+		this.opRev_Budget_label_14 = opRev_Budget_label_14;
 	}
-	public String getOpRev_YTD_label_15() {
-		return opRev_YTD_label_15;
+	public String getOpRev_Budget_label_15() {
+		return opRev_Budget_label_15;
 	}
-	public void setOpRev_YTD_label_15(String opRev_YTD_label_15) {
-		this.opRev_YTD_label_15 = opRev_YTD_label_15;
+	public void setOpRev_Budget_label_15(String opRev_Budget_label_15) {
+		this.opRev_Budget_label_15 = opRev_Budget_label_15;
 	}
-	public String getOpRev_YTD_label_16() {
-		return opRev_YTD_label_16;
+	public String getOpRev_Budget_label_16() {
+		return opRev_Budget_label_16;
 	}
-	public void setOpRev_YTD_label_16(String opRev_YTD_label_16) {
-		this.opRev_YTD_label_16 = opRev_YTD_label_16;
+	public void setOpRev_Budget_label_16(String opRev_Budget_label_16) {
+		this.opRev_Budget_label_16 = opRev_Budget_label_16;
 	}
-	public String getOpRev_YTD_label_17() {
-		return opRev_YTD_label_17;
+	public String getOpRev_Budget_label_17() {
+		return opRev_Budget_label_17;
 	}
-	public void setOpRev_YTD_label_17(String opRev_YTD_label_17) {
-		this.opRev_YTD_label_17 = opRev_YTD_label_17;
+	public void setOpRev_Budget_label_17(String opRev_Budget_label_17) {
+		this.opRev_Budget_label_17 = opRev_Budget_label_17;
 	}
-	public String getOpRev_YTD_label_18() {
-		return opRev_YTD_label_18;
+	public String getOpRev_Budget_label_18() {
+		return opRev_Budget_label_18;
 	}
-	public void setOpRev_YTD_label_18(String opRev_YTD_label_18) {
-		this.opRev_YTD_label_18 = opRev_YTD_label_18;
+	public void setOpRev_Budget_label_18(String opRev_Budget_label_18) {
+		this.opRev_Budget_label_18 = opRev_Budget_label_18;
 	}
-	public String getOpRev_YTD_label_19() {
-		return opRev_YTD_label_19;
+	public String getOpRev_Budget_label_19() {
+		return opRev_Budget_label_19;
 	}
-	public void setOpRev_YTD_label_19(String opRev_YTD_label_19) {
-		this.opRev_YTD_label_19 = opRev_YTD_label_19;
+	public void setOpRev_Budget_label_19(String opRev_Budget_label_19) {
+		this.opRev_Budget_label_19 = opRev_Budget_label_19;
 	}
-	public String getOpRev_YTD_label_20() {
-		return opRev_YTD_label_20;
+	public String getOpRev_Budget_label_20() {
+		return opRev_Budget_label_20;
 	}
-	public void setOpRev_YTD_label_20(String opRev_YTD_label_20) {
-		this.opRev_YTD_label_20 = opRev_YTD_label_20;
+	public void setOpRev_Budget_label_20(String opRev_Budget_label_20) {
+		this.opRev_Budget_label_20 = opRev_Budget_label_20;
 	}
 	public String getAlliedNPContractRate_total() {
 		return alliedNPContractRate_total;
@@ -7515,17 +7515,17 @@ public class Root{
 	public void setNopEx_sum11(String nopEx_sum11) {
 		this.nopEx_sum11 = nopEx_sum11;
 	}
-	public String getNopEx_YTD1() {
-		return nopEx_YTD1;
+	public String getNopEx_Budget1() {
+		return nopEx_Budget1;
 	}
-	public void setNopEx_YTD1(String nopEx_YTD1) {
-		this.nopEx_YTD1 = nopEx_YTD1;
+	public void setNopEx_Budget1(String nopEx_YTD1) {
+		this.nopEx_Budget1 = nopEx_YTD1;
 	}
-	public String getNopEx_YTD2() {
-		return nopEx_YTD2;
+	public String getNopEx_Budget2() {
+		return nopEx_Budget2;
 	}
-	public void setNopEx_YTD2(String nopEx_YTD2) {
-		this.nopEx_YTD2 = nopEx_YTD2;
+	public void setNopEx_Budget2(String nopEx_YTD2) {
+		this.nopEx_Budget2 = nopEx_YTD2;
 	}
 	public String getNopRev_note1() {
 		return nopRev_note1;
@@ -7551,17 +7551,17 @@ public class Root{
 	public void setNopRev_sum11(String nopRev_sum11) {
 		this.nopRev_sum11 = nopRev_sum11;
 	}
-	public String getNopRev_YTD1() {
-		return nopRev_YTD1;
+	public String getNopRev_Budget1() {
+		return nopRev_Budget1;
 	}
-	public void setNopRev_YTD1(String nopRev_YTD1) {
-		this.nopRev_YTD1 = nopRev_YTD1;
+	public void setNopRev_Budget1(String nopRev_YTD1) {
+		this.nopRev_Budget1 = nopRev_YTD1;
 	}
-	public String getNopRev_YTD2() {
-		return nopRev_YTD2;
+	public String getNopRev_Budget2() {
+		return nopRev_Budget2;
 	}
-	public void setNopRev_YTD2(String nopRev_YTD2) {
-		this.nopRev_YTD2 = nopRev_YTD2;
+	public void setNopRev_Budget2(String nopRev_YTD2) {
+		this.nopRev_Budget2 = nopRev_YTD2;
 	}
 	public String getNopSu_data1() {
 		return nopSu_data1;
@@ -9141,221 +9141,221 @@ public class Root{
 	public void setOpEx_total_note(String opEx_total_note) {
 		this.opEx_total_note = opEx_total_note;
 	}
-	public String getOpEx_YTD1() {
-		return opEx_YTD1;
+	public String getOpEx_Budget1() {
+		return opEx_Budget1;
 	}
-	public void setOpEx_YTD1(String opEx_YTD1) {
-		this.opEx_YTD1 = opEx_YTD1;
+	public void setOpEx_Budget1(String opEx_YTD1) {
+		this.opEx_Budget1 = opEx_YTD1;
 	}
-	public String getOpEx_YTD10() {
-		return opEx_YTD10;
+	public String getOpEx_Budget10() {
+		return opEx_Budget10;
 	}
-	public void setOpEx_YTD10(String opEx_YTD10) {
-		this.opEx_YTD10 = opEx_YTD10;
+	public void setOpEx_Budget10(String opEx_YTD10) {
+		this.opEx_Budget10 = opEx_YTD10;
 	}
-	public String getOpEx_YTD11() {
-		return opEx_YTD11;
+	public String getOpEx_Budget11() {
+		return opEx_Budget11;
 	}
-	public void setOpEx_YTD11(String opEx_YTD11) {
-		this.opEx_YTD11 = opEx_YTD11;
+	public void setOpEx_Budget11(String opEx_YTD11) {
+		this.opEx_Budget11 = opEx_YTD11;
 	}
-	public String getOpEx_YTD12() {
-		return opEx_YTD12;
+	public String getOpEx_Budget12() {
+		return opEx_Budget12;
 	}
-	public void setOpEx_YTD12(String opEx_YTD12) {
-		this.opEx_YTD12 = opEx_YTD12;
+	public void setOpEx_Budget12(String opEx_YTD12) {
+		this.opEx_Budget12 = opEx_YTD12;
 	}
-	public String getOpEx_YTD13() {
-		return opEx_YTD13;
+	public String getOpEx_Budget13() {
+		return opEx_Budget13;
 	}
-	public void setOpEx_YTD13(String opEx_YTD13) {
-		this.opEx_YTD13 = opEx_YTD13;
+	public void setOpEx_Budget13(String opEx_YTD13) {
+		this.opEx_Budget13 = opEx_YTD13;
 	}
-	public String getOpEx_YTD14() {
-		return opEx_YTD14;
+	public String getOpEx_Budget14() {
+		return opEx_Budget14;
 	}
-	public void setOpEx_YTD14(String opEx_YTD14) {
-		this.opEx_YTD14 = opEx_YTD14;
+	public void setOpEx_Budget14(String opEx_YTD14) {
+		this.opEx_Budget14 = opEx_YTD14;
 	}
-	public String getOpEx_YTD15() {
-		return opEx_YTD15;
+	public String getOpEx_Budget15() {
+		return opEx_Budget15;
 	}
-	public void setOpEx_YTD15(String opEx_YTD15) {
-		this.opEx_YTD15 = opEx_YTD15;
+	public void setOpEx_Budget15(String opEx_YTD15) {
+		this.opEx_Budget15 = opEx_YTD15;
 	}
-	public String getOpEx_YTD16() {
-		return opEx_YTD16;
+	public String getOpEx_Budget16() {
+		return opEx_Budget16;
 	}
-	public void setOpEx_YTD16(String opEx_YTD16) {
-		this.opEx_YTD16 = opEx_YTD16;
+	public void setOpEx_Budget16(String opEx_YTD16) {
+		this.opEx_Budget16 = opEx_YTD16;
 	}
-	public String getOpEx_YTD17() {
-		return opEx_YTD17;
+	public String getOpEx_Budget17() {
+		return opEx_Budget17;
 	}
-	public void setOpEx_YTD17(String opEx_YTD17) {
-		this.opEx_YTD17 = opEx_YTD17;
+	public void setOpEx_Budget17(String opEx_YTD17) {
+		this.opEx_Budget17 = opEx_YTD17;
 	}
-	public String getOpEx_YTD18() {
-		return opEx_YTD18;
+	public String getOpEx_Budget18() {
+		return opEx_Budget18;
 	}
-	public void setOpEx_YTD18(String opEx_YTD18) {
-		this.opEx_YTD18 = opEx_YTD18;
+	public void setOpEx_Budget18(String opEx_YTD18) {
+		this.opEx_Budget18 = opEx_YTD18;
 	}
-	public String getOpEx_YTD19() {
-		return opEx_YTD19;
+	public String getOpEx_Budget19() {
+		return opEx_Budget19;
 	}
-	public void setOpEx_YTD19(String opEx_YTD19) {
-		this.opEx_YTD19 = opEx_YTD19;
+	public void setOpEx_Budget19(String opEx_YTD19) {
+		this.opEx_Budget19 = opEx_YTD19;
 	}
-	public String getOpEx_YTD2() {
-		return opEx_YTD2;
+	public String getOpEx_Budget2() {
+		return opEx_Budget2;
 	}
-	public void setOpEx_YTD2(String opEx_YTD2) {
-		this.opEx_YTD2 = opEx_YTD2;
+	public void setOpEx_Budget2(String opEx_YTD2) {
+		this.opEx_Budget2 = opEx_YTD2;
 	}
-	public String getOpEx_YTD20() {
-		return opEx_YTD20;
+	public String getOpEx_Budget20() {
+		return opEx_Budget20;
 	}
-	public void setOpEx_YTD20(String opEx_YTD20) {
-		this.opEx_YTD20 = opEx_YTD20;
+	public void setOpEx_Budget20(String opEx_YTD20) {
+		this.opEx_Budget20 = opEx_YTD20;
 	}
-	public String getOpEx_YTD21() {
-		return opEx_YTD21;
+	public String getOpEx_Budget21() {
+		return opEx_Budget21;
 	}
-	public void setOpEx_YTD21(String opEx_YTD21) {
-		this.opEx_YTD21 = opEx_YTD21;
+	public void setOpEx_Budget21(String opEx_YTD21) {
+		this.opEx_Budget21 = opEx_YTD21;
 	}
-	public String getOpEx_YTD22() {
-		return opEx_YTD22;
+	public String getOpEx_Budget22() {
+		return opEx_Budget22;
 	}
-	public void setOpEx_YTD22(String opEx_YTD22) {
-		this.opEx_YTD22 = opEx_YTD22;
+	public void setOpEx_Budget22(String opEx_YTD22) {
+		this.opEx_Budget22 = opEx_YTD22;
 	}
-	public String getOpEx_YTD23() {
-		return opEx_YTD23;
+	public String getOpEx_Budget23() {
+		return opEx_Budget23;
 	}
-	public void setOpEx_YTD23(String opEx_YTD23) {
-		this.opEx_YTD23 = opEx_YTD23;
+	public void setOpEx_Budget23(String opEx_YTD23) {
+		this.opEx_Budget23 = opEx_YTD23;
 	}
-	public String getOpEx_YTD24() {
-		return opEx_YTD24;
+	public String getOpEx_Budget24() {
+		return opEx_Budget24;
 	}
-	public void setOpEx_YTD24(String opEx_YTD24) {
-		this.opEx_YTD24 = opEx_YTD24;
+	public void setOpEx_Budget24(String opEx_YTD24) {
+		this.opEx_Budget24 = opEx_YTD24;
 	}
-	public String getOpEx_YTD25() {
-		return opEx_YTD25;
+	public String getOpEx_Budget25() {
+		return opEx_Budget25;
 	}
-	public void setOpEx_YTD25(String opEx_YTD25) {
-		this.opEx_YTD25 = opEx_YTD25;
+	public void setOpEx_Budget25(String opEx_YTD25) {
+		this.opEx_Budget25 = opEx_YTD25;
 	}
-	public String getOpEx_YTD26() {
-		return opEx_YTD26;
+	public String getOpEx_Budget26() {
+		return opEx_Budget26;
 	}
-	public void setOpEx_YTD26(String opEx_YTD26) {
-		this.opEx_YTD26 = opEx_YTD26;
+	public void setOpEx_Budget26(String opEx_YTD26) {
+		this.opEx_Budget26 = opEx_YTD26;
 	}
-	public String getOpEx_YTD27() {
-		return opEx_YTD27;
+	public String getOpEx_Budget27() {
+		return opEx_Budget27;
 	}
-	public void setOpEx_YTD27(String opEx_YTD27) {
-		this.opEx_YTD27 = opEx_YTD27;
+	public void setOpEx_Budget27(String opEx_YTD27) {
+		this.opEx_Budget27 = opEx_YTD27;
 	}
-	public String getOpEx_YTD28() {
-		return opEx_YTD28;
+	public String getOpEx_Budget28() {
+		return opEx_Budget28;
 	}
-	public void setOpEx_YTD28(String opEx_YTD28) {
-		this.opEx_YTD28 = opEx_YTD28;
+	public void setOpEx_Budget28(String opEx_YTD28) {
+		this.opEx_Budget28 = opEx_YTD28;
 	}
-	public String getOpEx_YTD29() {
-		return opEx_YTD29;
+	public String getOpEx_Budget29() {
+		return opEx_Budget29;
 	}
-	public void setOpEx_YTD29(String opEx_YTD29) {
-		this.opEx_YTD29 = opEx_YTD29;
+	public void setOpEx_Budget29(String opEx_YTD29) {
+		this.opEx_Budget29 = opEx_YTD29;
 	}
-	public String getOpEx_YTD3() {
-		return opEx_YTD3;
+	public String getOpEx_Budget3() {
+		return opEx_Budget3;
 	}
-	public void setOpEx_YTD3(String opEx_YTD3) {
-		this.opEx_YTD3 = opEx_YTD3;
+	public void setOpEx_Budget3(String opEx_YTD3) {
+		this.opEx_Budget3 = opEx_YTD3;
 	}
-	public String getOpEx_YTD30() {
-		return opEx_YTD30;
+	public String getOpEx_Budget30() {
+		return opEx_Budget30;
 	}
-	public void setOpEx_YTD30(String opEx_YTD30) {
-		this.opEx_YTD30 = opEx_YTD30;
+	public void setOpEx_Budget30(String opEx_YTD30) {
+		this.opEx_Budget30 = opEx_YTD30;
 	}
-	public String getOpEx_YTD31() {
-		return opEx_YTD31;
+	public String getOpEx_Budget31() {
+		return opEx_Budget31;
 	}
-	public void setOpEx_YTD31(String opEx_YTD31) {
-		this.opEx_YTD31 = opEx_YTD31;
+	public void setOpEx_Budget31(String opEx_YTD31) {
+		this.opEx_Budget31 = opEx_YTD31;
 	}
-	public String getOpEx_YTD32() {
-		return opEx_YTD32;
+	public String getOpEx_Budget32() {
+		return opEx_Budget32;
 	}
-	public void setOpEx_YTD32(String opEx_YTD32) {
-		this.opEx_YTD32 = opEx_YTD32;
+	public void setOpEx_Budget32(String opEx_YTD32) {
+		this.opEx_Budget32 = opEx_YTD32;
 	}
-	public String getOpEx_YTD33() {
-		return opEx_YTD33;
+	public String getOpEx_Budget33() {
+		return opEx_Budget33;
 	}
-	public void setOpEx_YTD33(String opEx_YTD33) {
-		this.opEx_YTD33 = opEx_YTD33;
+	public void setOpEx_Budget33(String opEx_YTD33) {
+		this.opEx_Budget33 = opEx_YTD33;
 	}
-	public String getOpEx_YTD34() {
-		return opEx_YTD34;
+	public String getOpEx_Budget34() {
+		return opEx_Budget34;
 	}
-	public void setOpEx_YTD34(String opEx_YTD34) {
-		this.opEx_YTD34 = opEx_YTD34;
+	public void setOpEx_Budget34(String opEx_YTD34) {
+		this.opEx_Budget34 = opEx_YTD34;
 	}
-	public String getOpEx_YTD35() {
-		return opEx_YTD35;
+	public String getOpEx_Budget35() {
+		return opEx_Budget35;
 	}
-	public void setOpEx_YTD35(String opEx_YTD35) {
-		this.opEx_YTD35 = opEx_YTD35;
+	public void setOpEx_Budget35(String opEx_YTD35) {
+		this.opEx_Budget35 = opEx_YTD35;
 	}
-    public String getOpEx_YTD36() {
-		return opEx_YTD36;
+    public String getOpEx_Budget36() {
+		return opEx_Budget36;
 	}
-	public void setOpEx_YTD36(String opEx_YTD36) {
-		this.opEx_YTD36 = opEx_YTD36;
+	public void setOpEx_Budget36(String opEx_YTD36) {
+		this.opEx_Budget36 = opEx_YTD36;
 	}
-	public String getOpEx_YTD4() {
-		return opEx_YTD4;
+	public String getOpEx_Budget4() {
+		return opEx_Budget4;
 	}
-	public void setOpEx_YTD4(String opEx_YTD4) {
-		this.opEx_YTD4 = opEx_YTD4;
+	public void setOpEx_Budget4(String opEx_YTD4) {
+		this.opEx_Budget4 = opEx_YTD4;
 	}
-	public String getOpEx_YTD5() {
-		return opEx_YTD5;
+	public String getOpEx_Budget5() {
+		return opEx_Budget5;
 	}
-	public void setOpEx_YTD5(String opEx_YTD5) {
-		this.opEx_YTD5 = opEx_YTD5;
+	public void setOpEx_Budget5(String opEx_YTD5) {
+		this.opEx_Budget5 = opEx_YTD5;
 	}
-	public String getOpEx_YTD6() {
-		return opEx_YTD6;
+	public String getOpEx_Budget6() {
+		return opEx_Budget6;
 	}
-	public void setOpEx_YTD6(String opEx_YTD6) {
-		this.opEx_YTD6 = opEx_YTD6;
+	public void setOpEx_Budget6(String opEx_YTD6) {
+		this.opEx_Budget6 = opEx_YTD6;
 	}
-	public String getOpEx_YTD7() {
-		return opEx_YTD7;
+	public String getOpEx_Budget7() {
+		return opEx_Budget7;
 	}
-	public void setOpEx_YTD7(String opEx_YTD7) {
-		this.opEx_YTD7 = opEx_YTD7;
+	public void setOpEx_Budget7(String opEx_YTD7) {
+		this.opEx_Budget7 = opEx_YTD7;
 	}
-	public String getOpEx_YTD8() {
-		return opEx_YTD8;
+	public String getOpEx_Budget8() {
+		return opEx_Budget8;
 	}
-	public void setOpEx_YTD8(String opEx_YTD8) {
-		this.opEx_YTD8 = opEx_YTD8;
+	public void setOpEx_Budget8(String opEx_YTD8) {
+		this.opEx_Budget8 = opEx_YTD8;
 	}
-	public String getOpEx_YTD9() {
-		return opEx_YTD9;
+	public String getOpEx_Budget9() {
+		return opEx_Budget9;
 	}
-	public void setOpEx_YTD9(String opEx_YTD9) {
-		this.opEx_YTD9 = opEx_YTD9;
+	public void setOpEx_Budget9(String opEx_YTD9) {
+		this.opEx_Budget9 = opEx_YTD9;
 	}
 	public String getOpRev_note1() {
 		return opRev_note1;
@@ -9543,131 +9543,131 @@ public class Root{
 	public void setOpRev_total_note(String opRev_total_note) {
 		this.opRev_total_note = opRev_total_note;
 	}
-	public String getOpRev_YTD_total() {
-		return opRev_YTD_total;
+	public String getOpRev_budget_total() {
+		return opRev_budget_total;
 	}
-	public void setOpRev_YTD_total(String opRev_YTD_total) {
-		this.opRev_YTD_total = opRev_YTD_total;
+	public void setOpRev_budget_total(String opRev_Budget_total) {
+		this.opRev_budget_total = opRev_Budget_total;
 	}
-	public String getOpRev_YTD1() {
-		return opRev_YTD1;
+	public String getOpRev_Budget1() {
+		return opRev_Budget1;
 	}
-	public void setOpRev_YTD1(String opRev_YTD1) {
-		this.opRev_YTD1 = opRev_YTD1;
+	public void setOpRev_Budget1(String opRev_YTD1) {
+		this.opRev_Budget1 = opRev_YTD1;
 	}
-	public String getOpRev_YTD10() {
-		return opRev_YTD10;
+	public String getOpRev_Budget10() {
+		return opRev_Budget10;
 	}
-	public void setOpRev_YTD10(String opRev_YTD10) {
-		this.opRev_YTD10 = opRev_YTD10;
+	public void setOpRev_Budget10(String opRev_YTD10) {
+		this.opRev_Budget10 = opRev_YTD10;
 	}
-	public String getOpRev_YTD11() {
-		return opRev_YTD11;
+	public String getOpRev_Budget11() {
+		return opRev_Budget11;
 	}
-	public void setOpRev_YTD11(String opRev_YTD11) {
-		this.opRev_YTD11 = opRev_YTD11;
+	public void setOpRev_Budget11(String opRev_YTD11) {
+		this.opRev_Budget11 = opRev_YTD11;
 	}
-	public String getOpRev_YTD12() {
-		return opRev_YTD12;
+	public String getOpRev_Budget12() {
+		return opRev_Budget12;
 	}
-	public void setOpRev_YTD12(String opRev_YTD12) {
-		this.opRev_YTD12 = opRev_YTD12;
+	public void setOpRev_Budget12(String opRev_YTD12) {
+		this.opRev_Budget12 = opRev_YTD12;
 	}
-	public String getOpRev_YTD13() {
-		return opRev_YTD13;
+	public String getOpRev_Budget13() {
+		return opRev_Budget13;
 	}
-	public void setOpRev_YTD13(String opRev_YTD13) {
-		this.opRev_YTD13 = opRev_YTD13;
+	public void setOpRev_Budget13(String opRev_YTD13) {
+		this.opRev_Budget13 = opRev_YTD13;
 	}
-	public String getOpRev_YTD14() {
-		return opRev_YTD14;
+	public String getOpRev_Budget14() {
+		return opRev_Budget14;
 	}
-	public void setOpRev_YTD14(String opRev_YTD14) {
-		this.opRev_YTD14 = opRev_YTD14;
+	public void setOpRev_Budget14(String opRev_YTD14) {
+		this.opRev_Budget14 = opRev_YTD14;
 	}
-	public String getOpRev_YTD15() {
-		return opRev_YTD15;
+	public String getOpRev_Budget15() {
+		return opRev_Budget15;
 	}
-	public void setOpRev_YTD15(String opRev_YTD15) {
-		this.opRev_YTD15 = opRev_YTD15;
+	public void setOpRev_Budget15(String opRev_YTD15) {
+		this.opRev_Budget15 = opRev_YTD15;
 	}
-	public String getOpRev_YTD16() {
-		return opRev_YTD16;
+	public String getOpRev_Budget16() {
+		return opRev_Budget16;
 	}
-	public void setOpRev_YTD16(String opRev_YTD16) {
-		this.opRev_YTD16 = opRev_YTD16;
+	public void setOpRev_Budget16(String opRev_YTD16) {
+		this.opRev_Budget16 = opRev_YTD16;
 	}
-	public String getOpRev_YTD17() {
-		return opRev_YTD17;
+	public String getOpRev_Budget17() {
+		return opRev_Budget17;
 	}
-	public void setOpRev_YTD17(String opRev_YTD17) {
-		this.opRev_YTD17 = opRev_YTD17;
+	public void setOpRev_Budget17(String opRev_YTD17) {
+		this.opRev_Budget17 = opRev_YTD17;
 	}
-	public String getOpRev_YTD18() {
-		return opRev_YTD18;
+	public String getOpRev_Budget18() {
+		return opRev_Budget18;
 	}
-	public void setOpRev_YTD18(String opRev_YTD18) {
-		this.opRev_YTD18 = opRev_YTD18;
+	public void setOpRev_Budget18(String opRev_YTD18) {
+		this.opRev_Budget18 = opRev_YTD18;
 	}
-	public String getOpRev_YTD19() {
-		return opRev_YTD19;
+	public String getOpRev_Budget19() {
+		return opRev_Budget19;
 	}
-	public void setOpRev_YTD19(String opRev_YTD19) {
-		this.opRev_YTD19 = opRev_YTD19;
+	public void setOpRev_Budget19(String opRev_YTD19) {
+		this.opRev_Budget19 = opRev_YTD19;
 	}
-	public String getOpRev_YTD2() {
-		return opRev_YTD2;
+	public String getOpRev_Budget2() {
+		return opRev_Budget2;
 	}
-	public void setOpRev_YTD2(String opRev_YTD2) {
-		this.opRev_YTD2 = opRev_YTD2;
+	public void setOpRev_Budget2(String opRev_YTD2) {
+		this.opRev_Budget2 = opRev_YTD2;
 	}
-	public String getOpRev_YTD20() {
-		return opRev_YTD20;
+	public String getOpRev_Budget20() {
+		return opRev_Budget20;
 	}
-	public void setOpRev_YTD20(String opRev_YTD20) {
-		this.opRev_YTD20 = opRev_YTD20;
+	public void setOpRev_Budget20(String opRev_YTD20) {
+		this.opRev_Budget20 = opRev_YTD20;
 	}
-	public String getOpRev_YTD3() {
-		return opRev_YTD3;
+	public String getOpRev_Budget3() {
+		return opRev_Budget3;
 	}
-	public void setOpRev_YTD3(String opRev_YTD3) {
-		this.opRev_YTD3 = opRev_YTD3;
+	public void setOpRev_Budget3(String opRev_YTD3) {
+		this.opRev_Budget3 = opRev_YTD3;
 	}
-	public String getOpRev_YTD4() {
-		return opRev_YTD4;
+	public String getOpRev_Budget4() {
+		return opRev_Budget4;
 	}
-	public void setOpRev_YTD4(String opRev_YTD4) {
-		this.opRev_YTD4 = opRev_YTD4;
+	public void setOpRev_Budget4(String opRev_YTD4) {
+		this.opRev_Budget4 = opRev_YTD4;
 	}
-	public String getOpRev_YTD5() {
-		return opRev_YTD5;
+	public String getOpRev_Budget5() {
+		return opRev_Budget5;
 	}
-	public void setOpRev_YTD5(String opRev_YTD5) {
-		this.opRev_YTD5 = opRev_YTD5;
+	public void setOpRev_Budget5(String opRev_YTD5) {
+		this.opRev_Budget5 = opRev_YTD5;
 	}
-	public String getOpRev_YTD6() {
-		return opRev_YTD6;
+	public String getOpRev_Budget6() {
+		return opRev_Budget6;
 	}
-	public void setOpRev_YTD6(String opRev_YTD6) {
-		this.opRev_YTD6 = opRev_YTD6;
+	public void setOpRev_Budget6(String opRev_YTD6) {
+		this.opRev_Budget6 = opRev_YTD6;
 	}
-	public String getOpRev_YTD7() {
-		return opRev_YTD7;
+	public String getOpRev_Budget7() {
+		return opRev_Budget7;
 	}
-	public void setOpRev_YTD7(String opRev_YTD7) {
-		this.opRev_YTD7 = opRev_YTD7;
+	public void setOpRev_Budget7(String opRev_YTD7) {
+		this.opRev_Budget7 = opRev_YTD7;
 	}
-	public String getOpRev_YTD8() {
-		return opRev_YTD8;
+	public String getOpRev_Budget8() {
+		return opRev_Budget8;
 	}
-	public void setOpRev_YTD8(String opRev_YTD8) {
-		this.opRev_YTD8 = opRev_YTD8;
+	public void setOpRev_Budget8(String opRev_YTD8) {
+		this.opRev_Budget8 = opRev_YTD8;
 	}
-	public String getOpRev_YTD9() {
-		return opRev_YTD9;
+	public String getOpRev_Budget9() {
+		return opRev_Budget9;
 	}
-	public void setOpRev_YTD9(String opRev_YTD9) {
-		this.opRev_YTD9 = opRev_YTD9;
+	public void setOpRev_Budget9(String opRev_YTD9) {
+		this.opRev_Budget9 = opRev_YTD9;
 	}
 	public String getOpSu_data_total() {
 		return opSu_data_total;
@@ -10833,11 +10833,11 @@ public class Root{
 	public void setOpEx_data_total_label(String opEx_data_total_label) {
 		this.opEx_data_total_label = opEx_data_total_label;
 	}
-	public String getOpRev_YTD_total_label() {
-		return opRev_YTD_total_label;
+	public String getOpRev_budget_total_label() {
+		return opRev_budget_total_label;
 	}
-	public void setOpRev_YTD_total_label(String opRev_YTD_total_label) {
-		this.opRev_YTD_total_label = opRev_YTD_total_label;
+	public void setOpRev_budget_total_label(String opRev_Budget_total_label) {
+		this.opRev_budget_total_label = opRev_Budget_total_label;
 	}
 	public String getOpSu_data_total_label() {
 		return opSu_data_total_label;
