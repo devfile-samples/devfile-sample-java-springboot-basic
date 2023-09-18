@@ -1644,7 +1644,6 @@ public class Root{
     public String privateTotalQ2;
     public String privateTotalQ3;
     public String privateTotalQ4;
-    public String quarter;
     public String startPeriod;
     public String submission;
     public String totalBed1;
@@ -10135,12 +10134,6 @@ public class Root{
 	}
 	public void setPrivateTotalQ4(String privateTotalQ4) {
 		this.privateTotalQ4 = privateTotalQ4;
-	}
-	public String getQuarter() {
-		return quarter;
-	}
-	public void setQuarter(String quarter) {
-		this.quarter = quarter;
 	}
 	public String getStartPeriod() {
 		return startPeriod;

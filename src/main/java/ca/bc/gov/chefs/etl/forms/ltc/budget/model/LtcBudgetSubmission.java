@@ -22,7 +22,6 @@ public class LtcBudgetSubmission implements IModel {
 	private String submittedBy;
 	private String CCIMSID;
 	private String submissionType;
-	private String period;
 	private String submissionFy;
 	private String nbTotalBeds;
 	private String nbFundedBeds;
@@ -74,7 +73,6 @@ public class LtcBudgetSubmission implements IModel {
 		elements.add(this.getSubmittedBy());
 		elements.add(this.getCCIMSID());
 		elements.add(this.getSubmissionType());
-		elements.add(this.getPeriod());
 		elements.add(this.getSubmissionFy());
 		elements.add(this.getNbTotalBeds());
 		elements.add(this.getNbFundedBeds());
@@ -133,14 +131,6 @@ public class LtcBudgetSubmission implements IModel {
 
 	public void setSubmittedBy(String submittedBy) {
 		this.submittedBy = StringUtils.defaultIfEmpty(submittedBy, Constants.DEFAULT_STRING_VALUE);
-	}
-
-	public String getPeriod() {
-		return period;
-	}
-
-	public void setPeriod(String period) {
-		this.period = StringUtils.defaultIfEmpty(period, Constants.DEFAULT_STRING_VALUE);
 	}
 
 	public String getNbTotalBeds() {

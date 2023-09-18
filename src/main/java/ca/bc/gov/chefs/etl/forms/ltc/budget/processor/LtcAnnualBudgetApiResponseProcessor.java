@@ -95,7 +95,6 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			ltcBudgetSubmission.setSubmittedBy(root.getForm().getFullName());
 			ltcBudgetSubmission.setCCIMSID(root.getCcimsid());
 			ltcBudgetSubmission.setSubmissionType(root.getSubmission());
-			ltcBudgetSubmission.setPeriod(root.getQuarter());
 			ltcBudgetSubmission.setSubmissionFy(root.getFiscalYear());
 			ltcBudgetSubmission.setNbTotalBeds(root.getNumberOfTotalBeds());
 			ltcBudgetSubmission.setNbFundedBeds(root.getNumberOfTotalFundedBeds());
