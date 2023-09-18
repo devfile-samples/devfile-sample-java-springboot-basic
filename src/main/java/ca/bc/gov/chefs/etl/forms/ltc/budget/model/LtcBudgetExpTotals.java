@@ -13,7 +13,9 @@ public class LtcBudgetExpTotals implements IModel {
 
 	private String confirmationId;
 	private String expType;
-	private String subTotalExpBudget;
+	private String subTotalExpAtApril;
+	private String subTotalExpAdjustment;
+	private String subTotalExpRevised;
 	private String subTotalExpNotes;
 	
 	public String getConfirmationId() {
@@ -28,11 +30,23 @@ public class LtcBudgetExpTotals implements IModel {
 	public void setExpType(String expType) {
 		this.expType = StringUtils.defaultIfEmpty(expType, Constants.DEFAULT_STRING_VALUE);
 	}
-	public String getSubTotalExpBudget() {
-		return subTotalExpBudget;
+	public String getSubTotalExpAtApril() {
+		return subTotalExpAtApril;
 	}
-	public void setSubTotalExpBudget(String subTotalExpBudget) {
-		this.subTotalExpBudget = subTotalExpBudget;
+	public void setSubTotalExpAtApril(String subTotalExpAtApril) {
+		this.subTotalExpAtApril = subTotalExpAtApril;
+	}
+	public String getSubTotalExpAdjustment() {
+		return subTotalExpAdjustment;
+	}
+	public void setSubTotalExpAdjustment(String subTotalExpAdjustment) {
+		this.subTotalExpAdjustment = subTotalExpAdjustment;
+	}
+	public String getSubTotalExpRevised() {
+		return subTotalExpRevised;
+	}
+	public void setSubTotalExpRevised(String subTotalExpRevised) {
+		this.subTotalExpRevised = subTotalExpRevised;
 	}
 	public String getSubTotalExpNotes() {
 		return subTotalExpNotes != null ? CSVUtil.replaceLineBreaks(subTotalExpNotes) : subTotalExpNotes;
@@ -54,7 +68,9 @@ public class LtcBudgetExpTotals implements IModel {
 		List<String> elements = new ArrayList<>();
 		elements.add(this.getConfirmationId());
 		elements.add(this.getExpType());
-		elements.add(this.getSubTotalExpBudget());
+		elements.add(this.getSubTotalExpAtApril());
+		elements.add(this.getSubTotalExpAdjustment());
+		elements.add(this.getSubTotalExpRevised());
 		elements.add(this.getSubTotalExpNotes());
 		return elements;
 	}

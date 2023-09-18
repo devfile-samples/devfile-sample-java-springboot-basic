@@ -13,7 +13,9 @@ public class LtcBudgetRevTotals implements IModel {
 
 	private String confirmationId;
 	private String revType;
-	private String subTotalRevBudget;
+	private String subTotalRevAtApril;
+	private String subTotalRevAdjustment;
+	private String subTotalRevRevised;
 	private String subTotalRevNotes;
 	
 	public String getConfirmationId() {
@@ -28,11 +30,23 @@ public class LtcBudgetRevTotals implements IModel {
 	public void setRevType(String revType) {
 		this.revType = StringUtils.defaultIfEmpty(revType, Constants.DEFAULT_STRING_VALUE);
 	}
-	public String getSubTotalRevBudget() {
-		return subTotalRevBudget;
+	public String getSubTotalRevAtApril() {
+		return subTotalRevAtApril;
 	}
-	public void setSubTotalRevBudget(String subTotalRevBudget) {
-		this.subTotalRevBudget = subTotalRevBudget;
+	public void setSubTotalRevAtApril(String subTotalRevAtApril) {
+		this.subTotalRevAtApril = subTotalRevAtApril;
+	}
+	public String getSubTotalRevAdjustment() {
+		return subTotalRevAdjustment;
+	}
+	public void setSubTotalRevAdjustment(String subTotalRevAdjustment) {
+		this.subTotalRevAdjustment = subTotalRevAdjustment;
+	}
+	public String getSubTotalRevRevised() {
+		return subTotalRevRevised;
+	}
+	public void setSubTotalRevRevised(String subTotalRevRevised) {
+		this.subTotalRevRevised = subTotalRevRevised;
 	}
 	public String getSubTotalRevNotes() {
 		return subTotalRevNotes != null ? CSVUtil.replaceLineBreaks(subTotalRevNotes) : subTotalRevNotes;
@@ -56,7 +70,9 @@ public class LtcBudgetRevTotals implements IModel {
 		List<String> elements = new ArrayList<>();
 		elements.add(this.getConfirmationId());
 		elements.add(this.getRevType());
-		elements.add(this.getSubTotalRevBudget());
+		elements.add(this.getSubTotalRevAtApril());
+		elements.add(this.getSubTotalRevAdjustment());
+		elements.add(this.getSubTotalRevRevised());
 		elements.add(this.getSubTotalRevNotes());
 		return elements;
 	}

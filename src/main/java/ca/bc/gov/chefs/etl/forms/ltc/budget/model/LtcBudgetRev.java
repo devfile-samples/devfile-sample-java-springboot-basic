@@ -14,7 +14,9 @@ public class LtcBudgetRev implements IModel {
 	private String confirmationId;
 	private String revType;
 	private String revName;
-	private String revBudget;
+	private String revAtApril;
+	private String revAdjusment;
+	private String revRevised;
 	private String revNotes;
 	
 	public String getConfirmationId() {
@@ -35,11 +37,23 @@ public class LtcBudgetRev implements IModel {
 	public void setRevName(String revName) {
 		this.revName = StringUtils.defaultIfEmpty(revName, Constants.DEFAULT_STRING_VALUE);
 	}
-	public String getRevBudget() {
-		return StringUtils.isBlank(revBudget) ? "0" : revBudget;
+	public String getRevAtApril() {
+		return revAtApril;
 	}
-	public void setRevBudget(String revBudget) {
-		this.revBudget = StringUtils.defaultIfEmpty(revBudget, Constants.DEFAULT_DECIMAL_VALUE);
+	public void setRevAtApril(String revAtApril) {
+		this.revAtApril = revAtApril;
+	}
+	public String getRevAdjusment() {
+		return revAdjusment;
+	}
+	public void setRevAdjusment(String revAdjusment) {
+		this.revAdjusment = revAdjusment;
+	}
+	public String getRevRevised() {
+		return revRevised;
+	}
+	public void setRevRevised(String revRevised) {
+		this.revRevised = revRevised;
 	}
 	public String getRevNotes() {
 		return revNotes != null ? CSVUtil.replaceLineBreaks(revNotes) : revNotes;
@@ -63,7 +77,9 @@ public class LtcBudgetRev implements IModel {
 		elements.add(this.getConfirmationId());
 		elements.add(this.getRevType());
 		elements.add(this.getRevName());
-		elements.add(this.getRevBudget());
+		elements.add(this.getRevAtApril());
+		elements.add(this.getRevAdjusment());
+		elements.add(this.getRevRevised());
 		elements.add(this.getRevNotes());
 		return elements;
 	}

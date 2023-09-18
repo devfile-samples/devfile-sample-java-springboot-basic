@@ -13,7 +13,9 @@ public class LtcBudgetDep implements IModel {
 
 	private String confirmationId;
 	private String depName;
-	private String depBudget;
+	private String depAtApril;
+	private String depAtAdjustment;
+	private String depAtRevised;
 	private String depNotes;
 	
 	public String getConfirmationId() {
@@ -28,11 +30,23 @@ public class LtcBudgetDep implements IModel {
 	public void setDepName(String depName) {
 		this.depName = StringUtils.defaultIfEmpty(depName, Constants.DEFAULT_STRING_VALUE);
 	}
-	public String getDepBudget() {
-		return depBudget;
+	public String getDepAtApril() {
+		return depAtApril;
 	}
-	public void setDepBudget(String depBudget) {
-		this.depBudget = StringUtils.defaultIfEmpty(depBudget, Constants.DEFAULT_DECIMAL_VALUE);
+	public void setDepAtApril(String depAtApril) {
+		this.depAtApril = depAtApril;
+	}
+	public String getDepAtAdjustment() {
+		return depAtAdjustment;
+	}
+	public void setDepAtAdjustment(String depAtAdjustment) {
+		this.depAtAdjustment = depAtAdjustment;
+	}
+	public String getDepAtRevised() {
+		return depAtRevised;
+	}
+	public void setDepAtRevised(String depAtRevised) {
+		this.depAtRevised = depAtRevised;
 	}
 	public String getDepNotes() {
 		return depNotes != null ? CSVUtil.replaceLineBreaks(depNotes) : depNotes;
@@ -55,7 +69,9 @@ public class LtcBudgetDep implements IModel {
 		List<String> elements = new ArrayList<String>();
 		elements.add(this.getConfirmationId());
 		elements.add(this.getDepName());
-		elements.add(this.getDepBudget());
+		elements.add(this.getDepAtApril());
+		elements.add(this.getDepAtAdjustment());
+		elements.add(this.getDepAtRevised());
 		elements.add(this.getDepNotes());
 		return elements;
 	}

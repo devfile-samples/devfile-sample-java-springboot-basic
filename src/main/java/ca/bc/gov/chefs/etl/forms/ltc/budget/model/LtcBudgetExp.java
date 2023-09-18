@@ -14,7 +14,9 @@ public class LtcBudgetExp implements IModel {
 	private String confirmationId;
 	private String expType;
 	private String expName;
-	private String expBudget;
+	private String expAtApril;
+	private String expAdjustment;
+	private String expRevised;
 	private String expNotes;
 	
 	public String getConfirmationId() {
@@ -35,11 +37,23 @@ public class LtcBudgetExp implements IModel {
 	public void setExpName(String expName) {
 		this.expName = StringUtils.defaultIfEmpty(expName, Constants.DEFAULT_STRING_VALUE);
 	}
-	public String getExpBudget() {
-		return expBudget;
+	public String getExpAtApril() {
+		return expAtApril;
 	}
-	public void setExpBudget(String expBudget) {
-		this.expBudget = StringUtils.defaultIfEmpty(expBudget, Constants.DEFAULT_DECIMAL_VALUE);
+	public void setExpAtApril(String expAtApril) {
+		this.expAtApril = expAtApril;
+	}
+	public String getExpAdjustment() {
+		return expAdjustment;
+	}
+	public void setExpAdjustment(String expAdjustment) {
+		this.expAdjustment = expAdjustment;
+	}
+	public String getExpRevised() {
+		return expRevised;
+	}
+	public void setExpRevised(String expRevised) {
+		this.expRevised = expRevised;
 	}
 	public String getExpNotes() {
 		return expNotes != null ? CSVUtil.replaceLineBreaks(expNotes) : expNotes;
@@ -62,7 +76,9 @@ public class LtcBudgetExp implements IModel {
 		elements.add(this.getConfirmationId());
 		elements.add(this.getExpType());
 		elements.add(this.getExpName());
-		elements.add(this.getExpBudget());
+		elements.add(this.getExpAtApril());
+		elements.add(this.getExpAdjustment());
+		elements.add(this.getExpRevised());
 		elements.add(this.getExpNotes());
 		return elements;
 	}

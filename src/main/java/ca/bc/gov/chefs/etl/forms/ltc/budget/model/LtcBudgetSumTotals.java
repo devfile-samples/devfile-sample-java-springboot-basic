@@ -13,7 +13,9 @@ public class LtcBudgetSumTotals implements IModel {
 
 	private String confirmationId;
 	private String totName;
-	private String sumBudget;
+	private String totAtApril;
+	private String totAdjustment;
+	private String totRevised;
 	private String totNotes;
 	
 	
@@ -29,11 +31,23 @@ public class LtcBudgetSumTotals implements IModel {
 	public void setTotName(String totName) {
 		this.totName = StringUtils.defaultIfEmpty(totName, Constants.DEFAULT_STRING_VALUE);
 	}
-	public String getSumBudget() {
-		return sumBudget;
+	public String getTotAtApril() {
+		return totAtApril;
 	}
-	public void setSumBudget(String sumBudget) {
-		this.sumBudget = StringUtils.defaultIfEmpty(sumBudget, Constants.DEFAULT_DECIMAL_VALUE);
+	public void setTotAtApril(String totAtApril) {
+		this.totAtApril = totAtApril;
+	}
+	public String getTotAdjustment() {
+		return totAdjustment;
+	}
+	public void setTotAdjustment(String totAdjustment) {
+		this.totAdjustment = totAdjustment;
+	}
+	public String getTotRevised() {
+		return totRevised;
+	}
+	public void setTotRevised(String totRevised) {
+		this.totRevised = totRevised;
 	}
 	public String getTotNotes() {
 		return totNotes != null ? CSVUtil.replaceLineBreaks(totNotes) : totNotes;
@@ -55,7 +69,9 @@ public class LtcBudgetSumTotals implements IModel {
 		List<String> elements = new ArrayList<>();
 		elements.add(this.getConfirmationId());
 		elements.add(this.getTotName());
-		elements.add(this.getSumBudget());
+		elements.add(this.getTotAtApril());
+		elements.add(this.getTotAdjustment());
+		elements.add(this.getTotRevised());
 		elements.add(this.getTotNotes());
 		return elements;
 	}
