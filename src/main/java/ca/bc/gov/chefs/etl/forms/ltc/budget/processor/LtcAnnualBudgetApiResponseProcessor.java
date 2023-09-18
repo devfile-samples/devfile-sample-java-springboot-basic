@@ -1956,43 +1956,57 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			LtcBudgetRevTotals revFromHA1Subttl = new LtcBudgetRevTotals();
 			revFromHA1Subttl.setConfirmationId(root.getForm().getConfirmationId());
 			revFromHA1Subttl.setRevType(root.getOpRev_1_label());
-			revFromHA1Subttl.setSubTotalRevBudget(root.getOpRev_sum11());
+			revFromHA1Subttl.setSubTotalRevAtApril(root.getOpRev_budget_sum1());
+			revFromHA1Subttl.setSubTotalRevAdjustment(root.getOpRev_adjustment_sum1());
+			revFromHA1Subttl.setSubTotalRevRevised(root.getOpRev_revised_sum1());
 			revFromHA1Subttl.setSubTotalRevNotes(root.getOpRev_sum_note1());
 
 			LtcBudgetRevTotals revFromHA2Subttl = new LtcBudgetRevTotals();
 			revFromHA2Subttl.setConfirmationId(root.getForm().getConfirmationId());
 			revFromHA2Subttl.setRevType(root.getOpRev_2_label());
-			revFromHA2Subttl.setSubTotalRevBudget(root.getOpRev_sum12());
+			revFromHA2Subttl.setSubTotalRevAtApril(root.getOpRev_budget_sum2());
+			revFromHA2Subttl.setSubTotalRevAdjustment(root.getOpRev_adjustment_sum2());
+			revFromHA2Subttl.setSubTotalRevRevised(root.getOpRev_revised_sum2());
 			revFromHA2Subttl.setSubTotalRevNotes(root.getOpRev_sum_note2());
 
 			LtcBudgetRevTotals revFromHA4Subttl = new LtcBudgetRevTotals();
 			revFromHA4Subttl.setConfirmationId(root.getForm().getConfirmationId());
 			revFromHA4Subttl.setRevType(root.getOpRev_4_label());
-			revFromHA4Subttl.setSubTotalRevBudget(root.getOpRev_sum13());
+			revFromHA4Subttl.setSubTotalRevAtApril(root.getOpRev_budget_sum3());
+			revFromHA4Subttl.setSubTotalRevAdjustment(root.getOpRev_adjustment_sum3());
+			revFromHA4Subttl.setSubTotalRevRevised(root.getOpRev_revised_sum3());
 			revFromHA4Subttl.setSubTotalRevNotes(root.getOpRev_sum_note3());
 
 			LtcBudgetRevTotals clntRevSubttl = new LtcBudgetRevTotals();
 			clntRevSubttl.setConfirmationId(root.getForm().getConfirmationId());
 			clntRevSubttl.setRevType(root.getOpRev_client_label());
-			clntRevSubttl.setSubTotalRevBudget(root.getOpRev_sum14());
+			clntRevSubttl.setSubTotalRevAtApril(root.getOpRev_budget_sum4());
+			clntRevSubttl.setSubTotalRevAdjustment(root.getOpRev_adjustment_sum4());
+			clntRevSubttl.setSubTotalRevRevised(root.getOpRev_revised_sum4());
 			clntRevSubttl.setSubTotalRevNotes(root.getOpRev_sum_note4());
 
 			LtcBudgetRevTotals othRevSubttl = new LtcBudgetRevTotals();
 			othRevSubttl.setConfirmationId(root.getForm().getConfirmationId());
 			othRevSubttl.setRevType(root.getOpRev_otherRev_label());
-			othRevSubttl.setSubTotalRevBudget(root.getOpRev_sum15());
+			othRevSubttl.setSubTotalRevAtApril(root.getOpRev_budget_sum5());
+			othRevSubttl.setSubTotalRevAdjustment(root.getOpRev_adjustment_sum5());
+			othRevSubttl.setSubTotalRevRevised(root.getOpRev_revised_sum5());
 			othRevSubttl.setSubTotalRevNotes(root.getOpRev_sum_note5());
 
 			LtcBudgetRevTotals opRevSubttl = new LtcBudgetRevTotals();
 			opRevSubttl.setConfirmationId(root.getForm().getConfirmationId());
 			opRevSubttl.setRevType(root.getOpRev_budget_total_label());
-			opRevSubttl.setSubTotalRevBudget(root.getOpRev_budget_total());
+			opRevSubttl.setSubTotalRevAtApril(root.getOpRev_adjustment_total());
+			opRevSubttl.setSubTotalRevAdjustment(root.getOpRev_revised_total());
+			opRevSubttl.setSubTotalRevRevised(root.getOpRev_budget_total());
 			opRevSubttl.setSubTotalRevNotes(root.getOpRev_total_note());
 
 			LtcBudgetRevTotals nonOpRevSubttl = new LtcBudgetRevTotals();
 			nonOpRevSubttl.setConfirmationId(root.getForm().getConfirmationId());
 			nonOpRevSubttl.setRevType(root.getNopRev_label());
-			nonOpRevSubttl.setSubTotalRevBudget(root.getNopRev_sum11());
+			nonOpRevSubttl.setSubTotalRevAtApril(root.getNopRev_budget_sum());
+			nonOpRevSubttl.setSubTotalRevAdjustment(root.getNopRev_adjustment_sum());
+			nonOpRevSubttl.setSubTotalRevRevised(root.getNopRev_revised_sum());
 			nonOpRevSubttl.setSubTotalRevNotes(root.getNopRev_sub_note());
 
 			Collections.addAll(ltcBudgetRevSubTtls, revFromHA1Subttl,revFromHA2Subttl,revFromHA4Subttl,clntRevSubttl,othRevSubttl,opRevSubttl, nonOpRevSubttl);

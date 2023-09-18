@@ -1044,9 +1044,10 @@ public class Root{
     public String nopRev_note1;
     public String nopRev_note2;
     public String nopRev_sub_note;
-    @JsonProperty("nopRev_sum1-1")
-    public String nopRev_sum11;
-    @JsonProperty("nopRev_budget-1")
+    public String nopRev_budget_sum;
+    public String nopRev_adjustment_sum;
+    public String nopRev_revised_sum;
+	@JsonProperty("nopRev_budget-1")
     public String nopRev_Budget1;
     @JsonProperty("nopRev_budget-2")
     public String nopRev_Budget2;
@@ -1520,19 +1521,26 @@ public class Root{
     public String opRev_sum_note3;
     public String opRev_sum_note4;
     public String opRev_sum_note5;
-    @JsonProperty("opRev_sum1-1")
-    public String opRev_sum11;
-    @JsonProperty("opRev_sum1-2")
-    public String opRev_sum12;
-    @JsonProperty("opRev_sum1-3")
-    public String opRev_sum13;
-    @JsonProperty("opRev_sum1-4")
-    public String opRev_sum14;
-    @JsonProperty("opRev_sum1-5")
-    public String opRev_sum15;
-    public String opRev_total_note;
+    public String opRev_budget_sum1;
+    public String opRev_budget_sum2;
+    public String opRev_budget_sum3;
+    public String opRev_budget_sum4;
+    public String opRev_budget_sum5;
+    public String opRev_adjustment_sum1;
+    public String opRev_adjustment_sum2;
+    public String opRev_adjustment_sum3;
+    public String opRev_adjustment_sum4;
+    public String opRev_adjustment_sum5;
+    public String opRev_revised_sum1;
+    public String opRev_revised_sum2;
+    public String opRev_revised_sum3;
+    public String opRev_revised_sum4;
+    public String opRev_revised_sum5;
+	public String opRev_total_note;
     public String opRev_budget_total;
-    @JsonProperty("opRev_budget-1")
+    public String opRev_adjustment_total;
+    public String opRev_revised_total;
+	@JsonProperty("opRev_budget-1")
     public String opRev_Budget1;
     @JsonProperty("opRev_budget-10")
     public String opRev_Budget10;
@@ -7829,11 +7837,23 @@ public class Root{
 	public void setNopRev_sub_note(String nopRev_sub_note) {
 		this.nopRev_sub_note = nopRev_sub_note;
 	}
-	public String getNopRev_sum11() {
-		return nopRev_sum11;
+	public String getNopRev_budget_sum() {
+		return nopRev_budget_sum;
 	}
-	public void setNopRev_sum11(String nopRev_sum11) {
-		this.nopRev_sum11 = nopRev_sum11;
+	public void setNopRev_budget_sum(String nopRev_budget_sum) {
+		this.nopRev_budget_sum = nopRev_budget_sum;
+	}
+	public String getNopRev_adjustment_sum() {
+		return nopRev_adjustment_sum;
+	}
+	public void setNopRev_adjustment_sum(String nopRev_adjustment_sum) {
+		this.nopRev_adjustment_sum = nopRev_adjustment_sum;
+	}
+    public String getNopRev_revised_sum() {
+		return nopRev_revised_sum;
+	}
+	public void setNopRev_revised_sum(String nopRev_revised_sum) {
+		this.nopRev_revised_sum = nopRev_revised_sum;
 	}
 	public String getNopRev_Budget1() {
 		return nopRev_Budget1;
@@ -9815,35 +9835,95 @@ public class Root{
 	public void setOpRev_sum_note5(String opRev_sum_note5) {
 		this.opRev_sum_note5 = opRev_sum_note5;
 	}
-	public String getOpRev_sum11() {
-		return opRev_sum11;
+	public String getOpRev_budget_sum1() {
+		return opRev_budget_sum1;
 	}
-	public void setOpRev_sum11(String opRev_sum11) {
-		this.opRev_sum11 = opRev_sum11;
+	public void setOpRev_budget_sum1(String opRev_sum11) {
+		this.opRev_budget_sum1 = opRev_sum11;
 	}
-	public String getOpRev_sum12() {
-		return opRev_sum12;
+	public String getOpRev_budget_sum2() {
+		return opRev_budget_sum2;
 	}
-	public void setOpRev_sum12(String opRev_sum12) {
-		this.opRev_sum12 = opRev_sum12;
+	public void setOpRev_budget_sum2(String opRev_sum12) {
+		this.opRev_budget_sum2 = opRev_sum12;
 	}
-	public String getOpRev_sum13() {
-		return opRev_sum13;
+	public String getOpRev_budget_sum3() {
+		return opRev_budget_sum3;
 	}
-	public void setOpRev_sum13(String opRev_sum13) {
-		this.opRev_sum13 = opRev_sum13;
+	public void setOpRev_budget_sum3(String opRev_sum13) {
+		this.opRev_budget_sum3 = opRev_sum13;
 	}
-	public String getOpRev_sum14() {
-		return opRev_sum14;
+	public String getOpRev_budget_sum4() {
+		return opRev_budget_sum4;
 	}
-	public void setOpRev_sum14(String opRev_sum14) {
-		this.opRev_sum14 = opRev_sum14;
+	public void setOpRev_budget_sum4(String opRev_sum14) {
+		this.opRev_budget_sum4 = opRev_sum14;
 	}
-	public String getOpRev_sum15() {
-		return opRev_sum15;
+	public String getOpRev_budget_sum5() {
+		return opRev_budget_sum5;
 	}
-	public void setOpRev_sum15(String opRev_sum15) {
-		this.opRev_sum15 = opRev_sum15;
+	public void setOpRev_budget_sum5(String opRev_sum15) {
+		this.opRev_budget_sum5 = opRev_sum15;
+	}
+    public String getOpRev_adjustment_sum1() {
+		return opRev_adjustment_sum1;
+	}
+	public void setOpRev_adjustment_sum1(String opRev_adjustment_sum1) {
+		this.opRev_adjustment_sum1 = opRev_adjustment_sum1;
+	}
+	public String getOpRev_adjustment_sum2() {
+		return opRev_adjustment_sum2;
+	}
+	public void setOpRev_adjustment_sum2(String opRev_adjustment_sum2) {
+		this.opRev_adjustment_sum2 = opRev_adjustment_sum2;
+	}
+	public String getOpRev_adjustment_sum3() {
+		return opRev_adjustment_sum3;
+	}
+	public void setOpRev_adjustment_sum3(String opRev_adjustment_sum3) {
+		this.opRev_adjustment_sum3 = opRev_adjustment_sum3;
+	}
+	public String getOpRev_adjustment_sum4() {
+		return opRev_adjustment_sum4;
+	}
+	public void setOpRev_adjustment_sum4(String opRev_adjustment_sum4) {
+		this.opRev_adjustment_sum4 = opRev_adjustment_sum4;
+	}
+	public String getOpRev_adjustment_sum5() {
+		return opRev_adjustment_sum5;
+	}
+	public void setOpRev_adjustment_sum5(String opRev_adjustment_sum5) {
+		this.opRev_adjustment_sum5 = opRev_adjustment_sum5;
+	}
+	public String getOpRev_revised_sum1() {
+		return opRev_revised_sum1;
+	}
+	public void setOpRev_revised_sum1(String opRev_revised_sum1) {
+		this.opRev_revised_sum1 = opRev_revised_sum1;
+	}
+	public String getOpRev_revised_sum2() {
+		return opRev_revised_sum2;
+	}
+	public void setOpRev_revised_sum2(String opRev_revised_sum2) {
+		this.opRev_revised_sum2 = opRev_revised_sum2;
+	}
+	public String getOpRev_revised_sum3() {
+		return opRev_revised_sum3;
+	}
+	public void setOpRev_revised_sum3(String opRev_revised_sum3) {
+		this.opRev_revised_sum3 = opRev_revised_sum3;
+	}
+	public String getOpRev_revised_sum4() {
+		return opRev_revised_sum4;
+	}
+	public void setOpRev_revised_sum4(String opRev_revised_sum4) {
+		this.opRev_revised_sum4 = opRev_revised_sum4;
+	}
+	public String getOpRev_revised_sum5() {
+		return opRev_revised_sum5;
+	}
+	public void setOpRev_revised_sum5(String opRev_revised_sum5) {
+		this.opRev_revised_sum5 = opRev_revised_sum5;
 	}
 	public String getOpRev_total_note() {
 		return opRev_total_note;
@@ -9856,6 +9936,18 @@ public class Root{
 	}
 	public void setOpRev_budget_total(String opRev_Budget_total) {
 		this.opRev_budget_total = opRev_Budget_total;
+	}
+    public String getOpRev_adjustment_total() {
+		return opRev_adjustment_total;
+	}
+	public void setOpRev_adjustment_total(String opRev_adjustment_total) {
+		this.opRev_adjustment_total = opRev_adjustment_total;
+	}
+	public String getOpRev_revised_total() {
+		return opRev_revised_total;
+	}
+	public void setOpRev_revised_total(String opRev_revised_total) {
+		this.opRev_revised_total = opRev_revised_total;
 	}
 	public String getOpRev_Budget1() {
 		return opRev_Budget1;
