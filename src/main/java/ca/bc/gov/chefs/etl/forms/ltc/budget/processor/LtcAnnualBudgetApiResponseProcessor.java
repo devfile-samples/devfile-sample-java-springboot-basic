@@ -1743,21 +1743,27 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 
 			/* Summary of Rev & Exp Budget */
 			LtcBudgetRev revFrmHA1Adj = new LtcBudgetRev();
-			revFrmHA1Adj.setRevBudget(root.getOpRev_Budget1());
+			revFrmHA1Adj.setRevAtApril(root.getOpRev_Budget1());
+			revFrmHA1Adj.setRevAdjusment(root.getOpRev_Adjustment1());
+			revFrmHA1Adj.setRevRevised(root.getOpRev_Revised1());
 			revFrmHA1Adj.setRevNotes(root.getOpRev_note1());
 			revFrmHA1Adj.setRevName(root.getOpRev_Budget_label_1());	
 			revFrmHA1Adj.setRevType(root.getOpRev_1_label());
 			revFrmHA1Adj.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev revFrmHA1DirCare = new LtcBudgetRev();
-			revFrmHA1DirCare.setRevBudget(root.getOpRev_Budget2());
+			revFrmHA1DirCare.setRevAtApril(root.getOpRev_Budget2());
+			revFrmHA1DirCare.setRevAdjusment(root.getOpRev_Adjustment2());
+			revFrmHA1DirCare.setRevRevised(root.getOpRev_Revised2());
 			revFrmHA1DirCare.setRevNotes(root.getOpRev_note2());
 			revFrmHA1DirCare.setRevName(root.getOpRev_Budget_label_2());
 			revFrmHA1DirCare.setRevType(root.getOpRev_1_label());
 			revFrmHA1DirCare.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev revFrmHA1Others = new LtcBudgetRev();
-			revFrmHA1Others.setRevBudget(root.getOpRev_Budget3());
+			revFrmHA1Others.setRevAtApril(root.getOpRev_Budget3());
+			revFrmHA1Others.setRevAdjusment(root.getOpRev_Adjustment3());
+			revFrmHA1Others.setRevRevised(root.getOpRev_Revised3());
 			revFrmHA1Others.setRevNotes(root.getOpRev_note3());
 			revFrmHA1Others.setRevName(root.getOpRev_Budget_label_3());
 			revFrmHA1Others.setRevType(root.getOpRev_1_label());
@@ -1766,51 +1772,63 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			// skipping subtotal for now
 
 			LtcBudgetRev revFrmHA2OpFundMinEq = new LtcBudgetRev();
-			revFrmHA2OpFundMinEq.setRevBudget(root.getOpRev_Budget4());
+			revFrmHA2OpFundMinEq.setRevAtApril(root.getOpRev_Budget4());
+			revFrmHA2OpFundMinEq.setRevAdjusment(root.getOpRev_Adjustment4());
+			revFrmHA2OpFundMinEq.setRevRevised(root.getOpRev_Revised4());
 			revFrmHA2OpFundMinEq.setRevNotes(root.getOpRev_note4());
 			revFrmHA2OpFundMinEq.setRevName(root.getOpRev_Budget_label_4());
 			revFrmHA2OpFundMinEq.setRevType(root.getOpRev_2_label());
 			revFrmHA2OpFundMinEq.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev revFrmHA2OpFundOth = new LtcBudgetRev();
-			revFrmHA2OpFundOth.setRevBudget(root.getOpRev_Budget5());
+			revFrmHA2OpFundOth.setRevAtApril(root.getOpRev_Budget5());
+			revFrmHA2OpFundOth.setRevAdjusment(root.getOpRev_Adjustment5());
+			revFrmHA2OpFundOth.setRevRevised(root.getOpRev_Revised5());
 			revFrmHA2OpFundOth.setRevNotes(root.getOpRev_note5());
 			revFrmHA2OpFundOth.setRevName(root.getOpRev_Budget_label_5());
 			revFrmHA2OpFundOth.setRevType(root.getOpRev_2_label());
 			revFrmHA2OpFundOth.setConfirmationId(root.getForm().getConfirmationId());
 
-			// skipping subtotal
-
 			LtcBudgetRev revFrmHA3 = new LtcBudgetRev();
-			revFrmHA3.setRevBudget(root.getOpRev_Budget6());
+			revFrmHA3.setRevAtApril(root.getOpRev_Budget6());
+			revFrmHA3.setRevAdjusment(root.getOpRev_Adjustment6());
+			revFrmHA3.setRevRevised(root.getOpRev_Revised6());
 			revFrmHA3.setRevNotes(root.getOpRev_note6());
 			revFrmHA3.setRevName(root.getOpRev_Budget_label_6());
 			revFrmHA3.setRevType(root.getOpRev_3_label());
 			revFrmHA3.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev revFrmHA4OccThld = new LtcBudgetRev();
-			revFrmHA4OccThld.setRevBudget(root.getOpRev_Budget7());
+			revFrmHA4OccThld.setRevAtApril(root.getOpRev_Budget7());
+			revFrmHA4OccThld.setRevAdjusment(root.getOpRev_Adjustment7());
+			revFrmHA4OccThld.setRevRevised(root.getOpRev_Revised7());
 			revFrmHA4OccThld.setRevNotes(root.getOpRev_note7());
 			revFrmHA4OccThld.setRevName(root.getOpRev_Budget_label_7());
 			revFrmHA4OccThld.setRevType(root.getOpRev_4_label());
 			revFrmHA4OccThld.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev revFrmHA4CliConReconc = new LtcBudgetRev();
-			revFrmHA4CliConReconc.setRevBudget(root.getOpRev_Budget8());
+			revFrmHA4CliConReconc.setRevAtApril(root.getOpRev_Budget8());
+			revFrmHA4CliConReconc.setRevAdjusment(root.getOpRev_Adjustment8());
+			revFrmHA4CliConReconc.setRevRevised(root.getOpRev_Revised8());
 			revFrmHA4CliConReconc.setRevNotes(root.getOpRev_note8());
 			revFrmHA4CliConReconc.setRevName(root.getOpRev_Budget_label_8());
 			revFrmHA4CliConReconc.setRevType(root.getOpRev_4_label());
 			revFrmHA4CliConReconc.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev revFrmHA4DirCare = new LtcBudgetRev();
-			revFrmHA4DirCare.setRevBudget(root.getOpRev_Budget9());
+			revFrmHA4DirCare.setRevAtApril(root.getOpRev_Budget9());
+			revFrmHA4DirCare.setRevAdjusment(root.getOpRev_Adjustment9());
+			revFrmHA4DirCare.setRevRevised(root.getOpRev_Revised9());
 			revFrmHA4DirCare.setRevNotes(root.getOpRev_note9());
 			revFrmHA4DirCare.setRevName(root.getOpRev_Budget_label_9());
 			revFrmHA4DirCare.setRevType(root.getOpRev_4_label());
 			revFrmHA4DirCare.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev revFrmHA4Oth = new LtcBudgetRev();
-			revFrmHA4Oth.setRevBudget(root.getOpRev_Budget10());
+			revFrmHA4Oth.setRevAtApril(root.getOpRev_Budget10());
+			revFrmHA4Oth.setRevAdjusment(root.getOpRev_Adjustment10());
+			revFrmHA4Oth.setRevRevised(root.getOpRev_Revised10());
 			revFrmHA4Oth.setRevNotes(root.getOpRev_note10());
 			revFrmHA4Oth.setRevName(root.getOpRev_Budget_label_10());
 			revFrmHA4Oth.setRevType(root.getOpRev_4_label());
@@ -1818,14 +1836,18 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 
 			/* Non operating revenu */
 			LtcBudgetRev nonOperatingRevOth = new LtcBudgetRev();
-			nonOperatingRevOth.setRevBudget(root.getNopRev_Budget1());
+			nonOperatingRevOth.setRevAtApril(root.getNopRev_Budget1());
+			nonOperatingRevOth.setRevAdjusment(root.getNopRev_Adjustment1());
+			nonOperatingRevOth.setRevRevised(root.getNopRev_Revised1());
 			nonOperatingRevOth.setRevNotes(root.getNopRev_note1());
 			nonOperatingRevOth.setRevName(root.getNopRev_Budget_label1());
 			nonOperatingRevOth.setRevType(root.getNopRev_label());
 			nonOperatingRevOth.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev nonOperatingRevOthThirdParty = new LtcBudgetRev();
-			nonOperatingRevOthThirdParty.setRevBudget(root.getNopRev_Budget2());
+			nonOperatingRevOthThirdParty.setRevAtApril(root.getNopRev_Budget2());
+			nonOperatingRevOthThirdParty.setRevAdjusment(root.getNopRev_Adjustment2());
+			nonOperatingRevOthThirdParty.setRevRevised(root.getNopRev_Revised2());
 			nonOperatingRevOthThirdParty.setRevNotes(root.getNopRev_note2());
 			nonOperatingRevOthThirdParty.setRevName(root.getNopRev_Budget_label2());
 			nonOperatingRevOthThirdParty.setRevType(root.getNopRev_label());
@@ -1835,21 +1857,27 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			// skipping subtotal for now
 
 			LtcBudgetRev clntRvnHAClient = new LtcBudgetRev();
-			clntRvnHAClient.setRevBudget(root.getOpRev_Budget11());
+			clntRvnHAClient.setRevAtApril(root.getOpRev_Budget11());
+			clntRvnHAClient.setRevAdjusment(root.getOpRev_Adjustment11());
+			clntRvnHAClient.setRevRevised(root.getOpRev_Revised11());
 			clntRvnHAClient.setRevNotes(root.getOpRev_note11());
 			clntRvnHAClient.setRevName(root.getOpRev_Budget_label_11());
 			clntRvnHAClient.setRevType(root.getOpRev_client_label());
 			clntRvnHAClient.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev clntRvnFeePaidParties = new LtcBudgetRev();
-			clntRvnFeePaidParties.setRevBudget(root.getOpRev_Budget12());
+			clntRvnFeePaidParties.setRevAtApril(root.getOpRev_Budget12());
+			clntRvnFeePaidParties.setRevAdjusment(root.getOpRev_Adjustment12());
+			clntRvnFeePaidParties.setRevRevised(root.getOpRev_Revised12());
 			clntRvnFeePaidParties.setRevNotes(root.getOpRev_note12());
 			clntRvnFeePaidParties.setRevName(root.getOpRev_Budget_label_12());
 			clntRvnFeePaidParties.setRevType(root.getOpRev_client_label());
 			clntRvnFeePaidParties.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev clntRvnFeePaidNonEligible = new LtcBudgetRev();
-			clntRvnFeePaidNonEligible.setRevBudget(root.getOpRev_Budget13());
+			clntRvnFeePaidNonEligible.setRevAtApril(root.getOpRev_Budget13());
+			clntRvnFeePaidNonEligible.setRevAdjusment(root.getOpRev_Adjustment13());
+			clntRvnFeePaidNonEligible.setRevRevised(root.getOpRev_Revised13());
 			clntRvnFeePaidNonEligible.setRevNotes(root.getOpRev_note13());
 			clntRvnFeePaidNonEligible.setRevName(root.getOpRev_Budget_label_13());
 			clntRvnFeePaidNonEligible.setRevType(root.getOpRev_client_label());
@@ -1857,49 +1885,63 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 
 			// skipping subtotal for now
 			LtcBudgetRev othRevInvstOpFund = new LtcBudgetRev();
-			othRevInvstOpFund.setRevBudget(root.getOpRev_Budget14());
+			othRevInvstOpFund.setRevAtApril(root.getOpRev_Budget14());
+			othRevInvstOpFund.setRevAdjusment(root.getOpRev_Adjustment14());
+			othRevInvstOpFund.setRevRevised(root.getOpRev_Revised14());
 			othRevInvstOpFund.setRevNotes(root.getOpRev_note14());
 			othRevInvstOpFund.setRevName(root.getOpRev_Budget_label_14());
 			othRevInvstOpFund.setRevType(root.getOpRev_otherRev_label());
 			othRevInvstOpFund.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev othRevInvstCmBcFund = new LtcBudgetRev();
-			othRevInvstCmBcFund.setRevBudget(root.getOpRev_Budget15());
+			othRevInvstCmBcFund.setRevAtApril(root.getOpRev_Budget15());
+			othRevInvstCmBcFund.setRevAdjusment(root.getOpRev_Adjustment15());
+			othRevInvstCmBcFund.setRevRevised(root.getOpRev_Revised15());
 			othRevInvstCmBcFund.setRevNotes(root.getOpRev_note15());
 			othRevInvstCmBcFund.setRevName(root.getOpRev_Budget_label_15());
 			othRevInvstCmBcFund.setRevType(root.getOpRev_otherRev_label());
 			othRevInvstCmBcFund.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev othRevFoodServ = new LtcBudgetRev();
-			othRevFoodServ.setRevBudget(root.getOpRev_Budget16());
+			othRevFoodServ.setRevAtApril(root.getOpRev_Budget16());
+			othRevFoodServ.setRevAdjusment(root.getOpRev_Adjustment16());
+			othRevFoodServ.setRevRevised(root.getOpRev_Revised16());
 			othRevFoodServ.setRevNotes(root.getOpRev_note16());
 			othRevFoodServ.setRevName(root.getOpRev_Budget_label_16());
 			othRevFoodServ.setRevType(root.getOpRev_otherRev_label());
 			othRevFoodServ.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev othRevLdryServ = new LtcBudgetRev();
-			othRevLdryServ.setRevBudget(root.getOpRev_Budget17());
+			othRevLdryServ.setRevAtApril(root.getOpRev_Budget17());
+			othRevLdryServ.setRevAdjusment(root.getOpRev_Adjustment17());
+			othRevLdryServ.setRevRevised(root.getOpRev_Revised17());
 			othRevLdryServ.setRevNotes(root.getOpRev_note17());
 			othRevLdryServ.setRevName(root.getOpRev_Budget_label_17());
 			othRevLdryServ.setRevType(root.getOpRev_otherRev_label());
 			othRevLdryServ.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev othRevCabl = new LtcBudgetRev();
-			othRevCabl.setRevBudget(root.getOpRev_Budget18());
+			othRevCabl.setRevAtApril(root.getOpRev_Budget18());
+			othRevCabl.setRevAdjusment(root.getOpRev_Adjustment18());
+			othRevCabl.setRevRevised(root.getOpRev_Revised18());
 			othRevCabl.setRevNotes(root.getOpRev_note18());
 			othRevCabl.setRevName(root.getOpRev_Budget_label_18());
 			othRevCabl.setRevType(root.getOpRev_otherRev_label());
 			othRevCabl.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev othRevOthRec = new LtcBudgetRev();
-			othRevOthRec.setRevBudget(root.getOpRev_Budget19());
+			othRevOthRec.setRevAtApril(root.getOpRev_Budget19());
+			othRevOthRec.setRevAdjusment(root.getOpRev_Adjustment19());
+			othRevOthRec.setRevRevised(root.getOpRev_Revised19());
 			othRevOthRec.setRevNotes(root.getOpRev_note19());
 			othRevOthRec.setRevName(root.getOpRev_Budget_label_19());
 			othRevOthRec.setRevType(root.getOpRev_otherRev_label());
 			othRevOthRec.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetRev othRevOthSpcfy = new LtcBudgetRev();
-			othRevOthSpcfy.setRevBudget(root.getOpRev_Budget20());
+			othRevOthSpcfy.setRevAtApril(root.getOpRev_Budget20());
+			othRevOthSpcfy.setRevAdjusment(root.getOpRev_Adjustment20());
+			othRevOthSpcfy.setRevRevised(root.getOpRev_Revised20());
 			othRevOthSpcfy.setRevNotes(root.getOpRev_note20());
 			othRevOthSpcfy.setRevName(root.getOpRev_Budget_label_20());
 			othRevOthSpcfy.setRevType(root.getOpRev_otherRev_label());

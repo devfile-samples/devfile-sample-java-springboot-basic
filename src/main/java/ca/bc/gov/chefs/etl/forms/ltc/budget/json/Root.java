@@ -1050,8 +1050,15 @@ public class Root{
     public String nopRev_Budget1;
     @JsonProperty("nopRev_budget-2")
     public String nopRev_Budget2;
-    
-    public String nopSu_data1;
+    @JsonProperty("nopRev_adjustment-1")
+    public String nopRev_Adjustment1;
+    @JsonProperty("nopRev_adjustment-2")
+    public String nopRev_Adjustment2;
+    @JsonProperty("nopRev_revised-1")
+    public String nopRev_Revised1;
+    @JsonProperty("nopRev_revised-2")
+    public String nopRev_Revised2;
+	public String nopSu_data1;
     public String nopSu_note;
     public String noteInScopeQ1;
     public String noteInScopeQ2;
@@ -2194,8 +2201,327 @@ public class Root{
 	public String compHNursing_sum2;
 	public String compHAlliedProf_sum2;
 	public String compHAlliedNP_sum2;
-	
+    @JsonProperty("opRev_adjustment-1")
+    public String opRev_Adjustment1;
+    @JsonProperty("opRev_adjustment-2")
+    public String opRev_Adjustment2;
+    @JsonProperty("opRev_adjustment-3")
+    public String opRev_Adjustment3;
+    @JsonProperty("opRev_adjustment-4")
+    public String opRev_Adjustment4;
+    @JsonProperty("opRev_adjustment-5")
+    public String opRev_Adjustment5;
+    @JsonProperty("opRev_adjustment-6")
+    public String opRev_Adjustment6;
+    @JsonProperty("opRev_adjustment-7")
+    public String opRev_Adjustment7;
+    @JsonProperty("opRev_adjustment-8")
+    public String opRev_Adjustment8;
+    @JsonProperty("opRev_adjustment-9")
+    public String opRev_Adjustment9;
+    @JsonProperty("opRev_adjustment-10")
+    public String opRev_Adjustment10;
+    @JsonProperty("opRev_adjustment-11")
+    public String opRev_Adjustment11;
+    @JsonProperty("opRev_adjustment-12")
+    public String opRev_Adjustment12;
+    @JsonProperty("opRev_adjustment-13")
+    public String opRev_Adjustment13;
+    @JsonProperty("opRev_adjustment-14")
+    public String opRev_Adjustment14;
+    @JsonProperty("opRev_adjustment-15")
+    public String opRev_Adjustment15;
+    @JsonProperty("opRev_adjustment-16")
+    public String opRev_Adjustment16;
+    @JsonProperty("opRev_adjustment-17")
+    public String opRev_Adjustment17;
+    @JsonProperty("opRev_adjustment-18")
+    public String opRev_Adjustment18;
+    @JsonProperty("opRev_adjustment-19")
+    public String opRev_Adjustment19;
+    @JsonProperty("opRev_adjustment-20")
+    public String opRev_Adjustment20;
+    @JsonProperty("opRev_revised-1")
+    public String opRev_Revised1;
+    @JsonProperty("opRev_revised-2")
+    public String opRev_Revised2;
+    @JsonProperty("opRev_revised-3")
+    public String opRev_Revised3;
+    @JsonProperty("opRev_revised-4")
+    public String opRev_Revised4;
+    @JsonProperty("opRev_revised-5")
+    public String opRev_Revised5;
+    @JsonProperty("opRev_revised-6")
+    public String opRev_Revised6;
+    @JsonProperty("opRev_revised-7")
+    public String opRev_Revised7;
+    @JsonProperty("opRev_revised-8")
+    public String opRev_Revised8;
+    @JsonProperty("opRev_revised-9")
+    public String opRev_Revised9;
+    @JsonProperty("opRev_revised-10")
+    public String opRev_Revised10;
+    @JsonProperty("opRev_revised-11")
+    public String opRev_Revised11;
+    @JsonProperty("opRev_revised-12")
+    public String opRev_Revised12;
+    @JsonProperty("opRev_revised-13")
+    public String opRev_Revised13;
+    @JsonProperty("opRev_revised-14")
+    public String opRev_Revised14;
+    @JsonProperty("opRev_revised-15")
+    public String opRev_Revised15;
+    @JsonProperty("opRev_revised-16")
+    public String opRev_Revised16;
+    @JsonProperty("opRev_revised-17")
+    public String opRev_Revised17;
+    @JsonProperty("opRev_revised-18")
+    public String opRev_Revised18;
+    @JsonProperty("opRev_revised-19")
+    public String opRev_Revised19;
+    @JsonProperty("opRev_revised-20")
+    public String opRev_Revised20;
 
+	public String getOpRev_Adjustment1() {
+		return opRev_Adjustment1;
+	}
+	public void setOpRev_Adjustment1(String opRev_Adjustment1) {
+		this.opRev_Adjustment1 = opRev_Adjustment1;
+	}
+	public String getOpRev_Adjustment2() {
+		return opRev_Adjustment2;
+	}
+	public void setOpRev_Adjustment2(String opRev_Adjustment2) {
+		this.opRev_Adjustment2 = opRev_Adjustment2;
+	}
+	public String getOpRev_Adjustment3() {
+		return opRev_Adjustment3;
+	}
+	public void setOpRev_Adjustment3(String opRev_Adjustment3) {
+		this.opRev_Adjustment3 = opRev_Adjustment3;
+	}
+	public String getOpRev_Adjustment4() {
+		return opRev_Adjustment4;
+	}
+	public void setOpRev_Adjustment4(String opRev_Adjustment4) {
+		this.opRev_Adjustment4 = opRev_Adjustment4;
+	}
+	public String getOpRev_Adjustment5() {
+		return opRev_Adjustment5;
+	}
+	public void setOpRev_Adjustment5(String opRev_Adjustment5) {
+		this.opRev_Adjustment5 = opRev_Adjustment5;
+	}
+	public String getOpRev_Adjustment6() {
+		return opRev_Adjustment6;
+	}
+	public void setOpRev_Adjustment6(String opRev_Adjustment6) {
+		this.opRev_Adjustment6 = opRev_Adjustment6;
+	}
+	public String getOpRev_Adjustment7() {
+		return opRev_Adjustment7;
+	}
+	public void setOpRev_Adjustment7(String opRev_Adjustment7) {
+		this.opRev_Adjustment7 = opRev_Adjustment7;
+	}
+	public String getOpRev_Adjustment8() {
+		return opRev_Adjustment8;
+	}
+	public void setOpRev_Adjustment8(String opRev_Adjustment8) {
+		this.opRev_Adjustment8 = opRev_Adjustment8;
+	}
+	public String getOpRev_Adjustment9() {
+		return opRev_Adjustment9;
+	}
+	public void setOpRev_Adjustment9(String opRev_Adjustment9) {
+		this.opRev_Adjustment9 = opRev_Adjustment9;
+	}
+	public String getOpRev_Adjustment10() {
+		return opRev_Adjustment10;
+	}
+	public void setOpRev_Adjustment10(String opRev_Adjustment10) {
+		this.opRev_Adjustment10 = opRev_Adjustment10;
+	}
+	public String getOpRev_Adjustment11() {
+		return opRev_Adjustment11;
+	}
+	public void setOpRev_Adjustment11(String opRev_Adjustment11) {
+		this.opRev_Adjustment11 = opRev_Adjustment11;
+	}
+	public String getOpRev_Adjustment12() {
+		return opRev_Adjustment12;
+	}
+	public void setOpRev_Adjustment12(String opRev_Adjustment12) {
+		this.opRev_Adjustment12 = opRev_Adjustment12;
+	}
+	public String getOpRev_Adjustment13() {
+		return opRev_Adjustment13;
+	}
+	public void setOpRev_Adjustment13(String opRev_Adjustment13) {
+		this.opRev_Adjustment13 = opRev_Adjustment13;
+	}
+	public String getOpRev_Adjustment14() {
+		return opRev_Adjustment14;
+	}
+	public void setOpRev_Adjustment14(String opRev_Adjustment14) {
+		this.opRev_Adjustment14 = opRev_Adjustment14;
+	}
+	public String getOpRev_Adjustment15() {
+		return opRev_Adjustment15;
+	}
+	public void setOpRev_Adjustment15(String opRev_Adjustment15) {
+		this.opRev_Adjustment15 = opRev_Adjustment15;
+	}
+	public String getOpRev_Adjustment16() {
+		return opRev_Adjustment16;
+	}
+	public void setOpRev_Adjustment16(String opRev_Adjustment16) {
+		this.opRev_Adjustment16 = opRev_Adjustment16;
+	}
+	public String getOpRev_Adjustment17() {
+		return opRev_Adjustment17;
+	}
+	public void setOpRev_Adjustment17(String opRev_Adjustment17) {
+		this.opRev_Adjustment17 = opRev_Adjustment17;
+	}
+	public String getOpRev_Adjustment18() {
+		return opRev_Adjustment18;
+	}
+	public void setOpRev_Adjustment18(String opRev_Adjustment18) {
+		this.opRev_Adjustment18 = opRev_Adjustment18;
+	}
+	public String getOpRev_Adjustment19() {
+		return opRev_Adjustment19;
+	}
+	public void setOpRev_Adjustment19(String opRev_Adjustment19) {
+		this.opRev_Adjustment19 = opRev_Adjustment19;
+	}
+	public String getOpRev_Adjustment20() {
+		return opRev_Adjustment20;
+	}
+	public void setOpRev_Adjustment20(String opRev_Adjustment20) {
+		this.opRev_Adjustment20 = opRev_Adjustment20;
+	}
+	public String getOpRev_Revised1() {
+		return opRev_Revised1;
+	}
+	public void setOpRev_Revised1(String opRev_Revised1) {
+		this.opRev_Revised1 = opRev_Revised1;
+	}
+	public String getOpRev_Revised2() {
+		return opRev_Revised2;
+	}
+	public void setOpRev_Revised2(String opRev_Revised2) {
+		this.opRev_Revised2 = opRev_Revised2;
+	}
+	public String getOpRev_Revised3() {
+		return opRev_Revised3;
+	}
+	public void setOpRev_Revised3(String opRev_Revised3) {
+		this.opRev_Revised3 = opRev_Revised3;
+	}
+	public String getOpRev_Revised4() {
+		return opRev_Revised4;
+	}
+	public void setOpRev_Revised4(String opRev_Revised4) {
+		this.opRev_Revised4 = opRev_Revised4;
+	}
+	public String getOpRev_Revised5() {
+		return opRev_Revised5;
+	}
+	public void setOpRev_Revised5(String opRev_Revised5) {
+		this.opRev_Revised5 = opRev_Revised5;
+	}
+	public String getOpRev_Revised6() {
+		return opRev_Revised6;
+	}
+	public void setOpRev_Revised6(String opRev_Revised6) {
+		this.opRev_Revised6 = opRev_Revised6;
+	}
+	public String getOpRev_Revised7() {
+		return opRev_Revised7;
+	}
+	public void setOpRev_Revised7(String opRev_Revised7) {
+		this.opRev_Revised7 = opRev_Revised7;
+	}
+	public String getOpRev_Revised8() {
+		return opRev_Revised8;
+	}
+	public void setOpRev_Revised8(String opRev_Revised8) {
+		this.opRev_Revised8 = opRev_Revised8;
+	}
+	public String getOpRev_Revised9() {
+		return opRev_Revised9;
+	}
+	public void setOpRev_Revised9(String opRev_Revised9) {
+		this.opRev_Revised9 = opRev_Revised9;
+	}
+	public String getOpRev_Revised10() {
+		return opRev_Revised10;
+	}
+	public void setOpRev_Revised10(String opRev_Revised10) {
+		this.opRev_Revised10 = opRev_Revised10;
+	}
+	public String getOpRev_Revised11() {
+		return opRev_Revised11;
+	}
+	public void setOpRev_Revised11(String opRev_Revised11) {
+		this.opRev_Revised11 = opRev_Revised11;
+	}
+	public String getOpRev_Revised12() {
+		return opRev_Revised12;
+	}
+	public void setOpRev_Revised12(String opRev_Revised12) {
+		this.opRev_Revised12 = opRev_Revised12;
+	}
+	public String getOpRev_Revised13() {
+		return opRev_Revised13;
+	}
+	public void setOpRev_Revised13(String opRev_Revised13) {
+		this.opRev_Revised13 = opRev_Revised13;
+	}
+	public String getOpRev_Revised14() {
+		return opRev_Revised14;
+	}
+	public void setOpRev_Revised14(String opRev_Revised14) {
+		this.opRev_Revised14 = opRev_Revised14;
+	}
+	public String getOpRev_Revised15() {
+		return opRev_Revised15;
+	}
+	public void setOpRev_Revised15(String opRev_Revised15) {
+		this.opRev_Revised15 = opRev_Revised15;
+	}
+	public String getOpRev_Revised16() {
+		return opRev_Revised16;
+	}
+	public void setOpRev_Revised16(String opRev_Revised16) {
+		this.opRev_Revised16 = opRev_Revised16;
+	}
+	public String getOpRev_Revised17() {
+		return opRev_Revised17;
+	}
+	public void setOpRev_Revised17(String opRev_Revised17) {
+		this.opRev_Revised17 = opRev_Revised17;
+	}
+	public String getOpRev_Revised18() {
+		return opRev_Revised18;
+	}
+	public void setOpRev_Revised18(String opRev_Revised18) {
+		this.opRev_Revised18 = opRev_Revised18;
+	}
+	public String getOpRev_Revised19() {
+		return opRev_Revised19;
+	}
+	public void setOpRev_Revised19(String opRev_Revised19) {
+		this.opRev_Revised19 = opRev_Revised19;
+	}
+	public String getOpRev_Revised20() {
+		return opRev_Revised20;
+	}
+	public void setOpRev_Revised20(String opRev_Revised20) {
+		this.opRev_Revised20 = opRev_Revised20;
+	}
 	public String getCompBNursing_calc1() {
 		return compBNursing_calc1;
 	}
@@ -7520,6 +7846,30 @@ public class Root{
 	}
 	public void setNopRev_Budget2(String nopRev_YTD2) {
 		this.nopRev_Budget2 = nopRev_YTD2;
+	}
+    public String getNopRev_Adjustment1() {
+		return nopRev_Adjustment1;
+	}
+	public void setNopRev_Adjustment1(String nopRev_Adjustment1) {
+		this.nopRev_Adjustment1 = nopRev_Adjustment1;
+	}
+	public String getNopRev_Adjustment2() {
+		return nopRev_Adjustment2;
+	}
+	public void setNopRev_Adjustment2(String nopRev_Adjustment2) {
+		this.nopRev_Adjustment2 = nopRev_Adjustment2;
+	}
+	public String getNopRev_Revised1() {
+		return nopRev_Revised1;
+	}
+	public void setNopRev_Revised1(String nopRev_Revised1) {
+		this.nopRev_Revised1 = nopRev_Revised1;
+	}
+	public String getNopRev_Revised2() {
+		return nopRev_Revised2;
+	}
+	public void setNopRev_Revised2(String nopRev_Revised2) {
+		this.nopRev_Revised2 = nopRev_Revised2;
 	}
 	public String getNopSu_data1() {
 		return nopSu_data1;
