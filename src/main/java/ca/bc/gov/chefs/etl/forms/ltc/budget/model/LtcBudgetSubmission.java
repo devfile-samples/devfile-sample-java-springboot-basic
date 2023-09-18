@@ -28,7 +28,6 @@ public class LtcBudgetSubmission implements IModel {
 	private String totalSalariesWages;
 	private String totalBenefits;
 	private String benefitsPercent;
-	private String totalVacancies;
 
 	private List<LtcBudgetCompAddPos> ltcBudgetCompAddPos;
 	private List<LtcBudgetCompBenefits> ltcBudgetCompBenefits;
@@ -79,7 +78,6 @@ public class LtcBudgetSubmission implements IModel {
 		elements.add(this.getTotalBenefits());
 		elements.add(this.getTotalSalariesWages());
 		elements.add(this.getBenefitsPercent());
-		elements.add(this.getTotalVacancies());
 		return elements;
 	}
 
@@ -345,15 +343,6 @@ public class LtcBudgetSubmission implements IModel {
 	public void setBenefitsPercent(String benefitsPercent) {
 		this.benefitsPercent = benefitsPercent;
 	}
-
-	public String getTotalVacancies() {
-		return totalVacancies;
-	}
-
-	public void setTotalVacancies(String totalVacancies) {
-		this.totalVacancies = totalVacancies;
-	}
-
 	public String getTotalSalariesWages() {
 		return totalSalariesWages;
 	}

@@ -98,10 +98,9 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			ltcBudgetSubmission.setSubmissionFy(root.getFiscalYear());
 			ltcBudgetSubmission.setNbTotalBeds(root.getNumberOfTotalBeds());
 			ltcBudgetSubmission.setNbFundedBeds(root.getNumberOfTotalFundedBeds());
-			ltcBudgetSubmission.setTotalSalariesWages(root.getbTotal_YTDSalaryWage());
 			ltcBudgetSubmission.setTotalBenefits(root.getBenefit_value_total());
+			ltcBudgetSubmission.setTotalSalariesWages(root.getbTotal_YTDSalaryWage());
 			ltcBudgetSubmission.setBenefitsPercent(root.getbTotal_value_sum());
-			ltcBudgetSubmission.setTotalVacancies(root.getNursingNVP_sum11());
 			
 			/* START : Direct Care Hours */
 			/* Productive and NP Nursing */ // why no subtotal and total?
