@@ -14,6 +14,7 @@ public class LtcYtdDirectCareHrsSubTotals implements IModel{
 	private String dirCareType;
 	private String subTotalDirCareProdHrsRegularYTD;
 	private String subTotalDirCareProdHrsOTYTD;
+	private String subTotalDirCareProdHrsOrientationYTD;
 	private String subTotalDirCareProdHrsSubtotalYTD;
 	private String subTotalDirCareProdHrsContServYTD;
 	private String subTotalDirCareProdHrsAgencyStaffUtil = Constants.DEFAULT_DECIMAL_VALUE;
@@ -56,7 +57,13 @@ public class LtcYtdDirectCareHrsSubTotals implements IModel{
 	public void setSubTotalDirCareProdHrsOTYTD(String subTotalDirCareProdHrsOTYTD) {
 		this.subTotalDirCareProdHrsOTYTD = subTotalDirCareProdHrsOTYTD;
 	}
+	public String getSubTotalDirCareProdHrsOrientationYTD() {
+		return subTotalDirCareProdHrsOrientationYTD;
+	}
 
+	public void setSubTotalDirCareProdHrsOrientationYTD(String subTotalDirCareProdHrsOrientationYTD) {
+		this.subTotalDirCareProdHrsOrientationYTD = subTotalDirCareProdHrsOrientationYTD;
+	}
 	public String getSubTotalDirCareProdHrsSubtotalYTD() {
 		return subTotalDirCareProdHrsSubtotalYTD;
 	}
@@ -147,6 +154,7 @@ public class LtcYtdDirectCareHrsSubTotals implements IModel{
 		elements.add(this.getDirCareType());
 		elements.add(this.getSubTotalDirCareProdHrsRegularYTD());
 		elements.add(this.getSubTotalDirCareProdHrsOTYTD());
+		elements.add(this.getSubTotalDirCareProdHrsOrientationYTD());
 		elements.add(this.getSubTotalDirCareProdHrsSubtotalYTD());
 		elements.add(this.getSubTotalDirCareProdHrsContServYTD());
 		elements.add(this.getSubTotalDirCareProdHrsAgencyStaffUtil());
