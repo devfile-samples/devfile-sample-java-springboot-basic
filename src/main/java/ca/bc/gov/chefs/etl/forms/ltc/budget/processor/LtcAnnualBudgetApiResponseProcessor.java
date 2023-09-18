@@ -55,7 +55,7 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 		List<IModel> iModels =  (List<IModel>)(List<?>) parsedLtycBudgetSubmissions;
 		Map<String,List<List<String>>> map = CSVUtil.provider(iModels);
 		boolean isHeaderAdded = (boolean) exchange.getProperties().get(Constants.IS_HEADER_ADDED);
-		List<String> filesGenerated = FileUtil.writeToCSVFile(map,Constants.LTC_QUARTERLY_DIR, isHeaderAdded);
+		List<String> filesGenerated = FileUtil.writeToCSVFile(map,Constants.LTC_BUDGET_DIR, isHeaderAdded);
 		//TODO uncomment or remove dead code
 		// SuccessResponse successResponse = new SuccessResponse();
 		// successResponse.setFiles(filesGenerated);

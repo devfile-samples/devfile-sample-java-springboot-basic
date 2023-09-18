@@ -171,6 +171,11 @@ public class Constants {
 	public static final String LTC_STAFFING_PLAN_UNENCRYPTED_FP = FileUtil.buildDestinationPath(PROPERTIES_LTC_STAFFING_PLAN_DIR, false);
 	public static final String LTC_STAFFING_PLAN_ENCRYPTED_FP = FileUtil.buildDestinationPath(PROPERTIES_LTC_STAFFING_PLAN_DIR, true);
 
+	public final static String PROPERTIES_LTC_BUDGET_DIR = "ltc-budget-dir";
+	public final static String LTC_BUDGET_DIR = FileUtil.getDirectoryName(PROPERTIES_LTC_BUDGET_DIR);
+	public static final String LTC_BUDGET_UNENCRYPTED_FP = FileUtil.buildDestinationPath(PROPERTIES_LTC_BUDGET_DIR, false);
+	public static final String LTC_BUDGET_ENCRYPTED_FP = FileUtil.buildDestinationPath(PROPERTIES_LTC_BUDGET_DIR, true);
+
 	/* public Encryption Key */
 	public final static String PUBLIC_KEY_NAME_PROPERTY = "public-key-file-name";
 	public final static String PUBLIC_KEY_PATH = FileUtil.buildPublicKeyPath(PUBLIC_KEY_NAME_PROPERTY);
@@ -181,13 +186,15 @@ public class Constants {
 		
 		UNENC_FILE_PATH.put(LTC_FACILITY_DIR, LTC_FACILITY_UNENCRYPTED_FP);
 		UNENC_FILE_PATH.put(LTC_QUARTERLY_DIR, LTC_QUARTERLY_YTD_UNENCRYPTED_FP);
-		UNENC_FILE_PATH.put(AIMS_DIR,AIMS_UNENCRYPTED_FP);
 		UNENC_FILE_PATH.put(LTC_STAFFING_PLAN_DIR, LTC_STAFFING_PLAN_UNENCRYPTED_FP);
+		UNENC_FILE_PATH.put(LTC_BUDGET_DIR, LTC_BUDGET_UNENCRYPTED_FP);
+		UNENC_FILE_PATH.put(AIMS_DIR,AIMS_UNENCRYPTED_FP);
 		
 		ENC_FILE_PATH.put(AIMS_DIR, AIMS_ENCRYPTED_FP);
 		ENC_FILE_PATH.put(LTC_FACILITY_DIR, LTC_FACILITY_ENCRYPTED_FP);
 		ENC_FILE_PATH.put(LTC_QUARTERLY_DIR, LTC_QUARTERLY_YTD_ENCRYPTED_FP);
 		ENC_FILE_PATH.put(LTC_STAFFING_PLAN_DIR, LTC_STAFFING_PLAN_ENCRYPTED_FP);
+		ENC_FILE_PATH.put(LTC_BUDGET_DIR, LTC_BUDGET_ENCRYPTED_FP);
 
 		LTC_YTD_OLD_KEYS_COMPATIBILITY.put("compB_calc13","compBNursing_calc1");
 		LTC_YTD_OLD_KEYS_COMPATIBILITY.put("compB_calc14","compBNursing_calc2");
