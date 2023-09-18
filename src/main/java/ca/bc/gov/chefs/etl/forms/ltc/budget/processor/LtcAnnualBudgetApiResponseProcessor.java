@@ -51,7 +51,7 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 		ObjectMapper mapper = new ObjectMapper();
 		List<Root> ltcBudgetForms = mapper.readValue(payload, new TypeReference<List<Root>>() {
 		});
-		List<LtcBudgetSubmission> parsedLtycBudgetSubmissions = parseBudgetQuarterlyRequest(ltcBudgetForms);
+		List<LtcBudgetSubmission> parsedLtycBudgetSubmissions = parseAnnualBudgetRequest(ltcBudgetForms);
 		List<IModel> iModels =  (List<IModel>)(List<?>) parsedLtycBudgetSubmissions;
 		Map<String,List<List<String>>> map = CSVUtil.provider(iModels);
 		boolean isHeaderAdded = (boolean) exchange.getProperties().get(Constants.IS_HEADER_ADDED);
@@ -64,9 +64,9 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 		
 	}
 
-	private List<LtcBudgetSubmission> parseBudgetQuarterlyRequest(List<Root> ltcQuarterlyBudgetSubmissions) {
+	private List<LtcBudgetSubmission> parseAnnualBudgetRequest(List<Root> ltcAnnualBudgetSubmissions) {
 		List<LtcBudgetSubmission> ltcBudgetSubmissions = new ArrayList<>();
-		for (Root root : ltcQuarterlyBudgetSubmissions) {
+		for (Root root : ltcAnnualBudgetSubmissions) {
 			LtcBudgetSubmission ltcBudgetSubmission = new LtcBudgetSubmission();
 			List<LtcBudgetDirectCareHrs> ltcBudgetDcHrs = new ArrayList<>();
 			List<LtcBudgetDirectCareHrsSubTotals> ltcBudgetDcHrsSubttls = new ArrayList<>();
