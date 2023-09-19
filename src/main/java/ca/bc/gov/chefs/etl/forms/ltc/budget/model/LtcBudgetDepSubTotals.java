@@ -27,7 +27,7 @@ public class LtcBudgetDepSubTotals implements IModel {
 		return subTotalDepAtApril;
 	}
 	public void setSubTotalDepAtApril(String subTotalDepAtApril) {
-		this.subTotalDepAtApril = subTotalDepAtApril;
+		this.subTotalDepAtApril = StringUtils.defaultIfEmpty(subTotalDepAtApril, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getSubTotalDepAdjustment() {
 		return subTotalDepAdjustment;

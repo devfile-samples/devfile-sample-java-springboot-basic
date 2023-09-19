@@ -34,7 +34,7 @@ public class LtcBudgetDep implements IModel {
 		return depAtApril;
 	}
 	public void setDepAtApril(String depAtApril) {
-		this.depAtApril = depAtApril;
+		this.depAtApril = StringUtils.defaultIfEmpty(depAtApril, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getDepAdjustment() {
 		return depAdjustment;

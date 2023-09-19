@@ -34,7 +34,7 @@ public class LtcBudgetExpTotals implements IModel {
 		return subTotalExpAtApril;
 	}
 	public void setSubTotalExpAtApril(String subTotalExpAtApril) {
-		this.subTotalExpAtApril = subTotalExpAtApril;
+		this.subTotalExpAtApril = StringUtils.defaultIfEmpty(subTotalExpAtApril, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getSubTotalExpAdjustment() {
 		return subTotalExpAdjustment;

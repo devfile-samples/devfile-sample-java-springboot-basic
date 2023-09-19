@@ -41,7 +41,7 @@ public class LtcBudgetExp implements IModel {
 		return expAtApril;
 	}
 	public void setExpAtApril(String expAtApril) {
-		this.expAtApril = expAtApril;
+		this.expAtApril = StringUtils.defaultIfEmpty(expAtApril, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getExpAdjustment() {
 		return expAdjustment;

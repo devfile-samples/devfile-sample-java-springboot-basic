@@ -34,7 +34,7 @@ public class LtcBudgetRevTotals implements IModel {
 		return subTotalRevAtApril;
 	}
 	public void setSubTotalRevAtApril(String subTotalRevAtApril) {
-		this.subTotalRevAtApril = subTotalRevAtApril;
+		this.subTotalRevAtApril = StringUtils.defaultIfEmpty(subTotalRevAtApril, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getSubTotalRevAdjustment() {
 		return subTotalRevAdjustment;

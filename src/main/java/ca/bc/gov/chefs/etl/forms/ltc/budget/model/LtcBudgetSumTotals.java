@@ -35,7 +35,7 @@ public class LtcBudgetSumTotals implements IModel {
 		return totAtApril;
 	}
 	public void setTotAtApril(String totAtApril) {
-		this.totAtApril = totAtApril;
+		this.totAtApril = StringUtils.defaultIfEmpty(totAtApril, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getTotAdjustment() {
 		return totAdjustment;
