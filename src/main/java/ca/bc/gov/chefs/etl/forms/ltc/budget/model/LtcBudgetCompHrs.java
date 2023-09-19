@@ -17,7 +17,7 @@ public class LtcBudgetCompHrs implements IModel {
 	private String compHrsStaffBudget;
 	private String compHrsContractServicesBudget;
 	private String compTotalWorkedHrsBudget;
-	private String compHrsOtherName = Constants.DEFAULT_STRING_VALUE;
+	private String compHrsOtherName = Constants.DEFAULT_NA_VALUE;
 	
 	public String getCompHrsOtherName() {
 		return compHrsOtherName;

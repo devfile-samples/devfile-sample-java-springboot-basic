@@ -12,7 +12,7 @@ public class LtcBudgetDirectCareCost implements IModel{
 	private String confirmationId;
 	private String dirCareCostType;
 	private String dirCareCostName;
-	private String dirCareOtherValue = Constants.DEFAULT_STRING_VALUE;
+	private String dirCareOtherValue = Constants.DEFAULT_NA_VALUE;
 	private String dirCareCostProdHrsRegBudget;
 	private String dirCareCostProdHrsOtBudget;
 	private String dirCareCostProdHrsOrientationBudget;

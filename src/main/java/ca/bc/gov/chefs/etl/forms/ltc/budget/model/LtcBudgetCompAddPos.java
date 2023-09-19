@@ -16,7 +16,7 @@ public class LtcBudgetCompAddPos implements IModel{
 	private String addPosContractedOutBudget;
 	private String addPosLegalNameContractServiceBudget;
 	private String addPosPercentServiceContractOutBudget;
-	private String addPosAnotherName = "";
+	private String addPosAnotherName = Constants.DEFAULT_NA_VALUE;
 	
 	public String getConfirmationId() {
 		return confirmationId;

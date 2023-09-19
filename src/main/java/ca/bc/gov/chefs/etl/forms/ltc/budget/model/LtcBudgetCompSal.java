@@ -16,7 +16,7 @@ public class LtcBudgetCompSal implements IModel{
 	private String compSalStaffBudget;
 	private String compSalContractServicesBudget;
 	private String compSalTotalCostBudget;
-	private String compSalOtherName = Constants.DEFAULT_STRING_VALUE;
+	private String compSalOtherName = Constants.DEFAULT_NA_VALUE;
 
 	public String getCompSalTotalCostBudget() {
 		return compSalTotalCostBudget;

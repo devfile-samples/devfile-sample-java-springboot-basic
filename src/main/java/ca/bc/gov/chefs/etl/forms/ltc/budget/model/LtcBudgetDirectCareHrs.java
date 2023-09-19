@@ -13,7 +13,7 @@ public class LtcBudgetDirectCareHrs implements IModel{
 	private String confirmationId;
 	private String dirCareType; // nursing, allied, etc
 	private String dirCareName;  // RN, OcP etc
-	private String dirCareOtherValue;  // RN, OcP etc
+	private String dirCareOtherValue = Constants.DEFAULT_NA_VALUE;  // RN, OcP etc
 	private String dirCareProdHrsRegBudget;
 	private String dirCareProdHrsOtBudget;
 	private String dirCareProdHrsOrientationBudget;
