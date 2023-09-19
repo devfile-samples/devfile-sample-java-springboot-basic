@@ -2012,42 +2012,54 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			Collections.addAll(ltcBudgetRevSubTtls, revFromHA1Subttl,revFromHA2Subttl,revFromHA4Subttl,clntRevSubttl,othRevSubttl,opRevSubttl, nonOpRevSubttl);
 
 			LtcBudgetExp dirCareCostExp = new LtcBudgetExp();
-			dirCareCostExp.setExpBudget(root.getOpEx_Budget1());
+			dirCareCostExp.setExpAtApril(root.getOpEx_Budget1());
+			dirCareCostExp.setExpAdjustment(root.getOpEx_Adjustment1());
+			dirCareCostExp.setExpRevised(root.getOpEx_Revised1());
 			dirCareCostExp.setExpNotes(root.getOpEx_note1());
 			dirCareCostExp.setExpName(root.getOpEx_Budget_label1());
 			dirCareCostExp.setExpType(root.getOpEx_1A_label());
 			dirCareCostExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp foodCostExp = new LtcBudgetExp();
-			foodCostExp.setExpBudget(root.getOpEx_Budget2());
+			foodCostExp.setExpAtApril(root.getOpEx_Budget2());
+			foodCostExp.setExpAdjustment(root.getOpEx_Adjustment2());
+			foodCostExp.setExpRevised(root.getOpEx_Revised2());
 			foodCostExp.setExpNotes(root.getOpEx_note2());
 			foodCostExp.setExpName(root.getOpEx_Budget_label2());
 			foodCostExp.setExpType(root.getOpEx_1A_label());
 			foodCostExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp ldryServExp = new LtcBudgetExp();
-			ldryServExp.setExpBudget(root.getOpEx_Budget3());
+			ldryServExp.setExpAtApril(root.getOpEx_Budget3());
+			ldryServExp.setExpAdjustment(root.getOpEx_Adjustment3());
+			ldryServExp.setExpRevised(root.getOpEx_Revised3());
 			ldryServExp.setExpNotes(root.getOpEx_note3());
 			ldryServExp.setExpName(root.getOpEx_Budget_label3());
 			ldryServExp.setExpType(root.getOpEx_1A_label());
 			ldryServExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp housekeepingCostExp = new LtcBudgetExp();
-			housekeepingCostExp.setExpBudget(root.getOpEx_Budget4());
+			housekeepingCostExp.setExpAtApril(root.getOpEx_Budget4());
+			housekeepingCostExp.setExpAdjustment(root.getOpEx_Adjustment4());
+			housekeepingCostExp.setExpRevised(root.getOpEx_Revised4());
 			housekeepingCostExp.setExpNotes(root.getOpEx_note4());
 			housekeepingCostExp.setExpName(root.getOpEx_Budget_label4());
 			housekeepingCostExp.setExpType(root.getOpEx_1A_label());
 			housekeepingCostExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp adminServCostExp = new LtcBudgetExp();
-			adminServCostExp.setExpBudget(root.getOpEx_Budget5());
+			adminServCostExp.setExpAtApril(root.getOpEx_Budget5());
+			adminServCostExp.setExpAdjustment(root.getOpEx_Adjustment5());
+			adminServCostExp.setExpRevised(root.getOpEx_Revised5());
 			adminServCostExp.setExpNotes(root.getOpEx_note5());
 			adminServCostExp.setExpName(root.getOpEx_Budget_label5());
 			adminServCostExp.setExpType(root.getOpEx_1A_label());
 			adminServCostExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp plantMainOpStaffExp = new LtcBudgetExp();
-			plantMainOpStaffExp.setExpBudget(root.getOpEx_Budget6());
+			plantMainOpStaffExp.setExpAtApril(root.getOpEx_Budget6());
+			plantMainOpStaffExp.setExpAdjustment(root.getOpEx_Adjustment6());
+			plantMainOpStaffExp.setExpRevised(root.getOpEx_Revised6());
 			plantMainOpStaffExp.setExpNotes(root.getOpEx_note6());
 			plantMainOpStaffExp.setExpName(root.getOpEx_Budget_label6());
 			plantMainOpStaffExp.setExpType(root.getOpEx_1A_label());
@@ -2055,21 +2067,27 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 
 			// subtotal before salary and wages - omitted
 			LtcBudgetExp salWagRecvExp = new LtcBudgetExp();
-			salWagRecvExp.setExpBudget(root.getOpEx_Budget7());
+			salWagRecvExp.setExpAtApril(root.getOpEx_Budget7());
+			salWagRecvExp.setExpAdjustment(root.getOpEx_Adjustment7());
+			salWagRecvExp.setExpRevised(root.getOpEx_Revised7());
 			salWagRecvExp.setExpNotes(root.getOpEx_note7());
 			salWagRecvExp.setExpName(root.getOpEx_Budget_label7());
 			salWagRecvExp.setExpType(root.getOpEx_1A_label());
 			salWagRecvExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp salWagAccExp = new LtcBudgetExp();
-			salWagAccExp.setExpBudget(root.getOpEx_Budget8());
+			salWagAccExp.setExpAtApril(root.getOpEx_Budget8());
+			salWagAccExp.setExpAdjustment(root.getOpEx_Adjustment8());
+			salWagAccExp.setExpRevised(root.getOpEx_Revised8());
 			salWagAccExp.setExpNotes(root.getOpEx_note8());
 			salWagAccExp.setExpName(root.getOpEx_Budget_label8());
 			salWagAccExp.setExpType(root.getOpEx_1A_label());
 			salWagAccExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp othLabCostExp = new LtcBudgetExp();
-			othLabCostExp.setExpBudget(root.getOpEx_Budget9());
+			othLabCostExp.setExpAtApril(root.getOpEx_Budget9());
+			othLabCostExp.setExpAdjustment(root.getOpEx_Adjustment9());
+			othLabCostExp.setExpRevised(root.getOpEx_Revised9());
 			othLabCostExp.setExpNotes(root.getOpEx_note9());
 			othLabCostExp.setExpName(root.getOpEx_Budget_label9());
 			othLabCostExp.setExpType(root.getOpEx_1A_label());
@@ -2078,14 +2096,18 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			// subtotal
 
 			LtcBudgetExp bnftCostExp = new LtcBudgetExp();
-			bnftCostExp.setExpBudget(root.getOpEx_Budget10());
+			bnftCostExp.setExpAtApril(root.getOpEx_Budget10());
+			bnftCostExp.setExpAdjustment(root.getOpEx_Adjustment10());
+			bnftCostExp.setExpRevised(root.getOpEx_Revised10());
 			bnftCostExp.setExpNotes(root.getOpEx_note10());
 			bnftCostExp.setExpName(root.getOpEx_Budget_label10());
 			bnftCostExp.setExpType(root.getOpEx_1B_label());
 			bnftCostExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp sickSevrnceAccExp = new LtcBudgetExp();
-			sickSevrnceAccExp.setExpBudget(root.getOpEx_Budget11());
+			sickSevrnceAccExp.setExpAtApril(root.getOpEx_Budget11());
+			sickSevrnceAccExp.setExpAdjustment(root.getOpEx_Adjustment11());
+			sickSevrnceAccExp.setExpRevised(root.getOpEx_Revised11());
 			sickSevrnceAccExp.setExpNotes(root.getOpEx_note11());
 			sickSevrnceAccExp.setExpName(root.getOpEx_Budget_label11());
 			sickSevrnceAccExp.setExpType(root.getOpEx_1B_label());
@@ -2093,63 +2115,82 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 
 			// subtotal
 			LtcBudgetExp buildingRentExp = new LtcBudgetExp();
-			buildingRentExp.setExpBudget(root.getOpEx_Budget12());
+			buildingRentExp.setExpAtApril(root.getOpEx_Budget12());
+			buildingRentExp.setExpAdjustment(root.getOpEx_Adjustment12());
+			buildingRentExp.setExpRevised(root.getOpEx_Revised12());
 			buildingRentExp.setExpNotes(root.getOpEx_note12());
 			buildingRentExp.setExpName(root.getOpEx_Budget_label12());
 			buildingRentExp.setExpType(root.getOpEx_2_label());
 			buildingRentExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp intrstMortgageLngTrmExp = new LtcBudgetExp();
-			intrstMortgageLngTrmExp.setExpBudget(root.getOpEx_Budget13());
+			intrstMortgageLngTrmExp.setExpAtApril(root.getOpEx_Budget13());
+			intrstMortgageLngTrmExp.setExpAdjustment(root.getOpEx_Adjustment13());
+			intrstMortgageLngTrmExp.setExpRevised(root.getOpEx_Revised13());
 			intrstMortgageLngTrmExp.setExpNotes(root.getOpEx_note13());
 			intrstMortgageLngTrmExp.setExpName(root.getOpEx_Budget_label13());
 			intrstMortgageLngTrmExp.setExpType(root.getOpEx_2_label());
 			intrstMortgageLngTrmExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp propertyTaxesExp = new LtcBudgetExp();
-			propertyTaxesExp.setExpBudget(root.getOpEx_Budget14());
+			propertyTaxesExp.setExpAtApril(root.getOpEx_Budget14());
+			propertyTaxesExp.setExpAdjustment(root.getOpEx_Adjustment14());
+			propertyTaxesExp.setExpRevised(root.getOpEx_Revised14());
 			propertyTaxesExp.setExpNotes(root.getOpEx_note14());
 			propertyTaxesExp.setExpName(root.getOpEx_Budget_label14());
 			propertyTaxesExp.setExpType(root.getOpEx_2_label());
 			propertyTaxesExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp mntnceExp = new LtcBudgetExp();
-			mntnceExp.setExpBudget(root.getOpEx_Budget15());
+			mntnceExp.setExpAtApril(root.getOpEx_Budget15());
+			mntnceExp.setExpAdjustment(root.getOpEx_Adjustment15());
+			mntnceExp.setExpRevised(root.getOpEx_Revised15());
+			mntnceExp.setExpAtApril(root.getOpEx_Budget15());
 			mntnceExp.setExpNotes(root.getOpEx_note15());
 			mntnceExp.setExpName(root.getOpEx_Budget_label15());
 			mntnceExp.setExpType(root.getOpEx_2_label());
 			mntnceExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp suppliesExp = new LtcBudgetExp();
-			suppliesExp.setExpBudget(root.getOpEx_Budget16());
+			suppliesExp.setExpAtApril(root.getOpEx_Budget16());
+			suppliesExp.setExpAdjustment(root.getOpEx_Adjustment16());
+			suppliesExp.setExpRevised(root.getOpEx_Revised16());
 			suppliesExp.setExpNotes(root.getOpEx_note16());
 			suppliesExp.setExpName(root.getOpEx_Budget_label16());
 			suppliesExp.setExpType(root.getOpEx_2_label());
 			suppliesExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp utilitiesExp = new LtcBudgetExp();
-			utilitiesExp.setExpBudget(root.getOpEx_Budget17());
+			utilitiesExp.setExpAtApril(root.getOpEx_Budget17());
+			utilitiesExp.setExpAdjustment(root.getOpEx_Adjustment17());
+			utilitiesExp.setExpRevised(root.getOpEx_Revised17());
 			utilitiesExp.setExpNotes(root.getOpEx_note17());
 			utilitiesExp.setExpName(root.getOpEx_Budget_label17());
 			utilitiesExp.setExpType(root.getOpEx_2_label());
 			utilitiesExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp wasteMgmntExp = new LtcBudgetExp();
-			wasteMgmntExp.setExpBudget(root.getOpEx_Budget18());
+			wasteMgmntExp.setExpAtApril(root.getOpEx_Budget18());
+			wasteMgmntExp.setExpAdjustment(root.getOpEx_Adjustment18());
+			wasteMgmntExp.setExpRevised(root.getOpEx_Revised18());
 			wasteMgmntExp.setExpNotes(root.getOpEx_note18());
 			wasteMgmntExp.setExpName(root.getOpEx_Budget_label18());
 			wasteMgmntExp.setExpType(root.getOpEx_2_label());
 			wasteMgmntExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp resTranServExp = new LtcBudgetExp();
-			resTranServExp.setExpBudget(root.getOpEx_Budget19());
+			resTranServExp.setExpAtApril(root.getOpEx_Budget19());
+			resTranServExp.setExpAdjustment(root.getOpEx_Adjustment19());
+			resTranServExp.setExpRevised(root.getOpEx_Revised19());
 			resTranServExp.setExpNotes(root.getOpEx_note19());
 			resTranServExp.setExpName(root.getOpEx_Budget_label19());
 			resTranServExp.setExpType(root.getOpEx_2_label());
 			resTranServExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp othExp = new LtcBudgetExp();
-			othExp.setExpBudget(root.getOpEx_Budget20());
+			othExp.setExpAtApril(root.getOpEx_Budget20());
+			othExp.setExpAdjustment(root.getOpEx_Adjustment20());
+			othExp.setExpRevised(root.getOpEx_Revised20());
 			othExp.setExpNotes(root.getOpEx_note20());
 			othExp.setExpName(root.getOpEx_Budget_label20());
 			othExp.setExpType(root.getOpEx_2_label());
@@ -2158,21 +2199,27 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			// skipping subtotal for now
 
 			LtcBudgetExp medSupExp = new LtcBudgetExp();
-			medSupExp.setExpBudget(root.getOpEx_Budget21());
+			medSupExp.setExpAtApril(root.getOpEx_Budget21());
+			medSupExp.setExpAdjustment(root.getOpEx_Adjustment21());
+			medSupExp.setExpRevised(root.getOpEx_Revised21());
 			medSupExp.setExpNotes(root.getOpEx_note21());
 			medSupExp.setExpName(root.getOpEx_Budget_label21());
 			medSupExp.setExpType(root.getOpEx_3_label());
 			medSupExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp drgsPharmaExp = new LtcBudgetExp();
-			drgsPharmaExp.setExpBudget(root.getOpEx_Budget22());
+			drgsPharmaExp.setExpAtApril(root.getOpEx_Budget22());
+			drgsPharmaExp.setExpAdjustment(root.getOpEx_Adjustment22());
+			drgsPharmaExp.setExpRevised(root.getOpEx_Revised22());
 			drgsPharmaExp.setExpNotes(root.getOpEx_note22());
 			drgsPharmaExp.setExpName(root.getOpEx_Budget_label22());
 			drgsPharmaExp.setExpType(root.getOpEx_3_label());
 			drgsPharmaExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp rawFoodCostExp = new LtcBudgetExp();
-			rawFoodCostExp.setExpBudget(root.getOpEx_Budget23());
+			rawFoodCostExp.setExpAtApril(root.getOpEx_Budget23());
+			rawFoodCostExp.setExpAdjustment(root.getOpEx_Adjustment23());
+			rawFoodCostExp.setExpRevised(root.getOpEx_Revised23());
 			rawFoodCostExp.setExpNotes(root.getOpEx_note23());
 			rawFoodCostExp.setExpName(root.getOpEx_Budget_label23());
 			rawFoodCostExp.setExpType(root.getOpEx_3_label());
@@ -2181,28 +2228,36 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			
 
 			LtcBudgetExp dietSupExp = new LtcBudgetExp();
-			dietSupExp.setExpBudget(root.getOpEx_Budget24());
+			dietSupExp.setExpAtApril(root.getOpEx_Budget24());
+			dietSupExp.setExpAdjustment(root.getOpEx_Adjustment24());
+			dietSupExp.setExpRevised(root.getOpEx_Revised24());
 			dietSupExp.setExpNotes(root.getOpEx_note24());
 			dietSupExp.setExpName(root.getOpEx_Budget_label24());
 			dietSupExp.setExpType(root.getOpEx_3_label());
 			dietSupExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp ldrySupExp = new LtcBudgetExp();
-			ldrySupExp.setExpBudget(root.getOpEx_Budget25());
+			ldrySupExp.setExpAtApril(root.getOpEx_Budget25());
+			ldrySupExp.setExpAdjustment(root.getOpEx_Adjustment25());
+			ldrySupExp.setExpRevised(root.getOpEx_Revised25());
 			ldrySupExp.setExpNotes(root.getOpEx_note25());
 			ldrySupExp.setExpName(root.getOpEx_Budget_label25());
 			ldrySupExp.setExpType(root.getOpEx_3_label());
 			ldrySupExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp houseSupExp = new LtcBudgetExp();
-			houseSupExp.setExpBudget(root.getOpEx_Budget26());
+			houseSupExp.setExpAtApril(root.getOpEx_Budget26());
+			houseSupExp.setExpAdjustment(root.getOpEx_Adjustment26());
+			houseSupExp.setExpRevised(root.getOpEx_Revised26());
 			houseSupExp.setExpNotes(root.getOpEx_note26());
 			houseSupExp.setExpName(root.getOpEx_Budget_label26());
 			houseSupExp.setExpType(root.getOpEx_3_label());
 			houseSupExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp incontinenceSupExp = new LtcBudgetExp();
-			incontinenceSupExp.setExpBudget(root.getOpEx_Budget27());
+			incontinenceSupExp.setExpAtApril(root.getOpEx_Budget27());
+			incontinenceSupExp.setExpAdjustment(root.getOpEx_Adjustment27());
+			incontinenceSupExp.setExpRevised(root.getOpEx_Revised27());
 			incontinenceSupExp.setExpNotes(root.getOpEx_note27());
 			incontinenceSupExp.setExpName(root.getOpEx_Budget_label27());
 			incontinenceSupExp.setExpType(root.getOpEx_3_label());
@@ -2213,54 +2268,70 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			LtcBudgetExpTotals staffCost1ASubtotal = new LtcBudgetExpTotals();
 			staffCost1ASubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			staffCost1ASubtotal.setExpType(root.getOpEx_1A_label());
-			staffCost1ASubtotal.setSubTotalExpBudget(root.getOpEx_sum11());
+			staffCost1ASubtotal.setSubTotalExpAtApril(root.getOpEx_budget_sum1());
+			staffCost1ASubtotal.setSubTotalExpAdjustment(root.getOpEx_adjustment_sum1());
+			staffCost1ASubtotal.setSubTotalExpRevised(root.getOpEx_revised_sum1());
 			staffCost1ASubtotal.setSubTotalExpNotes(root.getOpEx_sum_note1());
 
 			LtcBudgetExpTotals staffCost1BSubtotal = new LtcBudgetExpTotals();
 			staffCost1BSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			staffCost1BSubtotal.setExpType(root.getOpEx_1B_label());
-			staffCost1BSubtotal.setSubTotalExpBudget(root.getOpEx_sum12());
+			staffCost1BSubtotal.setSubTotalExpAtApril(root.getOpEx_budget_sum2());
+			staffCost1BSubtotal.setSubTotalExpAdjustment(root.getOpEx_adjustment_sum2());
+			staffCost1BSubtotal.setSubTotalExpRevised(root.getOpEx_revised_sum2());
 			staffCost1BSubtotal.setSubTotalExpNotes(root.getOpEx_sum_note2());
 
 			LtcBudgetExpTotals propertyCostSubtotal = new LtcBudgetExpTotals();
 			propertyCostSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			propertyCostSubtotal.setExpType(root.getOpEx_2_label());
-			propertyCostSubtotal.setSubTotalExpBudget(root.getOpEx_sum13());
+			propertyCostSubtotal.setSubTotalExpAtApril(root.getOpEx_budget_sum3());
+			propertyCostSubtotal.setSubTotalExpAdjustment(root.getOpEx_adjustment_sum3());
+			propertyCostSubtotal.setSubTotalExpRevised(root.getOpEx_revised_sum3());
 			propertyCostSubtotal.setSubTotalExpNotes(root.getOpEx_sum_note3());
 
 			LtcBudgetExpTotals suppliesSubtotal = new LtcBudgetExpTotals();
 			suppliesSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			suppliesSubtotal.setExpType(root.getOpEx_3_label());
-			suppliesSubtotal.setSubTotalExpBudget(root.getOpEx_sum14());
+			suppliesSubtotal.setSubTotalExpAtApril(root.getOpEx_budget_sum4());
+			suppliesSubtotal.setSubTotalExpAdjustment(root.getOpEx_adjustment_sum4());
+			suppliesSubtotal.setSubTotalExpRevised(root.getOpEx_revised_sum4());
 			suppliesSubtotal.setSubTotalExpNotes(root.getOpEx_sum_note4());
 
 			LtcBudgetExpTotals adminCostSubtotal = new LtcBudgetExpTotals();
 			adminCostSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			adminCostSubtotal.setExpType(root.getOpEx_4_label());
-			adminCostSubtotal.setSubTotalExpBudget(root.getOpEx_sum15());
+			adminCostSubtotal.setSubTotalExpAtApril(root.getOpEx_budget_sum5());
+			adminCostSubtotal.setSubTotalExpAdjustment(root.getOpEx_adjustment_sum5());
+			adminCostSubtotal.setSubTotalExpRevised(root.getOpEx_revised_sum5());
 			adminCostSubtotal.setSubTotalExpNotes(root.getOpEx_sum_note5());
 
-			LtcBudgetExpTotals operatingCostSubtotal = new LtcBudgetExpTotals();
-			operatingCostSubtotal.setConfirmationId(root.getForm().getConfirmationId());
-			operatingCostSubtotal.setExpType(root.getOpEx_data_total_label());
-			operatingCostSubtotal.setSubTotalExpBudget(root.getOpEx_data_total());
-			operatingCostSubtotal.setSubTotalExpNotes(root.getOpEx_total_note());
+			LtcBudgetExpTotals operatingExpanseSubtotal = new LtcBudgetExpTotals();
+			operatingExpanseSubtotal.setConfirmationId(root.getForm().getConfirmationId());
+			operatingExpanseSubtotal.setExpType(root.getOpEx_data_total_label());
+			operatingExpanseSubtotal.setSubTotalExpAtApril(root.getOpEx_budget_total());
+			operatingExpanseSubtotal.setSubTotalExpAdjustment(root.getOpEx_adjustment_total());
+			operatingExpanseSubtotal.setSubTotalExpRevised(root.getOpEx_revised_total());
+			operatingExpanseSubtotal.setSubTotalExpNotes(root.getOpEx_total_note());
 
 			LtcBudgetExpTotals nonOperationalExpSubtotal = new LtcBudgetExpTotals();
 			nonOperationalExpSubtotal.setConfirmationId(root.getForm().getConfirmationId());
 			nonOperationalExpSubtotal.setExpType(root.getNopEx_label());
-			nonOperationalExpSubtotal.setSubTotalExpBudget(root.getNopEx_sum11());
+			nonOperationalExpSubtotal.setSubTotalExpAtApril(root.getNopEx_budget_sum());
+			nonOperationalExpSubtotal.setSubTotalExpAdjustment(root.getNopEx_adjustment_sum());
+			nonOperationalExpSubtotal.setSubTotalExpRevised(root.getNopEx_revised_sum());
 			nonOperationalExpSubtotal.setSubTotalExpNotes(root.getNopEx_sub_note());
 
 			LtcBudgetExpTotals beforeSalaryWagesRecAcc = new LtcBudgetExpTotals();
 			beforeSalaryWagesRecAcc.setConfirmationId(root.getForm().getConfirmationId());
 			beforeSalaryWagesRecAcc.setExpType("Before salary/wages rec./accruals");
-			beforeSalaryWagesRecAcc.setSubTotalExpBudget(root.getOpEx_sub1());
+			beforeSalaryWagesRecAcc.setSubTotalExpAtApril(root.getOpEx_budget_sub());
+			beforeSalaryWagesRecAcc.setSubTotalExpAdjustment(root.getOpEx_adjustment_sub());
+			beforeSalaryWagesRecAcc.setSubTotalExpRevised(root.getOpEx_revised_sub());
 			beforeSalaryWagesRecAcc.setSubTotalExpNotes(root.getOpEx_sub_note());
 
 			// /getOpEx_sub1()
 
-			Collections.addAll(ltcBudgetExpSubttls,staffCost1ASubtotal,staffCost1BSubtotal,propertyCostSubtotal,suppliesSubtotal,adminCostSubtotal,operatingCostSubtotal, nonOperationalExpSubtotal,
+			Collections.addAll(ltcBudgetExpSubttls,staffCost1ASubtotal,staffCost1BSubtotal,propertyCostSubtotal,suppliesSubtotal,adminCostSubtotal,operatingExpanseSubtotal, nonOperationalExpSubtotal,
 			 beforeSalaryWagesRecAcc);
 
 			/* END */
@@ -2269,13 +2340,17 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			LtcBudgetDep buildingDep = new LtcBudgetDep();
 			buildingDep.setConfirmationId(root.getForm().getConfirmationId());
 			buildingDep.setDepName(root.getOpDep_Budget_label1());
-			buildingDep.setDepBudget(root.getOpEx_item138());
+			buildingDep.setDepAtApril(root.getOpDep_budget1());
+			buildingDep.setDepAdjustment(root.getOpDep_adjustment1());
+			buildingDep.setDepRevised(root.getOpDep_revised1());
 			buildingDep.setDepNotes(root.getOpEx_note38());
 
 			LtcBudgetDep furnitureEquipmentDep = new LtcBudgetDep();
 			furnitureEquipmentDep.setConfirmationId(root.getForm().getConfirmationId());
 			furnitureEquipmentDep.setDepName(root.getOpDep_Budget_label2());
-			furnitureEquipmentDep.setDepBudget(root.getOpEx_item139());
+			furnitureEquipmentDep.setDepAtApril(root.getOpDep_budget2());
+			furnitureEquipmentDep.setDepAdjustment(root.getOpDep_adjustment2());
+			furnitureEquipmentDep.setDepRevised(root.getOpDep_revised2());
 			furnitureEquipmentDep.setDepNotes(root.getOpEx_note39());
 
 			Collections.addAll(ltcBudgetDep, buildingDep, furnitureEquipmentDep);
@@ -2285,7 +2360,9 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 
 			LtcBudgetDepSubTotals subTotalBudgetDep = new LtcBudgetDepSubTotals();
 			subTotalBudgetDep.setConfirmationId(root.getForm().getConfirmationId());
-			subTotalBudgetDep.setSubTotalDepBudget(root.getOpEx_sum16());
+			subTotalBudgetDep.setSubTotalDepAtApril(root.getOpDep_budget());
+			subTotalBudgetDep.setSubTotalDepAdjustment(root.getOpDep_adjustment());
+			subTotalBudgetDep.setSubTotalDepRevised(root.getOpDep_revised());
 			subTotalBudgetDep.setSubTotalDepNotes(root.getOpEx_note_sum6());
 
 			Collections.addAll(ltcBudgetDepSubTotals, subTotalBudgetDep);
@@ -2295,20 +2372,26 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			LtcBudgetSumTotals totalNonOperatingSurplus = new LtcBudgetSumTotals();
 			totalNonOperatingSurplus.setConfirmationId(root.getForm().getConfirmationId());
 			totalNonOperatingSurplus.setTotName(root.getNopSu_data_label());
-			totalNonOperatingSurplus.setSumBudget(root.getNopSu_data1());
+			totalNonOperatingSurplus.setTotAtApril(root.getNopSu_budget());
+			totalNonOperatingSurplus.setTotAdjustment(root.getNopSu_adjustment());
+			totalNonOperatingSurplus.setTotRevised(root.getNopSu_revised());
 			totalNonOperatingSurplus.setTotNotes(root.getNopSu_note());
 
 			LtcBudgetSumTotals operatingSurplusBeforeDepreciation = new LtcBudgetSumTotals();
 			operatingSurplusBeforeDepreciation.setConfirmationId(root.getForm().getConfirmationId());
 			operatingSurplusBeforeDepreciation.setTotName(root.getOpSuB_item11_label());
-			operatingSurplusBeforeDepreciation.setSumBudget(root.getOpSuB_item11());
+			operatingSurplusBeforeDepreciation.setTotAtApril(root.getOpSuB_budget());
+			operatingSurplusBeforeDepreciation.setTotAdjustment(root.getOpSuB_adjustment());
+			operatingSurplusBeforeDepreciation.setTotRevised(root.getOpSuB_revised());
 			operatingSurplusBeforeDepreciation.setTotNotes(root.getOpSuB_note());
 
 			LtcBudgetSumTotals totalOperatingSurplus = new LtcBudgetSumTotals();
 			totalOperatingSurplus.setConfirmationId(root.getForm().getConfirmationId());
 			totalOperatingSurplus.setTotName(root.getOpSu_data_total_label());
-			totalOperatingSurplus.setSumBudget(root.getOpSu_data_total());
-			totalOperatingSurplus.setTotNotes(root.getOpSu_data_total_note());
+			totalOperatingSurplus.setTotAtApril(root.getOpSu_budget());
+			totalOperatingSurplus.setTotAdjustment(root.getOpSu_adjustment());
+			totalOperatingSurplus.setTotRevised(root.getOpSu_revised());
+			totalOperatingSurplus.setTotNotes(root.getOpSu_note());
 
 			Collections.addAll(ltcBudgetSumTotals, operatingSurplusBeforeDepreciation, totalNonOperatingSurplus,
 			 totalOperatingSurplus);
@@ -2316,70 +2399,90 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			/* END */
 			
 			LtcBudgetExp OthSupExp = new LtcBudgetExp();
-			OthSupExp.setExpBudget(root.getOpEx_Budget28());
+			OthSupExp.setExpAtApril(root.getOpEx_Budget28());
+			OthSupExp.setExpAdjustment(root.getOpEx_Adjustment28());
+			OthSupExp.setExpRevised(root.getOpEx_Revised28());
 			OthSupExp.setExpNotes(root.getOpEx_note28());
 			OthSupExp.setExpName(root.getOpEx_Budget_label28());
 			OthSupExp.setExpType(root.getOpEx_3_label());
 			OthSupExp.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp officeExpAdCost = new LtcBudgetExp();
-			officeExpAdCost.setExpBudget(root.getOpEx_Budget29());
+			officeExpAdCost.setExpAtApril(root.getOpEx_Budget29());
+			officeExpAdCost.setExpAdjustment(root.getOpEx_Adjustment29());
+			officeExpAdCost.setExpRevised(root.getOpEx_Revised29());
 			officeExpAdCost.setExpNotes(root.getOpEx_note29());
 			officeExpAdCost.setExpName(root.getOpEx_Budget_label29());
 			officeExpAdCost.setExpType(root.getOpEx_4_label());
 			officeExpAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp mgmntAdCost = new LtcBudgetExp();
-			mgmntAdCost.setExpBudget(root.getOpEx_Budget30());
+			mgmntAdCost.setExpAtApril(root.getOpEx_Budget30());
+			mgmntAdCost.setExpAdjustment(root.getOpEx_Adjustment30());
+			mgmntAdCost.setExpRevised(root.getOpEx_Revised30());
 			mgmntAdCost.setExpNotes(root.getOpEx_note30());
 			mgmntAdCost.setExpName(root.getOpEx_Budget_label30());
 			mgmntAdCost.setExpType(root.getOpEx_4_label());
 			mgmntAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp hoAllocpAdCost = new LtcBudgetExp();
-			hoAllocpAdCost.setExpBudget(root.getOpEx_Budget31());
+			hoAllocpAdCost.setExpAtApril(root.getOpEx_Budget31());
+			hoAllocpAdCost.setExpAdjustment(root.getOpEx_Adjustment31());
+			hoAllocpAdCost.setExpRevised(root.getOpEx_Revised31());
 			hoAllocpAdCost.setExpNotes(root.getOpEx_note31());
 			hoAllocpAdCost.setExpName(root.getOpEx_Budget_label31());
 			hoAllocpAdCost.setExpType(root.getOpEx_4_label());
 			hoAllocpAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp accAdCost = new LtcBudgetExp();
-			accAdCost.setExpBudget(root.getOpEx_Budget32());
+			accAdCost.setExpAtApril(root.getOpEx_Budget32());
+			accAdCost.setExpAdjustment(root.getOpEx_Adjustment32());
+			accAdCost.setExpRevised(root.getOpEx_Revised32());
 			accAdCost.setExpNotes(root.getOpEx_note32());
 			accAdCost.setExpName(root.getOpEx_Budget_label32());
 			accAdCost.setExpType(root.getOpEx_4_label());
 			accAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp apaAdCost = new LtcBudgetExp();
-			apaAdCost.setExpBudget(root.getOpEx_Budget33());
+			apaAdCost.setExpAtApril(root.getOpEx_Budget33());
+			apaAdCost.setExpAdjustment(root.getOpEx_Adjustment33());
+			apaAdCost.setExpRevised(root.getOpEx_Revised33());
 			apaAdCost.setExpNotes(root.getOpEx_note33());
 			apaAdCost.setExpName(root.getOpEx_Budget_label33());
 			apaAdCost.setExpType(root.getOpEx_4_label());
 			apaAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp insuranceAdCost = new LtcBudgetExp();
-			insuranceAdCost.setExpBudget(root.getOpEx_Budget34());
+			insuranceAdCost.setExpAtApril(root.getOpEx_Budget34());
+			insuranceAdCost.setExpAdjustment(root.getOpEx_Adjustment34());
+			insuranceAdCost.setExpRevised(root.getOpEx_Revised34());
 			insuranceAdCost.setExpNotes(root.getOpEx_note34());
 			insuranceAdCost.setExpName(root.getOpEx_Budget_label34());
 			insuranceAdCost.setExpType(root.getOpEx_4_label());
 			insuranceAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp adminSupAdCost = new LtcBudgetExp();
-			adminSupAdCost.setExpBudget(root.getOpEx_Budget35());
+			adminSupAdCost.setExpAtApril(root.getOpEx_Budget35());
+			adminSupAdCost.setExpAdjustment(root.getOpEx_Adjustment35());
+			adminSupAdCost.setExpRevised(root.getOpEx_Revised35());
 			adminSupAdCost.setExpNotes(root.getOpEx_note35());
 			adminSupAdCost.setExpName(root.getOpEx_Budget_label35());
 			adminSupAdCost.setExpType(root.getOpEx_4_label());
 			adminSupAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp badDeptAdCost = new LtcBudgetExp();
-			badDeptAdCost.setExpBudget(root.getOpEx_Budget37());
+			badDeptAdCost.setExpAtApril(root.getOpEx_Budget37());
+			badDeptAdCost.setExpAdjustment(root.getOpEx_Adjustment37());
+			badDeptAdCost.setExpRevised(root.getOpEx_Revised37());
 			badDeptAdCost.setExpNotes(root.getOpEx_note37());
 			badDeptAdCost.setExpName(root.getOpEx_Budget_label37());
 			badDeptAdCost.setExpType(root.getOpEx_4_label());
 			badDeptAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp othAdCost = new LtcBudgetExp();
-			othAdCost.setExpBudget(root.getOpEx_Budget36());
+			othAdCost.setExpAtApril(root.getOpEx_Budget36());
+			othAdCost.setExpAdjustment(root.getOpEx_Adjustment36());
+			othAdCost.setExpRevised(root.getOpEx_Revised36());
 			othAdCost.setExpNotes(root.getOpEx_note36());
 			othAdCost.setExpName(root.getOpEx_Budget_label36());
 			othAdCost.setExpType(root.getOpEx_4_label());
@@ -2388,14 +2491,18 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			
 			/* Non operating expense */
 			LtcBudgetExp dirCareNonOpExpMortgage = new LtcBudgetExp();
-			dirCareNonOpExpMortgage.setExpBudget(root.getNopEx_Budget1());
+			dirCareNonOpExpMortgage.setExpAtApril(root.getNopEx_Budget1());
+			dirCareNonOpExpMortgage.setExpAdjustment(root.getNopEx_Adjustment1());
+			dirCareNonOpExpMortgage.setExpRevised(root.getNopEx_Revised1());
 			dirCareNonOpExpMortgage.setExpNotes(root.getNopEx_note1());
 			dirCareNonOpExpMortgage.setExpName(root.getNopEx_Budget_label1());
 			dirCareNonOpExpMortgage.setExpType(root.getNopEx_label());
 			dirCareNonOpExpMortgage.setConfirmationId(root.getForm().getConfirmationId());
 
 			LtcBudgetExp dirCareNonOpExpOther = new LtcBudgetExp();
-			dirCareNonOpExpOther.setExpBudget(root.getNopEx_Budget2());
+			dirCareNonOpExpOther.setExpAtApril(root.getNopEx_Budget2());
+			dirCareNonOpExpOther.setExpAdjustment(root.getNopEx_Adjustment2());
+			dirCareNonOpExpOther.setExpRevised(root.getNopEx_Revised2());
 			dirCareNonOpExpOther.setExpNotes(root.getNopEx_note2());
 			dirCareNonOpExpOther.setExpName(root.getNopEx_Budget_label2());
 			dirCareNonOpExpOther.setExpType(root.getNopEx_label());
