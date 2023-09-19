@@ -40,7 +40,7 @@ public class LtcBudgetDep implements IModel {
 		return depAdjustment;
 	}
 	public void setDepAdjustment(String depAtAdjustment) {
-		this.depAdjustment = depAtAdjustment;
+		this.depAdjustment = StringUtils.defaultIfEmpty(depAtAdjustment, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getDepRevised() {
 		return depRevised;

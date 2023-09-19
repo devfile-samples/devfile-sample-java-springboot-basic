@@ -47,7 +47,7 @@ public class LtcBudgetExp implements IModel {
 		return expAdjustment;
 	}
 	public void setExpAdjustment(String expAdjustment) {
-		this.expAdjustment = expAdjustment;
+		this.expAdjustment = StringUtils.defaultIfEmpty(expAdjustment, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getExpRevised() {
 		return expRevised;

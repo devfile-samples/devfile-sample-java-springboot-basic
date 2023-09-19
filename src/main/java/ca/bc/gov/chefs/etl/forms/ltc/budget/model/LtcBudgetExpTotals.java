@@ -40,7 +40,7 @@ public class LtcBudgetExpTotals implements IModel {
 		return subTotalExpAdjustment;
 	}
 	public void setSubTotalExpAdjustment(String subTotalExpAdjustment) {
-		this.subTotalExpAdjustment = subTotalExpAdjustment;
+		this.subTotalExpAdjustment = StringUtils.defaultIfEmpty(subTotalExpAdjustment, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getSubTotalExpRevised() {
 		return subTotalExpRevised;

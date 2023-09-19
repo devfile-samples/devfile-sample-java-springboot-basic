@@ -41,7 +41,7 @@ public class LtcBudgetSumTotals implements IModel {
 		return totAdjustment;
 	}
 	public void setTotAdjustment(String totAdjustment) {
-		this.totAdjustment = totAdjustment;
+		this.totAdjustment = StringUtils.defaultIfEmpty(totAdjustment, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getTotRevised() {
 		return totRevised;

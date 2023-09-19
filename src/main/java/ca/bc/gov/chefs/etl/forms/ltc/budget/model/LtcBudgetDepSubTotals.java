@@ -33,7 +33,7 @@ public class LtcBudgetDepSubTotals implements IModel {
 		return subTotalDepAdjustment;
 	}
 	public void setSubTotalDepAdjustment(String subTotalDepAdjustment) {
-		this.subTotalDepAdjustment = subTotalDepAdjustment;
+		this.subTotalDepAdjustment = StringUtils.defaultIfEmpty(subTotalDepAdjustment, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getSubTotalDepRevised() {
 		return subTotalDepRevised;

@@ -47,7 +47,7 @@ public class LtcBudgetRev implements IModel {
 		return revAdjusment;
 	}
 	public void setRevAdjusment(String revAdjusment) {
-		this.revAdjusment = revAdjusment;
+		this.revAdjusment = StringUtils.defaultIfEmpty(revAdjusment, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getRevRevised() {
 		return revRevised;

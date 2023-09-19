@@ -40,7 +40,7 @@ public class LtcBudgetRevTotals implements IModel {
 		return subTotalRevAdjustment;
 	}
 	public void setSubTotalRevAdjustment(String subTotalRevAdjustment) {
-		this.subTotalRevAdjustment = subTotalRevAdjustment;
+		this.subTotalRevAdjustment = StringUtils.defaultIfEmpty(subTotalRevAdjustment, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getSubTotalRevRevised() {
 		return subTotalRevRevised;
