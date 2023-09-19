@@ -1386,10 +1386,9 @@ public class Root{
     public String opEx_item139;
 	public String opEx_data_total_label;
 	public String opRev_budget_total_label;
-	public String opSu_data_total_label;
-	@JsonProperty("opSuB_item1-1_label")
-	public String opSuB_item11_label;
-	public String nopSu_data_label;
+	public String opSu_label;
+	public String opSuB_label;
+	public String nopSu_budget_total_label;
 	public String opEx_note_sum6;
     public String opEx_note1;
     public String opEx_note10;
@@ -1422,9 +1421,10 @@ public class Root{
     public String opEx_note35;
     public String opEx_note36;
     public String opEx_note37;
-	public String opEx_note38;
-    public String opEx_note39;
-    public String opEx_note4;
+	public String opDep_note1;
+    public String opDep_note2;
+    public String opDep_note_sum;
+	public String opEx_note4;
     public String opEx_note5;
     public String opEx_note6;
     public String opEx_note7;
@@ -10091,17 +10091,23 @@ public class Root{
 	public void setOpEx_note36(String opEx_note36) {
 		this.opEx_note36 = opEx_note36;
 	}
-	public String getOpEx_note38() {
-		return opEx_note38;
+    public String getOpDep_note1() {
+		return opDep_note1;
 	}
-	public void setOpEx_note38(String opEx_note38) {
-		this.opEx_note38 = opEx_note38;
+	public void setOpDep_note1(String opDep_note1) {
+		this.opDep_note1 = opDep_note1;
 	}
-	public String getOpEx_note39() {
-		return opEx_note39;
+	public String getOpDep_note2() {
+		return opDep_note2;
 	}
-	public void setOpEx_note39(String opEx_note39) {
-		this.opEx_note39 = opEx_note39;
+	public void setOpDep_note2(String opDep_note2) {
+		this.opDep_note2 = opDep_note2;
+	}
+	public String getOpDep_note_sum() {
+		return opDep_note_sum;
+	}
+	public void setOpDep_note_sum(String opDep_note_sum) {
+		this.opDep_note_sum = opDep_note_sum;
 	}
 	public String getOpEx_note4() {
 		return opEx_note4;
@@ -12059,23 +12065,23 @@ public class Root{
 	public void setOpRev_budget_total_label(String opRev_Budget_total_label) {
 		this.opRev_budget_total_label = opRev_Budget_total_label;
 	}
-	public String getOpSu_data_total_label() {
-		return opSu_data_total_label;
+	public String getOpSu_label() {
+		return opSu_label;
 	}
-	public void setOpSu_data_total_label(String opSu_data_total_label) {
-		this.opSu_data_total_label = opSu_data_total_label;
+	public void setOpSu_label(String opSu_data_total_label) {
+		this.opSu_label = opSu_data_total_label;
 	}
-	public String getOpSuB_item11_label() {
-		return opSuB_item11_label;
+	public String getOpSuB_label() {
+		return opSuB_label;
 	}
-	public void setOpSuB_item11_label(String opSuB_item11_label) {
-		this.opSuB_item11_label = opSuB_item11_label;
+	public void setOpSuB_label(String opSuB_label) {
+		this.opSuB_label = opSuB_label;
 	}
-	public String getNopSu_data_label() {
-		return nopSu_data_label;
+	public String getNopSu_budget_total_label() {
+		return nopSu_budget_total_label;
 	}
-	public void setNopSu_data_label(String nopSu_data_label) {
-		this.nopSu_data_label = nopSu_data_label;
+	public void setNopSu_budget_total_label(String nopSu_data_label) {
+		this.nopSu_budget_total_label = nopSu_data_label;
 	}
 	public String getAlliedNPProdC_item31() {
 		return alliedNPProdC_item31;

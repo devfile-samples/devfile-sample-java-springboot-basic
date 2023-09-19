@@ -2343,7 +2343,7 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			buildingDep.setDepAtApril(root.getOpDep_budget1());
 			buildingDep.setDepAdjustment(root.getOpDep_adjustment1());
 			buildingDep.setDepRevised(root.getOpDep_revised1());
-			buildingDep.setDepNotes(root.getOpEx_note38());
+			buildingDep.setDepNotes(root.getOpDep_note1());
 
 			LtcBudgetDep furnitureEquipmentDep = new LtcBudgetDep();
 			furnitureEquipmentDep.setConfirmationId(root.getForm().getConfirmationId());
@@ -2351,7 +2351,7 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			furnitureEquipmentDep.setDepAtApril(root.getOpDep_budget2());
 			furnitureEquipmentDep.setDepAdjustment(root.getOpDep_adjustment2());
 			furnitureEquipmentDep.setDepRevised(root.getOpDep_revised2());
-			furnitureEquipmentDep.setDepNotes(root.getOpEx_note39());
+			furnitureEquipmentDep.setDepNotes(root.getOpDep_note2());
 
 			Collections.addAll(ltcBudgetDep, buildingDep, furnitureEquipmentDep);
 			/* END */
@@ -2363,7 +2363,7 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			subTotalBudgetDep.setSubTotalDepAtApril(root.getOpDep_budget());
 			subTotalBudgetDep.setSubTotalDepAdjustment(root.getOpDep_adjustment());
 			subTotalBudgetDep.setSubTotalDepRevised(root.getOpDep_revised());
-			subTotalBudgetDep.setSubTotalDepNotes(root.getOpEx_note_sum6());
+			subTotalBudgetDep.setSubTotalDepNotes(root.getOpDep_note_sum());
 
 			Collections.addAll(ltcBudgetDepSubTotals, subTotalBudgetDep);
 			/* END */
@@ -2371,7 +2371,7 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			/* LtcBudgetSumTotals */
 			LtcBudgetSumTotals totalNonOperatingSurplus = new LtcBudgetSumTotals();
 			totalNonOperatingSurplus.setConfirmationId(root.getForm().getConfirmationId());
-			totalNonOperatingSurplus.setTotName(root.getNopSu_data_label());
+			totalNonOperatingSurplus.setTotName(root.getNopSu_budget_total_label());
 			totalNonOperatingSurplus.setTotAtApril(root.getNopSu_budget());
 			totalNonOperatingSurplus.setTotAdjustment(root.getNopSu_adjustment());
 			totalNonOperatingSurplus.setTotRevised(root.getNopSu_revised());
@@ -2379,7 +2379,7 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 
 			LtcBudgetSumTotals operatingSurplusBeforeDepreciation = new LtcBudgetSumTotals();
 			operatingSurplusBeforeDepreciation.setConfirmationId(root.getForm().getConfirmationId());
-			operatingSurplusBeforeDepreciation.setTotName(root.getOpSuB_item11_label());
+			operatingSurplusBeforeDepreciation.setTotName(root.getOpSuB_label());
 			operatingSurplusBeforeDepreciation.setTotAtApril(root.getOpSuB_budget());
 			operatingSurplusBeforeDepreciation.setTotAdjustment(root.getOpSuB_adjustment());
 			operatingSurplusBeforeDepreciation.setTotRevised(root.getOpSuB_revised());
@@ -2387,7 +2387,7 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 
 			LtcBudgetSumTotals totalOperatingSurplus = new LtcBudgetSumTotals();
 			totalOperatingSurplus.setConfirmationId(root.getForm().getConfirmationId());
-			totalOperatingSurplus.setTotName(root.getOpSu_data_total_label());
+			totalOperatingSurplus.setTotName(root.getOpSu_label());
 			totalOperatingSurplus.setTotAtApril(root.getOpSu_budget());
 			totalOperatingSurplus.setTotAdjustment(root.getOpSu_adjustment());
 			totalOperatingSurplus.setTotRevised(root.getOpSu_revised());
