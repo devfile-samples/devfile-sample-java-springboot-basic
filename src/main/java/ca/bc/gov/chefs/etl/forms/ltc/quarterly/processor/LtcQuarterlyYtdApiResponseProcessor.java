@@ -2341,12 +2341,18 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			adminSupAdCost.setExpType(root.getOpEx_4_label());
 			adminSupAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
-			LtcYtdExp badDeptAdCost = new LtcYtdExp();
-			badDeptAdCost.setExpYtd(root.getOpEx_YTD37());
-			badDeptAdCost.setExpNotes(root.getOpEx_note37());
-			badDeptAdCost.setExpName("Bad Debt"); // keeping "Bad Dept" hard coded since submissions from earlier versions do not contain root.getOpEx_YTD_label37()
-			badDeptAdCost.setExpType(root.getOpEx_4_label());
-			badDeptAdCost.setConfirmationId(root.getForm().getConfirmationId());
+			// Bad Dept does not exist on older submissions, creating it only if it is present in the payload
+			if(root.getOpEx_YTD_label37() != null){
+				LtcYtdExp badDeptAdCost = new LtcYtdExp();
+				badDeptAdCost.setExpYtd(root.getOpEx_YTD37());
+				badDeptAdCost.setExpNotes(root.getOpEx_note37());
+				badDeptAdCost.setExpName(root.getOpEx_YTD_label37());
+				badDeptAdCost.setExpType(root.getOpEx_4_label());
+				badDeptAdCost.setConfirmationId(root.getForm().getConfirmationId());
+
+				Collections.addAll(ltcYtdExp, badDeptAdCost);
+			}
+
 
 			LtcYtdExp othAdCost = new LtcYtdExp();
 			othAdCost.setExpYtd(root.getOpEx_YTD36());
@@ -2378,7 +2384,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 					sickSevrnceAccExp, buildingRentExp, intrstMortgageLngTrmExp, propertyTaxesExp, mntnceExp,
 					suppliesExp, utilitiesExp, wasteMgmntExp, resTranServExp, othExp, medSupExp, rawFoodCostExp,
 					drgsPharmaExp, dietSupExp, ldrySupExp, houseSupExp, incontinenceSupExp, OthSupExp, officeExpAdCost,
-					mgmntAdCost, hoAllocpAdCost, accAdCost, apaAdCost, insuranceAdCost, adminSupAdCost, badDeptAdCost,
+					mgmntAdCost, hoAllocpAdCost, accAdCost, apaAdCost, insuranceAdCost, adminSupAdCost,
 					othAdCost, dirCareNonOpExpMortgage, dirCareNonOpExpOther);
 
 			// subtotal
