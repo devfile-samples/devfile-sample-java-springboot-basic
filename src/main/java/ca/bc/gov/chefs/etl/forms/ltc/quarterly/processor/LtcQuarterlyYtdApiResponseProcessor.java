@@ -2344,7 +2344,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			LtcYtdExp badDeptAdCost = new LtcYtdExp();
 			badDeptAdCost.setExpYtd(root.getOpEx_YTD37());
 			badDeptAdCost.setExpNotes(root.getOpEx_note37());
-			badDeptAdCost.setExpName(root.getOpEx_YTD_label37());
+			badDeptAdCost.setExpName("Bad Debt"); // keeping "Bad Dept" hard coded since submissions from earlier versions do not contain root.getOpEx_YTD_label37()
 			badDeptAdCost.setExpType(root.getOpEx_4_label());
 			badDeptAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
