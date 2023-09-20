@@ -2342,7 +2342,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			adminSupAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
 			// Bad Dept does not exist on older submissions, creating it only if it is present in the payload
-			if(!root.getOpEx_YTD_label37().isEmpty() && root.getOpEx_YTD_label37() != null){
+			if(root.getOpEx_YTD_label37() != null){
 				LtcYtdExp badDeptAdCost = new LtcYtdExp();
 				badDeptAdCost.setExpYtd(root.getOpEx_YTD37());
 				badDeptAdCost.setExpNotes(root.getOpEx_note37());
