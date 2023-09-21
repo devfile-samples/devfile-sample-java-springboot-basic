@@ -35,6 +35,7 @@ import ca.bc.gov.chefs.etl.forms.ltc.budget.model.LtcBudgetRev;
 import ca.bc.gov.chefs.etl.forms.ltc.budget.model.LtcBudgetRevTotals;
 import ca.bc.gov.chefs.etl.forms.ltc.budget.model.LtcBudgetSubmission;
 import ca.bc.gov.chefs.etl.forms.ltc.budget.model.LtcBudgetSumTotals;
+import ca.bc.gov.chefs.etl.forms.ltc.quarterly.model.LtcYtdCompHrs;
 import ca.bc.gov.chefs.etl.util.CSVUtil;
 import ca.bc.gov.chefs.etl.util.FileUtil;
 import ca.bc.gov.chefs.etl.util.JsonUtil;
@@ -1218,13 +1219,20 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			supportHousekeepingHrs.setCompTotalWorkedHrsBudget(root.getSupportH_calc3());
 
 			LtcBudgetCompHrs supportPlantMntnceHrs = new LtcBudgetCompHrs();
-		//	supportPlantMntnceHrs.setCompHrsPerPayrollBudget(root.getCompH_PHP4());
 			supportPlantMntnceHrs.setCompHrsStaffBudget(root.getSupportH_item14());
 			supportPlantMntnceHrs.setCompHrsContractServicesBudget(root.getSupportH_item24());
 			supportPlantMntnceHrs.setCompHrsName(root.getSupport_label4());
 			supportPlantMntnceHrs.setCompHrsType(root.getSupport_label());
 			supportPlantMntnceHrs.setConfirmationId(root.getForm().getConfirmationId());
 			supportPlantMntnceHrs.setCompTotalWorkedHrsBudget(root.getSupportH_calc4());
+
+			LtcBudgetCompHrs supportPharmacyServicesHrs = new LtcBudgetCompHrs();
+			supportPharmacyServicesHrs.setConfirmationId(root.getForm().getConfirmationId());
+			supportPharmacyServicesHrs.setCompHrsType(root.getSupport_label());
+			supportPharmacyServicesHrs.setCompHrsName(root.getSupport_label5());
+			supportPharmacyServicesHrs.setCompHrsStaffBudget(root.getSupportH_item15());
+			supportPharmacyServicesHrs.setCompHrsContractServicesBudget(root.getSupportH_item25());
+			supportPharmacyServicesHrs.setCompTotalWorkedHrsBudget(root.getSupportH_calc5());
 
 			// sum remaining
 			LtcBudgetCompHrs adminAdministratorHrs = new LtcBudgetCompHrs();
@@ -1475,7 +1483,7 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			alliedNPOTHHrs.setCompHrsOtherName(root.getAlliedNP_label_comp6());
 
 			Collections.addAll(ltcBudgetCompHrs, supportFoodServicesHrs, supportLaundryServicesHrs, supportHousekeepingHrs,
-					supportPlantMntnceHrs, adminAdministratorHrs, adminDirOfCareHrs, adminDeptManagersHrs,
+					supportPlantMntnceHrs, supportPharmacyServicesHrs, adminAdministratorHrs, adminDirOfCareHrs, adminDeptManagersHrs,
 					adminSupportHrs, adminPastoCareWrkrHrs, adminClrksHrs, adminClncCrdinatorHrs, adminScreenersGreeters, adminHCSW, 
 					adminOtherHrs, nursingRNHrs, nursingLPNHrs, nursingHCAHrs, nursingOthHrs, alliedProfOTHrs, alliedProfPTHrs,
 					alliedProfDTHrs, alliedProfSWHrs, alliedProfSLPHrs, alliedProfRTHrs, alliedProfOTHHrs, alliedNPRTHrs, alliedNPRAHrs, alliedNPAWHrs,
