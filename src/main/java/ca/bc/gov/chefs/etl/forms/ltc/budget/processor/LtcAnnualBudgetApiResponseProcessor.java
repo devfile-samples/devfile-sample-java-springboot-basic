@@ -2081,6 +2081,15 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			plantMainOpStaffExp.setExpType(root.getOpEx_1A_label());
 			plantMainOpStaffExp.setConfirmationId(root.getForm().getConfirmationId());
 
+			LtcBudgetExp phamacyServicesExp = new LtcBudgetExp();
+			phamacyServicesExp.setConfirmationId(root.getForm().getConfirmationId());
+			phamacyServicesExp.setExpType(root.getOpEx_1A_label());
+			phamacyServicesExp.setExpName(root.getOpEx_Budget_label40());
+			phamacyServicesExp.setExpAtApril(root.getOpEx_Budget40());
+			phamacyServicesExp.setExpAdjustment(root.getOpEx_Adjustment40());
+			phamacyServicesExp.setExpRevised(root.getOpEx_Revised40());
+			phamacyServicesExp.setExpNotes(root.getOpEx_note40());
+
 			// subtotal before salary and wages - omitted
 			LtcBudgetExp salWagRecvExp = new LtcBudgetExp();
 			salWagRecvExp.setExpAtApril(root.getOpEx_Budget7());
@@ -2527,8 +2536,8 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 
 			
 			Collections.addAll(ltcBudgetExp, dirCareCostExp, foodCostExp, ldryServExp, housekeepingCostExp,
-					adminServCostExp, plantMainOpStaffExp, salWagRecvExp, salWagAccExp, othLabCostExp, bnftCostExp,
-					sickSevrnceAccExp, buildingRentExp, intrstMortgageLngTrmExp, propertyTaxesExp, mntnceExp,
+					adminServCostExp, plantMainOpStaffExp, phamacyServicesExp, salWagRecvExp, salWagAccExp, othLabCostExp,
+					bnftCostExp, sickSevrnceAccExp, buildingRentExp, intrstMortgageLngTrmExp, propertyTaxesExp, mntnceExp,
 					suppliesExp, utilitiesExp, wasteMgmntExp, resTranServExp, othExp, medSupExp, rawFoodCostExp,
 					drgsPharmaExp, dietSupExp, ldrySupExp, houseSupExp, incontinenceSupExp, OthSupExp, officeExpAdCost,
 					mgmntAdCost, hoAllocpAdCost, accAdCost, apaAdCost, insuranceAdCost, adminSupAdCost, badDeptAdCost,
