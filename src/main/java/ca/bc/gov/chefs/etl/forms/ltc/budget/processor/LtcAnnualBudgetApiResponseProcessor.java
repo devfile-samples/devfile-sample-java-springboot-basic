@@ -888,6 +888,14 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			supportPlantMntnce.setCompSalType(root.getSupport_label());
 			supportPlantMntnce.setConfirmationId(root.getForm().getConfirmationId());
 			supportPlantMntnce.setCompSalTotalCostBudget(root.getSupportC_calc4());
+
+			LtcBudgetCompSal supportPharmacyServices = new LtcBudgetCompSal();
+			supportPharmacyServices.setConfirmationId(root.getForm().getConfirmationId());
+			supportPharmacyServices.setCompSalType(root.getSupport_label());
+			supportPharmacyServices.setCompSalName(root.getSupport_label5());
+			supportPharmacyServices.setCompSalStaffBudget(root.getSupportC_item15());
+			supportPharmacyServices.setCompSalContractServicesBudget(root.getSupportC_item25());
+			supportPharmacyServices.setCompSalTotalCostBudget(root.getSupportC_calc5());
 			// Administration
 
 			LtcBudgetCompSal adminAdministrator = new LtcBudgetCompSal();
@@ -1116,7 +1124,7 @@ public class LtcAnnualBudgetApiResponseProcessor implements Processor {
 			alliedNPOTHSal.setCompSalOtherName(root.getAlliedNP_label_comp6());
 
 			Collections.addAll(ltcBudgetCompSal, supportFoodServices, supportLaundryServices, supportHousekeeping,
-					supportPlantMntnce, adminAdministrator, adminDirOfCare, adminDeptManagers, adminSupport,
+					supportPlantMntnce, supportPharmacyServices, adminAdministrator, adminDirOfCare, adminDeptManagers, adminSupport,
 					adminPastoCareWrkr, adminClrks, adminClncCrdinator, adminScreenGreeters, adminHCSP, adminOther, nursingRNSal,
 					nursingLPNSal, nursingHCASal, nursingOthSal, alliedProfOTSal, alliedProfPTSal, alliedProfDTSal, alliedProfSWSal,
 					alliedProfSLPSal, alliedProfRPPSal, alliedProfOTHSal, alliedNPRTSal, alliedNPRASal,
