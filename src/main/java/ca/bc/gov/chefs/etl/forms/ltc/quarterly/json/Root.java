@@ -670,7 +670,8 @@ public class Root{
     public String supportC_calc2;
 	public String supportC_calc3;
     public String supportC_calc4;
-    public String supportC_calcsum;
+    public String supportC_calc5;
+	public String supportC_calcsum;
     public String adminC_calcsum;
     @JsonProperty("supportC_item1-1")
     public String supportC_item11;
@@ -690,7 +691,9 @@ public class Root{
     public String supportC_item13;
     @JsonProperty("supportC_item1-4")
     public String supportC_item14;
-    @JsonProperty("adminC_item1-1")
+    @JsonProperty("supportC_item1-5")
+    public String supportC_item15;
+	@JsonProperty("adminC_item1-1")
     public String adminC_item11;
     @JsonProperty("adminC_item1-2")
     public String adminC_item12;
@@ -806,7 +809,9 @@ public class Root{
     public String supportC_item23;
     @JsonProperty("supportC_item2-4")
     public String supportC_item24;
-    @JsonProperty("compB_sum3-1")
+    @JsonProperty("supportC_item2-5")
+    public String supportC_item25;
+	@JsonProperty("compB_sum3-1")
     public String compB_sum31;
     @JsonProperty("compB_sum3-2")
     public String compB_sum32;
@@ -6104,6 +6109,12 @@ public class Root{
 	public void setSupportC_calc4(String compB_calc4) {
 		this.supportC_calc4 = compB_calc4;
 	}
+    public String getSupportC_calc5() {
+		return supportC_calc5;
+	}
+	public void setSupportC_calc5(String supportC_calc5) {
+		this.supportC_calc5 = supportC_calc5;
+	}
 	public String getSupportC_calcsum() {
 		return supportC_calcsum;
 	}
@@ -6169,6 +6180,12 @@ public class Root{
 	}
 	public void setSupportC_item14(String compB_item14) {
 		this.supportC_item14 = compB_item14;
+	}
+    public String getSupportC_item15() {
+		return supportC_item15;
+	}
+	public void setSupportC_item15(String supportC_item15) {
+		this.supportC_item15 = supportC_item15;
 	}
 	public String getAdminC_item11() {
 		return adminC_item11;
@@ -6553,6 +6570,12 @@ public class Root{
 	}
 	public void setSupportC_item24(String compB_sum24) {
 		this.supportC_item24 = compB_sum24;
+	}
+    public String getSupportC_item25() {
+		return supportC_item25;
+	}
+	public void setSupportC_item25(String supportC_item25) {
+		this.supportC_item25 = supportC_item25;
 	}
 	public String getCompB_sum31() {
 		return compB_sum31;

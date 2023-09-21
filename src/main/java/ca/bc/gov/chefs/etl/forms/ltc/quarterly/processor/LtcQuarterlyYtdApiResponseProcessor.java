@@ -913,6 +913,19 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			supportPlantMntnce.setCompSalType(root.getSupport_label());
 			supportPlantMntnce.setConfirmationId(root.getForm().getConfirmationId());
 			supportPlantMntnce.setCompSalTotalCostYtd(root.getSupportC_calc4());
+
+			if(root.getSupport_label5() != null) {
+				LtcYtdCompSal supportPharmacyServices = new LtcYtdCompSal();
+				supportPharmacyServices.setConfirmationId(root.getForm().getConfirmationId());
+				supportPharmacyServices.setCompSalType(root.getSupport_label());
+				supportPharmacyServices.setCompSalName(root.getSupport_label5());
+				supportPharmacyServices.setCompSalStaffYtd(root.getSupportC_item15());
+				supportPharmacyServices.setCompSalContractServicesYtd(root.getSupportC_item25());
+				supportPharmacyServices.setCompSalTotalCostYtd(root.getSupportC_calc5());
+
+				Collections.addAll(ltcYtdCompSal, supportPharmacyServices);			
+			}
+
 			// Administration
 
 			LtcYtdCompSal adminAdministrator = new LtcYtdCompSal();
