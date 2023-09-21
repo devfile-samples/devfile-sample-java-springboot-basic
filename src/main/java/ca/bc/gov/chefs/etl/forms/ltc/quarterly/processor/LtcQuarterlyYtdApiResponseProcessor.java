@@ -1244,7 +1244,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			supportHousekeepingHrs.setCompTotalWorkedHrsYtd(root.getSupportH_calc3());
 
 			LtcYtdCompHrs supportPlantMntnceHrs = new LtcYtdCompHrs();
-		//	supportPlantMntnceHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP4());
 			supportPlantMntnceHrs.setCompHrsStaffYtd(root.getSupportH_item14());
 			supportPlantMntnceHrs.setCompHrsContractServicesYtd(root.getSupportH_item24());
 			supportPlantMntnceHrs.setCompHrsName(root.getSupport_label4());
@@ -1252,9 +1251,22 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			supportPlantMntnceHrs.setConfirmationId(root.getForm().getConfirmationId());
 			supportPlantMntnceHrs.setCompTotalWorkedHrsYtd(root.getSupportH_calc4());
 
+
+			if(root.getSupport_label5() != null){
+				LtcYtdCompHrs supportPharmacyServicesHrs = new LtcYtdCompHrs();
+				supportPharmacyServicesHrs.setConfirmationId(root.getForm().getConfirmationId());
+				supportPharmacyServicesHrs.setCompHrsType(root.getSupport_label());
+				supportPharmacyServicesHrs.setCompHrsName(root.getSupport_label5());
+				supportPharmacyServicesHrs.setCompHrsStaffYtd(root.getSupportH_item15());
+				supportPharmacyServicesHrs.setCompHrsContractServicesYtd(root.getSupportH_item25());
+				supportPharmacyServicesHrs.setCompTotalWorkedHrsYtd(root.getSupportH_calc5());
+
+				Collections.addAll(ltcYtdCompHrs, supportPharmacyServicesHrs);
+
+			}
+
 			// sum remaining
 			LtcYtdCompHrs adminAdministratorHrs = new LtcYtdCompHrs();
-		//	adminAdministratorHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP5());
 			adminAdministratorHrs.setCompHrsStaffYtd(root.getAdminH_item11());
 			adminAdministratorHrs.setCompHrsContractServicesYtd(root.getAdminH_item21());
 			adminAdministratorHrs.setCompHrsName(root.getAdmin_label1());
@@ -1264,7 +1276,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 
 
 			LtcYtdCompHrs adminDirOfCareHrs = new LtcYtdCompHrs();
-			//adminDirOfCareHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP6());
 			adminDirOfCareHrs.setCompHrsStaffYtd(root.getAdminH_item12());
 			adminDirOfCareHrs.setCompHrsContractServicesYtd(root.getAdminH_item22());
 			adminDirOfCareHrs.setCompHrsName(root.getAdmin_label2());
@@ -1273,7 +1284,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			adminDirOfCareHrs.setCompTotalWorkedHrsYtd(root.getAdminH_calc2());
 
 			LtcYtdCompHrs adminDeptManagersHrs = new LtcYtdCompHrs();
-		//	adminDeptManagersHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP7());
 			adminDeptManagersHrs.setCompHrsStaffYtd(root.getAdminH_item13());
 			adminDeptManagersHrs.setCompHrsContractServicesYtd(root.getAdminH_item23());
 			adminDeptManagersHrs.setCompHrsName(root.getAdmin_label3());
@@ -1282,7 +1292,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			adminDeptManagersHrs.setCompTotalWorkedHrsYtd(root.getAdminH_calc3());
 
 			LtcYtdCompHrs adminSupportHrs = new LtcYtdCompHrs();
-			//adminSupportHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP8());
 			adminSupportHrs.setCompHrsStaffYtd(root.getAdminH_item14());
 			adminSupportHrs.setCompHrsContractServicesYtd(root.getAdminH_item24());
 			adminSupportHrs.setCompHrsName(root.getAdmin_label4());
@@ -1291,7 +1300,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			adminSupportHrs.setCompTotalWorkedHrsYtd(root.getAdminH_calc4());
 
 			LtcYtdCompHrs adminPastoCareWrkrHrs = new LtcYtdCompHrs();
-		//	adminPastoCareWrkrHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP9());
 			adminPastoCareWrkrHrs.setCompHrsStaffYtd(root.getAdminH_item15());
 			adminPastoCareWrkrHrs.setCompHrsContractServicesYtd(root.getAdminH_item25());
 			adminPastoCareWrkrHrs.setCompHrsName(root.getAdmin_label5());
@@ -1300,7 +1308,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			adminPastoCareWrkrHrs.setCompTotalWorkedHrsYtd(root.getAdminH_calc5());
 
 			LtcYtdCompHrs adminClrksHrs = new LtcYtdCompHrs();
-			//adminClrksHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP10());
 			adminClrksHrs.setCompHrsStaffYtd(root.getAdminH_item16());
 			adminClrksHrs.setCompHrsContractServicesYtd(root.getAdminH_item26());
 			adminClrksHrs.setCompHrsName(root.getAdmin_label6());
@@ -1309,7 +1316,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			adminClrksHrs.setCompTotalWorkedHrsYtd(root.getAdminH_calc6());
 
 			LtcYtdCompHrs adminClncCrdinatorHrs = new LtcYtdCompHrs();
-		//	adminClncCrdinatorHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP11());
 			adminClncCrdinatorHrs.setCompHrsStaffYtd(root.getAdminH_item17());
 			adminClncCrdinatorHrs.setCompHrsContractServicesYtd(root.getAdminH_item27());
 			adminClncCrdinatorHrs.setCompHrsName(root.getAdmin_label7());
@@ -1334,7 +1340,6 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			adminHCSW.setCompTotalWorkedHrsYtd(root.getAdminH_calc9());
 
 			LtcYtdCompHrs adminOtherHrs = new LtcYtdCompHrs();
-		//	adminOtherHrs.setCompHrsPerPayrollYtd(root.getCompH_PHP12());
 			adminOtherHrs.setCompHrsStaffYtd(root.getAdminH_item110());
 			adminOtherHrs.setCompHrsContractServicesYtd(root.getAdminH_item210());
 			adminOtherHrs.setCompHrsName(Constants.DEFAULT_OTHER_VALUE);
@@ -2341,12 +2346,18 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 			adminSupAdCost.setExpType(root.getOpEx_4_label());
 			adminSupAdCost.setConfirmationId(root.getForm().getConfirmationId());
 
-			LtcYtdExp badDeptAdCost = new LtcYtdExp();
-			badDeptAdCost.setExpYtd(root.getOpEx_YTD37());
-			badDeptAdCost.setExpNotes(root.getOpEx_note37());
-			badDeptAdCost.setExpName(root.getOpEx_YTD_label37());
-			badDeptAdCost.setExpType(root.getOpEx_4_label());
-			badDeptAdCost.setConfirmationId(root.getForm().getConfirmationId());
+			// Bad Dept does not exist on older submissions, creating it only if it is present in the payload
+			if(root.getOpEx_YTD_label37() != null){
+				LtcYtdExp badDeptAdCost = new LtcYtdExp();
+				badDeptAdCost.setExpYtd(root.getOpEx_YTD37());
+				badDeptAdCost.setExpNotes(root.getOpEx_note37());
+				badDeptAdCost.setExpName(root.getOpEx_YTD_label37());
+				badDeptAdCost.setExpType(root.getOpEx_4_label());
+				badDeptAdCost.setConfirmationId(root.getForm().getConfirmationId());
+
+				Collections.addAll(ltcYtdExp, badDeptAdCost);
+			}
+
 
 			LtcYtdExp othAdCost = new LtcYtdExp();
 			othAdCost.setExpYtd(root.getOpEx_YTD36());
@@ -2378,7 +2389,7 @@ public class LtcQuarterlyYtdApiResponseProcessor implements Processor {
 					sickSevrnceAccExp, buildingRentExp, intrstMortgageLngTrmExp, propertyTaxesExp, mntnceExp,
 					suppliesExp, utilitiesExp, wasteMgmntExp, resTranServExp, othExp, medSupExp, rawFoodCostExp,
 					drgsPharmaExp, dietSupExp, ldrySupExp, houseSupExp, incontinenceSupExp, OthSupExp, officeExpAdCost,
-					mgmntAdCost, hoAllocpAdCost, accAdCost, apaAdCost, insuranceAdCost, adminSupAdCost, badDeptAdCost,
+					mgmntAdCost, hoAllocpAdCost, accAdCost, apaAdCost, insuranceAdCost, adminSupAdCost,
 					othAdCost, dirCareNonOpExpMortgage, dirCareNonOpExpOther);
 
 			// subtotal
