@@ -827,7 +827,8 @@ public class Root{
     public String supportH_calc2;
 	public String supportH_calc3;
     public String supportH_calc4;
-    public String supportH_calcsum;
+    public String supportH_calc5;
+	public String supportH_calcsum;
     public String adminH_calcsum;
     @JsonProperty("supportH_item1-1")
     public String supportH_item11;
@@ -847,6 +848,8 @@ public class Root{
     public String supportH_item13;
     @JsonProperty("supportH_item1-4")
     public String supportH_item14;
+    @JsonProperty("supportH_item1-5")
+    public String supportH_item15;
 	public String adminH_calc1;
 	public String adminH_calc2;
 	public String adminH_calc3;
@@ -885,7 +888,9 @@ public class Root{
     public String supportH_item23;
     @JsonProperty("supportH_item2-4")
     public String supportH_item24;
-    @JsonProperty("adminH_item2-1")
+    @JsonProperty("supportH_item2-5")
+    public String supportH_item25;
+	@JsonProperty("adminH_item2-1")
     public String adminH_item21;
     @JsonProperty("adminH_item2-2")
     public String adminH_item22;
@@ -1826,8 +1831,9 @@ public class Root{
 	public String support_label3;
 	@JsonProperty("support_label-4")
 	public String support_label4;
+	@JsonProperty("support_label-5")
+	public String support_label5;
 	public String support_label_subtotal;
-	
 	public String admin_label;
 	@JsonProperty("admin_label-1")
 	public String admin_label1;
@@ -3409,6 +3415,12 @@ public class Root{
 	}
 	public void setSupport_label4(String support_label4) {
 		this.support_label4 = support_label4;
+	}
+	public String getSupport_label5() {
+		return support_label5;
+	}
+	public void setSupport_label5(String support_label5) {
+		this.support_label5 = support_label5;
 	}
 	public String getSupport_label_subtotal() {
 		return support_label_subtotal;
@@ -6638,6 +6650,12 @@ public class Root{
 	public void setSupportH_calc4(String compH_calc4) {
 		this.supportH_calc4 = compH_calc4;
 	}
+    public String getSupportH_calc5() {
+		return supportH_calc5;
+	}
+	public void setSupportH_calc5(String supportH_calc5) {
+		this.supportH_calc5 = supportH_calc5;
+	}
 	public String getSupportH_calcsum() {
 		return supportH_calcsum;
 	}
@@ -6703,6 +6721,12 @@ public class Root{
 	}
 	public void setSupportH_item14(String compH_item14) {
 		this.supportH_item14 = compH_item14;
+	}
+	public String getSupportH_item15() {
+		return supportH_item15;
+	}
+	public void setSupportH_item15(String supportH_item15) {
+		this.supportH_item15 = supportH_item15;
 	}
     public String getAdminH_calc1() {
 		return adminH_calc1;
@@ -6847,6 +6871,12 @@ public class Root{
 	}
 	public void setSupportH_item24(String compH_item24) {
 		this.supportH_item24 = compH_item24;
+	}
+    public String getSupportH_item25() {
+		return supportH_item25;
+	}
+	public void setSupportH_item25(String supportH_item25) {
+		this.supportH_item25 = supportH_item25;
 	}
 	public String getAdminH_item21() {
 		return adminH_item21;
