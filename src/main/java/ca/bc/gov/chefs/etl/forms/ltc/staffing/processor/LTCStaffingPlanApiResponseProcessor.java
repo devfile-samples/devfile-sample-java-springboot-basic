@@ -31,6 +31,7 @@ import ca.bc.gov.chefs.etl.forms.ltc.staffing.model.LTCStaffingPlan;
 import ca.bc.gov.chefs.etl.forms.ltc.staffing.model.LTCStaffingSubmission;
 import ca.bc.gov.chefs.etl.forms.ltc.staffing.util.StaffingPlanUtil;
 import ca.bc.gov.chefs.etl.util.CSVUtil;
+import ca.bc.gov.chefs.etl.util.CommonUtils;
 import ca.bc.gov.chefs.etl.util.FileUtil;
 import ca.bc.gov.chefs.etl.util.JsonUtil;
 
@@ -41,6 +42,7 @@ public class LTCStaffingPlanApiResponseProcessor implements Processor {
 	public void process(Exchange exchange) throws Exception {
 		String payload = exchange.getIn().getBody(String.class);
 		payload = JsonUtil.roundDigitsNumber(payload);
+		payload = StaffingPlanUtil.normaliseDoesTheStaffingPatternProvide(payload);
 		ObjectMapper mapper = new ObjectMapper();
 
 		List<Root> staffingPlanModels = mapper.readValue(payload,

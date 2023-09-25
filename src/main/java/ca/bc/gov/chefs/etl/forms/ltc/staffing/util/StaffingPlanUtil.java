@@ -18,4 +18,13 @@ public class StaffingPlanUtil {
         }     
         return  planPerfMap;
     }
+
+	public static String normaliseDoesTheStaffingPatternProvide(String payload){
+		// The following code aims to replace occurences of "doesTheStaffingPatternProvideX":"someString" with "doesTheStaffingPatternProvideX":["someString"],
+        // as "doesTheStaffingPatternProvideX" is expected to be a String array and not a String. 
+        
+        String result = payload.replaceAll("\"doesTheStaffingPatternProvide(\\d+)\":\"([^\"]+)\"", "\"doesTheStaffingPatternProvide$1\":[\"$2\"]");
+		return result;
+	}
+
 }

@@ -24,6 +24,8 @@ import ca.bc.gov.chefs.etl.core.model.ChefsRequestPayload;
 import org.apache.commons.io.IOUtils;
 
 import java.io.BufferedInputStream;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -153,4 +155,23 @@ public class CommonUtils {
 		}
 		return uri;
 	}
+
+	/* Method used for testing purposed only, allows to see transformations done to a json payload */
+    public static void WriteStringToFile(String longString) {
+
+        // Specify the file path where you want to write the string
+        String filePath = "output.txt";
+
+        try {
+            // Create a FileWriter and BufferedWriter to write to the file
+            BufferedWriter writer = new BufferedWriter(new FileWriter(filePath));
+            // Write the long string to the file
+            writer.write(longString);
+            // Close the writer to release resources
+            writer.close();
+        } catch (IOException e) {
+            // Handle any IO exceptions that may occur
+            e.printStackTrace();
+        }
+    }
 }
