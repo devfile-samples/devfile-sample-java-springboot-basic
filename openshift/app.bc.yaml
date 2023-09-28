@@ -37,6 +37,7 @@ objects:
       source:
         git:
           uri: ${SOURCE_REPO_URL}
+          ref: "main"
         type: Git
       strategy:
         dockerStrategy:
