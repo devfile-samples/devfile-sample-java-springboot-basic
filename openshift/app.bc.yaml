@@ -7,8 +7,8 @@ labels:
   app.kubernetes.io/name: medis-etl-app
   app.kubernetes.io/part-of: medis-etl
   app.openshift.io/runtime: java-springboot-camel
-  app: "${APP_NAME}-${JOB_NAME}"
-  template: "${REPO_NAME}-app-bc-template"
+  app: "medis-etl-app"
+  template: "medis-etl-app-bc-template"
 metadata:
   name: "${REPO_NAME}-app-bc"
 objects:
@@ -54,18 +54,6 @@ objects:
         type: GitHub
       - type: ConfigChange
 parameters:
-  - name: REPO_NAME
-    description: Application repository name
-    displayName: Repository Name
-    required: true
-  - name: JOB_NAME
-    description: Job identifier (i.e. 'pr-5' OR 'master')
-    displayName: Job Branch Name
-    required: true
-  - name: SOURCE_REPO_REF
-    description: Git Pull Request Reference (i.e. 'pull/CHANGE_ID/head')
-    displayName: Source Repository Reference
-    required: true
   - name: SOURCE_REPO_URL
     description: Git Repository URL
     displayName: Source Repository URL
