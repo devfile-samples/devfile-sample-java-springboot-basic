@@ -58,7 +58,7 @@ objects:
               value: /projects
             - name: PROJECT_SOURCE
               value: /projects
-            image: image-registry.openshift-image-registry.svc:5000/c2da03-dev/medis-etl-image:latest
+            image: image-registry.openshift-image-registry.svc:5000/c2da03-tools/medis-etl-image:latest
             imagePullPolicy: Always
             name: etl-camel
             ports:
