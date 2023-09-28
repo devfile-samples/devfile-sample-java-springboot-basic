@@ -1,0 +1,28 @@
+name: medis-etl-app deploy to dev
+on:
+  workflow_dispatch:
+defaults:
+  run:
+    working-directory: ./
+env:
+  NAMESPACE_SRC: c2da03-tools
+  NAMESPACE_TRG: c2da03-dev
+  IMAGE_NAME: medis-etl-image
+  DEPLOYMENT_NAME: medis-etl-app
+  SOURCE_IMAGE_TAG: latest
+  TARGET_IMAGE_TAG: dev
+jobs:
+  ocp-integration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: redhat-actions/openshift-tools-installer@v1
+        with:
+          source: "mirror"
+          oc: "latest"
+      - name: Log in to Openshift
+        run: oc login --token=${{ secrets.OPENSHIFT_TOKEN }} --server=${{ secrets.OPENSHIFT_SERVER}}
+      - name: Tag for Dev
+        run: oc tag -n ${NAMESPACE_SRC} ${NAMESPACE_SRC}/${IMAGE_NAME}:${SOURCE_IMAGE_TAG} ${NAMESPACE_SRC}/${IMAGE_NAME}:${TARGET_IMAGE_TAG}
+      - name: Rollout to Dev
+        run: oc patch -n ${NAMESPACE_TRG} deployment/${DEPLOYMENT_NAME} --patch "{\"spec\":{\"template\":{\"metadata\":{\"annotations\":{\"last-restart\":\"`date +'%s'`\"}}}}}"
+        
