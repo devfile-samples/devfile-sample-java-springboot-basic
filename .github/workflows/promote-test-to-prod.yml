@@ -21,8 +21,8 @@ jobs:
           oc: "latest"
       - name: Log in to Openshift
         run: oc login --token=${{ secrets.OPENSHIFT_TOKEN }} --server=${{ secrets.OPENSHIFT_SERVER}}
-      - name: Tag for Dev
+      - name: Tag for Prod
         run: oc tag -n ${NAMESPACE_SRC} ${NAMESPACE_SRC}/${IMAGE_NAME}:${SOURCE_IMAGE_TAG} ${NAMESPACE_SRC}/${IMAGE_NAME}:${TARGET_IMAGE_TAG}
-      - name: Rollout to Dev
+      - name: Rollout to Prod
         run: oc patch -n ${NAMESPACE_TRG} deployment/${DEPLOYMENT_NAME} --patch "{\"spec\":{\"template\":{\"metadata\":{\"annotations\":{\"last-restart\":\"`date +'%s'`\"}}}}}"
         
