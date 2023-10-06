@@ -63,7 +63,7 @@ public class LtcBudgetRevTotals implements IModel {
 	}
 	@Override
 	public String getFormType() {
-		return Constants.LTC_BUDGET_REV_SUBTOTALS;
+		return Constants.LTC_BUDGET_REV_TOTALS;
 	}
 	@Override
 	public List<String> getCsvElements() {
