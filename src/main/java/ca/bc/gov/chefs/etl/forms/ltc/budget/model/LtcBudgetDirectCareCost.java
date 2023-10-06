@@ -74,7 +74,7 @@ public class LtcBudgetDirectCareCost implements IModel{
 		return dirCareCostProdHrsOrientationBudget;
 	}
 	public void setDirCareCostProdHrsOrientationBudget(String dirCareCostProdHrsOrientationBudget) {
-		this.dirCareCostProdHrsOrientationBudget = dirCareCostProdHrsOrientationBudget;
+		this.dirCareCostProdHrsOrientationBudget = StringUtils.defaultIfEmpty(dirCareCostProdHrsOrientationBudget, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getDirCareCostProdHrsContractedBudget() {
 		return StringUtils.isBlank(dirCareCostProdHrsContractedBudget) ? "0" : dirCareCostProdHrsContractedBudget;

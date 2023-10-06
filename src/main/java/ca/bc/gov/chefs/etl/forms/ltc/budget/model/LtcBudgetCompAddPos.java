@@ -47,13 +47,13 @@ public class LtcBudgetCompAddPos implements IModel{
 		return addPosLegalNameContractServiceBudget;
 	}
 	public void setAddPosLegalNameContractServiceBudget(String addPosLegalNameContractServiceBudget) {
-		this.addPosLegalNameContractServiceBudget = addPosLegalNameContractServiceBudget;
+		this.addPosLegalNameContractServiceBudget = StringUtils.defaultIfEmpty(addPosLegalNameContractServiceBudget, Constants.DEFAULT_STRING_VALUE);
 	}
 	public String getAddPosPercentServiceContractOutBudget() {
 		return addPosPercentServiceContractOutBudget;
 	}
 	public void setAddPosPercentServiceContractOutBudget(String addPosPercentServiceContractOutBudget) {
-		this.addPosPercentServiceContractOutBudget = addPosPercentServiceContractOutBudget;
+		this.addPosPercentServiceContractOutBudget = StringUtils.defaultIfEmpty(addPosPercentServiceContractOutBudget, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getAddPosAnotherName() {
 		return addPosAnotherName;
