@@ -519,7 +519,7 @@ public class Constants {
 			"Confirmation_ID", "Staffing_plan_num", "Staff_Plan_For", "Period_start", "Period_end",
 			"Revision_date", "Reason_for_rev", "Nb_Total_Beds", "Cumulative_Total_DCH_Q1", "Cumulative_Total_DCH_Q2",
 			"Cumulative_Total_DCH_Q3", "Cumulative_Total_DCH_Q4", "Perf_4.1",
-			"Staff_Plan_For_Other"
+			"Staff_Plan_For_Other", "Professional_Staffing_Percentage","RN_LPN_Staffing_Percentage"
 		});
 
 		HEADERS.put(LTC_STAFF_PLAN_PERF_4_2, new String[] {
