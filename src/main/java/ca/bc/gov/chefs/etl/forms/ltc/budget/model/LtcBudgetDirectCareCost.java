@@ -116,25 +116,25 @@ public class LtcBudgetDirectCareCost implements IModel{
 		return dirCareCostNonProdHrsTotalBudget;
 	}
 	public void setDirCareCostNonProdHrsTotalBudget(String dirCareCostNonProdHrsTotalBudget) {
-		this.dirCareCostNonProdHrsTotalBudget = dirCareCostNonProdHrsTotalBudget;
+		this.dirCareCostNonProdHrsTotalBudget = StringUtils.defaultIfEmpty(dirCareCostNonProdHrsTotalBudget, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getDirCareCostTotalHrsPaidBudget() {
 		return dirCareCostTotalHrsPaidBudget;
 	}
 	public void setDirCareCostTotalHrsPaidBudget(String dirCareCostTotalHrsPaidBudget) {
-		this.dirCareCostTotalHrsPaidBudget = dirCareCostTotalHrsPaidBudget;
+		this.dirCareCostTotalHrsPaidBudget = StringUtils.defaultIfEmpty(dirCareCostTotalHrsPaidBudget, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getDirCareCostHourlyRateStaffBudget() {
 		return dirCareCostHourlyRateStaffBudget;
 	}
 	public void setDirCareCostHourlyRateStaffBudget(String dirCareCostHourlyRateStaffBudget) {
-		this.dirCareCostHourlyRateStaffBudget = dirCareCostHourlyRateStaffBudget;
+		this.dirCareCostHourlyRateStaffBudget = StringUtils.defaultIfEmpty(dirCareCostHourlyRateStaffBudget, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	public String getDirCareCostHourlyRateContractedBudget() {
 		return dirCareCostHourlyRateContractedBudget;
 	}
 	public void setDirCareCostHourlyRateContractedBudget(String dirCareCostHourlyRateContractedBudget) {
-		this.dirCareCostHourlyRateContractedBudget = dirCareCostHourlyRateContractedBudget;
+		this.dirCareCostHourlyRateContractedBudget = StringUtils.defaultIfEmpty(dirCareCostHourlyRateContractedBudget, Constants.DEFAULT_DECIMAL_VALUE);
 	}
 	
 	@Override
