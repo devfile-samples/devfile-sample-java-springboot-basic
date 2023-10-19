@@ -17,6 +17,7 @@ metadata:
 parent:
   id: java-springboot
   registryUrl: 'https://registry.devfile.io'
+  version: 1.2.0
 components:
   - name: image-build
     image:
