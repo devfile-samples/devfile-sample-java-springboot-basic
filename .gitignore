@@ -2,6 +2,7 @@
 .project
 .settings
 target
-.odo/env
+.odo
 .idea
 .DS_Store
+
