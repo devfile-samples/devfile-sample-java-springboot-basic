@@ -63,7 +63,7 @@ public class Constants {
 	public final static String LTC_STAFFING_PLAN_PROPERTY = "ltc.staffing.plan.";
 
 	/* LTC Annual Budget */
-	public final static String LTC_ANNUAL_BUDGET_PROPERTY = "ltc.annual.budget.test.";
+	public final static String LTC_ANNUAL_BUDGET_PROPERTY = "ltc.annual.budget.";
 
 	// Constants for Sub table: LTC_YTD_DIRECT_CARE_HRS
 	public final static String DC_HRS_OTHER = "Other";
