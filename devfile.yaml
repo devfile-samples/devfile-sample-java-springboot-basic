@@ -1,7 +1,7 @@
 schemaVersion: 2.2.0
 metadata:
   name: java-springboot
-  version: 1.2.1
+  version: 2.0.0
   attributes:
     alpha.dockerimage-port: 8081
   displayName: Spring Boot®
@@ -17,39 +17,17 @@ metadata:
 parent:
   id: java-springboot
   registryUrl: 'https://registry.devfile.io'
-  version: 1.2.0
-components:
-  - name: image-build
-    image:
-      imageName: java-springboot-image:latest
-      dockerfile:
-        uri: docker/Dockerfile
-        buildContext: .
-        rootRequired: false
-  - name: kubernetes-deploy
-    attributes:
-      deployment/replicas: 1
-      deployment/cpuRequest: 10m
-      deployment/memoryRequest: 180Mi
-      deployment/container-port: 8081
-    kubernetes:
-      uri: deploy.yaml
-      endpoints:
-        - name: http-8081
-          targetPort: 8081
-          path: /
-commands:
-  - id: build-image
-    apply:
-      component: image-build
-  - id: deployk8s
-    apply:
-      component: kubernetes-deploy
-  - id: deploy
-    composite:
-      commands:
-        - build-image
-        - deployk8s
-      group:
-        kind: deploy
-        isDefault: true
+  version: 2.1.0
+  components:
+    - name: deploy
+      attributes:
+        deployment/replicas: 1
+        deployment/cpuRequest: 10m
+        deployment/memoryRequest: 180Mi
+        deployment/container-port: 8080
+      kubernetes:
+        uri: kubernetes/deploy.yaml
+        endpoints:
+          - name: http-8080
+            targetPort: 8080
+            path: /
