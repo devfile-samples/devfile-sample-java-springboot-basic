@@ -2,6 +2,7 @@
 
 **Note:** The Spring Boot code sample uses the **8081** HTTP port.
 
+
 Before you begin creating an application with this `devfile` code sample, it's helpful to understand the relationship between the `devfile` and `Dockerfile` and how they contribute to your build. You can find these files at the following URLs:
 
 * [Spring Boot `devfile.yaml`](https://github.com/devfile-samples/devfile-sample-java-springboot-basic/blob/main/devfile.yaml)
