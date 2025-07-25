@@ -1,0 +1,32 @@
+
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": ["local>devfile-samples/.github:renovate-config"],
+    "enabledManagers": ["maven", "dockerfile"],
+    "packageRules": [
+      {
+        "matchManagers": ["maven"],
+        "groupName": "maven dependencies",
+        "groupSlug": "maven-deps",
+        "commitMessageTopic": "Maven {{depName}}"
+      },
+      {
+        "matchManagers": ["dockerfile"],
+        "groupName": "dockerfile dependencies",
+        "groupSlug": "dockerfile-deps",
+        "commitMessageTopic": "Dockerfile {{depName}}"
+      },
+      {
+        "matchManagers": ["maven"],
+        "matchUpdateTypes": ["major"],
+        "matchBaseBranches": "main",
+        "enabled": false
+      },
+      {
+        "matchManagers": ["dockerfile"],
+        "matchUpdateTypes": ["major"],
+        "matchBaseBranches": "main",
+        "enabled": false
+      }
+    ]
+}
