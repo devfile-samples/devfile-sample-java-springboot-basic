@@ -22,11 +22,8 @@ jobs:
           distribution: "temurin"
           cache: maven
 
-      - name: Make mvnw executable
-        run: chmod +x ./mvnw
-
       - name: Build with Maven
-        run: ./mvnw clean package -B
+        run: mvn clean package -B
 
   docker:
     runs-on: ubuntu-latest
